@@ -1,5 +1,6 @@
 // FIX: Import React to use React.Dispatch and React.SetStateAction types.
 import React, { useMemo, useCallback, useEffect, useState } from 'react';
+import { Capacitor } from '@capacitor/core';
 import { getCurrentLanguage, setCurrentLanguage, type Locale } from '../i18n/index.ts';
 import { useLocalStorage } from './useLocalStorage.ts';
 import { purchasePremium, getPaywallOptions, purchasePackageByIdentifier, syncPremiumEntitlement } from '../services/monetizationService.ts';
@@ -164,20 +165,27 @@ export const useSettings = ({ showToast, showPremiumToast, userId }: UseSettings
         const checkPremiumStatus = async () => {
             if (!active) return;
             try {
+                // On web (non-native), RevenueCat SDK is not initialized; do not override
+                // local purchase flag with a false value that causes UI to flicker.
+                if (!Capacitor.isNativePlatform()) return;
+
                 const hasEntitlement = await syncPremiumEntitlement(userId);
-                if (active) {
-                    setHasPurchasedPremium(!!hasEntitlement);
-                }
+                if (!active) return;
+                // Only update when true or when we are on native platform; this prevents
+                // toggling from true->false spuriously in web preview.
+                setHasPurchasedPremium(!!hasEntitlement);
             } catch (e) {
                 console.error('Premium status check error:', e);
             }
         };
 
-        // Check immediately on mount/userId change
-        checkPremiumStatus();
+        // Check immediately on mount/userId change (native only)
+        if (Capacitor.isNativePlatform()) checkPremiumStatus();
 
-        // Check periodically every 30 seconds to catch subscription changes
-        intervalId = setInterval(checkPremiumStatus, 30000);
+        // Check periodically every 30 seconds to catch subscription changes (native only)
+        if (Capacitor.isNativePlatform()) {
+            intervalId = setInterval(checkPremiumStatus, 30000);
+        }
 
         // Also check when app comes to foreground (for mobile)
         const handleVisibilityChange = () => {
@@ -186,14 +194,18 @@ export const useSettings = ({ showToast, showPremiumToast, userId }: UseSettings
             }
         };
 
-        document.addEventListener('visibilitychange', handleVisibilityChange);
-        window.addEventListener('focus', checkPremiumStatus);
+        if (Capacitor.isNativePlatform()) {
+            document.addEventListener('visibilitychange', handleVisibilityChange);
+            window.addEventListener('focus', checkPremiumStatus);
+        }
 
         return () => {
             active = false;
             if (intervalId) clearInterval(intervalId);
-            document.removeEventListener('visibilitychange', handleVisibilityChange);
-            window.removeEventListener('focus', checkPremiumStatus);
+            if (Capacitor.isNativePlatform()) {
+                document.removeEventListener('visibilitychange', handleVisibilityChange);
+                window.removeEventListener('focus', checkPremiumStatus);
+            }
         };
     }, [userId, setHasPurchasedPremium]);
 
