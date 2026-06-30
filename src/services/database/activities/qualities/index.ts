@@ -28,3 +28,4 @@ export * from './hungryFullData';
 export * from './derinSigData';
 export * from './kalabalikTenhaData';
 export * from './tersDuzData';
+export * from './noisyQuietData';

@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { ActivityType, ActivityStats, AttemptRecord, ActivityCategory } from '../types.ts';
+import { ActivityType, ActivityStats, AttemptRecord, ActivityCategory, ParentOverride } from '../types.ts';
 import { ALL_SUB_ACHIEVEMENTS, LETTER_GROUPS, OBJECT_CATEGORIES, LETTER_SOUND_ACTIVITIES } from '../constants.ts';
 import { getActivityMetadata } from '../constants/activityMetadata';
 import { createObjectChoiceRounds, fetchConceptActivityData, fetchLetterActivityData, fetchSyllableWordsForGroup, fetchFiveWOneHBySubKey } from '../services/contentService.ts';
@@ -15,12 +15,29 @@ interface UseActivityProps {
     setActivityStats: React.Dispatch<React.SetStateAction<Record<string, ActivityStats>>>;
     showToast: (message: string, type?: 'error' | 'info', duration?: number) => void;
     handleGoToMenu: () => void;
+    handleGoToProgramIntro?: () => void;
     enabledActivitiesSet: Set<string>;
     activeProfileId?: string | null;
     isPremium?: boolean;
 }
 
-export const useActivity = ({ activityStats, setActivityStats, showToast, handleGoToMenu, enabledActivitiesSet, activeProfileId, isPremium }: UseActivityProps) => {
+export const useActivity = ({ activityStats, setActivityStats, showToast, handleGoToMenu, handleGoToProgramIntro, enabledActivitiesSet, activeProfileId, isPremium }: UseActivityProps) => {
+    const safeParseArray = <T,>(raw: string | null): T[] => {
+        if (!raw) return [];
+        try {
+            const parsed = JSON.parse(raw);
+            return Array.isArray(parsed) ? parsed : [];
+        } catch (e) {
+            return [];
+        }
+    };
+    const getHighestUnlockedUnit = (units: Set<number>): number => {
+        let highest = 1;
+        units.forEach(unit => {
+            if (unit > highest) highest = unit;
+        });
+        return highest;
+    };
     const [activityType, setActivityType] = useState<ActivityType | null>(null);
     const [activityData, setActivityData] = useState<any[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -217,22 +234,23 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
             Object.keys(activityStats).filter(id => activityStats[id]?.completions > 0).length
         );
         const masteredObjectCategories = new Set<string>(); // TODO: derive from stats if needed
-        const parentOverrides = activeProfileId ? JSON.parse(window.localStorage.getItem(`parentOverrides_profile_${activeProfileId}`) || '[]') : undefined;
-        const unlockedUnits = getUnlockedUnitsForProgramMode(activityStats, masteredObjectCategories, parentOverrides, 6);
-        const ceiling = activeProfileId ? getAllowedUnitCeiling(activeProfileId, unlockedUnits) : undefined;
+        const parentOverrides = activeProfileId ? safeParseArray<ParentOverride>(window.localStorage.getItem(`parentOverrides_profile_${activeProfileId}`)) : undefined;
+        const unlockedUnits = getUnlockedUnitsForProgramMode(activityStats, masteredObjectCategories, parentOverrides, 6, activeProfileId);
+        const ceiling = activeProfileId
+            ? (isPremium ? getHighestUnlockedUnit(unlockedUnits) : getAllowedUnitCeiling(activeProfileId, unlockedUnits))
+            : undefined;
 
         const session = buildDailySession(
             activityStats,
             masteredObjectCategories,
             undefined,
             sessionLength,
-            isPremium ? undefined : ceiling,
+            ceiling,
             parentOverrides
         );
-        
+
         if (session.activities.length === 0) {
             showToast('Program modu için uygun içerik bulunamadı.', 'info');
-            handleGoToMenu();
             return false;
         }
 
@@ -246,11 +264,10 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
         const started = await startNextRandomActivity(PROGRAM_QUEUE, 0);
         if (!started) {
             showToast('Program modu için uygun içerik bulunamadı.', 'info');
-            handleGoToMenu();
             return false;
         }
         return true;
-    }, [showToast, startNextRandomActivity, handleGoToMenu, activityStats, activeProfileId]);
+    }, [showToast, startNextRandomActivity, handleGoToMenu, activityStats, activeProfileId, isPremium]);
 
     // Reinforcement-only starter: prefer weak items from focus unit, fallback to previous weak candidates
     const handleStartReinforcementMode = useCallback(async () => {
@@ -259,15 +276,17 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
             Object.keys(activityStats).filter(id => activityStats[id]?.completions > 0).length
         );
         const masteredObjectCategories = new Set<string>();
-        const parentOverrides = activeProfileId ? JSON.parse(window.localStorage.getItem(`parentOverrides_profile_${activeProfileId}`) || '[]') : undefined;
-        const unlockedUnits = getUnlockedUnitsForProgramMode(activityStats, masteredObjectCategories, parentOverrides, 6);
-        const ceiling = activeProfileId ? getAllowedUnitCeiling(activeProfileId, unlockedUnits) : undefined;
+        const parentOverrides = activeProfileId ? safeParseArray<ParentOverride>(window.localStorage.getItem(`parentOverrides_profile_${activeProfileId}`)) : undefined;
+        const unlockedUnits = getUnlockedUnitsForProgramMode(activityStats, masteredObjectCategories, parentOverrides, 6, activeProfileId);
+        const ceiling = activeProfileId
+            ? (isPremium ? getHighestUnlockedUnit(unlockedUnits) : getAllowedUnitCeiling(activeProfileId, unlockedUnits))
+            : undefined;
         const session = buildDailySession(
             activityStats,
             masteredObjectCategories,
             undefined,
             sessionLength,
-            isPremium ? undefined : ceiling,
+            ceiling,
             parentOverrides
         );
 
@@ -309,7 +328,7 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
             if (manualKey) {
                 const raw = window.localStorage.getItem(manualKey);
                 if (raw) {
-                    const arr = JSON.parse(raw) as string[];
+                    const arr = safeParseArray<string>(raw);
                     if (Array.isArray(arr) && arr.length > 0) {
                         // Resolve stored values to canonical activity ids where possible
                         const resolved: (ActivityType | string)[] = [];
@@ -388,7 +407,6 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
         const started = await startNextRandomActivity(queue, 0);
         if (!started) {
             showToast('Pekiştirme modu için uygun içerik bulunamadı.', 'info');
-            handleGoToMenu();
             return false;
         }
         return true;
@@ -436,9 +454,9 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
                                 // Check units before stats update (for detecting new unlocks)
                                 const emptyMasteredCats = new Set<string>();
                                 // Use program-mode unlocked check when current session is program mode
-                                const parentOverrides = activeProfileId ? JSON.parse(window.localStorage.getItem(`parentOverrides_profile_${activeProfileId}`) || '[]') : undefined;
+                                const parentOverrides = activeProfileId ? safeParseArray<ParentOverride>(window.localStorage.getItem(`parentOverrides_profile_${activeProfileId}`)) : undefined;
                                 const previousUnlockedUnits = isProgramMode
-                                    ? getUnlockedUnitsForProgramMode(activityStats, emptyMasteredCats, parentOverrides, 6)
+                                    ? getUnlockedUnitsForProgramMode(activityStats, emptyMasteredCats, parentOverrides, 6, activeProfileId)
                                     : getUnlockedUnits(activityStats, emptyMasteredCats);
                 
                 setActivityStats(prev => {
@@ -473,7 +491,7 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
                     
                     // Check if new unit unlocked after this activity (Program Mode only)
                         if (isProgramMode && activeProfileId) {
-                        const currentUnlockedUnits = getUnlockedUnitsForProgramMode(updatedStats, emptyMasteredCats, parentOverrides, 6);
+                        const currentUnlockedUnits = getUnlockedUnitsForProgramMode(updatedStats, emptyMasteredCats, parentOverrides, 6, activeProfileId);
                         
                         // Find newly unlocked units
                         currentUnlockedUnits.forEach(unitNum => {
@@ -510,10 +528,12 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
                      if (!hasNext) {
                         if (isProgramMode) {
                             showToast(t('programMode.completed', 'Program mode finished! Great job.'), 'info');
+                            resetActivityState();
+                            handleGoToProgramIntro?.();
                         } else {
                             showToast("Rastgele mod tamamlandı! Harika iş.", 'info');
+                            handleGoToMenu();
                         }
-                        handleGoToMenu();
                      }
                 }
             } else {
@@ -523,7 +543,7 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
             setCurrentIndex(prev => prev + 1);
         }
         return 'advanced';
-    }, [score, currentIndex, activityData.length, activityType, selectedLetter, selectedGroup, selectedObjectCategory, isRandomMode, randomModeQueue, currentRandomActivityIndex, setActivityStats, handleGoToMenu, showToast, startNextRandomActivity, startSpecificRandomActivity, randomModeAttemptCount]);
+    }, [score, currentIndex, activityData.length, activityType, selectedLetter, selectedGroup, selectedObjectCategory, isRandomMode, isProgramMode, randomModeQueue, currentRandomActivityIndex, setActivityStats, handleGoToMenu, handleGoToProgramIntro, showToast, startNextRandomActivity, startSpecificRandomActivity, randomModeAttemptCount, resetActivityState]);
 
     return {
         activityType,

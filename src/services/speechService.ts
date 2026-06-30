@@ -18,6 +18,48 @@ export function setSpeechLanguage(lang: 'tr' | 'en' | 'de' | 'fr' | 'nl' | 'az')
 
 let isMuted = false;
 let currentEffect: HTMLAudioElement | null = null;
+let supportedLangsCache: string[] | null = null;
+let supportedLangsPromise: Promise<string[]> | null = null;
+
+const getSupportedLanguagesNative = async (): Promise<string[]> => {
+    if (!Capacitor.isNativePlatform()) return [];
+    if (supportedLangsCache) return supportedLangsCache;
+    if (supportedLangsPromise) return supportedLangsPromise;
+
+    supportedLangsPromise = (async () => {
+        try {
+            const result = await TextToSpeech.getSupportedLanguages();
+            const langs = (result?.languages || []).filter(Boolean);
+            supportedLangsCache = langs;
+            return langs;
+        } catch (e) {
+            return [];
+        } finally {
+            supportedLangsPromise = null;
+        }
+    })();
+
+    return supportedLangsPromise;
+};
+
+const resolveNativeLang = async (requestedLang: string): Promise<string> => {
+    const langs = await getSupportedLanguagesNative();
+    if (!langs || langs.length === 0) return requestedLang;
+
+    if (langs.includes(requestedLang)) return requestedLang;
+
+    const requestedPrefix = requestedLang.split('-')[0].toLowerCase();
+    const prefixMatch = langs.find(lang => lang.toLowerCase().startsWith(requestedPrefix));
+    if (prefixMatch) return prefixMatch;
+
+    const trMatch = langs.find(lang => lang.toLowerCase().startsWith('tr'));
+    if (trMatch) return trMatch;
+
+    const enMatch = langs.find(lang => lang.toLowerCase().startsWith('en'));
+    if (enMatch) return enMatch;
+
+    return requestedLang;
+};
 
 /**
  * Updates the global mute state for the speech service.
@@ -88,86 +130,159 @@ export const speak = async (textToSpeak: string, overrideLang?: string): Promise
     stopCurrentEffect();
 
     if (Capacitor.isNativePlatform()) {
+        const requestedLang = overrideLang || speechLang;
+        
+        // Check what languages the native TTS supports
+        let supportedLangs: string[] = [];
         try {
+            supportedLangs = await getSupportedLanguagesNative();
+            console.log('[TTS] Supported languages:', supportedLangs);
+        } catch (e) {
+            console.warn('[TTS] Failed to get supported languages:', e);
+        }
+
+        // Try resolveNativeLang when supported languages are available
+        let primaryLang = requestedLang;
+        if (supportedLangs.length === 0) {
+            console.warn('[TTS] No supported languages detected on native TTS; attempting native speak anyway');
+        } else {
+            try {
+                primaryLang = await resolveNativeLang(requestedLang);
+                console.log('[TTS] Resolved language:', requestedLang, '->', primaryLang);
+            } catch (e) {
+                console.warn("Language resolution failed:", e);
+            }
+        }
+        
+        // Try with minimal parameters first (best for Samsung TTS)
+        try {
+            console.log('[TTS] Attempting minimal speak:', { text: textToSpeak.substring(0, 30), lang: primaryLang });
             await TextToSpeech.speak({
                 text: textToSpeak,
-                lang: overrideLang || speechLang,
-                rate: 0.9,
-                pitch: 1.0,
-                volume: 1.0,
-                category: 'playback',
+                lang: primaryLang,
             });
+            console.log('[TTS] Minimal speak succeeded');
+            return;
         } catch (e) {
-            console.error("Native TTS Error:", e);
-        }
-    } else {
-        // Fallback to web browser's SpeechSynthesis API
-        if (typeof speechSynthesis !== 'undefined') {
-            return new Promise((resolve) => {
-                const utterance = new SpeechSynthesisUtterance(textToSpeak);
-                const lang = overrideLang || speechLang;
-                utterance.lang = lang;
-                utterance.rate = 0.9;
-
-                // Try to select the most appropriate voice for the target language
-                try {
-                    const chooseVoice = () => {
-                        const voices = speechSynthesis.getVoices?.() || [];
-                        if (voices.length === 0) return;
-                        const langPrefix = lang.split('-')[0];
-                        
-                        // Special handling for Azerbaijani (often not available in browsers)
-                        if (langPrefix === 'az') {
-                            // Try Azerbaijani first
-                            let voice = voices.find(v => v.lang?.toLowerCase().startsWith('az'));
-                            // Fallback to Turkish (very similar language)
-                            if (!voice) voice = voices.find(v => v.lang?.toLowerCase().startsWith('tr'));
-                            // Last resort: any available voice
-                            if (!voice && voices.length > 0) {
-                                console.warn('No Azerbaijani or Turkish voice found, using default');
-                                voice = voices[0];
-                            }
-                            if (voice) utterance.voice = voice;
-                            return;
-                        }
-                        
-                        // Exact match first
-                        let voice = voices.find(v => v.lang?.toLowerCase() === lang.toLowerCase());
-                        // Then language-only match (en-*, de-*, ...)
-                        if (!voice) voice = voices.find(v => v.lang?.toLowerCase().startsWith(langPrefix));
-                        // Prefer non-default Turkish when target is not Turkish
-                        if (!voice && langPrefix !== 'tr') voice = voices.find(v => v.lang?.toLowerCase().startsWith('en'));
-                        if (voice) utterance.voice = voice;
-                    };
-
-                    // Some browsers load voices asynchronously
-                    if (speechSynthesis.onvoiceschanged !== undefined) {
-                        const handler = () => { chooseVoice(); speechSynthesis.onvoiceschanged = null as any; };
-                        speechSynthesis.onvoiceschanged = handler;
-                        // Also attempt immediately in case voices are already available
-                        chooseVoice();
-                    } else {
-                        chooseVoice();
+            console.warn('[TTS] Minimal speak failed:', e);
+            // Try with standard parameters
+            try {
+                console.log('[TTS] Attempting standard speak with rate/pitch/volume');
+                await TextToSpeech.speak({
+                    text: textToSpeak,
+                    lang: primaryLang,
+                    rate: 0.9,
+                    pitch: 1.0,
+                    volume: 1.0,
+                });
+                console.log('[TTS] Standard speak succeeded');
+                return;
+            } catch (e2) {
+                console.warn('[TTS] Standard speak also failed:', e2);
+                // Try simple fallback languages
+                const fallbackCandidates = ['en-US', 'en', 'tr-TR'];
+                for (const fallback of fallbackCandidates) {
+                    if (fallback === primaryLang) continue;
+                    try {
+                        console.log('[TTS] Trying fallback language:', fallback);
+                        await TextToSpeech.speak({
+                            text: textToSpeak,
+                            lang: fallback,
+                        });
+                        console.log('[TTS] Fallback succeeded with:', fallback);
+                        return;
+                    } catch (innerError) {
+                        console.warn('[TTS] Fallback failed for:', fallback, innerError);
                     }
-                } catch (e) {
-                    // Non-fatal: if voice selection fails, rely on browser default
                 }
-
-                utterance.onend = () => resolve();
-                utterance.onerror = (event) => {
-                    console.error("Web Speech API error:", (event as any)?.error || event);
-                    resolve();
-                };
-                try {
-                    speechSynthesis.speak(utterance);
-                } catch (e) {
-                    console.error("Speech Synthesis speak() failed:", e);
-                    resolve();
-                }
-            });
-        } else {
-            console.warn("Speech Synthesis API not supported in this browser.");
+                console.error("[TTS] All native TTS attempts failed. Falling back to Web Speech API:", e);
+                // Fall through to web TTS below
+            }
         }
+    }
+    
+    // Web Speech API fallback (reached if native TTS not available or all attempts failed)
+    if (typeof speechSynthesis !== 'undefined') {
+        return new Promise((resolve) => {
+            const utterance = new SpeechSynthesisUtterance(textToSpeak);
+            const lang = overrideLang || speechLang;
+            utterance.lang = lang;
+            utterance.rate = 0.9;
+
+            // Try to select the most appropriate voice for the target language
+            try {
+                const chooseVoice = () => {
+                    const voices = speechSynthesis.getVoices?.() || [];
+                    if (voices.length === 0) return;
+                    const langPrefix = lang.split('-')[0];
+                    
+                    // Special handling for Azerbaijani (often not available in browsers)
+                    if (langPrefix === 'az') {
+                        // Try Azerbaijani first
+                        let voice = voices.find(v => v.lang?.toLowerCase().startsWith('az'));
+                        // Fallback to Turkish (very similar language)
+                        if (!voice) voice = voices.find(v => v.lang?.toLowerCase().startsWith('tr'));
+                        // Last resort: any available voice
+                        if (!voice && voices.length > 0) {
+                            console.warn('No Azerbaijani or Turkish voice found, using default');
+                            voice = voices[0];
+                        }
+                        if (voice) utterance.voice = voice;
+                        return;
+                    }
+                    
+                    // Exact match first
+                    let voice = voices.find(v => v.lang?.toLowerCase() === lang.toLowerCase());
+                    // Then language-only match (en-*, de-*, ...)
+                    if (!voice) voice = voices.find(v => v.lang?.toLowerCase().startsWith(langPrefix));
+                    
+                    // Special handling for Turkish: try Azerbaijani as fallback
+                    if (!voice && langPrefix === 'tr') {
+                        voice = voices.find(v => v.lang?.toLowerCase().startsWith('az'));
+                    }
+                    
+                    // General fallback: prefer English for non-Turkish/Azerbaijani languages
+                    if (!voice && langPrefix !== 'tr' && langPrefix !== 'az') {
+                        voice = voices.find(v => v.lang?.toLowerCase().startsWith('en'));
+                    }
+                    
+                    // Last resort: use first available voice
+                    if (!voice && voices.length > 0) {
+                        console.warn(`No voice found for ${langPrefix}, using default voice`);
+                        voice = voices[0];
+                    }
+                    
+                    if (voice) utterance.voice = voice;
+                };
+
+                // Some browsers load voices asynchronously
+                if (speechSynthesis.onvoiceschanged !== undefined) {
+                    const handler = () => { chooseVoice(); speechSynthesis.onvoiceschanged = null as any; };
+                    speechSynthesis.onvoiceschanged = handler;
+                    // Also attempt immediately in case voices are already available
+                    chooseVoice();
+                } else {
+                    chooseVoice();
+                }
+            } catch (e) {
+                // Non-fatal: if voice selection fails, rely on browser default
+            }
+
+            utterance.onend = () => resolve();
+            utterance.onerror = (event) => {
+                console.error("Web Speech API error:", (event as any)?.error || event);
+                resolve();
+            };
+            try {
+                speechSynthesis.speak(utterance);
+            } catch (e) {
+                console.error("Speech Synthesis speak() failed:", e);
+                resolve();
+            }
+        });
+    } else {
+        console.warn("Speech Synthesis API not supported in this browser.");
+        return Promise.resolve();
     }
 };
 

@@ -142,6 +142,9 @@ const ParentReportScreen: React.FC<ParentReportScreenProps> = ({ activityStats, 
     if (activityType === ActivityType.DragAndDropCounting) return t('activities.reasoning.dragAndDropCounting', 'Nesneleri Taşı');
     if (activityType === ActivityType.DragAndDropPositioning) return t('activities.reasoning.dragAndDropPositioning', 'Topu Yerleştir');
     if (activityType === ActivityType.Hangman) return t('activities.reasoning.hangman', 'Adam Asmaca');
+    if (activityType === ActivityType.WhoseIsThis) return t('activities.reasoning.whoseIsThis', 'Bu Kimin?');
+    if (activityType === ActivityType.WhatsMissing) return t('activities.reasoning.whatsMissing', 'Hangisi Kayıp?');
+    if (activityType === ActivityType.ColorRecognition) return t('activities.concept.colorRecognition', 'Rengi Ne?');
 
     // Fine motor activities
     if (activityType === ActivityType.LineTracing) return t('activities.fineMotor.lineTracing', 'Çizgi Takip');

@@ -6,8 +6,6 @@ import { translateLabel } from "../utils/translate.ts";
 import { imageData } from "../services/database/imageData.ts";
 import { ActivityStats } from "../types.ts";
 import ProgressIndicator from "./ui/ProgressIndicator.tsx";
-import CosmicBackdrop from "./ui/CosmicBackdrop.tsx";
-import PanelStars from "./ui/PanelStars.tsx";
 import UnderwaterBackdrop from './ui/UnderwaterBackdrop.tsx';
 
 import {
@@ -52,108 +50,113 @@ const ObjectCategoriesMenuScreen: React.FC<ObjectCategoriesMenuScreenProps> = ({
     title: translateLabel(String(category.title), lang),
   }));
 
-  // Cosmic theme - deneme2: Planet-like menu buttons with space backdrop
+  // Robot Theme - deneme2: Tech/Sci-Fi interface
   if (theme === 'deneme2') {
     return (
-      <>
-        <CosmicBackdrop variant="rich" />
-        <div className="relative z-10 flex h-full max-w-4xl landscape:max-w-6xl flex-col items-center justify-start animate-fade-in px-4 py-4 landscape:py-3 overflow-hidden">
-          <PanelStars count={96} />
-          <div className="relative mb-3 landscape:mb-2 flex w-full items-center">
-            <button
-              onClick={onBack}
-              className="absolute left-0 rounded-full p-2 bg-cyan-400/20 hover:bg-cyan-400/30 border border-cyan-300/40 backdrop-blur-sm transition-colors"
-              aria-label={t("app.back", "Go back")}
-              type="button"
-            >
-              <ArrowLeftIcon className="h-7 w-7 landscape:h-6 landscape:w-6 text-white drop-shadow" />
-            </button>
-            <div className="flex-1 flex justify-center">
-              <div className="inline-block px-6 py-2.5 rounded-full bg-gradient-to-r from-sky-600/80 via-cyan-500/80 to-indigo-600/80 border border-cyan-300/50 shadow-lg shadow-cyan-400/30 backdrop-blur-sm">
-                <h1 className="text-xl sm:text-2xl landscape:text-lg font-extrabold text-white drop-shadow">
-                  {titleOverride || t("menu.objects.title", "Nesneleri Tanıyalım")}
-                </h1>
-              </div>
-            </div>
+      <div className="relative h-full flex flex-col overflow-hidden bg-slate-900">
+        {/* Tech Background Grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-transparent to-slate-900/80 pointer-events-none" />
+
+        {/* Header */}
+        <div className="relative z-10 flex items-center justify-between px-4 py-3 border-b border-cyan-500/20 bg-slate-800/50 backdrop-blur-md">
+          <button
+            onClick={onBack}
+            className="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-700/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 hover:text-cyan-200 transition-all"
+          >
+            <ArrowLeftIcon className="w-6 h-6" />
+          </button>
+
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            <span className="text-cyan-100 font-bold tracking-wider font-mono text-lg">
+              {titleOverride || t("menu.objects.title", "NESNELER")}
+            </span>
           </div>
 
-          <div className="animate-fade-in w-full flex-grow overflow-y-auto pr-2">
-            <div className="touch-pan-y grid grid-cols-2 gap-3 sm:gap-4 landscape:grid-cols-4">
-              {localizedCategories.map((category, idx) => {
-                const image = imageData.find((item) => item.id === category.imageId);
-                const stats =
-                  activityStats[category.id] || { attempts: 0, completions: 0, totalCorrect: 0, totalQuestions: 0 };
-                const isDisabled =
-                  Boolean((category as { disabled?: boolean }).disabled) || !enabledActivities.has(category.id);
-                const imageUrl = image?.imageUrl || "/images/placeholder.png";
-                const ringColors = [
-                  'from-cyan-400 via-blue-500 to-indigo-600',
-                  'from-sky-400 via-cyan-500 to-teal-500',
-                  'from-indigo-500 via-blue-500 to-cyan-400',
-                  'from-teal-500 via-cyan-500 to-blue-500',
-                ];
-                const ring = ringColors[idx % ringColors.length];
+          <div className="w-10" /> {/* Spacer for balance */}
+        </div>
 
-                return (
-                  <div key={category.id} className="group relative">
-                    <button
-                      type="button"
-                      onClick={() => onSelectCategory(category.id)}
-                      disabled={isDisabled}
-                      className={`w-full min-h-[180px] landscape:min-h-[160px] flex flex-col items-center justify-start gap-2 rounded-2xl p-4 landscape:p-3 pt-4 landscape:pt-3 pb-12 landscape:pb-10 transition-all duration-200 ${isDisabled ? 'opacity-60' : 'hover:shadow-xl hover:-translate-y-1'} bg-white/5 border border-cyan-300/30 backdrop-blur-md`}
-                    >
-                      {/* Planet-like orb */}
-                      <div className={`relative flex items-center justify-center w-24 h-24 landscape:w-20 landscape:h-20 rounded-full bg-gradient-to-br ${ring} shadow-[0_0_24px_rgba(56,189,248,0.35)]`}> 
-                        <div className="absolute inset-0 rounded-full border border-white/20 opacity-70" />
-                        <div className="absolute -inset-1 rounded-full blur-xl bg-cyan-400/10" />
-                        <div className="relative flex items-center justify-center w-[76%] h-[76%] rounded-full bg-black/20 border border-white/20 overflow-hidden">
-                          <img src={imageUrl} alt={String(category.title)} className="w-14 h-14 landscape:w-12 landscape:h-12 object-contain drop-shadow" />
-                        </div>
-                      </div>
-                      <div className="mt-2 landscape:mt-1 text-center text-base landscape:text-sm font-bold leading-tight text-white drop-shadow-sm">
-                        {String(category.title)}
-                      </div>
-                      {stats.attempts > 0 && (
+        {/* Content */}
+        <div className="relative z-10 flex-1 overflow-y-auto p-4">
+          <div className="grid grid-cols-2 landscape:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            {localizedCategories.map((category, idx) => {
+              const image = imageData.find((item) => item.id === category.imageId);
+              const stats =
+                activityStats[category.id] || { attempts: 0, completions: 0, totalCorrect: 0, totalQuestions: 0 };
+              const isDisabled =
+                Boolean((category as { disabled?: boolean }).disabled) || !enabledActivities.has(category.id);
+              const imageUrl = image?.imageUrl || "/images/placeholder.png";
+
+              const borderColors = [
+                'border-cyan-500/30 hover:border-cyan-400',
+                'border-blue-500/30 hover:border-blue-400',
+                'border-teal-500/30 hover:border-teal-400',
+                'border-indigo-500/30 hover:border-indigo-400',
+              ];
+              const borderColor = borderColors[idx % borderColors.length];
+
+              return (
+                <div key={category.id} className="group relative">
+                  <button
+                    onClick={() => onSelectCategory(category.id)}
+                    disabled={isDisabled}
+                    className={`w-full relative overflow-hidden group/card flex flex-col items-center gap-3 p-4 rounded-xl border-2 transition-all duration-300 ${borderColor} ${isDisabled ? 'opacity-50 grayscale' : 'hover:bg-slate-800/50 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] bg-slate-800/30'}`}
+                  >
+                    {/* Corner Accents */}
+                    <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-current opacity-50" />
+                    <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-current opacity-50" />
+                    <div className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2 border-current opacity-50" />
+                    <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-current opacity-50" />
+
+                    {/* Image Container */}
+                    <div className="relative w-20 h-20 landscape:w-16 landscape:h-16 flex items-center justify-center rounded-lg bg-slate-900/50 border border-white/10 group-hover/card:scale-110 transition-transform duration-300">
+                      <div className="absolute inset-0 bg-cyan-400/5 blur-xl rounded-full" />
+                      <img src={imageUrl} alt={String(category.title)} className="w-14 h-14 landscape:w-12 landscape:h-12 object-contain drop-shadow-lg z-10" />
+                    </div>
+
+                    {/* Text */}
+                    <span className="text-cyan-100 font-bold font-mono tracking-tight text-sm landscape:text-xs">
+                      {String(category.title)}
+                    </span>
+
+                    {/* Stats Bar */}
+                    {stats.attempts > 0 && (
+                      <div className="w-full mt-1">
                         <ProgressIndicator
                           mode="aggregate"
                           attempts={stats.attempts}
                           completions={stats.completions}
                           totalCorrect={stats.totalCorrect}
                           totalQuestions={stats.totalQuestions}
+                          compact // Assuming compact prop exists or standard size fits
                         />
-                      )}
-                    </button>
-                    {onAddCategoryToPrintPool && isPremium && (
-                      <div
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          const color = gradientPalette[(localizedCategories.indexOf(category)) % gradientPalette.length] as keyof typeof SIMPLE_THEME_COLORS;
-                          onAddCategoryToPrintPool(category.id, color);
-                        }}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter' || e.key === ' ') {
-                            e.stopPropagation();
-                            const color = gradientPalette[(localizedCategories.indexOf(category)) % gradientPalette.length] as keyof typeof SIMPLE_THEME_COLORS;
-                            onAddCategoryToPrintPool(category.id, color);
-                          }
-                        }}
-                        className="absolute top-2 right-2 p-2 rounded-full bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-300/50 shadow-md transition-all hover:scale-110 cursor-pointer z-10"
-                        title={t('print.addToPrintPool', 'Yazdırma Listesine Ekle')}
-                      >
-                        <svg className="w-4 h-4 text-cyan-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
-                        </svg>
                       </div>
                     )}
-                  </div>
-                );
-              })}
-            </div>
+                  </button>
+
+                  {/* Print Add Button */}
+                  {onAddCategoryToPrintPool && isPremium && (
+                    <div
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        const color = gradientPalette[(localizedCategories.indexOf(category)) % gradientPalette.length] as keyof typeof SIMPLE_THEME_COLORS;
+                        onAddCategoryToPrintPool(category.id, color);
+                      }}
+                      className="absolute top-2 right-2 p-1.5 rounded-lg bg-slate-800 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 hover:text-cyan-200 cursor-pointer transition-colors z-20"
+                      title={t('print.addToPrintPool', 'Yazdırma Listesine Ekle')}
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
-      </>
+      </div>
     );
   }
 
@@ -228,7 +231,7 @@ const ObjectCategoriesMenuScreen: React.FC<ObjectCategoriesMenuScreenProps> = ({
   if (isSimple2Theme) {
     const titleColorClass = "text-purple-900";
     const iconColorClass = "text-purple-700";
-    
+
     return (
       <div className="flex h-full max-w-4xl landscape:max-w-6xl flex-col items-center justify-start animate-fade-in px-4 py-4 landscape:py-3">
         <div className="relative mb-3 landscape:mb-2 flex w-full items-center">
@@ -290,7 +293,7 @@ const ObjectCategoriesMenuScreen: React.FC<ObjectCategoriesMenuScreenProps> = ({
   if (isSimpleTheme) {
     const titleColorClass = "text-purple-900";
     const iconColorClass = "text-purple-700";
-    
+
     return (
       <div className="flex h-full max-w-4xl landscape:max-w-6xl flex-col items-center justify-start animate-fade-in px-4 py-4 landscape:py-3">
         <div className="relative mb-3 landscape:mb-2 flex w-full items-center">

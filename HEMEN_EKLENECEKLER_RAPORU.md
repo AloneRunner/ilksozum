@@ -8,6 +8,20 @@
 
 ---
 
+## 🛠️ 10 Mayıs 2026 Dev Test Notları
+
+- Hard / Soft: masa görseli zayıf kalıyor. `masa` (ID: 134) için realistic karşılık yok; `sünger` ile aynı ekranda kalite/materyal farkı iyi okunmuyor.
+- Clean / Dirty: `gömlek` çiftindeki sözde kirli görsel aslında kırışık görünüyor. Gerçek `kirli gömlek` asset'i gelene kadar bu çift aktiviteden çıkarıldı.
+- Wet / Dry: realistic `şemsiye` (ID: 157) ıslaklık hissi vermiyor. Geçici çözüm olarak kavram ekranında bu seçenek realistic yerine orijinal ıslak şemsiye görselini kullanıyor.
+- Mekanlar: realistic `okul bahçesi` (ID: 850) eksik.
+- Mekanlar: realistic `okul kantini` (ID: 851) eksik.
+- Meslekler: realistic `manav` (ID: 869) eksik.
+- Meslekler: realistic `hademe` (ID: 836) eksik. Not: `temizlik görevlisi` (ID: 833) realistic görseli var.
+- Near / Far: `Hangi adam daha yakın?` ve `Hangi adam daha uzak?` turları kaldırıldı; iki seçenek de generic erkek görsel olduğu için pedagojik olarak zayıf.
+- Program Mode: localhost debug test kartı kaldırıldı; telefon testi gerçek akış üzerinden yapılacak.
+
+---
+
 ## 🥇 1. BANYO ve HİJYEN EŞYALARı ⭐⭐⭐ [ÇOK ÖNCELİKLİ]
 
 ### ✅ Tamamlanma Durumu: %93 (13/14)

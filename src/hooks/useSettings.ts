@@ -5,6 +5,13 @@ import { getCurrentLanguage, setCurrentLanguage, type Locale } from '../i18n/ind
 import { useLocalStorage } from './useLocalStorage.ts';
 import { purchasePremium, getPaywallOptions, purchasePackageByIdentifier, syncPremiumEntitlement, restorePurchases } from '../services/monetizationService.ts';
 import { FREE_THEMES } from '../themes/themeManager.ts';
+import {
+    getLoyaltySnapshot,
+    isLoyaltyPremiumActive,
+    hasPendingCelebration,
+    consumeCelebration as consumeLoyaltyCelebration,
+    type LoyaltySnapshot,
+} from '../services/loyaltyService.ts';
 
 interface UseSettingsProps {
     showToast: (message: string, type?: 'error' | 'info', duration?: number) => void;
@@ -23,12 +30,12 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
     const [isFastTransitionEnabled, setIsFastTransitionEnabled] = useLocalStorage<boolean>('isFastTransitionEnabled', false);
     const [isSpamGuardEnabled, setIsSpamGuardEnabled] = useLocalStorage<boolean>('isSpamGuardEnabled_v1', true);
     const [spamGuardRoundThreshold, setSpamGuardRoundThreshold] = useLocalStorage<number>('spamGuardRoundThreshold_v1', 8);
-    const [hasRatedPlayStore, setHasRatedPlayStore] = useLocalStorage<boolean>('hasRatedPlayStore_v1', false);
-    const [ratingRewardDate, setRatingRewardDate] = useLocalStorage<number | null>('ratingRewardDate_v1', null);
+    const [isBasaraHighlightEnabled, setIsBasaraHighlightEnabled] = useLocalStorage<boolean>('isBasaraHighlightEnabled_v1', true);
     // Child-friendly and accessibility settings
     const [isChildModeEnabled, setIsChildModeEnabled] = useLocalStorage<boolean>('isChildModeEnabled_v1', false);
     const [isErrorlessModeEnabled, setIsErrorlessModeEnabled] = useLocalStorage<boolean>('isErrorlessModeEnabled_v1', false);
     const [isUnderwaterMusicEnabled, setIsUnderwaterMusicEnabled] = useLocalStorage<boolean>('isUnderwaterMusicEnabled', false);
+    const [isRealisticImagesEnabled, setIsRealisticImagesEnabled] = useLocalStorage<boolean>('isRealisticImagesEnabled_v1', false);
     const [theme, setTheme] = useLocalStorage<string>('theme_v2', 'simple');
     const [language, setLanguage] = useLocalStorage<Locale>('lang_v1', getCurrentLanguage());
     
@@ -47,13 +54,6 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
         setCurrentLanguage(language);
     }, [language]);
 
-    const isRatingRewardActive = useMemo(() => {
-        if (!ratingRewardDate) return false;
-        const elapsed = Date.now() - ratingRewardDate;
-        const sevenDays = 7 * 24 * 60 * 60 * 1000;
-        return elapsed < sevenDays;
-    }, [ratingRewardDate]);
-
     const isTrialActive = useMemo(() => {
         if (!trialStartDate) {
             return false;
@@ -62,40 +62,38 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
         return (Date.now() - trialStartDate) < sevenDaysInMillis;
     }, [trialStartDate]);
 
-    // Special promotion (legacy users): Give premium to devices that already have
-    // existing progress (old users) until November 30, 2025. New users keep the
-    // normal 7-day trial.
-    const legacyPromotionEndDate = new Date('2025-11-30T23:59:59');
-
-    // Heuristic: consider the device a legacy user if any saved profile has
-    // non-empty activity stats. This avoids granting extended promo to brand
-    // new installs that already get the 7-day trial.
-    const isLegacyUser = useMemo(() => {
-        try {
-            const raw = window.localStorage.getItem('profiles_v1') || '[]';
-            const profilesList = JSON.parse(raw);
-            if (!Array.isArray(profilesList) || profilesList.length === 0) return false;
-            for (const p of profilesList) {
-                try {
-                    const statsRaw = window.localStorage.getItem(`activityStats_profile_${p.id}`) || '{}';
-                    const stats = JSON.parse(statsRaw || '{}');
-                    if (stats && Object.keys(stats).length > 0) return true;
-                } catch (e) {
-                    // ignore parse errors for a single profile and continue
-                }
-            }
-            return false;
-        } catch (e) {
-            return false;
-        }
-    }, []);
+    // Global promotion: Premium is a gift for everyone until August 1, 2026.
+    // Extended through the summer (free access while BASARA + tracing features roll out
+    // and the app is shared with special-education teachers).
+    const promotionEndDate = new Date('2026-08-01T23:59:59');
 
     const isPromotionActive = useMemo(() => {
         const now = new Date();
-        return isLegacyUser && now < legacyPromotionEndDate;
-    }, [isLegacyUser]);
+        return now < promotionEndDate;
+    }, []);
 
-    const isPremium = hasPurchasedPremium || isTrialActive || isPromotionActive || isRatingRewardActive;
+    // Loyalty premium: rolling 30-day window earns 30 days free premium.
+    // We track this in a tick so isPremium recomputes when it expires/awards.
+    const [loyaltyTick, setLoyaltyTick] = useState(0);
+    const bumpLoyalty = useCallback(() => setLoyaltyTick(t => t + 1), []);
+    const loyaltySnapshot: LoyaltySnapshot = useMemo(
+        () => getLoyaltySnapshot(),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [loyaltyTick]
+    );
+    const isLoyaltyActive = useMemo(
+        () => isLoyaltyPremiumActive(),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [loyaltyTick]
+    );
+
+    const [isLoyaltyCelebrationPending, setIsLoyaltyCelebrationPending] = useState<boolean>(() => hasPendingCelebration());
+    const acknowledgeLoyaltyCelebration = useCallback(() => {
+        consumeLoyaltyCelebration();
+        setIsLoyaltyCelebrationPending(false);
+    }, []);
+
+    const isPremium = hasPurchasedPremium || isTrialActive || isPromotionActive || isLoyaltyActive;
 
     // Auto-disable fast mode when premium expires
     useEffect(() => {
@@ -104,14 +102,14 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
         }
     }, [isPremium, isFastTransitionEnabled, setIsFastTransitionEnabled]);
 
-    // Show a one-time toast for legacy promotion so legacy users know they received the gift.
+    // Show a one-time toast for the global promotion so users know they received the gift.
     useEffect(() => {
         try {
             if (isPromotionActive) {
-                const flagKey = 'legacy_promo_toast_shown_v1';
+                const flagKey = 'promo_toast_shown_2026_08';
                 const shown = window.localStorage.getItem(flagKey);
                 if (!shown) {
-                    try { showToast && showToast('Hediye Premium verildi — 30.11.2025 tarihine kadar aktif.', 'info', 6000); } catch (e) {}
+                    try { showToast && showToast('Hediye Premium aktif — 1 Ağustos 2026\'ya kadar! 🎁', 'info', 6000); } catch (e) {}
                     window.localStorage.setItem(flagKey, 'true');
                 }
             }
@@ -158,6 +156,8 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
     const handleToggleErrorlessMode = useCallback(() => setIsErrorlessModeEnabled(prev => !prev), [setIsErrorlessModeEnabled]);
     const handleToggleUnderwaterMusic = useCallback(() => setIsUnderwaterMusicEnabled(prev => !prev), [setIsUnderwaterMusicEnabled]);
     const handleToggleSpamGuard = useCallback(() => setIsSpamGuardEnabled(prev => !prev), [setIsSpamGuardEnabled]);
+    const handleToggleRealisticImages = useCallback(() => setIsRealisticImagesEnabled(prev => !prev), [setIsRealisticImagesEnabled]);
+    const handleToggleBasaraHighlight = useCallback(() => setIsBasaraHighlightEnabled(prev => !prev), [setIsBasaraHighlightEnabled]);
 
     const handleToggleFastTransition = useCallback(() => {
         if (isPremium) setIsFastTransitionEnabled(prev => !prev);
@@ -331,25 +331,16 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
         }
     }, [setHasPurchasedPremium, showToast]);
 
-    const handlePlayStoreRating = useCallback(() => {
-        if (hasRatedPlayStore) {
-            showToast('Ödülü zaten aldınız. Teşekkürler!', 'info');
-            return;
-        }
-        // Grant 7-day premium reward
-        setRatingRewardDate(Date.now());
-        setHasRatedPlayStore(true);
-        showToast('Teşekkürler! 7 günlük premium erişim kazandınız! ✨', 'info', 5000);
-        
-        // Open Play Store
-        const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.omer.sesogrenme.cocuklarim';
-        window.open(playStoreUrl, '_blank');
-    }, [hasRatedPlayStore, setRatingRewardDate, setHasRatedPlayStore, showToast]);
-
     return {
         isPremium,
         hasPurchasedPremium,
-        promotion: { isActive: isPromotionActive, endsAt: legacyPromotionEndDate.toISOString() },
+        promotion: { isActive: isPromotionActive, endsAt: promotionEndDate.toISOString() },
+        loyalty: {
+            ...loyaltySnapshot,
+            isCelebrationPending: isLoyaltyCelebrationPending,
+            acknowledgeCelebration: acknowledgeLoyaltyCelebration,
+            refresh: bumpLoyalty,
+        },
         paywall: { monthlyPrice: paywallMonthly, lifetimePrice: paywallLifetime, hasData: !!(paywallMonthly || paywallLifetime) },
         bannedImageIds,
         isMuted,
@@ -359,11 +350,11 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
         isFastTransitionEnabled,
         isSpamGuardEnabled,
         spamGuardRoundThreshold,
-        hasRatedPlayStore,
-        isRatingRewardActive,
         isChildModeEnabled,
         isErrorlessModeEnabled,
         isUnderwaterMusicEnabled,
+        isRealisticImagesEnabled,
+        isBasaraHighlightEnabled,
         theme,
         language,
         handleToggleMute,
@@ -375,6 +366,8 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
         handleToggleChildMode,
         handleToggleErrorlessMode,
         handleToggleUnderwaterMusic,
+        handleToggleRealisticImages,
+        handleToggleBasaraHighlight,
         onChangeTheme: handleChangeTheme,
         onChangeLanguage: handleChangeLanguage,
         onChangeSpamGuardThreshold: handleChangeSpamGuardThreshold,
@@ -410,6 +403,5 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
         handleBanImage,
         handleUnbanImage,
         handleRestorePurchases,
-        handlePlayStoreRating,
     };
 };

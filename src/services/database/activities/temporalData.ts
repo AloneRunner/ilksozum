@@ -595,8 +595,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! Raket sürətlidir.', wrong: 'Xeyr, qayıq yavaşdır.' }
         },
         options: [
-            { id: 204, word: "roket", imageUrl: "/images/204.gif", isCorrect: true, audioKey: "roket", spokenText: "roket" },
-            { id: 493, word: "sandal", imageUrl: "/images/493.gif", isCorrect: false, audioKey: "sandal", spokenText: "sandal" }
+            { id: 204, word: "roket", imageUrl: "/images/204.png", isCorrect: true, audioKey: "roket", spokenText: "roket" },
+            { id: 493, word: "sandal", imageUrl: "/images/493.png", isCorrect: false, audioKey: "sandal", spokenText: "sandal" }
         ]
     },
     { 
@@ -613,8 +613,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! Qayıq yavaşdır.', wrong: 'Xeyr, raket sürətlidir.' }
         },
         options: [
-            { id: 204, word: "roket", imageUrl: "/images/204.gif", isCorrect: false, audioKey: "roket", spokenText: "roket" },
-            { id: 493, word: "sandal", imageUrl: "/images/493.gif", isCorrect: true, audioKey: "sandal", spokenText: "sandal" }
+            { id: 204, word: "roket", imageUrl: "/images/204.png", isCorrect: false, audioKey: "roket", spokenText: "roket" },
+            { id: 493, word: "sandal", imageUrl: "/images/493.png", isCorrect: true, audioKey: "sandal", spokenText: "sandal" }
         ]
     },
     // 4. Bisikletler

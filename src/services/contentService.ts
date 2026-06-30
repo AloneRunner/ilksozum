@@ -7,11 +7,10 @@ import {
     bigSmallData, longShortData, thinThickData, wideNarrowData, oldNewData, youngOldData, hardSoftData, cleanDirtyData, wetDryData, openClosedData, straightCurvedData, aliveLifelessData, bitterSweetData, heavyLightData, hotColdData, roughSmoothData, brokenIntactData, messyCleanData, tazeBayatData, kirisikDuzgunData, sivriKutData, parlakMatData, tembelCaliskanData, seffafOpakData, dikenliPuruzsuzData, dugumCozukData, hungryFullData, derinSigData, kalabalikTenhaData, tersDuzData,
     fewMuchData, halfQuarterWholeData, fullEmptyData, oddEvenData, countMatchData,
     onUnderData, belowAboveData, besideOppositeData, inFrontOfBehindData, insideOutsideData, betweenData, leftRightData, nearFarData, highLowData,
-    beforeAfterData, dayNightData, fastSlowData,
-    whatDoesntBelongData, fiveWOneHData, sequencingStoryData, patternCompletionData, sudokuData, memoryCardPool, dragAndDropCountingData, dragAndDropPositioningData
+    beforeAfterData, dayNightData, fastSlowData, noisyQuietData,
+    whatDoesntBelongData, fiveWOneHData, sequencingStoryData, patternCompletionData, sudokuData, memoryCardPool, dragAndDropCountingData, dragAndDropPositioningData, ownershipData, colorRecognitionData, whatsMissingData
 } from './database/activities/index.ts';
 import objectCollectorData from './database/activities/games/objectCollectorData.ts';
-import emotionPuppetData from './database/activities/games/emotionPuppetData.ts';
 import { CONCEPT_ACTIVITIES, LETTER_SOUND_ACTIVITIES, REASONING_ACTIVITIES, LETTER_GROUPS, OBJECT_RECOGNITION_ACTIVITIES, ALL_SUB_ACHIEVEMENTS } from '../constants.ts';
 import { getActivityMetadata } from '../constants/activityMetadata';
 import { shuffleArray, getValueFromLocalStorage } from '../utils.ts';
@@ -27,6 +26,138 @@ import wordmapTrAz from '../utils/wordmap.tr-az.json';
 const getRandomItems = <T,>(arr: T[], n: number): T[] => {
     if (!arr || arr.length === 0) return [];
     return shuffleArray(arr).slice(0, n);
+};
+
+const QUESTION_SIDE_ALIASES: Record<string, string> = {
+    alive: 'alive',
+    lifeless: 'lifeless',
+    before: 'before',
+    after: 'after',
+    beside: 'beside',
+    opposite: 'opposite',
+    big: 'big',
+    small: 'small',
+    bitter: 'bitter',
+    sweet: 'sweet',
+    broken: 'broken',
+    intact: 'intact',
+    clean: 'clean',
+    dirty: 'dirty',
+    closed: 'closed',
+    open: 'open',
+    day: 'day',
+    night: 'night',
+    deep: 'deep',
+    shallow: 'shallow',
+    dry: 'dry',
+    wet: 'wet',
+    empty: 'empty',
+    full: 'full',
+    even: 'even',
+    odd: 'odd',
+    far: 'far',
+    fast: 'fast',
+    slow: 'slow',
+    few: 'few',
+    much: 'much',
+    front: 'front',
+    infront: 'front',
+    behind: 'behind',
+    half: 'half',
+    quarter: 'quarter',
+    whole: 'whole',
+    slice: 'slice',
+    hard: 'hard',
+    soft: 'soft',
+    high: 'high',
+    higher: 'high',
+    low: 'low',
+    lower: 'low',
+    hot: 'hot',
+    cold: 'cold',
+    hungry: 'hungry',
+    fullup: 'fullup',
+    inside: 'inside',
+    outside: 'outside',
+    knotted: 'knotted',
+    untied: 'untied',
+    left: 'left',
+    right: 'right',
+    long: 'long',
+    short: 'short',
+    matte: 'matte',
+    shiny: 'shiny',
+    near: 'near',
+    old: 'old',
+    new: 'new',
+    on: 'on',
+    under: 'under',
+    rough: 'rough',
+    smooth: 'smooth',
+    noisy: 'noisy',
+    quiet: 'quiet',
+    sharp: 'sharp',
+    blunt: 'blunt',
+    straight: 'straight',
+    curved: 'curved',
+    thick: 'thick',
+    thin: 'thin',
+    thorny: 'thorny',
+    transparent: 'transparent',
+    opaque: 'opaque',
+    above: 'above',
+    below: 'below',
+    wide: 'wide',
+    narrow: 'narrow',
+    wrinkled: 'wrinkled',
+    smoothened: 'smoothened',
+    young: 'young'
+};
+
+const getQuestionSideBucket = (round: Pick<ConceptRound, 'questionAudioKey' | 'question'>): string | null => {
+    const rawKey = String(round.questionAudioKey || '').toLowerCase();
+    if (!rawKey) return null;
+
+    const normalized = rawKey
+        .replace(/^q_/, '')
+        .replace(/which_are/g, '')
+        .replace(/which_is/g, '')
+        .replace(/does_this_have/g, '')
+        .replace(/in_front/g, 'infront')
+        .replace(/\bfaces\b/g, '')
+        .replace(/__+/g, '_')
+        .replace(/^_+|_+$/g, '');
+
+    const tokens = normalized.split('_').filter(Boolean);
+    for (const token of tokens) {
+        const mapped = QUESTION_SIDE_ALIASES[token];
+        if (mapped) return mapped;
+    }
+
+    return null;
+};
+
+const pickBalancedRoundFromPairGroup = (
+    rounds: ConceptRound[],
+    sideCounts: Map<string, number>
+): ConceptRound => {
+    const shuffledRounds = shuffleArray(rounds);
+    const annotated = shuffledRounds.map(round => ({
+        round,
+        side: getQuestionSideBucket(round),
+    }));
+    const roundsWithKnownSide = annotated.filter(item => item.side);
+
+    if (roundsWithKnownSide.length === 0) {
+        return shuffledRounds[0];
+    }
+
+    const minCount = Math.min(...roundsWithKnownSide.map(item => sideCounts.get(item.side!) || 0));
+    const candidates = roundsWithKnownSide
+        .filter(item => (sideCounts.get(item.side!) || 0) === minCount)
+        .map(item => item.round);
+
+    return shuffleArray(candidates)[0];
 };
 
 // Helper to translate Turkish word to target language using wordmap
@@ -1320,6 +1451,7 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.BeforeAfter]: beforeAfterData,
     [ActivityType.DayNight]: dayNightData,
     [ActivityType.FastSlow]: fastSlowData,
+    [ActivityType.NoisyQuiet]: noisyQuietData,
     // WhatDoesntBelong is now handled dynamically
     // FunctionalMatching removed - now integrated into 5N1K "What?" category
     [ActivityType.FiveWOneH]: fiveWOneHData,
@@ -1327,6 +1459,9 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.PatternCompletion]: patternCompletionData,
     [ActivityType.DragAndDropCounting]: dragAndDropCountingData,
     [ActivityType.DragAndDropPositioning]: dragAndDropPositioningData,
+    [ActivityType.WhoseIsThis]: ownershipData,
+    [ActivityType.ColorRecognition]: colorRecognitionData,
+    [ActivityType.WhatsMissing]: whatsMissingData,
 };
 
 export const fetchConceptActivityData = async (
@@ -1452,17 +1587,6 @@ export const fetchConceptActivityData = async (
             ...round,
             id: idx,
             category: t(round.categoryKey, round.category),
-        }));
-    }
-
-    if (activity === ActivityType.EmotionPuppet) {
-        // Duygu Kuklası Oyunu - 4 farklı duygu senaryosu
-        const shuffled = shuffleArray([...emotionPuppetData]);
-        const selectedRounds = shuffled.slice(0, Math.min(count || 4, emotionPuppetData.length));
-        return selectedRounds.map((round, idx) => ({
-            ...round,
-            id: idx,
-            targetEmotionLabel: t(round.targetEmotionKey, round.targetEmotionLabel),
         }));
     }
 
@@ -1697,24 +1821,33 @@ export const fetchConceptActivityData = async (
     if (!rawData) return [];
 
     if (rawData.length > 0 && rawData[0]?.options?.length === 2) {
-        const shuffledData = shuffleArray(rawData);
+        const pairGroups = new Map<string, ConceptRound[]>();
         const uniquePairRounds: ConceptRound[] = [];
-        const seenPairs = new Set<string>();
+        const sideCounts = new Map<string, number>();
 
-        for (const round of shuffledData) {
-            if (uniquePairRounds.length >= MAX_QUESTIONS_STATIC) break;
-
+        for (const round of rawData) {
             const optionIds = (round.options as ConceptOption[]).map(opt => opt.id).sort((a, b) => a - b);
             const pairKey = optionIds.join('-');
+            const existing = pairGroups.get(pairKey) || [];
+            existing.push(round);
+            pairGroups.set(pairKey, existing);
+        }
 
-            if (!seenPairs.has(pairKey)) {
-                seenPairs.add(pairKey);
-                uniquePairRounds.push({
-                    ...round,
-                    options: shuffleArray(round.options),
-                    activityType: activity,
-                });
+        const shuffledGroups = shuffleArray(Array.from(pairGroups.values()));
+        for (const pairGroup of shuffledGroups) {
+            if (uniquePairRounds.length >= MAX_QUESTIONS_STATIC) break;
+
+            const selectedRound = pickBalancedRoundFromPairGroup(pairGroup, sideCounts);
+            const side = getQuestionSideBucket(selectedRound);
+            if (side) {
+                sideCounts.set(side, (sideCounts.get(side) || 0) + 1);
             }
+
+            uniquePairRounds.push({
+                ...selectedRound,
+                options: shuffleArray(selectedRound.options),
+                activityType: activity,
+            });
         }
         return uniquePairRounds;
     }

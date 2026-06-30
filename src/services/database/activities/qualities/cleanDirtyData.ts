@@ -267,43 +267,8 @@ export const cleanDirtyData: ConceptRound[] = [
         ]
     },
 
-    // 8. Gömlek
-    { 
-        id: 91, 
-        question: "Temiz olan hangisi?", 
-        questionAudioKey: "q_which_is_clean", 
-        activityType: ActivityType.CleanDirty, 
-        speech: {
-            tr: { correct: 'Evet! Gömlek temizdir.', wrong: 'Hayır, gömlek kirlidir.' },
-            en: { correct: 'Yes! The shirt is clean.', wrong: 'No, the shirt is dirty.' },
-            de: { correct: 'Ja! Das Hemd ist sauber.', wrong: 'Nein, das Hemd ist schmutzig.' },
-            fr: { correct: "Oui ! La chemise est propre.", wrong: "Non, la chemise est sale." },
-            nl: { correct: 'Ja! Het overhemd is schoon.', wrong: 'Nee, het overhemd is vuil.' },
-            az: { correct: 'Bəli! Köynək təmizdir.', wrong: 'Xeyr, köynək çirklidir.' }
-        },
-        options: [
-            { id: 255, word: "gömlek", imageUrl: "/images/255.png", isCorrect: true, audioKey: "temiz_gomlek", spokenText: "gömlek" },
-            { id: 254, word: "gömlek", imageUrl: "/images/254.png", isCorrect: false, audioKey: "kirli_gomlek", spokenText: "gömlek" }
-        ]
-    },
-    { 
-        id: 92, 
-        question: "Kirli olan hangisi?", 
-        questionAudioKey: "q_which_is_dirty", 
-        activityType: ActivityType.CleanDirty, 
-        speech: {
-            tr: { correct: 'Evet! Gömlek kirlidir.', wrong: 'Hayır, gömlek temizdir.' },
-            en: { correct: 'Yes! The shirt is dirty.', wrong: 'No, the shirt is clean.' },
-            de: { correct: 'Ja! Das Hemd ist schmutzig.', wrong: 'Nein, das Hemd ist sauber.' },
-            fr: { correct: "Oui ! La chemise est sale.", wrong: "Non, la chemise est propre." },
-            nl: { correct: 'Ja! Het overhemd is vuil.', wrong: 'Nee, het overhemd is schoon.' },
-            az: { correct: 'Bəli! Köynək çirklidir.', wrong: 'Xeyr, köynək təmizdir.' }
-        },
-        options: [
-            { id: 255, word: "gömlek", imageUrl: "/images/255.png", isCorrect: false, audioKey: "temiz_gomlek", spokenText: "gömlek" },
-            { id: 254, word: "gömlek", imageUrl: "/images/254.png", isCorrect: true, audioKey: "kirli_gomlek", spokenText: "gömlek" }
-        ]
-    },
+    // 8. Gömlek ciftini gecici olarak kaldirdik.
+    // Mevcut "kirli gomlek" gorseli kirli degil, daha cok kirisik/dogru-duruyor.
 
     // 9. Çorap
     { 

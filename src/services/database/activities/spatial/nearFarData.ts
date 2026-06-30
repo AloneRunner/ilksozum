@@ -200,44 +200,4 @@ export const nearFarData: ConceptRound[] = [
             { id: 622, word: "gemi", imageUrl: "/images/622.png", isCorrect: true, audioKey: "gemi_uzak", spokenText: "uzak" }
         ]
     },
-
-    // ----------------------------------------------------------------------
-    // 6. Adam (718-719)
-    // ----------------------------------------------------------------------
-    { 
-        id: 11, 
-        question: "Hangi adam daha yakın?", 
-        questionAudioKey: "q_which_is_near", 
-        activityType: ActivityType.NearFar, 
-        speech: {
-            tr: { correct: 'Evet! Adam daha yakın.', wrong: 'Hayır, adam daha uzak.' },
-            en: { correct: 'Yes! The man is nearer.', wrong: 'No, the man is farther.' },
-            de: { correct: 'Ja! Der Mann ist näher.', wrong: 'Nein, der Mann ist weiter weg.' },
-            fr: { correct: "Oui ! L'homme est plus proche.", wrong: "Non, l'homme est plus loin." },
-            nl: { correct: 'Ja! De man is dichterbij.', wrong: 'Nee, de man is verder weg.' },
-            az: { correct: 'Bəli! Adam daha yaxındır.', wrong: 'Xeyr, adam daha uzaqdır.' }
-        },
-        options: [
-            { id: 718, word: "adam", imageUrl: "/images/718.png", isCorrect: true, audioKey: "adam_yakin", spokenText: "yakın" },
-            { id: 719, word: "adam", imageUrl: "/images/719.png", isCorrect: false, audioKey: "adam_uzak", spokenText: "uzak" }
-        ]
-    },
-    { 
-        id: 12, 
-        question: "Hangi adam daha uzak?", 
-        questionAudioKey: "q_which_is_far", 
-        activityType: ActivityType.NearFar, 
-        speech: {
-            tr: { correct: 'Evet! Adam daha uzak.', wrong: 'Hayır, adam daha yakın.' },
-            en: { correct: 'Yes! The man is farther.', wrong: 'No, the man is nearer.' },
-            de: { correct: 'Ja! Der Mann ist weiter weg.', wrong: 'Nein, der Mann ist näher.' },
-            fr: { correct: "Oui ! L'homme est plus loin.", wrong: "Non, l'homme est plus proche." },
-            nl: { correct: 'Ja! De man is verder weg.', wrong: 'Nee, de man is dichterbij.' },
-            az: { correct: 'Bəli! Adam daha uzaqdır.', wrong: 'Xeyr, adam daha yaxındır.' }
-        },
-        options: [
-            { id: 718, word: "adam", imageUrl: "/images/718.png", isCorrect: false, audioKey: "adam_yakin", spokenText: "yakın" },
-            { id: 719, word: "adam", imageUrl: "/images/719.png", isCorrect: true, audioKey: "adam_uzak", spokenText: "uzak" }
-        ]
-    }
 ];

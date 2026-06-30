@@ -49,7 +49,7 @@ export const imageData_201_300: ImageMetadata[] = [
   {
     "id": 204,
     "word": "roket",
-    "imageUrl": "/images/204.gif",
+    "imageUrl": "/images/204.png",
     "audioKeys": { "default": "roket", "concept": "hızlı" },
     "tags": {
       "category": "Taşıtlar",

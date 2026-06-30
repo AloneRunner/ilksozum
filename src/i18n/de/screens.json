@@ -73,6 +73,17 @@
       "title": "Programmmodus",
       "subtitle": "Starte eine geführte tägliche Sitzung"
     },
+    "audioIssue": {
+      "title": "Wenn die Sprachausgabe nicht funktioniert",
+      "line4": "Hinweis: Auf älteren Samsung-Modellen kann Google TTS zwangsweise deaktiviert werden; wenn das türkische Sprachpaket nicht installiert ist, gibt es auf manchen Geräten keine Sprachausgabe oder einen starken englischen Akzent.",
+      "line1": "Einstellungen > Stummmodus sollte aus sein. (Vielleicht blieb er nach Premium aktiv)",
+      "line2": "Geräteeinstellungen > Text-zu-Sprache (TTS): Google TTS wählen.",
+      "line3": "In Google TTS empfehlen wir Stimme Nr. 4 von 5; wechseln und erneut testen."
+    },
+    "themeFeedback": {
+      "title": "Feedback zu Themen erbeten",
+      "body": "Ich überlege, einige Themes zu entfernen. Video-Hintergründe benötigen viel Speicher und die App könnte über 200 MB gehen. Nutzt ihr diese Themes wirklich? Schreibt mir bitte. Den frei werdenden Platz möchte ich mit echten Foto-Versionen der aktuellen Bilder füllen."
+    },
     "parentTips": {
       "title": "Tipps für Eltern",
       "subtitle": "App effektiver nutzen"
@@ -124,8 +135,7 @@
         "mixed": "Gemischt"
       },
       "instructions": "Tippe auf einen Planeten, um eine Kategorie zu wählen"
-    }
-    ,
+    },
     "soundImitation": {
       "title": "Lautnachahmung Karten",
       "subtitle": "Karten zur Lautnachahmung für nonverbale Kinder",
@@ -259,7 +269,12 @@
       "memoryCards": "Memory-Karten",
       "dragAndDropCounting": "Objekte verschieben",
       "dragAndDropPositioning": "Ball platzieren",
-      "hangman": "Galgenmännchen"
+      "hangman": "Galgenmännchen",
+      "whoseIsThis": "Wem gehört das?",
+      "whatsMissing": "Was fehlt?"
+    },
+    "concept": {
+      "colorRecognition": "Welche Farbe hat es?"
     },
     "fineMotor": {
       "lineTracing": "Linien nachzeichnen",
@@ -355,7 +370,7 @@
     "title": "Einstellungen",
     "premium": {
       "title": "Premium-Funktionen",
-      "desc": "Werbung entfernen, themenbasierte Benutzeroberfläche (Live-Hintergründe) freischalten, Fortschrittsberichte für Eltern anzeigen und unsere Entwicklung unterstützen.",
+      "desc": "Alle Bildungsinhalte sind kostenlos und für alle zugänglich. Premium bietet Komfortfunktionen wie Werbefreiheit, Themes, Arbeitsblätter zum Ausdrucken und schnelle Übergänge. Neue Benutzer erhalten eine 7-tägige Testversion. Sie können Premium kaufen, um uns zu unterstützen.",
       "cta": "Premium holen & unterstützen",
       "mathQuestion": "Elternbestätigung:\n\nBitte beantworten Sie diese Frage:\n\n{num1} + {num2} = ?",
       "wrongAnswer": "Falsche Antwort. Bitte versuchen Sie es erneut.",
@@ -364,6 +379,7 @@
       "monthly": "Monatlich",
       "lifetime": "Lebenslang"
     },
+    "promoNote": "Geschenk Premium: Alle Funktionen bis {date} freigeschaltet. Wenn Sie möchten, können Sie Premium kaufen, um uns zu unterstützen — die Unterstützung wird für die Portierung auf die iOS-Plattform (jährliche Gebühr) verwendet.",
     "profile": {
       "title": "Profil",
       "active": "Aktives Profil",
@@ -745,9 +761,8 @@
     "thisUpdate": {
       "title": "In diesem Update",
       "items": [
-        "Neue Aktivität: Wie viele? - Handgesten mit Tiergruppen durch Zählen zuordnen (zu finden in Konzeptlernen → Menge)",
-        "Sanfter Hinweismodus: Wenn Ihr Kind dieselbe Aktivität zu schnell wiederholt, erscheint ein ruhiger und sanfter Feedback-Bildschirm. Er erinnert daran, sich auf den Bildschirm zu konzentrieren und zu atmen (in Einstellungen umschaltbar)",
-        "Play Store-Bewertung: Bewerten Sie unsere App und erhalten Sie 1 Woche Premium-Zugang! (über Einstellungsmenü erreichbar)"
+        "Druckzentrum (Arbeitsblätter) hinzugefügt: Erstellen Sie pädagogische Druckmaterialien.",
+        "Arbeitsblätter wurden erfolgreich auf Computern getestet. Die Leistung auf Mobilgeräten wird derzeit getestet."
       ],
       "_tempNotes": [
         "HINWEIS: Die folgenden Punkte sind temporäre Notizen — sie werden im nächsten Update aus den i18n-Dateien entfernt."

@@ -73,6 +73,14 @@
       "title": "Program Modu",
       "subtitle": "Uzman planıyla günlük oturum başlat"
     },
+    "audioIssue": {
+      "title": "Seslendirme sorunu yaşıyorsanız",
+      "line4": "Not: Eski Samsung modellerinde Google TTS zorla kapatılabiliyor; Türkçe ses paketi yüklenmediği için bazı cihazlarda ses gelmeyebilir ya da İngilizce aksan duyulabilir.",
+      "line1": "Ayarlar > Sessiz Mod kapalı olsun. (Premium bitince açık kalmış olabilir)",
+      "line2": "Cihaz Ayarları > Metin Okuma (TTS) bölümünde Google TTS motorunu seçin.",
+      "line3": "Google TTS içinde 5 sesten 4. sesi öneriyoruz; sesi değiştirip tekrar deneyin.",
+      "cta": "Google TTS'yi Aç / Yükle"
+    },
     "parentTips": {
       "title": "Ebeveynler İçin İpuçları",
       "subtitle": "Uygulamayı daha verimli kullanın"
@@ -262,7 +270,12 @@
       "memoryCards": "Hafıza Kartları",
       "dragAndDropCounting": "Nesneleri Taşı",
       "dragAndDropPositioning": "Topu Yerleştir",
-      "hangman": "Adam Asmaca"
+      "hangman": "Adam Asmaca",
+      "whoseIsThis": "Bu Kimin?",
+      "whatsMissing": "Hangisi Kayıp?"
+    },
+    "concept": {
+      "colorRecognition": "Rengi Ne?"
     },
     "fineMotor": {
       "lineTracing": "Çizgi Takip",
@@ -358,7 +371,7 @@
     "title": "Ayarlar",
     "premium": {
       "title": "Premium Özellikler",
-      "desc": "Tüm eğitim içeriği ücretsizdir ve herkese açıktır. Premium, sadece küçük konfor özellikleri ekler (reklamları kaldırma, temalar, hızlı geçiş) ve uygulamayı geliştiren baba için küçük bir hediyedir. Çocuğunuzun eğitimini hiçbir şekilde etkilemez.",
+      "desc": "Tüm eğitim içeriği ücretsizdir ve herkese açıktır. Premium; reklamları kaldırma, temalar, çalışma kağıtları (çıktı merkezi) ve hızlı geçiş gibi konfor özellikleri sunar. Yeni kullanıcılara 7 günlük deneme süresi tanımlanır. Destek olmak isterseniz Premium satın alabilirsiniz.",
       "cta": "Premium'a Geç & Destek Ol",
       "mathQuestion": "Ebeveyn Onayı:\n\nDevam etmek için bu soruyu cevaplayın:\n\n{num1} + {num2} = ?",
       "wrongAnswer": "Yanlış cevap. Lütfen tekrar deneyin.",
@@ -367,6 +380,7 @@
       "monthly": "Aylık",
       "lifetime": "Ömür Boyu"
     },
+    "promoNote": "Hediye Premium: {date} tarihine kadar tüm özellikler açık. Çıktı merkezi (yazıcı çalışma kağıtları) de dahil.",
     "profile": {
       "title": "Profil",
       "active": "Aktif Profil",
@@ -405,6 +419,10 @@
     "manageBanned": {
       "title": "Yasaklı Görselleri Yönet",
       "subtitle": "Yasakladıklarınızı düzenleyin"
+    },
+    "basaraHighlight": {
+      "title": "Basara Hece Renklendirme",
+      "subtitle": "Öğrenilen güncel heceleri belirginleştirir"
     },
     "activityManagement": {
       "title": "Etkinlik Yönetimi"
@@ -749,9 +767,8 @@
     "thisUpdate": {
       "title": "Bu Güncellemede",
       "items": [
-        "Yeni Etkinlik: Kaç Tane Var? - Parmakları ve hayvan gruplarını sayarak eşleştirme etkinliği eklendi (Kavram Öğrenme → Miktar bölümünde)",
-        "Nazik Uyarı Modu: Çocuğunuz aynı etkinliği çok hızlı tekrarladığında, sakin ve nazik bir geri bildirim ekranı devreye girer. Ekrana odaklanmasını ve nefes almasını hatırlatır (Ayarlar'dan açılıp kapatılabilir)",
-        "Play Store Değerlendirmesi: Uygulamamızı değerlendirdiğinizde 1 hafta premium erişim kazanırsınız! (Ayarlar menüsünden ulaşabilirsiniz)"
+        "Çıktı Merkezi (Çalışma Kağıtları) eklendi: Çocuğunuz için masa başı eğitim materyalleri hazırlayabilirsiniz.",
+        "Çalışma kağıtları bilgisayarda test edildi ve sorunsuz çalışıyor. Mobil cihaz performansı henüz test aşamasındadır."
       ],
       "_tempNotes": [
         "NOT: Aşağıdaki öğeler geçici notlardır — bir sonraki güncellemede i18n dosyalarından kaldırılacaktır."

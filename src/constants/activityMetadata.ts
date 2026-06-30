@@ -556,6 +556,27 @@ export const ACTIVITY_METADATA_MAP: Record<string, ActivityMetadata> = {
     prerequisite: ActivityType.FewMuch,
     masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
   },
+  [ActivityType.WhoseIsThis]: {
+    activityId: ActivityType.WhoseIsThis,
+    activityName: 'Bu Kimin?',
+    unitNumber: 8,
+    prerequisite: ActivityType.CauseEffect,
+    masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
+  },
+  [ActivityType.ColorRecognition]: {
+    activityId: ActivityType.ColorRecognition,
+    activityName: 'Rengi Ne?',
+    unitNumber: 3,
+    prerequisite: ActivityType.Colors,
+    masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
+  },
+  [ActivityType.WhatsMissing]: {
+    activityId: ActivityType.WhatsMissing,
+    activityName: 'Hangisi Kayıp?',
+    unitNumber: 7,
+    prerequisite: ActivityType.MemoryCards,
+    masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
+  },
   'dogal_yapilar_uzay': {
     activityId: 'dogal_yapilar_uzay',
     activityName: 'Doğal Yapılar & Uzay',

@@ -19,7 +19,7 @@ export enum ScreenState {
   SoundImitationSadeceGorsel,
   SoundImitationUfakVideolar,
   ObjectCategoriesMenu,
-  LetterActivitiesMenu, 
+  LetterActivitiesMenu,
   CommunicationSubCategory,
   ProfileSelection,
   ParentReport,
@@ -34,7 +34,54 @@ export enum ScreenState {
   RelativeComparisonActivitiesMenu,
   ProgramIntro,
   FiveWOneHMenu,
-
+  MiniGamesMenu,
+  BalloonPopGame,
+  ButterflyGardenGame,
+  FireworksGame,
+  ShapeMatchingGame,
+  MusicTouchGame,
+  SevenDifferencesGame,
+  EmotionPuppetGame,
+  PatternGame,
+  ColorMixGame,
+  SheepShearingGame,
+  BubblePopGame,
+  BusJamGame,
+  PuzzleGame,
+  FishingGame,
+  RoomCleaningGame,
+  FruitCollectorGame,
+  TargetShootingGame,
+  TrainTrackGame,
+  MergeDropGame,
+  NumberMergeGame,
+  BalanceScaleGame,
+  MazeGame,
+  MemoryMatchGame,
+  WorksheetCenter,
+  ConceptWorksheet,
+  OddOneOutGame,
+  LetterBubblesGame,
+  DailyRoutineGame,
+  ColorSortingGame,
+  ConnectDotsGame,
+  CountingGame,
+  ShadowMatchGame,
+  SizeOrderingGame,
+  NumberTargetGame,
+  NumberSequenceGame,
+  AnimalSoundsGame,
+  PlantGrowingGame,
+  WhereBelongsGame,
+  SyllableTrainGame,
+  RainbowGame,
+  WordBoxGame,
+  MissingPieceGame,
+  MandalaGame,
+  WhoseIsThisGame,
+  ClockLearningGame,
+  BasaraLessonMap,    // BASARA Yöntemi — ders haritası
+  BasaraLesson,       // BASARA Yöntemi — tek ders akışı
 }
 
 export enum Tab {
@@ -52,15 +99,15 @@ export enum ActivityType {
   SoundPresence,
   FindTheLetter,
   Hangman,              // Adam Asmaca: Harf seçerek kelimeyi bul
-  
+
   // === Kavram Etkinlikleri > Ana Kategori ===
   YesNo, // Evet/Hayır is a main category now
 
   // === Kavram Etkinlikleri > Temel Kavramlar ===
   Colors,
   Shapes,
-  Emotions, 
-  
+  Emotions,
+
   // === Kavram Etkinlikleri > Nitelikler (Zıt Kavramlar) ===
   NoisyQuiet,
   BigSmall,
@@ -76,7 +123,7 @@ export enum ActivityType {
   OldNew,
   HardSoft,
   CleanDirty,
-  WetDry, 
+  WetDry,
   OpenClosed,
   StraightCurved,
   AliveLifeless,
@@ -99,7 +146,8 @@ export enum ActivityType {
   HungryFull,
   YoungOld,
   TersDuz,
-  
+  ClockLearning,
+
   // === Kavram Etkinlikleri > Miktar & Sayılar ===
   FewMuch,
   HalfQuarterWhole,
@@ -115,8 +163,8 @@ export enum ActivityType {
   InsideOutside,
   Between,
   LeftRight,
-  NearFar, 
-  HighLow, 
+  NearFar,
+  HighLow,
 
   // === Göreceli Karşılaştırma Etkinlikleri (Experimental) ===
   RelativeBigSmall,
@@ -133,7 +181,7 @@ export enum ActivityType {
   FastSlow,
   NowNextLater, // Önce/Şimdi/Sonra (YAKINDA)
   YesterdayTodayTomorrow, // Dün/Bugün/Yarın (YAKINDA)
-  
+
   // === Kavram Etkinlikleri > Duyular ===
   Senses, // YENİ EKLENDİ
 
@@ -157,6 +205,11 @@ export enum ActivityType {
   EmotionPuppet,        // Duygu Kuklası: Yüz parçalarını birleştirerek duygu oluşturma
   // === 5N1K (Who/What/Where/When/Why/How) ===
   FiveWOneH,
+  WhoseIsThis,          // Bu Kimin? (Aidiyet ve Sahiplik yönlü eşleştirme)
+  ColorRecognition,     // Rengi Ne? (Nesnenin rengini bul)
+  WhatsMissing,         // Hangisi Kayıp? (Göster-gizle hafıza etkinliği)
+  Basara,               // BASARA Yöntemi — TR'ye özel rehberli okuma kulvarı (en sonda: enum değerlerini kaydırmamak için)
+  Basara2,              // BASARA 2 (Klasik) — yaygın/eski a-serisi sürümü (ayrı kulvar)
 }
 
 export enum ActivityCategory {
@@ -176,9 +229,9 @@ export interface Profile {
 }
 
 export interface AttemptRecord {
-    timestamp: number;
-    score: number;
-    total: number;
+  timestamp: number;
+  score: number;
+  total: number;
   mode?: 'program' | 'free';
 }
 
@@ -210,8 +263,8 @@ export interface Word {
   word: string;
   imageUrl: string;
   audioKeys: {
-      default: string;
-      [key: string]: string;
+    default: string;
+    [key: string]: string;
   };
   hasLetter?: boolean;
   syllables?: string[];
@@ -225,27 +278,30 @@ export interface Word {
 }
 
 export interface Story {
-    id: number;
-    title: string;
-    story: string;
+  id: number;
+  title: string;
+  story: string;
 }
 
 export interface ConceptOption {
-    id: number;
-    word: string; 
-    audioKey: string; 
+  id: number;
+  word: string;
+  audioKey: string;
   spokenText?: string;
-    imageUrl: string;
-    isCorrect: boolean;
+  imageUrl: string;
+  imageScale?: number; // Used for relative big/small where the same image is sized differently
+  disableRealistic?: boolean;
+  isCorrect: boolean;
 }
 
+
 export interface ConceptRound {
-    id: number;
-    question: string;
-    questionAudioKey: string;
-    options: ConceptOption[];
-    activityType: ActivityType; // Pass activity type for context
-    questionItem?: ImageMetadata; // For games like FunctionalMatching
+  id: number;
+  question: string;
+  questionAudioKey: string;
+  options: ConceptOption[];
+  activityType: ActivityType; // Pass activity type for context
+  questionItem?: ImageMetadata; // For games like FunctionalMatching
   // Optional, child-friendly label for the shared group of the wrong options in Odd One Out rounds (TR-first)
   // Example: 'meyveler', 'hayvanlar', 'taşıtlar', 'mutfak gereçleri'
   othersGroupLabel?: string;
@@ -283,10 +339,10 @@ export interface SudokuRound {
 
 // === Memory Cards Game Types (Hafıza Kartları) ===
 export interface MemoryCard {
-  id: number; 
+  id: number;
   word: string;
   imageUrl: string;
-  audioKey: string; 
+  audioKey: string;
 }
 
 export interface MemoryGameRound {
@@ -298,7 +354,7 @@ export interface MemoryGameRound {
 
 // === Pattern Completion Game Types ===
 export interface PatternItem {
-  id: number; 
+  id: number;
   word: string;
   imageUrl: string;
 }
@@ -307,10 +363,10 @@ export interface PatternRound {
   id: number;
   question: string;
   questionAudioKey: string;
-  pattern: PatternItem[]; 
-  options: PatternItem[]; 
+  pattern: PatternItem[];
+  options: PatternItem[];
   answer: PatternItem;
-  activityType?: ActivityType; 
+  activityType?: ActivityType;
 }
 
 // === Sequencing Stories Game Types ===
@@ -361,7 +417,7 @@ export interface ImageMetadata {
   pairGroupId?: string | string[];
   audioKeys: {
     default: string;
-    [key: string]: string; 
+    [key: string]: string;
   };
   tags: {
     category: string;
@@ -376,7 +432,7 @@ export interface ImageMetadata {
     time?: 'gündüz' | 'gece' | 'sabah' | 'öğle' | 'akşam';
     speed?: 'hızlı' | 'yavaş';
     quality?: ('güzel' | 'solgun' | 'taze' | 'çürük' | 'temiz' | 'kirli' | 'sağlam' | 'kırık' | 'bayat' | 'kırışık' | 'düzgün' | 'sivri' | 'küt' | 'tembel' | 'çalışkan' | 'şeffaf' | 'opak' | 'ters') | ('güzel' | 'solgun' | 'taze' | 'çürük' | 'temiz' | 'kirli' | 'sağlam' | 'kırık' | 'bayat' | 'kırışık' | 'düzgün' | 'sivri' | 'küt' | 'tembel' | 'çalışkan' | 'şeffaf' | 'opak' | 'ters')[];
-  emotion?: 'mutlu' | 'üzgün' | 'kızgın' | 'şaşkın' | 'korkmuş' | 'hasta' | 'yorgun' | 'uykulu' | 'heyecanlı' | 'rahat' | 'sakin' | 'gururlu' | 'neşeli' | 'utanmış' | 'sıkılmış' | 'sevgi dolu';
+    emotion?: 'mutlu' | 'üzgün' | 'kızgın' | 'şaşkın' | 'korkmuş' | 'hasta' | 'yorgun' | 'uykulu' | 'heyecanlı' | 'rahat' | 'sakin' | 'gururlu' | 'neşeli' | 'utanmış' | 'sıkılmış' | 'sevgi dolu';
     quantity?: 'az' | 'çok';
     fraction?: 'bütün' | 'yarım' | 'çeyrek';
     fullness?: 'boş' | 'dolu';
@@ -396,7 +452,7 @@ export interface ImageMetadata {
     weight?: 'ağır' | 'hafif';
     quantity_type?: 'tek' | 'çift';
     height?: 'yüksek' | 'alçak';
-  density?: 'kalabalik' | 'tenha';
+    density?: 'kalabalik' | 'tenha';
     depth?: 'derin' | 'sığ';
     distance?: 'yakın' | 'uzak';
     relation?: 'aynı' | 'farklı';
@@ -444,7 +500,7 @@ export interface CommunicationCategory {
 
 // === Data structure types for staticData.ts ===
 export type StoryData = {
-    [key: string]: Story[];
+  [key: string]: Story[];
 };
 
 // === UNIT-BASED PROGRAM MODE TYPES ===
@@ -476,8 +532,8 @@ export interface MasteryRule {
  * Prerequisite rule for unlocking an activity
  * Can be a single activity ID or a complex expression with AND/OR logic
  */
-export type PrerequisiteRule = 
-  | ActivityType 
+export type PrerequisiteRule =
+  | ActivityType
   | string // For object category names like "hayvanlar"
   | { type: 'AND'; conditions: PrerequisiteRule[] }
   | { type: 'OR'; conditions: PrerequisiteRule[] }

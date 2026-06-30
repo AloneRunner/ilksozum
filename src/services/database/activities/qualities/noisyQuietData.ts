@@ -244,7 +244,7 @@ export const noisyQuietData: ConceptRound[] = [
             az: { correct: 'Bəli! Raket səs-küylüdür.', wrong: 'Xeyr, yastıq sakitdir.' }
         },
         options: [
-            { id: 204, word: "roket", imageUrl: "/images/204.gif", isCorrect: true, audioKey: "roket", spokenText: "roket" },
+            { id: 204, word: "roket", imageUrl: "/images/204.png", isCorrect: true, audioKey: "roket", spokenText: "roket" },
             { id: 137, word: "yastık", imageUrl: "/images/137.png", isCorrect: false, audioKey: "yastik", spokenText: "yastık" }
         ]
     },
@@ -262,7 +262,7 @@ export const noisyQuietData: ConceptRound[] = [
             az: { correct: 'Bəli! Yastıq sakitdir.', wrong: 'Xeyr, raket səs-küylüdür.' }
         },
         options: [
-            { id: 204, word: "roket", imageUrl: "/images/204.gif", isCorrect: false, audioKey: "roket", spokenText: "roket" },
+            { id: 204, word: "roket", imageUrl: "/images/204.png", isCorrect: false, audioKey: "roket", spokenText: "roket" },
             { id: 137, word: "yastık", imageUrl: "/images/137.png", isCorrect: true, audioKey: "yastik", spokenText: "yastık" }
         ]
     },

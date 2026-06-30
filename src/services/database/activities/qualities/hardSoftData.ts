@@ -131,7 +131,7 @@ export const hardSoftData: ConceptRound[] = [
         },
         options: [
             { id: 134, word: "masa", imageUrl: "/images/134.png", isCorrect: true, audioKey: "masa", spokenText: "masa" },
-            { id: 167, word: "sünger", imageUrl: "/images/167.gif", isCorrect: false, audioKey: "sunger", spokenText: "sünger" }
+            { id: 167, word: "sünger", imageUrl: "/images/167.png", isCorrect: false, audioKey: "sunger", spokenText: "sünger" }
         ]
     },
     { 
@@ -149,7 +149,7 @@ export const hardSoftData: ConceptRound[] = [
         },
         options: [
             { id: 134, word: "masa", imageUrl: "/images/134.png", isCorrect: false, audioKey: "masa", spokenText: "masa" },
-            { id: 167, word: "sünger", imageUrl: "/images/167.gif", isCorrect: true, audioKey: "sunger", spokenText: "sünger" }
+            { id: 167, word: "sünger", imageUrl: "/images/167.png", isCorrect: true, audioKey: "sunger", spokenText: "sünger" }
         ]
     },
 
@@ -358,7 +358,7 @@ export const hardSoftData: ConceptRound[] = [
             az: { correct: 'Bəli! Mərmər daşı sərtdir.', wrong: 'Xeyr, yun yumşaqdır.' }
         },
         options: [
-            { id: 762, word: "misket", imageUrl: "/images/762.png", isCorrect: true, audioKey: "misket", spokenText: "misket" },
+            { id: 762, word: "misket", imageUrl: "/images/762.png", imageScale: 0.72, isCorrect: true, audioKey: "misket", spokenText: "misket" },
             { id: 587, word: "yün", imageUrl: "/images/587.png", isCorrect: false, audioKey: "yun", spokenText: "yün" }
         ]
     },
@@ -376,7 +376,7 @@ export const hardSoftData: ConceptRound[] = [
             az: { correct: 'Bəli! Yun yumşaqdır.', wrong: 'Xeyr, mərmər daşı sərtdir.' }
         },
         options: [
-            { id: 762, word: "misket", imageUrl: "/images/762.png", isCorrect: false, audioKey: "misket", spokenText: "misket" },
+            { id: 762, word: "misket", imageUrl: "/images/762.png", imageScale: 0.72, isCorrect: false, audioKey: "misket", spokenText: "misket" },
             { id: 587, word: "yün", imageUrl: "/images/587.png", isCorrect: true, audioKey: "yun", spokenText: "yün" }
         ]
     },

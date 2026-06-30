@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useId, useCallback } from 'react';
 import { ConceptRound, ActivityType } from '../types.ts';
 import Card from './ui/Card.tsx';
+import SmartImage from './ui/SmartImage.tsx';
 import SpeakerIcon from './icons/SpeakerIcon.tsx';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { speak, playEffect } from '../services/speechService.ts';
@@ -26,6 +27,8 @@ import roundOrigins from '../../i18n_exports/round-origin.json';
 import CosmicBackdrop from './ui/CosmicBackdrop.tsx';
 import PanelStars from './ui/PanelStars.tsx';
 import { getAvatar } from './ProfileSelectionScreen.tsx';
+import GalacticRobotMascot, { MascotMood } from './ui/GalacticRobotMascot.tsx';
+import OceanJellyfishMascot, { JellyfishMood } from './ui/OceanJellyfishMascot.tsx';
 
 const SPAM_GUARD_WINDOW_MS = 2400; // Rolling window to count rapid taps
 const SPAM_GUARD_LOCK_MS = 3600;   // Duration to block taps once guard triggers
@@ -46,7 +49,7 @@ const getLocalizedConcept = (turkishWord: string, lang?: ReturnType<typeof getCu
 // Normalize audioKey/word to safe i18n key: remove diacritics, replace spaces and non-alnum with underscores
 const normalizeI18nKey = (s: string | undefined): string => {
     if (!s) return '';
-    
+
     // First, manually handle Turkish-specific characters
     let normalized = s
         .replace(/ı/g, 'i')
@@ -61,7 +64,7 @@ const normalizeI18nKey = (s: string | undefined): string => {
         .replace(/Ö/g, 'O')
         .replace(/ç/g, 'c')
         .replace(/Ç/g, 'C');
-    
+
     try {
         return normalized
             .normalize('NFD')
@@ -95,10 +98,10 @@ const QUESTION_TEXTS: Record<'tr' | 'en', Record<string, string>> = {
         q_which_is_narrow: 'Dar olan hangisi?',
         q_which_is_hard: 'Sert olan hangisi?',
         q_which_is_soft: 'Yumuşak olan hangisi?',
-    q_which_is_clean: 'Temiz olan hangisi?',
-    q_which_is_dirty: 'Kirli olan hangisi?',
-    q_which_is_messy: 'Dağınık olan hangisi?',
-    q_which_is_tidy: 'Toplu olan hangisi?',
+        q_which_is_clean: 'Temiz olan hangisi?',
+        q_which_is_dirty: 'Kirli olan hangisi?',
+        q_which_is_messy: 'Dağınık olan hangisi?',
+        q_which_is_tidy: 'Toplu olan hangisi?',
         q_which_is_wet: 'Islak olan hangisi?',
         q_which_is_dry: 'Kuru olan hangisi?',
         q_which_is_open: 'Açık olan hangisi?',
@@ -111,51 +114,51 @@ const QUESTION_TEXTS: Record<'tr' | 'en', Record<string, string>> = {
         q_which_is_wrinkled: 'Kırışık olan hangisi?',
         q_which_is_pointed: 'Sivri olan hangisi?',
         q_which_is_blunt: 'Küt olan hangisi?',
-    q_which_is_alive: 'Canlı olan hangisi?',
-    q_which_is_lifeless: 'Cansız olan hangisi?',
-    q_which_is_intact: 'Sağlam olan hangisi?',
-    q_which_is_broken: 'Kırık olan hangisi?',
-    // Note: q_which_is_old is context-dependent in TR (OldNew = "Eski"; YoungOld = "Yaşlı").
-    // We handle the special-case in getLocalizedQuestion below.
-    q_which_is_old: 'Eski olan hangisi?',
-    q_which_is_new: 'Yeni olan hangisi?',
-    q_which_is_young: 'Genç olan hangisi?',
+        q_which_is_alive: 'Canlı olan hangisi?',
+        q_which_is_lifeless: 'Cansız olan hangisi?',
+        q_which_is_intact: 'Sağlam olan hangisi?',
+        q_which_is_broken: 'Kırık olan hangisi?',
+        // Note: q_which_is_old is context-dependent in TR (OldNew = "Eski"; YoungOld = "Yaşlı").
+        // We handle the special-case in getLocalizedQuestion below.
+        q_which_is_old: 'Eski olan hangisi?',
+        q_which_is_new: 'Yeni olan hangisi?',
+        q_which_is_young: 'Genç olan hangisi?',
         q_which_is_heavy: 'Ağır olan hangisi?',
         q_which_is_light: 'Hafif olan hangisi?',
         q_which_is_hot: 'Sıcak olan hangisi?',
         q_which_is_cold: 'Soğuk olan hangisi?',
-            q_which_is_hungry: 'Aç olan hangisi?',
-            // For objects (containers) we use 'dolu' — keep the generic key as object-focused
-            q_which_is_full: 'Dolu olan hangisi?',
-            // For living/animated subjects (hungry/full as in 'tok') we add a distinct key
-            q_which_is_satiated: 'Tok olan hangisi?',
-            q_which_is_knotted: 'Düğümlü olan hangisi?',
-            q_which_is_untied: 'Çözük olan hangisi?',
-            q_which_is_upsidedown: 'Ters olan hangisi?',
-            q_which_is_few: 'Az olan hangisi?',
-            q_which_is_much: 'Çok olan hangisi?',
-            q_which_is_whole: 'Bütün olan hangisi?',
-            q_which_is_half: 'Yarım olan hangisi?',
-            q_which_is_quarter: 'Çeyrek olan hangisi?',
-            q_which_is_slice: 'Dilim olan hangisi?',
-            q_which_is_odd: 'Tek olan hangisi?',
-            q_which_is_even: 'Çift olan hangisi?',
-    q_which_is_loud: 'Gürültülü olan hangisi?',
-    q_which_is_noisy: 'Gürültülü olan hangisi?',
+        q_which_is_hungry: 'Aç olan hangisi?',
+        // For objects (containers) we use 'dolu' — keep the generic key as object-focused
+        q_which_is_full: 'Dolu olan hangisi?',
+        // For living/animated subjects (hungry/full as in 'tok') we add a distinct key
+        q_which_is_satiated: 'Tok olan hangisi?',
+        q_which_is_knotted: 'Düğümlü olan hangisi?',
+        q_which_is_untied: 'Çözük olan hangisi?',
+        q_which_is_upsidedown: 'Ters olan hangisi?',
+        q_which_is_few: 'Az olan hangisi?',
+        q_which_is_much: 'Çok olan hangisi?',
+        q_which_is_whole: 'Bütün olan hangisi?',
+        q_which_is_half: 'Yarım olan hangisi?',
+        q_which_is_quarter: 'Çeyrek olan hangisi?',
+        q_which_is_slice: 'Dilim olan hangisi?',
+        q_which_is_odd: 'Tek olan hangisi?',
+        q_which_is_even: 'Çift olan hangisi?',
+        q_which_is_loud: 'Gürültülü olan hangisi?',
+        q_which_is_noisy: 'Gürültülü olan hangisi?',
         q_which_is_quiet: 'Sessiz olan hangisi?',
-    q_which_is_deep: 'Derin olan hangisi?',
-    q_which_is_shallow: 'Sığ olan hangisi?',
-    q_which_is_crowded: 'Kalabalık olan hangisi?',
-    q_which_is_sparse: 'Tenha olan hangisi?',
-    q_which_is_shiny: 'Parlak olan hangisi?',
-    q_which_is_matte: 'Mat olan hangisi?',
-    q_which_is_transparent: 'Şeffaf olan hangisi?',
-    q_which_is_opaque: 'Opak olan hangisi?',
-    q_which_is_fresh: 'Taze olan hangisi?',
-    q_which_is_stale: 'Bayat olan hangisi?',
-    q_which_is_lazy: 'Tembel olan hangisi?',
-    q_which_is_hardworking: 'Çalışkan olan hangisi?',
-    q_which_is_upright: 'Düz olan hangisi?',
+        q_which_is_deep: 'Derin olan hangisi?',
+        q_which_is_shallow: 'Sığ olan hangisi?',
+        q_which_is_crowded: 'Kalabalık olan hangisi?',
+        q_which_is_sparse: 'Tenha olan hangisi?',
+        q_which_is_shiny: 'Parlak olan hangisi?',
+        q_which_is_matte: 'Mat olan hangisi?',
+        q_which_is_transparent: 'Şeffaf olan hangisi?',
+        q_which_is_opaque: 'Opak olan hangisi?',
+        q_which_is_fresh: 'Taze olan hangisi?',
+        q_which_is_stale: 'Bayat olan hangisi?',
+        q_which_is_lazy: 'Tembel olan hangisi?',
+        q_which_is_hardworking: 'Çalışkan olan hangisi?',
+        q_which_is_upright: 'Düz olan hangisi?',
         // Temporal
         q_which_is_before: 'Önce hangisi olur?',
         q_which_is_after: 'Sonra hangisi olur?',
@@ -164,21 +167,21 @@ const QUESTION_TEXTS: Record<'tr' | 'en', Record<string, string>> = {
         q_which_is_fast: 'Hızlı olan hangisi?',
         q_which_is_slow: 'Yavaş olan hangisi?',
         // Spatial
-    q_which_is_above: 'Yukarıda olan hangisi?',
-    q_which_is_below: 'Aşağıda olan hangisi?',
-    q_which_is_on: 'Üstünde olan hangisi?',
-    q_which_is_under: 'Altında olan hangisi?',
-    q_which_are_beside: 'Yan yana olanlar hangisi?',
-    q_which_are_opposite: 'Karşılıklı olanlar hangisi?',
-    q_which_is_in_front: 'Önündeki hangisi?',
-    q_which_is_behind: 'Arkasındaki hangisi?',
-    q_which_is_inside: 'İçindeki hangisi?',
-    q_which_is_outside: 'Dışındaki hangisi?',
-    q_which_is_between: 'Arasında olan hangisi?',
-    q_which_is_near: 'Daha yakın olan hangisi?',
-    q_which_is_far: 'Daha uzak olan hangisi?',
-    q_which_is_higher: 'Daha yüksekte olan hangisi?',
-    q_which_is_lower: 'Daha alçakta olan hangisi?',
+        q_which_is_above: 'Yukarıda olan hangisi?',
+        q_which_is_below: 'Aşağıda olan hangisi?',
+        q_which_is_on: 'Üstünde olan hangisi?',
+        q_which_is_under: 'Altında olan hangisi?',
+        q_which_are_beside: 'Yan yana olanlar hangisi?',
+        q_which_are_opposite: 'Karşılıklı olanlar hangisi?',
+        q_which_is_in_front: 'Önündeki hangisi?',
+        q_which_is_behind: 'Arkasındaki hangisi?',
+        q_which_is_inside: 'İçindeki hangisi?',
+        q_which_is_outside: 'Dışındaki hangisi?',
+        q_which_is_between: 'Arasında olan hangisi?',
+        q_which_is_near: 'Daha yakın olan hangisi?',
+        q_which_is_far: 'Daha uzak olan hangisi?',
+        q_which_is_higher: 'Daha yüksekte olan hangisi?',
+        q_which_is_lower: 'Daha alçakta olan hangisi?',
         q_which_faces_left: 'Sola bakan hangisi?',
         q_which_faces_right: 'Sağa bakan hangisi?',
     },
@@ -201,10 +204,10 @@ const QUESTION_TEXTS: Record<'tr' | 'en', Record<string, string>> = {
         q_which_is_narrow: 'Which one is narrow?',
         q_which_is_hard: 'Which one is hard?',
         q_which_is_soft: 'Which one is soft?',
-    q_which_is_clean: 'Which one is clean?',
-    q_which_is_dirty: 'Which one is dirty?',
-    q_which_is_messy: 'Which one is messy?',
-    q_which_is_tidy: 'Which one is tidy?',
+        q_which_is_clean: 'Which one is clean?',
+        q_which_is_dirty: 'Which one is dirty?',
+        q_which_is_messy: 'Which one is messy?',
+        q_which_is_tidy: 'Which one is tidy?',
         q_which_is_wet: 'Which one is wet?',
         q_which_is_dry: 'Which one is dry?',
         q_which_is_open: 'Which one is open?',
@@ -217,47 +220,47 @@ const QUESTION_TEXTS: Record<'tr' | 'en', Record<string, string>> = {
         q_which_is_wrinkled: 'Which one is wrinkled?',
         q_which_is_pointed: 'Which one is pointed?',
         q_which_is_blunt: 'Which one is blunt?',
-    q_which_is_alive: 'Which one is alive?',
-    q_which_is_lifeless: 'Which one is lifeless?',
-    q_which_is_intact: 'Which one is intact?',
-    q_which_is_broken: 'Which one is broken?',
-    q_which_is_old: 'Which one is old?',
-    q_which_is_new: 'Which one is new?',
-    q_which_is_young: 'Which one is young?',
+        q_which_is_alive: 'Which one is alive?',
+        q_which_is_lifeless: 'Which one is lifeless?',
+        q_which_is_intact: 'Which one is intact?',
+        q_which_is_broken: 'Which one is broken?',
+        q_which_is_old: 'Which one is old?',
+        q_which_is_new: 'Which one is new?',
+        q_which_is_young: 'Which one is young?',
         q_which_is_heavy: 'Which one is heavy?',
         q_which_is_light: 'Which one is light?',
         q_which_is_hot: 'Which one is hot?',
         q_which_is_cold: 'Which one is cold?',
-    q_which_is_hungry: 'Which one is hungry?',
-    q_which_is_full: 'Which one is full?',
-    q_which_is_satiated: 'Which one is full?',
-    q_which_is_knotted: 'Which one is knotted?',
-    q_which_is_untied: 'Which one is untied?',
-    q_which_is_upsidedown: 'Which one is upside down?',
-    q_which_is_few: 'Which one has few?',
-    q_which_is_much: 'Which one has many?',
-    q_which_is_whole: 'Which one is whole?',
-    q_which_is_half: 'Which one is half?',
-    q_which_is_quarter: 'Which one is a quarter?',
-    q_which_is_slice: 'Which one is a slice?',
-    q_which_is_odd: 'Which one is odd?',
-    q_which_is_even: 'Which one is even?',
-    q_which_is_loud: 'Which one is noisy?',
-    q_which_is_noisy: 'Which one is noisy?',
+        q_which_is_hungry: 'Which one is hungry?',
+        q_which_is_full: 'Which one is full?',
+        q_which_is_satiated: 'Which one is full?',
+        q_which_is_knotted: 'Which one is knotted?',
+        q_which_is_untied: 'Which one is untied?',
+        q_which_is_upsidedown: 'Which one is upside down?',
+        q_which_is_few: 'Which one has few?',
+        q_which_is_much: 'Which one has many?',
+        q_which_is_whole: 'Which one is whole?',
+        q_which_is_half: 'Which one is half?',
+        q_which_is_quarter: 'Which one is a quarter?',
+        q_which_is_slice: 'Which one is a slice?',
+        q_which_is_odd: 'Which one is odd?',
+        q_which_is_even: 'Which one is even?',
+        q_which_is_loud: 'Which one is noisy?',
+        q_which_is_noisy: 'Which one is noisy?',
         q_which_is_quiet: 'Which one is quiet?',
-    q_which_is_deep: 'Which one is deep?',
-    q_which_is_shallow: 'Which one is shallow?',
-    q_which_is_crowded: 'Which one is crowded?',
-    q_which_is_sparse: 'Which one is sparse?',
-    q_which_is_shiny: 'Which one is shiny?',
-    q_which_is_matte: 'Which one is matte?',
-    q_which_is_transparent: 'Which one is transparent?',
-    q_which_is_opaque: 'Which one is opaque?',
-    q_which_is_fresh: 'Which one is fresh?',
-    q_which_is_stale: 'Which one is stale?',
-    q_which_is_lazy: 'Which one is lazy?',
-    q_which_is_hardworking: 'Which one is hardworking?',
-    q_which_is_upright: 'Which one is upright?',
+        q_which_is_deep: 'Which one is deep?',
+        q_which_is_shallow: 'Which one is shallow?',
+        q_which_is_crowded: 'Which one is crowded?',
+        q_which_is_sparse: 'Which one is sparse?',
+        q_which_is_shiny: 'Which one is shiny?',
+        q_which_is_matte: 'Which one is matte?',
+        q_which_is_transparent: 'Which one is transparent?',
+        q_which_is_opaque: 'Which one is opaque?',
+        q_which_is_fresh: 'Which one is fresh?',
+        q_which_is_stale: 'Which one is stale?',
+        q_which_is_lazy: 'Which one is lazy?',
+        q_which_is_hardworking: 'Which one is hardworking?',
+        q_which_is_upright: 'Which one is upright?',
         // Temporal
         q_which_is_before: 'Which comes before?',
         q_which_is_after: 'Which comes after?',
@@ -266,19 +269,19 @@ const QUESTION_TEXTS: Record<'tr' | 'en', Record<string, string>> = {
         q_which_is_fast: 'Which one is fast?',
         q_which_is_slow: 'Which one is slow?',
         // Spatial
-    q_which_is_above: 'Which one is above?',
-    q_which_is_below: 'Which one is below?',
-    q_which_is_on: 'Which one is on?',
-    q_which_is_under: 'Which one is under?',
-    q_which_are_beside: 'Which ones are side by side?',
-    q_which_are_opposite: 'Which ones are opposite?',
-    q_which_is_in_front: 'Which one is in front?',
-    q_which_is_behind: 'Which one is behind?',
-    q_which_is_inside: 'Which one is inside?',
-    q_which_is_outside: 'Which one is outside?',
-    q_which_is_between: 'Which one is between?',
-    q_which_is_near: 'Which one is nearer?',
-    q_which_is_far: 'Which one is farther?',
+        q_which_is_above: 'Which one is above?',
+        q_which_is_below: 'Which one is below?',
+        q_which_is_on: 'Which one is on?',
+        q_which_is_under: 'Which one is under?',
+        q_which_are_beside: 'Which ones are side by side?',
+        q_which_are_opposite: 'Which ones are opposite?',
+        q_which_is_in_front: 'Which one is in front?',
+        q_which_is_behind: 'Which one is behind?',
+        q_which_is_inside: 'Which one is inside?',
+        q_which_is_outside: 'Which one is outside?',
+        q_which_is_between: 'Which one is between?',
+        q_which_is_near: 'Which one is nearer?',
+        q_which_is_far: 'Which one is farther?',
         q_which_faces_left: 'Which one faces left?',
         q_which_faces_right: 'Which one faces right?',
         // Dynamic/generic
@@ -292,7 +295,7 @@ const QUESTION_TEXTS: Record<'tr' | 'en', Record<string, string>> = {
 function getLocalizedQuestion(roundData: ConceptRound, lang: ReturnType<typeof getCurrentLanguage>): string {
     const key = roundData.questionAudioKey;
     if (!key) return roundData.question;
-    
+
     // For quantities activities, use their specific namespace (fewMuch, fullEmpty, etc.) instead of generic 'questions'
     const quantityNamespaceMap: Record<ActivityType, string | null> = {
         [ActivityType.FewMuch]: 'fewMuch',
@@ -300,7 +303,7 @@ function getLocalizedQuestion(roundData: ConceptRound, lang: ReturnType<typeof g
         [ActivityType.HalfQuarterWhole]: 'halfQuarterWhole',
         [ActivityType.OddEven]: 'oddEven',
     } as any;
-    
+
     const quantityNs = quantityNamespaceMap[roundData.activityType];
     if (quantityNs) {
         const quantityKey = `${quantityNs}.${key}`;
@@ -309,7 +312,7 @@ function getLocalizedQuestion(roundData: ConceptRound, lang: ReturnType<typeof g
         // Fallback to Turkish if translation missing
         if (lang === 'tr') return roundData.question;
     }
-    
+
     // Prefer static spatial i18n keys when available: questions.sp_<prefix>_<id>_question
     const spatialPrefixForType = (type: ActivityType): string | null => {
         switch (type) {
@@ -357,7 +360,7 @@ function getLocalizedQuestion(roundData: ConceptRound, lang: ReturnType<typeof g
         }
         // If we don't have a correct option for some reason, fall back to provided question or i18n below
     }
-    
+
     // Try to get question from i18n first. Use a locale-only lookup so we
     // can distinguish a true locale translation from the Turkish fallback.
     const i18nKey = `questions.${key}`;
@@ -375,7 +378,7 @@ function getLocalizedQuestion(roundData: ConceptRound, lang: ReturnType<typeof g
         }
         return translatedQuestion;
     }
-    
+
     // Fallback to hardcoded questions for Turkish
     if (lang === 'tr') {
         // Special-case: In Turkish, "old" is "eski" for objects (OldNew) and "yaşlı" for age (YoungOld)
@@ -571,22 +574,22 @@ function getConceptFromQuestionKey(roundData: ConceptRound, lang: ReturnType<typ
         q_which_is_light: 'hafif',
         q_which_is_hot: 'sıcak',
         q_which_is_cold: 'soğuk',
-    q_which_is_hungry: 'aç',
-    // map the object-focused full -> 'dolu'
-    q_which_is_full: 'dolu',
-    // map the person/animal-focused full (satiated) key to 'tok'
-    q_which_is_satiated: 'tok',
-    q_which_is_knotted: 'düğüm',
-    q_which_is_untied: 'çözük',
-    q_which_is_upsidedown: 'ters',
-    q_which_is_few: 'az',
-    q_which_is_much: 'çok',
-    q_which_is_whole: 'bütün',
-    q_which_is_half: 'yarım',
-    q_which_is_quarter: 'çeyrek',
-    q_which_is_slice: 'dilim',
-    q_which_is_odd: 'tek',
-    q_which_is_even: 'çift',
+        q_which_is_hungry: 'aç',
+        // map the object-focused full -> 'dolu'
+        q_which_is_full: 'dolu',
+        // map the person/animal-focused full (satiated) key to 'tok'
+        q_which_is_satiated: 'tok',
+        q_which_is_knotted: 'düğüm',
+        q_which_is_untied: 'çözük',
+        q_which_is_upsidedown: 'ters',
+        q_which_is_few: 'az',
+        q_which_is_much: 'çok',
+        q_which_is_whole: 'bütün',
+        q_which_is_half: 'yarım',
+        q_which_is_quarter: 'çeyrek',
+        q_which_is_slice: 'dilim',
+        q_which_is_odd: 'tek',
+        q_which_is_even: 'çift',
         q_which_is_loud: 'gürültülü',
         q_which_is_noisy: 'gürültülü',
         q_which_is_quiet: 'sessiz',
@@ -685,7 +688,7 @@ function mergeWithConceptTR(prefixedBase: string, base: string, concept?: string
     return `${pbTrim} ${concept}`.trim();
 }
 
-const AppleCoreIcon: React.FC<{ className?: string }> = ({ className }) => <svg viewBox="0 0 100 100" className={className}><path d="M 50 80 C 40 70, 40 50, 50 40 C 60 50, 60 70, 50 80 Z" fill="#fef2f2" /><path d="M63.8,4.2c-2.6-2.1-6.1-2.6-9.1-1.2c-3,1.4-5,4.3-5.2,7.6" fill="#4d7c0f"/></svg>;
+const AppleCoreIcon: React.FC<{ className?: string }> = ({ className }) => <svg viewBox="0 0 100 100" className={className}><path d="M 50 80 C 40 70, 40 50, 50 40 C 60 50, 60 70, 50 80 Z" fill="#fef2f2" /><path d="M63.8,4.2c-2.6-2.1-6.1-2.6-9.1-1.2c-3,1.4-5,4.3-5.2,7.6" fill="#4d7c0f" /></svg>;
 const CarIcon: React.FC<{ className?: string }> = ({ className }) => <svg viewBox="0 0 100 50" className={className}><path d="M95,30 H85 L80,20 H30 L25,30 H5 a5,5 0 0,0 0,10 H15 a10,10 0 0,0 20,0 H75 a10,10 0 0,0 20,0 H95 a5,5 0 0,0 0,-10 Z" stroke="black" strokeWidth="2" /></svg>;
 const SunIcon: React.FC<{ className?: string }> = ({ className }) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>;
 
@@ -739,7 +742,7 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
     const [leftRightPos, setLeftRightPos] = useState<'left' | 'right'>('left');
     const [isNear, setIsNear] = useState(true);
     const [highLowPos, setHighLowPos] = useState<'high' | 'low'>('low');
-    
+
     const MAX_PEOPLE = 12;
     const MAX_ITEMS = 12;
     const MUCH_THRESHOLD = 5;
@@ -772,9 +775,9 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
         setIsInFront(true); setIsInside(false); setIsBetween(false); setLeftRightPos('left');
         setIsNear(true); setHighLowPos('low');
     }, [activityType]);
-    
+
     const helper = (() => {
-        switch(activityType) {
+        switch (activityType) {
             case ActivityType.Colors: {
                 const colors = [
                     { spoken: 'kırmızı', colorClass: 'bg-red-500' },
@@ -788,28 +791,28 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                     { spoken: 'siyah', colorClass: 'bg-black' },
                     { spoken: 'beyaz', colorClass: 'bg-white border-2 border-slate-200' },
                 ];
-                return ( <div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-32 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="grid grid-cols-5 gap-2"> {colors.map(({ spoken, colorClass }) => { const label = getCurrentLanguage() === 'tr' ? spoken : translateLabel(spoken, getCurrentLanguage()); const say = getCurrentLanguage() === 'tr' ? spoken : label; return ( <button key={spoken} onClick={() => speak(say)} className={`w-8 h-8 sm-landscape:w-6 sm-landscape:h-6 aspect-square rounded-xl shadow-md ${colorClass} transition transform hover:scale-110`} aria-label={label} /> ); })} </div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center gap-2 sm-landscape:gap-1 mt-4 sm-landscape:mt-0"> <p className="text-sm font-medium text-slate-600">{t('choice.learnColors')}</p> </div> </div> );
+                return (<div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-32 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="grid grid-cols-5 gap-2"> {colors.map(({ spoken, colorClass }) => { const label = getCurrentLanguage() === 'tr' ? spoken : translateLabel(spoken, getCurrentLanguage()); const say = getCurrentLanguage() === 'tr' ? spoken : label; return (<button key={spoken} onClick={() => speak(say)} className={`w-8 h-8 sm-landscape:w-6 sm-landscape:h-6 aspect-square rounded-xl shadow-md ${colorClass} transition transform hover:scale-110`} aria-label={label} />); })} </div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center gap-2 sm-landscape:gap-1 mt-4 sm-landscape:mt-0"> <p className="text-sm font-medium text-slate-600">{t('choice.learnColors')}</p> </div> </div>);
             }
             case ActivityType.Shapes: {
-                 const shapes = [
+                const shapes = [
                     { spoken: 'daire', path: 'M 50,50 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0' },
                     { spoken: 'kare', path: 'M 10 10 H 90 V 90 H 10 Z' },
                     { spoken: 'üçgen', path: 'M 50 10 L 90 90 H 10 Z' },
                     { spoken: 'dikdörtgen', path: 'M 10 25 H 90 V 75 H 10 Z' },
                     { spoken: 'yıldız', path: 'M 50,10 L 61,40 L 95,40 L 67,60 L 78,90 L 50,70 L 22,90 L 33,60 L 5,40 L 39,40 Z' },
                     { spoken: 'oval', path: 'M 50,50 m -40,0 a 40,25 0 1,1 80,0 a 40,25 0 1,1 -80,0' }
-                 ];
-              return ( <div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-32 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="grid grid-cols-3 gap-2"> {shapes.map(({ spoken, path }) => { const label = getCurrentLanguage() === 'tr' ? spoken : translateLabel(spoken, getCurrentLanguage()); const say = getCurrentLanguage() === 'tr' ? spoken : label; return ( <button key={spoken} onClick={() => speak(say)} className="w-12 h-12 sm-landscape:w-10 sm-landscape:h-10 aspect-square rounded-xl shadow-md bg-indigo-400 p-2 sm-landscape:p-1 transition transform hover:scale-110" aria-label={label}><svg viewBox="0 0 100 100" className="w-full h-full"><path d={path} fill="white" /></svg></button> ); })} </div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center gap-2 sm-landscape:gap-1 mt-4 sm-landscape:mt-0"> <p className="text-sm font-medium text-slate-600">{t('choice.learnShapes')}</p> </div> </div> );
+                ];
+                return (<div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-32 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="grid grid-cols-3 gap-2"> {shapes.map(({ spoken, path }) => { const label = getCurrentLanguage() === 'tr' ? spoken : translateLabel(spoken, getCurrentLanguage()); const say = getCurrentLanguage() === 'tr' ? spoken : label; return (<button key={spoken} onClick={() => speak(say)} className="w-12 h-12 sm-landscape:w-10 sm-landscape:h-10 aspect-square rounded-xl shadow-md bg-indigo-400 p-2 sm-landscape:p-1 transition transform hover:scale-110" aria-label={label}><svg viewBox="0 0 100 100" className="w-full h-full"><path d={path} fill="white" /></svg></button>); })} </div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center gap-2 sm-landscape:gap-1 mt-4 sm-landscape:mt-0"> <p className="text-sm font-medium text-slate-600">{t('choice.learnShapes')}</p> </div> </div>);
             }
             case ActivityType.Emotions: {
                 const emotions = [
-                    { spoken: 'mutlu', color: '#facc15', svg: <svg viewBox="0 0 100 100"><circle cx="35" cy="45" r="6" fill="black" /><circle cx="65" cy="45" r="6" fill="black" /><path d="M30 65 Q 50 85 70 65" stroke="black" strokeWidth="5" fill="none" strokeLinecap="round"/></svg> },
-                    { spoken: 'üzgün', color: '#60a5fa', svg: <svg viewBox="0 0 100 100"><circle cx="35" cy="45" r="6" fill="black" /><circle cx="65" cy="45" r="6" fill="black" /><path d="M30 70 Q 50 55 70 70" stroke="black" strokeWidth="5" fill="none" strokeLinecap="round"/></svg> },
-                    { spoken: 'kızgın', color: '#ef4444', svg: <svg viewBox="0 0 100 100"><path d="M25 40 L 45 45" stroke="black" strokeWidth="6" fill="none" strokeLinecap="round"/><path d="M75 40 L 55 45" stroke="black" strokeWidth="6" fill="none" strokeLinecap="round"/><circle cx="35" cy="45" r="6" fill="black" /><circle cx="65" cy="45" r="6" fill="black" /><path d="M35 70 H 65" stroke="black" strokeWidth="5" fill="none" strokeLinecap="round"/></svg> },
-                    { spoken: 'şaşkın', color: '#a78bfa', svg: <svg viewBox="0 0 100 100"><circle cx="35" cy="45" r="8" fill="black" /><circle cx="65" cy="45" r="8" fill="black" /><ellipse cx="50" cy="75" rx="15" ry="10" fill="black"/></svg> },
+                    { spoken: 'mutlu', color: '#facc15', svg: <svg viewBox="0 0 100 100"><circle cx="35" cy="45" r="6" fill="black" /><circle cx="65" cy="45" r="6" fill="black" /><path d="M30 65 Q 50 85 70 65" stroke="black" strokeWidth="5" fill="none" strokeLinecap="round" /></svg> },
+                    { spoken: 'üzgün', color: '#60a5fa', svg: <svg viewBox="0 0 100 100"><circle cx="35" cy="45" r="6" fill="black" /><circle cx="65" cy="45" r="6" fill="black" /><path d="M30 70 Q 50 55 70 70" stroke="black" strokeWidth="5" fill="none" strokeLinecap="round" /></svg> },
+                    { spoken: 'kızgın', color: '#ef4444', svg: <svg viewBox="0 0 100 100"><path d="M25 40 L 45 45" stroke="black" strokeWidth="6" fill="none" strokeLinecap="round" /><path d="M75 40 L 55 45" stroke="black" strokeWidth="6" fill="none" strokeLinecap="round" /><circle cx="35" cy="45" r="6" fill="black" /><circle cx="65" cy="45" r="6" fill="black" /><path d="M35 70 H 65" stroke="black" strokeWidth="5" fill="none" strokeLinecap="round" /></svg> },
+                    { spoken: 'şaşkın', color: '#a78bfa', svg: <svg viewBox="0 0 100 100"><circle cx="35" cy="45" r="8" fill="black" /><circle cx="65" cy="45" r="8" fill="black" /><ellipse cx="50" cy="75" rx="15" ry="10" fill="black" /></svg> },
                     { spoken: 'korkmuş', color: '#4ade80', svg: <svg viewBox="0 0 100 100"><circle cx="35" cy="45" r="6" fill="black" /><circle cx="65" cy="45" r="6" fill="black" /><path d="M30 75 Q 40 65, 50 75 T 70 75" stroke="black" strokeWidth="5" fill="none" strokeLinecap="round" /></svg> },
                 ];
-                return ( <div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-32 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="grid grid-cols-3 sm:grid-cols-5 gap-2"> {emotions.map(({ spoken, color, svg }) => { const label = getCurrentLanguage() === 'tr' ? spoken : translateLabel(spoken, getCurrentLanguage()); const say = getCurrentLanguage() === 'tr' ? spoken : label; return ( <button key={spoken} onClick={() => speak(say)} className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8 aspect-square rounded-full shadow-md p-1 transition transform hover:scale-110" style={{ backgroundColor: color }} aria-label={label}> {svg} </button> ); })} </div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center gap-2 sm-landscape:gap-1 mt-4 sm-landscape:mt-0"> <p className="text-sm font-medium text-slate-600">{t('choice.learnEmotions')}</p> </div> </div> );
+                return (<div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-32 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="grid grid-cols-3 sm:grid-cols-5 gap-2"> {emotions.map(({ spoken, color, svg }) => { const label = getCurrentLanguage() === 'tr' ? spoken : translateLabel(spoken, getCurrentLanguage()); const say = getCurrentLanguage() === 'tr' ? spoken : label; return (<button key={spoken} onClick={() => speak(say)} className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8 aspect-square rounded-full shadow-md p-1 transition transform hover:scale-110" style={{ backgroundColor: color }} aria-label={label}> {svg} </button>); })} </div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center gap-2 sm-landscape:gap-1 mt-4 sm-landscape:mt-0"> <p className="text-sm font-medium text-slate-600">{t('choice.learnEmotions')}</p> </div> </div>);
             }
             case ActivityType.BigSmall: {
                 const changeSizeText = lang === 'tr' ? 'Boyutu Değiştir' : t('concepts.changeSize') || 'Change Size';
@@ -837,24 +840,24 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
             case ActivityType.LongShort: {
                 const longText = getCurrentLanguage() === 'tr' ? 'uzun' : translateLabel('uzun', getCurrentLanguage());
                 const shortText = getCurrentLanguage() === 'tr' ? 'kısa' : translateLabel('kısa', getCurrentLanguage());
-                
-                return ( <div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-32 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="w-6 bg-lime-500 rounded-full transition-all duration-300" style={{ height: `${length}rem` }}></div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center items-center gap-4 sm-landscape:gap-2 mt-4 sm-landscape:mt-0"> <button onClick={() => { setLength(l => Math.max(2, l - 2)); speak(shortText); }} className={`${baseButtonClasses} bg-red-500 sm-landscape:w-32`} disabled={length <= 2}><MinusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> <button onClick={() => { setLength(l => Math.min(8, l + 2)); speak(longText); }} className={`${baseButtonClasses} bg-green-500 sm-landscape:w-32`} disabled={length >= 8}><PlusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> </div> </div> );
+
+                return (<div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-32 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="w-6 bg-lime-500 rounded-full transition-all duration-300" style={{ height: `${length}rem` }}></div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center items-center gap-4 sm-landscape:gap-2 mt-4 sm-landscape:mt-0"> <button onClick={() => { setLength(l => Math.max(2, l - 2)); speak(shortText); }} className={`${baseButtonClasses} bg-red-500 sm-landscape:w-32`} disabled={length <= 2}><MinusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> <button onClick={() => { setLength(l => Math.min(8, l + 2)); speak(longText); }} className={`${baseButtonClasses} bg-green-500 sm-landscape:w-32`} disabled={length >= 8}><PlusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> </div> </div>);
             }
             case ActivityType.ThinThick: {
                 const thinText = getLocalizedConcept('ince');
                 const thickText = getLocalizedConcept('kalın');
-                return ( <div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className="h-24 bg-lime-500 rounded-md transition-all duration-300" style={{ width: `${thickness}rem` }}></div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setThickness(t => Math.max(1, t - 1.5)); speak(thinText); }} className={`${baseButtonClasses} bg-red-500`} disabled={thickness <= 1}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setThickness(t => Math.min(7, t + 1.5)); speak(thickText); }} className={`${baseButtonClasses} bg-green-500`} disabled={thickness >= 7}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div> );
+                return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className="h-24 bg-lime-500 rounded-md transition-all duration-300" style={{ width: `${thickness}rem` }}></div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setThickness(t => Math.max(1, t - 1.5)); speak(thinText); }} className={`${baseButtonClasses} bg-red-500`} disabled={thickness <= 1}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setThickness(t => Math.min(7, t + 1.5)); speak(thickText); }} className={`${baseButtonClasses} bg-green-500`} disabled={thickness >= 7}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div>);
             }
             case ActivityType.WideNarrow: {
                 const narrowText = getLocalizedConcept('dar');
                 const wideText = getLocalizedConcept('geniş');
-                return ( <div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className="h-24 bg-lime-500 rounded-md transition-all duration-300" style={{ width: `${width}rem` }}></div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setWidth(w => Math.max(3, w - 3)); speak(narrowText); }} className={`${baseButtonClasses} bg-red-500`} disabled={width <= 3}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setWidth(w => Math.min(15, w + 3)); speak(wideText); }} className={`${baseButtonClasses} bg-green-500`} disabled={width >= 15}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div> );
+                return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className="h-24 bg-lime-500 rounded-md transition-all duration-300" style={{ width: `${width}rem` }}></div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setWidth(w => Math.max(3, w - 3)); speak(narrowText); }} className={`${baseButtonClasses} bg-red-500`} disabled={width <= 3}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setWidth(w => Math.min(15, w + 3)); speak(wideText); }} className={`${baseButtonClasses} bg-green-500`} disabled={width >= 15}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div>);
             }
             case ActivityType.HeavyLight: {
                 const translateY = (weight - 0.2) * 20;
                 const lightText = getLocalizedConcept('hafif');
                 const heavyText = getLocalizedConcept('ağır');
-                return ( <div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className="relative w-24 h-24"> <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-4 bg-lime-800/30 rounded-full" style={{ transform: `translateX(-50%) scale(${1 + weight/2}, ${0.5 + weight/4})`, opacity: weight * 0.8 }} /> <div className="absolute inset-0 bg-amber-600 border-4 border-amber-800 rounded-lg transition-transform duration-300" style={{ transform: `translateY(${translateY}px)` }}></div> </div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setWeight(w => Math.max(0.2, w - 0.2)); speak(lightText); }} className={`${baseButtonClasses} bg-red-500`} disabled={weight <= 0.2}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setWeight(w => Math.min(1.0, w + 0.2)); speak(heavyText); }} className={`${baseButtonClasses} bg-green-500`} disabled={weight >= 1.0}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div> );
+                return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className="relative w-24 h-24"> <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-4 bg-lime-800/30 rounded-full" style={{ transform: `translateX(-50%) scale(${1 + weight / 2}, ${0.5 + weight / 4})`, opacity: weight * 0.8 }} /> <div className="absolute inset-0 bg-amber-600 border-4 border-amber-800 rounded-lg transition-transform duration-300" style={{ transform: `translateY(${translateY}px)` }}></div> </div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setWeight(w => Math.max(0.2, w - 0.2)); speak(lightText); }} className={`${baseButtonClasses} bg-red-500`} disabled={weight <= 0.2}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setWeight(w => Math.min(1.0, w + 0.2)); speak(heavyText); }} className={`${baseButtonClasses} bg-green-500`} disabled={weight >= 1.0}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div>);
             }
             case ActivityType.DerinSig: {
                 const deepLabel = formatConcept('derin');
@@ -874,24 +877,24 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                 );
             }
             case ActivityType.KalabalikTenha:
-                 const addPerson = () => { if (people.length < MAX_PEOPLE) { const wasCrowded = people.length > 3; const newCount = people.length + 1; setPeople(p => [...p, { id: Date.now(), x: Math.random() * 80 + 10, y: Math.random() * 40 + 50 }]); if(newCount > 3 && !wasCrowded) speakConcept('kalabalık'); }};
-                 const removePerson = () => { if (people.length > 0) { const wasCrowded = people.length > 3; const newCount = people.length - 1; setPeople(p => p.slice(0, -1)); if(newCount <= 3 && wasCrowded) speakConcept('tenha'); }};
-                 return ( <div className="w-full text-center"> <div className="h-40 flex items-end justify-center rounded-lg bg-slate-300/50 relative overflow-hidden"> {people.map(p => ( <PersonIcon key={p.id} className="absolute w-12 h-12 text-blue-600 transition-all animate-pop-in" style={{ left: `${p.x}%`, top: `${p.y}%`, transform: 'translate(-50%, -50%)' }} /> ))} </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={removePerson} className={`${baseButtonClasses} bg-red-500`} disabled={people.length === 0}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={addPerson} className={`${baseButtonClasses} bg-green-500`} disabled={people.length >= MAX_PEOPLE}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div> );
+                const addPerson = () => { if (people.length < MAX_PEOPLE) { const wasCrowded = people.length > 3; const newCount = people.length + 1; setPeople(p => [...p, { id: Date.now(), x: Math.random() * 80 + 10, y: Math.random() * 40 + 50 }]); if (newCount > 3 && !wasCrowded) speakConcept('kalabalık'); } };
+                const removePerson = () => { if (people.length > 0) { const wasCrowded = people.length > 3; const newCount = people.length - 1; setPeople(p => p.slice(0, -1)); if (newCount <= 3 && wasCrowded) speakConcept('tenha'); } };
+                return (<div className="w-full text-center"> <div className="h-40 flex items-end justify-center rounded-lg bg-slate-300/50 relative overflow-hidden"> {people.map(p => (<PersonIcon key={p.id} className="absolute w-12 h-12 text-blue-600 transition-all animate-pop-in" style={{ left: `${p.x}%`, top: `${p.y}%`, transform: 'translate(-50%, -50%)' }} />))} </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={removePerson} className={`${baseButtonClasses} bg-red-500`} disabled={people.length === 0}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={addPerson} className={`${baseButtonClasses} bg-green-500`} disabled={people.length >= MAX_PEOPLE}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div>);
             case ActivityType.HardSoft: {
                 const softText = getLocalizedConcept('yumuşak');
                 const hardText = getLocalizedConcept('sert');
-                return ( <div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-32 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="w-24 h-24 bg-lime-500 transition-all duration-300" style={{ borderRadius: isHard ? '8px' : '50%', transform: isHard ? 'scale(1)' : 'scale(1.1, 0.9)' }}></div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center gap-4 sm-landscape:gap-2 mt-4 sm-landscape:mt-0"> <button onClick={() => { setIsHard(false); speak(softText); }} className={`${baseButtonClasses} bg-red-500 sm-landscape:w-32`}><MinusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> <button onClick={() => { setIsHard(true); speak(hardText); }} className={`${baseButtonClasses} bg-green-500 sm-landscape:w-32`}><PlusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> </div> </div> );
+                return (<div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-32 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="w-24 h-24 bg-lime-500 transition-all duration-300" style={{ borderRadius: isHard ? '8px' : '50%', transform: isHard ? 'scale(1)' : 'scale(1.1, 0.9)' }}></div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center gap-4 sm-landscape:gap-2 mt-4 sm-landscape:mt-0"> <button onClick={() => { setIsHard(false); speak(softText); }} className={`${baseButtonClasses} bg-red-500 sm-landscape:w-32`}><MinusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> <button onClick={() => { setIsHard(true); speak(hardText); }} className={`${baseButtonClasses} bg-green-500 sm-landscape:w-32`}><PlusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> </div> </div>);
             }
             case ActivityType.RoughSmooth:
-                 return ( <div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className={`w-24 h-24 rounded-full transition-all duration-300 ${isRough ? 'bg-lime-700' : 'bg-lime-500'}`} style={{ backgroundImage: isRough ? 'radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px)' : 'none', backgroundSize: '5px 5px' }}></div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsRough(false); speakConcept('pürüzsüz'); }} className={`${baseButtonClasses} bg-red-500`}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setIsRough(true); speakConcept('pürüzlü'); }} className={`${baseButtonClasses} bg-green-500`}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div> );
+                return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className={`w-24 h-24 rounded-full transition-all duration-300 ${isRough ? 'bg-lime-700' : 'bg-lime-500'}`} style={{ backgroundImage: isRough ? 'radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px)' : 'none', backgroundSize: '5px 5px' }}></div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsRough(false); speakConcept('pürüzsüz'); }} className={`${baseButtonClasses} bg-red-500`}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setIsRough(true); speakConcept('pürüzlü'); }} className={`${baseButtonClasses} bg-green-500`}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div>);
             case ActivityType.DikenliPuruzsuz:
-                 return ( <div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <svg viewBox="0 0 100 100" className="w-24 h-24"> <circle cx="50" cy="50" r="20" fill="#84cc16" /> {[...Array(12)].map((_, i) => ( <line key={i} x1="50" y1="50" x2="50" y2="20" stroke="#4d7c0f" strokeWidth="4" strokeLinecap="round" className="transition-transform duration-300" style={{ transformOrigin: '50px 50px', transform: `rotate(${i * 30}deg) scaleY(${isThorny ? 1.5 : 0})` }} /> ))} </svg> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsThorny(false); speakConcept('pürüzsüz'); }} className={`${baseButtonClasses} bg-red-500`}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setIsThorny(true); speakConcept('dikenli'); }} className={`${baseButtonClasses} bg-green-500`}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div> );
+                return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <svg viewBox="0 0 100 100" className="w-24 h-24"> <circle cx="50" cy="50" r="20" fill="#84cc16" /> {[...Array(12)].map((_, i) => (<line key={i} x1="50" y1="50" x2="50" y2="20" stroke="#4d7c0f" strokeWidth="4" strokeLinecap="round" className="transition-transform duration-300" style={{ transformOrigin: '50px 50px', transform: `rotate(${i * 30}deg) scaleY(${isThorny ? 1.5 : 0})` }} />))} </svg> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsThorny(false); speakConcept('pürüzsüz'); }} className={`${baseButtonClasses} bg-red-500`}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setIsThorny(true); speakConcept('dikenli'); }} className={`${baseButtonClasses} bg-green-500`}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div>);
             case ActivityType.KirisikDuzgun:
-                 return ( <div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <svg className="w-28 h-24"> <filter id={`wrinkle-filter-${uniqueId}`}> <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="3" result="turbulence" /> <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="G" /> </filter> <rect width="100%" height="100%" fill="#84cc16" className="transition-all duration-300" style={{ filter: isWrinkled ? `url(#wrinkle-filter-${uniqueId})` : 'none' }} /> </svg> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsWrinkled(false); speakConcept('düzgün'); }} className={`${baseButtonClasses} bg-red-500`}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setIsWrinkled(true); speakConcept('kırışık'); }} className={`${baseButtonClasses} bg-green-500`}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div> );
+                return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <svg className="w-28 h-24"> <filter id={`wrinkle-filter-${uniqueId}`}> <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="3" result="turbulence" /> <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="G" /> </filter> <rect width="100%" height="100%" fill="#84cc16" className="transition-all duration-300" style={{ filter: isWrinkled ? `url(#wrinkle-filter-${uniqueId})` : 'none' }} /> </svg> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsWrinkled(false); speakConcept('düzgün'); }} className={`${baseButtonClasses} bg-red-500`}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setIsWrinkled(true); speakConcept('kırışık'); }} className={`${baseButtonClasses} bg-green-500`}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div>);
             case ActivityType.SivriKut:
-                 return ( <div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className="w-8 h-24 bg-lime-500 transition-all duration-300" style={{ clipPath: isSharp ? 'polygon(50% 0, 100% 100%, 0 100%)' : 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}></div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsSharp(false); speakConcept('küt'); }} className={`${baseButtonClasses} bg-red-500`}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setIsSharp(true); speakConcept('sivri'); }} className={`${baseButtonClasses} bg-green-500`}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div> );
+                return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className="w-8 h-24 bg-lime-500 transition-all duration-300" style={{ clipPath: isSharp ? 'polygon(50% 0, 100% 100%, 0 100%)' : 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}></div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsSharp(false); speakConcept('küt'); }} className={`${baseButtonClasses} bg-red-500`}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setIsSharp(true); speakConcept('sivri'); }} className={`${baseButtonClasses} bg-green-500`}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div>);
             case ActivityType.StraightCurved:
-                 return ( <div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <svg width="128" height="32" viewBox="0 0 128 32"> <path d={isCurved ? "M 0 16 Q 32 0, 64 16 T 128 16" : "M 0 16 L 128 16"} stroke="#84cc16" fill="transparent" strokeWidth="8" strokeLinecap="round" className="transition-all duration-300" /> </svg> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsCurved(false); speakConcept('düz'); }} className={`${baseButtonClasses} bg-red-500`}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setIsCurved(true); speakConcept('eğri'); }} className={`${baseButtonClasses} bg-green-500`}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div> );
+                return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <svg width="128" height="32" viewBox="0 0 128 32"> <path d={isCurved ? "M 0 16 Q 32 0, 64 16 T 128 16" : "M 0 16 L 128 16"} stroke="#84cc16" fill="transparent" strokeWidth="8" strokeLinecap="round" className="transition-all duration-300" /> </svg> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsCurved(false); speakConcept('düz'); }} className={`${baseButtonClasses} bg-red-500`}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setIsCurved(true); speakConcept('eğri'); }} className={`${baseButtonClasses} bg-green-500`}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div>);
             case ActivityType.OldNew: {
                 const oldLabel = formatConcept('eski');
                 const newLabel = formatConcept('yeni');
@@ -899,8 +902,8 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                     <div className="w-full text-center">
                         <div className="h-32 flex items-center justify-center">
                             <svg viewBox="0 0 100 100" className="w-28 h-28">
-                                <path d="M77.2,42.8c-7.9-8.4-19.1-8.8-27.5-1c-2.3,2.1-4,4.6-5,7.3c-1-2.7-2.7-5.2-5-7.3c-8.4-7.8-19.6-7.4-27.5,1 C-5.7,53.2-4,72.3,7.5,81.8c2.4,2,5.1,3.6,8.1,4.7c3.4,1.3,7,1.8,10.6,1.4c3.6-0.3,7-1.5,10-3.3c3-1.8,5.7-4.3,7.9-7.2 c2.2,2.9,4.9,5.3,7.9,7.2c3,1.8,6.4,3,10,3.3c3.6,0.3,7.2-0.1,10.6-1.4c3-1.1,5.7-2.7,8.1-4.7C104,72.3,105.7,53.2,77.2,42.8z" className={`transition-colors duration-300 ${isNew ? 'fill-red-600' : 'fill-amber-800'}`}/>
-                                <path d="M63.8,4.2c-2.6-2.1-6.1-2.6-9.1-1.2c-3,1.4-5,4.3-5.2,7.6c-0.1,2,0.5,3.9,1.5,5.5c-0.3-3-0.1-6.1,0.8-9 c1.2-3.6,3.6-6.6,6.7-8.1C59.8,3.9,61.4,3.8,62.9,4c-0.2,0-0.3,0-0.5,0.1C62.1,4.1,62.8,4.2,63.8,4.2z" className={`transition-colors duration-300 ${isNew ? 'fill-[#4d7c0f]' : 'fill-[#654321]'}`}/>
+                                <path d="M77.2,42.8c-7.9-8.4-19.1-8.8-27.5-1c-2.3,2.1-4,4.6-5,7.3c-1-2.7-2.7-5.2-5-7.3c-8.4-7.8-19.6-7.4-27.5,1 C-5.7,53.2-4,72.3,7.5,81.8c2.4,2,5.1,3.6,8.1,4.7c3.4,1.3,7,1.8,10.6,1.4c3.6-0.3,7-1.5,10-3.3c3-1.8,5.7-4.3,7.9-7.2 c2.2,2.9,4.9,5.3,7.9,7.2c3,1.8,6.4,3,10,3.3c3.6,0.3,7.2-0.1,10.6-1.4c3-1.1,5.7-2.7,8.1-4.7C104,72.3,105.7,53.2,77.2,42.8z" className={`transition-colors duration-300 ${isNew ? 'fill-red-600' : 'fill-amber-800'}`} />
+                                <path d="M63.8,4.2c-2.6-2.1-6.1-2.6-9.1-1.2c-3,1.4-5,4.3-5.2,7.6c-0.1,2,0.5,3.9,1.5,5.5c-0.3-3-0.1-6.1,0.8-9 c1.2-3.6,3.6-6.6,6.7-8.1C59.8,3.9,61.4,3.8,62.9,4c-0.2,0-0.3,0-0.5,0.1C62.1,4.1,62.8,4.2,63.8,4.2z" className={`transition-colors duration-300 ${isNew ? 'fill-[#4d7c0f]' : 'fill-[#654321]'}`} />
                                 <path d="M 20 50 A 15 15, 0, 0, 0, 35 35" className={`transition-opacity duration-300 ${isNew ? 'opacity-0' : 'opacity-100'}`} fill="#654321" />
                             </svg>
                         </div>
@@ -921,7 +924,7 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                                 <circle cx="50" cy="50" r="45" fill="#facc15" stroke="#ca8a04" strokeWidth="4" />
                                 <circle cx="35" cy="40" r="5" fill="black" />
                                 <circle cx="65" cy="40" r="5" fill="black" />
-                                <path d="M30 65 Q 50 80 70 65" stroke="black" strokeWidth="4" fill="none" strokeLinecap="round"/>
+                                <path d="M30 65 Q 50 80 70 65" stroke="black" strokeWidth="4" fill="none" strokeLinecap="round" />
                                 <path d="M25 30 Q 30 25 35 30" stroke="#ca8a04" strokeWidth="2" fill="none" strokeLinecap="round" className={`transition-opacity duration-300 ${isYoung ? 'opacity-0' : 'opacity-100'}`} />
                                 <path d="M65 30 Q 70 25 75 30" stroke="#ca8a04" strokeWidth="2" fill="none" strokeLinecap="round" className={`transition-opacity duration-300 ${isYoung ? 'opacity-0' : 'opacity-100'}`} />
                                 <path d="M20 50 Q 15 55 20 60" stroke="#ca8a04" strokeWidth="2" fill="none" strokeLinecap="round" className={`transition-opacity duration-300 ${isYoung ? 'opacity-0' : 'opacity-100'}`} />
@@ -941,8 +944,8 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                     <div className="w-full text-center">
                         <div className="h-32 flex items-center justify-center">
                             <div className="relative w-28 h-28">
-                                <svg viewBox="0 0 24 24" className="w-full h-full text-slate-200" fill="currentColor"><path d="M12 2L9 5h6L12 2zm2 17.5V14h-4v5.5c0 .83.67 1.5 1.5 1.5h1c.83 0 1.5-.67 1.5-1.5zM12 22c-1.1 0-2-.9-2-2v-6h4v6c0 1.1-.9 2-2 2zm8-17H4v17.5c0 1.93 1.57 3.5 3.5 3.5h7c1.93 0 3.5-1.57 3.5-3.5V5z"/></svg>
-                                <svg viewBox="0 0 24 24" className={`absolute top-1/2 left-1/4 w-10 h-10 text-amber-800 transition-opacity duration-300 ${isClean ? 'opacity-0' : 'opacity-100'}`} fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.41 14.59L12 13.17l-3.41 3.42-1.41-1.41L10.59 12 7.17 8.59l1.41-1.41L12 10.83l3.41-3.42 1.41 1.41L13.41 12l3.42 3.41-1.42 1.18z"/></svg>
+                                <svg viewBox="0 0 24 24" className="w-full h-full text-slate-200" fill="currentColor"><path d="M12 2L9 5h6L12 2zm2 17.5V14h-4v5.5c0 .83.67 1.5 1.5 1.5h1c.83 0 1.5-.67 1.5-1.5zM12 22c-1.1 0-2-.9-2-2v-6h4v6c0 1.1-.9 2-2 2zm8-17H4v17.5c0 1.93 1.57 3.5 3.5 3.5h7c1.93 0 3.5-1.57 3.5-3.5V5z" /></svg>
+                                <svg viewBox="0 0 24 24" className={`absolute top-1/2 left-1/4 w-10 h-10 text-amber-800 transition-opacity duration-300 ${isClean ? 'opacity-0' : 'opacity-100'}`} fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.41 14.59L12 13.17l-3.41 3.42-1.41-1.41L10.59 12 7.17 8.59l1.41-1.41L12 10.83l3.41-3.42 1.41 1.41L13.41 12l3.42 3.41-1.42 1.18z" /></svg>
                             </div>
                         </div>
                         <div className="flex justify-center gap-8 mt-2">
@@ -996,7 +999,7 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                         <div className="h-32 flex items-center justify-center">
                             <svg viewBox="0 0 100 100" className="w-28 h-28">
                                 <path d="M 50 100 V 50" stroke={isAlive ? '#166534' : '#78716c'} strokeWidth="10" strokeLinecap="round" />
-                                <circle cx="50" cy="30" r="25" fill={isAlive ? '#fde047' : '#a8a29e'} className="transition-all duration-300" style={{ transformOrigin: '50px 50px', transform: isAlive ? 'rotate(0deg)' : 'rotate(-25deg)'}} />
+                                <circle cx="50" cy="30" r="25" fill={isAlive ? '#fde047' : '#a8a29e'} className="transition-all duration-300" style={{ transformOrigin: '50px 50px', transform: isAlive ? 'rotate(0deg)' : 'rotate(-25deg)' }} />
                             </svg>
                         </div>
                         <div className="flex justify-center gap-8 mt-2">
@@ -1016,10 +1019,10 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                                 <g className="transition-transform duration-300" style={{ transform: isIntact ? 'scale(1)' : 'scale(1.1)', opacity: isIntact ? 1 : 0.8 }}>
                                     <circle cx="50" cy="50" r="45" fill="#f1f5f9" stroke="#94a3b8" strokeWidth="4" className={`transition-opacity duration-300 ${isIntact ? 'opacity-100' : 'opacity-0'}`} />
                                     <g className={`transition-opacity duration-300 ${!isIntact ? 'opacity-100' : 'opacity-0'}`}>
-                                        <path d="M 50 5 A 45 45 0 0 1 85 25" fill="none" stroke="#94a3b8" strokeWidth="4" style={{ transformOrigin: 'center', transform: 'translateX(-5px)'}} />
-                                        <path d="M 85 25 A 45 45 0 0 1 75 65" fill="none" stroke="#94a3b8" strokeWidth="4" style={{ transformOrigin: 'center', transform: 'translate(5px, 5px)'}}/>
-                                        <path d="M 75 65 A 45 45 0 0 1 25 75" fill="none" stroke="#94a3b8" strokeWidth="4" style={{ transformOrigin: 'center', transform: 'translate(-5px, 8px)'}}/>
-                                        <path d="M 25 75 A 45 45 0 0 1 50 5" fill="none" stroke="#94a3b8" strokeWidth="4" style={{ transformOrigin: 'center', transform: 'translate(3px, -8px)'}}/>
+                                        <path d="M 50 5 A 45 45 0 0 1 85 25" fill="none" stroke="#94a3b8" strokeWidth="4" style={{ transformOrigin: 'center', transform: 'translateX(-5px)' }} />
+                                        <path d="M 85 25 A 45 45 0 0 1 75 65" fill="none" stroke="#94a3b8" strokeWidth="4" style={{ transformOrigin: 'center', transform: 'translate(5px, 5px)' }} />
+                                        <path d="M 75 65 A 45 45 0 0 1 25 75" fill="none" stroke="#94a3b8" strokeWidth="4" style={{ transformOrigin: 'center', transform: 'translate(-5px, 8px)' }} />
+                                        <path d="M 25 75 A 45 45 0 0 1 50 5" fill="none" stroke="#94a3b8" strokeWidth="4" style={{ transformOrigin: 'center', transform: 'translate(3px, -8px)' }} />
                                     </g>
                                 </g>
                             </svg>
@@ -1043,9 +1046,9 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                                         key={i}
                                         className="absolute w-8 h-8 bg-sky-500 rounded-md transition-all duration-500"
                                         style={{
-                                            top: isTidy ? '50%' : `${20 + (i*40)%60}%`,
-                                            left: isTidy ? '50%' : `${20 + (i%3)*30}%`,
-                                            transform: `translate(-50%,-50%) rotate(${isTidy ? `${i*15}deg` : `${i*72}deg`})`
+                                            top: isTidy ? '50%' : `${20 + (i * 40) % 60}%`,
+                                            left: isTidy ? '50%' : `${20 + (i % 3) * 30}%`,
+                                            transform: `translate(-50%,-50%) rotate(${isTidy ? `${i * 15}deg` : `${i * 72}deg`})`
                                         }}
                                     />
                                 ))}
@@ -1064,7 +1067,7 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                 return (
                     <div className="w-full text-center">
                         <div className="h-32 flex items-center justify-center">
-                            <AppleIcon className={`w-24 h-24 transition-colors duration-300 ${isFresh ? 'text-red-600' : 'text-yellow-800'}`}/>
+                            <AppleIcon className={`w-24 h-24 transition-colors duration-300 ${isFresh ? 'text-red-600' : 'text-yellow-800'}`} />
                         </div>
                         <div className="flex justify-center gap-8 mt-2">
                             <button onClick={() => { setIsFresh(false); speakConcept('bayat'); }} className={`${baseButtonClasses} bg-yellow-700 text-sm px-4`}>{staleLabel}</button>
@@ -1080,7 +1083,7 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                     <div className="w-full text-center">
                         <div className="h-32 flex items-center justify-center">
                             <svg width="128" height="64" viewBox="0 0 128 64">
-                                <path d={isKnotted ? "M24 40 C 4 24, 60 8, 80 32 C 100 56, 124 24, 104 40 C 84 56, 52 56, 24 40 Z" : "M20 32 C 40 48, 88 16, 108 32" } stroke="#a16207" fill="transparent" strokeWidth="8" strokeLinecap="round" className="transition-all duration-500" />
+                                <path d={isKnotted ? "M24 40 C 4 24, 60 8, 80 32 C 100 56, 124 24, 104 40 C 84 56, 52 56, 24 40 Z" : "M20 32 C 40 48, 88 16, 108 32"} stroke="#a16207" fill="transparent" strokeWidth="8" strokeLinecap="round" className="transition-all duration-500" />
                             </svg>
                         </div>
                         <div className="flex justify-center gap-8 mt-2">
@@ -1097,10 +1100,10 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                     <div className="w-full text-center">
                         <div className="h-32 flex items-center justify-center">
                             <svg viewBox="0 0 100 100" className="w-28 h-28">
-                                <circle cx="50" cy="50" r="45" fill={isFull ? '#a3e635' : '#fef08a'} stroke={isFull ? '#65a30d' : '#facc15'} strokeWidth="4" className="transition-colors duration-300"/>
+                                <circle cx="50" cy="50" r="45" fill={isFull ? '#a3e635' : '#fef08a'} stroke={isFull ? '#65a30d' : '#facc15'} strokeWidth="4" className="transition-colors duration-300" />
                                 <circle cx="35" cy="40" r="5" fill="black" />
                                 <circle cx="65" cy="40" r="5" fill="black" />
-                                <path d={isFull ? "M30 65 Q 50 80 70 65" : "M30 70 Q 50 60 70 70"} stroke="black" strokeWidth="4" fill="none" strokeLinecap="round" className="transition-all duration-300"/>
+                                <path d={isFull ? "M30 65 Q 50 80 70 65" : "M30 70 Q 50 60 70 70"} stroke="black" strokeWidth="4" fill="none" strokeLinecap="round" className="transition-all duration-300" />
                             </svg>
                         </div>
                         <div className="flex justify-center gap-8 mt-2">
@@ -1132,10 +1135,10 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                     <div className="w-full text-center">
                         <div className="h-32 flex items-center justify-center">
                             <svg viewBox="0 0 100 100" className="w-28 h-28">
-                                <circle cx="50" cy="50" r="45" fill={taste === 'sweet' ? '#fde047' : '#a3e635'} stroke={taste === 'sweet' ? '#f59e0b' : '#65a30d'} strokeWidth="4" className="transition-colors duration-300"/>
+                                <circle cx="50" cy="50" r="45" fill={taste === 'sweet' ? '#fde047' : '#a3e635'} stroke={taste === 'sweet' ? '#f59e0b' : '#65a30d'} strokeWidth="4" className="transition-colors duration-300" />
                                 <circle cx="35" cy="40" r="5" fill="black" />
                                 <circle cx="65" cy="40" r="5" fill="black" />
-                                <path d={taste === 'sweet' ? "M30 65 Q 50 80 70 65" : "M30 75 Q 50 60 70 75"} stroke="black" strokeWidth="4" fill="none" strokeLinecap="round" className="transition-all duration-300"/>
+                                <path d={taste === 'sweet' ? "M30 65 Q 50 80 70 65" : "M30 75 Q 50 60 70 75"} stroke="black" strokeWidth="4" fill="none" strokeLinecap="round" className="transition-all duration-300" />
                             </svg>
                         </div>
                         <div className="flex justify-center gap-8 mt-2">
@@ -1162,9 +1165,9 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                 );
             }
             case ActivityType.FewMuch:
-                 const addApple = () => { if (itemCount < MAX_ITEMS) { const wasFew = itemCount <= MUCH_THRESHOLD; const newCount = itemCount + 1; setItemCount(newCount); if(newCount > MUCH_THRESHOLD && wasFew) speakConcept('çok'); }};
-                 const removeApple = () => { if (itemCount > 0) { const wasMany = itemCount > MUCH_THRESHOLD; const newCount = itemCount - 1; setItemCount(newCount); if(newCount <= MUCH_THRESHOLD && wasMany) speakConcept('az'); }};
-                 return ( <div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-40 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="grid grid-cols-4 gap-1">{[...Array(itemCount)].map((_, i) => <AppleIcon key={i} className="w-8 h-8 text-red-600 animate-pop-in"/>)}</div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center gap-4 sm-landscape:gap-2 mt-4 sm-landscape:mt-0"> <button onClick={removeApple} className={`${baseButtonClasses} bg-red-500 sm-landscape:w-32`} disabled={itemCount === 0}><MinusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> <button onClick={addApple} className={`${baseButtonClasses} bg-green-500 sm-landscape:w-32`} disabled={itemCount >= MAX_ITEMS}><PlusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> </div> </div> );
+                const addApple = () => { if (itemCount < MAX_ITEMS) { const wasFew = itemCount <= MUCH_THRESHOLD; const newCount = itemCount + 1; setItemCount(newCount); if (newCount > MUCH_THRESHOLD && wasFew) speakConcept('çok'); } };
+                const removeApple = () => { if (itemCount > 0) { const wasMany = itemCount > MUCH_THRESHOLD; const newCount = itemCount - 1; setItemCount(newCount); if (newCount <= MUCH_THRESHOLD && wasMany) speakConcept('az'); } };
+                return (<div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-40 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="grid grid-cols-4 gap-1">{[...Array(itemCount)].map((_, i) => <AppleIcon key={i} className="w-8 h-8 text-red-600 animate-pop-in" />)}</div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center gap-4 sm-landscape:gap-2 mt-4 sm-landscape:mt-0"> <button onClick={removeApple} className={`${baseButtonClasses} bg-red-500 sm-landscape:w-32`} disabled={itemCount === 0}><MinusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> <button onClick={addApple} className={`${baseButtonClasses} bg-green-500 sm-landscape:w-32`} disabled={itemCount >= MAX_ITEMS}><PlusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> </div> </div>);
             case ActivityType.HalfQuarterWhole: {
                 const getPizzaClipPath = () => {
                     if (fraction === 'half') return 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)';
@@ -1194,12 +1197,12 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                     <div className="w-full text-center">
                         <div className="h-40 flex items-center justify-center">
                             <div className="relative w-24 h-32 bg-slate-200/50 border-4 border-slate-300 rounded-t-2xl rounded-b-lg">
-                                <div className="absolute bottom-0 left-0 right-0 bg-blue-400 transition-all duration-300 rounded-b-md" style={{ height: `${fillLevel}%`}}></div>
+                                <div className="absolute bottom-0 left-0 right-0 bg-blue-400 transition-all duration-300 rounded-b-md" style={{ height: `${fillLevel}%` }}></div>
                             </div>
                         </div>
                         <div className="flex justify-center gap-8 mt-2">
-                            <button onClick={() => { setFillLevel(l => Math.max(0, l-25)); speakConcept('boş'); }} className={`${baseButtonClasses} bg-red-500 text-sm px-4`}>{emptyLabel}</button>
-                            <button onClick={() => { setFillLevel(l => Math.min(100, l+25)); speakConcept('dolu'); }} className={`${baseButtonClasses} bg-green-500 text-sm px-4`}>{fullLabel}</button>
+                            <button onClick={() => { setFillLevel(l => Math.max(0, l - 25)); speakConcept('boş'); }} className={`${baseButtonClasses} bg-red-500 text-sm px-4`}>{emptyLabel}</button>
+                            <button onClick={() => { setFillLevel(l => Math.min(100, l + 25)); speakConcept('dolu'); }} className={`${baseButtonClasses} bg-green-500 text-sm px-4`}>{fullLabel}</button>
                         </div>
                     </div>
                 );
@@ -1211,7 +1214,7 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                 return (
                     <div className="w-full text-center">
                         <div className="h-24 flex items-center justify-center rounded-lg bg-slate-300/50 p-2 relative">
-                            <div className="grid grid-cols-5 gap-1">{[...Array(oddEvenCount)].map((_, i) => <AppleIcon key={i} className="w-6 h-6 text-red-600 animate-pop-in"/>)}</div>
+                            <div className="grid grid-cols-5 gap-1">{[...Array(oddEvenCount)].map((_, i) => <AppleIcon key={i} className="w-6 h-6 text-red-600 animate-pop-in" />)}</div>
                         </div>
                         <p className="font-bold text-2xl mt-2">{isEven ? evenLabel : oddLabel}</p>
                         <div className="flex justify-center gap-8 mt-2">
@@ -1261,10 +1264,10 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                         <div className="h-32 flex items-center justify-center relative w-64 mx-auto bg-slate-200/50 rounded-lg">
                             <div className="absolute top-4 bottom-4 left-1/2 -translate-x-1/2 w-1 bg-slate-400 rounded-full" />
                             <PersonIcon className="w-16 h-16 text-blue-600 absolute left-4 top-1/2 -translate-y-1/2" />
-                            <PersonIcon 
-                                className="w-16 h-16 text-green-600 absolute top-1/2 -translate-y-1/2 transition-all duration-500" 
-                                style={{ 
-                                    left: arrangement === 'beside' ? '5rem' : 'auto', 
+                            <PersonIcon
+                                className="w-16 h-16 text-green-600 absolute top-1/2 -translate-y-1/2 transition-all duration-500"
+                                style={{
+                                    left: arrangement === 'beside' ? '5rem' : 'auto',
                                     right: arrangement === 'beside' ? 'auto' : '1rem'
                                 }}
                             />
@@ -1343,30 +1346,30 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                 );
             }
             case ActivityType.NearFar:
-                 return ( <div className="w-full text-center"> <div className="h-32 flex items-center justify-center relative w-64 mx-auto"> <div className="w-20 h-20 bg-amber-700 rounded-lg absolute left-0" /> <div className="w-12 h-12 bg-red-500 rounded-full absolute transition-all duration-300" style={{ transform: `scale(${isNear ? 1 : 0.6})`, left: isNear ? '8rem' : '12rem' }} /> </div> <div className="flex justify-center gap-4 mt-2"> <button onClick={() => { setIsNear(false); speakConcept('uzak'); }} className={`${baseButtonClasses} bg-orange-500 text-sm px-2`}>Uzaklaştır</button> <button onClick={() => { setIsNear(true); speakConcept('yakın'); }} className={`${baseButtonClasses} bg-sky-500 text-sm px-2`}>Yakınlaştır</button> </div> </div> );
+                return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center relative w-64 mx-auto"> <div className="w-20 h-20 bg-amber-700 rounded-lg absolute left-0" /> <div className="w-12 h-12 bg-red-500 rounded-full absolute transition-all duration-300" style={{ transform: `scale(${isNear ? 1 : 0.6})`, left: isNear ? '8rem' : '12rem' }} /> </div> <div className="flex justify-center gap-4 mt-2"> <button onClick={() => { setIsNear(false); speakConcept('uzak'); }} className={`${baseButtonClasses} bg-orange-500 text-sm px-2`}>Uzaklaştır</button> <button onClick={() => { setIsNear(true); speakConcept('yakın'); }} className={`${baseButtonClasses} bg-sky-500 text-sm px-2`}>Yakınlaştır</button> </div> </div>);
             case ActivityType.HighLow:
-                 return ( <div className="w-full text-center"> <div className="h-40 flex items-center justify-center relative w-full"> <div className="w-16 h-16 bg-blue-500 rounded-full absolute transition-all duration-300" style={{ bottom: highLowPos === 'high' ? '8rem' : '1rem' }} /> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setHighLowPos('low'); speakConcept('alçak'); }} className={`${baseButtonClasses} bg-red-500 text-sm px-4`}>Alçalt</button> <button onClick={() => { setHighLowPos('high'); speakConcept('yüksek'); }} className={`${baseButtonClasses} bg-green-500 text-sm px-4`}>Yükselt</button> </div> </div> );
+                return (<div className="w-full text-center"> <div className="h-40 flex items-center justify-center relative w-full"> <div className="w-16 h-16 bg-blue-500 rounded-full absolute transition-all duration-300" style={{ bottom: highLowPos === 'high' ? '8rem' : '1rem' }} /> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setHighLowPos('low'); speakConcept('alçak'); }} className={`${baseButtonClasses} bg-red-500 text-sm px-4`}>Alçalt</button> <button onClick={() => { setHighLowPos('high'); speakConcept('yüksek'); }} className={`${baseButtonClasses} bg-green-500 text-sm px-4`}>Yükselt</button> </div> </div>);
             case ActivityType.BeforeAfter:
-                 return ( <div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-32 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="relative w-28 h-28"> { isAfter ? <AppleCoreIcon className="w-full h-full text-red-600 animate-pop-in"/> : <AppleIcon className="w-full h-full text-red-600 animate-pop-in"/> } </div> </div> <div className="flex justify-center gap-4 sm-landscape:gap-2 mt-4 sm-landscape:mt-0"> <button onClick={() => { setIsAfter(prev => !prev); speak(isAfter ? 'önce' : 'sonra'); }} className={`${baseButtonClasses} bg-sky-500 text-sm px-4 sm-landscape:w-32`}>{isAfter ? 'Önce' : 'Sonra'}</button> </div> </div> );
+                return (<div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-32 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="relative w-28 h-28"> {isAfter ? <AppleCoreIcon className="w-full h-full text-red-600 animate-pop-in" /> : <AppleIcon className="w-full h-full text-red-600 animate-pop-in" />} </div> </div> <div className="flex justify-center gap-4 sm-landscape:gap-2 mt-4 sm-landscape:mt-0"> <button onClick={() => { setIsAfter(prev => !prev); speak(isAfter ? 'önce' : 'sonra'); }} className={`${baseButtonClasses} bg-sky-500 text-sm px-4 sm-landscape:w-32`}>{isAfter ? 'Önce' : 'Sonra'}</button> </div> </div>);
             case ActivityType.DayNight: {
                 const nightText = getLocalizedConcept('gece');
                 const dayText = getLocalizedConcept('gündüz');
-                return ( <div className="w-full text-center"> <div className={`h-32 flex items-center justify-center relative rounded-lg overflow-hidden transition-colors duration-500 ${isDay ? 'bg-sky-400' : 'bg-slate-800'}`}> <div className={`absolute w-16 h-16 rounded-full transition-all duration-500 ${isDay ? 'bg-yellow-300' : 'bg-slate-200'}`} style={{ transform: `translateY(${isDay ? '0' : '-100%'})`, opacity: isDay ? 1: 0.5 }} /> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsDay(false); speak(nightText); }} className={`${baseButtonClasses} bg-slate-700 text-sm px-4`}>{nightText.charAt(0).toUpperCase() + nightText.slice(1)}</button> <button onClick={() => { setIsDay(true); speak(dayText); }} className={`${baseButtonClasses} bg-sky-400 text-sm px-4`}>{dayText.charAt(0).toUpperCase() + dayText.slice(1)}</button> </div> </div> );
+                return (<div className="w-full text-center"> <div className={`h-32 flex items-center justify-center relative rounded-lg overflow-hidden transition-colors duration-500 ${isDay ? 'bg-sky-400' : 'bg-slate-800'}`}> <div className={`absolute w-16 h-16 rounded-full transition-all duration-500 ${isDay ? 'bg-yellow-300' : 'bg-slate-200'}`} style={{ transform: `translateY(${isDay ? '0' : '-100%'})`, opacity: isDay ? 1 : 0.5 }} /> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsDay(false); speak(nightText); }} className={`${baseButtonClasses} bg-slate-700 text-sm px-4`}>{nightText.charAt(0).toUpperCase() + nightText.slice(1)}</button> <button onClick={() => { setIsDay(true); speak(dayText); }} className={`${baseButtonClasses} bg-sky-400 text-sm px-4`}>{dayText.charAt(0).toUpperCase() + dayText.slice(1)}</button> </div> </div>);
             }
             case ActivityType.FastSlow: {
                 const fastText = getLocalizedConcept('hızlı');
                 const slowText = getLocalizedConcept('yavaş');
-                return ( <div className="w-full text-center space-y-4"> <div className="relative h-20 w-full bg-slate-300 rounded-lg overflow-hidden"> <p className="font-bold text-sky-700 absolute top-1/2 -translate-y-1/2 left-4 z-10">{fastText.charAt(0).toUpperCase() + fastText.slice(1)}</p> <div onClick={() => speak(fastText)} className="absolute w-24 h-20 top-0 left-0 animate-move-fast"><CarIcon className="w-full h-full fill-green-500" /></div> </div> <div className="relative h-20 w-full bg-slate-300 rounded-lg overflow-hidden"> <p className="font-bold text-sky-700 absolute top-1/2 -translate-y-1/2 left-4 z-10">{slowText.charAt(0).toUpperCase() + slowText.slice(1)}</p> <div onClick={() => speak(slowText)} className="absolute w-24 h-20 top-0 left-0 animate-move-slow"><CarIcon className="w-full h-full fill-red-500" /></div> </div> </div> );
+                return (<div className="w-full text-center space-y-4"> <div className="relative h-20 w-full bg-slate-300 rounded-lg overflow-hidden"> <p className="font-bold text-sky-700 absolute top-1/2 -translate-y-1/2 left-4 z-10">{fastText.charAt(0).toUpperCase() + fastText.slice(1)}</p> <div onClick={() => speak(fastText)} className="absolute w-24 h-20 top-0 left-0 animate-move-fast"><CarIcon className="w-full h-full fill-green-500" /></div> </div> <div className="relative h-20 w-full bg-slate-300 rounded-lg overflow-hidden"> <p className="font-bold text-sky-700 absolute top-1/2 -translate-y-1/2 left-4 z-10">{slowText.charAt(0).toUpperCase() + slowText.slice(1)}</p> <div onClick={() => speak(slowText)} className="absolute w-24 h-20 top-0 left-0 animate-move-slow"><CarIcon className="w-full h-full fill-red-500" /></div> </div> </div>);
             }
             case ActivityType.HotCold: {
                 const coldText = getLocalizedConcept('soğuk');
                 const hotText = getLocalizedConcept('sıcak');
-                return ( <div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-40 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="relative w-32 h-32"> <div className={`w-full h-full transition-opacity duration-300 ${isHot ? 'opacity-100' : 'opacity-0'}`}> <SunIcon className="w-full h-full text-red-500" /> </div> <div className={`absolute inset-0 w-full h-full transition-opacity duration-300 ${!isHot ? 'opacity-100' : 'opacity-0'}`}> <SnowflakeIcon className="w-full h-full text-blue-400" /> </div> </div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center gap-4 sm-landscape:gap-2 mt-4 sm-landscape:mt-0"> <button onClick={() => { setIsHot(false); speak(coldText); }} className={`${baseButtonClasses} bg-blue-500 sm-landscape:w-32`}><MinusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> <button onClick={() => { setIsHot(true); speak(hotText); }} className={`${baseButtonClasses} bg-red-500 sm-landscape:w-32`}><PlusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> </div> </div> );
+                return (<div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-40 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="relative w-32 h-32"> <div className={`w-full h-full transition-opacity duration-300 ${isHot ? 'opacity-100' : 'opacity-0'}`}> <SunIcon className="w-full h-full text-red-500" /> </div> <div className={`absolute inset-0 w-full h-full transition-opacity duration-300 ${!isHot ? 'opacity-100' : 'opacity-0'}`}> <SnowflakeIcon className="w-full h-full text-blue-400" /> </div> </div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center gap-4 sm-landscape:gap-2 mt-4 sm-landscape:mt-0"> <button onClick={() => { setIsHot(false); speak(coldText); }} className={`${baseButtonClasses} bg-blue-500 sm-landscape:w-32`}><MinusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> <button onClick={() => { setIsHot(true); speak(hotText); }} className={`${baseButtonClasses} bg-red-500 sm-landscape:w-32`}><PlusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> </div> </div>);
             }
             case ActivityType.ParlakMat:
-                return ( <div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className={`relative w-24 h-24 bg-lime-500 rounded-full overflow-hidden`}> <div className={`absolute -top-4 -left-4 w-16 h-16 bg-white/50 rounded-full transition-opacity duration-300 ${isShiny ? 'opacity-100' : 'opacity-0'}`} style={{ filter: 'blur(10px)', transform: 'rotate(-45deg)' }}/> </div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsShiny(false); speakConcept('mat'); }} className={`${baseButtonClasses} bg-red-500 text-sm px-4`}>Mat</button> <button onClick={() => { setIsShiny(true); speakConcept('parlak'); }} className={`${baseButtonClasses} bg-green-500 text-sm px-4`}>Parlak</button> </div> </div> );
+                return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className={`relative w-24 h-24 bg-lime-500 rounded-full overflow-hidden`}> <div className={`absolute -top-4 -left-4 w-16 h-16 bg-white/50 rounded-full transition-opacity duration-300 ${isShiny ? 'opacity-100' : 'opacity-0'}`} style={{ filter: 'blur(10px)', transform: 'rotate(-45deg)' }} /> </div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsShiny(false); speakConcept('mat'); }} className={`${baseButtonClasses} bg-red-500 text-sm px-4`}>Mat</button> <button onClick={() => { setIsShiny(true); speakConcept('parlak'); }} className={`${baseButtonClasses} bg-green-500 text-sm px-4`}>Parlak</button> </div> </div>);
             case ActivityType.SeffafOpak:
-                return ( <div className="w-full text-center"> <div className="h-32 flex items-center justify-center bg-repeat rounded-lg" style={{ backgroundImage: 'linear-gradient(45deg, #cbd5e1 25%, #e2e8f0 25%, #e2e8f0 50%, #cbd5e1 50%, #cbd5e1 75%, #e2e8f0 75%, #e2e8f0 100%)', backgroundSize: '28px 28px' }}> <div className={`w-24 h-24 bg-lime-500 transition-opacity duration-300 rounded-full ${isTransparent ? 'opacity-30' : 'opacity-100'}`} /> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsTransparent(true); speakConcept('şeffaf'); }} className={`${baseButtonClasses} bg-sky-400 text-sm px-4`}>Şeffaf</button> <button onClick={() => { setIsTransparent(false); speakConcept('opak'); }} className={`${baseButtonClasses} bg-slate-500 text-sm px-4`}>Opak</button> </div> </div> );
+                return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center bg-repeat rounded-lg" style={{ backgroundImage: 'linear-gradient(45deg, #cbd5e1 25%, #e2e8f0 25%, #e2e8f0 50%, #cbd5e1 50%, #cbd5e1 75%, #e2e8f0 75%, #e2e8f0 100%)', backgroundSize: '28px 28px' }}> <div className={`w-24 h-24 bg-lime-500 transition-opacity duration-300 rounded-full ${isTransparent ? 'opacity-30' : 'opacity-100'}`} /> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsTransparent(true); speakConcept('şeffaf'); }} className={`${baseButtonClasses} bg-sky-400 text-sm px-4`}>Şeffaf</button> <button onClick={() => { setIsTransparent(false); speakConcept('opak'); }} className={`${baseButtonClasses} bg-slate-500 text-sm px-4`}>Opak</button> </div> </div>);
             case ActivityType.Senses:
                 return null; // As per user feedback, this helper is not useful.
             default:
@@ -1380,19 +1383,19 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
             const isDev = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
             if (!isDev) return;
             const items: Record<string, string[]> = {};
-            switch(activityType) {
+            switch (activityType) {
                 case ActivityType.Colors:
-                    items['colors'] = ['kırmızı','mavi','sarı','yeşil','turuncu','mor','pembe','kahverengi','siyah','beyaz'];
+                    items['colors'] = ['kırmızı', 'mavi', 'sarı', 'yeşil', 'turuncu', 'mor', 'pembe', 'kahverengi', 'siyah', 'beyaz'];
                     break;
                 case ActivityType.Shapes:
-                    items['shapes'] = ['daire','kare','üçgen','dikdörtgen','yıldız','oval'];
+                    items['shapes'] = ['daire', 'kare', 'üçgen', 'dikdörtgen', 'yıldız', 'oval'];
                     break;
                 case ActivityType.Emotions:
-                    items['emotions'] = ['mutlu','üzgün','kızgın','şaşkın','korkmuş'];
+                    items['emotions'] = ['mutlu', 'üzgün', 'kızgın', 'şaşkın', 'korkmuş'];
                     break;
                 default:
                     items['common'] = [
-                        'evet','hayır','doğru','yanlış','büyük','küçük','uzun','kısa','açık','kapalı','temiz','kirli'
+                        'evet', 'hayır', 'doğru', 'yanlış', 'büyük', 'küçük', 'uzun', 'kısa', 'açık', 'kapalı', 'temiz', 'kirli'
                     ];
             }
             console.groupCollapsed && console.groupCollapsed(`TTS strings — ${String(activityType)}`);
@@ -1436,25 +1439,25 @@ interface ConceptChoiceScreenProps {
 const getOppositesMap = (lang: ReturnType<typeof getCurrentLanguage>): { [key: string]: string } => {
     // Base pairs in Turkish
     const pairsTr: Array<[string, string]> = [
-        ['büyük','küçük'], ['uzun','kısa'], ['ince','kalın'], ['geniş','dar'], ['eski','yeni'], ['sert','yumuşak'],
-        ['temiz','kirli'], ['ıslak','kuru'], ['açık','kapalı'], ['düz','eğri'], ['canlı','cansız'], ['acı','tatlı'],
-        ['ağır','hafif'], ['sıcak','soğuk'], ['pürüzlü','pürüzsüz'], ['sağlam','kırık'], ['dağınık','toplu'], ['taze','bayat'],
-        ['kırışık','pürüzsüz'], ['düzgün','ters'], ['sivri','küt'], ['parlak','mat'], ['tembel','çalışkan'], ['şeffaf','opak'],
-        ['dikenli','pürüzsüz'], ['düğüm','çözük'], ['aç','tok'], ['yaşlı','genç'], ['az','çok'], ['dolu','boş'],
-        ['üstünde','altında'], ['aşağıda','yukarıda'], ['yanında','karşısında'], ['önünde','arkada'], ['içinde','dışında'],
-        ['gündüz','gece'], ['hızlı','yavaş'], ['yakın','uzak'], ['yüksek','alçak'], ['önce','sonra'],
-        ['derin','sığ']
+        ['büyük', 'küçük'], ['uzun', 'kısa'], ['ince', 'kalın'], ['geniş', 'dar'], ['eski', 'yeni'], ['sert', 'yumuşak'],
+        ['temiz', 'kirli'], ['ıslak', 'kuru'], ['açık', 'kapalı'], ['düz', 'eğri'], ['canlı', 'cansız'], ['acı', 'tatlı'],
+        ['ağır', 'hafif'], ['sıcak', 'soğuk'], ['pürüzlü', 'pürüzsüz'], ['sağlam', 'kırık'], ['dağınık', 'toplu'], ['taze', 'bayat'],
+        ['kırışık', 'pürüzsüz'], ['düzgün', 'ters'], ['sivri', 'küt'], ['parlak', 'mat'], ['tembel', 'çalışkan'], ['şeffaf', 'opak'],
+        ['dikenli', 'pürüzsüz'], ['düğüm', 'çözük'], ['aç', 'tok'], ['yaşlı', 'genç'], ['az', 'çok'], ['dolu', 'boş'],
+        ['üstünde', 'altında'], ['aşağıda', 'yukarıda'], ['yanında', 'karşısında'], ['önünde', 'arkada'], ['içinde', 'dışında'],
+        ['gündüz', 'gece'], ['hızlı', 'yavaş'], ['yakın', 'uzak'], ['yüksek', 'alçak'], ['önce', 'sonra'],
+        ['derin', 'sığ']
     ];
     const map: { [k: string]: string } = {};
     const locale = getSpeechLocale(lang as any);
     if (lang === 'tr') {
-        for (const [a,b] of pairsTr) {
+        for (const [a, b] of pairsTr) {
             map[a.toLocaleLowerCase('tr-TR')] = b.toLocaleLowerCase('tr-TR');
             map[b.toLocaleLowerCase('tr-TR')] = a.toLocaleLowerCase('tr-TR');
         }
         return map;
     }
-    for (const [a,b] of pairsTr) {
+    for (const [a, b] of pairsTr) {
         const A = translateLabel(a, lang);
         const B = translateLabel(b, lang);
         map[A.toLocaleLowerCase(locale)] = B.toLocaleLowerCase(locale);
@@ -1486,21 +1489,21 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
     const [spamCountdown, setSpamCountdown] = useState(0);
     const [spamWarningMessage, setSpamWarningMessage] = useState('');
     const [isCalmModeActive, setIsCalmModeActive] = useState(false);
-    
+
     // Get avatar icon from active profile
     const ProfileAvatar = profile?.activeProfile?.avatar ? getAvatar(profile.activeProfile.avatar) : null;
-    
+
     // Avatar mood based on game state (like CosmicBuddy)
     const avatarMood: 'idle' | 'happy' | 'sad' | 'think' = isCorrect ? 'happy' : (isWrong ? 'sad' : (selectedId ? 'think' : 'idle'));
 
     const { width, height } = useWindowSize();
     const isLandscape = width !== undefined && height !== undefined ? width > height : false;
-    
+
     // Yatay ekran için uygun etkinlik türleri (ikili karşılaştırma yapan etkinlikler)
     const landscapeOptimizedActivities: ActivityType[] = Object.values(ActivityType)
         .filter((act): act is ActivityType => typeof act === 'number')
         .filter(act => act !== ActivityType.YesNo);
-    
+
     const isConceptLandscape = landscapeOptimizedActivities.includes(roundData.activityType) && isLandscape;
 
     const currentLang = getCurrentLanguage();
@@ -1638,7 +1641,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
         } catch (e) {
             // ignore
         }
-    // Intentionally depend on roundData.id and currentLang so it logs when card changes
+        // Intentionally depend on roundData.id and currentLang so it logs when card changes
     }, [roundData.id, currentLang]);
 
     // Dev-only: log origin file for the current round (where the round data came from)
@@ -1708,9 +1711,9 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
         setHintAnimation(null);
         setDisabledOptionIds(new Set());
     }, [roundData]);
-    
-     useEffect(() => {
-        if(cardRef.current) {
+
+    useEffect(() => {
+        if (cardRef.current) {
             cardRef.current.focus();
         }
     }, [roundData.id]);
@@ -1774,10 +1777,10 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
         }
         if (isCorrect) return;
         setSelectedId(optionId);
-        
-    const locale = getSpeechLocale(currentLang);
-    const conceptFromKey = getConceptFromQuestionKey(roundData, currentLang);
-    const questionConcept = (conceptFromKey || localizedQuestion.split(' ')[0]).toLocaleLowerCase(locale).trim();
+
+        const locale = getSpeechLocale(currentLang);
+        const conceptFromKey = getConceptFromQuestionKey(roundData, currentLang);
+        const questionConcept = (conceptFromKey || localizedQuestion.split(' ')[0]).toLocaleLowerCase(locale).trim();
 
         const shouldAppend = (baseText: string, concept?: string) => {
             if (!concept || !baseText) return false;
@@ -1819,53 +1822,55 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     setTimeout(() => onAdvance(!mistakeMade), isFastTransitionEnabled ? 400 : 1200);
                     return;
                 }
-                    // FiveWOneH: prefer per-round i18n feedback if available
-                    if (roundData.activityType === ActivityType.FiveWOneH) {
-                        const questionKey = roundData.questionAudioKey || `q_${roundData.id}`;
-                        const fbKey = `fiveWOneH.${questionKey}.correct`;
-                        const genericKey = 'activityFeedback.fiveWOneH.correct';
-                        const genericMsg = t(genericKey, t('feedback.rightPrefix'));
-                        let msg = t(fbKey, genericMsg);
-                        const speechOverride = (getSpeechBlock()?.correct) as string | undefined;
-                        if (speechOverride) {
-                            const rightPrefix = t('feedback.rightPrefix');
-                            if (!msg || msg === genericMsg || msg === rightPrefix) {
-                                msg = speechOverride;
-                            }
+                // FiveWOneH: prefer per-round i18n feedback if available
+                if (roundData.activityType === ActivityType.FiveWOneH) {
+                    const questionKey = roundData.questionAudioKey || `q_${roundData.id}`;
+                    const fbKey = `fiveWOneH.${questionKey}.correct`;
+                    const genericKey = 'activityFeedback.fiveWOneH.correct';
+                    const genericMsg = t(genericKey, t('feedback.rightPrefix'));
+                    let msg = t(fbKey, genericMsg);
+                    const speechOverride = (getSpeechBlock()?.correct) as string | undefined;
+                    if (speechOverride) {
+                        const rightPrefix = t('feedback.rightPrefix');
+                        if (!msg || msg === genericMsg || msg === rightPrefix) {
+                            msg = speechOverride;
                         }
-                        await speak(msg, getSpeechLocale(currentLang));
+                    }
+                    await speak(msg, getSpeechLocale(currentLang));
+                    setTimeout(() => onAdvance(!mistakeMade), isFastTransitionEnabled ? 400 : 1200);
+                    return;
+                }
+                // Quality concepts (AliveLifeless, BigSmall, etc.): use per-round speech override from data files
+                const qualityActivities = [
+                    ActivityType.AliveLifeless, ActivityType.BigSmall, ActivityType.LongShort,
+                    ActivityType.ThinThick, ActivityType.WideNarrow, ActivityType.OldNew,
+                    ActivityType.YoungOld, ActivityType.HardSoft, ActivityType.CleanDirty,
+                    ActivityType.WetDry, ActivityType.OpenClosed, ActivityType.StraightCurved,
+                    ActivityType.BitterSweet, ActivityType.HeavyLight, ActivityType.HotCold,
+                    ActivityType.RoughSmooth, ActivityType.BrokenIntact, ActivityType.MessyClean,
+                    ActivityType.TazeBayat, ActivityType.KirisikDuzgun, ActivityType.SivriKut,
+                    ActivityType.ParlakMat, ActivityType.TembelCaliskan, ActivityType.SeffafOpak,
+                    ActivityType.DikenliPuruzsuz, ActivityType.DugumCozuk, ActivityType.HungryFull,
+                    ActivityType.DerinSig, ActivityType.KalabalikTenha, ActivityType.TersDuz,
+                    ActivityType.NoisyQuiet, ActivityType.Senses,
+                    // Quantities
+                    ActivityType.FewMuch, ActivityType.FullEmpty, ActivityType.HalfQuarterWhole, ActivityType.OddEven,
+                    // Spatial
+                    ActivityType.OnUnder, ActivityType.BelowAbove, ActivityType.BesideOpposite, ActivityType.InFrontOfBehind,
+                    ActivityType.InsideOutside, ActivityType.Between, ActivityType.LeftRight, ActivityType.NearFar, ActivityType.HighLow,
+                    // Dynamic activities
+                    ActivityType.ObjectRecognition, ActivityType.Colors, ActivityType.Shapes, ActivityType.Emotions,
+                    // Reasoning with per-round speech overrides
+                    ActivityType.WhoseIsThis,
+                ];
+                if (qualityActivities.includes(roundData.activityType)) {
+                    const speechOverride = (getSpeechBlock()?.correct) as string | undefined;
+                    if (speechOverride) {
+                        await speak(speechOverride, getSpeechLocale(currentLang));
                         setTimeout(() => onAdvance(!mistakeMade), isFastTransitionEnabled ? 400 : 1200);
                         return;
                     }
-                    // Quality concepts (AliveLifeless, BigSmall, etc.): use per-round speech override from data files
-                    const qualityActivities = [
-                        ActivityType.AliveLifeless, ActivityType.BigSmall, ActivityType.LongShort,
-                        ActivityType.ThinThick, ActivityType.WideNarrow, ActivityType.OldNew,
-                        ActivityType.YoungOld, ActivityType.HardSoft, ActivityType.CleanDirty,
-                        ActivityType.WetDry, ActivityType.OpenClosed, ActivityType.StraightCurved,
-                        ActivityType.BitterSweet, ActivityType.HeavyLight, ActivityType.HotCold,
-                        ActivityType.RoughSmooth, ActivityType.BrokenIntact, ActivityType.MessyClean,
-                        ActivityType.TazeBayat, ActivityType.KirisikDuzgun, ActivityType.SivriKut,
-                        ActivityType.ParlakMat, ActivityType.TembelCaliskan, ActivityType.SeffafOpak,
-                        ActivityType.DikenliPuruzsuz, ActivityType.DugumCozuk, ActivityType.HungryFull,
-                        ActivityType.DerinSig, ActivityType.KalabalikTenha, ActivityType.TersDuz,
-                        ActivityType.NoisyQuiet, ActivityType.Senses,
-                        // Quantities
-                        ActivityType.FewMuch, ActivityType.FullEmpty, ActivityType.HalfQuarterWhole, ActivityType.OddEven,
-                        // Spatial
-                        ActivityType.OnUnder, ActivityType.BelowAbove, ActivityType.BesideOpposite, ActivityType.InFrontOfBehind,
-                        ActivityType.InsideOutside, ActivityType.Between, ActivityType.LeftRight, ActivityType.NearFar, ActivityType.HighLow,
-                        // Dynamic activities
-                        ActivityType.ObjectRecognition, ActivityType.Colors, ActivityType.Shapes, ActivityType.Emotions
-                    ];
-                    if (qualityActivities.includes(roundData.activityType)) {
-                        const speechOverride = (getSpeechBlock()?.correct) as string | undefined;
-                        if (speechOverride) {
-                            await speak(speechOverride, getSpeechLocale(currentLang));
-                            setTimeout(() => onAdvance(!mistakeMade), isFastTransitionEnabled ? 400 : 1200);
-                            return;
-                        }
-                    }
+                }
                 // Prefer static spatial i18n answer keys when available
                 const spatialPrefixForType_local = (type: ActivityType): string | null => {
                     switch (type) {
@@ -1928,8 +1933,8 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 const base = stripLeadingDeterminer(localizedBase, currentLang);
                 let speech = buildSpeechWithPrefix(correctPrefix, base);
                 const isDescriptiveActivity = oppositeConcepts[questionConcept] ||
-                                            [ActivityType.Colors, ActivityType.Shapes, ActivityType.Emotions]
-                                            .includes(roundData.activityType);
+                    [ActivityType.Colors, ActivityType.Shapes, ActivityType.Emotions]
+                        .includes(roundData.activityType);
 
                 if (isDescriptiveActivity && shouldAppend(base, questionConcept)) {
                     if (currentLang === 'tr') {
@@ -1947,7 +1952,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     const wrongOpts = roundData.options.filter(o => !o.isCorrect);
                     const uniqWrongIds = Array.from(new Set(wrongOpts.map(o => o.id)));
                     const localize = (w: string) => currentLang === 'tr' ? w : translateLabel(w, currentLang);
-                    
+
                     // Check per-round speech override FIRST (before any category logic)
                     const speechOverride = (getSpeechBlock()?.correct) as string | undefined;
                     if (speechOverride && correctOpt) {
@@ -1962,7 +1967,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         setTimeout(() => onAdvance(!mistakeMade), isFastTransitionEnabled ? 400 : 1200);
                         return;
                     }
-                    
+
                     if (uniqWrongIds.length === 1 && wrongOpts.length >= 2) {
                         // Visual round: three identical distractors
                         const w = localize(wrongOpts[0]?.word || '');
@@ -1975,12 +1980,12 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         // Child-friendly, singular group labels
                         const correctCatSing = getFriendlyCategoryLabelSingularFromRaw(correctCategoryRaw, currentLang) || (correctCategoryRaw ? localize(correctCategoryRaw) : null);
                         const wrongCatSing = getFriendlyCategoryLabelSingularFromRaw(wrongCategoryRaw || null, currentLang) || (wrongCategoryRaw ? localize(wrongCategoryRaw) : null);
-                        
+
                         if (correctCatSing && wrongCatSing && correctCategoryRaw !== 'none' && wrongCategoryRaw !== 'none') {
                             const itemName = localize(correctOpt.word);
                             const correctCat = correctCatSing;
                             const wrongCat = wrongCatSing;
-                            
+
                             if (currentLang === 'tr') {
                                 explanation = ` ${itemName} bir ${correctCat}; diğerleri ${wrongCat}.`;
                             } else {
@@ -2003,11 +2008,11 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                                     if (currentLang === 'tr') explanation = ` ${c} farklı; diğerleri ${grp}.`;
                                     else explanation = ` ${c} is different; the others are ${grp}.`;
                                 } else {
-                                // List other items as a simple, comprehensible contrast
-                                const list = wrongOpts.map(o => localize(o.word)).join(', ');
-                                const c = localize(correctOpt.word);
-                                if (currentLang === 'tr') explanation = ` ${c} farklı; diğerleri ${list}.`;
-                                else explanation = ` ${c} is different; the others are ${list}.`;
+                                    // List other items as a simple, comprehensible contrast
+                                    const list = wrongOpts.map(o => localize(o.word)).join(', ');
+                                    const c = localize(correctOpt.word);
+                                    if (currentLang === 'tr') explanation = ` ${c} farklı; diğerleri ${list}.`;
+                                    else explanation = ` ${c} is different; the others are ${list}.`;
                                 }
                             }
                         }
@@ -2120,7 +2125,9 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     ActivityType.OnUnder, ActivityType.BelowAbove, ActivityType.BesideOpposite, ActivityType.InFrontOfBehind,
                     ActivityType.InsideOutside, ActivityType.Between, ActivityType.LeftRight, ActivityType.NearFar, ActivityType.HighLow,
                     // Dynamic activities
-                    ActivityType.ObjectRecognition, ActivityType.Colors, ActivityType.Shapes, ActivityType.Emotions
+                    ActivityType.ObjectRecognition, ActivityType.Colors, ActivityType.Shapes, ActivityType.Emotions,
+                    // Reasoning with per-round speech overrides
+                    ActivityType.WhoseIsThis,
                 ];
                 if (qualityActivities.includes(roundData.activityType)) {
                     const speechOverride = (getSpeechBlock()?.wrong) as string | undefined;
@@ -2137,7 +2144,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 if (roundData.activityType === ActivityType.WhatDoesntBelong) {
                     const localize = (w: string) => currentLang === 'tr' ? w : translateLabel(w, currentLang);
                     const itemName = localize(spokenText);
-                    
+
                     // Speech override support for wrong selection - check FIRST
                     const wrongTpl = (getSpeechBlock()?.wrong) as string | undefined;
                     if (wrongTpl) {
@@ -2186,7 +2193,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                             const rawKey = (opt as any).audioKey || (opt as any).word || (opt as any).label || (opt as any).spoken || (opt as any).spokenText || '';
                             const norm = normalizeI18nKey(rawKey as string);
                             if (norm) {
-                                const baseNamespaces = ['spatial','bigSmall','questions','common','gameActivities','activityFeedback'];
+                                const baseNamespaces = ['spatial', 'bigSmall', 'questions', 'common', 'gameActivities', 'activityFeedback'];
                                 const nsList = activityNamespaceForType(roundData.activityType)
                                     ? [activityNamespaceForType(roundData.activityType), ...baseNamespaces]
                                     : baseNamespaces;
@@ -2246,34 +2253,34 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         const rawKeyGlobal = (optGlobal as any).audioKey || (optGlobal as any).word || (optGlobal as any).label || (optGlobal as any).spoken || (optGlobal as any).spokenText || '';
                         const normGlobal = normalizeI18nKey(rawKeyGlobal as string);
                         if (normGlobal) {
-                            const baseNamespacesG = ['spatial','bigSmall','questions','common','gameActivities','activityFeedback'];
+                            const baseNamespacesG = ['spatial', 'bigSmall', 'questions', 'common', 'gameActivities', 'activityFeedback'];
                             const nsListG = activityNamespaceForType(roundData.activityType)
                                 ? [activityNamespaceForType(roundData.activityType), ...baseNamespacesG]
                                 : baseNamespacesG;
                             let optMsgG: string | undefined;
-                            
+
                             // For wrong answers in concept activities, we need the OPPOSITE concept
                             // For i18n key generation, all concept logic should be done in Turkish, which is the canonical language for keys.
                             const trOpposites = getOppositesMap('tr');
                             const conceptTrTokenG = getConceptFromQuestionKey(roundData, 'tr' as any) || '';
                             const oppositeConceptTr = trOpposites[conceptTrTokenG.toLocaleLowerCase('tr-TR')];
-                            
+
                             const conceptNormTrG = normalizeI18nKey(conceptTrTokenG);
                             const oppositeConceptNormTrG = oppositeConceptTr ? normalizeI18nKey(oppositeConceptTr) : null;
-                            
+
                             // For logging purposes only, get the current language's concepts
                             const conceptInCurrentLang = getConceptFromQuestionKey(roundData, currentLang);
                             const questionConceptG = (conceptInCurrentLang || '').toLocaleLowerCase(getSpeechLocale(currentLang)).trim();
-                            
+
                             for (const ns of nsListG) {
                                 // For wrong answer: Try no_<item>_<OPPOSITE_concept> first!
                                 const noKeyWithOppositeConcept = oppositeConceptNormTrG ? `${ns}.no_${normGlobal}_${oppositeConceptNormTrG}` : null;
                                 const noKeyWithQuestionConcept = conceptNormTrG ? `${ns}.no_${normGlobal}_${conceptNormTrG}` : null;
                                 const yesKeyWithOppositeConcept = oppositeConceptNormTrG ? `${ns}.yes_${normGlobal}_${oppositeConceptNormTrG}` : null;
-                                
+
                                 console.log('[i18n-WRONG-DEBUG] Question concept:', questionConceptG, '→ Opposite Concept TR:', oppositeConceptTr, '→ Norm Opp TR:', oppositeConceptNormTrG);
-                                console.log('[i18n-WRONG-DEBUG] Trying keys:', {noKeyWithOppositeConcept, noKeyWithQuestionConcept, yesKeyWithOppositeConcept});
-                                
+                                console.log('[i18n-WRONG-DEBUG] Trying keys:', { noKeyWithOppositeConcept, noKeyWithQuestionConcept, yesKeyWithOppositeConcept });
+
                                 // Priority: no_item_opposite_concept > no_item_question_concept > yes_item_opposite_concept
                                 if (noKeyWithOppositeConcept) {
                                     const maybeNo = lookupLocale(noKeyWithOppositeConcept, currentLang);
@@ -2290,7 +2297,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                                     console.log('[i18n-WRONG-DEBUG] Yes key fallback:', yesKeyWithOppositeConcept, '→ Result:', maybeYes);
                                     if (maybeYes) { optMsgG = maybeYes; break; }
                                 }
-                                
+
                                 // Fallback to plain item name
                                 const plainG = lookupLocale(`${ns}.${normGlobal}`, currentLang);
                                 if (plainG) { optMsgG = plainG; break; }
@@ -2337,7 +2344,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
             }, 800);
         }
     };
-    
+
     const handleSpeak = (e: React.MouseEvent) => {
         e.stopPropagation();
         const toSpeak = getQuestionTtsText(roundData, currentLang);
@@ -2358,14 +2365,14 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
             if (correctOption) {
                 setHintAnimation({ id: correctOption.id, type: 'grow' });
             }
-            
+
             // Yanlış cevapları küçült (100ms sonra)
             setTimeout(() => {
                 wrongOptions.forEach(option => {
                     setHintAnimation(prev => prev ? prev : { id: option.id, type: 'shrink' });
                 });
             }, 300);
-            
+
             // Animasyonu temizle
             setTimeout(() => setHintAnimation(null), 2000);
         } else {
@@ -2380,12 +2387,12 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
     }, [roundData, disabledOptionIds]);
 
     const gridColsClass = displayOptions.length === 2 ? 'grid-cols-2' :
-                          displayOptions.length === 3 ? 'grid-cols-3 sm-landscape:grid-cols-3' :
-                          displayOptions.length === 4 ? 'grid-cols-2 sm-landscape:grid-cols-4' : 
-                          'grid-cols-2 sm-landscape:grid-cols-4';
+        displayOptions.length === 3 ? 'grid-cols-3 sm-landscape:grid-cols-3' :
+            displayOptions.length === 4 ? 'grid-cols-2 sm-landscape:grid-cols-4' :
+                'grid-cols-2 sm-landscape:grid-cols-4';
 
     const renderHeader = () => (
-         <div className={`w-full flex justify-between items-center mb-2 sm:mb-4 px-3 py-1.5 ${isCosmic ? 'bg-slate-900/60 border border-sky-400/20' : 'bg-white/50'} backdrop-blur-sm rounded-full`}>
+        <div className={`w-full flex justify-between items-center mb-2 sm:mb-4 px-3 py-1.5 ${isCosmic ? 'bg-slate-900/60 border border-sky-400/20' : 'bg-white/50'} backdrop-blur-sm rounded-full`}>
             <button onClick={onBack} className="p-1.5 rounded-full hover:bg-white/50 transition-colors" aria-label={t('app.back')}>
                 <ArrowLeftIcon className={`w-7 h-7 ${effectiveTheme.accent}`} />
             </button>
@@ -2395,7 +2402,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
             <div className="w-10 h-10" />
         </div>
     );
-    
+
     const renderQuestionItem = () => {
         if (!roundData.questionItem) return null;
         const questionItemWord = currentLang === 'tr'
@@ -2403,7 +2410,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
             : translateLabel(roundData.questionItem.word, currentLang);
         return (
             <div className="mb-4 text-center">
-                 <div className="w-32 h-32 sm-landscape:w-24 sm-landscape:h-24 mx-auto">
+                <div className="w-32 h-32 sm-landscape:w-24 sm-landscape:h-24 mx-auto">
                     <Card
                         imageUrl={roundData.questionItem.imageUrl}
                         word={questionItemWord}
@@ -2411,7 +2418,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         isRevealed={isWordLabelVisible}
                         className="aspect-square"
                     />
-                 </div>
+                </div>
             </div>
         );
     }
@@ -2438,9 +2445,9 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         className={`aspect-square ${isWrong === option.id ? 'animate-shake' : ''}`}
                     >
                         {isBanButtonEnabled && (
-                            <button 
+                            <button
                                 onClick={(e) => handleBan(e, option.id)}
-                                className="absolute top-2 right-2 p-2 bg-red-100 rounded-full hover:bg-red-200 transition-colors" 
+                                className="absolute top-2 right-2 p-2 bg-red-100 rounded-full hover:bg-red-200 transition-colors"
                                 aria-label="Bu görseli bir daha gösterme">
                                 <BanIcon className="w-6 h-6 text-red-600" />
                             </button>
@@ -2450,7 +2457,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
             })}
         </div>
     );
-    
+
     // Avatar bileşeni (tüm temalarda, yalnızca dikey ekranda)
     const isPortrait = !isLandscape;
     const showAvatar = isPortrait && ProfileAvatar;
@@ -2477,7 +2484,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
         ActivityType.OpenClosed, ActivityType.BrokenIntact, ActivityType.MessyClean,
         ActivityType.TazeBayat, ActivityType.DugumCozuk, ActivityType.HungryFull,
         ActivityType.TersDuz, ActivityType.FewMuch, ActivityType.FullEmpty, ActivityType.BeforeAfter,
-        ActivityType.DayNight, ActivityType.FastSlow, ActivityType.HotCold, ActivityType.ParlakMat, 
+        ActivityType.DayNight, ActivityType.FastSlow, ActivityType.HotCold, ActivityType.ParlakMat,
         ActivityType.SeffafOpak, ActivityType.AliveLifeless, ActivityType.TembelCaliskan,
         ActivityType.BitterSweet, ActivityType.HalfQuarterWhole, ActivityType.OddEven,
         ActivityType.OnUnder, ActivityType.BelowAbove, ActivityType.BesideOpposite,
@@ -2487,13 +2494,13 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
 
     if (isConceptLandscape) {
         return (
-            <div 
-             ref={cardRef}
-             tabIndex={-1}
-             className="relative flex flex-col h-full w-full max-w-7xl mx-auto animate-fade-in outline-none"
-             aria-live="polite">
+            <div
+                ref={cardRef}
+                tabIndex={-1}
+                className="relative flex flex-col h-full w-full max-w-7xl mx-auto animate-fade-in outline-none"
+                aria-live="polite">
                 {spamOverlay}
-                
+
                 {/* Header */}
                 <div className={`w-full flex justify-between items-center px-2 py-1 ${isCosmic ? 'bg-slate-900/60 border border-sky-400/20' : 'bg-white/70'} backdrop-blur-sm rounded-full absolute top-1 left-1/2 -translate-x-1/2 z-20 max-w-xs shadow-md`}>
                     <button onClick={onBack} className="p-1 rounded-full hover:bg-white/70 transition-colors" aria-label="Geri dön">
@@ -2538,17 +2545,17 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     {roundData.options.map((option, index) => {
                         const isOptionCorrect = isCorrect && selectedId === option.id;
                         const isOptionWrong = isWrong === option.id;
-                        const hintClass = hintAnimation?.id === option.id 
-                            ? (hintAnimation.type === 'grow' ? 'pulse-grow' : 'pulse-shrink') 
+                        const hintClass = hintAnimation?.id === option.id
+                            ? (hintAnimation.type === 'grow' ? 'pulse-grow' : 'pulse-shrink')
                             : '';
-                        
+
                         // Hint sırasında doğru cevaba border ve arka plan ekle
-                        const hintStyle = hintAnimation?.id === option.id && hintAnimation.type === 'grow' 
-                            ? { 
-                                border: '4px solid #10b981', 
+                        const hintStyle = hintAnimation?.id === option.id && hintAnimation.type === 'grow'
+                            ? {
+                                border: '4px solid #10b981',
                                 boxShadow: '0 0 30px rgba(16, 185, 129, 0.6)',
                                 backgroundColor: '#dcfce7' // açık yeşil arka plan
-                              }
+                            }
                             : {};
                         // Prefer canonical object label from i18n using the image's audioKey.
                         const i18nObjKey = `objects.${option.audioKey}`;
@@ -2561,13 +2568,19 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                                 key={`${option.id}-${index}`}
                                 onClick={() => handleCardClick(option.id, option.isCorrect, hintSpokenWord)}
                                 className={`w-1/2 h-full flex items-center justify-center p-4 cursor-pointer transition-all duration-300 relative overflow-hidden ${hintClass} ${isOptionWrong ? 'animate-shake' : ''}`}
-                                style={{ 
+                                style={{
                                     backgroundColor: isOptionCorrect ? '#22c55e' : isOptionWrong ? '#ef4444' : (isCosmic ? '#0b1220' : '#f1f5f9'),
                                     ...hintStyle
                                 }}
                             >
-                                <img src={option.imageUrl} alt={hintDisplayWord} className="max-w-full max-h-full object-contain drop-shadow-2xl" />
-                                
+                                <SmartImage
+                                    src={option.imageUrl}
+                                    disableRealistic={option.disableRealistic}
+                                    alt={hintDisplayWord}
+                                    className="max-w-full max-h-full object-contain drop-shadow-2xl"
+                                    style={option.imageScale ? { transform: `scale(${option.imageScale})`, transformOrigin: 'center' } : undefined}
+                                />
+
                                 {/* Doğru Cevap Göstergesi */}
                                 {hintAnimation?.id === option.id && hintAnimation.type === 'grow' && (
                                     <div className="absolute top-4 right-4 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center shadow-lg animate-bounce">
@@ -2576,15 +2589,15 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                                         </svg>
                                     </div>
                                 )}
-                                
+
                                 {isWordLabelVisible && (
                                     <p className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/30 text-white text-xl font-bold px-4 py-2 rounded-full">{hintDisplayWord}</p>
                                 )}
 
                                 {isBanButtonEnabled && (
-                                    <button 
+                                    <button
                                         onClick={(e) => handleBan(e, option.id)}
-                                        className="absolute top-4 right-4 p-2 bg-red-100 rounded-full hover:bg-red-200 transition-colors z-10" 
+                                        className="absolute top-4 right-4 p-2 bg-red-100 rounded-full hover:bg-red-200 transition-colors z-10"
                                         aria-label={t('choice.banImageAria')}>
                                         <BanIcon className="w-6 h-6 text-red-600" />
                                     </button>
@@ -2604,31 +2617,40 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         <LightBulbIcon className={`w-6 h-6 text-amber-600`} />
                         <span className={`text-xs font-bold text-amber-800 mt-1`}>{t('choice.hint')}</span>
                     </button>
+                    {(settings as any).handleToggleRealisticImages && (
+                        <button onClick={(settings as any).handleToggleRealisticImages} className={`flex flex-col items-center justify-center p-2 w-16 h-14 rounded-lg transition-colors text-center ${(settings as any).isRealisticImagesEnabled ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label="Gerçekçi/Alternatif Görseller">
+                            <svg className={`w-6 h-6 ${effectiveTheme.accent}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span className={`text-[10px] sm:text-xs font-bold ${effectiveTheme.text} mt-1 leading-tight`}>Alternatif</span>
+                        </button>
+                    )}
                 </div>
             </div>
         );
     }
 
     return (
-        <div 
-         ref={cardRef}
-         tabIndex={-1}
-         className="relative overflow-hidden flex flex-col h-full w-full max-w-5xl mx-auto p-2 sm:p-4 animate-fade-in outline-none landscape:p-0"
-         aria-live="polite">
+        <div
+            ref={cardRef}
+            tabIndex={-1}
+            className="relative overflow-hidden flex flex-col h-full w-full max-w-5xl mx-auto p-2 sm:p-4 animate-fade-in outline-none landscape:p-0"
+            aria-live="polite">
             {isCosmic && (
                 <CosmicBackdrop variant="light" showMeteors={true} />
             )}
             {spamOverlay}
-            
+
             {renderHeader()}
-            
-                        <div className={`relative flex-grow w-full flex flex-col items-center justify-center p-4 sm:p-6 sm-landscape:p-2 ${isCosmic ? 'bg-slate-900/50 border border-sky-400/20' : 'bg-white/60'} backdrop-blur-lg rounded-3xl shadow-xl overflow-y-auto`}>
-                                {isCosmic && (
-                                    <>
-                                        <PanelStars count={52} className="rounded-3xl" />
-                                        <div className="cosmic-panel-nebula rounded-3xl" />
-                                    </>
-                                )}
+
+            <div className={`relative flex-grow w-full flex flex-col items-center justify-center p-4 sm:p-6 sm-landscape:p-2 ${isCosmic ? 'bg-slate-900/50 border border-sky-400/20' : 'bg-white/60'} backdrop-blur-lg rounded-3xl shadow-xl overflow-y-auto`}>
+                {isCosmic && (
+                    <>
+                        <PanelStars count={52} className="rounded-3xl" />
+                        <div className="cosmic-panel-nebula rounded-3xl" />
+                    </>
+                )}
                 <div className="w-full flex flex-col landscape:flex-row landscape:items-start landscape:justify-center landscape:gap-6">
                     <div className="w-full flex flex-col items-center justify-start landscape:justify-center landscape:w-7/12 landscape:max-w-md">
                         <h1 className={`text-xl sm:text-2xl font-bold text-center ${isCosmic ? 'bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-indigo-200 to-fuchsia-300 text-glow-planet' : effectiveTheme.text} mb-4 flex items-center gap-3 landscape:text-lg sm-landscape:text-base drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]`}>
@@ -2640,11 +2662,11 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         {renderQuestionItem()}
                         {optionsGrid}
                     </div>
-                    
+
                     <div className="hidden landscape:block landscape:w-5/12 landscape:flex-grow landscape:self-center">
-                         {isHelperVisible && supportedHelpers.includes(roundData.activityType) && (
+                        {isHelperVisible && supportedHelpers.includes(roundData.activityType) && (
                             <div className="mt-4 animate-fade-in">
-                                 <InteractiveConceptHelper activityType={roundData.activityType} />
+                                <InteractiveConceptHelper activityType={roundData.activityType} />
                             </div>
                         )}
                     </div>
@@ -2652,7 +2674,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
 
                 <div className="w-full max-w-md mx-auto flex-shrink-0 mt-auto pt-4">
                     <div className="w-full flex items-center justify-center landscape:hidden">
-                         {isHelperVisible && supportedHelpers.includes(roundData.activityType) && (
+                        {isHelperVisible && supportedHelpers.includes(roundData.activityType) && (
                             <div className="w-full max-w-sm mb-2 animate-fade-in">
                                 <InteractiveConceptHelper activityType={roundData.activityType} />
                             </div>
@@ -2670,16 +2692,24 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                                 <span className={`text-xs sm-landscape:text-[10px] font-bold ${effectiveTheme.text} mt-1`}>{t('choice.hint')}</span>
                             </button>
                         )}
+                        {(settings as any).handleToggleRealisticImages && (
+                            <button onClick={(settings as any).handleToggleRealisticImages} className={`flex flex-col items-center justify-center p-2 w-20 sm-landscape:w-16 h-16 sm-landscape:h-14 rounded-lg transition-colors text-center ${(settings as any).isRealisticImagesEnabled ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label="Gerçekçi/Alternatif Görseller">
+                                <svg className={`w-7 h-7 sm-landscape:w-6 sm-landscape:h-6 ${effectiveTheme.accent}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span className={`text-[10px] sm-landscape:text-[9px] font-bold ${effectiveTheme.text} mt-1 leading-none`}>Alternatif</span>
+                            </button>
+                        )}
                         {/* Avatar gösterimi - ipucu butonunun yanında, mood ile animasyonlu */}
                         {showAvatar && (
-                            <div className={`flex items-center justify-center p-2 w-20 h-16 rounded-lg transition-all ${
-                                avatarMood === 'happy' ? 'bg-green-100/80 border-2 border-green-400 scale-110' : 
+                            <div className={`flex items-center justify-center p-2 w-20 h-16 rounded-lg transition-all ${avatarMood === 'happy' ? 'bg-green-100/80 border-2 border-green-400 scale-110' :
                                 avatarMood === 'sad' ? 'bg-red-100/80 border-2 border-red-400 scale-95' :
-                                avatarMood === 'think' ? 'bg-amber-100/80 border-2 border-amber-400' :
-                                isCosmic ? 'bg-slate-900/50 border border-sky-400/20' : 'bg-white/50 border border-slate-300/50'
-                            }`}>
-                                <ProfileAvatar 
-                                    className="w-14 h-14" 
+                                    avatarMood === 'think' ? 'bg-amber-100/80 border-2 border-amber-400' :
+                                        isCosmic ? 'bg-slate-900/50 border border-sky-400/20' : 'bg-white/50 border border-slate-300/50'
+                                }`}>
+                                <ProfileAvatar
+                                    className="w-14 h-14"
                                     mood={avatarMood}
                                 />
                             </div>
@@ -2687,6 +2717,40 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     </div>
                     {/* Portrait cosmic buddy alanını kaldırdık, artık avatar kullanıyoruz */}
                 </div>
+
+                {/* Galactic Robot Mascot - Only for deneme2 theme */}
+                {settings.theme === 'deneme2' && (
+                    <div className="fixed bottom-24 left-4 z-30 animate-mascot-entrance">
+                        <GalacticRobotMascot
+                            mood={isCorrect ? 'celebrate' : (isWrong ? 'sad' : (selectedId ? 'think' : 'idle')) as MascotMood}
+                            size="md"
+                            message={
+                                isCorrect ? 'Harika! Doğru cevap! 🎉' :
+                                    isWrong ? 'Tekrar dene! 💪' :
+                                        selectedId ? 'Hmm, düşünüyorum...' :
+                                            'Hangisi doğru? 🤔'
+                            }
+                            showMessage={true}
+                        />
+                    </div>
+                )}
+
+                {/* Ocean Jellyfish Mascot - Only for deneme theme */}
+                {settings.theme === 'deneme' && (
+                    <div className="fixed bottom-24 left-4 z-30 animate-fade-in">
+                        <OceanJellyfishMascot
+                            mood={isCorrect ? 'celebrate' : (isWrong ? 'sad' : (selectedId ? 'think' : 'idle')) as JellyfishMood}
+                            size="md"
+                            message={
+                                isCorrect ? 'Harika! Doğru! 🌊' :
+                                    isWrong ? 'Tekrar dene! 💙' :
+                                        selectedId ? 'Hmm...' :
+                                            'Seç bakalım! 🐠'
+                            }
+                            showMessage={true}
+                        />
+                    </div>
+                )}
             </div>
         </div>
     );

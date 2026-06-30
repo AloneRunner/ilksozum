@@ -73,6 +73,17 @@
       "title": "Proqram Rejimi",
       "subtitle": "Ekspert planı ilə gündəlik sessiya başladın"
     },
+    "audioIssue": {
+      "title": "🔊 Səsləndirmə Problemi varsa",
+      "line4": "Qeyd: Köhnə Samsung modellərində Google TTS məcburi söndürülə bilər; Türk dili paketi quraşdırılmayıbsa, bəzi cihazlarda səs ümumiyyətlə gəlməyə bilər və ya güclü İngilis aksenti eşidilə bilər.",
+      "line1": "Tənzimləmələr > Səssiz Rejim bağlanmalıdır. (Premium bitəndə açıq qalmış ola bilər)",
+      "line2": "Cihazınızın TTS (Mətn-Səsə) tənzimlərinə daxil olun və diliniz üçün yüksək keyfiyyətli səs qurulduğunu yoxlayın.",
+      "line3": "Google TTS-də 4-cü səs çox keyfiyyətlidir və tövsiyə olunur."
+    },
+    "themeFeedback": {
+      "title": "📢 Tema Geri Bildirimi",
+      "body": "Video arka planlı temalar çox yer tutur. Onları silərək əvəzinə real fotoqraflar əlavə etməyi planlaşdırırıq."
+    },
     "parentTips": {
       "title": "Valideynlər üçün Məsləhətlər",
       "subtitle": "Tətbiqdən daha səmərəli istifadə edin"
@@ -272,7 +283,12 @@
       "memoryCards": "Yaddaş kartları",
       "dragAndDropCounting": "Obyektləri daşı",
       "dragAndDropPositioning": "Topu yerləşdir",
-      "hangman": "Dar ağacı"
+      "hangman": "Dar ağacı",
+      "whoseIsThis": "Bu kimindir?",
+      "whatsMissing": "Nə yoxdur?"
+    },
+    "concept": {
+      "colorRecognition": "Rəngi nədir?"
     },
     "fineMotor": {
       "lineTracing": "Xətt izləmə",
@@ -289,18 +305,19 @@
     }
   },
   "settingsEx": {
-    "title": "Parametrlər",
+    "title": "Tənzimləmələr",
     "premium": {
       "title": "Premium Xüsusiyyətlər",
-      "desc": "Bütün reklamları silin, temalı interfeysi (hərəkətli arxa planlar) açın, valideyn tərəqqi hesabatına baxın və inkişafımıza dəstək olun.",
-      "cta": "Premiuma keç və dəstək ol",
-      "mathQuestion": "Valideyn Təsdiqi:\n\nDavam etmək üçün bu sualı cavablandırın:\n\n{num1} + {num2} = ?",
-      "wrongAnswer": "Səhv cavab. Zəhmət olmasa yenidən cəhd edin.",
-      "confirmPurchase": "Alışı təsdiq edirsiniz?\n\nBu əməliyyat ödənişli olacaq.",
+      "desc": "Bütün təhsil məzmunu pulsuzdur və hər kəs üçün açıqdır. Premium, reklamsız, mövzular, çap mərkəzi və sürətli keçid kimi rahatlıq xüsusiyyətləri təklif edir. Yeni istifadəçilərə 7 günlük sınaq müddəti verilir. Bizi dəstəkləmək üçün Premium ala bilərsiniz.",
+      "cta": "Premium-a keç & Dəstək ol",
+      "mathQuestion": "Valideyn Qapısı:\n\nDavam etmək üçün həll edin:\n\n{num1} + {num2} = ?",
+      "wrongAnswer": "Yanlış cavab. Yenidən cəhd edin.",
+      "confirmPurchase": "Alışı təsdiq edirsiniz?\n\nBu ödəniş aparılacaq.",
       "holdToPurchaseAria": "Almaq üçün 2 saniyə basılı saxlayın",
       "monthly": "Aylıq",
       "lifetime": "Ömürlük"
     },
+    "promoNote": "Hədiyyə Premium: {date} tarixinə qədər bütün xüsusiyyətlər açıqdır. İstəsəniz, bizi dəstəkləmək üçün Premium ala bilərsiniz — dəstəklər iOS platformasına köçürmə (illik haqq) üçün istifadə ediləcək.",
     "profile": {
       "title": "Profil",
       "active": "Aktiv Profil",
@@ -672,68 +689,68 @@
       "EmbeddedStory": "İç‑içə hekayə"
     },
     "planPreview": {
-  "reasoning": {
-    "title": "Məntiq oyunları",
-    "activities": {
-      "whatDoesntBelong": {
-        "title": "Hansı uyğun deyil?",
-        "subtitle": "Qrupa uyğun olmayanı tap"
+      "reasoning": {
+        "title": "Məntiq oyunları",
+        "activities": {
+          "whatDoesntBelong": {
+            "title": "Hansı uyğun deyil?",
+            "subtitle": "Qrupa uyğun olmayanı tap"
+          },
+          "sequencingStories": {
+            "title": "Hekayəni sırala",
+            "subtitle": "Hekayəni düzgün ardıcıllığa düz"
+          },
+          "patternCompletion": {
+            "title": "Naxışı tamamla",
+            "subtitle": "Növbəti fiquru təxmin et"
+          },
+          "sudoku": {
+            "title": "Şəkil Sudoku",
+            "subtitle": "Çatışmayan hissəni tamamla"
+          },
+          "memoryCards": {
+            "title": "Yaddaş kartları",
+            "subtitle": "Uyğun cütləri tap",
+            "instruction": "Mövqeləri yadda saxla və uyğun kart cütlərini tap.",
+            "memorizeTitle": "Yadda saxla!",
+            "playTitle": "Cüt tap"
+          },
+          "dragAndDropCounting": {
+            "title": "Əşyaları hərəkət etdir",
+            "subtitle": "İstənilən sayda əşyanı hərəkət etdir"
+          },
+          "dragAndDropPositioning": {
+            "title": "Əşyanı yerləşdir",
+            "subtitle": "Əşyanı düzgün yerə qoy"
+          },
+          "hangman": {
+            "title": "Adam asmaca",
+            "subtitle": "Sözü tap"
+          }
+        }
       },
-      "sequencingStories": {
-        "title": "Hekayəni sırala",
-        "subtitle": "Hekayəni düzgün ardıcıllığa düz"
+      "games": {
+        "objectCollector": {
+          "title": "Əşya toplayıcı",
+          "subtitle": "Doğru əşyaları səbətə topla",
+          "instructions": "← → ox düymələri ilə və ya barmaq/siçanla səbəti hərəkət etdir",
+          "youWin": "Təbriklər!",
+          "gameOver": "Oyun bitdi",
+          "finalScore": "Xal",
+          "collectFruits": "Yalnız meyvələri topla!",
+          "collectAnimals": "Yalnız heyvanları topla!",
+          "collectVehicles": "Yalnız nəqliyyat vasitələrini topla!",
+          "collectRed": "Yalnız qırmızı olanları topla!",
+          "collectFood": "Yalnız yeməkləri topla!",
+          "collectSchoolItems": "Yalnız məktəb ləvazimatlarını topla!",
+          "collectToys": "Yalnız oyuncaqları topla!",
+          "collectLargeAnimals": "Yalnız böyük heyvanları topla!"
+        },
+        "emotionPuppet": {
+          "title": "Emosiya kuklası",
+          "subtitle": "Üz hissələrini birləşdir"
+        }
       },
-      "patternCompletion": {
-        "title": "Naxışı tamamla",
-        "subtitle": "Növbəti fiquru təxmin et"
-      },
-      "sudoku": {
-        "title": "Şəkil Sudoku",
-        "subtitle": "Çatışmayan hissəni tamamla"
-      },
-      "memoryCards": {
-        "title": "Yaddaş kartları",
-        "subtitle": "Uyğun cütləri tap",
-        "instruction": "Mövqeləri yadda saxla və uyğun kart cütlərini tap.",
-        "memorizeTitle": "Yadda saxla!",
-        "playTitle": "Cüt tap"
-      },
-      "dragAndDropCounting": {
-        "title": "Əşyaları hərəkət etdir",
-        "subtitle": "İstənilən sayda əşyanı hərəkət etdir"
-      },
-      "dragAndDropPositioning": {
-        "title": "Əşyanı yerləşdir",
-        "subtitle": "Əşyanı düzgün yerə qoy"
-      },
-      "hangman": {
-        "title": "Adam asmaca",
-        "subtitle": "Sözü tap"
-      }
-    }
-  },
-  "games": {
-    "objectCollector": {
-      "title": "Əşya toplayıcı",
-      "subtitle": "Doğru əşyaları səbətə topla",
-      "instructions": "← → ox düymələri ilə və ya barmaq/siçanla səbəti hərəkət etdir",
-      "youWin": "Təbriklər!",
-      "gameOver": "Oyun bitdi",
-      "finalScore": "Xal",
-      "collectFruits": "Yalnız meyvələri topla!",
-      "collectAnimals": "Yalnız heyvanları topla!",
-      "collectVehicles": "Yalnız nəqliyyat vasitələrini topla!",
-      "collectRed": "Yalnız qırmızı olanları topla!",
-      "collectFood": "Yalnız yeməkləri topla!",
-      "collectSchoolItems": "Yalnız məktəb ləvazimatlarını topla!",
-      "collectToys": "Yalnız oyuncaqları topla!",
-      "collectLargeAnimals": "Yalnız böyük heyvanları topla!"
-    },
-    "emotionPuppet": {
-      "title": "Emosiya kuklası",
-      "subtitle": "Üz hissələrini birləşdir"
-    }
-  },
       "title": "Bugünkü Axın",
       "thisSession": "Bu sessiyada bu ardıcıllıqla:",
       "ifGood": "Yaxşı gedərsə, növbəti sessiya:"
@@ -745,9 +762,8 @@
     "thisUpdate": {
       "title": "Bu Yeniləmədə",
       "items": [
-        "Yeni Fəaliyyət: Neçə Dənə Var? - Əl jestlərini heyvan qrupları ilə sayma yolu ilə uyğunlaşdırın (Konsepsiya Öyrənmə → Miqdar bölməsində)",
-        "Nəzakətli Yönləndirmə Rejimi: Uşağınız eyni fəaliyyəti çox sürətlə təkrarladıqda, sakit və nəzakətli bir geribildirim ekranı görünür. Ekrana diqqət yetirməyi və nəfəs almağı xatırladır (Ayarlardan açıla/bağlana bilər)",
-        "Play Store Dəyərləndirməsi: Tətbiqimizi qiymətləndirin və 1 həftə premium giriş əldə edin! (Ayarlar menyusundan əlçatandır)"
+        "Çap Mərkəzi (İş Vərəqləri) əlavə edildi: Uşağınız üçün masaüstü təhsil materialları hazırlaya bilərsiniz.",
+        "Çap materialları kompüterdə yoxlanılıb və problemsiz işləyir. Mobil cihaz performansı hazırda sınaq mərhələsindədir."
       ],
       "_tempNotes": [
         "QEYD: Aşağıdakı maddələr müvəqqəti qeydlərdir — növbəti yeniləmədə i18n fayllarından çıxarılacaq."

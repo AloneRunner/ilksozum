@@ -1,5 +1,45 @@
 import { t, getCurrentLanguage } from '../i18n/index.ts';
 
+export async function printNativeAsPdf(containerId: string = 'rapor-alani', jobName: string = 'Calisma_Kagidi') {
+  let isNative = false;
+  try {
+    const { Capacitor } = await import('@capacitor/core');
+    isNative = Capacitor.isNativePlatform();
+  } catch {
+    isNative = false;
+  }
+
+  if (isNative) {
+    try {
+      const pluginName = '@capacitor/print';
+      const { Print } = await import(/* @vite-ignore */ pluginName);
+      const container = document.getElementById(containerId);
+      if (!container) throw new Error(`${containerId} not found`);
+      
+      const fullHtml = `
+        <!DOCTYPE html>
+        <html lang="${getCurrentLanguage()}">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>${jobName}</title>
+            <style>
+              body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; background-color: white !important; margin: 0; padding: 0; }
+              @page { margin: 0; size: A4; }
+            </style>
+          </head>
+          <body>${container.outerHTML}</body>
+        </html>`;
+      await Print.print({ html: fullHtml, jobName });
+    } catch (e) {
+      console.warn('Capacitor Print failed:', e);
+      window.print();
+    }
+  } else {
+    window.print();
+  }
+}
+
 export async function exportPrintAreaToPdf() {
   let isNative = false;
   try {

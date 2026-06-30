@@ -1,8 +1,9 @@
-﻿import React from 'react';
+import React from 'react';
 import CheckIcon from '../icons/CheckIcon.tsx';
 import { getCurrentLanguage } from '../../i18n/index.ts';
 import { translateLabel } from '../../utils/translate.ts';
 import { useAppContext } from '../../contexts/AppContext.ts';
+import SmartImage from './SmartImage.tsx';
 
 interface CardProps {
     imageUrl: string;
@@ -93,7 +94,7 @@ const Card: React.FC<CardProps> = ({
                 aria-disabled={isDisabled}
                 tabIndex={isDisabled ? -1 : 0}
             >
-                <img
+                <SmartImage
                     src={imageUrl}
                     alt={resolvedWord || 'Egitim karti'}
                     className="w-full h-full object-contain"
@@ -146,7 +147,7 @@ const Card: React.FC<CardProps> = ({
         >
             {isFlipped ? (
                 <div className="absolute inset-0 w-full h-full bg-white rounded-2xl animate-fade-in">
-                    <img
+                    <SmartImage
                         src={imageUrl}
                         alt={resolvedWord || 'Egitim karti'}
                         className="w-full h-full object-contain"

@@ -135,8 +135,10 @@
     "soundImitation": {
       "title": "Geluidsimitatiekaarten",
       "subtitle": "Geluidsimitatiekaarten voor non-verbale kinderen",
-      "badge": "Nieuw — Experimentele Activiteit"
-    }
+      "badge": "Nieuw — Experimentele Activiteit"    },
+    "miniGames": {
+      "title": "🎮 Mini Spellen",
+      "subtitle": "Speel leuke mini spelletjes en leer terwijl je ontspant!"    }
   },
   "experimental": {
     "relativeComparison": {
@@ -205,5 +207,22 @@
   "play": "Afspelen",
   "pause": "Pauze",
   "back": "Terug",
-  "lyrics": "Songteksten"
+  "lyrics": "Songtekst",
+  "miniGames": {
+    "balloonPop": {
+      "title": "Ballon Pop Festival",
+      "welcome": "Welkom!",
+      "instructions": "Knal ballonnen om punten te verdienen! Speciale ballonnen geven extra punten. 5 combo voor dubbele punten!"
+    },
+    "score": "Score",
+    "time": "Tijd",
+    "doublePoints": "DUBBELE PUNTEN!",
+    "startGame": "Start Spel!",
+    "highScore": "High Score",
+    "newHighScore": "NIEUW RECORD!",
+    "gameOver": "Game Over!",
+    "yourScore": "Jouw Score",
+    "playAgain": "Opnieuw Spelen",
+    "backToMenu": "Terug naar Menu"
+  }
 }

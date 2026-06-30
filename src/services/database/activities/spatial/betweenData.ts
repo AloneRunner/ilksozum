@@ -4,11 +4,11 @@ export const betweenData: ConceptRound[] = [
     // ----------------------------------------------------------------------
     // 1. Top - Bloklar (22-632)
     // ----------------------------------------------------------------------
-    { 
-        id: 1, 
-        question: "Blokların arasında olan hangisi?", 
-        questionAudioKey: "q_which_is_between", 
-        activityType: ActivityType.Between, 
+    {
+        id: 1,
+        question: "Blokların arasında olan hangisi?",
+        questionAudioKey: "q_which_is_between",
+        activityType: ActivityType.Between,
         speech: {
             tr: { correct: 'Evet! Top blokların arasındadır.', wrong: 'Hayır, top yandadır.' },
             en: { correct: 'Yes! The ball is between the blocks.', wrong: 'No, the ball is on the side.' },
@@ -26,11 +26,11 @@ export const betweenData: ConceptRound[] = [
     // ----------------------------------------------------------------------
     // 2. Araba - Binalar (456-457)
     // ----------------------------------------------------------------------
-    { 
-        id: 2, 
-        question: "Binaların arasında olan hangisi?", 
-        questionAudioKey: "q_which_is_between", 
-        activityType: ActivityType.Between, 
+    {
+        id: 2,
+        question: "Binaların arasında olan hangisi?",
+        questionAudioKey: "q_which_is_between",
+        activityType: ActivityType.Between,
         speech: {
             tr: { correct: 'Evet! Araba binaların arasındadır.', wrong: 'Hayır, araba yandadır.' },
             en: { correct: 'Yes! The car is between the buildings.', wrong: 'No, the car is on the side.' },
@@ -48,11 +48,11 @@ export const betweenData: ConceptRound[] = [
     // ----------------------------------------------------------------------
     // 3. Çocuk - Anne/Baba (476-477)
     // ----------------------------------------------------------------------
-    { 
-        id: 3, 
-        question: "Annesiyle babasının arasında olan hangisi?", 
-        questionAudioKey: "q_which_is_between", 
-        activityType: ActivityType.Between, 
+    {
+        id: 3,
+        question: "Annesiyle babasının arasında olan hangisi?",
+        questionAudioKey: "q_which_is_between",
+        activityType: ActivityType.Between,
         speech: {
             tr: { correct: 'Evet! Çocuk annesiyle babasının arasındadır.', wrong: 'Hayır, çocuk yandadır.' },
             en: { correct: 'Yes! The child is between the parents.', wrong: 'No, the child is on the side.' },
@@ -70,11 +70,11 @@ export const betweenData: ConceptRound[] = [
     // ----------------------------------------------------------------------
     // 4. Sandviç (623-624)
     // ----------------------------------------------------------------------
-    { 
-        id: 4, 
-        question: "Ekmeklerin arasında olan hangisi?", 
-        questionAudioKey: "q_which_is_between", 
-        activityType: ActivityType.Between, 
+    {
+        id: 4,
+        question: "Ekmeklerin arasında olan hangisi?",
+        questionAudioKey: "q_which_is_between",
+        activityType: ActivityType.Between,
         speech: {
             tr: { correct: 'Evet! Malzemeler ekmeklerin arasındadır.', wrong: 'Hayır, malzemeler yandadır.' },
             en: { correct: 'Yes! The ingredients are between the bread.', wrong: 'No, the ingredients are on the side.' },

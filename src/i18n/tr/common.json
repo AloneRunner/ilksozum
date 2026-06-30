@@ -137,6 +137,10 @@
     "soundImitation": {
       "title": "Ses Taklit Kartları",
       "subtitle": "Konuşamayan çocuklar için ses taklit kartları"
+    },
+    "miniGames": {
+      "title": "🎮 Mini Oyunlar",
+      "subtitle": "Eğlenceli mini oyunlar oyna ve rahatlayarak öğren!"
     }
   },
   "experimental": {
@@ -242,5 +246,32 @@
   "play": "Oynat",
   "pause": "Duraklat",
   "back": "Geri",
-  "lyrics": "Şarkı Sözleri"
+  "lyrics": "Şarkı Sözleri",
+  "miniGames": {
+    "menuSubtitle": "Eğlenceli oyunlar seç ve oyna!",
+    "comingSoon": "Yakında Daha Fazla Oyun!",
+    "stayTuned": "Yeni eğlenceli oyunlar için takipte kalın!",
+    "balloonPop": {
+      "title": "Balon Patlatma Festivali",
+      "description": "Balonları patlatarak puan kazan! Hızlı ve eğlenceli!",
+      "welcome": "Hoş Geldin!",
+      "instructions": "Balonları patlatarak puan kazan! Özel balonlar ekstra puan verir. 5 kombo ile çift puan!"
+    },
+    "starCatcher": {
+      "title": "Yıldız Yakalayıcı",
+      "description": "Gökten düşen yıldızları topla, bulutlardan kaç!",
+      "welcome": "Yıldız Yakalayıcı",
+      "instructions": "Yıldızları ve meyveleri topla, bulutlardan kaç! Kediyi hareket ettirmek için parmağını kaydır."
+    },
+    "score": "Puan",
+    "time": "Süre",
+    "doublePoints": "ÇİFT PUAN!",
+    "startGame": "Oyuna Başla!",
+    "highScore": "En Yüksek Puan",
+    "newHighScore": "YENİ REKOR!",
+    "gameOver": "Oyun Bitti!",
+    "yourScore": "Puanın",
+    "playAgain": "Tekrar Oyna",
+    "backToMenu": "Menüye Dön"
+  }
 }

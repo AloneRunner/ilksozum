@@ -455,5 +455,5 @@ export const thinThickData: ConceptRound[] = [
             { id: 516, word: "kurdele", imageUrl: "/images/516.png", isCorrect: false, audioKey: "kurdele", spokenText: "kurdele" },
             { id: 517, word: "kurdele", imageUrl: "/images/517.png", isCorrect: true, audioKey: "kurdele", spokenText: "kurdele" }
         ]
-    },
+    }
 ];

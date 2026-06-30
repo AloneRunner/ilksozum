@@ -56,6 +56,11 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
           subtitle: isTr ? "İstenen rengi bul" : t("concepts.subtitles.findColor", "Find the requested color"),
         },
         {
+          type: ActivityType.ColorRecognition,
+          title: isTr ? "Rengi Ne?" : "What Color Is It?",
+          subtitle: isTr ? "Nesnenin rengini bul" : "Find the color of the object",
+        },
+        {
           type: ActivityType.Shapes,
           title: isTr ? "Şekiller" : t("concepts.activities.shapes", "Shapes"),
           subtitle: isTr ? "Doğru şekli seç" : t("concepts.subtitles.rightShape", "Pick the right shape"),
@@ -239,6 +244,11 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
           title: isTr ? "Hızlı / Yavaş" : t("concepts.activities.fastSlow", "Fast / Slow"),
           subtitle: isTr ? "Hızları karşılaştır" : t("concepts.subtitles.compareSpeeds", "Compare speeds"),
         },
+        {
+          type: ActivityType.ClockLearning,
+          title: isTr ? "Saat Öğreniyorum" : "Clock Learning",
+          subtitle: isTr ? "Saatleri eşleştir" : "Match the clocks",
+        },
       ],
     },
     {
@@ -357,6 +367,11 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
           type: ActivityType.MessyClean,
           title: isTr ? "Dağınık / Toplu" : t("concepts.activities.messyClean", "Messy / Tidy"),
           subtitle: isTr ? "Düzeni kıyasla" : t("concepts.subtitles.compareOrder", "Compare order"),
+        },
+        {
+          type: ActivityType.WhoseIsThis,
+          title: isTr ? "Bu Kimin?" : "Whose Is This?",
+          subtitle: isTr ? "Eşyayı sahibiyle eşleştir" : "Match the object to its owner",
         },
       ],
     },

@@ -53,8 +53,7 @@ const ReasoningActivitiesMenuScreen: React.FC<ReasoningActivitiesMenuScreenProps
     { type: ActivityType.Hangman, icon: PositioningIcon, title: t('reasoning.activities.hangman.title', isTr ? 'Adam Asmaca' : 'Hangman'), subtitle: t('reasoning.activities.hangman.subtitle', isTr ? 'Kelimeyi tahmin et' : 'Guess the word'), color: 'pink' as const },
     // Nesne Toplama - YENİ!
     { type: ActivityType.ObjectCollector, icon: SameDifferentIcon, title: t('games.objectCollector.title', isTr ? 'Nesne Toplama' : 'Object Collector'), subtitle: t('games.objectCollector.subtitle', isTr ? 'Doğru nesneleri sepete topla' : 'Collect the right objects in the basket'), color: 'amber' as const },
-    // Duygu Kuklası - YENİ!
-    { type: ActivityType.EmotionPuppet, icon: SameDifferentIcon, title: t('games.emotionPuppet.title', isTr ? 'Duygu Kuklası' : 'Emotion Puppet'), subtitle: t('games.emotionPuppet.subtitle', isTr ? 'Yüz parçalarını birleştir' : 'Combine face parts'), color: 'purple' as const },
+    { type: ActivityType.WhatsMissing, icon: MemoryCardsIcon, title: isTr ? 'Hangisi Kayıp?' : "What's Missing?", subtitle: isTr ? 'Nesneleri ezberle, kayıp olanı bul' : 'Memorize objects, find the missing one', color: 'sky' as const },
   ];
 
   const renderCosmicCard = (activity: typeof activities[0], idx: number) => {

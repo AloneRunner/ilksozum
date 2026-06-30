@@ -135,8 +135,10 @@
     "soundImitation": {
       "title": "Ton-Imitationskarten",
       "subtitle": "Ton-Imitationskarten für nicht sprechende Kinder",
-      "badge": "Neu — Experimentelle Aktivität"
-    }
+      "badge": "Neu — Experimentelle Aktivität"    },
+    "miniGames": {
+      "title": "🎮 Mini-Spiele",
+      "subtitle": "Spiele lustige Mini-Spiele und lerne beim Entspannen!"    }
   },
   "experimental": {
     "relativeComparison": {
@@ -204,5 +206,22 @@
   "play": "Abspielen",
   "pause": "Pause",
   "back": "Zurück",
-  "lyrics": "Liedtext"
+  "lyrics": "Liedtext",
+  "miniGames": {
+    "balloonPop": {
+      "title": "Ballon-Pop-Festival",
+      "welcome": "Willkommen!",
+      "instructions": "Platze Ballons, um Punkte zu sammeln! Spezielle Ballons geben Extrapunkte. 5er-Combo für doppelte Punkte!"
+    },
+    "score": "Punkte",
+    "time": "Zeit",
+    "doublePoints": "DOPPELTE PUNKTE!",
+    "startGame": "Spiel starten!",
+    "highScore": "Highscore",
+    "newHighScore": "NEUER REKORD!",
+    "gameOver": "Spiel vorbei!",
+    "yourScore": "Deine Punkte",
+    "playAgain": "Nochmal spielen",
+    "backToMenu": "Zurück zum Menü"
+  }
 }

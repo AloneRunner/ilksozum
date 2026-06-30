@@ -1,8 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { FiveWOneHCategory } from '../services/database/activities/reasoning/fiveWOneHBatch50';
 import { getCurrentLanguage, t } from '../i18n/index';
-import CosmicBackdrop from './ui/CosmicBackdrop.tsx';
-import PanelStars from './ui/PanelStars.tsx';
 import UnderwaterBackdrop from './ui/UnderwaterBackdrop.tsx';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 
@@ -18,156 +16,84 @@ const FiveWOneHMenuScreen: React.FC<FiveWOneHMenuScreenProps> = ({ onSelectCateg
   const isUnderwater = theme === 'deneme';
   const localizedTitle = t('menu.fiveWOneH.title', '5N1K');
 
-  // Responsive container sizing
-  const BASE_SIZE = 850; // design reference
-  const [containerSize, setContainerSize] = useState<number>(() => {
-    const minSide = Math.min(window.innerWidth, window.innerHeight);
-    return Math.max(360, Math.min(850, Math.floor(minSide * 0.88)));
-  });
-  useEffect(() => {
-    const onResize = () => {
-      const minSide = Math.min(window.innerWidth, window.innerHeight);
-      setContainerSize(Math.max(360, Math.min(850, Math.floor(minSide * 0.88))));
-    };
-    window.addEventListener('resize', onResize);
-    window.addEventListener('orientationchange', onResize as any);
-    return () => {
-      window.removeEventListener('resize', onResize);
-      window.removeEventListener('orientationchange', onResize as any);
-    };
-  }, []);
-
-  const scale = useMemo(() => containerSize / BASE_SIZE, [containerSize]);
-
-  // Planet configuration for solar system (sizes in px, orbits in px relative to BASE_SIZE)
+  // Planet configuration (data source)
   const planets = useMemo(() => [
-    // Kim (Who): person silhouette
-    { category: 'Kim', label: t('menu.fiveWOneH.category.who', 'Kim?'), emoji: '👤', color: 'from-gray-400 to-gray-600', sizePx: 44, orbit: 120 },
-    // Ne (What): box/object
-    { category: 'Ne', label: t('menu.fiveWOneH.category.what', 'Ne?'), emoji: '📦', color: 'from-yellow-400 to-orange-500', sizePx: 50, orbit: 160 },
-    // Nerede (Where): map pin / globe
-    { category: 'Nerede', label: t('menu.fiveWOneH.category.where', 'Nerede?'), emoji: '📍', color: 'from-blue-400 to-blue-600', sizePx: 56, orbit: 200 },
-    // Ne Zaman (When): clock
-    { category: 'Ne Zaman', label: t('menu.fiveWOneH.category.when', 'Ne Zaman?'), emoji: '⏰', color: 'from-red-400 to-red-600', sizePx: 48, orbit: 240 },
-    // Neden (Why): light bulb
-    { category: 'Neden', label: t('menu.fiveWOneH.category.why', 'Neden?'), emoji: '💡', color: 'from-orange-300 to-orange-500', sizePx: 64, orbit: 290 },
-    // Nasıl (How): tools/wrench
-    { category: 'Nasıl', label: t('menu.fiveWOneH.category.how', 'Nasıl?'), emoji: '🛠️', color: 'from-yellow-300 to-yellow-500', sizePx: 58, orbit: 340 },
-    // Karışık (Mixed): shuffle/dice
-    { category: 'Karışık', label: t('menu.fiveWOneH.category.mixed', 'Karışık'), emoji: '🔀', color: 'from-cyan-300 to-cyan-500', sizePx: 48, orbit: 385 },
+    { category: 'Kim', label: t('menu.fiveWOneH.category.who', 'Kim?'), emoji: '👤', color: 'from-gray-400 to-gray-600' },
+    { category: 'Ne', label: t('menu.fiveWOneH.category.what', 'Ne?'), emoji: '📦', color: 'from-yellow-400 to-orange-500' },
+    { category: 'Nerede', label: t('menu.fiveWOneH.category.where', 'Nerede?'), emoji: '📍', color: 'from-blue-400 to-blue-600' },
+    { category: 'Ne Zaman', label: t('menu.fiveWOneH.category.when', 'Ne Zaman?'), emoji: '⏰', color: 'from-red-400 to-red-600' },
+    { category: 'Neden', label: t('menu.fiveWOneH.category.why', 'Neden?'), emoji: '💡', color: 'from-orange-300 to-orange-500' },
+    { category: 'Nasıl', label: t('menu.fiveWOneH.category.how', 'Nasıl?'), emoji: '🛠️', color: 'from-yellow-300 to-yellow-500' },
+    { category: 'Karışık', label: t('menu.fiveWOneH.category.mixed', 'Karışık'), emoji: '🔀', color: 'from-cyan-300 to-cyan-500' },
   ], [lang]);
 
-  // Stable pseudo-random helpers to avoid overlap; different speed/phase/direction per category
-  const hash = (s: string) => {
-    let h = 0;
-    for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
-    return Math.abs(h);
-  };
-  const jitter = (key: string, min: number, max: number) => {
-    const h = hash(key) % 1000;
-    return min + (h / 1000) * (max - min);
-  };
-
-  const renderPlanet = (planet: typeof planets[0]) => {
-    const orbitScaled = Math.round(planet.orbit * scale);
-    const size = planet.sizePx; // keep constant for readability; can also multiply by scale if needed
-    const half = Math.floor(size / 2);
-    // duration between 16s..34s but also slightly depend on orbit so outer rings can be slower
-  const base = 16 + (planet.orbit / 385) * 10; // 16..26
-  const dur = Math.round(jitter(planet.category, base, base + 8)); // vary + up to 8s
-  const delay = -Math.round(jitter(planet.category + '-d', 0, 10));
-    return (
-      <div
-        key={planet.category}
-        className="absolute inset-0 flex items-center justify-center pointer-events-none"
-        style={{
-          animation: `spin ${dur}s linear infinite`,
-          animationDelay: `${delay}s`,
-        }}
-      >
-        <div
-          className="absolute rounded-full border border-white/10"
-          style={{
-            width: `${orbitScaled * 2}px`,
-            height: `${orbitScaled * 2}px`,
-          }}
-        />
-        <button
-          onClick={() => onSelectCategory(planet.category as FiveWOneHCategory | 'Karışık')}
-          className={`absolute rounded-full bg-gradient-to-br ${planet.color} shadow-2xl border-2 border-white/30 flex items-center justify-center text-2xl hover:scale-125 transition-transform duration-300 cursor-pointer pointer-events-auto group`}
-          style={{
-            width: `${size}px`,
-            height: `${size}px`,
-            left: `calc(50% + ${orbitScaled}px - ${half}px)`,
-            top: `calc(50% - ${half}px)`,
-          }}
-          title={planet.label}
-        >
-          <span className="drop-shadow-lg">{planet.emoji}</span>
-          <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-white bg-black/60 px-2 py-1 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-            {planet.label}
-          </span>
-        </button>
-      </div>
-    );
-  };
-
   if (isCosmic) {
+    // Robot Theme: Tech Interface
     return (
-      <>
-        <CosmicBackdrop variant="rich" />
-        <div className="relative z-10 flex flex-col items-center justify-center h-full max-w-4xl mx-auto p-4 animate-fade-in overflow-hidden">
-          <PanelStars count={100} />
-          
-          {/* Back button */}
-          <div className="absolute top-4 left-4 z-20">
-            <button 
-              onClick={onBack} 
-              className="p-2 rounded-full bg-yellow-400/20 hover:bg-yellow-400/30 backdrop-blur-sm border border-yellow-300/40 transition-all duration-200" 
-              aria-label={t('app.back', 'Geri Dön')}
-            >
-              <ArrowLeftIcon className="w-8 h-8 text-white drop-shadow-md" />
-            </button>
+      <div className="relative h-full flex flex-col overflow-hidden bg-slate-900">
+        {/* Tech Background Grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-transparent to-slate-900/80 pointer-events-none" />
+
+        {/* Header */}
+        <div className="relative z-10 flex items-center justify-between px-4 py-3 border-b border-cyan-500/20 bg-slate-800/50 backdrop-blur-md">
+          <button
+            onClick={onBack}
+            className="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-700/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 hover:text-cyan-200 transition-all"
+          >
+            <ArrowLeftIcon className="w-6 h-6" />
+          </button>
+
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            <span className="text-cyan-100 font-bold tracking-wider font-mono text-lg uppercase">
+              {localizedTitle}
+            </span>
           </div>
 
-          {/* Title */}
-          <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
-            <div className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-yellow-500/80 via-orange-400/80 to-yellow-500/80 backdrop-blur-sm border border-yellow-300/40 shadow-lg shadow-yellow-400/30">
-              <h1 className="text-3xl sm:text-4xl font-black text-white drop-shadow-lg">
-                {localizedTitle}
-              </h1>
-            </div>
-          </div>
+          <div className="w-10" /> {/* Spacer */}
+        </div>
 
-          {/* Solar System Container */}
-          <div className="relative z-10 flex items-center justify-center" style={{ width: `${containerSize}px`, height: `${containerSize}px` }}>
-            {/* Sun in center */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-yellow-300 via-orange-400 to-yellow-500 shadow-2xl shadow-yellow-400/50 animate-pulse flex items-center justify-center text-5xl border-4 border-yellow-200/50">
-                ☀️
-              </div>
-            </div>
+        {/* Content */}
+        <div className="relative z-10 flex-1 overflow-y-auto p-4 flex items-center justify-center">
+          <div className="grid grid-cols-2 landscape:grid-cols-3 gap-6 max-w-4xl w-full">
+            {planets.map((item, idx) => {
+              const borderColors = [
+                'border-cyan-500/30 hover:border-cyan-400',
+                'border-sky-500/30 hover:border-sky-400',
+                'border-teal-500/30 hover:border-teal-400',
+                'border-indigo-500/30 hover:border-indigo-400',
+              ];
+              const borderColor = borderColors[idx % borderColors.length];
 
-            {/* Orbiting planets */}
-            {planets.map((planet) => renderPlanet(planet))}
-          </div>
+              return (
+                <button
+                  key={item.category}
+                  onClick={() => onSelectCategory(item.category as FiveWOneHCategory | 'Karışık')}
+                  className={`relative group flex flex-col items-center gap-4 p-6 rounded-xl border-2 transition-all duration-300 ${borderColor} bg-slate-800/40 hover:bg-slate-800/80 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] cursor-pointer overflow-hidden`}
+                >
+                  {/* Tech Corners */}
+                  <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-cyan-500/30 group-hover:border-cyan-400 transition-colors" />
+                  <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-cyan-500/30 group-hover:border-cyan-400 transition-colors" />
+                  <div className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2 border-cyan-500/30 group-hover:border-cyan-400 transition-colors" />
+                  <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-cyan-500/30 group-hover:border-cyan-400 transition-colors" />
 
-          {/* Legend + Instructions */}
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 w-[92%] max-w-[920px] flex flex-col items-center gap-2">
-            <div className="flex flex-wrap items-center justify-center gap-3 bg-black/35 text-white/85 px-3 py-2 rounded-xl backdrop-blur-sm text-[11px] sm:text-xs">
-              {planets.map((planet) => (
-                <span key={planet.category} className="flex items-center gap-1">
-                  <span>{planet.emoji}</span>
-                  <span>{planet.label}</span>
-                </span>
-              ))}
-            </div>
-            <p className="text-[11px] sm:text-xs text-white/70 text-center bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
-              {t('menu.fiveWOneH.instructions', 'Bir gezegene tıklayarak kategoriyi seç')}
-            </p>
+                  <div className={`w-20 h-20 rounded-full bg-slate-900 border border-cyan-500/20 flex items-center justify-center text-4xl shadow-inner shadow-black/50 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
+                    <span className="drop-shadow-lg filter group-hover:brightness-125 transition-all">{item.emoji}</span>
+                  </div>
+
+                  <div className="text-center z-10">
+                    <h3 className="text-lg font-bold text-cyan-100 font-mono tracking-wide uppercase">{item.label}</h3>
+                  </div>
+
+                  {/* Scan Line Effect on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/5 to-transparent translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-700 pointer-events-none" />
+                </button>
+              );
+            })}
           </div>
         </div>
-      </>
+      </div>
     );
   }
 

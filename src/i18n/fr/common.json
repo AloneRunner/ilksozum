@@ -135,8 +135,10 @@
     "soundImitation": {
       "title": "Cartes d'Imitation Sonore",
       "subtitle": "Cartes d'imitation sonore pour enfants non verbaux",
-      "badge": "Nouveau — Activité Expérimentale"
-    }
+      "badge": "Nouveau — Activité Expérimentale"    },
+    "miniGames": {
+      "title": "🎮 Mini Jeux",
+      "subtitle": "Jouez à des mini jeux amusants et apprenez en vous détendant!"    }
   },
   "experimental": {
     "relativeComparison": {
@@ -204,5 +206,22 @@
   "play": "Jouer",
   "pause": "Pause",
   "back": "Retour",
-  "lyrics": "Paroles"
+  "lyrics": "Paroles",
+  "miniGames": {
+    "balloonPop": {
+      "title": "Festival des Ballons",
+      "welcome": "Bienvenue!",
+      "instructions": "Fais éclater des ballons pour gagner des points! Les ballons spéciaux donnent des points supplémentaires. Combo de 5 pour doubler les points!"
+    },
+    "score": "Score",
+    "time": "Temps",
+    "doublePoints": "DOUBLE POINTS!",
+    "startGame": "Commencer!",
+    "highScore": "Meilleur Score",
+    "newHighScore": "NOUVEAU RECORD!",
+    "gameOver": "Jeu Terminé!",
+    "yourScore": "Ton Score",
+    "playAgain": "Rejouer",
+    "backToMenu": "Retour au Menu"
+  }
 }

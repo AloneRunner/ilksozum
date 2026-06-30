@@ -16,8 +16,8 @@ export const wetDryData: ConceptRound[] = [
             az: { correct: 'Bəli! Süngər yaşdır.', wrong: 'Xeyr, süngər qurudur.' }
         },
         options: [
-            { id: 166, word: "sünger", imageUrl: "/images/166.gif", isCorrect: true, audioKey: "sunger", spokenText: "ıslak sünger" },
-            { id: 167, word: "sünger", imageUrl: "/images/167.gif", isCorrect: false, audioKey: "sunger", spokenText: "kuru sünger" }
+            { id: 166, word: "sünger", imageUrl: "/images/166.png", isCorrect: true, audioKey: "sunger", spokenText: "ıslak sünger" },
+            { id: 167, word: "sünger", imageUrl: "/images/167.png", isCorrect: false, audioKey: "sunger", spokenText: "kuru sünger" }
         ]
     },
     { 
@@ -34,8 +34,8 @@ export const wetDryData: ConceptRound[] = [
             az: { correct: 'Bəli! Süngər qurudur.', wrong: 'Xeyr, süngər yaşdır.' }
         },
         options: [
-            { id: 166, word: "sünger", imageUrl: "/images/166.gif", isCorrect: false, audioKey: "sunger", spokenText: "ıslak sünger" },
-            { id: 167, word: "sünger", imageUrl: "/images/167.gif", isCorrect: true, audioKey: "sunger", spokenText: "kuru sünger" }
+            { id: 166, word: "sünger", imageUrl: "/images/166.png", isCorrect: false, audioKey: "sunger", spokenText: "ıslak sünger" },
+            { id: 167, word: "sünger", imageUrl: "/images/167.png", isCorrect: true, audioKey: "sunger", spokenText: "kuru sünger" }
         ]
     },
 
@@ -92,8 +92,8 @@ export const wetDryData: ConceptRound[] = [
             az: { correct: 'Bəli! İt yaşdır.', wrong: 'Xeyr, it qurudur.' }
         },
         options: [
-            { id: 522, word: "köpek", imageUrl: "/images/522.gif", isCorrect: true, audioKey: "kopek", spokenText: "ıslak köpek" },
-            { id: 521, word: "köpek", imageUrl: "/images/521.gif", isCorrect: false, audioKey: "kopek", spokenText: "kuru köpek" }
+            { id: 522, word: "köpek", imageUrl: "/images/522.png", isCorrect: true, audioKey: "kopek", spokenText: "ıslak köpek" },
+            { id: 521, word: "köpek", imageUrl: "/images/521.png", isCorrect: false, audioKey: "kopek", spokenText: "kuru köpek" }
         ]
     },
     { 
@@ -110,8 +110,8 @@ export const wetDryData: ConceptRound[] = [
             az: { correct: 'Bəli! İt qurudur.', wrong: 'Xeyr, it yaşdır.' }
         },
         options: [
-            { id: 522, word: "köpek", imageUrl: "/images/522.gif", isCorrect: false, audioKey: "kopek", spokenText: "ıslak köpek" },
-            { id: 521, word: "köpek", imageUrl: "/images/521.gif", isCorrect: true, audioKey: "kopek", spokenText: "kuru köpek" }
+            { id: 522, word: "köpek", imageUrl: "/images/522.png", isCorrect: false, audioKey: "kopek", spokenText: "ıslak köpek" },
+            { id: 521, word: "köpek", imageUrl: "/images/521.png", isCorrect: true, audioKey: "kopek", spokenText: "kuru köpek" }
         ]
     },
 
@@ -168,7 +168,7 @@ export const wetDryData: ConceptRound[] = [
             az: { correct: 'Bəli! Çətir yaşdır.', wrong: 'Xeyr, çətir qurudur.' }
         },
         options: [
-            { id: 157, word: "şemsiye", imageUrl: "/images/157.png", isCorrect: true, audioKey: "semsiye", spokenText: "ıslak şemsiye" },
+            { id: 157, word: "şemsiye", imageUrl: "/images/157.png", disableRealistic: true, isCorrect: true, audioKey: "semsiye", spokenText: "ıslak şemsiye" },
             { id: 158, word: "şemsiye", imageUrl: "/images/158.png", isCorrect: false, audioKey: "semsiye", spokenText: "kuru şemsiye" }
         ]
     },
@@ -186,7 +186,7 @@ export const wetDryData: ConceptRound[] = [
             az: { correct: 'Bəli! Çətir qurudur.', wrong: 'Xeyr, çətir yaşdır.' }
         },
         options: [
-            { id: 157, word: "şemsiye", imageUrl: "/images/157.png", isCorrect: false, audioKey: "semsiye", spokenText: "ıslak şemsiye" },
+            { id: 157, word: "şemsiye", imageUrl: "/images/157.png", disableRealistic: true, isCorrect: false, audioKey: "semsiye", spokenText: "ıslak şemsiye" },
             { id: 158, word: "şemsiye", imageUrl: "/images/158.png", isCorrect: true, audioKey: "semsiye", spokenText: "kuru şemsiye" }
         ]
     },
@@ -206,7 +206,7 @@ export const wetDryData: ConceptRound[] = [
             az: { correct: 'Bəli! Tişört yaşdır.', wrong: 'Xeyr, tişört qurudur.' }
         },
         options: [
-            { id: 15, word: "tişört", imageUrl: "/images/15.gif", isCorrect: true, audioKey: "tisort", spokenText: "ıslak tişört" },
+            { id: 15, word: "tişört", imageUrl: "/images/15.png", isCorrect: true, audioKey: "tisort", spokenText: "ıslak tişört" },
             { id: 13, word: "tişört", imageUrl: "/images/13.png", isCorrect: false, audioKey: "tisort", spokenText: "kuru tişört" }
         ]
     },
@@ -224,7 +224,7 @@ export const wetDryData: ConceptRound[] = [
             az: { correct: 'Bəli! Tişört qurudur.', wrong: 'Xeyr, tişört yaşdır.' }
         },
         options: [
-            { id: 15, word: "tişört", imageUrl: "/images/15.gif", isCorrect: false, audioKey: "tisort", spokenText: "ıslak tişört" },
+            { id: 15, word: "tişört", imageUrl: "/images/15.png", isCorrect: false, audioKey: "tisort", spokenText: "ıslak tişört" },
             { id: 13, word: "tişört", imageUrl: "/images/13.png", isCorrect: true, audioKey: "tisort", spokenText: "kuru tişört" }
         ]
     },

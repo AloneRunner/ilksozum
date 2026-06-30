@@ -16,6 +16,7 @@ import BasketIcon from './components/icons/BasketIcon.tsx';
 import VideoBackground from './components/VideoBackground.tsx';
 import AmbientSound from './components/AmbientSound.tsx';
 import PrivacyConsentModal from './components/PrivacyConsentModal.tsx';
+import LoyaltyCelebrationModal from './components/LoyaltyCelebrationModal.tsx';
 
 export default function App(): React.ReactNode {
   const appCore = useAppCore();
@@ -90,11 +91,11 @@ export default function App(): React.ReactNode {
 
   return (
     <AppContext.Provider value={appCore as IAppContext}>
-      <div className={`relative w-screen h-screen transition-colors duration-500 ${background.type === 'gradient' ? background.value : ''} flex flex-col`}>
+      <div className={`relative w-screen h-screen print:h-auto print:overflow-visible transition-colors duration-500 ${background.type === 'gradient' ? background.value : ''} flex flex-col print:block`}>
         {background.type === 'video' && <VideoBackground key={background.value} src={background.value} />}
         <AmbientSound theme={settings.theme} isUnderwaterMusicEnabled={settings.isUnderwaterMusicEnabled} isMuted={settings.isMuted} />
         <Suspense fallback={<div className="flex items-center justify-center h-full"><Spinner /></div>}>
-          <div className={`w-full flex-grow min-h-0 overflow-y-auto overflow-x-hidden ${!settings.isPremium ? 'pt-16' : ''} ${showNavBar ? 'pb-20 landscape:pb-0 landscape:pl-20' : ''}`}>
+          <div className={`w-full flex-grow min-h-0 overflow-y-auto overflow-x-hidden print:overflow-visible print:h-auto print:block ${!settings.isPremium ? 'pt-16' : ''} ${showNavBar ? 'pb-20 landscape:pb-0 landscape:pl-20' : ''}`}>
              <AppRouter />
           </div>
           {showNavBar && (
@@ -136,6 +137,13 @@ export default function App(): React.ReactNode {
               appCore.setPreviousScreen(appCore.screenState);
               appCore.setScreenState(ScreenState.PrivacyPolicy);
             }}
+          />
+        )}
+        {settings.loyalty?.isCelebrationPending && !showConsent && (
+          <LoyaltyCelebrationModal
+            isOpen={true}
+            rewardDays={settings.loyalty.rewardDays}
+            onClose={() => settings.loyalty.acknowledgeCelebration()}
           />
         )}
       </div>

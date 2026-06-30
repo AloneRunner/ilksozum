@@ -801,7 +801,7 @@ export const imageData_001_100: ImageMetadata[] = [
       "lifeform": "cansız",
       "letters": ["P", "İ", "J", "A", "M", "A"],
       "syllables": ["pi", "ja", "ma"],
-      "color": ["mavi", "sarı"]
+      "color": "mavi"
     }
   },
   {

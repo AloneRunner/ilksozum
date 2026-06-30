@@ -112,6 +112,13 @@ export const useProfile = ({ showToast }: UseProfileProps) => {
             if (!Array.isArray(profileEnabledActivities) || profileEnabledActivities.length === 0) {
                 profileEnabledActivities = initializeEnabledActivities();
             }
+            // Auto-enable any new activities added since the profile was last saved
+            const allActivityIds = initializeEnabledActivities();
+            const storedSet = new Set(profileEnabledActivities);
+            const newlyAdded = allActivityIds.filter(id => !storedSet.has(id));
+            if (newlyAdded.length > 0) {
+                profileEnabledActivities = [...profileEnabledActivities, ...newlyAdded];
+            }
             setActivityStats(profileStats);
             setEnabledActivities(profileEnabledActivities);
             setParentOverrides(profileOverrides);
@@ -138,6 +145,13 @@ export const useProfile = ({ showToast }: UseProfileProps) => {
         const profileOverrides = getValueFromLocalStorage<ParentOverride[]>(`parentOverrides_profile_${profile.id}`, []);
         if (!Array.isArray(profileEnabledActivities) || profileEnabledActivities.length === 0) {
             profileEnabledActivities = initializeEnabledActivities();
+        }
+        // Auto-enable any new activities added since the profile was last saved
+        const allActivityIds = initializeEnabledActivities();
+        const storedSet = new Set(profileEnabledActivities);
+        const newlyAdded = allActivityIds.filter(id => !storedSet.has(id));
+        if (newlyAdded.length > 0) {
+            profileEnabledActivities = [...profileEnabledActivities, ...newlyAdded];
         }
         setActivityStats(profileStats);
         setEnabledActivities(profileEnabledActivities);

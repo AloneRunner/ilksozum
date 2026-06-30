@@ -35,14 +35,25 @@
       "embeddedStory": "Hikaye Zamanı",
       "soundPresence": "Seste Harf Var mı?",
       "findTheLetter": "Harf Bulma Oyunu",
+      "basara": "BASARA Yöntemi",
+      "basara2": "BASARA 2 (Klasik)",
       "betaNotice": "Harf etkinlikleri deneme aşamasında. Hata görürseniz lütfen bize bildirin."
     },
     "letterSubtitles": {
       "grid": "Karışık harflerden isteneni bul.",
       "soundPresence": "Görselin adında o ses var mı?",
       "findTheLetter": "Kelimenin içindeki harfleri bul.",
-      "findSoundInImage": "İstenen sesi içeren görseli seç."
+      "findSoundInImage": "İstenen sesi içeren görseli seç.",
+      "basara": "Önce ünlüler, sonra heceler: adım adım oku.",
+      "basara2": "Yaygın sürüm: a-serisi heceler ve tüm ünlüler."
     }
+  },
+  "basara": {
+    "title": "BASARA Yöntemi",
+    "subtitle": "Önce ünlüler, sonra heceler. Bir ders bitmeden diğeri açılmaz.",
+    "lessonComplete": "Ders tamamlandı! 🎉",
+    "phase1": "1. Aşama — Ünlüler ve a-serisi",
+    "phase2": "2. Aşama — Tüm ünlülerle heceler"
   },
   "story": {
     "readStory": "Hikayeyi seslendir"

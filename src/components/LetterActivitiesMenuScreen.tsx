@@ -40,6 +40,8 @@ const LetterActivitiesMenuScreen: React.FC<LetterActivitiesMenuScreenProps> = ({
     ] : []),
     ...(lang === 'tr' ? [
       { id: ActivityType.EmbeddedStory, icon: BookOpenIcon, title: t('activities.letter.embeddedStory', 'Hikaye Zamanı'), subtitle: t('activities.letterSubtitles.embeddedStory', 'Harfle ilgili hikayeleri dinle.'), color: 'purple' as const, hasSubCategories: false },
+      { id: ActivityType.Basara, icon: SyllableIcon, title: t('activities.letter.basara', 'BASARA Yöntemi'), subtitle: t('activities.letterSubtitles.basara', 'Önce ünlüler, sonra heceler: adım adım oku.'), color: 'blue' as const, hasSubCategories: false },
+      { id: ActivityType.Basara2, icon: SyllableIcon, title: t('activities.letter.basara2', 'BASARA 2 (Klasik)'), subtitle: t('activities.letterSubtitles.basara2', 'Yaygın sürüm: a-serisi heceler ve tüm ünlüler.'), color: 'cyan' as const, hasSubCategories: false },
     ] : []),
   ];
   const activities = allActivities;
@@ -101,6 +103,8 @@ const LetterActivitiesMenuScreen: React.FC<LetterActivitiesMenuScreenProps> = ({
     [ActivityType.FindTheSoundInImage]: 'from-emerald-400 via-green-300 to-lime-200',
     [ActivityType.Syllabification]: 'from-rose-400 via-pink-300 to-fuchsia-200',
     [ActivityType.EmbeddedStory]: 'from-purple-400 via-violet-300 to-indigo-200',
+    [ActivityType.Basara]: 'from-blue-400 via-sky-300 to-cyan-200',
+    [ActivityType.Basara2]: 'from-cyan-400 via-teal-300 to-sky-200',
   };
 
   // Render cosmic activity card
@@ -291,7 +295,7 @@ const LetterActivitiesMenuScreen: React.FC<LetterActivitiesMenuScreenProps> = ({
             <div className="grid grid-cols-2 sm-landscape:grid-cols-3 gap-4 sm-landscape:gap-3">
               {activities.map((activity) => {
                 const stats = activity.hasSubCategories ? getAggregateStats(activity.id) : activityStats[String(activity.id)];
-                const isDisabled = !enabledActivities.has(String(activity.id));
+                const isDisabled = (activity.id === ActivityType.Basara || activity.id === ActivityType.Basara2) ? false : !enabledActivities.has(String(activity.id));
                 return renderCosmicCard(activity, stats, isDisabled);
               })}
             </div>
@@ -299,7 +303,7 @@ const LetterActivitiesMenuScreen: React.FC<LetterActivitiesMenuScreenProps> = ({
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm-landscape:gap-3">
               {activities.map((activity, idx) => {
                 const stats = activity.hasSubCategories ? getAggregateStats(activity.id) : activityStats[String(activity.id)];
-                const isDisabled = !enabledActivities.has(String(activity.id));
+                const isDisabled = (activity.id === ActivityType.Basara || activity.id === ActivityType.Basara2) ? false : !enabledActivities.has(String(activity.id));
                 return renderUnderwaterCard(activity, stats, isDisabled, idx);
               })}
             </div>
@@ -307,7 +311,7 @@ const LetterActivitiesMenuScreen: React.FC<LetterActivitiesMenuScreenProps> = ({
             <div className="grid grid-cols-2 sm-landscape:grid-cols-3 gap-4 sm-landscape:gap-2">
               {activities.map((activity) => {
                 const stats = activity.hasSubCategories ? getAggregateStats(activity.id) : activityStats[String(activity.id)];
-                const isDisabled = !enabledActivities.has(String(activity.id));
+                const isDisabled = (activity.id === ActivityType.Basara || activity.id === ActivityType.Basara2) ? false : !enabledActivities.has(String(activity.id));
                 return (
                   <MenuButton
                     key={activity.id}

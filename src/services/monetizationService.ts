@@ -72,6 +72,10 @@ export const initializeRevenueCat = async (userId?: string) => {
   }
 };
 
+// Guard: showBanner must not be called before AdMob.initialize() completes.
+// BannerExecutor throws NullPointerException on Android if called too early.
+let adMobReady = false;
+
 export const initializeAds = async (): Promise<void> => {
   if (!Capacitor.isNativePlatform()) return;
 
@@ -93,6 +97,8 @@ export const initializeAds = async (): Promise<void> => {
     } else {
       console.log('AdMob setRequestConfiguration API not found; skipping.');
     }
+
+    adMobReady = true;
   } catch (e) {
     console.error('AdMob init error:', e);
   }
@@ -100,6 +106,10 @@ export const initializeAds = async (): Promise<void> => {
 
 export const showBanner = async () => {
   if (!Capacitor.isNativePlatform()) return;
+  if (!adMobReady) {
+    console.warn('AdMob not ready yet, skipping banner show.');
+    return;
+  }
 
   const opts: BannerAdOptions = {
     adId: BANNER_ID,

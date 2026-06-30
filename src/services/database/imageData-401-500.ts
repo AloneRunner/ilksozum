@@ -1275,7 +1275,7 @@ export const imageData_401_500: ImageMetadata[] = [
   {
     "id": 493,
     "word": "sandal",
-    "imageUrl": "/images/493.gif",
+    "imageUrl": "/images/493.png",
     "audioKeys": { "default": "sandal", "concept": "küçük" },
     "tags": {
       "category": "Taşıtlar",

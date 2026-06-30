@@ -48,7 +48,7 @@ export const enVehiclesData: ConceptRound[] = [
     options: [
       { id: 621, word: 'gemi', imageUrl: '/images/621.png', isCorrect: true, audioKey: 'gemi', spokenText: 'ship' },
       { id: 107, word: 'uçak', imageUrl: '/images/107.png', isCorrect: false, audioKey: 'uçak', spokenText: 'airplane' },
-      { id: 493, word: 'sandal', imageUrl: '/images/493.gif', isCorrect: false, audioKey: 'sandal', spokenText: 'boat' },
+      { id: 493, word: 'sandal', imageUrl: '/images/493.png', isCorrect: false, audioKey: 'sandal', spokenText: 'boat' },
       { id: 106, word: 'tren', imageUrl: '/images/106.png', isCorrect: false, audioKey: 'tren', spokenText: 'train' }
     ]
   },

@@ -5,7 +5,7 @@ import { SimpleThemeWrapper, SIMPLE_THEME_ACTION_BUTTON, SIMPLE_THEME_TEXT_PRIMA
 import AcademicCapIcon from './icons/AcademicCapIcon.tsx';
 import { ActivityStats, ParentOverride } from '../types.ts';
 import { UNIT_DEFINITIONS } from '../constants/unitDefinitions';
-import { getUnitCompletionPercentage, getUnitDisplaySuccessPercentage, isUnitUnlocked, getUnlockedUnits, getActivityProgramSuccessPercentage } from '../services/masteryEngine';
+import { getUnitCompletionPercentage, getUnitDisplaySuccessPercentageForProgramMode, isUnitUnlockedForProgramMode, getUnlockedUnitsForProgramMode, getActivityProgramSuccessPercentage } from '../services/masteryEngine';
 import { buildDailySession, getRecommendedSessionLength, shouldShowNewSession } from '../services/sessionBuilder';
 import { getActivityMetadata } from '../constants/activityMetadata';
 import { getAllowedUnitCeiling, getPolicyToday } from '../services/progressionPolicy';
@@ -16,6 +16,7 @@ interface ProgramModeIntroScreenProps {
   onBack: () => void;
   onStartProgramMode: () => void | Promise<void>;
   onStartReinforcementMode?: () => void | Promise<void>;
+  setActivityStats?: React.Dispatch<React.SetStateAction<Record<string, ActivityStats>>>;
   theme: string;
   activityStats: Record<string, ActivityStats>;
   masteredObjectCategories?: Set<string>;
@@ -26,6 +27,14 @@ interface ProgramModeIntroScreenProps {
 }
 
 type TabType = 'progress' | 'units' | 'today';
+
+function getHighestUnlockedUnit(units: Set<number>): number {
+  let highest = 1;
+  units.forEach(unit => {
+    if (unit > highest) highest = unit;
+  });
+  return highest;
+}
 
 const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({ 
   onBack, 
@@ -112,36 +121,31 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
   const unitProgress = useMemo(() =>
     UNIT_DEFINITIONS.map(unit => {
       const completion = getUnitCompletionPercentage(unit.unitNumber, activityStats, masteredObjectCategories);
-      // Always use display-oriented success that blends Program + Free mode stats,
-      // but does not penalize for completely unattempted activities.
-      const display = getUnitDisplaySuccessPercentage(unit.unitNumber, activityStats, masteredObjectCategories);
-      // NOTE: removed additional per-unit program dots here (user requested to delete initial green dots).
+      // Use program-mode display (last 6 attempts) so the percentage matches what
+      // the unit-unlock check actually evaluates.
+      const display = getUnitDisplaySuccessPercentageForProgramMode(unit.unitNumber, activityStats, masteredObjectCategories, parentOverrides, 6);
       return {
         ...unit,
-        isUnlocked: isUnitUnlocked(unit.unitNumber, activityStats, masteredObjectCategories),
+        isUnlocked: isUnitUnlockedForProgramMode(unit.unitNumber, activityStats, masteredObjectCategories, parentOverrides, 6, profileId),
         completionPercentage: completion,
         displayPercentage: display,
-        // keep activity list; per-activity indicators render in unit details
       };
     }),
-    [activityStats, masteredObjectCategories]
-  );
-
-  // Build today's session within daily unit ceiling (max 3 advancements per day)
-  // Re-read policy snapshot to catch unit advancements during activity completion
-  const policySnapshot = useMemo(() => 
-    profileId ? getPolicyToday(profileId) : { advances: 0, date: new Date().toISOString().split('T')[0] },
-    [profileId, activityStats] // Re-evaluate when activityStats changes (after each activity)
+    [activityStats, masteredObjectCategories, parentOverrides, profileId]
   );
   
   const todaySession = useMemo(() => {
     const sessionLength = getRecommendedSessionLength(
       Object.keys(activityStats).filter(id => activityStats[id]?.completions > 0).length
     );
-    const unlocked = getUnlockedUnits(activityStats, masteredObjectCategories);
-    const ceiling = (!isPremium && profileId) ? getAllowedUnitCeiling(profileId, unlocked) : undefined;
+    // Use program-mode unlock check (last 6 attempts) so the session ceiling matches
+    // the same logic used by unit-advancement tracking in useActivity.
+    const unlocked = getUnlockedUnitsForProgramMode(activityStats, masteredObjectCategories, parentOverrides, 6, profileId);
+    const ceiling = profileId
+      ? (isPremium ? getHighestUnlockedUnit(unlocked) : getAllowedUnitCeiling(profileId, unlocked))
+      : undefined;
     return buildDailySession(activityStats, masteredObjectCategories, undefined, sessionLength, ceiling, parentOverrides);
-  }, [activityStats, masteredObjectCategories, profileId, policySnapshot, isPremium]);
+  }, [activityStats, masteredObjectCategories, profileId, isPremium, parentOverrides]);
 
   // Check if today's session is fresh
   const isSessionFresh = useMemo(() => 
@@ -400,7 +404,7 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
                 <strong>{t('programMode.rules.reinforcementScope', 'Pekiştirme kapsamı:')}</strong> {t('programMode.rules.reinforcementScopeDesc', 'Pekiştirme normalde oturumun odak ünitelerindeki etkinliklerle sınırlıdır; başka ünitelerden manuel eklenen seçimler odak üniteyle uyuşmuyorsa dikkate alınmaz. (Manuel seçimleri temizlemek için "Manuel Seçimleri Temizle" düğmesini kullanın.)')}
               </li>
               <li>
-                <strong>{t('programMode.rules.unlocking', 'Ünite açma şartı:')}</strong> {t('programMode.rules.unlockingDesc', 'O ünitedeki her etkinlik en az 1 kez çözülmüş olmalı ve genel başarı ≥ %80 olmalı (Serbest + Program denemeleri birlikte hesaplanır).')}
+                <strong>{t('programMode.rules.unlocking', 'Ünite açma şartı:')}</strong> {t('programMode.rules.unlockingDesc', 'Program sırası 1. üniteden başlayarak ilk tamamlanmamış üniteye göre belirlenir. Bir ünitenin tamamlanması için ünitedeki etkinliklerin en az %75i en az 1 kez çözülmüş olmalı ve son 6 program/pekiştirme denemesinin ortalaması ≥ %75 olmalıdır.')}
               </li>
               {!isPremium ? (
                 <li>
@@ -412,7 +416,7 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
                 </li>
               )}
               <li>
-                <strong>{t('programMode.rules.progressDisplay', 'Görünen yüzde:')}</strong> {t('programMode.rules.progressDisplayDesc', 'Ünite yüzdesi, ebeveyn raporundaki başarıyla aynıdır (Serbest + Program toplamı).')}
+                <strong>{t('programMode.rules.progressDisplay', 'Görünen yüzde:')}</strong> {t('programMode.rules.progressDisplayDesc', 'Program Modu ekranindaki yuzdeler son 6 program denemesini baz alir; ebeveyn raporundaki genel yuzdeyle birebir ayni olmayabilir.')}
               </li>
               <li>
                 <strong>{t('programMode.rules.joker', 'Joker:')}</strong> {t('programMode.rules.jokerDesc', 'Ebeveynler geçici olarak kilitli bir etkinliği açabilir; ustalık kuralları değişmez, sadece erişim sağlar.')}
@@ -503,7 +507,7 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
                   </ul>
                   {!unit.isUnlocked && (
                     <p className="mt-3 text-xs text-gray-500 italic">
-                      🔒 {t('programMode.unlockHint', 'Unlocks when previous unit reaches 80%')}
+                      🔒 {t('programMode.unlockHint', 'Unlocks when the previous unit reaches 75%')}
                     </p>
                   )}
                 </div>
@@ -540,6 +544,7 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
           </button>
         </div>
       </div>
+
     </SimpleThemeWrapper>
   );
 };

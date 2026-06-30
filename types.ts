@@ -25,6 +25,14 @@ export enum ScreenState {
   ActivityManagement,
   PrintPreview,
   PrintPool,
+  MiniGamesMenu,
+  BalloonPopGame,
+  ButterflyGardenGame,
+  FireworksGame,
+  ShapeMatchingGame,
+  MusicTouchGame,
+  SevenDifferencesGame,
+  EmotionPuppetGame,
 }
 
 export enum Tab {

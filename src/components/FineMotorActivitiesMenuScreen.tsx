@@ -8,8 +8,7 @@ import MenuButton from './ui/MenuButton.tsx';
 import ProgressIndicator from './ui/ProgressIndicator.tsx';
 import { ActivityType, ActivityStats } from '../types.ts';
 import { getCurrentLanguage, t } from '../i18n/index.ts';
-import CosmicBackdrop from './ui/CosmicBackdrop.tsx';
-import PanelStars from './ui/PanelStars.tsx';
+
 
 interface FineMotorActivitiesMenuScreenProps {
   onSelectActivity: (activity: ActivityType) => void;
@@ -37,78 +36,91 @@ const FineMotorActivitiesMenuScreen: React.FC<FineMotorActivitiesMenuScreenProps
   const iconColorClass = isThemed ? 'text-white' : 'text-rose-700';
 
   if (isCosmic) {
-    // Cosmic styled header + cards (consistent with other cosmic menus)
-    const palettes = [
-      { from: 'from-pink-400', via: 'via-fuchsia-300', to: 'to-rose-200', glow: 'shadow-rose-400/40' },
-      { from: 'from-amber-400', via: 'via-orange-300', to: 'to-yellow-200', glow: 'shadow-amber-400/40' },
-      { from: 'from-indigo-400', via: 'via-violet-300', to: 'to-fuchsia-200', glow: 'shadow-indigo-400/40' },
-    ];
-    const renderCosmicCard = (activity: typeof items[number], idx: number) => {
-      const stats = activityStats[String(activity.type)] || { attempts: 0, completions: 0, totalCorrect: 0, totalQuestions: 0 };
-      const isDisabled = !enabledActivities.has(String(activity.type));
-      const palette = palettes[idx % palettes.length];
-      const Icon = activity.icon;
-      return (
-        <button
-          key={activity.type}
-          onClick={() => !isDisabled && onSelectActivity(activity.type)}
-          disabled={isDisabled}
-          className={`relative flex flex-col items-center p-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-cyan-300/30 min-h-[180px] transition-all duration-300 ${
-            isDisabled ? 'opacity-40 cursor-not-allowed' : 'hover:scale-105 hover:border-cyan-300/60 hover:shadow-lg hover:shadow-cyan-400/20 cursor-pointer'
-          }`}
-        >
-          <div className={`w-14 h-14 flex-shrink-0 rounded-full bg-gradient-to-br ${palette.from} ${palette.via} ${palette.to} shadow-lg ${palette.glow} flex items-center justify-center`}>
-            <Icon className="w-7 h-7 text-white drop-shadow-md" />
-          </div>
-          <h3 className="text-sm font-bold text-white text-center mb-1 flex-shrink-0 line-clamp-2">{activity.title}</h3>
-          <p className="text-xs text-cyan-100/80 text-center flex-shrink-0 line-clamp-1 mb-2">{activity.subtitle}</p>
-          <div className="mt-auto w-full">
-            <ProgressIndicator
-              attempts={stats.attempts}
-              completions={stats.completions}
-              totalCorrect={stats.totalCorrect}
-              totalQuestions={stats.totalQuestions}
-            />
-          </div>
-        </button>
-      );
-    };
-
+    // Robot Theme: Tech/Industrial interface
     return (
-      <>
-        <CosmicBackdrop variant="rich" />
-        <div className="relative z-10 flex flex-col items-center justify-start h-full max-w-2xl mx-auto p-4 sm-landscape:p-2 animate-fade-in overflow-hidden">
-          <PanelStars count={60} />
-          <div className="relative z-10 w-full flex items-center mb-8 sm-landscape:mb-4">
-            <button
-              onClick={onBack}
-              className="absolute left-0 p-2 rounded-full bg-cyan-400/20 hover:bg-cyan-400/30 backdrop-blur-sm border border-cyan-300/30 transition-all duration-200"
-              aria-label={t('app.back', isTr ? 'Geri dön' : 'Go back')}
-            >
-              <ArrowLeftIcon className="w-8 h-8 sm-landscape:w-7 sm-landscape:h-7 text-white drop-shadow-md" />
-            </button>
-            <div className="flex-1 flex justify-center">
-              <div className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-cyan-600/80 via-sky-500/80 to-indigo-600/80 backdrop-blur-sm border border-cyan-300/40 shadow-lg shadow-cyan-400/30">
-                <h1 className="text-3xl sm:text-4xl sm-landscape:text-2xl font-black text-white drop-shadow-lg">
-                  {t('menu.fineMotor.title', isTr ? 'İnce Motor Beceriler' : 'Fine Motor Skills')}
-                </h1>
-              </div>
-            </div>
-          </div>
+      <div className="relative h-full flex flex-col overflow-hidden bg-slate-900">
+        {/* Tech Background Grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-transparent to-slate-900/80 pointer-events-none" />
 
-          <div className="relative z-10 w-full mb-3 text-center">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-cyan-300/40 text-xs text-cyan-100 shadow-sm">
-              ✨ {devNote}
+        {/* Header */}
+        <div className="relative z-10 flex items-center justify-between px-4 py-3 border-b border-cyan-500/20 bg-slate-800/50 backdrop-blur-md">
+          <button
+            onClick={onBack}
+            className="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-700/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 hover:text-cyan-200 transition-all"
+          >
+            <ArrowLeftIcon className="w-6 h-6" />
+          </button>
+
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            <span className="text-cyan-100 font-bold tracking-wider font-mono text-lg uppercase">
+              {t('menu.fineMotor.title', isTr ? 'İnce Motor' : 'Fine Motor')}
             </span>
           </div>
 
-          <div className="relative z-10 w-full flex-grow overflow-y-auto pr-2 animate-fade-in">
-            <div className="grid grid-cols-2 landscape:grid-cols-3 sm-landscape:grid-cols-3 gap-4 sm-landscape:gap-3">
-              {items.map((activity, idx) => renderCosmicCard(activity, idx))}
-            </div>
+          <div className="w-10" /> {/* Spacer */}
+        </div>
+
+        {/* Dev Note Banner */}
+        <div className="relative z-10 w-full bg-slate-800/30 border-b border-cyan-500/10 py-1 flex justify-center">
+          <span className="text-[10px] text-cyan-500/60 font-mono tracking-tight uppercase">
+            STATUS: {devNote}
+          </span>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 flex-1 overflow-y-auto p-4">
+          <div className="grid grid-cols-2 landscape:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {items.map((activity, idx) => {
+              const stats = activityStats[String(activity.type)] || { attempts: 0, completions: 0, totalCorrect: 0, totalQuestions: 0 };
+              const isDisabled = !enabledActivities.has(String(activity.type));
+              const Icon = activity.icon;
+
+              const borderColors = [
+                'border-cyan-500/30 hover:border-cyan-400',
+                'border-sky-500/30 hover:border-sky-400',
+                'border-teal-500/30 hover:border-teal-400',
+              ];
+              const borderColor = borderColors[idx % borderColors.length];
+
+              return (
+                <button
+                  key={activity.type}
+                  onClick={() => !isDisabled && onSelectActivity(activity.type)}
+                  disabled={isDisabled}
+                  className={`relative group flex flex-col items-center gap-3 p-4 rounded-xl border-2 transition-all duration-300 ${borderColor} bg-slate-800/40 ${isDisabled ? 'opacity-50 grayscale cursor-not-allowed' : 'hover:bg-slate-800/80 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] cursor-pointer'
+                    }`}
+                >
+                  {/* Tech Corners */}
+                  <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-white/10 group-hover:border-cyan-400/50 transition-colors" />
+                  <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-white/10 group-hover:border-cyan-400/50 transition-colors" />
+
+                  <div className={`w-14 h-14 rounded-lg bg-slate-900 border border-white/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden`}>
+                    <div className="absolute inset-0 bg-cyan-400/5 blur-md" />
+                    <Icon className="w-8 h-8 text-cyan-200 z-10 drops-shadow" />
+                  </div>
+
+                  <div className="text-center">
+                    <h3 className="text-sm font-bold text-cyan-100 font-mono tracking-tight mb-1">{activity.title}</h3>
+                    <p className="text-[10px] text-cyan-400/60 font-mono leading-tight max-w-[120px] mx-auto">{activity.subtitle}</p>
+                  </div>
+
+                  <div className="w-full mt-auto pt-2 opacity-80 group-hover:opacity-100">
+                    <ProgressIndicator
+                      attempts={stats.attempts}
+                      completions={stats.completions}
+                      totalCorrect={stats.totalCorrect}
+                      totalQuestions={stats.totalQuestions}
+                      compact
+                    />
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
-      </>
+      </div>
     );
   }
 
@@ -135,8 +147,8 @@ const FineMotorActivitiesMenuScreen: React.FC<FineMotorActivitiesMenuScreenProps
           onClick={() => !isDisabled && onSelectActivity(activity.type)}
           disabled={isDisabled}
           className={`relative flex flex-col items-center transition-all duration-300 ${isDisabled ? 'opacity-40 cursor-not-allowed' : 'hover:scale-110'}`}>
-          <div className={`w-32 h-24 sm:w-36 sm:h-28 rounded-t-full bg-gradient-to-b ${color} border-2 border-white/30 backdrop-blur-sm shadow-lg relative overflow-hidden`}> 
-            <div className="absolute inset-0 flex items-center justify-center"><Icon className="w-10 h-10 sm:w-12 sm:h-12 text-white drop-shadow-md"/></div>
+          <div className={`w-32 h-24 sm:w-36 sm:h-28 rounded-t-full bg-gradient-to-b ${color} border-2 border-white/30 backdrop-blur-sm shadow-lg relative overflow-hidden`}>
+            <div className="absolute inset-0 flex items-center justify-center"><Icon className="w-10 h-10 sm:w-12 sm:h-12 text-white drop-shadow-md" /></div>
           </div>
           <div className="flex gap-0.5 justify-center -mt-1">
             {[...Array(8)].map((_, i) => (<div key={i} className={`w-0.5 h-8 bg-gradient-to-b ${color} opacity-60 rounded-full animate-tentacle`} style={{ height: `${32 + Math.random() * 12}px`, animationDelay: `${i * 0.15}s`, transformOrigin: 'top' }} />))}
@@ -152,7 +164,7 @@ const FineMotorActivitiesMenuScreen: React.FC<FineMotorActivitiesMenuScreenProps
       <>
         {/* Deep ocean gradient background */}
         <div className="absolute inset-0 -z-20 bg-gradient-to-b from-[#001122] via-[#001a2e] to-[#000814]" />
-        
+
         {/* Ocean bubbles animation */}
         <div className="absolute inset-0 -z-18 opacity-40">
           {Array.from({ length: 25 }, (_, i) => (
@@ -171,7 +183,7 @@ const FineMotorActivitiesMenuScreen: React.FC<FineMotorActivitiesMenuScreenProps
 
         {/* Ocean floor sand */}
         <div className="absolute bottom-0 left-0 right-0 h-32 -z-15 bg-gradient-to-t from-amber-900/30 via-amber-800/20 to-transparent" />
-        
+
         {/* Light rays from surface */}
         <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-cyan-300/60 via-cyan-400/30 to-transparent -z-16" />
         <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-blue-300/60 via-blue-400/30 to-transparent -z-16" />
@@ -203,9 +215,9 @@ const FineMotorActivitiesMenuScreen: React.FC<FineMotorActivitiesMenuScreenProps
   return (
     <div className="flex flex-col items-center justify-start h-full max-w-2xl mx-auto p-4 sm-landscape:p-1 animate-fade-in">
       <div className="w-full flex items-center mb-8 sm-landscape:mb-4 relative">
-        <button 
-          onClick={onBack} 
-          className="absolute left-0 p-2 rounded-full bg-black/10 hover:bg-black/20 transition-colors" 
+        <button
+          onClick={onBack}
+          className="absolute left-0 p-2 rounded-full bg-black/10 hover:bg-black/20 transition-colors"
           aria-label={t('app.back', isTr ? 'Geri dön' : 'Go back')}
         >
           <ArrowLeftIcon className={`w-8 h-8 sm-landscape:w-7 sm-landscape:h-7 ${iconColorClass}`} />
@@ -221,30 +233,30 @@ const FineMotorActivitiesMenuScreen: React.FC<FineMotorActivitiesMenuScreenProps
             ✨ {devNote}
           </span>
         </div>
-         <div className="grid grid-cols-1 sm:grid-cols-2 landscape:grid-cols-3 sm-landscape:grid-cols-3 gap-4 sm-landscape:gap-3">
-            {items.map((activity) => {
-                const stats = activityStats[String(activity.type)] || { attempts: 0, completions: 0, totalCorrect: 0, totalQuestions: 0 };
-                const isDisabled = !enabledActivities.has(String(activity.type));
-                return (
-                    <MenuButton
-                        key={activity.type}
-                        icon={activity.icon}
-                        title={activity.title}
-                        subtitle={activity.subtitle}
-                        onClick={() => onSelectActivity(activity.type)}
-                        color={activity.color}
-                        theme={theme}
-                        disabled={isDisabled}
-                    >
-                        <ProgressIndicator 
-                            attempts={stats.attempts} 
-                            completions={stats.completions}
-                            totalCorrect={stats.totalCorrect}
-                            totalQuestions={stats.totalQuestions}
-                        />
-                    </MenuButton>
-                )
-            })}
+        <div className="grid grid-cols-1 sm:grid-cols-2 landscape:grid-cols-3 sm-landscape:grid-cols-3 gap-4 sm-landscape:gap-3">
+          {items.map((activity) => {
+            const stats = activityStats[String(activity.type)] || { attempts: 0, completions: 0, totalCorrect: 0, totalQuestions: 0 };
+            const isDisabled = !enabledActivities.has(String(activity.type));
+            return (
+              <MenuButton
+                key={activity.type}
+                icon={activity.icon}
+                title={activity.title}
+                subtitle={activity.subtitle}
+                onClick={() => onSelectActivity(activity.type)}
+                color={activity.color}
+                theme={theme}
+                disabled={isDisabled}
+              >
+                <ProgressIndicator
+                  attempts={stats.attempts}
+                  completions={stats.completions}
+                  totalCorrect={stats.totalCorrect}
+                  totalQuestions={stats.totalQuestions}
+                />
+              </MenuButton>
+            )
+          })}
         </div>
       </div>
     </div>

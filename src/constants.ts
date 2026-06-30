@@ -76,6 +76,7 @@ export const CONCEPT_ACTIVITIES = [
     ActivityType.AnimalSounds,
     ActivityType.AnimalHomes,
     ActivityType.Professions,
+    ActivityType.ClockLearning,
 ];
 
 export const REASONING_ACTIVITIES = [
@@ -88,7 +89,6 @@ export const REASONING_ACTIVITIES = [
     ActivityType.DragAndDropPositioning,
     ActivityType.Hangman,              // EĞLENCE: Adam Asmaca - Harf seçerek kelimeyi bul
     ActivityType.ObjectCollector,      // EĞLENCE: Nesne Toplama - Düşen objeleri sepete topla
-    ActivityType.EmotionPuppet,        // EĞLENCE: Duygu Kuklası - Yüz parçalarını birleştir
 ];
 
 export const OBJECT_RECOGNITION_ACTIVITIES = [ActivityType.ObjectRecognition];
@@ -323,7 +323,10 @@ export const ALL_SUB_ACHIEVEMENTS: SubAchievement[] = [
   { id: ActivityType.Hangman, name: "Adam Asmaca", category: ActivityCategory.Reasoning },
   { id: ActivityType.ObjectCollector, name: "Nesne Toplama", category: ActivityCategory.Reasoning },
   { id: ActivityType.EmotionPuppet, name: "Duygu Kuklası", category: ActivityCategory.Reasoning },
-  
+  { id: ActivityType.WhoseIsThis, name: "Bu Kimin?", category: ActivityCategory.Reasoning },
+  { id: ActivityType.ColorRecognition, name: "Rengi Ne?", category: ActivityCategory.Concept },
+  { id: ActivityType.WhatsMissing, name: "Hangisi Kayıp?", category: ActivityCategory.Reasoning },
+
   // Fine motor activities (make them manageable in Activity Management)
   { id: ActivityType.LineTracing, name: "Çizgi Takip", category: ActivityCategory.FineMotor },
   { id: ActivityType.ShapeColoring, name: "Şekil Boyama", category: ActivityCategory.FineMotor },

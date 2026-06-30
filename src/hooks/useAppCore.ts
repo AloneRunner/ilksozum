@@ -11,6 +11,7 @@ import { getActivityUiConfig, fetchLetterActivityData } from '../services/conten
 import { t } from '../i18n';
 import { initializeAds, initializeRevenueCat } from '../services/monetizationService.ts';
 import { setMutedState } from '../services/speechService.ts';
+import { recordTodayOpen, checkAndAwardLoyalty } from '../services/loyaltyService.ts';
 
 export const useAppCore = () => {
     // --- Core Navigation State ---
@@ -44,12 +45,19 @@ export const useAppCore = () => {
         setScreenState(ScreenState.MainMenu);
         _setActiveTab(Tab.Activities);
     }, []);
+
+    const handleGoToProgramIntro = useCallback(() => {
+        communication.resetCommunicationState();
+        setScreenState(ScreenState.ProgramIntro);
+        _setActiveTab(Tab.Activities);
+    }, []);
     
     const activity = useActivity({
         activityStats: profile.activityStats,
         setActivityStats: profile.setActivityStats,
         showToast,
         handleGoToMenu,
+        handleGoToProgramIntro,
         enabledActivitiesSet: profile.enabledActivitiesSet,
         activeProfileId: profile.activeProfile?.id || null,
         isPremium: settings.isPremium,
@@ -89,6 +97,22 @@ export const useAppCore = () => {
     useEffect(() => { initializeAds(); }, []);
     // Initialize RevenueCat once with device-level fallback user (not per profile)
     useEffect(() => { initializeRevenueCat(); }, []);
+
+    // Loyalty: record today's open, then re-evaluate award + refresh settings snapshot.
+    useEffect(() => {
+        try {
+            recordTodayOpen();
+            const awarded = checkAndAwardLoyalty();
+            // Always refresh after eval so the snapshot reflects new openDayCount.
+            settings.loyalty?.refresh?.();
+            if (awarded) {
+                console.log('[Loyalty] Premium awarded — pending celebration set.');
+            }
+        } catch (e) {
+            console.error('Loyalty init failed', e);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
     
     useEffect(() => {
         // This effect runs when profile is loaded or changes.
@@ -113,6 +137,8 @@ export const useAppCore = () => {
                 break;
             case ScreenState.LetterSelection: setScreenState(ScreenState.LetterActivitiesMenu); break;
             case ScreenState.GroupSelection: setScreenState(ScreenState.LetterActivitiesMenu); break;
+            case ScreenState.BasaraLessonMap: setScreenState(ScreenState.LetterActivitiesMenu); break;
+            case ScreenState.BasaraLesson: setScreenState(ScreenState.BasaraLessonMap); break;
             case ScreenState.LetterActivitiesMenu:
             case ScreenState.ConceptActivitiesMenu:
             case ScreenState.ReasoningActivitiesMenu:

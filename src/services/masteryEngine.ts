@@ -14,13 +14,21 @@ import {
 } from '../types.ts';
 import { ACTIVITY_METADATA_MAP, getActivityMetadata } from '../constants/activityMetadata';
 import { UNIT_DEFINITIONS, getUnitDefinition } from '../constants/unitDefinitions';
+import { getProgramHighWaterUnit } from './progressionPolicy';
+
+export const PROGRAM_WIDE_MASTERY_THRESHOLD = 0.75;
 
 /**
  * Check if an activity has been mastered based on its pool type
  * 
- * WIDE POOL: Requires 80% success rate in last 15 attempts (program mode 100%, free mode 50% weight)
+ * WIDE POOL: Requires 75% success rate in recent attempts (program mode 100%, free mode 50% weight)
  * NARROW POOL: Requires 100% in last 2 consecutive perfect sessions (program mode only)
  */
+function getProgramScopedAttempts(stats: ActivityStats | undefined): AttemptRecord[] {
+  if (!stats || !Array.isArray(stats.history)) return [];
+  return stats.history.filter(attempt => attempt.mode === 'program' || !attempt.mode);
+}
+
 export function isMasteryAchieved(
   activityId: ActivityType | string,
   stats: ActivityStats | undefined
@@ -42,7 +50,10 @@ export function isMasteryAchieved(
   // WIDE POOL: Check last N attempts for success rate with mode weighting
   // Updated: Reduced from 15 to 5 for more reasonable child progression
   const window = masteryRule.recentAttemptsWindow || 5;
-    const threshold = masteryRule.masteryThreshold || 0.8;
+    const threshold = Math.min(
+      masteryRule.masteryThreshold ?? PROGRAM_WIDE_MASTERY_THRESHOLD,
+      PROGRAM_WIDE_MASTERY_THRESHOLD
+    );
     
     const recentAttempts = stats.history.slice(-window);
     if (recentAttempts.length < window) {
@@ -174,7 +185,7 @@ export function isActivityUnlocked(
 
 /**
  * Check if a unit is unlocked
- * A unit is unlocked if all its prerequisite units are 80% complete
+ * A unit is unlocked if all its prerequisite units are 75% complete
  */
 export function isUnitUnlocked(
   unitNumber: number,
@@ -451,11 +462,12 @@ export function getUnitDisplaySuccessPercentageForProgramMode(
 
     const key = typeof activityId === 'string' ? activityId : String(activityId);
     const stats = allStats[key];
+    const programScopedAttempts = getProgramScopedAttempts(stats);
 
     // Prefer history (most recent attempts). If not available, fall back to aggregated totals.
     let recentAttempts: AttemptRecord[] = [];
-    if (stats && Array.isArray(stats.history) && stats.history.length > 0) {
-      recentAttempts = stats.history.slice(-recentAttemptsWindow);
+    if (programScopedAttempts.length > 0) {
+      recentAttempts = programScopedAttempts.slice(-recentAttemptsWindow);
     }
 
     if (recentAttempts.length > 0) {
@@ -476,8 +488,11 @@ export function getUnitDisplaySuccessPercentageForProgramMode(
       // If recent attempts exist but totals are zero, fall through to aggregated fallback
     }
 
-    // Aggregated fallback (legacy): use totalCorrect/totalQuestions if present
-    if (stats) {
+    // Aggregated fallback is only safe for truly legacy stats with no attempt history.
+    // If recent history exists but contains only free-mode attempts, do not let those
+    // contaminate Program Mode progression.
+    const hasAnyHistory = Boolean(stats && Array.isArray(stats.history) && stats.history.length > 0);
+    if (stats && !hasAnyHistory) {
       let correct = stats.totalCorrect || 0;
       let total = stats.totalQuestions || 0;
       if (total > 0) {
@@ -511,7 +526,7 @@ export function isUnitCompleteForProgramMode(
     return false;
   }
 
-  // New rule: must attempt every activity in the unit at least once (uses program-mode coverage)
+  // Coverage rule: do not let one stubborn activity block the whole unit.
   if (!hasUnitMinimumCoverage(unitNumber, allStats, masteredObjectCategories, parentOverrides)) {
     return false;
   }
@@ -526,7 +541,8 @@ export function isUnitUnlockedForProgramMode(
   allStats: Record<string, ActivityStats>,
   masteredObjectCategories: Set<string>,
   parentOverrides?: ParentOverride[],
-  recentAttemptsWindow: number = 6
+  recentAttemptsWindow: number = 6,
+  profileId?: string | null
 ): boolean {
   const unitDef = getUnitDefinition(unitNumber);
   if (!unitDef) {
@@ -535,6 +551,14 @@ export function isUnitUnlockedForProgramMode(
   }
 
   if (unitNumber === 1) return true;
+
+  // High-water guard: once a unit was reached, never lock it again.
+  if (profileId) {
+    try {
+      const high = getProgramHighWaterUnit(profileId, allStats);
+      if (unitNumber <= high) return true;
+    } catch {}
+  }
 
   return unitDef.prerequisiteUnits.every((prereqUnitNum) => {
     return isUnitCompleteForProgramMode(prereqUnitNum, allStats, masteredObjectCategories, parentOverrides, recentAttemptsWindow);
@@ -545,14 +569,23 @@ export function getUnlockedUnitsForProgramMode(
   allStats: Record<string, ActivityStats>,
   masteredObjectCategories: Set<string>,
   parentOverrides?: ParentOverride[],
-  recentAttemptsWindow: number = 6
+  recentAttemptsWindow: number = 6,
+  profileId?: string | null
 ): Set<number> {
   const unlockedUnits = new Set<number>();
 
   for (const unit of UNIT_DEFINITIONS) {
-    if (isUnitUnlockedForProgramMode(unit.unitNumber, allStats, masteredObjectCategories, parentOverrides, recentAttemptsWindow)) {
+    if (isUnitUnlockedForProgramMode(unit.unitNumber, allStats, masteredObjectCategories, parentOverrides, recentAttemptsWindow, profileId)) {
       unlockedUnits.add(unit.unitNumber);
     }
+  }
+
+  // Floor: ensure all units up to the high-water mark are present.
+  if (profileId) {
+    try {
+      const high = getProgramHighWaterUnit(profileId, allStats);
+      for (let u = 1; u <= high; u++) unlockedUnits.add(u);
+    } catch {}
   }
 
   return unlockedUnits;
@@ -572,10 +605,11 @@ export function getActivityProgramSuccessPercentage(
   const key = typeof activityId === 'string' ? activityId : String(activityId);
   const stats = allStats[key];
   if (!stats) return 0;
+  const programScopedAttempts = getProgramScopedAttempts(stats);
 
   // Prefer recent history
-  if (Array.isArray(stats.history) && stats.history.length > 0) {
-    const recent = stats.history.slice(-recentAttemptsWindow);
+  if (programScopedAttempts.length > 0) {
+    const recent = programScopedAttempts.slice(-recentAttemptsWindow);
     let correct = 0;
     let total = 0;
     for (const h of recent) {
@@ -587,7 +621,10 @@ export function getActivityProgramSuccessPercentage(
     if (total > 0) return Math.round((correct / total) * 100);
   }
 
-  // Fallback to aggregated totals
+  // Fallback to aggregated totals only when there is no recorded history at all.
+  const hasAnyHistory = Array.isArray(stats.history) && stats.history.length > 0;
+  if (hasAnyHistory) return 0;
+
   const correct = stats.totalCorrect || 0;
   const total = stats.totalQuestions || 0;
   if (total > 0) return Math.round((correct / total) * 100);
@@ -596,9 +633,9 @@ export function getActivityProgramSuccessPercentage(
 }
 
 /**
- * Coverage rule: a unit has minimum coverage when each activity has been
- * attempted at least once (has any recorded questions/answers) or is already
- * mastered/marked via object categories.
+ * Coverage rule: a unit has minimum coverage when enough activities have been
+ * attempted to meet the unit completion ratio. This keeps progression moving
+ * without letting large parts of a unit be skipped.
  */
 export function hasUnitMinimumCoverage(
   unitNumber: number,
@@ -626,7 +663,10 @@ export function hasUnitMinimumCoverage(
     return hist.length > 0;
   };
 
-  return unitDef.activities.every((a) => hasAttempt(a));
+  const attemptedCount = unitDef.activities.filter((activityId) => hasAttempt(activityId)).length;
+  const requiredAttemptCount = Math.max(1, Math.ceil(unitDef.activities.length * unitDef.completionThreshold));
+
+  return attemptedCount >= requiredAttemptCount;
 }
 
 /**

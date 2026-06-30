@@ -417,5 +417,5 @@ export const longShortData: ConceptRound[] = [
             { id: 323, word: "yılan", imageUrl: "/images/323.png", isCorrect: false, audioKey: "yilan", spokenText: "yılan" },
             { id: 445, word: "tırtıl", imageUrl: "/images/445.png", isCorrect: true, audioKey: "tirtil", spokenText: "tırtıl" }
         ]
-    },
+    }
 ];

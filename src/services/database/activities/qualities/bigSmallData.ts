@@ -131,7 +131,7 @@ export const bigSmallData: ConceptRound[] = [
         },
         options: [
             { id: 492, word: "gemi", imageUrl: "/images/492.png", isCorrect: true, audioKey: "gemi", spokenText: "gemi" },
-            { id: 493, word: "sandal", imageUrl: "/images/493.gif", isCorrect: false, audioKey: "sandal", spokenText: "sandal" }
+            { id: 493, word: "sandal", imageUrl: "/images/493.png", isCorrect: false, audioKey: "sandal", spokenText: "sandal" }
         ]
     },
     { 
@@ -149,7 +149,7 @@ export const bigSmallData: ConceptRound[] = [
         },
         options: [
             { id: 492, word: "gemi", imageUrl: "/images/492.png", isCorrect: false, audioKey: "gemi", spokenText: "gemi" },
-            { id: 493, word: "sandal", imageUrl: "/images/493.gif", isCorrect: true, audioKey: "sandal", spokenText: "sandal" }
+            { id: 493, word: "sandal", imageUrl: "/images/493.png", isCorrect: true, audioKey: "sandal", spokenText: "sandal" }
         ]
     },
 
@@ -321,7 +321,7 @@ export const bigSmallData: ConceptRound[] = [
         },
         options: [
             { id: 10, word: "ağaç", imageUrl: "/images/10.png", isCorrect: true, audioKey: "agac", spokenText: "ağaç" },
-            { id: 76, word: "papatya", imageUrl: "/images/76.png", isCorrect: false, audioKey: "papatya", spokenText: "papatya" }
+            { id: 76, word: "papatya", imageUrl: "/images/76.png", imageScale: 0.84, isCorrect: false, audioKey: "papatya", spokenText: "papatya" }
         ]
     },
     { 
@@ -339,7 +339,7 @@ export const bigSmallData: ConceptRound[] = [
         },
         options: [
             { id: 10, word: "ağaç", imageUrl: "/images/10.png", isCorrect: false, audioKey: "agac", spokenText: "ağaç" },
-            { id: 76, word: "papatya", imageUrl: "/images/76.png", isCorrect: true, audioKey: "papatya", spokenText: "papatya" }
+            { id: 76, word: "papatya", imageUrl: "/images/76.png", imageScale: 0.84, isCorrect: true, audioKey: "papatya", spokenText: "papatya" }
         ]
     },
 
@@ -435,7 +435,7 @@ export const bigSmallData: ConceptRound[] = [
         },
         options: [
             { id: 362, word: "pilates topu", imageUrl: "/images/362.png", isCorrect: true, audioKey: "pilates_topu", spokenText: "pilates topu" },
-            { id: 762, word: "misket", imageUrl: "/images/762.png", isCorrect: false, audioKey: "misket", spokenText: "misket" }
+            { id: 762, word: "misket", imageUrl: "/images/762.png", imageScale: 0.72, isCorrect: false, audioKey: "misket", spokenText: "misket" }
         ]
     },
     { 
@@ -453,7 +453,7 @@ export const bigSmallData: ConceptRound[] = [
         },
         options: [
             { id: 362, word: "pilates topu", imageUrl: "/images/362.png", isCorrect: false, audioKey: "pilates_topu", spokenText: "pilates topu" },
-            { id: 762, word: "misket", imageUrl: "/images/762.png", isCorrect: true, audioKey: "misket", spokenText: "misket" }
+            { id: 762, word: "misket", imageUrl: "/images/762.png", imageScale: 0.72, isCorrect: true, audioKey: "misket", spokenText: "misket" }
         ]
     },
 
@@ -645,5 +645,5 @@ export const bigSmallData: ConceptRound[] = [
             { id: 494, word: "merdiven", imageUrl: "/images/494.png", isCorrect: false, audioKey: "merdiven", spokenText: "merdiven" },
             { id: 495, word: "tabure", imageUrl: "/images/495.png", isCorrect: true, audioKey: "tabure", spokenText: "tabure" }
         ]
-    },
+    }
 ];

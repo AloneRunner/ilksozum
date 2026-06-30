@@ -73,6 +73,17 @@
       "title": "Mode Programme",
       "subtitle": "Démarrer une session quotidienne guidée"
     },
+    "audioIssue": {
+      "title": "Si la synthèse vocale ne fonctionne pas",
+      "line4": "Note : Sur certains anciens Samsung, Google TTS peut être désactivé de force ; si le pack de voix turc n’est pas installé, il peut n’y avoir aucune voix ou un fort accent anglais.",
+      "line1": "Paramètres > Mode silencieux doit être désactivé. (Il a peut‑être été laissé actif après la fin du Premium)",
+      "line2": "Paramètres de l’appareil > Synthèse vocale (TTS) : sélectionner Google TTS.",
+      "line3": "Dans Google TTS, nous recommandons la voix n°4 sur 5 ; changez-la et réessayez."
+    },
+    "themeFeedback": {
+      "title": "Avis sur les thèmes",
+      "body": "Je pense supprimer certains thèmes. Les thèmes avec arrière‑plan vidéo prennent beaucoup de place et l’app peut dépasser 200 Mo. Utilisez‑vous vraiment ces thèmes ? Dites‑le moi. Je veux ajouter des versions photo réelles des visuels actuels à la place."
+    },
     "parentTips": {
       "title": "Conseils pour les parents",
       "subtitle": "Utilisez l'application plus efficacement"
@@ -258,7 +269,12 @@
       "memoryCards": "Cartes mémoire",
       "dragAndDropCounting": "Déplacer les objets",
       "dragAndDropPositioning": "Placer la balle",
-      "hangman": "Pendu"
+      "hangman": "Pendu",
+      "whoseIsThis": "À qui est-ce ?",
+      "whatsMissing": "Qu'est-ce qui manque ?"
+    },
+    "concept": {
+      "colorRecognition": "Quelle couleur ?"
     },
     "fineMotor": {
       "lineTracing": "Tracer les lignes",
@@ -278,7 +294,7 @@
     "title": "Paramètres",
     "premium": {
       "title": "Fonctionnalités Premium",
-      "desc": "Supprimez les publicités, activez l'interface à thème (fonds animés), consultez le rapport de progression parentale et soutenez le développement.",
+      "desc": "Tout le contenu éducatif est gratuit et ouvert à tous. Premium offre des fonctions de confort comme la suppression des publicités, des thèmes, des fiches de travail et des transitions rapides. Les nouveaux utilisateurs bénéficient d'un essai de 7 jours. Vous pouvez acheter Premium pour nous soutenir.",
       "cta": "Passer en Premium et nous soutenir",
       "mathQuestion": "Confirmation parentale :\n\nRépondez à cette question pour continuer :\n\n{num1} + {num2} = ?",
       "wrongAnswer": "Mauvaise réponse. Veuillez réessayer.",
@@ -287,6 +303,7 @@
       "monthly": "Mensuel",
       "lifetime": "À vie"
     },
+    "promoNote": "Premium Cadeau : Toutes les fonctionnalités débloquées jusqu'au {date}. Si vous le souhaitez, vous pouvez acheter Premium pour nous soutenir — le soutien sera utilisé pour le portage sur la plateforme iOS (frais annuels).",
     "profile": {
       "title": "Profil",
       "active": "Profil actif",
@@ -658,82 +675,82 @@
       "EmbeddedStory": "Histoire intégrée"
     },
     "planPreview": {
-  "reasoning": {
-    "title": "Jeux de raisonnement",
-    "activities": {
-      "whatDoesntBelong": {
-        "title": "Quel est l'intrus ?",
-        "subtitle": "Trouve ce qui ne correspond pas"
+      "reasoning": {
+        "title": "Jeux de raisonnement",
+        "activities": {
+          "whatDoesntBelong": {
+            "title": "Quel est l'intrus ?",
+            "subtitle": "Trouve ce qui ne correspond pas"
+          },
+          "sequencingStories": {
+            "title": "Séquençage d'histoire",
+            "subtitle": "Remets l'histoire dans l'ordre"
+          },
+          "patternCompletion": {
+            "title": "Compléter le motif",
+            "subtitle": "Prédis la prochaine forme"
+          },
+          "sudoku": {
+            "title": "Sudoku d'images",
+            "subtitle": "Complète la pièce manquante"
+          },
+          "memoryCards": {
+            "title": "Cartes mémoire",
+            "subtitle": "Trouve les paires correspondantes",
+            "instruction": "Mémorise les positions et retrouve les paires correspondantes.",
+            "memorizeTitle": "Mémorise !",
+            "playTitle": "Trouve la paire"
+          },
+          "dragAndDropCounting": {
+            "title": "Déplacer les objets",
+            "subtitle": "Déplace le nombre demandé d'objets"
+          },
+          "dragAndDropPositioning": {
+            "title": "Placer l'objet",
+            "subtitle": "Place l'objet au bon endroit"
+          },
+          "hangman": {
+            "title": "Pendu",
+            "subtitle": "Devine le mot"
+          }
+        }
       },
-      "sequencingStories": {
-        "title": "Séquençage d'histoire",
-        "subtitle": "Remets l'histoire dans l'ordre"
+      "games": {
+        "hangman": {
+          "speak": {
+            "win": "Super ! Tu as trouvé le mot !",
+            "wordWas": "Le mot était"
+          },
+          "remainingLives": "Vies restantes",
+          "category": "Catégorie",
+          "pickLetter": "Choisis une lettre",
+          "youWinTitle": "Bravo !",
+          "youWinDesc": "Tu as trouvé le mot !",
+          "youLoseTitle": "Tu as perdu",
+          "wordLabel": "Mot",
+          "newGame": "Nouvelle partie"
+        },
+        "objectCollector": {
+          "title": "Collecteur d'objets",
+          "subtitle": "Ramasse les bons objets dans le panier",
+          "instructions": "Déplace le panier avec les flèches ← → ou en le faisant glisser avec ton doigt/souris",
+          "youWin": "Bravo !",
+          "gameOver": "Fin de la partie",
+          "finalScore": "Score",
+          "collectFruits": "Ramasse seulement les fruits !",
+          "collectAnimals": "Ramasse seulement les animaux !",
+          "collectVehicles": "Ramasse seulement les véhicules !",
+          "collectRed": "Ramasse seulement les objets rouges !",
+          "collectFood": "Ramasse seulement la nourriture !",
+          "collectSchoolItems": "Ramasse seulement les affaires d'école !",
+          "collectToys": "Ramasse seulement les jouets !",
+          "collectLargeAnimals": "Ramasse seulement les grands animaux !"
+        },
+        "emotionPuppet": {
+          "title": "Marionnette des émotions",
+          "subtitle": "Assemble les parties du visage"
+        }
       },
-      "patternCompletion": {
-        "title": "Compléter le motif",
-        "subtitle": "Prédis la prochaine forme"
-      },
-      "sudoku": {
-        "title": "Sudoku d'images",
-        "subtitle": "Complète la pièce manquante"
-      },
-      "memoryCards": {
-        "title": "Cartes mémoire",
-        "subtitle": "Trouve les paires correspondantes",
-        "instruction": "Mémorise les positions et retrouve les paires correspondantes.",
-        "memorizeTitle": "Mémorise !",
-        "playTitle": "Trouve la paire"
-      },
-      "dragAndDropCounting": {
-        "title": "Déplacer les objets",
-        "subtitle": "Déplace le nombre demandé d'objets"
-      },
-      "dragAndDropPositioning": {
-        "title": "Placer l'objet",
-        "subtitle": "Place l'objet au bon endroit"
-      },
-      "hangman": {
-        "title": "Pendu",
-        "subtitle": "Devine le mot"
-      }
-    }
-  },
-  "games": {
-    "hangman": {
-      "speak": {
-        "win": "Super ! Tu as trouvé le mot !",
-        "wordWas": "Le mot était"
-      },
-      "remainingLives": "Vies restantes",
-      "category": "Catégorie",
-      "pickLetter": "Choisis une lettre",
-      "youWinTitle": "Bravo !",
-      "youWinDesc": "Tu as trouvé le mot !",
-      "youLoseTitle": "Tu as perdu",
-      "wordLabel": "Mot",
-      "newGame": "Nouvelle partie"
-    },
-    "objectCollector": {
-      "title": "Collecteur d'objets",
-      "subtitle": "Ramasse les bons objets dans le panier",
-      "instructions": "Déplace le panier avec les flèches ← → ou en le faisant glisser avec ton doigt/souris",
-      "youWin": "Bravo !",
-      "gameOver": "Fin de la partie",
-      "finalScore": "Score",
-      "collectFruits": "Ramasse seulement les fruits !",
-      "collectAnimals": "Ramasse seulement les animaux !",
-      "collectVehicles": "Ramasse seulement les véhicules !",
-      "collectRed": "Ramasse seulement les objets rouges !",
-      "collectFood": "Ramasse seulement la nourriture !",
-      "collectSchoolItems": "Ramasse seulement les affaires d'école !",
-      "collectToys": "Ramasse seulement les jouets !",
-      "collectLargeAnimals": "Ramasse seulement les grands animaux !"
-    },
-    "emotionPuppet": {
-      "title": "Marionnette des émotions",
-      "subtitle": "Assemble les parties du visage"
-    }
-  },
       "title": "Déroulé du jour",
       "thisSession": "Dans cette session, dans l'ordre :",
       "ifGood": "Si tout se passe bien, prochaine session :"
@@ -745,9 +762,8 @@
     "thisUpdate": {
       "title": "Dans cette mise à jour",
       "items": [
-        "Nouvelle activité : Combien ? - Associez les gestes des mains avec des groupes d'animaux en comptant (dans Apprentissage Conceptuel → Quantité)",
-        "Mode d'accompagnement doux : Lorsque votre enfant répète la même activité trop rapidement, un écran de retour calme et doux apparaît. Il rappelle de se concentrer sur l'écran et de respirer (peut être activé/désactivé dans Paramètres)",
-        "Évaluation Play Store : Évaluez notre application et obtenez 1 semaine d'accès premium ! (accessible depuis le menu Paramètres)"
+        "Centre d'impression (Fiches de travail) ajouté : Générez des supports éducatifs imprimables.",
+        "Les fiches fonctionnent parfaitement sur ordinateur. Les performances sur mobile sont actuellement en cours de test."
       ],
       "_tempNotes": [
         "NOTE : Ces éléments sont temporaires — ils seront retirés des fichiers i18n lors de la prochaine version."

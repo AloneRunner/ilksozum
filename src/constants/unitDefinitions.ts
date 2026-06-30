@@ -6,10 +6,12 @@
 import { UnitDefinition } from '../types';
 import { ActivityType } from '../types';
 
+const UNIT_COMPLETION_THRESHOLD = 0.75;
+
 /**
  * 10-Unit Skill Pyramid
  * Units unlock sequentially as the child masters activities
- * Each unit requires 80% completion before next unit unlocks
+ * Each unit requires 75% completion before next unit unlocks
  */
 export const UNIT_DEFINITIONS: UnitDefinition[] = [
   {
@@ -24,7 +26,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       'tasitlar',
       'oyuncaklar',
     ],
-    completionThreshold: 0.8, // 80% of activities must be mastered
+    completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [], // No prerequisites - first unit is always unlocked
   },
   {
@@ -39,7 +41,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       'giysiler_aksesuarlar',
       'ev_esyalari',
     ],
-    completionThreshold: 0.8,
+    completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [1],
   },
   {
@@ -53,7 +55,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       'sebzeler',
       'diger_yiyecekler',
     ],
-    completionThreshold: 0.8,
+    completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [2],
   },
   {
@@ -68,7 +70,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       'bitkiler',
       'aile_uyeleri',
     ],
-    completionThreshold: 0.8,
+    completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [3],
   },
   {
@@ -87,7 +89,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       ActivityType.DikenliPuruzsuz,
       ActivityType.DugumCozuk,
     ],
-    completionThreshold: 0.8,
+    completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [4],
   },
   {
@@ -103,7 +105,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       ActivityType.HeavyLight,
       ActivityType.BitterSweet,
     ],
-    completionThreshold: 0.8,
+    completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [5],
   },
   {
@@ -128,7 +130,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       ActivityType.ParlakMat,
       ActivityType.OldNew,
     ],
-    completionThreshold: 0.8,
+    completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [6],
   },
   {
@@ -146,7 +148,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       ActivityType.MessyClean,
       ActivityType.StraightCurved,
     ],
-    completionThreshold: 0.8,
+    completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [7],
   },
   {
@@ -168,7 +170,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       ActivityType.HungryFull,
       ActivityType.YoungOld,
     ],
-    completionThreshold: 0.8,
+    completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [8],
   },
   {
@@ -192,7 +194,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       ActivityType.Syllabification,
       ActivityType.EmbeddedStory,
     ],
-    completionThreshold: 0.8,
+    completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [9],
   },
 ];

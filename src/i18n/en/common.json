@@ -138,6 +138,10 @@
       "title": "Sound Imitation Cards",
       "subtitle": "Sound imitation cards for nonverbal children",
       "badge": "New — Experimental Activity"
+    },
+    "miniGames": {
+      "title": "🎮 Mini Games",
+      "subtitle": "Play fun mini games and learn while relaxing!"
     }
   },
   "experimental": {
@@ -243,5 +247,32 @@
   "play": "Play",
   "pause": "Pause",
   "back": "Back",
-  "lyrics": "Lyrics"
+  "lyrics": "Lyrics",
+  "miniGames": {
+    "menuSubtitle": "Choose fun games and play!",
+    "comingSoon": "More Games Coming Soon!",
+    "stayTuned": "Stay tuned for new fun games!",
+    "balloonPop": {
+      "title": "Balloon Pop Festival",
+      "description": "Pop balloons to earn points! Fast and fun!",
+      "welcome": "Welcome!",
+      "instructions": "Pop balloons to earn points! Special balloons give extra points. Get 5 combo for double points!"
+    },
+    "starCatcher": {
+      "title": "Star Catcher",
+      "description": "Catch falling stars, avoid clouds!",
+      "welcome": "Star Catcher",
+      "instructions": "Collect stars and fruits, avoid clouds! Slide your finger to move the cat."
+    },
+    "score": "Score",
+    "time": "Time",
+    "doublePoints": "DOUBLE POINTS!",
+    "startGame": "Start Game!",
+    "highScore": "High Score",
+    "newHighScore": "NEW RECORD!",
+    "gameOver": "Game Over!",
+    "yourScore": "Your Score",
+    "playAgain": "Play Again",
+    "backToMenu": "Back to Menu"
+  }
 }

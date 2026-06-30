@@ -16,3 +16,6 @@ export * from './reasoning/sudokuData';
 export * from './reasoning/memoryCardsData';
 export * from './reasoning/dragAndDropCountingData';
 export * from './reasoning/dragAndDropPositioningData';
+export * from './reasoning/ownershipData';
+export * from './reasoning/colorRecognitionData';
+export * from './reasoning/whatsMissingData';

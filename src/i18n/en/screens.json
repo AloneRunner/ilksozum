@@ -73,6 +73,17 @@
       "title": "Program Mode",
       "subtitle": "Start a guided daily session"
     },
+    "audioIssue": {
+      "title": "If text-to-speech isn't working",
+      "line4": "Note: On older Samsung models, Google TTS can be forcibly disabled; if the Turkish voice pack isn't installed, some devices may have no speech or a strong English accent.",
+      "line1": "Settings > Mute Mode should be off. (It might have stayed on after Premium ended)",
+      "line2": "Device Settings > Text-to-Speech (TTS): select Google TTS engine.",
+      "line3": "In Google TTS, we recommend voice #4 out of 5; switch and try again."
+    },
+    "themeFeedback": {
+      "title": "Theme feedback request",
+      "body": "I’m considering removing some themes. Video background themes take a lot of space and the app may exceed 200 MB. Do you actually use those themes? Please let me know. I want to add real photo versions of the current visuals in the freed space."
+    },
     "parentTips": {
       "title": "Tips for Parents",
       "subtitle": "Use the app more effectively"
@@ -261,7 +272,12 @@
       "memoryCards": "Memory Cards",
       "dragAndDropCounting": "Move Objects",
       "dragAndDropPositioning": "Place the Ball",
-      "hangman": "Hangman"
+      "hangman": "Hangman",
+      "whoseIsThis": "Whose Is This?",
+      "whatsMissing": "What's Missing?"
+    },
+    "concept": {
+      "colorRecognition": "What Color Is It?"
     },
     "fineMotor": {
       "lineTracing": "Line Tracing",
@@ -357,7 +373,7 @@
     "title": "Settings",
     "premium": {
       "title": "Premium Features",
-      "desc": "Remove ads, unlock themed UI (live backgrounds), view parent progress reports, and support development.",
+      "desc": "All educational content is free and open to everyone. Premium offers comfort features like ad removal, themes, printout worksheets, and fast transitions. New users get a 7-day trial. You can purchase Premium to support us.",
       "cta": "Go Premium & Support",
       "mathQuestion": "Parent Gate:\n\nPlease solve this to continue:\n\n{num1} + {num2} = ?",
       "wrongAnswer": "Wrong answer. Please try again.",
@@ -366,6 +382,7 @@
       "monthly": "Monthly",
       "lifetime": "Lifetime"
     },
+    "promoNote": "Gift Premium: All features unlocked until {date}. If you wish, you can purchase Premium to support us — support will be used for porting to iOS platform (annual fee).",
     "profile": {
       "title": "Profile",
       "active": "Active Profile",
@@ -747,9 +764,8 @@
     "thisUpdate": {
       "title": "In This Update",
       "items": [
-        "New Activity: How Many? - Match hand gestures with animal groups by counting (found in Concept Learning → Quantity section)",
-        "Gentle Guidance Mode: When your child repeats the same activity too quickly, a calm and gentle feedback screen appears. It reminds them to focus on the screen and take a breath (can be toggled in Settings)",
-        "Play Store Review: Rate our app and get 1 week of premium access! (accessible from Settings menu)"
+        "Added Printout Center (Worksheets): Generate educational print materials for your child.",
+        "Printouts are tested and working perfectly on computers. Mobile device performance is currently under testing."
       ],
       "_tempNotes": [
         "NOTE: The following items are temporary notes — they will be removed from i18n files in the next update."

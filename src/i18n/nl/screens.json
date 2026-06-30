@@ -73,6 +73,17 @@
       "title": "Programmamodus",
       "subtitle": "Start een begeleide dagelijkse sessie"
     },
+    "audioIssue": {
+      "title": "Als de spraak niet werkt",
+      "line4": "Let op: Op oudere Samsung-modellen kan Google TTS geforceerd worden uitgeschakeld; als het Turkse taalpakket niet is geïnstalleerd, is er op sommige toestellen geen spraak of klinkt het met een sterk Engels accent.",
+      "line1": "Instellingen > Stilmodus moet uit staan. (Misschien bleef dit aan na Premium)",
+      "line2": "Apparaatinstellingen > Tekst-naar-spraak (TTS): kies Google TTS.",
+      "line3": "In Google TTS raden we stem #4 van 5 aan; wissel en probeer opnieuw."
+    },
+    "themeFeedback": {
+      "title": "Feedback over thema’s",
+      "body": "Ik overweeg enkele thema’s te verwijderen. Thema’s met video-achtergronden nemen veel ruimte in en de app kan boven 200 MB komen. Gebruiken jullie die thema’s echt? Laat het weten. Ik wil echte fotoversies van de huidige visuals toevoegen."
+    },
     "parentTips": {
       "title": "Tips voor ouders",
       "subtitle": "Gebruik de app effectiever"
@@ -124,8 +135,7 @@
         "mixed": "Gemengd"
       },
       "instructions": "Tik op een planeet om een categorie te kiezen"
-    }
-    ,
+    },
     "soundImitation": {
       "title": "Geluidsnasilatie Kaarten",
       "subtitle": "Kaarten voor geluidsnasilatie voor niet‑verbale kinderen",
@@ -261,7 +271,12 @@
       "memoryCards": "Geheugenkaarten",
       "dragAndDropCounting": "Objecten verplaatsen",
       "dragAndDropPositioning": "Plaats de bal",
-      "hangman": "Galgje"
+      "hangman": "Galgje",
+      "whoseIsThis": "Van wie is dit?",
+      "whatsMissing": "Wat ontbreekt?"
+    },
+    "concept": {
+      "colorRecognition": "Welke kleur is het?"
     },
     "fineMotor": {
       "lineTracing": "Lijnen traceren",
@@ -281,7 +296,7 @@
     "title": "Instellingen",
     "premium": {
       "title": "Premiumfuncties",
-      "desc": "Verwijder advertenties, ontgrendel de thema‑interface (bewegende achtergronden), bekijk voortgangsrapporten voor ouders en steun de ontwikkeling.",
+      "desc": "Alle educatieve inhoud is gratis en voor iedereen toegankelijk. Premium biedt extra functies zoals geen advertenties, thema's, afdrukbare werkbladen en snelle overgangen. Nieuwe gebruikers krijgen een proefperiode van 7 dagen. U kunt Premium kopen om ons te steunen.",
       "cta": "Word Premium & steun ons",
       "mathQuestion": "Ouderbevestiging:\n\nBeantwoord deze vraag om door te gaan:\n\n{num1} + {num2} = ?",
       "wrongAnswer": "Fout antwoord. Probeer het opnieuw.",
@@ -290,6 +305,7 @@
       "monthly": "Maandelijks",
       "lifetime": "Levenslang"
     },
+    "promoNote": "Cadeau Premium: Alle functies ontgrendeld tot {date}. Als u wilt, kunt u Premium kopen om ons te steunen — de steun zal worden gebruikt voor het porteren naar het iOS-platform (jaarlijkse kosten).",
     "profile": {
       "title": "Profiel",
       "active": "Actief profiel",
@@ -661,82 +677,82 @@
       "EmbeddedStory": "Ingebed verhaal"
     },
     "planPreview": {
-  "reasoning": {
-    "title": "Redeneerspellen",
-    "activities": {
-      "whatDoesntBelong": {
-        "title": "Welke hoort niet?",
-        "subtitle": "Zoek wat er niet bij hoort"
+      "reasoning": {
+        "title": "Redeneerspellen",
+        "activities": {
+          "whatDoesntBelong": {
+            "title": "Welke hoort niet?",
+            "subtitle": "Zoek wat er niet bij hoort"
+          },
+          "sequencingStories": {
+            "title": "Verhaalvolgorde",
+            "subtitle": "Zet het verhaal in de juiste volgorde"
+          },
+          "patternCompletion": {
+            "title": "Patroon aanvullen",
+            "subtitle": "Voorspel de volgende vorm"
+          },
+          "sudoku": {
+            "title": "Beeld-Sudoku",
+            "subtitle": "Vul het ontbrekende stukje in"
+          },
+          "memoryCards": {
+            "title": "Geheugenkaarten",
+            "subtitle": "Zoek de passende paren",
+            "instruction": "Onthoud de posities en vind de passende paren.",
+            "memorizeTitle": "Onthoud!",
+            "playTitle": "Vind het paar"
+          },
+          "dragAndDropCounting": {
+            "title": "Objecten verplaatsen",
+            "subtitle": "Verplaats het gevraagde aantal items"
+          },
+          "dragAndDropPositioning": {
+            "title": "Object plaatsen",
+            "subtitle": "Plaats het item op de juiste plek"
+          },
+          "hangman": {
+            "title": "Galgje",
+            "subtitle": "Raad het woord"
+          }
+        }
       },
-      "sequencingStories": {
-        "title": "Verhaalvolgorde",
-        "subtitle": "Zet het verhaal in de juiste volgorde"
+      "games": {
+        "hangman": {
+          "speak": {
+            "win": "Goed gedaan! Je hebt het woord gevonden!",
+            "wordWas": "Het woord was"
+          },
+          "remainingLives": "Resterende levens",
+          "category": "Categorie",
+          "pickLetter": "Kies een letter",
+          "youWinTitle": "Goed gedaan!",
+          "youWinDesc": "Je hebt het woord gevonden!",
+          "youLoseTitle": "Je hebt verloren",
+          "wordLabel": "Woord",
+          "newGame": "Nieuw spel"
+        },
+        "objectCollector": {
+          "title": "Objectenverzamelaar",
+          "subtitle": "Verzamel de juiste objecten in de mand",
+          "instructions": "Beweeg de mand met de pijltjes ← → of sleep met je vinger/muis",
+          "youWin": "Goed gedaan!",
+          "gameOver": "Spel afgelopen",
+          "finalScore": "Score",
+          "collectFruits": "Verzamel alleen het fruit!",
+          "collectAnimals": "Verzamel alleen de dieren!",
+          "collectVehicles": "Verzamel alleen de voertuigen!",
+          "collectRed": "Verzamel alleen de rode objecten!",
+          "collectFood": "Verzamel alleen het eten!",
+          "collectSchoolItems": "Verzamel alleen de schoolspullen!",
+          "collectToys": "Verzamel alleen het speelgoed!",
+          "collectLargeAnimals": "Verzamel alleen de grote dieren!"
+        },
+        "emotionPuppet": {
+          "title": "Emotiepop",
+          "subtitle": "Combineer de gezichtsdelen"
+        }
       },
-      "patternCompletion": {
-        "title": "Patroon aanvullen",
-        "subtitle": "Voorspel de volgende vorm"
-      },
-      "sudoku": {
-        "title": "Beeld-Sudoku",
-        "subtitle": "Vul het ontbrekende stukje in"
-      },
-      "memoryCards": {
-        "title": "Geheugenkaarten",
-        "subtitle": "Zoek de passende paren",
-        "instruction": "Onthoud de posities en vind de passende paren.",
-        "memorizeTitle": "Onthoud!",
-        "playTitle": "Vind het paar"
-      },
-      "dragAndDropCounting": {
-        "title": "Objecten verplaatsen",
-        "subtitle": "Verplaats het gevraagde aantal items"
-      },
-      "dragAndDropPositioning": {
-        "title": "Object plaatsen",
-        "subtitle": "Plaats het item op de juiste plek"
-      },
-      "hangman": {
-        "title": "Galgje",
-        "subtitle": "Raad het woord"
-      }
-    }
-  },
-  "games": {
-    "hangman": {
-      "speak": {
-        "win": "Goed gedaan! Je hebt het woord gevonden!",
-        "wordWas": "Het woord was"
-      },
-      "remainingLives": "Resterende levens",
-      "category": "Categorie",
-      "pickLetter": "Kies een letter",
-      "youWinTitle": "Goed gedaan!",
-      "youWinDesc": "Je hebt het woord gevonden!",
-      "youLoseTitle": "Je hebt verloren",
-      "wordLabel": "Woord",
-      "newGame": "Nieuw spel"
-    },
-    "objectCollector": {
-      "title": "Objectenverzamelaar",
-      "subtitle": "Verzamel de juiste objecten in de mand",
-      "instructions": "Beweeg de mand met de pijltjes ← → of sleep met je vinger/muis",
-      "youWin": "Goed gedaan!",
-      "gameOver": "Spel afgelopen",
-      "finalScore": "Score",
-      "collectFruits": "Verzamel alleen het fruit!",
-      "collectAnimals": "Verzamel alleen de dieren!",
-      "collectVehicles": "Verzamel alleen de voertuigen!",
-      "collectRed": "Verzamel alleen de rode objecten!",
-      "collectFood": "Verzamel alleen het eten!",
-      "collectSchoolItems": "Verzamel alleen de schoolspullen!",
-      "collectToys": "Verzamel alleen het speelgoed!",
-      "collectLargeAnimals": "Verzamel alleen de grote dieren!"
-    },
-    "emotionPuppet": {
-      "title": "Emotiepop",
-      "subtitle": "Combineer de gezichtsdelen"
-    }
-  },
       "title": "Verloop van vandaag",
       "thisSession": "In deze sessie, op volgorde:",
       "ifGood": "Als het goed gaat, volgende sessie:"
@@ -748,9 +764,8 @@
     "thisUpdate": {
       "title": "In deze update",
       "items": [
-        "Nieuwe activiteit: Hoeveel? - Match handgebaren met dierengroepen door te tellen (te vinden in Conceptueel Leren → Hoeveelheid)",
-        "Zachte begeleidingsmodus: Wanneer je kind dezelfde activiteit te snel herhaalt, verschijnt een kalm en zacht feedbackscherm. Het herinnert eraan om op het scherm te focussen en adem te halen (kan worden in-/uitgeschakeld in Instellingen)",
-        "Play Store-beoordeling: Beoordeel onze app en krijg 1 week premium toegang! (toegankelijk via het menu Instellingen)"
+        "Afdrukcentrum (Werkbladen) toegevoegd: Genereer educatief afdrukmateriaal voor uw kind.",
+        "Afdrukken zijn met succes getest op computers. Prestaties op mobiele apparaten worden momenteel getest."
       ],
       "_tempNotes": [
         "OPMERKING: De volgende items zijn tijdelijke notities — ze worden in de volgende update uit de i18n-bestanden verwijderd."

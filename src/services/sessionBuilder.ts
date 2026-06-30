@@ -18,13 +18,14 @@
  *               fakat zayıf yok ve ek faaliyet de yoksa toplam 7’de kalır.
  *
  * 3) YENİ EŞİKLER (Kullanıcı Son Talebi - 09 Kasım 2025)
- *    Isınma için başarı eşiği: >= 0.80 (ustalaşmış kabul)
- *      - Seçim mantığı: 0.80 üzerindeki EN DÜŞÜK başarıya sahip etkinliği getir (yeni ustalaşmış olanı tekrar ettir)
- *    Pekiştirme için eşik: > 0 ve < 0.80 (henüz tam ustalaşmamış)
- *      - Seçim mantığı: 0.80 altındaki EN YÜKSEK başarıyı (eşiğe en yakın) öncele. Örn: %75, %60 varken %75 seçilir.
+ *    Isınma için başarı eşiği: >= 0.75 (ustalaşmış kabul)
+ *      - Seçim mantığı: 0.75 üzerindeki EN DÜŞÜK başarıya sahip etkinliği getir (yeni ustalaşmış olanı tekrar ettir)
+ *    Pekiştirme için eşik: > 0 ve < 0.75 (henüz tam ustalaşmamış)
+ *      - Seçim mantığı: 0.75 altındaki EN YÜKSEK başarıyı (eşiğe en yakın) öncele. Ornek: %74, %60 varken %74 seçilir.
  *    (Başarı oranı: doğru / toplam sorulan – history ve aggregate alanları üzerinden türetilir.)
  *
- * 4) Odak Ünitesi = bugün gösterilmesine izin verilen en yüksek ünite (allowedUnitCeiling veya istatistiklere göre)
+ * 4) Odak Ünitesi = 1'den başlayarak sırayla kontrol edilen ilk tamamlanmamış ünite.
+ *    - allowedUnitCeiling sadece üst sınırı belirler; odak açık olan en yüksek üniteye zıplamaz.
  *    - 1. ünite için özel kural: sadece o ünite ve 7 etkinlik.
  *
  * 5) Zayıf etkinlik bulunursa toplam 8’e çıkar; bulunmazsa 7’de kalır (ör: kullanıcı talebindeki 7–8 kuralı).
@@ -36,7 +37,9 @@
 import { ActivityType, ActivityStats, ParentOverride } from '../types';
 import { 
   getAvailableActivities, 
-  getMasteredActivities
+  getMasteredActivities,
+  isUnitCompleteForProgramMode,
+  PROGRAM_WIDE_MASTERY_THRESHOLD
 } from './masteryEngine';
 import { getUnitDefinition } from '../constants/unitDefinitions';
 import { getActivityMetadata } from '../constants/activityMetadata';
@@ -97,7 +100,7 @@ export function buildDailySession(
   };
   const randPick = <T,>(arr: T[], n: number) => arr.slice().sort(() => Math.random() - 0.5).slice(0, n);
 
-  // --- Focus (highest allowed unit) ---
+  // --- Focus (first incomplete unit, scanned sequentially from 1) ---
   const highestAllowedUnit = (() => {
     if (allowedUnitCeiling) return allowedUnitCeiling;
     let maxU = 1;
@@ -108,7 +111,15 @@ export function buildDailySession(
     return maxU;
   })();
 
-  const focusUnit = highestAllowedUnit;
+  const focusUnit = (() => {
+    for (let unitNumber = 1; unitNumber <= highestAllowedUnit; unitNumber += 1) {
+      if (!isUnitCompleteForProgramMode(unitNumber, allStats, masteredObjectCategories, parentOverrides, 6)) {
+        return unitNumber;
+      }
+    }
+
+    return highestAllowedUnit;
+  })();
   const focusDef = getUnitDefinition(focusUnit);
   const focusActivities = (focusDef?.activities || []).filter(a => {
     const meta = getActivityMetadata(a);
@@ -124,14 +135,14 @@ export function buildDailySession(
   }
 
   // Filter previous activities:
-  // Isınma adayları: başarı >= 0.80 (ustalaşmış). EN DÜŞÜK başarıyı seçmek için sıralama ascending.
-  const warmupCandidates = previousActivities.filter(id => successOf(id) >= 0.80);
-  // Pekiştirme adayları: başarı < 0.80 (include zeros so reinforcement appears even
+  // Isınma adayları: başarı >= 0.75 (ustalaşmış). EN DÜŞÜK başarıyı seçmek için sıralama ascending.
+  const warmupCandidates = previousActivities.filter(id => successOf(id) >= PROGRAM_WIDE_MASTERY_THRESHOLD);
+  // Pekiştirme adayları: başarı < 0.75 (include zeros so reinforcement appears even
   // when the child repeatedly failed and their percentage stuck below threshold).
   // Eşiğe yakın olanı öncelemek için descending sıralama.
   const weakCandidates = previousActivities.filter(id => {
     const s = successOf(id);
-    return s < 0.80; // include zero-success activities
+    return s < PROGRAM_WIDE_MASTERY_THRESHOLD; // include zero-success activities
   }).sort((a,b) => successOf(b) - successOf(a));
 
   // Debug logging to help trace why reinforcement may or may not be selected
@@ -159,7 +170,7 @@ export function buildDailySession(
   // 1) Warmup (1 high-success previous). If none, fall back to any previous mastered/attempted.
   let warmup: SessionActivity[] = [];
   if (warmupCandidates.length > 0) {
-    // EN DÜŞÜK başarı >=0.80 olanı al (tek)
+    // EN DÜŞÜK başarı >=0.75 olanı al (tek)
     const sortedAsc = warmupCandidates.sort((a,b)=> successOf(a)-successOf(b));
     const picked = [sortedAsc[0]];
     warmup = picked.map(id => createSessionActivity(id, 'warmup')).filter(Boolean) as SessionActivity[];

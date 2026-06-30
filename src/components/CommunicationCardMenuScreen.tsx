@@ -2,9 +2,7 @@ import React from "react";
 import { CommunicationCategory } from "../types.ts";
 import { getCurrentLanguage, t } from "../i18n/index.ts";
 import ArrowLeftIcon from "./icons/ArrowLeftIcon.tsx";
-import CosmicBackdrop from './ui/CosmicBackdrop.tsx';
 import UnderwaterBackdrop from './ui/UnderwaterBackdrop.tsx';
-import PanelStars from './ui/PanelStars.tsx';
 
 interface CommunicationCardMenuScreenProps {
   categories: CommunicationCategory[];
@@ -163,40 +161,45 @@ const CategoryButton: React.FC<{ category: CommunicationCategory; onClick: () =>
   const specialFocusRingClass = isCatTheme
     ? "focus:ring-orange-200/60"
     : isHilalTheme
-    ? "focus:ring-indigo-200/60"
-    : isSnowTheme
-    ? "focus:ring-sky-200/60"
-    : isFoxTheme
-    ? "focus:ring-amber-200/60"
-    : isZurafaTheme
-    ? "focus:ring-cyan-200/60"
-    : isSimpleTheme
-    ? "focus:ring-purple-200/60"
-    : "focus:ring-sky-200/60";
+      ? "focus:ring-indigo-200/60"
+      : isSnowTheme
+        ? "focus:ring-sky-200/60"
+        : isFoxTheme
+          ? "focus:ring-amber-200/60"
+          : isZurafaTheme
+            ? "focus:ring-cyan-200/60"
+            : isSimpleTheme
+              ? "focus:ring-purple-200/60"
+              : "focus:ring-sky-200/60";
 
   const isSpecialTheme = Boolean(paletteCollection);
 
-  // Cosmic variant: orb-like buttons with glowing rings and compact labels
+  // Robot Theme variant: Tech/Sci-Fi interface
   if (isCosmic) {
     return (
       <button
         onClick={onClick}
-        className="group relative flex flex-col items-center justify-start p-3 rounded-2xl bg-white/5 border border-cyan-300/30 hover:border-cyan-300/60 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 hover:scale-[1.02]"
+        className="group relative flex flex-col items-center justify-start p-4 rounded-xl bg-slate-800/50 border border-cyan-500/30 hover:border-cyan-400 backdrop-blur-sm transition-all duration-300 hover:bg-slate-800/80 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] w-full overflow-hidden"
       >
-        <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full p-[2px] bg-gradient-to-br from-cyan-400 via-indigo-500 to-fuchsia-500 shadow-[0_0_28px_rgba(14,165,233,0.35)]">
-          <div className="absolute -inset-1 rounded-full bg-cyan-400/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-          <div className="w-full h-full rounded-full bg-gradient-to-br from-slate-900/60 via-slate-800/35 to-slate-900/60 flex items-center justify-center">
-            <Icon className="w-8 h-8 sm:w-9 sm:h-9 text-white drop-shadow-md" />
+        {/* Tech Corner Accents */}
+        <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-cyan-500/50" />
+        <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-cyan-500/50" />
+        <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-cyan-500/50" />
+        <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-cyan-500/50" />
+
+        <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
+          <div className="absolute inset-0 bg-cyan-400/10 rounded-lg transform rotate-3 group-hover:rotate-6 transition-transform" />
+          <div className="absolute inset-0 bg-slate-700/80 rounded-lg border border-cyan-500/30 flex items-center justify-center transform group-hover:scale-105 transition-transform">
+            <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-100 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
           </div>
-          {/* subtle orbit highlight */}
-          <div className="pointer-events-none absolute inset-0 rounded-full ring-1 ring-cyan-300/30" />
         </div>
-        <h2 className="mt-2 text-sm font-bold text-white text-center leading-snug line-clamp-2">
+
+        <h2 className="mt-2 text-sm font-bold text-cyan-100 text-center leading-snug font-mono tracking-wide uppercase">
           {displayedTitle}
         </h2>
         {isUnderDevelopment && (
-          <span className="mt-1 inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold bg-amber-400/90 text-black shadow-sm">
-            {t("app.developing", "Under development")}
+          <span className="mt-2 inline-flex items-center rounded px-1.5 py-0.5 text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 font-mono">
+            {t("app.developing", "Geliştiriliyor")}
           </span>
         )}
       </button>
@@ -214,46 +217,45 @@ const CategoryButton: React.FC<{ category: CommunicationCategory; onClick: () =>
       'from-blue-500 to-cyan-400',
     ];
     // Use category index or hash for consistent color assignment
-    const colorIndex = typeof category === 'object' && 'id' in category 
-      ? (category.id as string).charCodeAt(0) % jellyfishColors.length 
+    const colorIndex = typeof category === 'object' && 'id' in category
+      ? (category.id as string).charCodeAt(0) % jellyfishColors.length
       : 0;
     const jellyfishColor = jellyfishColors[colorIndex];
-    
+
     return (
       <button
         onClick={onClick}
-        className={`group relative flex flex-col items-center transition-all duration-300 ${
-          isUnderDevelopment ? 'opacity-60 cursor-not-allowed' : 'hover:scale-110 cursor-pointer'
-        }`}
+        className={`group relative flex flex-col items-center transition-all duration-300 ${isUnderDevelopment ? 'opacity-60 cursor-not-allowed' : 'hover:scale-110 cursor-pointer'
+          }`}
       >
         {/* Jellyfish body (dome) */}
         <div className={`w-28 h-14 rounded-t-full bg-gradient-to-b ${jellyfishColor} border-2 border-white/30 backdrop-blur-sm shadow-lg relative overflow-hidden ${!isUnderDevelopment && 'group-hover:shadow-2xl'}`}>
           {/* Shine effect */}
           <div className="absolute top-1 left-4 w-5 h-5 bg-white/40 rounded-full blur-sm"></div>
           <div className="absolute top-2 right-5 w-2 h-2 bg-white/30 rounded-full blur-sm"></div>
-          
+
           {/* Icon in center */}
           <div className="absolute inset-0 flex items-center justify-center">
             <Icon className="w-9 h-9 text-white drop-shadow-md" />
           </div>
         </div>
-        
+
         {/* Tentacles */}
         <div className="flex gap-0.5 justify-center -mt-1">
           {[...Array(10)].map((_, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className={`w-0.5 h-9 bg-gradient-to-b ${jellyfishColor} opacity-60 rounded-full`}
               style={{ height: `${28 + Math.random() * 10}px` }}
             />
           ))}
         </div>
-        
+
         {/* Title */}
         <h2 className="mt-2 text-sm font-bold text-cyan-100 text-center leading-snug line-clamp-2 px-1">
           {displayedTitle}
         </h2>
-        
+
         {isUnderDevelopment && (
           <span className="mt-1 inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold bg-amber-400/90 text-black shadow-sm">
             {t("app.developing", "Under development")}
@@ -268,10 +270,10 @@ const CategoryButton: React.FC<{ category: CommunicationCategory; onClick: () =>
 
   const buttonStyle = isSpecialTheme
     ? {
-        background: specialPalette?.gradient,
-        borderColor: specialPalette?.border,
-        boxShadow: specialPalette?.shadow,
-      }
+      background: specialPalette?.gradient,
+      borderColor: specialPalette?.border,
+      boxShadow: specialPalette?.shadow,
+    }
     : undefined;
 
   const labelClass = isSpecialTheme ? specialPalette?.textClass ?? "text-slate-900" : defaultPalette.text;
@@ -285,16 +287,16 @@ const CategoryButton: React.FC<{ category: CommunicationCategory; onClick: () =>
   const accentClass = isCatTheme
     ? "ml-2 text-2xl animate-bounce drop-shadow-[0_4px_10px_rgba(249,115,22,0.35)]"
     : isSimpleTheme
-    ? "ml-2 text-2xl animate-pulse drop-shadow-[0_4px_12px_rgba(147,51,234,0.25)] text-purple-500"
-    : isHilalTheme
-    ? "ml-2 text-2xl animate-cat-wave drop-shadow-[0_4px_12px_rgba(79,70,229,0.35)] text-indigo-500"
-    : isSnowTheme
-    ? "ml-2 text-2xl animate-pulse drop-shadow-[0_4px_12px_rgba(56,189,248,0.25)] text-sky-500"
-    : isFoxTheme
-    ? "ml-2 text-2xl animate-bounce drop-shadow-[0_4px_12px_rgba(245,158,11,0.28)] text-amber-500"
-    : isZurafaTheme
-    ? "ml-2 text-2xl animate-bounce drop-shadow-[0_4px_12px_rgba(6,182,212,0.35)] text-cyan-500"
-    : "";
+      ? "ml-2 text-2xl animate-pulse drop-shadow-[0_4px_12px_rgba(147,51,234,0.25)] text-purple-500"
+      : isHilalTheme
+        ? "ml-2 text-2xl animate-cat-wave drop-shadow-[0_4px_12px_rgba(79,70,229,0.35)] text-indigo-500"
+        : isSnowTheme
+          ? "ml-2 text-2xl animate-pulse drop-shadow-[0_4px_12px_rgba(56,189,248,0.25)] text-sky-500"
+          : isFoxTheme
+            ? "ml-2 text-2xl animate-bounce drop-shadow-[0_4px_12px_rgba(245,158,11,0.28)] text-amber-500"
+            : isZurafaTheme
+              ? "ml-2 text-2xl animate-bounce drop-shadow-[0_4px_12px_rgba(6,182,212,0.35)] text-cyan-500"
+              : "";
 
   return (
     <button onClick={onClick} className={baseClasses} style={buttonStyle}>
@@ -322,24 +324,70 @@ const CommunicationCardMenuScreen: React.FC<CommunicationCardMenuScreenProps> = 
   const isSimpleTheme = theme === "simple";
   const isCosmic = theme === 'deneme2';
 
+  // Robot Theme (Cosmic) - Full Layout Override
+  if (isCosmic) {
+    return (
+      <div className="relative h-full flex flex-col overflow-hidden bg-slate-900">
+        {/* Tech Background Grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-transparent to-slate-900/80 pointer-events-none" />
+
+        {/* Header */}
+        <div className="relative z-10 flex items-center justify-between px-4 py-3 border-b border-cyan-500/20 bg-slate-800/50 backdrop-blur-md">
+          <button
+            onClick={onBack}
+            className="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-700/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 hover:text-cyan-200 transition-all"
+          >
+            <ArrowLeftIcon className="w-6 h-6" />
+          </button>
+
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            <span className="text-cyan-100 font-bold tracking-wider font-mono text-lg uppercase">
+              {t("communication.title", "İfade Kartları")}
+            </span>
+          </div>
+
+          <div className="w-10" /> {/* Spacer */}
+        </div>
+
+        {/* Subtitle / Tip */}
+        <div className="relative z-10 px-4 py-2 text-center">
+          <p className="text-cyan-400/60 font-mono text-xs">
+            {t("communication.subtitle", "Cümle kurmak için bir başlangıç seç.")}
+          </p>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 flex-1 overflow-y-auto p-4">
+          <div className="grid grid-cols-2 landscape:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            {categories.map((category) => (
+              <CategoryButton key={category.id} category={category} onClick={() => onSelectCategory(category)} theme={theme} />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   const specialStyles = isCatTheme
     ? {
-        titleColorClass: "text-orange-800 drop-shadow-[0_4px_12px_rgba(255,255,255,0.55)]",
-        subtitleColorClass: "text-orange-900 drop-shadow-[0_3px_10px_rgba(255,255,255,0.4)]",
-        headerWrapperClass: "rounded-3xl bg-white/55 px-4 py-3 shadow-xl shadow-orange-200/25 backdrop-blur-xl border border-orange-200/40",
-        backButtonClass: "bg-orange-100/70 text-orange-700 hover:bg-orange-100/90",
-        containerClass: "relative w-full flex-grow overflow-y-auto pr-2 pt-2",
-        overlayClass: "absolute inset-0 rounded-[32px] bg-gradient-to-b from-white/28 via-white/12 to-white/5 border border-orange-200/35 shadow-inner shadow-orange-200/18 backdrop-blur-md",
-        overlayTopClass: "hidden sm:block absolute -top-8 -left-3 text-4xl opacity-70 drop-shadow-[0_10px_20px_rgba(249,115,22,0.2)]",
-        overlayTopEmoji: "🐾",
-        overlayBottomClass: "hidden sm:block absolute bottom-5 -right-2 text-4xl opacity-60 drop-shadow-[0_10px_20px_rgba(249,115,22,0.18)]",
-        overlayBottomEmoji: "🐱",
-        listWrapperClass: "space-y-4 relative px-3 pb-5",
-        titleAccentEmoji: "🐱",
-        titleAccentClass: "ml-2 text-3xl animate-bounce drop-shadow-[0_4px_12px_rgba(249,115,22,0.3)] text-orange-500",
-      }
+      titleColorClass: "text-orange-800 drop-shadow-[0_4px_12px_rgba(255,255,255,0.55)]",
+      subtitleColorClass: "text-orange-900 drop-shadow-[0_3px_10px_rgba(255,255,255,0.4)]",
+      headerWrapperClass: "rounded-3xl bg-white/55 px-4 py-3 shadow-xl shadow-orange-200/25 backdrop-blur-xl border border-orange-200/40",
+      backButtonClass: "bg-orange-100/70 text-orange-700 hover:bg-orange-100/90",
+      containerClass: "relative w-full flex-grow overflow-y-auto pr-2 pt-2",
+      overlayClass: "absolute inset-0 rounded-[32px] bg-gradient-to-b from-white/28 via-white/12 to-white/5 border border-orange-200/35 shadow-inner shadow-orange-200/18 backdrop-blur-md",
+      overlayTopClass: "hidden sm:block absolute -top-8 -left-3 text-4xl opacity-70 drop-shadow-[0_10px_20px_rgba(249,115,22,0.2)]",
+      overlayTopEmoji: "🐾",
+      overlayBottomClass: "hidden sm:block absolute bottom-5 -right-2 text-4xl opacity-60 drop-shadow-[0_10px_20px_rgba(249,115,22,0.18)]",
+      overlayBottomEmoji: "🐱",
+      listWrapperClass: "space-y-4 relative px-3 pb-5",
+      titleAccentEmoji: "🐱",
+      titleAccentClass: "ml-2 text-3xl animate-bounce drop-shadow-[0_4px_12px_rgba(249,115,22,0.3)] text-orange-500",
+    }
     : isSimpleTheme
-    ? {
+      ? {
         titleColorClass: "text-purple-900 drop-shadow-[0_4px_14px_rgba(147,51,234,0.18)]",
         subtitleColorClass: "text-pink-700 drop-shadow-[0_3px_10px_rgba(236,72,153,0.14)]",
         headerWrapperClass:
@@ -358,107 +406,105 @@ const CommunicationCardMenuScreen: React.FC<CommunicationCardMenuScreenProps> = 
         titleAccentEmoji: "🦋",
         titleAccentClass: "ml-2 text-3xl animate-pulse drop-shadow-[0_4px_12px_rgba(147,51,234,0.25)] text-purple-500",
       }
-    : isHilalTheme
-    ? {
-        titleColorClass: "text-indigo-800 drop-shadow-[0_4px_12px_rgba(221,227,255,0.6)]",
-        subtitleColorClass: "text-indigo-900 drop-shadow-[0_3px_10px_rgba(199,210,254,0.45)]",
-        headerWrapperClass: "rounded-3xl bg-white/50 px-4 py-3 shadow-xl shadow-indigo-200/25 backdrop-blur-xl border border-indigo-200/40",
-        backButtonClass: "bg-indigo-100/60 text-indigo-700 hover:bg-indigo-100/80",
-        containerClass: "relative w-full flex-grow overflow-y-auto pr-2 pt-2",
-        overlayClass: "absolute inset-0 rounded-[32px] bg-gradient-to-b from-white/26 via-indigo-50/14 to-white/6 border border-indigo-200/35 shadow-inner shadow-indigo-200/18 backdrop-blur-md",
-        overlayTopClass: "hidden sm:block absolute -top-8 -left-2 text-4xl opacity-70 drop-shadow-[0_10px_20px_rgba(79,70,229,0.2)]",
-        overlayTopEmoji: "🌙",
-        overlayBottomClass: "hidden sm:block absolute bottom-5 -right-2 text-4xl opacity-60 drop-shadow-[0_10px_20px_rgba(79,70,229,0.18)]",
-        overlayBottomEmoji: "✨",
-        listWrapperClass: "space-y-4 relative px-3 pb-5",
-        titleAccentEmoji: "✨",
-        titleAccentClass: "ml-2 text-3xl animate-cat-wave drop-shadow-[0_4px_12px_rgba(79,70,229,0.28)] text-indigo-500",
-      }
-    : isSnowTheme
-    ? {
-        titleColorClass: "text-sky-900 drop-shadow-[0_4px_14px_rgba(148,197,253,0.5)]",
-        subtitleColorClass: "text-sky-800 drop-shadow-[0_3px_10px_rgba(191,219,254,0.4)]",
-        headerWrapperClass: "rounded-3xl bg-white/45 px-4 py-3 shadow-xl shadow-sky-200/25 backdrop-blur-2xl border border-sky-100/40",
-        backButtonClass: "bg-sky-100/60 text-sky-700 hover:bg-sky-100/80",
-        containerClass: "relative w-full flex-grow overflow-y-auto pr-2 pt-2",
-        overlayClass: "absolute inset-0 rounded-[32px] bg-gradient-to-b from-white/24 via-sky-100/14 to-sky-200/10 border border-sky-100/35 shadow-inner shadow-sky-100/18 backdrop-blur-lg",
-        overlayTopClass: "hidden sm:block absolute -top-8 -left-2 text-4xl opacity-70 drop-shadow-[0_10px_20px_rgba(125,211,252,0.2)]",
-        overlayTopEmoji: "❄️",
-        overlayBottomClass: "hidden sm:block absolute bottom-5 -right-2 text-4xl opacity-60 drop-shadow-[0_10px_20px_rgba(148,197,253,0.2)]",
-        overlayBottomEmoji: "❄️",
-        listWrapperClass: "space-y-4 relative px-3 pb-5",
-        titleAccentEmoji: "❄️",
-        titleAccentClass: "ml-2 text-3xl animate-pulse drop-shadow-[0_4px_12px_rgba(125,211,252,0.28)] text-sky-500",
-      }
-    : isFoxTheme
-    ? {
-        titleColorClass: "text-amber-900 drop-shadow-[0_4px_12px_rgba(255,255,255,0.55)]",
-        subtitleColorClass: "text-emerald-900 drop-shadow-[0_3px_10px_rgba(255,255,255,0.45)]",
-        headerWrapperClass: "rounded-3xl bg-white/52 px-4 py-3 shadow-xl shadow-emerald-100/24 backdrop-blur-xl border border-amber-100/40",
-        backButtonClass: "bg-amber-100/60 text-emerald-700 hover:bg-amber-100/80",
-        containerClass: "relative w-full flex-grow overflow-y-auto pr-2 pt-2",
-        overlayClass: "absolute inset-0 rounded-[32px] bg-gradient-to-b from-white/24 via-amber-50/12 to-emerald-50/10 border border-amber-100/35 shadow-inner shadow-emerald-100/18 backdrop-blur-lg",
-        overlayTopClass: "hidden sm:block absolute -top-8 -left-2 text-4xl opacity-68 drop-shadow-[0_10px_20px_rgba(245,158,11,0.2)]",
-        overlayTopEmoji: "✨",
-        overlayBottomClass: "hidden sm:block absolute bottom-5 -right-2 text-4xl opacity-60 drop-shadow-[0_10px_20px_rgba(56,161,105,0.2)]",
-        overlayBottomEmoji: "🦊",
-        listWrapperClass: "space-y-4 relative px-3 pb-5",
-        titleAccentEmoji: "🦊",
-        titleAccentClass: "ml-2 text-3xl animate-bounce drop-shadow-[0_4px_12px_rgba(245,158,11,0.28)] text-amber-500",
-      }
-  : isZurafaTheme
-    ? {
-        titleColorClass: "text-cyan-800 drop-shadow-[0_4px_12px_rgba(255,255,255,0.55)]",
-        subtitleColorClass: "text-cyan-900 drop-shadow-[0_3px_10px_rgba(255,255,255,0.4)]",
-        headerWrapperClass: "rounded-3xl bg-white/55 px-4 py-3 shadow-xl shadow-cyan-200/25 backdrop-blur-xl border border-cyan-200/40",
-        backButtonClass: "bg-cyan-100/70 text-cyan-700 hover:bg-cyan-100/90",
-        containerClass: "relative w-full flex-grow overflow-y-auto pr-2 pt-2",
-        overlayClass: "absolute inset-0 rounded-[32px] bg-gradient-to-b from-white/28 via-white/12 to-white/5 border border-cyan-200/35 shadow-inner shadow-cyan-200/18 backdrop-blur-md",
-        overlayTopClass: "hidden sm:block absolute -top-8 -left-3 text-4xl opacity-70 drop-shadow-[0_10px_20px_rgba(6,182,212,0.2)]",
-        overlayTopEmoji: "🦒",
-        overlayBottomClass: "hidden sm:block absolute bottom-5 -right-2 text-4xl opacity-60 drop-shadow-[0_10px_20px_rgba(6,182,212,0.18)]",
-        overlayBottomEmoji: "🌸",
-        listWrapperClass: "space-y-4 relative px-3 pb-5",
-        titleAccentEmoji: "🦒",
-        titleAccentClass: "ml-2 text-3xl animate-bounce drop-shadow-[0_4px_12px_rgba(6,182,212,0.3)] text-cyan-500",
-      }
-    : isCosmic
-    ? {
-        titleColorClass: "text-white text-shadow-soft",
-        subtitleColorClass: "text-white/90 text-shadow-soft",
-        headerWrapperClass:
-          "rounded-3xl bg-white/10 px-4 py-3 shadow-[0_18px_42px_rgba(14,165,233,0.25)] backdrop-blur-xl border border-cyan-200/30",
-        backButtonClass: "bg-white/20 text-white hover:bg-white/30",
-        containerClass: "relative w-full flex-grow overflow-y-auto pr-2 pt-2",
-        overlayClass:
-          "absolute inset-0 rounded-[32px] bg-white/5 border border-indigo-300/20 shadow-inner shadow-indigo-900/30 backdrop-blur-sm",
-        overlayTopClass: "hidden",
-        overlayTopEmoji: "",
-        overlayBottomClass: "hidden",
-        overlayBottomEmoji: "",
-        listWrapperClass: "grid grid-cols-2 landscape:grid-cols-3 gap-4 relative px-3 pb-6",
-        titleAccentEmoji: undefined as any,
-        titleAccentClass: "",
-      }
-    : isUnderwater
-    ? {
-        titleColorClass: "text-cyan-100 drop-shadow-[0_0_8px_rgba(6,182,212,0.8)]",
-        subtitleColorClass: "text-cyan-200/90 drop-shadow-[0_0_6px_rgba(6,182,212,0.6)]",
-        headerWrapperClass:
-          "rounded-3xl bg-cyan-900/20 px-4 py-3 shadow-[0_18px_42px_rgba(6,182,212,0.25)] backdrop-blur-xl border border-cyan-300/30",
-        backButtonClass: "bg-cyan-400/20 text-cyan-100 hover:bg-cyan-400/30",
-        containerClass: "relative w-full flex-grow overflow-y-auto pr-2 pt-2",
-        overlayClass:
-          "absolute inset-0 rounded-[32px] bg-gradient-to-b from-cyan-900/10 via-teal-900/5 to-blue-900/10 border border-cyan-300/20 shadow-inner shadow-cyan-900/30 backdrop-blur-sm",
-        overlayTopClass: "hidden sm:block absolute -top-8 -left-3 text-4xl opacity-70 drop-shadow-[0_10px_20px_rgba(6,182,212,0.2)]",
-        overlayTopEmoji: "🫧",
-        overlayBottomClass: "hidden sm:block absolute bottom-5 -right-2 text-4xl opacity-60 drop-shadow-[0_10px_20px_rgba(6,182,212,0.18)]",
-        overlayBottomEmoji: "🐠",
-        listWrapperClass: "grid grid-cols-2 landscape:grid-cols-3 gap-4 relative px-3 pb-6",
-        titleAccentEmoji: "🫧",
-        titleAccentClass: "ml-2 text-3xl animate-bounce drop-shadow-[0_4px_12px_rgba(6,182,212,0.3)] text-cyan-400",
-      }
-    : null;
+      : isHilalTheme
+        ? {
+          titleColorClass: "text-indigo-800 drop-shadow-[0_4px_12px_rgba(221,227,255,0.6)]",
+          subtitleColorClass: "text-indigo-900 drop-shadow-[0_3px_10px_rgba(199,210,254,0.45)]",
+          headerWrapperClass: "rounded-3xl bg-white/50 px-4 py-3 shadow-xl shadow-indigo-200/25 backdrop-blur-xl border border-indigo-200/40",
+          backButtonClass: "bg-indigo-100/60 text-indigo-700 hover:bg-indigo-100/80",
+          containerClass: "relative w-full flex-grow overflow-y-auto pr-2 pt-2",
+          overlayClass: "absolute inset-0 rounded-[32px] bg-gradient-to-b from-white/26 via-indigo-50/14 to-white/6 border border-indigo-200/35 shadow-inner shadow-indigo-200/18 backdrop-blur-md",
+          overlayTopClass: "hidden sm:block absolute -top-8 -left-2 text-4xl opacity-70 drop-shadow-[0_10px_20px_rgba(79,70,229,0.2)]",
+          overlayTopEmoji: "🌙",
+          overlayBottomClass: "hidden sm:block absolute bottom-5 -right-2 text-4xl opacity-60 drop-shadow-[0_10px_20px_rgba(79,70,229,0.18)]",
+          overlayBottomEmoji: "✨",
+          listWrapperClass: "space-y-4 relative px-3 pb-5",
+          titleAccentEmoji: "✨",
+          titleAccentClass: "ml-2 text-3xl animate-cat-wave drop-shadow-[0_4px_12px_rgba(79,70,229,0.28)] text-indigo-500",
+        }
+        : isSnowTheme
+          ? {
+            titleColorClass: "text-sky-900 drop-shadow-[0_4px_14px_rgba(148,197,253,0.5)]",
+            subtitleColorClass: "text-sky-800 drop-shadow-[0_3px_10px_rgba(191,219,254,0.4)]",
+            headerWrapperClass: "rounded-3xl bg-white/45 px-4 py-3 shadow-xl shadow-sky-200/25 backdrop-blur-2xl border border-sky-100/40",
+            backButtonClass: "bg-sky-100/60 text-sky-700 hover:bg-sky-100/80",
+            containerClass: "relative w-full flex-grow overflow-y-auto pr-2 pt-2",
+            overlayClass: "absolute inset-0 rounded-[32px] bg-gradient-to-b from-white/24 via-sky-100/14 to-sky-200/10 border border-sky-100/35 shadow-inner shadow-sky-100/18 backdrop-blur-lg",
+            overlayTopClass: "hidden sm:block absolute -top-8 -left-2 text-4xl opacity-70 drop-shadow-[0_10px_20px_rgba(125,211,252,0.2)]",
+            overlayTopEmoji: "❄️",
+            overlayBottomClass: "hidden sm:block absolute bottom-5 -right-2 text-4xl opacity-60 drop-shadow-[0_10px_20px_rgba(148,197,253,0.2)]",
+            overlayBottomEmoji: "❄️",
+            listWrapperClass: "space-y-4 relative px-3 pb-5",
+            titleAccentEmoji: "❄️",
+            titleAccentClass: "ml-2 text-3xl animate-pulse drop-shadow-[0_4px_12px_rgba(125,211,252,0.28)] text-sky-500",
+          }
+          : isFoxTheme
+            ? {
+              titleColorClass: "text-amber-900 drop-shadow-[0_4px_12px_rgba(255,255,255,0.55)]",
+              subtitleColorClass: "text-emerald-900 drop-shadow-[0_3px_10px_rgba(255,255,255,0.45)]",
+              headerWrapperClass: "rounded-3xl bg-white/52 px-4 py-3 shadow-xl shadow-emerald-100/24 backdrop-blur-xl border border-amber-100/40",
+              backButtonClass: "bg-amber-100/60 text-emerald-700 hover:bg-amber-100/80",
+              containerClass: "relative w-full flex-grow overflow-y-auto pr-2 pt-2",
+              overlayClass: "absolute inset-0 rounded-[32px] bg-gradient-to-b from-white/24 via-amber-50/12 to-emerald-50/10 border border-amber-100/35 shadow-inner shadow-emerald-100/18 backdrop-blur-lg",
+              overlayTopClass: "hidden sm:block absolute -top-8 -left-2 text-4xl opacity-68 drop-shadow-[0_10px_20px_rgba(245,158,11,0.2)]",
+              overlayTopEmoji: "✨",
+              overlayBottomClass: "hidden sm:block absolute bottom-5 -right-2 text-4xl opacity-60 drop-shadow-[0_10px_20px_rgba(56,161,105,0.2)]",
+              overlayBottomEmoji: "🦊",
+              listWrapperClass: "space-y-4 relative px-3 pb-5",
+              titleAccentEmoji: "🦊",
+              titleAccentClass: "ml-2 text-3xl animate-bounce drop-shadow-[0_4px_12px_rgba(245,158,11,0.28)] text-amber-500",
+            }
+            : isZurafaTheme
+              ? {
+                titleColorClass: "text-cyan-800 drop-shadow-[0_4px_12px_rgba(255,255,255,0.55)]",
+                subtitleColorClass: "text-cyan-900 drop-shadow-[0_3px_10px_rgba(255,255,255,0.4)]",
+                headerWrapperClass: "rounded-3xl bg-white/55 px-4 py-3 shadow-xl shadow-cyan-200/25 backdrop-blur-xl border border-cyan-200/40",
+                backButtonClass: "bg-cyan-100/70 text-cyan-700 hover:bg-cyan-100/90",
+                containerClass: "relative w-full flex-grow overflow-y-auto pr-2 pt-2",
+                overlayClass: "absolute inset-0 rounded-[32px] bg-gradient-to-b from-white/28 via-white/12 to-white/5 border border-cyan-200/35 shadow-inner shadow-cyan-200/18 backdrop-blur-md",
+                overlayTopClass: "hidden sm:block absolute -top-8 -left-3 text-4xl opacity-70 drop-shadow-[0_10px_20px_rgba(6,182,212,0.2)]",
+                overlayTopEmoji: "🦒",
+                overlayBottomClass: "hidden sm:block absolute bottom-5 -right-2 text-4xl opacity-60 drop-shadow-[0_10px_20px_rgba(6,182,212,0.18)]",
+                overlayBottomEmoji: "🌸",
+                listWrapperClass: "space-y-4 relative px-3 pb-5",
+                titleAccentEmoji: "🦒",
+                titleAccentClass: "ml-2 text-3xl animate-bounce drop-shadow-[0_4px_12px_rgba(6,182,212,0.3)] text-cyan-500",
+              }
+              : isCosmic
+                ? {
+                  titleColorClass: "text-cyan-100 font-mono font-bold tracking-wider",
+                  subtitleColorClass: "text-cyan-400 font-mono text-xs",
+                  headerWrapperClass: "relative z-10 flex items-center justify-between px-4 py-3 border-b border-cyan-500/20 bg-slate-800/80 backdrop-blur-md sticky top-0 w-full mb-0",
+                  backButtonClass: "flex items-center justify-center w-10 h-10 rounded-xl bg-slate-700/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 hover:text-cyan-200 transition-all absolute left-4",
+                  containerClass: "relative z-10 w-full flex-grow overflow-y-auto pr-2 pt-4",
+                  overlayClass: "absolute inset-0 bg-slate-900",
+                  overlayTopClass: "hidden",
+                  overlayTopEmoji: "",
+                  overlayBottomClass: "hidden",
+                  overlayBottomEmoji: "",
+                  listWrapperClass: "grid grid-cols-2 landscape:grid-cols-3 gap-4 relative px-4 pb-6 max-w-4xl mx-auto",
+                  titleAccentEmoji: undefined as any,
+                  titleAccentClass: "",
+                }
+                : isUnderwater
+                  ? {
+                    titleColorClass: "text-cyan-100 drop-shadow-[0_0_8px_rgba(6,182,212,0.8)]",
+                    subtitleColorClass: "text-cyan-200/90 drop-shadow-[0_0_6px_rgba(6,182,212,0.6)]",
+                    headerWrapperClass:
+                      "rounded-3xl bg-cyan-900/20 px-4 py-3 shadow-[0_18px_42px_rgba(6,182,212,0.25)] backdrop-blur-xl border border-cyan-300/30",
+                    backButtonClass: "bg-cyan-400/20 text-cyan-100 hover:bg-cyan-400/30",
+                    containerClass: "relative w-full flex-grow overflow-y-auto pr-2 pt-2",
+                    overlayClass:
+                      "absolute inset-0 rounded-[32px] bg-gradient-to-b from-cyan-900/10 via-teal-900/5 to-blue-900/10 border border-cyan-300/20 shadow-inner shadow-cyan-900/30 backdrop-blur-sm",
+                    overlayTopClass: "hidden sm:block absolute -top-8 -left-3 text-4xl opacity-70 drop-shadow-[0_10px_20px_rgba(6,182,212,0.2)]",
+                    overlayTopEmoji: "🫧",
+                    overlayBottomClass: "hidden sm:block absolute bottom-5 -right-2 text-4xl opacity-60 drop-shadow-[0_10px_20px_rgba(6,182,212,0.18)]",
+                    overlayBottomEmoji: "🐠",
+                    listWrapperClass: "grid grid-cols-2 landscape:grid-cols-3 gap-4 relative px-3 pb-6",
+                    titleAccentEmoji: "🫧",
+                    titleAccentClass: "ml-2 text-3xl animate-bounce drop-shadow-[0_4px_12px_rgba(6,182,212,0.3)] text-cyan-400",
+                  }
+                  : null;
 
   const titleColorClass = specialStyles?.titleColorClass ?? "text-white text-shadow-soft";
   const subtitleColorClass = specialStyles?.subtitleColorClass ?? "text-white/90 text-shadow-soft";
@@ -471,11 +517,7 @@ const CommunicationCardMenuScreen: React.FC<CommunicationCardMenuScreenProps> = 
 
   return (
     <div className="relative flex flex-col items-center justify-start h-full max-w-lg mx-auto p-4 animate-fade-in">
-      {isCosmic && (
-        <>
-          <CosmicBackdrop variant="light" showMeteors={false} />
-        </>
-      )}
+
       {isUnderwater && <UnderwaterBackdrop count={14} />}
       <div className={`w-full flex items-center mb-5 landscape:mb-3 relative ${headerWrapperClass}`}>
         <button
@@ -503,7 +545,7 @@ const CommunicationCardMenuScreen: React.FC<CommunicationCardMenuScreenProps> = 
             <span className={specialStyles.overlayBottomClass}>{specialStyles.overlayBottomEmoji}</span>
           </>
         )}
-        {isCosmic && <PanelStars count={64} className="rounded-[32px]" />}
+
         <div className={listWrapperClass}>
           {categories.map((category) => (
             <CategoryButton key={category.id} category={category} onClick={() => onSelectCategory(category)} theme={theme} />
