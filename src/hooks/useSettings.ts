@@ -5,13 +5,6 @@ import { getCurrentLanguage, setCurrentLanguage, type Locale } from '../i18n/ind
 import { useLocalStorage } from './useLocalStorage.ts';
 import { purchasePremium, getPaywallOptions, purchasePackageByIdentifier, syncPremiumEntitlement, restorePurchases } from '../services/monetizationService.ts';
 import { FREE_THEMES } from '../themes/themeManager.ts';
-import {
-    getLoyaltySnapshot,
-    isLoyaltyPremiumActive,
-    hasPendingCelebration,
-    consumeCelebration as consumeLoyaltyCelebration,
-    type LoyaltySnapshot,
-} from '../services/loyaltyService.ts';
 
 interface UseSettingsProps {
     showToast: (message: string, type?: 'error' | 'info', duration?: number) => void;
@@ -54,14 +47,6 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
         setCurrentLanguage(language);
     }, [language]);
 
-    const isTrialActive = useMemo(() => {
-        if (!trialStartDate) {
-            return false;
-        }
-        const sevenDaysInMillis = 7 * 24 * 60 * 60 * 1000;
-        return (Date.now() - trialStartDate) < sevenDaysInMillis;
-    }, [trialStartDate]);
-
     // Global promotion: Premium is a gift for everyone until August 1, 2026.
     // Extended through the summer (free access while BASARA + tracing features roll out
     // and the app is shared with special-education teachers).
@@ -72,28 +57,7 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
         return now < promotionEndDate;
     }, []);
 
-    // Loyalty premium: rolling 30-day window earns 30 days free premium.
-    // We track this in a tick so isPremium recomputes when it expires/awards.
-    const [loyaltyTick, setLoyaltyTick] = useState(0);
-    const bumpLoyalty = useCallback(() => setLoyaltyTick(t => t + 1), []);
-    const loyaltySnapshot: LoyaltySnapshot = useMemo(
-        () => getLoyaltySnapshot(),
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [loyaltyTick]
-    );
-    const isLoyaltyActive = useMemo(
-        () => isLoyaltyPremiumActive(),
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [loyaltyTick]
-    );
-
-    const [isLoyaltyCelebrationPending, setIsLoyaltyCelebrationPending] = useState<boolean>(() => hasPendingCelebration());
-    const acknowledgeLoyaltyCelebration = useCallback(() => {
-        consumeLoyaltyCelebration();
-        setIsLoyaltyCelebrationPending(false);
-    }, []);
-
-    const isPremium = hasPurchasedPremium || isTrialActive || isPromotionActive || isLoyaltyActive;
+    const isPremium = true;
 
     // Auto-disable fast mode when premium expires
     useEffect(() => {
@@ -335,12 +299,6 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
         isPremium,
         hasPurchasedPremium,
         promotion: { isActive: isPromotionActive, endsAt: promotionEndDate.toISOString() },
-        loyalty: {
-            ...loyaltySnapshot,
-            isCelebrationPending: isLoyaltyCelebrationPending,
-            acknowledgeCelebration: acknowledgeLoyaltyCelebration,
-            refresh: bumpLoyalty,
-        },
         paywall: { monthlyPrice: paywallMonthly, lifetimePrice: paywallLifetime, hasData: !!(paywallMonthly || paywallLifetime) },
         bannedImageIds,
         isMuted,

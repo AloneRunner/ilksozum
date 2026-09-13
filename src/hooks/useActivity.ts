@@ -7,7 +7,7 @@ import { shuffleArray } from '../utils.ts';
 import { t, getCurrentLanguage } from '../i18n/index.ts';
 import { buildDailySession, getRecommendedSessionLength } from '../services/sessionBuilder';
 import { getUnitDefinition } from '../constants/unitDefinitions';
-import { getUnlockedUnits, getUnlockedUnitsForProgramMode } from '../services/masteryEngine';
+import { getUnlockedUnitsForProgramMode, appendAttemptToHistory } from '../services/masteryEngine';
 import { getAllowedUnitCeiling, recordUnitAdvanced } from '../services/progressionPolicy';
 
 interface UseActivityProps {
@@ -175,25 +175,27 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
                 setScore(0);
                 return true; // Found an activity to start
             } else {
-                // Record a skipped attempt so early progress can reflect exposure
+                // Content failed to load: count exposure via loadFailures only.
+                // Do NOT push a {total: 0} record into history — it would evict
+                // real attempts from the capped history and break both mastery
+                // checks and unit coverage/progression math.
                 setActivityStats(prev => {
                     const key = String(nextActivityId);
                     const current = prev[key] || { attempts: 0, completions: 0, totalCorrect: 0, totalQuestions: 0, history: [] };
-                    const newRecord: AttemptRecord = { timestamp: Date.now(), score: 0, total: 0, mode: isProgramMode ? 'program' : 'free' };
                     return {
                         ...prev,
                         [key]: {
                             ...current,
                             attempts: (current.attempts || 0) + 1,
-                            history: [...(current.history || []), newRecord].slice(-10)
+                            loadFailures: (current.loadFailures || 0) + 1
                         }
                     };
                 });
-                console.warn(`No data for activity ${String(nextActivityId)}; recorded skipped attempt.`);
+                console.warn(`No data for activity ${String(nextActivityId)}; recorded load failure.`);
             }
         }
         return false; // No more activities in the queue
-    }, [startSpecificRandomActivity, setActivityStats, isProgramMode]);
+    }, [startSpecificRandomActivity, setActivityStats]);
     
     const handleStartRandomMode = useCallback(async () => {
         const lang = getCurrentLanguage();
@@ -450,60 +452,61 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
 
             if (genericKey) {
                 const newRecord: AttemptRecord = { timestamp: Date.now(), score: finalScore, total: totalQuestions, mode: isProgramMode ? 'program' : 'free' };
-                
-                                // Check units before stats update (for detecting new unlocks)
-                                const emptyMasteredCats = new Set<string>();
-                                // Use program-mode unlocked check when current session is program mode
-                                const parentOverrides = activeProfileId ? safeParseArray<ParentOverride>(window.localStorage.getItem(`parentOverrides_profile_${activeProfileId}`)) : undefined;
-                                const previousUnlockedUnits = isProgramMode
-                                    ? getUnlockedUnitsForProgramMode(activityStats, emptyMasteredCats, parentOverrides, 6, activeProfileId)
-                                    : getUnlockedUnits(activityStats, emptyMasteredCats);
-                
-                setActivityStats(prev => {
-                    const updatedStats = { ...prev };
-                    const isComplete = finalScore === totalQuestions;
-                    
-                    const updateStats = (key: string, isGeneric: boolean) => {
+                const isComplete = finalScore === totalQuestions;
+
+                // Pure computation of the next stats snapshot. It is used both for the
+                // state update and for unit-unlock detection below. React may invoke
+                // updater functions more than once, so the updater itself must stay
+                // free of side effects (recording advances inside it used to double-
+                // count and burn the daily advancement limit).
+                const computeNextStats = (base: Record<string, ActivityStats>): Record<string, ActivityStats> => {
+                    const updatedStats = { ...base };
+
+                    const updateStats = (key: string) => {
                         const current = updatedStats[key] || { attempts: 0, completions: 0, totalCorrect: 0, totalQuestions: 0, history: [] };
                         updatedStats[key] = {
                             ...current,
-                            attempts: isGeneric ? current.attempts : (current.attempts || 0) + 1,
-                            completions: isComplete && !isGeneric ? (current.completions || 0) + 1 : (current.completions || 0),
+                            attempts: (current.attempts || 0) + 1,
+                            completions: isComplete ? (current.completions || 0) + 1 : (current.completions || 0),
                             totalCorrect: (current.totalCorrect || 0) + finalScore,
                             totalQuestions: (current.totalQuestions || 0) + totalQuestions,
-                             history: [...(current.history || []), newRecord].slice(-10)
+                            history: appendAttemptToHistory(current.history, newRecord)
                         };
                     };
-                    
+
                     if (specificKey) {
-                        updateStats(specificKey, false);
-                        if (genericKey) {
-                           const generic = updatedStats[genericKey] || { attempts: 0, completions: 0, totalCorrect: 0, totalQuestions: 0, history: [] };
-                            updatedStats[genericKey] = {
-                                ...generic,
-                                totalCorrect: (generic.totalCorrect || 0) + finalScore,
-                                totalQuestions: (generic.totalQuestions || 0) + totalQuestions,
-                            };
-                        }
+                        updateStats(specificKey);
+                        const generic = updatedStats[genericKey!] || { attempts: 0, completions: 0, totalCorrect: 0, totalQuestions: 0, history: [] };
+                        updatedStats[genericKey!] = {
+                            ...generic,
+                            totalCorrect: (generic.totalCorrect || 0) + finalScore,
+                            totalQuestions: (generic.totalQuestions || 0) + totalQuestions,
+                        };
                     } else {
-                        updateStats(genericKey!, false);
+                        updateStats(genericKey!);
                     }
-                    
-                    // Check if new unit unlocked after this activity (Program Mode only)
-                        if (isProgramMode && activeProfileId) {
-                        const currentUnlockedUnits = getUnlockedUnitsForProgramMode(updatedStats, emptyMasteredCats, parentOverrides, 6, activeProfileId);
-                        
-                        // Find newly unlocked units
-                        currentUnlockedUnits.forEach(unitNum => {
-                            if (!previousUnlockedUnits.has(unitNum)) {
-                                console.log(`[Unit Advancement] New unit unlocked: ${unitNum}`);
-                                recordUnitAdvanced(activeProfileId, unitNum);
-                            }
-                        });
-                    }
-                    
+
                     return updatedStats;
-                });
+                };
+
+                const nextStats = computeNextStats(activityStats);
+                setActivityStats(prev => (prev === activityStats ? nextStats : computeNextStats(prev)));
+
+                // Detect newly unlocked units (Program Mode only) outside the updater,
+                // exactly once per finished activity. recordUnitAdvanced is also
+                // idempotent per unit per day as a second line of defense.
+                if (isProgramMode && activeProfileId) {
+                    const emptyMasteredCats = new Set<string>();
+                    const parentOverrides = safeParseArray<ParentOverride>(window.localStorage.getItem(`parentOverrides_profile_${activeProfileId}`));
+                    const previousUnlockedUnits = getUnlockedUnitsForProgramMode(activityStats, emptyMasteredCats, parentOverrides, 6, activeProfileId);
+                    const currentUnlockedUnits = getUnlockedUnitsForProgramMode(nextStats, emptyMasteredCats, parentOverrides, 6, activeProfileId);
+                    currentUnlockedUnits.forEach(unitNum => {
+                        if (!previousUnlockedUnits.has(unitNum)) {
+                            console.log(`[Unit Advancement] New unit unlocked: ${unitNum}`);
+                            recordUnitAdvanced(activeProfileId, unitNum);
+                        }
+                    });
+                }
             }
             
             if (isRandomMode) {
@@ -543,7 +546,7 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
             setCurrentIndex(prev => prev + 1);
         }
         return 'advanced';
-    }, [score, currentIndex, activityData.length, activityType, selectedLetter, selectedGroup, selectedObjectCategory, isRandomMode, isProgramMode, randomModeQueue, currentRandomActivityIndex, setActivityStats, handleGoToMenu, handleGoToProgramIntro, showToast, startNextRandomActivity, startSpecificRandomActivity, randomModeAttemptCount, resetActivityState]);
+    }, [score, currentIndex, activityData.length, activityType, selectedLetter, selectedGroup, selectedObjectCategory, selectedFiveWOneHKey, isRandomMode, isProgramMode, randomModeQueue, currentRandomActivityIndex, activityStats, activeProfileId, setActivityStats, handleGoToMenu, handleGoToProgramIntro, showToast, startNextRandomActivity, startSpecificRandomActivity, randomModeAttemptCount, resetActivityState]);
 
     return {
         activityType,

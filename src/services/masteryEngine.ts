@@ -18,6 +18,26 @@ import { getProgramHighWaterUnit } from './progressionPolicy';
 
 export const PROGRAM_WIDE_MASTERY_THRESHOLD = 0.75;
 
+const MAX_HISTORY_PER_MODE = 10;
+
+/**
+ * Append an attempt to a capped history.
+ * Program-scoped records ('program' or legacy entries without a mode) and
+ * free-mode records are trimmed separately: unit progression reads only the
+ * program-scoped slice of history, so free play must never be able to evict
+ * program attempts — that eviction used to silently reset unit progress.
+ */
+export function appendAttemptToHistory(
+  history: AttemptRecord[] | undefined,
+  record: AttemptRecord
+): AttemptRecord[] {
+  const combined = [...(history || []), record];
+  const isProgramScoped = (a: AttemptRecord) => a.mode === 'program' || !a.mode;
+  const program = combined.filter(isProgramScoped).slice(-MAX_HISTORY_PER_MODE);
+  const free = combined.filter(a => !isProgramScoped(a)).slice(-MAX_HISTORY_PER_MODE);
+  return [...program, ...free].sort((a, b) => (a.timestamp || 0) - (b.timestamp || 0));
+}
+
 /**
  * Check if an activity has been mastered based on its pool type
  * 
@@ -26,7 +46,10 @@ export const PROGRAM_WIDE_MASTERY_THRESHOLD = 0.75;
  */
 function getProgramScopedAttempts(stats: ActivityStats | undefined): AttemptRecord[] {
   if (!stats || !Array.isArray(stats.history)) return [];
-  return stats.history.filter(attempt => attempt.mode === 'program' || !attempt.mode);
+  // total > 0 excludes legacy "skipped" records so they can't occupy window slots
+  return stats.history.filter(
+    attempt => (attempt.mode === 'program' || !attempt.mode) && attempt.total > 0
+  );
 }
 
 export function isMasteryAchieved(
@@ -55,7 +78,8 @@ export function isMasteryAchieved(
       PROGRAM_WIDE_MASTERY_THRESHOLD
     );
     
-    const recentAttempts = stats.history.slice(-window);
+    const scoredAttempts = stats.history.filter(attempt => attempt.total > 0);
+    const recentAttempts = scoredAttempts.slice(-window);
     if (recentAttempts.length < window) {
       return false; // Need at least 'window' attempts
     }
@@ -77,8 +101,8 @@ export function isMasteryAchieved(
     // NARROW POOL: Check last N sessions for perfect scores (program mode only)
     const requiredPerfect = masteryRule.perfectSessionsRequired || 2;
     
-    // Filter to program mode attempts only
-    const programAttempts = stats.history.filter(a => a.mode === 'program' || !a.mode);
+    // Filter to program mode attempts with real questions only
+    const programAttempts = getProgramScopedAttempts(stats);
     const recentSessions = programAttempts.slice(-requiredPerfect);
     if (recentSessions.length < requiredPerfect) {
       return false; // Need at least 'requiredPerfect' program sessions
@@ -500,12 +524,10 @@ export function getUnitDisplaySuccessPercentageForProgramMode(
         included += 1;
         continue;
       }
-
-      if (stats.attempts > 0) {
-        cumulative += 0.2;
-        included += 1;
-        continue;
-      }
+      // Note: activities with only failed content loads (attempts/loadFailures but
+      // no answered questions) are deliberately excluded from the average — a fixed
+      // low placeholder score here would drag the unit below the 75% threshold and
+      // make the unit impossible to complete.
     }
     // No data -> skip
   }
@@ -660,7 +682,11 @@ export function hasUnitMinimumCoverage(
     if (!stats) return false;
     if ((stats.totalQuestions || 0) > 0) return true;
     const hist = (stats.history || []).filter(h => h.total > 0);
-    return hist.length > 0;
+    if (hist.length > 0) return true;
+    // Content could never be loaded for this activity (e.g. missing data for the
+    // current language). Count it as attempted so it cannot permanently block
+    // unit completion — the success-percentage gate still applies to the rest.
+    return (stats.loadFailures || 0) > 0;
   };
 
   const attemptedCount = unitDef.activities.filter((activityId) => hasAttempt(activityId)).length;

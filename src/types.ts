@@ -241,6 +241,11 @@ export interface ActivityStats {
   totalCorrect?: number;
   totalQuestions?: number;
   history?: AttemptRecord[];
+  // Times the app tried to serve this activity but no content could be loaded.
+  // Kept out of `history` so failed loads never evict real attempt records;
+  // unit coverage treats these as "attempted" so unloadable content cannot
+  // permanently block unit completion.
+  loadFailures?: number;
 }
 
 export interface Achievement {

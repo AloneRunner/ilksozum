@@ -9,14 +9,12 @@ import { ScreenState, Tab } from './types.ts';
 
 import Spinner from './components/Spinner.tsx';
 import Toast from './components/Toast.tsx';
-import BannerAd from './components/BannerAd.tsx';
 import BottomNavBar from './components/BottomNavBar.tsx';
 import { AppRouter } from './components/navigation/AppRouter.tsx';
 import BasketIcon from './components/icons/BasketIcon.tsx';
 import VideoBackground from './components/VideoBackground.tsx';
 import AmbientSound from './components/AmbientSound.tsx';
 import PrivacyConsentModal from './components/PrivacyConsentModal.tsx';
-import LoyaltyCelebrationModal from './components/LoyaltyCelebrationModal.tsx';
 
 export default function App(): React.ReactNode {
   const appCore = useAppCore();
@@ -125,7 +123,6 @@ export default function App(): React.ReactNode {
               )}
           </button>
         )}
-        {!settings.isPremium && <BannerAd />}
         {toast.toast && <Toast message={toast.toast.message} type={toast.toast.type} />}
         {showConsent && (
           <PrivacyConsentModal
@@ -137,13 +134,6 @@ export default function App(): React.ReactNode {
               appCore.setPreviousScreen(appCore.screenState);
               appCore.setScreenState(ScreenState.PrivacyPolicy);
             }}
-          />
-        )}
-        {settings.loyalty?.isCelebrationPending && !showConsent && (
-          <LoyaltyCelebrationModal
-            isOpen={true}
-            rewardDays={settings.loyalty.rewardDays}
-            onClose={() => settings.loyalty.acknowledgeCelebration()}
           />
         )}
       </div>

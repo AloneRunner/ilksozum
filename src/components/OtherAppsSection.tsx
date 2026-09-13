@@ -34,14 +34,15 @@ const OtherAppsSection: React.FC<OtherAppsSectionProps> = ({ theme }) => {
                 href={getPlatformLink(app)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-shrink-0 flex flex-col items-center gap-1.5 w-[72px] p-2.5 rounded-xl bg-slate-800 border border-slate-600/50 hover:border-cyan-500/40 hover:-translate-y-0.5 transition-all duration-200 no-underline"
+                className="flex-shrink-0 flex flex-col items-center gap-1.5 w-44 p-3 rounded-xl bg-slate-800 border border-slate-600/50 hover:border-cyan-500/40 hover:-translate-y-0.5 transition-all duration-200 no-underline"
               >
                 {app.logoUrl ? (
                   <img src={app.logoUrl} alt={app.name} className="w-10 h-10 rounded-xl object-contain bg-white shadow-sm" />
                 ) : (
                   <span className="text-2xl">{app.emoji}</span>
                 )}
-                <span className="text-[9px] text-slate-300 font-semibold text-center leading-tight">{app.name}</span>
+                <span className="text-xs text-slate-200 font-bold text-center leading-tight">{app.name}</span>
+                <span className="text-[10px] text-slate-400 text-center leading-tight">{app.description}</span>
               </a>
             ))}
           </div>
@@ -81,14 +82,15 @@ const OtherAppsSection: React.FC<OtherAppsSectionProps> = ({ theme }) => {
               href={getPlatformLink(app)}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex-shrink-0 flex flex-col items-center gap-1.5 w-[72px] p-2.5 rounded-2xl border-2 ${cardBg} shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 no-underline`}
+              className={`flex-shrink-0 flex flex-col items-center gap-1.5 w-44 p-3 rounded-2xl border-2 ${cardBg} shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 no-underline`}
             >
               {app.logoUrl ? (
                 <img src={app.logoUrl} alt={app.name} className="w-10 h-10 rounded-xl object-contain shadow-sm" />
               ) : (
                 <span className="text-2xl">{app.emoji}</span>
               )}
-              <span className="text-[9px] font-semibold text-center leading-tight">{app.name}</span>
+              <span className="text-xs font-bold text-center leading-tight">{app.name}</span>
+              <span className="text-[10px] opacity-70 text-center leading-tight">{app.description}</span>
             </a>
           ))}
         </div>

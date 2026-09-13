@@ -401,14 +401,14 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
                 <strong>{t('programMode.rules.reinforcementCounts', 'Pekiştirme ve ilerleme:')}</strong> {t('programMode.rules.reinforcementCountsDesc', 'Pekiştirme oturumları artık program denemesi olarak sayılır; bu denemeler ünitenin ilerleme hesabına katkı sağlar. Pekiştirme adayları sıfır başarı gösteren etkinlikleri de içerebilir ve ebeveynler manuel olarak aday ekleyip çıkarabilir.')}
               </li>
               <li>
-                <strong>{t('programMode.rules.reinforcementScope', 'Pekiştirme kapsamı:')}</strong> {t('programMode.rules.reinforcementScopeDesc', 'Pekiştirme normalde oturumun odak ünitelerindeki etkinliklerle sınırlıdır; başka ünitelerden manuel eklenen seçimler odak üniteyle uyuşmuyorsa dikkate alınmaz. (Manuel seçimleri temizlemek için "Manuel Seçimleri Temizle" düğmesini kullanın.)')}
+                <strong>{t('programMode.rules.reinforcementScope', 'Pekiştirme kapsamı:')}</strong> {t('programMode.rules.reinforcementScopeDesc', 'Otomatik adaylar önceki ünitelerin zayıf (%75 altı) etkinlikleridir; ebeveynler açılmış ünitelerdeki herhangi bir etkinliği manuel ekleyebilir (kilitli ünitelerdeki seçimler dikkate alınmaz). Manuel seçimleri "Manuel Seçimleri Temizle" düğmesiyle sıfırlayabilirsiniz.')}
               </li>
               <li>
                 <strong>{t('programMode.rules.unlocking', 'Ünite açma şartı:')}</strong> {t('programMode.rules.unlockingDesc', 'Program sırası 1. üniteden başlayarak ilk tamamlanmamış üniteye göre belirlenir. Bir ünitenin tamamlanması için ünitedeki etkinliklerin en az %75i en az 1 kez çözülmüş olmalı ve son 6 program/pekiştirme denemesinin ortalaması ≥ %75 olmalıdır.')}
               </li>
               {!isPremium ? (
                 <li>
-                  <strong>{t('programMode.rules.daily', 'Günlük sınır:')}</strong> {t('programMode.rules.dailyDesc', 'Günde en fazla 3 ünite ilerleme (aşırı hızlanmayı önlemek için)')}
+                  <strong>{t('programMode.rules.daily', 'Günlük sınır:')}</strong> {t('programMode.rules.dailyDesc', 'Günde en fazla 3 ünite açılır; her ünite günde bir kez sayılır. Sayaç her gece yarısı (yerel saat) sıfırlanır.')}
                 </li>
               ) : (
                 <li>

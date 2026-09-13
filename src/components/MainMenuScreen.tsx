@@ -12,8 +12,6 @@ import MascotContainer from "./ui/MascotContainer.tsx";
 // Heavy animations removed: WanderingMeteors, UFOFlyby
 import DevelopmentNotesCard from "./DevelopmentNotesCard.tsx";
 import OtherAppsSection from "./OtherAppsSection.tsx";
-import LoyaltyProgressCard from "./LoyaltyProgressCard.tsx";
-import { useAppContext } from "../contexts/AppContext.ts";
 import StoryIcon from "./icons/StoryIcon.tsx";
 import BasketIcon from "./icons/BasketIcon.tsx";
 import SparklesIcon from "./icons/SparklesIcon.tsx";
@@ -129,27 +127,35 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
         {isTr ? (
           <>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>YENİ:</b> Alternatif bir okuma yöntemi olan <b>BASARA Sistemi</b> (54 Ders) eklendi! Harfler & Heceler menüsünden ulaşabilirsiniz.
+              <b>GÜNCELLEME:</b> İlk Sözüm artık <b>tamamen ücretsiz ve reklamsızdır.</b> Tüm eğitim içerikleri ve Premium özellikler herkesin kullanımına açıktır.
             </p>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>YENİ:</b> Kavramlar (Zaman) menüsüne etkileşimli <b>Saat Öğreniyorum</b> etkinliği eklendi! Çocuklar artık zorluk derecesine göre kendi saatlerini kurabilir.
+              <b>YAKINDA:</b> Uygulamamız <b>Windows Store'da</b> da yayınlanacak. Böylece bilgisayar üzerinden de eğitim etkinliklerine kolayca ulaşabileceksiniz.
             </p>
             <div className="bg-white/20 p-2 rounded-lg mt-1 border border-sky-500/20">
               <p className={`text-xs leading-relaxed font-semibold ${subTextClass}`}>
-                🌍 Yabancı Dil Desteği Kaldırılıyor:
+                🎓 Diğer eğitim uygulamalarımız:
               </p>
               <p className={`text-[10px] leading-relaxed ${subTextClass} mt-0.5`}>
-                Şu an kullanıcılarımızın %96'sı Türkiye'den. Tüm enerjimizi Türkçeye özel eğitim içeriklerine verebilmek için (örneğin BASARA gibi sadece Türkçede olan sistemler) çok yakında İngilizce, Almanca vb. yabancı dil desteklerini uygulamadan tamamen kaldıracağız.
+                TAZOF turnuvaları için <b>Zeka Ustası</b>; idareciler, sınıflar ve öğretmenler için <b>DersTimeTable</b>. Bağlantıları aşağıdaki uygulama kartlarından inceleyebilirsiniz.
               </p>
             </div>
             <p className={`text-xs sm:text-sm leading-relaxed mt-1 ${subTextClass}`}>
-              Bu süreçte uygulamayı huzurla kullanabilmeniz için <b>1 Ağustos 2026'ya kadar tüm Premium özellikleri ücretsiz</b> açtık. Anlayışınız için teşekkür ederiz. 💜
+              Tüm uygulamalar ve eğitim projeleri hakkında daha fazla bilgi için <b>ozarik.org</b> adresini ziyaret edebilirsiniz.
             </p>
           </>
         ) : (
-          <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-            <b>Important Notice:</b> Foreign language support will be removed soon. Since 96% of our users are from Turkey, we are shifting our entire focus to Turkish special education content. Thank you for your understanding.
-          </p>
+          <>
+            <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
+              <b>UPDATE:</b> İlk Sözüm is now <b>completely free and ad-free.</b> All educational content and Premium features are available to everyone.
+            </p>
+            <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
+              <b>COMING SOON:</b> The app will also be available on the <b>Windows Store</b>, making it easier to use the activities on a computer.
+            </p>
+            <p className={`text-xs sm:text-sm leading-relaxed mt-1 ${subTextClass}`}>
+              Explore our other educational apps at <b>ozarik.org</b>, including Zeka Ustası for TAZOF tournaments and DersTimeTable for school scheduling.
+            </p>
+          </>
         )}
       </div>
     </div>
@@ -200,8 +206,6 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
   onSelectWorksheets,
   theme,
 }) => {
-  const appCtx = useAppContext();
-  const loyaltySnapshot = appCtx?.settings?.loyalty;
   const lang = getCurrentLanguage();
   const showObjectsIntl = lang !== "tr";
   const isSimpleTheme = theme === "simple";
@@ -543,7 +547,6 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
               <PrintInfoNote theme={theme} />
               {/* Güncellemeler & Duyurular Kartı */}
               <SystemAnnouncementsCard theme={theme} />
-              {loyaltySnapshot && <LoyaltyProgressCard theme={theme} snapshot={loyaltySnapshot} />}
               <AudioIssueNote theme={theme} />
 
               <OtherAppsSection theme={theme} />
@@ -590,7 +593,6 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
           <div className="mt-6 space-y-3">
             <PrintInfoNote theme={theme} />
             <SystemAnnouncementsCard theme={theme} />
-              {loyaltySnapshot && <LoyaltyProgressCard theme={theme} snapshot={loyaltySnapshot} />}
               <AudioIssueNote theme={theme} />
 
             <OtherAppsSection theme={theme} />
@@ -636,7 +638,6 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
           <div className="mt-6 space-y-3">
             <PrintInfoNote theme={theme} />
             <SystemAnnouncementsCard theme={theme} />
-              {loyaltySnapshot && <LoyaltyProgressCard theme={theme} snapshot={loyaltySnapshot} />}
               <AudioIssueNote theme={theme} />
 
             <OtherAppsSection theme={theme} />
@@ -833,7 +834,6 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
               <div className="mt-3 max-w-sm mx-auto space-y-3">
                 <PrintInfoNote theme={theme} />
                 <SystemAnnouncementsCard theme={theme} />
-              {loyaltySnapshot && <LoyaltyProgressCard theme={theme} snapshot={loyaltySnapshot} />}
               <AudioIssueNote theme={theme} />
 
                 <DevelopmentNotesCard theme={theme} />
@@ -1074,7 +1074,6 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
             {/* Development Notes Card */}
             <div className="mt-8">
               <SystemAnnouncementsCard theme={theme} />
-              {loyaltySnapshot && <LoyaltyProgressCard theme={theme} snapshot={loyaltySnapshot} />}
               <AudioIssueNote theme={theme} />
 
               <OtherAppsSection theme={theme} />
@@ -1224,7 +1223,6 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
           {/* Development Notes Card - full width */}
           <div className={`${theme === 'simple2' ? 'col-span-2' : 'col-span-1 sm:col-span-2 landscape:col-span-3'}`}>
             <SystemAnnouncementsCard theme={theme} />
-              {loyaltySnapshot && <LoyaltyProgressCard theme={theme} snapshot={loyaltySnapshot} />}
               <AudioIssueNote theme={theme} />
 
             <OtherAppsSection theme={theme} />

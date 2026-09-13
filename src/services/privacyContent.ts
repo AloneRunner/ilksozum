@@ -16,16 +16,15 @@ const trSections = [
         content: `Uygulamamız, kullanıcılarından kesinlikle hiçbir <strong>kişisel tanımlayıcı bilgi</strong> (isim, e-posta adresi, konum, fotoğraf vb.) toplamaz veya saklamaz. Oyun ilerlemeniz, ayarlarınız ve premium üyelik durumunuz gibi veriler, yalnızca sizin cihazınızda yerel olarak saklanır, sunucularımıza gönderilmez ve üçüncü taraflarla paylaşılmaz.`
     },
     {
-        title: "3. Para Kazanma (Reklamlar ve Uygulama İçi Satın Alımlar)",
-        content: `Uygulamamız, ücretsiz sürümde reklam göstermek için <strong>Google AdMob</strong> servisini kullanır. Ayrıca, reklamları kaldırmak için <strong>Google Play Store</strong> üzerinden tek seferlik bir "Premium Üyelik" satın alma seçeneği sunar.
+        title: "3. Uygulama İçi Satın Alımlar",
+        content: `Uygulama şu anda reklamsızdır ve tüm Premium özellikler tüm kullanıcıların erişimine açıktır. İsteğe bağlı destek amacıyla <strong>Google Play Store</strong> üzerinden uygulama içi satın alma seçenekleri sunulabilir.
         <ul>
-            <li class="mt-2"><strong>Google AdMob:</strong> Kişiselleştirilmemiş reklamlar göstermek amacıyla, Google AdMob bazı kişisel olmayan verileri (örneğin, Reklam Kimliği - Advertising ID) toplayabilir. Google'ın verileri nasıl kullandığı hakkında daha fazla bilgi için lütfen <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">Google'ın Reklam Politikası</a>'nı inceleyiniz.</li>
             <li class="mt-2"><strong>Google Play Store:</strong> Satın alma işlemleri doğrudan ve güvenli bir şekilde Google tarafından yönetilir. Ödeme bilgileriniz bizimle paylaşılmaz.</li>
         </ul>`
     },
     {
         title: "4. Çocukların Gizliliği ve Aile Politikası",
-        content: `Bu uygulama özellikle 13 yaş altı çocuklar için tasarlanmıştır ve Google Play Aile Politikası gereksinimlerine tam olarak uymaktadır. Reklamlar, Google'ın "Aileler için Tasarlandı" programı politikalarına uygun olarak gösterilir. Çocuklardan bilerek hiçbir kişisel bilgi toplamıyoruz.`
+        content: `Bu uygulama özellikle 13 yaş altı çocuklar için tasarlanmıştır ve Google Play Aile Politikası gereksinimlerine tam olarak uymaktadır. Çocuklardan bilerek hiçbir kişisel bilgi toplamıyoruz.`
     },
     {
         title: "5. İletişim",
@@ -47,16 +46,15 @@ const enSections = [
         content: `Our app does not collect or store any <strong>personally identifiable information</strong> (such as name, email address, location, photos, etc.). Your game progress, settings, and premium status are stored <em>only on your device</em>, are not sent to our servers, and are not shared with third parties.`
     },
     {
-        title: "3. Monetization (Ads and In-App Purchases)",
-        content: `We use <strong>Google AdMob</strong> to show ads in the free version. You can also make a one-time purchase on <strong>Google Play Store</strong> to remove ads.
+        title: "3. In-App Purchases",
+        content: `The app is currently ad-free, and all Premium features are available to every user. Optional in-app purchase options may be offered through the <strong>Google Play Store</strong> to support the app.
         <ul>
-            <li class="mt-2"><strong>Google AdMob:</strong> To show non-personalized ads, Google AdMob may collect non-personal data (for example, the Advertising ID). For more information, please review <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">Google's Ads Policy</a>.</li>
             <li class="mt-2"><strong>Google Play Store:</strong> Purchases are managed directly and securely by Google. Your payment information is not shared with us.</li>
         </ul>`
     },
     {
         title: "4. Children's Privacy and Families Policy",
-        content: `This app is designed especially for children under the age of 13 and fully complies with Google Play Families Policy requirements. Ads are shown in accordance with the "Designed for Families" program. We do not knowingly collect any personal information from children.`
+        content: `This app is designed especially for children under the age of 13 and fully complies with Google Play Families Policy requirements. We do not knowingly collect any personal information from children.`
     },
     {
         title: "5. Contact",

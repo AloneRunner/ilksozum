@@ -9,9 +9,8 @@ import { usePrint } from './usePrint.ts';
 import { ScreenState, Tab, ActivityType, ActivityCategory } from '../types.ts';
 import { getActivityUiConfig, fetchLetterActivityData } from '../services/contentService.ts';
 import { t } from '../i18n';
-import { initializeAds, initializeRevenueCat } from '../services/monetizationService.ts';
+import { initializeRevenueCat } from '../services/monetizationService.ts';
 import { setMutedState } from '../services/speechService.ts';
-import { recordTodayOpen, checkAndAwardLoyalty } from '../services/loyaltyService.ts';
 
 export const useAppCore = () => {
     // --- Core Navigation State ---
@@ -94,26 +93,9 @@ export const useAppCore = () => {
 
     // --- Effects ---
     useEffect(() => { setMutedState(settings.isMuted); }, [settings.isMuted]);
-    useEffect(() => { initializeAds(); }, []);
     // Initialize RevenueCat once with device-level fallback user (not per profile)
     useEffect(() => { initializeRevenueCat(); }, []);
 
-    // Loyalty: record today's open, then re-evaluate award + refresh settings snapshot.
-    useEffect(() => {
-        try {
-            recordTodayOpen();
-            const awarded = checkAndAwardLoyalty();
-            // Always refresh after eval so the snapshot reflects new openDayCount.
-            settings.loyalty?.refresh?.();
-            if (awarded) {
-                console.log('[Loyalty] Premium awarded — pending celebration set.');
-            }
-        } catch (e) {
-            console.error('Loyalty init failed', e);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-    
     useEffect(() => {
         // This effect runs when profile is loaded or changes.
         if (screenState === ScreenState.Loading && profile.activeProfile) {

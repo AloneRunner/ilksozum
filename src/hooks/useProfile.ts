@@ -4,6 +4,7 @@ import { Profile, ActivityStats, ActivityCategory, ParentOverride } from '../typ
 import { useLocalStorage } from './useLocalStorage.ts';
 import { getValueFromLocalStorage } from '../utils.ts';
 import { ALL_SUB_ACHIEVEMENTS } from '../constants.ts';
+import { clearProgressionData } from '../services/progressionPolicy.ts';
 
 const initializeEnabledActivities = (): string[] => {
     return ALL_SUB_ACHIEVEMENTS.map(sa => String(sa.id));
@@ -170,6 +171,10 @@ export const useProfile = ({ showToast }: UseProfileProps) => {
         if (activeProfile) {
             setActivityStats({});
             setEnabledActivities(initializeEnabledActivities());
+            // Also drop the program-mode high-water mark and daily advancement
+            // counters — otherwise the stale high-water re-unlocks every old
+            // unit on the freshly reset profile.
+            clearProgressionData(activeProfile.id);
             showToast(`${activeProfile.name} için ilerleme sıfırlandı.`, 'info');
         }
     }, [activeProfile, showToast]);
