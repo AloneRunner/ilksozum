@@ -762,6 +762,23 @@ export const fetchSyllableWordsForGroup = async (groupNumber: number, count?: nu
 
 
 // --- OBJECT RECOGNITION ---
+// Kategorinin tamamını kapsayan genel kelimeler soru olarak sorulmaz ve şık olarak çıkmaz:
+// "bitki hangisi?" sorusunda dört şıkkın dördü de bitkidir; gül, lale ve papatya da çiçektir.
+const GENEL_KELIMELER = new Set(['bitki', 'çiçek']);
+
+// Görselleri birbirine çok benzeyen, aynı soruda yan yana çıkmaması gereken kelimeler.
+const KARISABILIR_CIFTLER: [string, string][] = [
+    ['süt', 'ayran'],
+];
+
+const karisabilir = (a: string, b: string): boolean => {
+    const x = a.toLocaleLowerCase('tr-TR');
+    const y = b.toLocaleLowerCase('tr-TR');
+    return KARISABILIR_CIFTLER.some(([p, q]) => (x === p && y === q) || (x === q && y === p));
+};
+
+const genelKelime = (kelime: string): boolean => GENEL_KELIMELER.has(kelime.toLocaleLowerCase('tr-TR'));
+
 export const createObjectChoiceRounds = async (categoryId: string, count?: number): Promise<ConceptRound[]> => {
     // If language is not Turkish, use curated static sets similar to concept rounds
     const lang = getCurrentLanguage();
@@ -891,7 +908,7 @@ export const createObjectChoiceRounds = async (categoryId: string, count?: numbe
     // Önceden 4'ten az öğe varsa hiç tur döndürmüyordu. Artık havuz küçükse de eldeki kadar soru üretelim.
     if (itemsInCategory.length < 1) return [];
 
-    const uniqueWords = [...new Set(itemsInCategory.map(item => item.word))];
+    const uniqueWords = [...new Set(itemsInCategory.map(item => item.word))].filter(w => !genelKelime(w));
     const questionWords = shuffleArray(uniqueWords).slice(0, MAX_QUESTIONS_PER_ROUND);
 
     const rounds: ConceptRound[] = [];
@@ -969,12 +986,14 @@ export const createObjectChoiceRounds = async (categoryId: string, count?: numbe
                 !bannedIds.has(item.id) &&
                 ['meyve', 'sebze', 'yiyecek'].includes(normalizeCategory(item.tags.category)) &&
                 item.word !== correctItem.word &&
-                !hasWordConflict(item.word, correctItem.word)
+                !hasWordConflict(item.word, correctItem.word) &&
+                !genelKelime(item.word) && !karisabilir(item.word, correctItem.word)
             );
         } else {
             distractorPool = itemsInCategory.filter(item => 
                 item.word !== correctItem.word &&
-                !hasWordConflict(item.word, correctItem.word)
+                !hasWordConflict(item.word, correctItem.word) &&
+                !genelKelime(item.word) && !karisabilir(item.word, correctItem.word)
             );
         }
 
@@ -984,6 +1003,7 @@ export const createObjectChoiceRounds = async (categoryId: string, count?: numbe
                 !bannedIds.has(item.id) && 
                 item.word !== correctItem.word &&
                 !hasWordConflict(item.word, correctItem.word) &&
+                !genelKelime(item.word) && !karisabilir(item.word, correctItem.word) &&
                 item.tags.category !== correctItem.tags.category // Different category for variety
             );
             
@@ -992,12 +1012,18 @@ export const createObjectChoiceRounds = async (categoryId: string, count?: numbe
                 distractorPool = imageData.filter(item =>
                     !bannedIds.has(item.id) && 
                     item.word !== correctItem.word &&
-                    !hasWordConflict(item.word, correctItem.word)
+                    !hasWordConflict(item.word, correctItem.word) &&
+                !genelKelime(item.word) && !karisabilir(item.word, correctItem.word)
                 );
             }
         }
 
-        const distractors = getRandomItems(distractorPool, 3);
+        const distractors: ImageMetadata[] = [];
+        for (const aday of shuffleArray(distractorPool)) {
+            if (distractors.length === 3) break;
+            if (distractors.some(d => d.word === aday.word || karisabilir(d.word, aday.word))) continue;
+            distractors.push(aday);
+        }
         if (distractors.length < 3) continue;
 
         // Translate words to target language
@@ -1090,7 +1116,7 @@ const createYesNoRounds = (count: number = 8): Word[] => {
             uniqueWordMap.set(item.word.toLocaleLowerCase('tr-TR'), item);
         }
     }
-    const uniquePool = Array.from(uniqueWordMap.values());
+    const uniquePool = Array.from(uniqueWordMap.values()).filter(item => !genelKelime(item.word));
     
     const rounds: Word[] = [];
     const usedIds = new Set<number>();
@@ -1120,13 +1146,14 @@ const createYesNoRounds = (count: number = 8): Word[] => {
 
         // New logic: Find a distractor from the same category first.
         let distractorPool = uniquePool.filter(
-            item => item.tags.category === shownItem.tags.category && item.word !== shownItem.word
+            item => item.tags.category === shownItem.tags.category && item.word !== shownItem.word &&
+                !karisabilir(item.word, shownItem.word)
         );
 
         // Fallback: If no distractors in the same category, use any other item.
         if (distractorPool.length === 0) {
             distractorPool = uniquePool.filter(
-                item => item.word !== shownItem.word
+                item => item.word !== shownItem.word && !karisabilir(item.word, shownItem.word)
             );
         }
         
