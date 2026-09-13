@@ -1,4 +1,5 @@
 import React from "react";
+import { Capacitor } from "@capacitor/core";
 import { getCurrentLanguage } from "../i18n/index.ts";
 import { t } from "../i18n/index.ts";
 import MenuButton from "./ui/MenuButton.tsx";
@@ -115,6 +116,9 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
 
   const lang = getCurrentLanguage();
   const isTr = lang === 'tr';
+  // Bağış yalnızca Google Play üzerinden alınabildiği için destek satırı sadece Android uygulamasında görünür.
+  const androidUygulama = Capacitor.getPlatform() === 'android';
+  const destekKartiAdi = t('settingsEx.donate.title', isTr ? 'Geliştiriciye Destek Ol' : 'Support the Developer');
 
   return (
     <div className={`w-full rounded-2xl px-4 py-3 shadow-sm flex items-start gap-3 ${cardClass}`}>
@@ -127,8 +131,13 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
         {isTr ? (
           <>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>GÜNCELLEME:</b> İlk Sözüm artık <b>tamamen ücretsiz ve reklamsızdır.</b> Tüm eğitim içerikleri ve Premium özellikler herkesin kullanımına açıktır.
+              <b>GÜNCELLEME:</b> İlk Sözüm <b>tamamen ücretsiz ve reklamsızdır.</b> Tüm eğitim içerikleri herkese açıktır; hiçbir özellik için ödeme gerekmez.
             </p>
+            {androidUygulama && (
+              <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
+                <b>DESTEK:</b> Uygulamanın gelişmesine katkıda bulunmak isteyenler <b>Ayarlar › {destekKartiAdi}</b> bölümünden gönüllü bağış yapabilir. Bağış hiçbir özelliği açmaz; her şey zaten ücretsizdir. 💛
+              </p>
+            )}
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
               <b>YAKINDA:</b> Uygulamamız <b>Windows Store'da</b> da yayınlanacak. Böylece bilgisayar üzerinden de eğitim etkinliklerine kolayca ulaşabileceksiniz.
             </p>
@@ -147,8 +156,13 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
         ) : (
           <>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>UPDATE:</b> İlk Sözüm is now <b>completely free and ad-free.</b> All educational content and Premium features are available to everyone.
+              <b>UPDATE:</b> İlk Sözüm is <b>completely free and ad-free.</b> All educational content is open to everyone; no feature requires payment.
             </p>
+            {androidUygulama && (
+              <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
+                <b>SUPPORT:</b> If you would like to help the app grow, you can make a voluntary donation from <b>Settings › {destekKartiAdi}</b>. Donations do not unlock anything; everything is already free. 💛
+              </p>
+            )}
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
               <b>COMING SOON:</b> The app will also be available on the <b>Windows Store</b>, making it easier to use the activities on a computer.
             </p>

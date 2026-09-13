@@ -1,23 +1,23 @@
 <tr-TR>
-Tüm aktivite kodları çeviri sorunlarını gidermek için sıfırdan yeniden yazıldı. %70 tamamlandı, kısa sürede tamamlanacak. Nesneler ve Kavram Aktivitelerindeki çeviri sorunları düzeltildi. Renkler, şekiller ve duygular artık tüm dillerde doğru çalışıyor.
+İlk Sözüm tamamen ücretsiz ve reklamsız: tüm etkinlikler herkese açık, hiçbir özellik için ödeme gerekmez. Uygulamayı desteklemek isteyenler Ayarlar'daki "Geliştiriciye Destek Ol" bölümünden gönüllü bağış yapabilir; bağış hiçbir özelliği açmaz. Nesneler etkinliğinde "bitki hangisi?" sorusu kaldırıldı, görselleri birbirine çok benzeyen süt ile ayran artık aynı soruda çıkmıyor.
 </tr-TR>
 
 <az-AZ>
-Tərcümə problemlərini həll etmək üçün bütün fəaliyyət kodları sıfırdan yenidən yazılıb. 70% tamamlanıb və tezliklə tamamilə bitəcək. Obyektlər və Konsepsiya Fəaliyyətlərindəki tərcümə problemləri düzəldildi. Rənglər, formalar və emosiyalar indi bütün dillərdə düzgün işləyir.
+İlk Sözüm tamamilə pulsuz və reklamsızdır: bütün fəaliyyətlər hamı üçün açıqdır, heç bir funksiya üçün ödəniş tələb olunmur. Tətbiqi dəstəkləmək istəyənlər Parametrlərdəki "Tərtibatçıya dəstək ol" bölməsindən könüllü ianə edə bilər; ianə heç bir funksiyanı açmır. Əşyalar fəaliyyətində "bitki hansıdır?" sualı çıxarıldı, görüntüləri çox oxşar olan süd və ayran artıq eyni sualda göstərilmir.
 </az-AZ>
 
 <de-DE>
-Alle Aktivitätscodes wurden von Grund auf neu geschrieben, um Übersetzungsprobleme zu beheben. 70% abgeschlossen, wird bald vollständig fertiggestellt. Übersetzungsprobleme in Objekten und Konzeptaktivitäten wurden behoben. Farben, Formen und Emotionen funktionieren jetzt korrekt in allen Sprachen.
+İlk Sözüm ist vollständig kostenlos und werbefrei: Alle Aktivitäten stehen allen offen, keine Funktion ist kostenpflichtig. Wer die App unterstützen möchte, kann in den Einstellungen unter "Entwickler unterstützen" freiwillig spenden; eine Spende schaltet keine Funktion frei. In der Objekt-Aktivität wurde die Frage "Welches ist die Pflanze?" entfernt, und die sehr ähnlich aussehenden Bilder von Milch und Ayran erscheinen nicht mehr in derselben Frage.
 </de-DE>
 
 <en-GB>
-All activity codes have been rewritten from scratch to fix translation issues. 70% complete, will be fully finished soon. Translation issues in Objects and Concept Activities have been fixed. Colors, shapes, and emotions now work correctly in all languages.
+İlk Sözüm is completely free and ad-free: every activity is open to everyone and no feature requires payment. If you would like to support the app, you can make a voluntary donation from "Support the Developer" in Settings; donations do not unlock anything. In the Objects activity, the "Which one is the plant?" question has been removed, and milk and ayran, whose pictures look very similar, no longer appear in the same question.
 </en-GB>
 
 <fr-FR>
-Tous les codes d'activité ont été réécrits à partir de zéro pour corriger les problèmes de traduction. 70% terminé, sera bientôt entièrement terminé. Les problèmes de traduction dans Objets et Activités Conceptuelles ont été corrigés. Les couleurs, formes et émotions fonctionnent maintenant correctement dans toutes les langues.
+İlk Sözüm est entièrement gratuit et sans publicité : toutes les activités sont ouvertes à tous et aucune fonctionnalité n'est payante. Si vous souhaitez soutenir l'application, vous pouvez faire un don volontaire depuis « Soutenir le développeur » dans les Réglages ; un don ne débloque aucune fonctionnalité. Dans l'activité Objets, la question « Lequel est la plante ? » a été supprimée, et le lait et l'ayran, dont les images se ressemblent beaucoup, n'apparaissent plus dans la même question.
 </fr-FR>
 
 <nl-NL>
-Alle activiteitscodes zijn vanaf nul herschreven om vertaalproblemen op te lossen. 70% voltooid, wordt binnenkort volledig afgerond. Vertaalproblemen in Objecten en Conceptactiviteiten zijn opgelost. Kleuren, vormen en emoties werken nu correct in alle talen.
+İlk Sözüm is volledig gratis en reclamevrij: alle activiteiten zijn voor iedereen toegankelijk en geen enkele functie is betaald. Wie de app wil steunen, kan vrijwillig doneren via "Steun de ontwikkelaar" in Instellingen; een donatie ontgrendelt niets. In de activiteit Voorwerpen is de vraag "Welke is de plant?" verwijderd, en melk en ayran, waarvan de afbeeldingen sterk op elkaar lijken, verschijnen niet meer in dezelfde vraag.
 </nl-NL>

@@ -15,6 +15,7 @@ import { THEMES, FREE_THEMES } from '../themes/themeManager.ts';
 import { useAppContext } from '../contexts/AppContext.ts';
 import { getUnlockedUnits } from '../services/masteryEngine.ts';
 import { getUnitDefinition } from '../constants/unitDefinitions.ts';
+import { Capacitor } from '@capacitor/core';
 import { t, getCurrentLanguage } from '../i18n/index.ts';
 import {
   SimpleThemeWrapper,
@@ -911,7 +912,8 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
       </div>
       
   <div className={`w-full space-y-4 ${themeVariant ? 'pr-2 pb-10' : 'pb-12'} ${isCosmicTheme ? 'pt-2' : ''}`}>
-        {(
+        {/* Bağış Google Play ile alınır; Windows ve web sürümünde kart gösterilmez */}
+        {Capacitor.getPlatform() === 'android' && (
           <div className={premiumCardClass}>
             {themeVariant === 'cat' && (
               <>
