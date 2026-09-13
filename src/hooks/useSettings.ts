@@ -171,7 +171,7 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
 
             if (success) {
                 setHasPurchasedPremium(true);
-                showToast('Desteğiniz için teşekkürler! Premium özellikler açıldı.', 'info');
+                showToast('Desteğiniz için çok teşekkürler! 💛', 'info');
             } else {
                 showToast('Satın alma işlemi tamamlanamadı. Lütfen tekrar deneyin.', 'error');
             }
@@ -267,7 +267,7 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
             let ok = await restorePurchases();
             if (ok) {
                 setHasPurchasedPremium(true);
-                showToast('Satın alımlarınız geri yüklendi. Premium özellikler açıldı.', 'info');
+                showToast('Satın alımlarınız geri yüklendi.', 'info');
                 return true;
             }
             
@@ -280,7 +280,7 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
                     const migrated = await migrateOldPurchases(oldId);
                     if (migrated) {
                         setHasPurchasedPremium(true);
-                        showToast('Satın alımlarınız geri yüklendi! Premium özellikler açıldı.', 'info');
+                        showToast('Satın alımlarınız geri yüklendi.', 'info');
                         return true;
                     }
                 }
@@ -335,7 +335,7 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
                 const ok = await purchasePackageByIdentifier(paywallMonthlyPkgId);
                 if (ok) {
                     setHasPurchasedPremium(true);
-                    showToast('Desteğiniz için teşekkürler! Premium özellikler açıldı.', 'info');
+                    showToast('Desteğiniz için çok teşekkürler! 💛', 'info');
                 } else {
                     showToast('Satın alma işlemi tamamlanamadı. Lütfen tekrar deneyin.', 'error');
                 }
@@ -349,7 +349,7 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
                 const ok = await purchasePackageByIdentifier(paywallLifetimePkgId);
                 if (ok) {
                     setHasPurchasedPremium(true);
-                    showToast('Desteğiniz için teşekkürler! Premium özellikler açıldı.', 'info');
+                    showToast('Desteğiniz için çok teşekkürler! 💛', 'info');
                 } else {
                     showToast('Satın alma işlemi tamamlanamadı. Lütfen tekrar deneyin.', 'error');
                 }

@@ -376,7 +376,15 @@
       "subtitle": "Məlumat istifadəsi və hüquqlarınız",
       "read": "Oxu"
     },
-    "backToSettingsAria": "Parametrlərə geri qayıt"
+    "backToSettingsAria": "Parametrlərə geri qayıt",
+    "donate": {
+      "title": "Tərtibatçıya dəstək ol",
+      "desc": "Tətbiqdəki hər şey pulsuzdur və hamı üçün açıqdır. Bu ödəniş heç bir funksiyanı açmır; tətbiqin inkişafına kömək edən tamamilə könüllü ianədir.",
+      "thanks": "Artıq bizə dəstək olmusunuz — çox sağ olun!",
+      "oneTime": "Birdəfəlik dəstək",
+      "monthly": "Aylıq dəstək",
+      "cta": "Dəstək ol"
+    }
   },
   "parentReport": {
     "title": "İrəliləyiş Hesabatı",

@@ -443,7 +443,15 @@
       "subtitle": "Veri kullanımı ve haklarınız",
       "read": "Oku"
     },
-    "backToSettingsAria": "Ayarlara dön"
+    "backToSettingsAria": "Ayarlara dön",
+    "donate": {
+      "title": "Geliştiriciye Destek Ol",
+      "desc": "Uygulamadaki her şey ücretsiz ve herkese açık. Bu ödeme hiçbir özelliği açmaz; tamamen gönüllü bir destektir ve uygulamanın geliştirilmesine katkı sağlar.",
+      "thanks": "Daha önce destek oldunuz, çok teşekkürler!",
+      "oneTime": "Tek seferlik destek",
+      "monthly": "Aylık destek",
+      "cta": "Destek ol"
+    }
   },
   "parentReport": {
     "title": "Gelişim Raporu",

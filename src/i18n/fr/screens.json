@@ -362,7 +362,15 @@
       "subtitle": "Utilisation des données et vos droits",
       "read": "Lire"
     },
-    "backToSettingsAria": "Revenir aux paramètres"
+    "backToSettingsAria": "Revenir aux paramètres",
+    "donate": {
+      "title": "Soutenir le développeur",
+      "desc": "Tout dans l'application est gratuit et ouvert à tous. Ce paiement ne débloque aucune fonctionnalité ; c'est un don entièrement volontaire qui aide à améliorer l'application.",
+      "thanks": "Vous nous avez déjà soutenus — merci beaucoup !",
+      "oneTime": "Soutien unique",
+      "monthly": "Soutien mensuel",
+      "cta": "Soutenir"
+    }
   },
   "parentReport": {
     "title": "Rapport de progression",

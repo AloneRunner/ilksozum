@@ -364,7 +364,15 @@
       "subtitle": "Gegevensgebruik en jouw rechten",
       "read": "Lezen"
     },
-    "backToSettingsAria": "Terug naar instellingen"
+    "backToSettingsAria": "Terug naar instellingen",
+    "donate": {
+      "title": "Steun de ontwikkelaar",
+      "desc": "Alles in de app is gratis en voor iedereen toegankelijk. Deze betaling ontgrendelt geen functies; het is een volledig vrijwillige donatie die helpt de app te verbeteren.",
+      "thanks": "U hebt ons al gesteund — hartelijk dank!",
+      "oneTime": "Eenmalige steun",
+      "monthly": "Maandelijkse steun",
+      "cta": "Steunen"
+    }
   },
   "parentReport": {
     "title": "Voortgangsrapport",

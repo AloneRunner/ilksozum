@@ -441,7 +441,15 @@
       "subtitle": "Data usage and your rights",
       "read": "Read"
     },
-    "backToSettingsAria": "Go back to settings"
+    "backToSettingsAria": "Go back to settings",
+    "donate": {
+      "title": "Support the Developer",
+      "desc": "Everything in the app is free and open to everyone. This payment does not unlock any feature; it is a completely voluntary donation that helps the app keep improving.",
+      "thanks": "You have already supported us — thank you so much!",
+      "oneTime": "One-time support",
+      "monthly": "Monthly support",
+      "cta": "Support"
+    }
   },
   "parentReport": {
     "title": "Progress Report",

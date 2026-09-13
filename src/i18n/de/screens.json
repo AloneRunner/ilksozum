@@ -438,7 +438,15 @@
       "subtitle": "Datennutzung und deine Rechte",
       "read": "Lesen"
     },
-    "backToSettingsAria": "Zurück zu den Einstellungen"
+    "backToSettingsAria": "Zurück zu den Einstellungen",
+    "donate": {
+      "title": "Entwickler unterstützen",
+      "desc": "Alles in der App ist kostenlos und für alle zugänglich. Diese Zahlung schaltet keine Funktion frei; sie ist eine freiwillige Spende, die die Weiterentwicklung der App unterstützt.",
+      "thanks": "Sie haben uns bereits unterstützt – vielen Dank!",
+      "oneTime": "Einmalige Unterstützung",
+      "monthly": "Monatliche Unterstützung",
+      "cta": "Unterstützen"
+    }
   },
   "parentReport": {
     "title": "Fortschrittsbericht",

@@ -313,7 +313,7 @@ const ParentGateButton: React.FC<{ onConfirm: () => void; isThemed: boolean; lab
                 style={{ width: `${progress}%` }}
             />
       <span className="relative z-10 flex items-center justify-center">
-        {label || t('settingsEx.premium.cta', "Go Premium & Support")} <HeartIcon className="inline w-5 h-5 ml-1"/>
+        {label || t('settingsEx.donate.cta', 'Destek ol')} <HeartIcon className="inline w-5 h-5 ml-1"/>
             </span>
         </button>
     );
@@ -326,7 +326,6 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
   onSelectPrivacyPolicy, onManageBannedImages, isPremium, hasPurchasedPremium,
   onPurchaseMonthly, onPurchaseLifetime, onResetProgress, theme, onChangeTheme, activeProfile, onManageProfiles, onManageActivities, showPremiumToast,
   onSelectAchievements,
-  onRestorePurchases,
   parentOverrides,
   onAddParentOverride,
   onRemoveParentOverride,
@@ -405,16 +404,6 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
     ? 'simple'
     : undefined;
   const lang = getCurrentLanguage();
-  const getLocaleForLang = (l: string) => l === 'tr' ? 'tr-TR' : l === 'de' ? 'de-DE' : l === 'fr' ? 'fr-FR' : l === 'nl' ? 'nl-NL' : l === 'az' ? 'az-Latn-AZ' : 'en-US';
-  const promoNote: string | null = (() => {
-    const p = (settings as any).promotion as { isActive?: boolean; endsAt?: string } | undefined;
-    if (p?.isActive && p?.endsAt) {
-      const ends = new Date(p.endsAt);
-      const dateStr = ends.toLocaleDateString(getLocaleForLang(lang), { day: 'numeric', month: 'long', year: 'numeric' });
-      return t('settingsEx.promoNote', 'Hediye Premium: {date} tarihine kadar tüm özellikler açık.').replace('{date}', dateStr);
-    }
-    return null;
-  })();
   // derived premium flag is used inline in UI without separate variable
 
   // Joker Hakkı form state
@@ -922,7 +911,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
       </div>
       
   <div className={`w-full space-y-4 ${themeVariant ? 'pr-2 pb-10' : 'pb-12'} ${isCosmicTheme ? 'pt-2' : ''}`}>
-        {!hasPurchasedPremium && (
+        {(
           <div className={premiumCardClass}>
             {themeVariant === 'cat' && (
               <>
@@ -964,49 +953,26 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
                 </span>
               </>
             )}
-            <CrownIcon className={premiumCrownClass}/>
-            <h2 className={premiumTitleClass}>{t('settingsEx.premium.title', 'Premium Özellikler')}</h2>
-            <p className={premiumDescClass}>{t('settingsEx.premium.desc', 'Tüm reklamları kaldırın, temalı arayüzü açın, gelişim raporunu görüntüleyin ve daha fazlasına erişin!')}</p>
-            {promoNote && (
-              <p className={premiumDescClass}>
-                {promoNote}
-              </p>
+            <HeartIcon className={premiumCrownClass}/>
+            <h2 className={premiumTitleClass}>{t('settingsEx.donate.title', 'Geliştiriciye Destek Ol')}</h2>
+            <p className={premiumDescClass}>{t('settingsEx.donate.desc', 'Uygulamadaki her şey ücretsiz ve herkese açık. Bu ödeme hiçbir özelliği açmaz; tamamen gönüllü bir destektir ve uygulamanın geliştirilmesine katkı sağlar.')}</p>
+            {hasPurchasedPremium && (
+              <p className={premiumDescClass}>{t('settingsEx.donate.thanks', 'Daha önce destek oldunuz, çok teşekkürler!')}</p>
             )}
-            {settings.paywall?.hasData && (
-              <div className="mb-4 flex items-center justify-center gap-3 text-sm">
-                {settings.paywall.monthlyPrice && (
-                  <span className={`inline-flex items-center rounded-full px-3 py-1 ${isCosmicTheme ? 'bg-white/15 text-white/90' : 'bg-black/10 text-black/70'}`}>
-                    {t('settingsEx.premium.monthly', 'Aylık')}: {settings.paywall.monthlyPrice}
-                  </span>
-                )}
-                {settings.paywall.lifetimePrice && (
-                  <span className={`inline-flex items-center rounded-full px-3 py-1 ${isCosmicTheme ? 'bg-white/15 text-white/90' : 'bg-black/10 text-black/70'}`}>
-                    {t('settingsEx.premium.lifetime', 'Ömür Boyu')}: {settings.paywall.lifetimePrice}
-                  </span>
-                )}
-              </div>
-            )}
-            {/* Two purchase actions with localized price labels */}
+            {/* Destek düğmeleri: ebeveyn onayı (basılı tutma + matematik sorusu) korunur */}
             <div className="mt-3 flex gap-3 justify-center flex-wrap">
+              {!hasPurchasedPremium && (
+                <ParentGateButton
+                  onConfirm={onPurchaseLifetime}
+                  isThemed={isThemed}
+                  label={`${t('settingsEx.donate.oneTime', 'Tek seferlik destek')}${settings.paywall?.lifetimePrice ? `: ${settings.paywall.lifetimePrice}` : ''}`}
+                />
+              )}
               <ParentGateButton
                 onConfirm={onPurchaseMonthly}
                 isThemed={isThemed}
-                label={`${t('settingsEx.premium.monthly', 'Aylık')}${settings.paywall?.monthlyPrice ? `: ${settings.paywall.monthlyPrice}` : ''}`}
+                label={`${t('settingsEx.donate.monthly', 'Aylık destek')}${settings.paywall?.monthlyPrice ? `: ${settings.paywall.monthlyPrice}` : ''}`}
               />
-              <ParentGateButton
-                onConfirm={onPurchaseLifetime}
-                isThemed={isThemed}
-                label={`${t('settingsEx.premium.lifetime', 'Ömür Boyu')}${settings.paywall?.lifetimePrice ? `: ${settings.paywall.lifetimePrice}` : ''}`}
-              />
-              <button
-                type="button"
-                onClick={() => { void onRestorePurchases(); }}
-                className={`mt-1 inline-flex items-center gap-1 rounded-full px-3 py-2 text-xs font-semibold transition-colors ${isCosmicTheme ? 'bg-white/15 text-white/90 hover:bg-white/25' : isThemed ? 'bg-black/10 text-white/90 hover:bg-black/20' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
-                aria-label={t('settingsEx.premium.restoreAria', 'Satın alımları geri yükle')}
-              >
-                <RestoreIcon className={`w-4 h-4 ${isCosmicTheme ? 'text-white/90' : isThemed ? 'text-white/90' : 'text-slate-600'}`} />
-                {t('settingsEx.premium.restore', 'Satın alımları geri yükle')}
-              </button>
             </div>
           </div>
         )}
