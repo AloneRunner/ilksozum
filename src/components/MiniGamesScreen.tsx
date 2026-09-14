@@ -1,3 +1,4 @@
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../utils/gameVoice.ts';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { t } from '../i18n/index.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
@@ -127,7 +128,7 @@ const COLORS = [
   { name: 'orange', bg: '#f97316', light: '#fed7aa', emoji: '🧡' },
 ];
 
-const GAME_DURATION = 60;
+const GAME_DURATION = 90;
 
 const MiniGamesScreen: React.FC<MiniGamesScreenProps> = ({ onBack }) => {
   const [butterflies, setButterflies] = useState<Butterfly[]>([]);
@@ -263,6 +264,7 @@ const MiniGamesScreen: React.FC<MiniGamesScreenProps> = ({ onBack }) => {
     const finalScore = scoreRef.current;
     const isNewHighScore = finalScore > highScore;
     soundRef.current?.playGameOver(isNewHighScore);
+    sayFinished('Süre doldu. Çok güzel oynadın!');
     setHighScore(prev => {
       const next = Math.max(prev, finalScore);
       try {
@@ -283,6 +285,7 @@ const MiniGamesScreen: React.FC<MiniGamesScreenProps> = ({ onBack }) => {
     setGameStarted(true);
     setSelectedButterfly(null);
     setFlowers(createFlowers());
+    sayInstruction('Bir kelebeğe dokun, sonra aynı renkteki çiçeğe dokun.', 300);
   }, [createFlowers, stopLoops]);
 
   const handleButterflyClick = useCallback((butterfly: Butterfly, e: React.MouseEvent | React.TouchEvent) => {
@@ -320,10 +323,12 @@ const MiniGamesScreen: React.FC<MiniGamesScreenProps> = ({ onBack }) => {
       }, 2000);
 
       soundRef.current?.playMatch();
+      sayCorrect();
     } else {
       // Yanlış eşleşme
       setCombo(0);
       soundRef.current?.playWrong();
+      sayWrong();
     }
 
     setSelectedButterfly(null);
@@ -468,7 +473,7 @@ const MiniGamesScreen: React.FC<MiniGamesScreenProps> = ({ onBack }) => {
               <div className="text-white text-xs font-semibold">{t('miniGames.score', 'Puan')}</div>
               <div className="text-white text-2xl font-black">{score}</div>
             </div>
-            <div className={`bg-gradient-to-br ${timeLeft <= 10 ? 'from-red-500 to-red-600 animate-pulse' : 'from-blue-500 to-indigo-500'} rounded-xl px-4 py-2 shadow-lg`}>
+            <div className="bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl px-4 py-2 shadow-lg">
               <div className="text-white text-xs font-semibold">{t('miniGames.time', 'Süre')}</div>
               <div className="text-white text-2xl font-black">{timeLeft}s</div>
             </div>

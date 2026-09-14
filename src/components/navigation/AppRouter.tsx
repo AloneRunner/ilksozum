@@ -62,9 +62,7 @@ const ProgramModeIntroScreen = lazy(() => import('../ProgramModeIntroScreen.tsx'
 const FiveWOneHMenuScreen = lazy(() => import('../FiveWOneHMenuScreen.tsx'));
 const MiniGamesMenuScreen = lazy(() => import('../MiniGamesMenuScreen.tsx'));
 const ClockLearningGameScreen = lazy(() => import('../activities/games/ClockLearningGameScreen.tsx'));
-const BalloonPopGameScreen = lazy(() => import('../BalloonPopGameScreen.tsx'));
 const ButterflyGardenScreen = lazy(() => import('../MiniGamesScreen.tsx'));
-const FireworksGameScreen = lazy(() => import('../FireworksGameScreen.tsx'));
 const ShapeMatchingGameScreen = lazy(() => import('../ShapeMatchingGameScreen.tsx'));
 const MusicTouchGameScreen = lazy(() => import('../MusicTouchGameScreen.tsx'));
 const EmotionPuppetGameScreen = lazy(() => import('../EmotionPuppetGameScreen.tsx'));
@@ -77,33 +75,61 @@ const BusJamGameScreen = lazy(() => import('../games/BusJamGameScreen.tsx'));
 const PuzzleGameScreen = lazy(() => import('../games/PuzzleGameScreen.tsx'));
 const FishingGameScreen = lazy(() => import('../games/FishingGameScreen.tsx'));
 const RoomCleaningGameScreen = lazy(() => import('../games/RoomCleaningGameScreen.tsx'));
-const FruitCollectorGameScreen = lazy(() => import('../games/FruitCollectorGameScreen.tsx'));
 const TargetShootingGameScreen = lazy(() => import('../games/TargetShootingGameScreen.tsx'));
 const TrainTrackGameScreen = lazy(() => import('../games/TrainTrackGameScreen.tsx'));
 const MergeDropGameScreen = lazy(() => import('../games/MergeDropGameScreen.tsx'));
-const NumberMergeGameScreen = lazy(() => import('../games/NumberMergeGameScreen.tsx'));
 const BalanceScaleGameScreen = lazy(() => import('../games/BalanceScaleGameScreen.tsx'));
 const MazeGameScreen = lazy(() => import('../games/MazeGameScreen.tsx'));
 const MemoryMatchGameScreen = lazy(() => import('../games/MemoryMatchGameScreen.tsx'));
 const OddOneOutGameScreen = lazy(() => import('../games/OddOneOutGameScreen.tsx'));
 const LetterBubblesGameScreen = lazy(() => import('../games/LetterBubblesGameScreen.tsx'));
 const DailyRoutineGameScreen = lazy(() => import('../games/DailyRoutineGameScreen.tsx'));
-const ColorSortingGameScreen = lazy(() => import('../games/ColorSortingGameScreen.tsx'));
 const ConnectDotsGameScreen = lazy(() => import('../games/ConnectDotsGameScreen.tsx'));
 const CountingGameScreen = lazy(() => import('../games/CountingGameScreen.tsx'));
 const ShadowMatchGameScreen = lazy(() => import('../games/ShadowMatchGameScreen.tsx'));
 const SizeOrderingGameScreen = lazy(() => import('../games/SizeOrderingGameScreen.tsx'));
-const NumberTargetGameScreen = lazy(() => import('../games/NumberTargetGameScreen.tsx'));
 const NumberSequenceGameScreen = lazy(() => import('../games/NumberSequenceGameScreen.tsx'));
-const AnimalSoundsGameScreen = lazy(() => import('../games/AnimalSoundsGameScreen.tsx'));
 const PlantGrowingGameScreen = lazy(() => import('../games/PlantGrowingGameScreen.tsx'));
 const WhereBelongsGameScreen = lazy(() => import('../games/WhereBelongsGameScreen.tsx'));
 const SyllableTrainGameScreen = lazy(() => import('../games/SyllableTrainGameScreen.tsx'));
-const RainbowGameScreen = lazy(() => import('../games/RainbowGameScreen.tsx'));
 const WordBoxGameScreen = lazy(() => import('../games/WordBoxGameScreen.tsx'));
-const MissingPieceGameScreen = lazy(() => import('../games/MissingPieceGameScreen.tsx'));
 const WhoseIsThisGameScreen = lazy(() => import('../games/WhoseIsThisGameScreen.tsx'));
-const MandalaGameScreen = lazy(() => import('../games/MandalaGameScreen.tsx'));
+
+// Mini oyun kimliği -> ekran durumu
+const MINI_GAME_SCREENS: Record<string, ScreenState> = {
+    butterflyGarden: ScreenState.ButterflyGardenGame,
+    bubblePop: ScreenState.BubblePopGame,
+    counting: ScreenState.CountingGame,
+    sizeOrdering: ScreenState.SizeOrderingGame,
+    shapeMatching: ScreenState.ShapeMatchingGame,
+    shadowMatch: ScreenState.ShadowMatchGame,
+    colorMix: ScreenState.ColorMixGame,
+    numberSequence: ScreenState.NumberSequenceGame,
+    balanceScale: ScreenState.BalanceScaleGame,
+    letterBubbles: ScreenState.LetterBubblesGame,
+    syllableTrain: ScreenState.SyllableTrainGame,
+    wordBox: ScreenState.WordBoxGame,
+    connectDots: ScreenState.ConnectDotsGame,
+    plantGrowing: ScreenState.PlantGrowingGame,
+    trainTrack: ScreenState.TrainTrackGame,
+    pattern: ScreenState.PatternGame,
+    sheepShearing: ScreenState.SheepShearingGame,
+    musicTouch: ScreenState.MusicTouchGame,
+    memoryMatch: ScreenState.MemoryMatchGame,
+    oddOneOut: ScreenState.OddOneOutGame,
+    whereBelongs: ScreenState.WhereBelongsGame,
+    whoseIsThis: ScreenState.WhoseIsThisGame,
+    dailyRoutine: ScreenState.DailyRoutineGame,
+    maze: ScreenState.MazeGame,
+    sevenDifferences: ScreenState.SevenDifferencesGame,
+    puzzle: ScreenState.PuzzleGame,
+    busJam: ScreenState.BusJamGame,
+    targetShooting: ScreenState.TargetShootingGame,
+    fishing: ScreenState.FishingGame,
+    emotionPuppet: ScreenState.EmotionPuppetGame,
+    roomCleaning: ScreenState.RoomCleaningGame,
+    mergeDrop: ScreenState.MergeDropGame,
+};
 const ColorRecognitionScreen = lazy(() => import('../ColorRecognitionScreen.tsx'));
 const WhatsMissingScreen = lazy(() => import('../WhatsMissingScreen.tsx'));
 
@@ -915,184 +941,13 @@ export const AppRouter = () => {
         case ScreenState.MiniGamesMenu: return <MiniGamesMenuScreen
             onBack={() => setScreenState(ScreenState.MainMenu)}
             onSelectGame={(gameId) => {
-                console.log('AppRouter received gameId:', gameId);
-                if (gameId === 'balloonPop') {
-                    console.log('Setting BalloonPopGame');
-                    setScreenState(ScreenState.BalloonPopGame);
-                }
-                else if (gameId === 'butterflyGarden') {
-                    console.log('Setting ButterflyGardenGame');
-                    setScreenState(ScreenState.ButterflyGardenGame);
-                }
-                else if (gameId === 'fireworks') {
-                    console.log('Setting FireworksGame');
-                    setScreenState(ScreenState.FireworksGame);
-                }
-                else if (gameId === 'shapeMatching') {
-                    console.log('Setting ShapeMatchingGame');
-                    setScreenState(ScreenState.ShapeMatchingGame);
-                }
-                else if (gameId === 'musicTouch') {
-                    console.log('Setting MusicTouchGame');
-                    setScreenState(ScreenState.MusicTouchGame);
-                }
-                else if (gameId === 'emotionPuppet') {
-                    console.log('Setting EmotionPuppetGame');
-                    setScreenState(ScreenState.EmotionPuppetGame);
-                }
-                else if (gameId === 'pattern') {
-                    console.log('Setting PatternGame');
-                    setScreenState(ScreenState.PatternGame);
-                }
-                else if (gameId === 'colorMix') {
-                    console.log('Setting ColorMixGame');
-                    setScreenState(ScreenState.ColorMixGame);
-                }
-                else if (gameId === 'sevenDifferences') {
-                    console.log('Setting SevenDifferencesGame');
-                    setScreenState(ScreenState.SevenDifferencesGame);
-                }
-                else if (gameId === 'sheepShearing') {
-                    console.log('Setting SheepShearingGame');
-                    setScreenState(ScreenState.SheepShearingGame);
-                }
-                else if (gameId === 'bubblePop') {
-                    console.log('Setting BubblePopGame');
-                    setScreenState(ScreenState.BubblePopGame);
-                }
-                else if (gameId === 'busJam') {
-                    console.log('Setting BusJamGame');
-                    setScreenState(ScreenState.BusJamGame);
-                }
-                else if (gameId === 'puzzle') {
-                    console.log('Setting PuzzleGame');
-                    setScreenState(ScreenState.PuzzleGame);
-                }
-                else if (gameId === 'fishing') {
-                    console.log('Setting FishingGame');
-                    setScreenState(ScreenState.FishingGame);
-                }
-                else if (gameId === 'roomCleaning') {
-                    console.log('Setting RoomCleaningGame');
-                    setScreenState(ScreenState.RoomCleaningGame);
-                }
-                else if (gameId === 'fruitCollector') {
-                    console.log('Setting FruitCollectorGame');
-                    setScreenState(ScreenState.FruitCollectorGame);
-                }
-                else if (gameId === 'targetShooting') {
-                    console.log('Setting TargetShootingGame');
-                    setScreenState(ScreenState.TargetShootingGame);
-                }
-                else if (gameId === 'trainTrack') {
-                    console.log('Setting TrainTrackGame');
-                    setScreenState(ScreenState.TrainTrackGame);
-                }
-                else if (gameId === 'mergeDrop') {
-                    console.log('Setting MergeDropGame');
-                    setScreenState(ScreenState.MergeDropGame);
-                }
-                else if (gameId === 'numberMerge') {
-                    console.log('Setting NumberMergeGame');
-                    setScreenState(ScreenState.NumberMergeGame);
-                }
-                else if (gameId === 'balanceScale') {
-                    console.log('Setting BalanceScaleGame');
-                    setScreenState(ScreenState.BalanceScaleGame);
-                }
-                else if (gameId === 'maze') {
-                    console.log('Setting MazeGame');
-                    setScreenState(ScreenState.MazeGame);
-                }
-                else if (gameId === 'memoryMatch') {
-                    console.log('Setting MemoryMatchGame');
-                    setScreenState(ScreenState.MemoryMatchGame);
-                }
-                else if (gameId === 'oddOneOut') {
-                    console.log('Setting OddOneOutGame');
-                    setScreenState(ScreenState.OddOneOutGame);
-                }
-                else if (gameId === 'letterBubbles') {
-                    console.log('Setting LetterBubblesGame');
-                    setScreenState(ScreenState.LetterBubblesGame);
-                }
-                else if (gameId === 'dailyRoutine') {
-                    console.log('Setting DailyRoutineGame');
-                    setScreenState(ScreenState.DailyRoutineGame);
-                }
-                else if (gameId === 'colorSorting') {
-                    console.log('Setting ColorSortingGame');
-                    setScreenState(ScreenState.ColorSortingGame);
-                }
-                else if (gameId === 'connectDots') {
-                    console.log('Setting ConnectDotsGame');
-                    setScreenState(ScreenState.ConnectDotsGame);
-                }
-                else if (gameId === 'counting') {
-                    console.log('Setting CountingGame');
-                    setScreenState(ScreenState.CountingGame);
-                }
-                else if (gameId === 'shadowMatch') {
-                    console.log('Setting ShadowMatchGame');
-                    setScreenState(ScreenState.ShadowMatchGame);
-                }
-                else if (gameId === 'sizeOrdering') {
-                    console.log('Setting SizeOrderingGame');
-                    setScreenState(ScreenState.SizeOrderingGame);
-                }
-                else if (gameId === 'numberTarget') {
-                    console.log('Setting NumberTargetGame');
-                    setScreenState(ScreenState.NumberTargetGame);
-                }
-                else if (gameId === 'numberSequence') {
-                    console.log('Setting NumberSequenceGame');
-                    setScreenState(ScreenState.NumberSequenceGame);
-                }
-                else if (gameId === 'animalSounds') {
-                    console.log('Setting AnimalSoundsGame');
-                    setScreenState(ScreenState.AnimalSoundsGame);
-                }
-                else if (gameId === 'plantGrowing') {
-                    console.log('Setting PlantGrowingGame');
-                    setScreenState(ScreenState.PlantGrowingGame);
-                }
-                else if (gameId === 'whereBelongs') {
-                    console.log('Setting WhereBelongsGame');
-                    setScreenState(ScreenState.WhereBelongsGame);
-                }
-                else if (gameId === 'whoseIsThis') {
-                    console.log('Setting WhoseIsThisGame');
-                    setScreenState(ScreenState.WhoseIsThisGame);
-                }
-                else if (gameId === 'syllableTrain') {
-                    console.log('Setting SyllableTrainGame');
-                    setScreenState(ScreenState.SyllableTrainGame);
-                }
-                else if (gameId === 'rainbow') {
-                    console.log('Setting RainbowGame');
-                    setScreenState(ScreenState.RainbowGame);
-                }
-                else if (gameId === 'wordBox') {
-                    console.log('Setting WordBoxGame');
-                    setScreenState(ScreenState.WordBoxGame);
-                }
-                else if (gameId === 'missingPiece') {
-                    console.log('Setting MissingPieceGame');
-                    setScreenState(ScreenState.MissingPieceGame);
-                }
-                else if (gameId === 'mandala') {
-                    console.log('Setting MandalaGame');
-                    setScreenState(ScreenState.MandalaGame);
-                }
-                else {
-                    console.error('Unknown gameId:', gameId);
-                }
+                const target = MINI_GAME_SCREENS[gameId];
+                if (target !== undefined) setScreenState(target);
+                else console.error('Unknown gameId:', gameId);
             }}
         />;
         case ScreenState.ClockLearningGame: return <ClockLearningGameScreen onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} />;
-        case ScreenState.BalloonPopGame: return <BalloonPopGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.ButterflyGardenGame: return <ButterflyGardenScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.FireworksGame: return <FireworksGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.ShapeMatchingGame: return <ShapeMatchingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.MusicTouchGame: return <MusicTouchGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.EmotionPuppetGame: return <EmotionPuppetGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
@@ -1105,33 +960,25 @@ export const AppRouter = () => {
         case ScreenState.PuzzleGame: return <PuzzleGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.FishingGame: return <FishingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.RoomCleaningGame: return <RoomCleaningGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.FruitCollectorGame: return <FruitCollectorGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.TargetShootingGame: return <TargetShootingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.TrainTrackGame: return <TrainTrackGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.MergeDropGame: return <MergeDropGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.NumberMergeGame: return <NumberMergeGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.BalanceScaleGame: return <BalanceScaleGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.MazeGame: return <MazeGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.MemoryMatchGame: return <MemoryMatchGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.OddOneOutGame: return <OddOneOutGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.LetterBubblesGame: return <LetterBubblesGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.DailyRoutineGame: return <DailyRoutineGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.ColorSortingGame: return <ColorSortingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.ConnectDotsGame: return <ConnectDotsGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.CountingGame: return <CountingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.ShadowMatchGame: return <ShadowMatchGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.SizeOrderingGame: return <SizeOrderingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.NumberTargetGame: return <NumberTargetGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.NumberSequenceGame: return <NumberSequenceGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.AnimalSoundsGame: return <AnimalSoundsGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.PlantGrowingGame: return <PlantGrowingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.WhereBelongsGame: return <WhereBelongsGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.WhoseIsThisGame: return <WhoseIsThisGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.SyllableTrainGame: return <SyllableTrainGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.RainbowGame: return <RainbowGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.WordBoxGame: return <WordBoxGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.MissingPieceGame: return <MissingPieceGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.MandalaGame: return <MandalaGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
 
         default: return <MainMenuScreen onSelectCategory={() => { }} onStartRandomMode={ctx.activity.handleStartRandomMode} onSelectParentTips={() => setScreenState(ScreenState.ParentTips)} onSelectSettings={() => setScreenState(ScreenState.Settings)} theme={ctx.settings.theme} />;
     }

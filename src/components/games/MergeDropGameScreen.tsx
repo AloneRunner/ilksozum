@@ -1,3 +1,4 @@
+import { sayInstruction } from '../../utils/gameVoice.ts';
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
 
@@ -155,6 +156,7 @@ const MergeDropGameScreen: React.FC<{ onBack: () => void }> = ({ onBack }) => {
         }
 
         setGameState('playing');
+        sayInstruction('Meyveyi sürükle ve bırak. Aynı meyveler birleşir.', 400);
     }, []);
 
     // Spawn a new draggable fruit
@@ -383,6 +385,7 @@ const MergeDropGameScreen: React.FC<{ onBack: () => void }> = ({ onBack }) => {
         if (dangerFruits.length > 0 && canSpawnRef.current && !isDraggingRef.current) {
             setGameState('gameover');
             soundRef.current?.playGameOver();
+            sayInstruction('Kutu doldu. Yeniden başlayalım.');
             if (scoreRef.current > highScore) {
                 setHighScore(scoreRef.current);
                 localStorage.setItem('mergeDropHighScore', String(scoreRef.current));
@@ -431,7 +434,7 @@ const MergeDropGameScreen: React.FC<{ onBack: () => void }> = ({ onBack }) => {
         ctx.fillStyle = 'rgba(239, 68, 68, 0.3)';
         ctx.font = 'bold 12px sans-serif';
         ctx.textAlign = 'left';
-        ctx.fillText('⚠️ TEHLİKE', WALL_PADDING + 10, gameOverLineRef.current - 8);
+        ctx.fillText('Sınır', WALL_PADDING + 10, gameOverLineRef.current - 8);
 
         // Draw particles
         for (const p of particlesRef.current) {

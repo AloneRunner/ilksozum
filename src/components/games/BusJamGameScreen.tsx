@@ -1,3 +1,4 @@
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon';
 import { t } from '../../i18n/index.ts';
@@ -294,6 +295,11 @@ const BusJamGameScreen: React.FC<BusJamGameScreenProps> = ({ onBack }) => {
         return () => cancelAnimationFrame(animationRef.current);
     }, []);
 
+    // Sesli yönerge: her seviyede
+    useEffect(() => {
+        sayInstruction('Yolcuyu aynı renkteki otobüse sürükle.', 400);
+    }, [level]);
+
     // Seviye tamamlandı mı kontrol et
     useEffect(() => {
         const waitingPassengers = passengers.filter(p => p.state === 'waiting' || p.state === 'dragging');
@@ -302,6 +308,7 @@ const BusJamGameScreen: React.FC<BusJamGameScreenProps> = ({ onBack }) => {
         if (passengers.length > 0 && waitingPassengers.length === 0 && boardingPassengers.length === 0 && !isLevelComplete) {
             setIsLevelComplete(true);
             playSound('complete');
+            sayFinished('Bütün yolcular bindi!');
         }
     }, [passengers, isLevelComplete, playSound]);
 
@@ -315,6 +322,7 @@ const BusJamGameScreen: React.FC<BusJamGameScreenProps> = ({ onBack }) => {
         if (passenger.color === bus.color && bus.state === 'waiting') {
             // Doğru eşleşme!
             playSound('board');
+            sayCorrect();
             createParticles(bus.x + 50, bus.y + 35, bus.color, 12);
             setScore(s => s + 10 * level);
 
@@ -342,6 +350,7 @@ const BusJamGameScreen: React.FC<BusJamGameScreenProps> = ({ onBack }) => {
         } else {
             // Yanlış eşleşme!
             playSound('wrong');
+            sayWrong();
             setShowWrongFeedback(true);
             setTimeout(() => setShowWrongFeedback(false), 300);
 

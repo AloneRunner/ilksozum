@@ -1,5 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { speak } from '../../services/speechService.ts';
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createBubbleSound = () => {
@@ -51,12 +53,7 @@ const createBubbleSound = () => {
     };
 
     const speakLetter = (letter: string) => {
-        if ('speechSynthesis' in window) {
-            const utterance = new SpeechSynthesisUtterance(letter);
-            utterance.lang = 'tr-TR';
-            utterance.rate = 0.8;
-            window.speechSynthesis.speak(utterance);
-        }
+        speak(`${letter} harfi`).catch(() => { /* yoksay */ });
     };
 
     return { playPop, playCorrect, playWrong, speakLetter };
@@ -100,7 +97,7 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
     const [bubbles, setBubbles] = useState<Bubble[]>([]);
     const [targetLetter, setTargetLetter] = useState<string>('');
     const [score, setScore] = useState(0);
-    const [lives, setLives] = useState(3);
+    
     const [round, setRound] = useState(0);
     const [totalRounds] = useState(10);
     const soundRef = useRef<ReturnType<typeof createBubbleSound> | null>(null);
@@ -170,9 +167,12 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
         setBubbles(newBubbles);
     }, []);
 
+    useEffect(() => {
+        if (gameState === 'result') sayFinished();
+    }, [gameState]);
+
     const startGame = useCallback(() => {
         setScore(0);
-        setLives(3);
         setRound(1);
         setGameState('playing');
     }, []);
@@ -213,17 +213,9 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
             // Check if bubbles escaped
             const escaped = bubblesRef.current.filter(b => !b.popped && b.y < -b.size);
             if (escaped.some(b => b.letter === targetLetter)) {
-                // Target letter escaped - lose a life
-                setLives(l => {
-                    const newLives = l - 1;
-                    if (newLives <= 0) {
-                        setGameState('result');
-                    } else {
-                        // Next round
-                        setTimeout(() => setRound(r => r + 1), 500);
-                    }
-                    return newLives;
-                });
+                // Hedef harf kaçtı: can kaybı yok, aynı turu yeniden başlat
+                sayInstruction('Harf uçup gitti. Tekrar deneyelim.');
+                setTimeout(() => setRound(r => r + 1), 800);
                 return;
             }
 
@@ -331,6 +323,7 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
         if (clickedBubble.letter === targetLetter) {
             // Correct!
             soundRef.current?.playCorrect();
+            sayCorrect();
             setScore(s => s + 1);
 
             // Next round
@@ -344,13 +337,7 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
         } else {
             // Wrong
             soundRef.current?.playWrong();
-            setLives(l => {
-                const newLives = l - 1;
-                if (newLives <= 0) {
-                    setTimeout(() => setGameState('result'), 500);
-                }
-                return newLives;
-            });
+            sayWrong();
         }
     }, [targetLetter, round, totalRounds]);
 
@@ -385,7 +372,7 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
                 <div className="bg-white/95 rounded-3xl p-6 sm:p-8 shadow-2xl max-w-sm w-full text-center animate-scale-in">
                     <div className="text-6xl mb-4">{percent >= 80 ? '🏆' : percent >= 50 ? '🎉' : '💪'}</div>
                     <h2 className="text-2xl font-black text-blue-600 mb-2">
-                        {lives > 0 ? 'Oyun Bitti!' : 'Canlar Tükendi!'}
+                        Oyun Bitti!
                     </h2>
 
                     <div className="flex justify-center gap-1 my-3">
@@ -456,9 +443,7 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
                             <div className="bg-white/90 rounded-full px-4 py-1 shadow-lg">
                                 <span className="font-bold text-emerald-600">⭐ {score}</span>
                             </div>
-                            <div className="bg-white/90 rounded-full px-4 py-1 shadow-lg">
-                                {'❤️'.repeat(lives)}{'🖤'.repeat(3 - lives)}
-                            </div>
+                            
                         </div>
                     </div>
 

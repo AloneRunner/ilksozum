@@ -1,3 +1,4 @@
+import { sayInstruction, sayCorrect } from '../utils/gameVoice.ts';
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { t } from '../i18n/index.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
@@ -243,6 +244,12 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
   const handleModeChange = (newMode: SubMode) => {
     stopAllNotes();
     setSubMode(newMode);
+    sayInstruction(
+      newMode === 'free' ? 'Tuşlara dokun, istediğin gibi çal.'
+        : newMode === 'song' ? 'Yanan tuşa dokun, şarkıyı birlikte çalalım.'
+          : 'Önce dinle, sonra aynı tuşlara sırayla dokun.',
+      200
+    );
     setActiveSong(null);
     setCurrentSongNoteIndex(0);
     setMemorySequence([]);
@@ -282,6 +289,7 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
           if (currentSongNoteIndex === song.notes.length - 1) {
             // Şarkı tamamlandı - küçük kutlama
             playWinSound();
+            sayCorrect('Şarkıyı tamamladın!');
             setCurrentSongNoteIndex(0);
             setActiveSong(null);
           } else {
@@ -298,6 +306,7 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
       if (noteId === expectedNote) {
         if (userSequenceIndex === memorySequence.length - 1) {
           // Tur tamamlandı
+          sayCorrect();
           setUserSequenceIndex(0);
           setIsComputerTurn(true);
           setMemoryRound(prev => prev + 1);
@@ -311,6 +320,7 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
       } else {
         // Yanlış - tekrar oynat
         playErrorSound();
+        sayInstruction('Olmadı. Tekrar dinle.');
         setUserSequenceIndex(0);
         setTimeout(() => {
           setIsComputerTurn(true);

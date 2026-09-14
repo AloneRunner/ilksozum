@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createGameSound = () => {
@@ -147,11 +148,24 @@ const WhoseIsThisGameScreen: React.FC<WhoseIsThisGameScreenProps> = ({ onBack })
         setOptions(shuffleArray(opts));
     };
 
+    useEffect(() => {
+        if (gameState !== 'playing') return;
+        const text = mode === 'ObjectToOwner'
+            ? `Bu ${currentPair.objectName.toLocaleLowerCase('tr')} kimin? Sahibine dokun.`
+            : `${currentPair.ownerName} neyi arıyor? Eşyasına dokun.`;
+        sayInstruction(text, 300);
+    }, [gameState, mode, currentPair]);
+
+    useEffect(() => {
+        if (gameState === 'result') sayFinished();
+    }, [gameState]);
+
     const handleOptionClick = (isCorrect: boolean) => {
         if (showFeedback) return;
 
         if (isCorrect) {
             soundRef.current?.playCorrect();
+            sayCorrect();
             setShowFeedback('correct');
             setScore(s => s + 10);
             
@@ -166,6 +180,7 @@ const WhoseIsThisGameScreen: React.FC<WhoseIsThisGameScreenProps> = ({ onBack })
             }, 1000);
         } else {
             soundRef.current?.playWrong();
+            sayWrong();
             setShowFeedback('wrong');
             setMistakes(m => m + 1);
             setTimeout(() => setShowFeedback(null), 500);

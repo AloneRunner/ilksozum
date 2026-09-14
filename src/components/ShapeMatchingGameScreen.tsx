@@ -1,3 +1,4 @@
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../utils/gameVoice.ts';
 import React, { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 import { t } from '../i18n/index.ts';
 
@@ -392,6 +393,11 @@ const ShapeMatchingGameScreen: React.FC<ShapeMatchingGameScreenProps> = ({ onBac
     requestAnimationFrame(animate);
   }, []);
 
+  // Sesli yönerge: her seviyede
+  useEffect(() => {
+    sayInstruction('Şekilleri aynı şekildeki yuvaya sürükle.', 400);
+  }, [level]);
+
   // Pointer olayları
   const handlePointerDown = useCallback((e: React.PointerEvent, shapeId: string) => {
     if (matchedIds.includes(shapeId)) return;
@@ -451,12 +457,14 @@ const ShapeMatchingGameScreen: React.FC<ShapeMatchingGameScreenProps> = ({ onBac
         setScore((prev) => prev + 10 * level);
 
         playSuccessSound();
+        sayCorrect();
         createConfettiBurst(dragPosition.x, dragPosition.y);
 
         // Tüm şekiller eşleşti mi?
         if (matchedIds.length + 1 === levelShapes.length) {
           setShowSuccess(true);
           playLevelCompleteSound();
+          sayFinished('Bütün şekilleri yerleştirdin!');
 
           // Bir sonraki seviye
           setTimeout(() => {
@@ -467,6 +475,7 @@ const ShapeMatchingGameScreen: React.FC<ShapeMatchingGameScreenProps> = ({ onBac
       } else {
         // Yanlış pozisyon - geri döndür
         playWrongSound();
+        sayWrong();
         setShapePositions((prev) => ({
           ...prev,
           [draggingId]: initialShapePositions[draggingId] || { x: 50, y: 80 }

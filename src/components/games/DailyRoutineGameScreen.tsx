@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createRoutineSound = () => {
@@ -195,6 +196,15 @@ const DailyRoutineGameScreen: React.FC<DailyRoutineGameScreenProps> = ({ onBack 
         startRound(0);
     }, [startRound]);
 
+    useEffect(() => {
+        if (gameState !== 'playing') return;
+        sayInstruction(`${ROUTINE_SEQUENCES[currentSequence].title}. Kartları doğru sıraya koy. İlk önce ne yapılır?`, 300);
+    }, [gameState, currentSequence]);
+
+    useEffect(() => {
+        if (gameState === 'result') sayFinished();
+    }, [gameState]);
+
     const handleItemClick = useCallback((item: RoutineItem) => {
         if (showFeedback) return;
         soundRef.current?.playDrop();
@@ -210,6 +220,7 @@ const DailyRoutineGameScreen: React.FC<DailyRoutineGameScreenProps> = ({ onBack 
 
         if (isCorrect) {
             soundRef.current?.playCorrect();
+            sayCorrect(`${selectedItem.text}.`);
             setShowFeedback('correct');
 
             // Place item
@@ -239,6 +250,7 @@ const DailyRoutineGameScreen: React.FC<DailyRoutineGameScreenProps> = ({ onBack 
             }, 800);
         } else {
             soundRef.current?.playWrong();
+            sayWrong();
             setShowFeedback('wrong');
             setSelectedItem(null);
 

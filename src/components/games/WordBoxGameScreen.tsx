@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createWordSound = () => {
@@ -54,15 +55,15 @@ const createWordSound = () => {
 // Word-Image pairs
 const WORD_PAIRS = [
     { emoji: '🍎', word: 'ELMA', options: ['ELMA', 'ARMUT', 'PORTAKAL', 'MUZ'] },
-    { emoji: '🐶', word: 'KÖPEK', options: ['KEDİ', 'KÖPEK', 'TAVŞİAN', 'FARE'] },
+    { emoji: '🐶', word: 'KÖPEK', options: ['KEDİ', 'KÖPEK', 'TAVŞAN', 'FARE'] },
     { emoji: '🚗', word: 'ARABA', options: ['ARABA', 'OTOBÜS', 'KAMYON', 'TREN'] },
     { emoji: '🌸', word: 'ÇİÇEK', options: ['AĞAÇ', 'ÇİÇEK', 'YAPRAK', 'OT'] },
     { emoji: '🏠', word: 'EV', options: ['EV', 'OKUL', 'HASTANE', 'MARKET'] },
     { emoji: '☀️', word: 'GÜNEŞ', options: ['AY', 'YILDIZ', 'GÜNEŞ', 'BULUT'] },
     { emoji: '🐱', word: 'KEDİ', options: ['KÖPEK', 'KEDİ', 'ASLAN', 'KAPLAN'] },
-    { emoji: '🍌', word: 'MUZ', options: ['ELMA', 'ÇLEK', 'MUZ', 'ÜZÜM'] },
+    { emoji: '🍌', word: 'MUZ', options: ['ELMA', 'ÇİLEK', 'MUZ', 'ÜZÜM'] },
     { emoji: '⚽', word: 'TOP', options: ['TOP', 'BALON', 'YUMURTA', 'PORTAKAL'] },
-    { emoji: '🦋', word: 'KELEBEK', options: ['ARİ', 'KELEBEK', 'UĞUR BÖCEĞİ', 'SİNEK'] },
+    { emoji: '🦋', word: 'KELEBEK', options: ['ARI', 'KELEBEK', 'UĞUR BÖCEĞİ', 'SİNEK'] },
     { emoji: '🌙', word: 'AY', options: ['GÜNEŞ', 'AY', 'YILDIZ', 'GEZEGEN'] },
     { emoji: '🎈', word: 'BALON', options: ['TOP', 'BALON', 'ŞEKİL', 'DAİRE'] },
     { emoji: '🐟', word: 'BALIK', options: ['BALIK', 'YENGEÇ', 'DENİZ ATI', 'KURBAĞA'] },
@@ -134,6 +135,17 @@ const WordBoxGameScreen: React.FC<WordBoxGameScreenProps> = ({ onBack }) => {
         setGameState('playing');
     }, [generateQuestion]);
 
+    useEffect(() => {
+        if (gameState === 'playing' && question) {
+            const w = question.word.toLocaleLowerCase('tr');
+            sayInstruction(`Bu bir ${w}. ${w} yazan kelimeyi bul.`, 300);
+        }
+    }, [gameState, question]);
+
+    useEffect(() => {
+        if (gameState === 'result') sayFinished();
+    }, [gameState]);
+
     const handleAnswer = useCallback((index: number) => {
         if (showResult || !question) return;
 
@@ -146,9 +158,11 @@ const WordBoxGameScreen: React.FC<WordBoxGameScreenProps> = ({ onBack }) => {
         setTimeout(() => {
             if (isCorrect) {
                 soundRef.current?.playCorrect();
+                sayCorrect();
                 setScore(s => s + 1);
             } else {
                 soundRef.current?.playWrong();
+                sayWrong();
             }
         }, 200);
 

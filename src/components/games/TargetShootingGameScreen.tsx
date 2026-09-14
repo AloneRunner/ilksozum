@@ -1,3 +1,4 @@
+import { sayInstruction, sayFinished } from '../../utils/gameVoice.ts';
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon';
 
@@ -122,6 +123,7 @@ const TargetShootingGameScreen: React.FC<TargetShootingGameScreenProps> = ({ onB
     const initLevel = useCallback(() => {
         setGameState('playing');
         setBallsLeft(5); // Reset projectile count
+        sayInstruction('Topu aşağı çek ve bırak. Kutuları devir.', 400);
 
         const shelfY = window.innerHeight * 0.5; // Moved UP (was 0.6)
         const ballY = window.innerHeight * 0.75; // Moved UP (was height - 100)
@@ -361,10 +363,12 @@ const TargetShootingGameScreen: React.FC<TargetShootingGameScreenProps> = ({ onB
             if (targets.every(t => t.isDebris)) {
                 setGameState('level_complete');
                 playSound(600, 'sine', 0.5);
+                sayFinished('Bütün kutuları devirdin!');
                 createParticles(canvas.width / 2, canvas.height / 2, '#FFD700', 50);
             } else if (ballsLeft <= 0 && !ball.active) {
-                // All balls used, ball stopped, targets remain
+                // Toplar bitti: ceza yok, aynı seviye yeni toplarla tekrar edilir
                 setGameState('game_over');
+                sayInstruction('Toplar bitti. Yeni toplarla tekrar deneyelim.');
             }
         }
 
@@ -589,21 +593,17 @@ const TargetShootingGameScreen: React.FC<TargetShootingGameScreenProps> = ({ onB
                 <div className="absolute inset-0 bg-black/60 flex items-center justify-center z-50 backdrop-blur-sm pointer-events-auto">
                     <div className="bg-white rounded-[2rem] p-8 text-center shadow-2xl animate-in zoom-in duration-300 max-w-sm mx-4">
                         <div className="text-7xl mb-4 animate-bounce">
-                            {gameState === 'level_complete' ? '🎪' : '😢'}
+                            {gameState === 'level_complete' ? '🎪' : '🎈'}
                         </div>
                         <h2 className="text-3xl font-bold text-purple-600 mb-2">
-                            {gameState === 'level_complete' ? 'Bravo!' : 'Oyun Bitti'}
+                            {gameState === 'level_complete' ? 'Bravo!' : 'Toplar Bitti'}
                         </h2>
                         <p className="text-gray-600 mb-6">
-                            {gameState === 'level_complete' ? 'Tüm kutuları devirdin!' : 'Topların bitti.'}
+                            {gameState === 'level_complete' ? 'Tüm kutuları devirdin!' : 'Yeni toplar geldi, tekrar deneyelim!'}
                         </p>
                         <button
                             onClick={() => {
                                 if (gameState === 'level_complete') setLevel(l => l + 1);
-                                else {
-                                    setLevel(1);
-                                    setScore(0);
-                                }
                                 initLevel();
                             }}
                             className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-10 rounded-full shadow-lg transform transition active:scale-95 text-xl"

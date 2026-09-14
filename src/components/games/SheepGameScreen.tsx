@@ -1,3 +1,4 @@
+import { sayInstruction, sayFinished } from '../../utils/gameVoice.ts';
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { t } from '../../i18n/index.ts';
 
@@ -99,6 +100,11 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
     } catch (e) {
       console.log('Audio error:', e);
     }
+  }, []);
+
+  // Sesli yönerge
+  useEffect(() => {
+    sayInstruction('Parmağını koyunun üstünde gezdir ve yününü kırk.', 500);
   }, []);
 
   // Oyunu başlat
@@ -405,6 +411,7 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
       setIsWon(true);
       setProgress(100);
       playSound('success');
+      sayFinished('Koyun tertemiz oldu!');
       setTimeout(() => playSound('bleat'), 600);
     }
   }, [isWon, playSound]);

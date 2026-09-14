@@ -1,3 +1,4 @@
+import { sayInstruction, sayFinished } from '../../utils/gameVoice.ts';
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon';
 
@@ -106,6 +107,7 @@ const RoomCleaningGameScreen: React.FC<RoomCleaningGameScreenProps> = ({ onBack 
 
         setPhase('sorting');
         setGuideMessage('Dağınıklığı uygun kutulara taşı!');
+        sayInstruction('Yerdeki eşyaları doğru kutuya sürükle.', 400);
 
         // 1. Create Items
         const newItems: CleaningItem[] = [];
@@ -162,6 +164,7 @@ const RoomCleaningGameScreen: React.FC<RoomCleaningGameScreenProps> = ({ onBack 
                 playSound(800, 'sine', 0.5);
                 setPhase('scrubbing');
                 setGuideMessage('Şimdi yerdeki lekeleri ovalayarak temizle!');
+                sayInstruction('Şimdi lekeleri parmağınla ovalayarak temizle.');
                 createParticles(window.innerWidth / 2, window.innerHeight / 2, '#FFD700', 50); // Celebration sparkles
             }
         } else if (phase === 'scrubbing') {
@@ -170,6 +173,7 @@ const RoomCleaningGameScreen: React.FC<RoomCleaningGameScreenProps> = ({ onBack 
                 // All Done -> Level Up
                 setPhase('completed');
                 playSound(1000, 'sine', 0.8);
+                sayFinished('Oda tertemiz oldu!');
                 createParticles(window.innerWidth / 2, window.innerHeight / 2, '#FFD700', 100);
             }
         }

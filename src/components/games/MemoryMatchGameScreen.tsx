@@ -1,5 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { IMAGE_SETS, imgUrl } from '../../data/gameImageSets.ts';
+import { sayInstruction, sayCorrect, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createMemorySound = () => {
@@ -70,57 +72,18 @@ const createMemorySound = () => {
     return { playFlip, playMatch, playNoMatch, playWin };
 };
 
-// --- Card Data ---
+// --- Card Data: uygulamanın gerçek kart görselleri ---
 const CARD_SETS = {
-    animals: [
-        { emoji: '🐶', name: 'Köpek' },
-        { emoji: '🐱', name: 'Kedi' },
-        { emoji: '🐰', name: 'Tavşan' },
-        { emoji: '🐻', name: 'Ayı' },
-        { emoji: '🦊', name: 'Tilki' },
-        { emoji: '🐼', name: 'Panda' },
-        { emoji: '🦁', name: 'Aslan' },
-        { emoji: '🐯', name: 'Kaplan' },
-        { emoji: '🐮', name: 'İnek' },
-        { emoji: '🐷', name: 'Domuz' },
-        { emoji: '🐸', name: 'Kurbağa' },
-        { emoji: '🐵', name: 'Maymun' },
-    ],
-    fruits: [
-        { emoji: '🍎', name: 'Elma' },
-        { emoji: '🍊', name: 'Portakal' },
-        { emoji: '🍋', name: 'Limon' },
-        { emoji: '🍇', name: 'Üzüm' },
-        { emoji: '🍓', name: 'Çilek' },
-        { emoji: '🍑', name: 'Şeftali' },
-        { emoji: '🍒', name: 'Kiraz' },
-        { emoji: '🥝', name: 'Kivi' },
-        { emoji: '🍌', name: 'Muz' },
-        { emoji: '🍉', name: 'Karpuz' },
-        { emoji: '🥭', name: 'Mango' },
-        { emoji: '🍍', name: 'Ananas' },
-    ],
-    shapes: [
-        { emoji: '🔴', name: 'Kırmızı' },
-        { emoji: '🟢', name: 'Yeşil' },
-        { emoji: '🔵', name: 'Mavi' },
-        { emoji: '🟡', name: 'Sarı' },
-        { emoji: '🟣', name: 'Mor' },
-        { emoji: '🟠', name: 'Turuncu' },
-        { emoji: '⭐', name: 'Yıldız' },
-        { emoji: '❤️', name: 'Kalp' },
-        { emoji: '💎', name: 'Elmas' },
-        { emoji: '🌙', name: 'Ay' },
-        { emoji: '☀️', name: 'Güneş' },
-        { emoji: '🌈', name: 'Gökkuşağı' },
-    ],
+    animals: IMAGE_SETS.animals,
+    fruits: IMAGE_SETS.fruits,
+    vehicles: IMAGE_SETS.vehicles,
 };
 
 type CardSetType = keyof typeof CARD_SETS;
 
 interface Card {
     id: number;
-    emoji: string;
+    imageId: number;
     name: string;
     pairId: number;
     isFlipped: boolean;
@@ -186,7 +149,7 @@ const MemoryMatchGameScreen: React.FC<MemoryMatchGameScreenProps> = ({ onBack })
             // First card of pair
             newCards.push({
                 id: id++,
-                emoji: data.emoji,
+                imageId: data.id,
                 name: data.name,
                 pairId,
                 isFlipped: false,
@@ -195,7 +158,7 @@ const MemoryMatchGameScreen: React.FC<MemoryMatchGameScreenProps> = ({ onBack })
             // Second card of pair
             newCards.push({
                 id: id++,
-                emoji: data.emoji,
+                imageId: data.id,
                 name: data.name,
                 pairId,
                 isFlipped: false,
@@ -214,6 +177,7 @@ const MemoryMatchGameScreen: React.FC<MemoryMatchGameScreenProps> = ({ onBack })
         setStartTime(Date.now());
         setElapsedTime(0);
         setGameState('playing');
+        sayInstruction('Kartları çevir. Aynı olan iki kartı bul.', 300);
     }, []);
 
     const handleCardClick = useCallback((cardId: number) => {
@@ -246,6 +210,7 @@ const MemoryMatchGameScreen: React.FC<MemoryMatchGameScreenProps> = ({ onBack })
                 // Match!
                 setTimeout(() => {
                     soundRef.current?.playMatch();
+                    sayCorrect(`İki ${firstCard.name.toLocaleLowerCase('tr')}.`);
                     setCards(prev => prev.map(c =>
                         c.pairId === firstCard.pairId ? { ...c, isMatched: true } : c
                     ));
@@ -254,6 +219,7 @@ const MemoryMatchGameScreen: React.FC<MemoryMatchGameScreenProps> = ({ onBack })
                         if (newMatched === totalPairs) {
                             setTimeout(() => {
                                 soundRef.current?.playWin();
+                                sayFinished('Tebrikler, bütün çiftleri buldun!');
                                 setGameState('won');
                             }, 500);
                         }
@@ -298,7 +264,7 @@ const MemoryMatchGameScreen: React.FC<MemoryMatchGameScreenProps> = ({ onBack })
                         {[
                             { key: 'animals', icon: '🐶', label: 'Hayvanlar' },
                             { key: 'fruits', icon: '🍎', label: 'Meyveler' },
-                            { key: 'shapes', icon: '⭐', label: 'Şekiller' },
+                            { key: 'vehicles', icon: '🚗', label: 'Taşıtlar' },
                         ].map(({ key, icon, label }) => (
                             <button
                                 key={key}
@@ -389,7 +355,7 @@ const MemoryMatchGameScreen: React.FC<MemoryMatchGameScreenProps> = ({ onBack })
                                 }}
                             >
                                 {(card.isFlipped || card.isMatched) ? (
-                                    <span className="text-3xl sm:text-4xl">{card.emoji}</span>
+                                    <img src={imgUrl(card.imageId)} alt={card.name} draggable={false} className="w-full h-full object-contain p-1" />
                                 ) : (
                                     <span className="text-2xl sm:text-3xl text-white/80">❓</span>
                                 )}

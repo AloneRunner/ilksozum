@@ -31,60 +31,54 @@ const MiniGamesMenuScreen: React.FC<MiniGamesMenuScreenProps> = ({ onBack, onSel
 
   const games = [
     // === EĞLENCELİ BAŞLANGIÇ ===
-    { id: 'balloonPop', category: 'fun', icon: GameIcon, title: '🎈 Balon Patlatma', subtitle: 'Balonları patlat!', color: 'fuchsia' as const },
+    { id: 'bubblePop', category: 'fun', icon: GameIcon, title: '🫧 Baloncuk Patlat', subtitle: 'Baloncuklara dokun!', color: 'cyan' as const },
     { id: 'butterflyGarden', category: 'fun', icon: GameIcon, title: '🦋 Kelebek Bahçesi', subtitle: 'Kelebekleri çiçeklere götür!', color: 'emerald' as const },
-    { id: 'rainbow', category: 'fun', icon: GameIcon, title: '🌈 Gökkuşağı', subtitle: 'Renkleri sırala!', color: 'pink' as const },
-    { id: 'bubblePop', category: 'fun', icon: GameIcon, title: '🫧 Baloncuk Patlat', subtitle: 'Baloncukları patlat!', color: 'cyan' as const },
+    { id: 'plantGrowing', category: 'fun', icon: GameIcon, title: '🌱 Bitki Büyüt', subtitle: 'Su ver, güneş ver!', color: 'lime' as const },
 
     // === TEMEL BECERİLER ===
-    { id: 'counting', category: 'numbers', icon: GameIcon, title: '🔢 Sayı Sayma', subtitle: 'Kaç tane var?', color: 'teal' as const },
     { id: 'sizeOrdering', category: 'basic', icon: GameIcon, title: '📏 Boyut Sıralama', subtitle: 'Küçükten büyüğe!', color: 'lime' as const },
-    { id: 'shapeMatching', category: 'basic', icon: GameIcon, title: '🔷 Şekil Eşleştirme', subtitle: 'Şekilleri eşleştir!', color: 'orange' as const },
-    { id: 'shadowMatch', category: 'basic', icon: GameIcon, title: '🔦 Gölge Eşleştirme', subtitle: 'Gölgeleri bul!', color: 'sky' as const },
-    { id: 'colorMix', category: 'basic', icon: GameIcon, title: '🧪 Renk Karıştır', subtitle: 'Renkleri karıştır!', color: 'pink' as const },
+    { id: 'shapeMatching', category: 'basic', icon: GameIcon, title: '🔷 Şekil Eşleştirme', subtitle: 'Şekilleri yerine koy!', color: 'orange' as const },
+    { id: 'shadowMatch', category: 'basic', icon: GameIcon, title: '🔦 Gölge Eşleştirme', subtitle: 'Gölge kime ait?', color: 'sky' as const },
+    { id: 'colorMix', category: 'basic', icon: GameIcon, title: '🧪 Renk Karıştır', subtitle: 'Yeni renkler bul!', color: 'pink' as const },
+    { id: 'balanceScale', category: 'basic', icon: GameIcon, title: '⚖️ Karşılaştır', subtitle: 'Ağır-hafif, büyük-küçük...', color: 'amber' as const },
 
-    // === SAYI OYUNLARI ===
-    { id: 'numberTarget', category: 'numbers', icon: GameIcon, title: '🎯 Sayı Hedefi', subtitle: 'Hedef sayıyı yakala!', color: 'orange' as const },
-    { id: 'numberSequence', category: 'numbers', icon: GameIcon, title: '🔢 Sayı Sırala', subtitle: '1, 2, 3... sırala!', color: 'indigo' as const },
-    { id: 'balanceScale', category: 'numbers', icon: GameIcon, title: '⚖️ Tartı Dengele', subtitle: 'Ağır-hafif, büyük-küçük...', color: 'amber' as const },
+    // === SAYILAR ===
+    { id: 'counting', category: 'numbers', icon: GameIcon, title: '🔢 Sayı Sayma', subtitle: 'Kaç tane var?', color: 'teal' as const },
+    { id: 'numberSequence', category: 'numbers', icon: GameIcon, title: '🪜 Sayı Sırala', subtitle: '1, 2, 3... sırala!', color: 'indigo' as const },
+    { id: 'connectDots', category: 'numbers', icon: GameIcon, title: '✏️ Noktaları Birleştir', subtitle: 'Sayıları takip et!', color: 'blue' as const },
 
-    // === ALFABE / DİL ===
-    { id: 'letterBubbles', category: 'letters', icon: GameIcon, title: '🔤 Harf Baloncukları', subtitle: 'Harfleri patlat!', color: 'indigo' as const },
-    { id: 'syllableTrain', category: 'letters', icon: GameIcon, title: '🚂 Hece Treni', subtitle: 'Heceleri birleştir!', color: 'purple' as const },
+    // === HARFLER ===
+    { id: 'letterBubbles', category: 'letters', icon: GameIcon, title: '🔤 Harf Baloncukları', subtitle: 'Söylenen harfi bul!', color: 'indigo' as const },
+    { id: 'syllableTrain', category: 'letters', icon: GameIcon, title: '🚃 Hece Treni', subtitle: 'Heceleri birleştir!', color: 'purple' as const },
     { id: 'wordBox', category: 'letters', icon: GameIcon, title: '📦 Kelime Kutusu', subtitle: 'Resmi kelimeyle eşle!', color: 'indigo' as const },
 
     // === YARATICILIK / EL BECERİSİ ===
-    { id: 'connectDots', category: 'creative', icon: GameIcon, title: '✏️ Noktaları Birleştir', subtitle: 'Sayıları takip et!', color: 'blue' as const },
-    { id: 'colorSorting', category: 'creative', icon: GameIcon, title: '🎨 Renk Toplama', subtitle: 'Renklere göre ayır!', color: 'rose' as const },
-    { id: 'plantGrowing', category: 'creative', icon: GameIcon, title: '🌱 Bitki Büyüt', subtitle: 'Su ver, güneş ver!', color: 'cyan' as const },
     { id: 'trainTrack', category: 'creative', icon: GameIcon, title: '🚂 Tren Yolu', subtitle: 'Yol çiz!', color: 'emerald' as const },
-    { id: 'pattern', category: 'creative', icon: GameIcon, title: '🎨 Örüntü Tamamla', subtitle: 'Desenleri tamamla!', color: 'cyan' as const },
+    { id: 'pattern', category: 'creative', icon: GameIcon, title: '🎁 Örüntü Treni', subtitle: 'Sıradaki vagon ne?', color: 'cyan' as const },
     { id: 'sheepShearing', category: 'creative', icon: GameIcon, title: '🐑 Koyun Kırkma', subtitle: 'Yününü kırk!', color: 'lime' as const },
+    { id: 'musicTouch', category: 'creative', icon: GameIcon, title: '🎹 Müzik Dokun', subtitle: 'Piyano çal!', color: 'indigo' as const },
 
     // === MANTIK / ZEKA ===
     { id: 'memoryMatch', category: 'logic', icon: GameIcon, title: '🃏 Hafıza Çiftleri', subtitle: 'Eşleşen kartları bul!', color: 'purple' as const },
     { id: 'oddOneOut', category: 'logic', icon: GameIcon, title: '🎪 Kim Farklı?', subtitle: 'Farklı olanı bul!', color: 'cyan' as const },
-    { id: 'whereBelongs', category: 'logic', icon: GameIcon, title: '🏠 Nereye Ait?', subtitle: 'Doğru yere koy!', color: 'amber' as const },
-    { id: 'whoseIsThis', category: 'logic', icon: GameIcon, title: '🧩 Bu Kimin?', subtitle: 'Sahipleri eşleştir!', color: 'indigo' as const },
+    { id: 'whereBelongs', category: 'logic', icon: GameIcon, title: '🏠 Nereye Ait?', subtitle: 'Doğru odaya koy!', color: 'amber' as const },
+    { id: 'whoseIsThis', category: 'logic', icon: GameIcon, title: '🎒 Bu Kimin?', subtitle: 'Sahibini bul!', color: 'indigo' as const },
     { id: 'dailyRoutine', category: 'logic', icon: GameIcon, title: '📋 Sıralı Ol!', subtitle: 'Günlük rutini sırala!', color: 'fuchsia' as const },
     { id: 'maze', category: 'logic', icon: GameIcon, title: '🐭 Labirent', subtitle: 'Fareyi peynire götür!', color: 'orange' as const },
     { id: 'sevenDifferences', category: 'logic', icon: GameIcon, title: '🔍 7 Fark Bul', subtitle: 'Farkları bul!', color: 'amber' as const },
     { id: 'puzzle', category: 'logic', icon: GameIcon, title: '🧩 Yapboz', subtitle: 'Parçaları birleştir!', color: 'purple' as const },
     { id: 'busJam', category: 'logic', icon: GameIcon, title: '🚌 Otobüs Durağı', subtitle: 'Yolcuları bindir!', color: 'sky' as const },
 
-    // === AKSİYON / REFLEKSİ ===
-    { id: 'targetShooting', category: 'action', icon: GameIcon, title: '🎯 Hedef Vurma', subtitle: 'Hedeflere dokun!', color: 'indigo' as const },
-    { id: 'fishing', category: 'action', icon: GameIcon, title: '🎣 Balık Tutma', subtitle: 'Balık yakala!', color: 'cyan' as const },
-    { id: 'fruitCollector', category: 'action', icon: GameIcon, title: '🍎 Meyve Topla', subtitle: 'Meyveleri topla!', color: 'lime' as const },
+    // === AKSİYON ===
+    { id: 'targetShooting', category: 'action', icon: GameIcon, title: '🎯 Hedef Vurma', subtitle: 'Kutuları devir!', color: 'indigo' as const },
+    { id: 'fishing', category: 'action', icon: GameIcon, title: '🎣 Balık Tutma', subtitle: 'Renkli balığı yakala!', color: 'cyan' as const },
 
-    // === SOSYAL / DUYGUSAL ===
+    // === SOSYAL / GÜNLÜK YAŞAM ===
     { id: 'emotionPuppet', category: 'social', icon: GameIcon, title: '🎭 Duygu Kuklası', subtitle: 'Duyguları öğren!', color: 'rose' as const },
     { id: 'roomCleaning', category: 'social', icon: GameIcon, title: '🧹 Oda Temizliği', subtitle: 'Odayı topla!', color: 'amber' as const },
-    { id: 'musicTouch', category: 'social', icon: GameIcon, title: '🎹 Müzik Dokun', subtitle: 'Müzik alet çal!', color: 'indigo' as const },
 
-    // === İLERİ SEVİYE (MERGE OYUNLARI) ===
-    { id: 'mergeDrop', category: 'advanced', icon: GameIcon, title: '🍎 Meyve Birleştir', subtitle: 'Meyveleri birleştir, büyüt!', color: 'emerald' as const },
-    { id: 'numberMerge', category: 'advanced', icon: GameIcon, title: '🔢 Sayı Birleştir', subtitle: 'Sayıları birleştir, 10\'a ulaş!', color: 'blue' as const },
+    // === İLERİ SEVİYE ===
+    { id: 'mergeDrop', category: 'advanced', icon: GameIcon, title: '🍉 Meyve Birleştir', subtitle: 'Aynı meyveleri birleştir!', color: 'emerald' as const },
   ];
 
   // Filter games based on category and search

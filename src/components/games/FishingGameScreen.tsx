@@ -1,3 +1,4 @@
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon';
 import FishIcon from '../icons/FishIcon';
@@ -112,9 +113,11 @@ const FishingGameScreen: React.FC<FishingGameScreenProps> = ({ onBack }) => {
         }
         bubblesRef.current = newBubbles;
 
-        setTargetFish(FISH_TYPES[Math.floor(Math.random() * Math.min(2 + level, FISH_TYPES.length))]);
+        const nextTarget = FISH_TYPES[Math.floor(Math.random() * Math.min(2 + level, FISH_TYPES.length))];
+        setTargetFish(nextTarget);
         setCaughtCount(0);
         setShowSuccess(false);
+        sayInstruction(`${nextTarget.name} balıkları yakala. Balığa dokun.`, 400);
     }, [level, createFish]);
 
     useEffect(() => {
@@ -309,10 +312,12 @@ const FishingGameScreen: React.FC<FishingGameScreenProps> = ({ onBack }) => {
                 if (fish.color === targetFish.color) {
                     // Correct!
                     playSound(600, 'sine');
+                    sayCorrect();
                     setScore(s => s + 10);
                     setCaughtCount(c => {
                         const newCount = c + 1;
                         if (newCount >= caughtTarget) {
+                            sayFinished('Bütün balıkları yakaladın!');
                             setTimeout(() => setShowSuccess(true), 500);
                         }
                         return newCount;
@@ -329,6 +334,7 @@ const FishingGameScreen: React.FC<FishingGameScreenProps> = ({ onBack }) => {
                 } else {
                     // Wrong!
                     playSound(150, 'sawtooth');
+                    sayWrong();
                 }
                 break; // Only catch one at a time
             }

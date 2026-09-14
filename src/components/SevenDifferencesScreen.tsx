@@ -1,3 +1,4 @@
+import { sayInstruction, sayCorrect, sayFinished } from '../utils/gameVoice.ts';
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 
@@ -851,6 +852,11 @@ const SevenDifferencesScreen: React.FC<SevenDifferencesScreenProps> = ({ onBack 
   }, [currentScene, foundDifferences, showHint]);
 
   // Tıklama kontrolü - object-contain için düzeltilmiş koordinat hesaplama
+  // Sesli yönerge: her sahnede
+  useEffect(() => {
+    sayInstruction('İki resim arasındaki yedi farkı bul. Farklı olan yere dokun.', 400);
+  }, [level]);
+
   const handleCanvasClick = (e: React.MouseEvent<HTMLCanvasElement>, isRight: boolean) => {
     if (showWin) return;
 
@@ -902,6 +908,7 @@ const SevenDifferencesScreen: React.FC<SevenDifferencesScreenProps> = ({ onBack 
         setFoundDifferences([...foundDifferences, diff.id]);
         setScore(prev => prev + 15);
         playSuccess();
+        sayCorrect();
         found = true;
 
         // Tümü bulundu mu?
@@ -909,6 +916,7 @@ const SevenDifferencesScreen: React.FC<SevenDifferencesScreenProps> = ({ onBack 
           setTimeout(() => {
             setShowWin(true);
             playWin();
+            sayFinished('Yedi farkı da buldun!');
           }, 500);
         }
         break;

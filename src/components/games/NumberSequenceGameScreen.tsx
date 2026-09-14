@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createSequenceSound = () => {
@@ -113,6 +114,16 @@ const NumberSequenceGameScreen: React.FC<NumberSequenceGameScreenProps> = ({ onB
         startRound(1);
     }, [startRound]);
 
+    useEffect(() => {
+        if (gameState !== 'playing' || round === 0) return;
+        const asc = mode === 'ascending';
+        sayInstruction(`Sayıları ${asc ? 'küçükten büyüğe' : 'büyükten küçüğe'} sırala. Önce en ${asc ? 'küçük' : 'büyük'} sayıya dokun.`, 300);
+    }, [gameState, round, mode]);
+
+    useEffect(() => {
+        if (gameState === 'result') sayFinished();
+    }, [gameState]);
+
     const handleNumberClick = useCallback((num: number) => {
         if (showFeedback) return;
         if (placedNumbers.includes(num)) return;
@@ -135,6 +146,7 @@ const NumberSequenceGameScreen: React.FC<NumberSequenceGameScreenProps> = ({ onB
 
         if (isCorrect) {
             soundRef.current?.playCorrect();
+            sayCorrect(`${selectedNumber}.`);
             setShowFeedback('correct');
             setPlacedNumbers(prev => [...prev, selectedNumber]);
             setNumbers(prev => prev.map(n =>
@@ -157,6 +169,7 @@ const NumberSequenceGameScreen: React.FC<NumberSequenceGameScreenProps> = ({ onB
             }, 500);
         } else {
             soundRef.current?.playWrong();
+            sayWrong();
             setShowFeedback('wrong');
             setSelectedNumber(null);
 

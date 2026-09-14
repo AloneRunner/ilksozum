@@ -1,5 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { IMAGE_SETS, imgUrl, type GameImage } from '../../data/gameImageSets.ts';
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createOddOneOutSound = () => {
@@ -52,22 +54,22 @@ const createOddOneOutSound = () => {
     return { playSelect, playCorrect, playWrong };
 };
 
-// --- Categories and Items ---
+// --- Categories and Items: uygulamanın gerçek kart görselleri ---
 const CATEGORIES = {
-    animals: { name: 'Hayvanlar', items: ['🐶', '🐱', '🐰', '🐻', '🦊', '🐼', '🦁', '🐯', '🐮', '🐷'] },
-    fruits: { name: 'Meyveler', items: ['🍎', '🍊', '🍋', '🍇', '🍓', '🍑', '🍒', '🥝', '🍌', '🍉'] },
-    vehicles: { name: 'Taşıtlar', items: ['🚗', '🚕', '🚌', '🚎', '🏎️', '🚓', '🚑', '🚒', '🛺', '🚚'] },
-    foods: { name: 'Yiyecekler', items: ['🍕', '🍔', '🌭', '🍟', '🥪', '🌮', '🍿', '🥐', '🍖', '🧇'] },
-    sports: { name: 'Sporlar', items: ['⚽', '🏀', '🏈', '⚾', '🎾', '🏐', '🏓', '🏸', '🥊', '⛳'] },
-    nature: { name: 'Doğa', items: ['🌸', '🌺', '🌻', '🌷', '🌹', '💐', '🌼', '🏵️', '🌾', '🌿'] },
-    clothes: { name: 'Giysiler', items: ['👕', '👖', '🧥', '👗', '👔', '🧦', '👟', '🥾', '👒', '🎩'] },
-    music: { name: 'Müzik', items: ['🎸', '🎹', '🥁', '🎺', '🎷', '🪕', '🎻', '🪗', '🎤', '🎧'] },
+    animals: { name: 'Hayvanlar', items: IMAGE_SETS.animals },
+    fruits: { name: 'Meyveler', items: IMAGE_SETS.fruits },
+    vegetables: { name: 'Sebzeler', items: IMAGE_SETS.vegetables },
+    vehicles: { name: 'Taşıtlar', items: IMAGE_SETS.vehicles },
+    clothes: { name: 'Giysiler', items: IMAGE_SETS.clothes },
+    music: { name: 'Müzik aletleri', items: IMAGE_SETS.music },
+    kitchen: { name: 'Mutfak gereçleri', items: IMAGE_SETS.kitchen },
+    school: { name: 'Okul gereçleri', items: IMAGE_SETS.school },
 };
 
 type CategoryKey = keyof typeof CATEGORIES;
 
 interface Question {
-    items: string[];
+    items: GameImage[];
     oddIndex: number;
     oddCategory: string;
     normalCategory: string;
@@ -115,7 +117,7 @@ const OddOneOutGameScreen: React.FC<OddOneOutGameScreenProps> = ({ onBack }) => 
 
         // Create items array with one odd item
         const count = difficulty;
-        const items: string[] = mainItems.slice(0, count - 1);
+        const items: GameImage[] = mainItems.slice(0, count - 1);
         const oddItem = oddItems[0];
 
         // Insert odd item at random position
@@ -140,6 +142,16 @@ const OddOneOutGameScreen: React.FC<OddOneOutGameScreenProps> = ({ onBack }) => 
         setGameState('playing');
     }, [generateQuestion]);
 
+    useEffect(() => {
+        if (gameState === 'playing' && currentQuestion) {
+            sayInstruction('Hangisi farklı? Diğerlerine benzemeyene dokun.', 300);
+        }
+    }, [gameState, currentQuestion]);
+
+    useEffect(() => {
+        if (gameState === 'result') sayFinished();
+    }, [gameState]);
+
     const handleSelect = useCallback((index: number) => {
         if (showResult || !currentQuestion) return;
 
@@ -151,10 +163,12 @@ const OddOneOutGameScreen: React.FC<OddOneOutGameScreenProps> = ({ onBack }) => 
         setTimeout(() => {
             if (isCorrect) {
                 soundRef.current?.playCorrect();
+                sayCorrect(`Farklı olan ${currentQuestion.oddCategory.toLocaleLowerCase('tr')} grubundan.`);
                 setScore(s => s + 1);
                 setShowResult('correct');
             } else {
                 soundRef.current?.playWrong();
+                sayWrong();
                 setShowResult('wrong');
             }
 
@@ -232,8 +246,8 @@ const OddOneOutGameScreen: React.FC<OddOneOutGameScreenProps> = ({ onBack }) => 
                     {showResult && (
                         <p className="text-sm text-gray-600 mt-2">
                             {showResult === 'correct'
-                                ? `✅ Doğru! O bir ${currentQuestion.oddCategory}`
-                                : `❌ Hayır, farklı olan ${currentQuestion.oddCategory} kategorisinden`
+                                ? `✅ Doğru! Farklı olan ${currentQuestion.oddCategory} grubundan.`
+                                : `❌ Olmadı. Farklı olan ${currentQuestion.oddCategory} grubundan.`
                             }
                         </p>
                     )}
@@ -254,7 +268,7 @@ const OddOneOutGameScreen: React.FC<OddOneOutGameScreenProps> = ({ onBack }) => 
                                     key={index}
                                     onClick={() => handleSelect(index)}
                                     disabled={showResult !== null}
-                                    className={`w-20 h-20 sm:w-24 sm:h-24 rounded-2xl shadow-lg flex items-center justify-center text-4xl sm:text-5xl transition-all ${showAsCorrect
+                                    className={`w-24 h-24 sm:w-28 sm:h-28 rounded-2xl shadow-lg flex items-center justify-center p-2 transition-all ${showAsCorrect
                                             ? 'bg-green-100 border-4 border-green-500 scale-110'
                                             : showAsWrong
                                                 ? 'bg-red-100 border-4 border-red-400'
@@ -263,7 +277,7 @@ const OddOneOutGameScreen: React.FC<OddOneOutGameScreenProps> = ({ onBack }) => 
                                                     : 'bg-white border-2 border-gray-200 hover:border-cyan-400 hover:scale-105'
                                         }`}
                                 >
-                                    {item}
+                                    <img src={imgUrl(item.id)} alt={item.name} draggable={false} className="w-full h-full object-contain" />
                                 </button>
                             );
                         })}

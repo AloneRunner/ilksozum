@@ -1,3 +1,4 @@
+import { sayInstruction, sayCorrect } from '../../utils/gameVoice.ts';
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon';
 
@@ -373,6 +374,7 @@ const TrainTrackGameScreen: React.FC<TrainTrackGameScreenProps> = ({ onBack }) =
                 setGameState('crashed');
                 crashPointRef.current = pt;
                 playSound('crash');
+                sayInstruction('Tren engele çarptı. Yolu yeniden çizelim.');
                 return;
             }
         }
@@ -406,6 +408,11 @@ const TrainTrackGameScreen: React.FC<TrainTrackGameScreenProps> = ({ onBack }) =
         }
     };
 
+    // Sesli yönerge: her bölümde
+    useEffect(() => {
+        sayInstruction('Parmağınla trenden eve giden yolu çiz. Engellere çarpma.', 400);
+    }, [levelIndex]);
+
     const startTrain = () => {
         setGameState('running');
         let prog = 0;
@@ -418,6 +425,7 @@ const TrainTrackGameScreen: React.FC<TrainTrackGameScreenProps> = ({ onBack }) =
             if (prog >= totalPoints) {
                 setGameState('success');
                 playSound('success');
+                sayCorrect('Tren eve ulaştı!');
                 return;
             }
 
@@ -469,10 +477,10 @@ const TrainTrackGameScreen: React.FC<TrainTrackGameScreenProps> = ({ onBack }) =
             />
 
             <div className="absolute bottom-8 w-full text-center pointer-events-none">
-                <p className={`text-lg font-bold drop-shadow-md transition-all ${gameState === 'crashed' ? 'text-red-600 scale-125' :
+                <p className={`text-lg font-bold drop-shadow-md transition-all ${gameState === 'crashed' ? 'text-orange-600' :
                     gameState === 'drawing' ? 'text-blue-600' : 'text-gray-400'
                     }`}>
-                    {gameState === 'crashed' ? '💥 Çarptın! Yeniden dene.' :
+                    {gameState === 'crashed' ? 'Engel var! Yolu yeniden çiz.' :
                         gameState === 'drawing' ? 'Ray döşeniyor...' :
                             gameState === 'success' ? 'Harika! 🎉' :
                                 'Parmağınla yolu çiz!'}

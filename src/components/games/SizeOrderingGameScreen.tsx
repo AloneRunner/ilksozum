@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createOrderSound = () => {
@@ -137,6 +138,16 @@ const SizeOrderingGameScreen: React.FC<SizeOrderingGameScreenProps> = ({ onBack 
         startRoundWithCount(1, count);
     }, []);
 
+    useEffect(() => {
+        if (gameState !== 'playing' || round === 0) return;
+        const s2l = mode === 'small-to-large';
+        sayInstruction(`${ITEM_SETS[currentSetIndex].name} ${s2l ? 'küçükten büyüğe' : 'büyükten küçüğe'} sırala. Önce en ${s2l ? 'küçük' : 'büyük'} olana dokun.`, 300);
+    }, [gameState, round, mode, currentSetIndex]);
+
+    useEffect(() => {
+        if (gameState === 'result') sayFinished();
+    }, [gameState]);
+
     const handleItemClick = useCallback((item: SizeItem) => {
         if (showFeedback) return;
         if (orderedItems.find(i => i.id === item.id)) return;
@@ -158,6 +169,7 @@ const SizeOrderingGameScreen: React.FC<SizeOrderingGameScreenProps> = ({ onBack 
 
         if (isCorrect) {
             soundRef.current?.playCorrect();
+            sayCorrect();
             setShowFeedback('correct');
             setOrderedItems(prev => [...prev, selectedItem]);
             setSelectedItem(null);
@@ -178,6 +190,7 @@ const SizeOrderingGameScreen: React.FC<SizeOrderingGameScreenProps> = ({ onBack 
             }, 500);
         } else {
             soundRef.current?.playWrong();
+            sayWrong();
             setShowFeedback('wrong');
             setSelectedItem(null);
 

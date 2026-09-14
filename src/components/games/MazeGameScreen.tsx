@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { sayInstruction, sayCorrect } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createMazeSound = () => {
@@ -183,6 +184,7 @@ const MazeGameScreen: React.FC<MazeGameScreenProps> = ({ onBack }) => {
         setCollectedStars(0);
         setVisitedPath(new Set(['0,0']));
         setGameState('playing');
+        sayInstruction('Fareye dokun ve parmağınla peynire giden yolu çiz.', 300);
     }, [generateMaze, placeStars]);
 
     const startGame = useCallback(() => {
@@ -231,6 +233,7 @@ const MazeGameScreen: React.FC<MazeGameScreenProps> = ({ onBack }) => {
                 // Check win
                 if (newRow === maze.length - 1 && newCol === maze.length - 1) {
                     soundRef.current?.playWin();
+                    sayCorrect('Fare peynire ulaştı!');
                     setTimeout(() => setGameState('won'), 300);
                 }
             }

@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createBelongSound = () => {
@@ -142,7 +143,12 @@ const WhereBelongsGameScreen: React.FC<WhereBelongsGameScreenProps> = ({ onBack 
         setSelectedItem(null);
         setShowFeedback(null);
         setGameState('playing');
+        sayInstruction('Her şeyi doğru odaya koy. Önce bir nesneye, sonra odasına dokun.', 300);
     }, []);
+
+    useEffect(() => {
+        if (gameState === 'result') sayFinished();
+    }, [gameState]);
 
     const handleItemClick = useCallback((item: Item) => {
         if (showFeedback || item.placed) return;
@@ -157,6 +163,7 @@ const WhereBelongsGameScreen: React.FC<WhereBelongsGameScreenProps> = ({ onBack 
 
         if (isCorrect) {
             soundRef.current?.playCorrect();
+            sayCorrect();
             setShowFeedback({ type: 'correct', category: categoryIndex });
             setScore(s => s + 10);
             setPlacedCount(c => c + 1);
@@ -175,6 +182,7 @@ const WhereBelongsGameScreen: React.FC<WhereBelongsGameScreenProps> = ({ onBack 
             }, 500);
         } else {
             soundRef.current?.playWrong();
+            sayWrong();
             setShowFeedback({ type: 'wrong', category: categoryIndex });
             setMistakes(m => m + 1);
             setSelectedItem(null);

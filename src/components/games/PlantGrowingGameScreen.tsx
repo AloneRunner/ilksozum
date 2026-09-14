@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { sayInstruction, sayCorrect } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createPlantSound = () => {
@@ -104,6 +105,7 @@ const PlantGrowingGameScreen: React.FC<PlantGrowingGameScreenProps> = ({ onBack 
         setSun(0);
         setIsGrowing(false);
         setGameState('playing');
+        sayInstruction(`${PLANTS[plantIndex].name} yetiştirelim. Üç kez su ver, üç kez güneş ver.`, 300);
     }, []);
 
     const handleWater = useCallback(() => {
@@ -141,6 +143,7 @@ const PlantGrowingGameScreen: React.FC<PlantGrowingGameScreenProps> = ({ onBack 
                 const newStage = s + 1;
                 if (newStage >= 4) {
                     soundRef.current?.playComplete();
+                    sayCorrect('Bitki büyüdü!');
                     setCompletedPlants(prev => [...prev, currentPlant]);
                     setTimeout(() => setGameState('complete'), 500);
                 }

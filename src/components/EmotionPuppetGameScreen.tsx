@@ -1,3 +1,4 @@
+import { sayInstruction, sayCorrect } from '../utils/gameVoice.ts';
 import React, { useState, useEffect, useCallback } from 'react';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 
@@ -74,41 +75,13 @@ const EMOTIONS = [
     borderColor: 'border-red-400'
   },
   { 
-    name: 'Göz Kırp 😉', 
-    config: { brows: 'happy', eyes: 'wink', mouth: 'smile' }, 
-    color: 'from-pink-400 via-rose-300 to-pink-400',
-    bgColor: 'bg-pink-50',
-    borderColor: 'border-pink-400'
-  },
-  { 
-    name: 'Gülen 😆', 
-    config: { brows: 'happy', eyes: 'happy', mouth: 'laugh' }, 
-    color: 'from-amber-400 via-yellow-300 to-amber-400',
-    bgColor: 'bg-amber-50',
-    borderColor: 'border-amber-400'
-  },
-  { 
-    name: 'Şakacı 😛', 
-    config: { brows: 'normal', eyes: 'wink', mouth: 'tongue' }, 
-    color: 'from-purple-400 via-fuchsia-300 to-purple-400',
-    bgColor: 'bg-purple-50',
-    borderColor: 'border-purple-400'
-  },
-  { 
     name: 'Endişeli 😟', 
     config: { brows: 'worried', eyes: 'sad', mouth: 'neutral' }, 
     color: 'from-slate-400 via-gray-300 to-slate-400',
     bgColor: 'bg-slate-50',
     borderColor: 'border-slate-400'
   },
-  { 
-    name: 'Uykulu 😪', 
-    config: { brows: 'sad', eyes: 'sleepy', mouth: 'neutral' }, 
-    color: 'from-teal-400 via-cyan-300 to-teal-400',
-    bgColor: 'bg-teal-50',
-    borderColor: 'border-teal-400'
-  },
-];
+  ];
 
 const EmotionPuppetGameScreen: React.FC<EmotionPuppetGameScreenProps> = ({ onBack }) => {
   const [level, setLevel] = useState(0);
@@ -170,12 +143,19 @@ const EmotionPuppetGameScreen: React.FC<EmotionPuppetGameScreenProps> = ({ onBac
     ) {
       setIsWon(true);
       playSuccess();
+      sayCorrect(`${target.name.replace(/[^\p{L}\s]/gu, '').trim().toLocaleLowerCase('tr')} bir yüz yaptın!`);
       
       setTimeout(() => {
         setShowModal(true);
       }, 800);
     }
   }, [currentConfig, target, isWon, playSuccess]);
+
+  // Sesli yönerge: hedef duygu
+  useEffect(() => {
+    const emotion = target.name.replace(/[^\p{L}\s]/gu, '').trim().toLocaleLowerCase('tr');
+    sayInstruction(`${emotion} bir yüz yap. Kaşlara, gözlere ve ağza dokunarak değiştir.`, 400);
+  }, [target]);
 
   const nextLevel = () => {
     setShowModal(false);

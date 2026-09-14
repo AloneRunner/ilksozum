@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createBalanceSound = () => {
@@ -174,6 +175,17 @@ const BalanceScaleGameScreen: React.FC<BalanceScaleGameScreenProps> = ({ onBack 
         setGameState('playing');
     }, [totalQuestions]);
 
+    useEffect(() => {
+        if (gameState === 'playing' && currentQuestion) {
+            const q = currentQuestion.questionText.toLocaleLowerCase('tr');
+            sayInstruction(`${q} ${currentQuestion.leftItem.label} mi, ${currentQuestion.rightItem.label} mi?`, 300);
+        }
+    }, [gameState, currentQuestion]);
+
+    useEffect(() => {
+        if (gameState === 'result') sayFinished();
+    }, [gameState]);
+
     const handleAnswer = useCallback((side: 'left' | 'right') => {
         if (!currentQuestion || showResult) return;
 
@@ -190,9 +202,11 @@ const BalanceScaleGameScreen: React.FC<BalanceScaleGameScreenProps> = ({ onBack 
                 setScore(s => s + 1);
                 setShowResult('correct');
                 soundRef.current?.playCorrect();
+                sayCorrect();
             } else {
                 setShowResult('wrong');
                 soundRef.current?.playWrong();
+                sayWrong();
             }
 
             // Next question after delay
@@ -215,7 +229,7 @@ const BalanceScaleGameScreen: React.FC<BalanceScaleGameScreenProps> = ({ onBack 
             <div className="bg-white/95 rounded-3xl p-6 sm:p-8 shadow-2xl max-w-md w-full text-center">
                 <div className="text-6xl mb-4">⚖️</div>
                 <h1 className="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-rose-600 mb-2">
-                    Tartı Dengele
+                    Karşılaştır
                 </h1>
                 <p className="text-gray-600 mb-6">Bir kavram seç ve oynamaya başla!</p>
 

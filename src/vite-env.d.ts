@@ -6,6 +6,7 @@
 interface ImportMetaEnv {
   // FIX: Removed readonly modifier to resolve declaration conflict.
   DEV: boolean;
+  PROD: boolean;
   // Add other environment variables used in the project here.
 }
 

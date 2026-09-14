@@ -1,3 +1,4 @@
+import { sayInstruction, sayCorrect, sayWrong } from '../utils/gameVoice.ts';
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 
@@ -42,6 +43,11 @@ const ColorMixGameScreen: React.FC<ColorMixGameScreenProps> = ({ onBack }) => {
   const lastPourTimeRef = useRef(0);
 
   const target = TARGETS[level];
+
+  // Sesli yönerge: hedef renk
+  useEffect(() => {
+    sayInstruction(`${target.name} rengini yap. Tüplere basılı tutarak boyayı dök.`, 400);
+  }, [target]);
 
   // RYB'den RGB'ye dönüşüm fonksiyonu (boya karıştırma modeli)
   const rybToRgb = useCallback((red: number, yellow: number, blue: number): { r: number; g: number; b: number } => {
@@ -628,6 +634,7 @@ const ColorMixGameScreen: React.FC<ColorMixGameScreenProps> = ({ onBack }) => {
     if (diffR < tolerance && diffG < tolerance && diffB < tolerance) {
       setCompleted(true);
       setScore(prev => prev + 20);
+      sayCorrect(`${target.name} oldu!`);
       // Başarı melodisi
       playSound(523, 0.15, 'sine');
       setTimeout(() => playSound(659, 0.15, 'sine'), 100);
@@ -636,6 +643,7 @@ const ColorMixGameScreen: React.FC<ColorMixGameScreenProps> = ({ onBack }) => {
     } else {
       // Hata sesi
       playSound(200, 0.2, 'sawtooth');
+      sayWrong();
       setTimeout(() => playSound(150, 0.3, 'sawtooth'), 100);
     }
   };

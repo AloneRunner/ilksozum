@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createSyllableSound = () => {
@@ -55,16 +56,18 @@ const createSyllableSound = () => {
 const WORDS = [
     { word: 'ELMA', syllables: ['EL', 'MA'], emoji: '🍎' },
     { word: 'ARABA', syllables: ['A', 'RA', 'BA'], emoji: '🚗' },
-    { word: 'KEDI', syllables: ['KE', 'Dİ'], emoji: '🐱' },
+    { word: 'KEDİ', syllables: ['KE', 'Dİ'], emoji: '🐱' },
     { word: 'KÖPEK', syllables: ['KÖ', 'PEK'], emoji: '🐶' },
-    { word: 'TOP', syllables: ['TOP'], emoji: '⚽' },
-    { word: 'BAL', syllables: ['BAL'], emoji: '🍯' },
     { word: 'BALIK', syllables: ['BA', 'LIK'], emoji: '🐟' },
     { word: 'KELEBEK', syllables: ['KE', 'LE', 'BEK'], emoji: '🦋' },
-    { word: 'ÇIÇEK', syllables: ['ÇI', 'ÇEK'], emoji: '🌸' },
+    { word: 'ÇİÇEK', syllables: ['Çİ', 'ÇEK'], emoji: '🌸' },
     { word: 'ŞAPKA', syllables: ['ŞAP', 'KA'], emoji: '🎩' },
     { word: 'KUZU', syllables: ['KU', 'ZU'], emoji: '🐑' },
     { word: 'AYI', syllables: ['A', 'YI'], emoji: '🐻' },
+    { word: 'UÇAK', syllables: ['U', 'ÇAK'], emoji: '✈️' },
+    { word: 'KALEM', syllables: ['KA', 'LEM'], emoji: '✏️' },
+    { word: 'TAVŞAN', syllables: ['TAV', 'ŞAN'], emoji: '🐰' },
+    { word: 'KAPI', syllables: ['KA', 'PI'], emoji: '🚪' },
 ];
 
 interface SyllableTrainGameScreenProps {
@@ -122,6 +125,16 @@ const SyllableTrainGameScreen: React.FC<SyllableTrainGameScreenProps> = ({ onBac
         startRound(1, []);
     }, [startRound]);
 
+    useEffect(() => {
+        if (gameState !== 'playing' || round === 0) return;
+        const w = WORDS[currentWordIndex];
+        sayInstruction(`${w.word.toLocaleLowerCase('tr')}. Heceleri sırayla diz: ${w.syllables.map(s => s.toLocaleLowerCase('tr')).join(', ')}.`, 300);
+    }, [gameState, round, currentWordIndex]);
+
+    useEffect(() => {
+        if (gameState === 'result') sayFinished();
+    }, [gameState]);
+
     const handleSyllableClick = useCallback((syllable: string) => {
         if (showFeedback) return;
         if (placedSyllables.includes(syllable)) return;
@@ -142,6 +155,7 @@ const SyllableTrainGameScreen: React.FC<SyllableTrainGameScreenProps> = ({ onBac
 
                 // Check if word complete
                 if (placedSyllables.length + 1 === word.syllables.length) {
+                    sayCorrect(`${word.word.toLocaleLowerCase('tr')}.`);
                     setScore(s => s + 1);
 
                     if (round >= totalRounds) {
@@ -153,8 +167,8 @@ const SyllableTrainGameScreen: React.FC<SyllableTrainGameScreenProps> = ({ onBac
             }, 500);
         } else {
             soundRef.current?.playWrong();
+            sayWrong();
             setShowFeedback('wrong');
-
             setTimeout(() => setShowFeedback(null), 500);
         }
     }, [showFeedback, placedSyllables, currentWordIndex, round, totalRounds, startRound, usedWords]);

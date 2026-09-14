@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createCountingSound = () => {
@@ -193,6 +194,17 @@ const CountingGameScreen: React.FC<CountingGameScreenProps> = ({ onBack }) => {
         }
     }, [gameState, question, generateQuestion]);
 
+    // Sesli yönerge: her yeni soruda
+    useEffect(() => {
+        if (gameState === 'playing' && question) {
+            sayInstruction('Kaç tane var? Say ve doğru sayıya dokun.', 300);
+        }
+    }, [gameState, question]);
+
+    useEffect(() => {
+        if (gameState === 'result') sayFinished();
+    }, [gameState]);
+
     const handleItemClick = useCallback((index: number) => {
         if (showResult || !question) return;
 
@@ -212,9 +224,11 @@ const CountingGameScreen: React.FC<CountingGameScreenProps> = ({ onBack }) => {
 
         if (isCorrect) {
             soundRef.current?.playCorrect();
+            sayCorrect(`${question.count} tane.`);
             setScore(s => s + 1);
         } else {
             soundRef.current?.playWrong();
+            sayWrong();
         }
 
         setTimeout(() => {

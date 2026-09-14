@@ -1,3 +1,4 @@
+import { sayInstruction, sayCorrect, sayWrong } from '../utils/gameVoice.ts';
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { t } from '../i18n/index.ts';
@@ -198,6 +199,7 @@ const PatternGameScreen: React.FC<PatternGameScreenProps> = ({ onBack }) => {
   // İlk yükleme ve seviye değişimi
   useEffect(() => {
     generateLevel();
+    sayInstruction('Vagonlara bak. Sıradaki vagonun yükü ne olmalı? Doğru kargoya dokun.', 400);
   }, [level]);
 
   // Seçenek tıklama
@@ -211,6 +213,7 @@ const PatternGameScreen: React.FC<PatternGameScreenProps> = ({ onBack }) => {
       setIsCorrect(true);
       setScore((prev) => prev + 10 * (level + 1));
       playSuccessSound();
+      sayCorrect();
 
       // Tren dışarı çıkar
       let pos = trainPosition;
@@ -236,6 +239,7 @@ const PatternGameScreen: React.FC<PatternGameScreenProps> = ({ onBack }) => {
       // Yanlış
       setIsCorrect(false);
       playWrongSound();
+      sayWrong();
 
       // Sarsıntı efekti
       setTimeout(() => {

@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { sayInstruction, sayCorrect } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createDotsSound = () => {
@@ -160,6 +161,7 @@ const ConnectDotsGameScreen: React.FC<ConnectDotsGameScreenProps> = ({ onBack })
         setNextDot(1);
         setCurrentPattern(patternIndex);
         setGameState('playing');
+        sayInstruction('Noktaları sırayla birleştir. Bir numaralı noktaya dokun.', 300);
     }, []);
 
     // Handle dot click
@@ -180,6 +182,7 @@ const ConnectDotsGameScreen: React.FC<ConnectDotsGameScreenProps> = ({ onBack })
         // Check if complete
         if (dotNumber === dots.length) {
             soundRef.current?.playComplete();
+            sayCorrect(`${PATTERNS[currentPattern].name} tamamlandı.`);
             setCompletedPatterns(prev => [...prev, currentPattern]);
             setTimeout(() => setGameState('complete'), 500);
         }

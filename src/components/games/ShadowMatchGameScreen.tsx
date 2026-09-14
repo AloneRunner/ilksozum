@@ -1,5 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { IMAGE_SETS, imgUrl, type GameImage } from '../../data/gameImageSets.ts';
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
 const createShadowSound = () => {
@@ -51,34 +53,19 @@ const createShadowSound = () => {
     return { playSelect, playCorrect, playWrong };
 };
 
-// --- Shadow Items ---
-const SHADOW_ITEMS = [
-    { emoji: '🐶', name: 'Köpek' },
-    { emoji: '🐱', name: 'Kedi' },
-    { emoji: '🐰', name: 'Tavşan' },
-    { emoji: '🦋', name: 'Kelebek' },
-    { emoji: '🐟', name: 'Balık' },
-    { emoji: '🌸', name: 'Çiçek' },
-    { emoji: '⭐', name: 'Yıldız' },
-    { emoji: '❤️', name: 'Kalp' },
-    { emoji: '🚗', name: 'Araba' },
-    { emoji: '✈️', name: 'Uçak' },
-    { emoji: '🚂', name: 'Tren' },
-    { emoji: '⛵', name: 'Tekne' },
-    { emoji: '🏠', name: 'Ev' },
-    { emoji: '🌲', name: 'Ağaç' },
-    { emoji: '🍎', name: 'Elma' },
-    { emoji: '🍌', name: 'Muz' },
-    { emoji: '🎈', name: 'Balon' },
-    { emoji: '⚽', name: 'Top' },
-    { emoji: '🎸', name: 'Gitar' },
-    { emoji: '🔔', name: 'Zil' },
+// --- Shadow Items: uygulamanın gerçek kart görselleri ---
+const SHADOW_ITEMS: GameImage[] = [
+    ...IMAGE_SETS.animals.slice(0, 8),
+    ...IMAGE_SETS.vehicles.slice(0, 6),
+    ...IMAGE_SETS.fruits.slice(0, 4),
+    ...IMAGE_SETS.toys.slice(0, 4),
+    ...IMAGE_SETS.household.slice(0, 3),
 ];
 
 interface Question {
-    targetEmoji: string;
+    targetId: number;
     targetName: string;
-    options: { emoji: string; name: string }[];
+    options: GameImage[];
     correctIndex: number;
 }
 
@@ -117,10 +104,10 @@ const ShadowMatchGameScreen: React.FC<ShadowMatchGameScreenProps> = ({ onBack })
         const distractors = shuffled.slice(1, difficulty);
 
         const options = shuffleArray([target, ...distractors]);
-        const correctIndex = options.findIndex(o => o.emoji === target.emoji);
+        const correctIndex = options.findIndex(o => o.id === target.id);
 
         return {
-            targetEmoji: target.emoji,
+            targetId: target.id,
             targetName: target.name,
             options,
             correctIndex,
@@ -143,6 +130,16 @@ const ShadowMatchGameScreen: React.FC<ShadowMatchGameScreenProps> = ({ onBack })
         }
     }, [gameState, question, generateQuestion]);
 
+    useEffect(() => {
+        if (gameState === 'playing' && question) {
+            sayInstruction('Bu gölge hangisi? Doğru resme dokun.', 300);
+        }
+    }, [gameState, question]);
+
+    useEffect(() => {
+        if (gameState === 'result') sayFinished();
+    }, [gameState]);
+
     const handleAnswer = useCallback((index: number) => {
         if (showResult || !question) return;
 
@@ -155,9 +152,11 @@ const ShadowMatchGameScreen: React.FC<ShadowMatchGameScreenProps> = ({ onBack })
         setTimeout(() => {
             if (isCorrect) {
                 soundRef.current?.playCorrect();
+                sayCorrect(`Bu bir ${question.targetName.toLocaleLowerCase('tr')}.`);
                 setScore(s => s + 1);
             } else {
                 soundRef.current?.playWrong();
+                sayWrong();
             }
         }, 200);
 
@@ -239,15 +238,16 @@ const ShadowMatchGameScreen: React.FC<ShadowMatchGameScreenProps> = ({ onBack })
                 {/* Shadow Display */}
                 <div className="flex-1 flex items-center justify-center">
                     <div className="bg-slate-900/50 rounded-3xl p-8 shadow-2xl">
-                        <div
-                            className="text-9xl transition-transform hover:scale-110"
+                        <img
+                            src={imgUrl(question.targetId)}
+                            alt="gölge"
+                            draggable={false}
+                            className="w-40 h-40 sm:w-52 sm:h-52 object-contain transition-transform hover:scale-110"
                             style={{
                                 filter: 'brightness(0) saturate(100%)',
                                 opacity: 0.9,
                             }}
-                        >
-                            {question.targetEmoji}
-                        </div>
+                        />
                     </div>
                 </div>
 
@@ -274,7 +274,7 @@ const ShadowMatchGameScreen: React.FC<ShadowMatchGameScreenProps> = ({ onBack })
                                             : 'bg-slate-100 hover:bg-slate-200 hover:scale-105 active:scale-95'
                                         }`}
                                 >
-                                    <span className="text-4xl">{option.emoji}</span>
+                                    <img src={imgUrl(option.id)} alt={option.name} draggable={false} className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
                                     <span className="text-xs font-medium">{option.name}</span>
                                 </button>
                             );

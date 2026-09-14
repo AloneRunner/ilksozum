@@ -1,122 +1,34 @@
-
-
-const CACHE_NAME = 'ilk-sozum-v3-fivewoneh-fix'; // Version bump to invalidate old cache (Nov 13, 2025: fiveWOneH data alignment)
-const PLACEHOLDER_IMAGE = '/images/placeholder.png';
-// Files that constitute the essential "shell" of the application.
-// We only cache the absolute essentials. Dynamic content like images will be cached on first load.
-const APP_SHELL_FILES = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/sw-register.js',
-  PLACEHOLDER_IMAGE,
-  '/images/icon-192x192.png',
-  '/images/icon-512x512.png',
-  '/audio/correct.mp3',
-  '/audio/incorrect.mp3',
-  '/audio/finish.mp3'
-];
+// İlk Sözüm servis çalışanı — yalnız çevrimdışı sayfası.
+// Uygulama dosyalarını ÖNBELLEĞE ALMAZ: yeni sürüm yayınlandığında herkes hemen yeni sürümü görür.
+// Ağ tamamen kesildiğinde sayfa geçişlerinde açıklayıcı çevrimdışı ekranını gösterir.
+// Eski sürüm (ilk-sozum-v3-...) her şeyi önbelleğe alıyordu; etkinleşince eski önbellekleri siler.
+const OFFLINE_CACHE = 'ilksozum-offline-v1';
+const OFFLINE_URL = '/offline.html';
 
 self.addEventListener('install', (event) => {
-  console.log('[Service Worker] Install event');
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log(`[Service Worker] Caching app shell`);
-        const requests = APP_SHELL_FILES.map(url => new Request(url, { cache: 'reload' }));
-        return cache.addAll(requests).catch(err => {
-            console.error('[Service Worker] Failed to cache file during install:', err);
-        });
-      })
-      .catch(err => {
-          console.error('[Service Worker] Failed to open cache during install:', err);
-      })
+    caches.open(OFFLINE_CACHE).then((cache) => cache.add(OFFLINE_URL))
   );
   self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
-  console.log('[Service Worker] Activate event');
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log(`[Service Worker] Deleting old cache: ${cacheName}`);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
+    caches.keys()
+      .then((keys) => Promise.all(keys.filter((key) => key !== OFFLINE_CACHE).map((key) => caches.delete(key))))
+      .then(() => self.clients.claim())
   );
-  return self.clients.claim();
 });
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.method !== 'GET') {
-      return;
+  const request = event.request;
+  if (request.mode !== 'navigate') {
+    return;
   }
-  
   event.respondWith(
-    caches.match(event.request)
-      .then((cachedResponse) => {
-        if (cachedResponse) {
-          return cachedResponse;
-        }
-
-        return fetch(event.request).then((networkResponse) => {
-            if (!networkResponse) return networkResponse;
-
-            // Only cache full 200 OK responses from http(s) origins.
-            // Skip partial (206) responses or other non-OK statuses which may
-            // cause cache.put to throw in some browsers.
-            const shouldCache = networkResponse.status === 200 && (networkResponse.type === 'basic' || networkResponse.type === 'cors');
-
-            if (shouldCache) {
-                const responseToCache = networkResponse.clone();
-                try {
-                    const reqUrl = new URL(event.request.url);
-                    if (reqUrl.protocol === 'http:' || reqUrl.protocol === 'https:') {
-                        caches.open(CACHE_NAME).then((cache) => {
-                            cache.put(event.request, responseToCache).catch((err) => {
-                                console.warn('[Service Worker] cache.put failed, skipping:', err);
-                            });
-                        }).catch(err => {
-                            console.warn('[Service Worker] open cache failed:', err);
-                        });
-                    }
-                } catch (err) {
-                    console.warn('[Service Worker] Skipping cache for request:', event.request.url, err);
-                }
-            } else {
-                // Don't attempt to cache partial or non-OK responses (206, 302, 404, etc.)
-                // Return them directly to the page without caching.
-            }
-
-            return networkResponse;
-        });
-      })
-      .catch((error) => {
-        console.error(`[Service Worker] Fetch failed for ${event.request.url}. Error:`, error);
-        if (event.request.destination === 'image') {
-          return caches.match(PLACEHOLDER_IMAGE);
-        }
-      })
-  );
-});
-
-// Allow the page to tell SW to activate immediately
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-});
-
-self.addEventListener('activate', (event) => {
-  // Notify all clients to reload after activation
-  event.waitUntil(
-    self.clients.matchAll({ type: 'window' }).then((clients) => {
-      clients.forEach(client => client.postMessage({ type: 'RELOAD_PAGE' }));
+    fetch(request).catch(async () => {
+      const cache = await caches.open(OFFLINE_CACHE);
+      return cache.match(OFFLINE_URL);
     })
   );
 });

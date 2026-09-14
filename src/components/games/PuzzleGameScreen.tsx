@@ -1,3 +1,4 @@
+import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 import React, { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
 import { t } from '../../i18n/index.ts';
@@ -785,6 +786,7 @@ const PuzzleGameScreen: React.FC<PuzzleGameScreenProps> = ({ onBack }) => {
         setPieces(shuffled);
         setShowSuccess(false);
         setDraggingPiece(null);
+        sayInstruction(`${currentScene.name} yapbozu. Parçaları doğru yere sürükle.`, 400);
     }, [level, currentSceneIndex, rows, cols, currentScene]);
 
     // Her parça için canvas çiz
@@ -866,9 +868,11 @@ const PuzzleGameScreen: React.FC<PuzzleGameScreenProps> = ({ onBack }) => {
                 ));
                 setScore(prev => prev + 10);
                 playSound('place');
+                sayCorrect();
             } else {
                 // Yanlış yer
                 playSound('wrong');
+                sayWrong();
             }
         }
 
@@ -880,6 +884,7 @@ const PuzzleGameScreen: React.FC<PuzzleGameScreenProps> = ({ onBack }) => {
         if (pieces.length > 0 && pieces.every(p => p.isPlaced)) {
             setShowSuccess(true);
             playSound('success');
+            sayFinished('Yapboz tamamlandı!');
 
             setTimeout(() => {
                 setShowSuccess(false);

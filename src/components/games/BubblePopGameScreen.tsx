@@ -1,3 +1,4 @@
+import { sayInstruction } from '../../utils/gameVoice.ts';
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { t } from '../../i18n/index.ts';
 
@@ -139,6 +140,7 @@ const BubblePopGameScreen: React.FC<BubblePopGameScreenProps> = ({ onBack }) => 
       initialBubbles.push(bubble);
     }
     setBubbles(initialBubbles);
+    sayInstruction('Baloncuklara dokun ve patlat!', 500);
   }, [createBubble]);
 
   // Ana animasyon döngüsü
