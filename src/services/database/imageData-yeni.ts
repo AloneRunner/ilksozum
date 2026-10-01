@@ -6051,5 +6051,431 @@ export const imageDataYeni: ImageMetadata[] = [
         "L"
       ]
     }
+  },
+  {
+    "id": 2901,
+    "word": "çukur",
+    "imageUrl": "/images/2901.webp",
+    "audioKeys": {
+      "default": "çukur"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "derin",
+      "syllables": [
+        "çu",
+        "kur"
+      ],
+      "letters": [
+        "Ç",
+        "U",
+        "K",
+        "U",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 2902,
+    "word": "çukur",
+    "imageUrl": "/images/2902.webp",
+    "audioKeys": {
+      "default": "çukur"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "sığ",
+      "syllables": [
+        "çu",
+        "kur"
+      ],
+      "letters": [
+        "Ç",
+        "U",
+        "K",
+        "U",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 2903,
+    "word": "fırın kabı",
+    "imageUrl": "/images/2903.webp",
+    "audioKeys": {
+      "default": "fırın kabı"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "derin",
+      "syllables": [
+        "fı",
+        "rın",
+        "ka",
+        "bı"
+      ],
+      "letters": [
+        "F",
+        "I",
+        "R",
+        "I",
+        "N",
+        "K",
+        "A",
+        "B",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 2904,
+    "word": "fırın kabı",
+    "imageUrl": "/images/2904.webp",
+    "audioKeys": {
+      "default": "fırın kabı"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "sığ",
+      "syllables": [
+        "fı",
+        "rın",
+        "ka",
+        "bı"
+      ],
+      "letters": [
+        "F",
+        "I",
+        "R",
+        "I",
+        "N",
+        "K",
+        "A",
+        "B",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 2905,
+    "word": "havuz",
+    "imageUrl": "/images/2905.webp",
+    "audioKeys": {
+      "default": "havuz"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "derin",
+      "syllables": [
+        "ha",
+        "vuz"
+      ],
+      "letters": [
+        "H",
+        "A",
+        "V",
+        "U",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 2906,
+    "word": "havuz",
+    "imageUrl": "/images/2906.webp",
+    "audioKeys": {
+      "default": "havuz"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "sığ",
+      "syllables": [
+        "ha",
+        "vuz"
+      ],
+      "letters": [
+        "H",
+        "A",
+        "V",
+        "U",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 2907,
+    "word": "kase",
+    "imageUrl": "/images/2907.webp",
+    "audioKeys": {
+      "default": "kase"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "derin",
+      "syllables": [
+        "ka",
+        "se"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "S",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 2908,
+    "word": "kase",
+    "imageUrl": "/images/2908.webp",
+    "audioKeys": {
+      "default": "kase"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "sığ",
+      "syllables": [
+        "ka",
+        "se"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "S",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 2909,
+    "word": "kova",
+    "imageUrl": "/images/2909.webp",
+    "audioKeys": {
+      "default": "kova"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "derin",
+      "syllables": [
+        "ko",
+        "va"
+      ],
+      "letters": [
+        "K",
+        "O",
+        "V",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 2910,
+    "word": "kova",
+    "imageUrl": "/images/2910.webp",
+    "audioKeys": {
+      "default": "kova"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "sığ",
+      "syllables": [
+        "ko",
+        "va"
+      ],
+      "letters": [
+        "K",
+        "O",
+        "V",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 2911,
+    "word": "kutu",
+    "imageUrl": "/images/2911.webp",
+    "audioKeys": {
+      "default": "kutu"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "derin",
+      "syllables": [
+        "ku",
+        "tu"
+      ],
+      "letters": [
+        "K",
+        "U",
+        "T",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 2912,
+    "word": "kutu",
+    "imageUrl": "/images/2912.webp",
+    "audioKeys": {
+      "default": "kutu"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "sığ",
+      "syllables": [
+        "ku",
+        "tu"
+      ],
+      "letters": [
+        "K",
+        "U",
+        "T",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 2913,
+    "word": "sepet",
+    "imageUrl": "/images/2913.webp",
+    "audioKeys": {
+      "default": "sepet"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "derin",
+      "syllables": [
+        "se",
+        "pet"
+      ],
+      "letters": [
+        "S",
+        "E",
+        "P",
+        "E",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 2914,
+    "word": "sepet",
+    "imageUrl": "/images/2914.webp",
+    "audioKeys": {
+      "default": "sepet"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "sığ",
+      "syllables": [
+        "se",
+        "pet"
+      ],
+      "letters": [
+        "S",
+        "E",
+        "P",
+        "E",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 2915,
+    "word": "tabak",
+    "imageUrl": "/images/2915.webp",
+    "audioKeys": {
+      "default": "tabak"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "derin",
+      "syllables": [
+        "ta",
+        "bak"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "B",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2916,
+    "word": "tabak",
+    "imageUrl": "/images/2916.webp",
+    "audioKeys": {
+      "default": "tabak"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "sığ",
+      "syllables": [
+        "ta",
+        "bak"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "B",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2917,
+    "word": "tencere",
+    "imageUrl": "/images/2917.webp",
+    "audioKeys": {
+      "default": "tencere"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "derin",
+      "syllables": [
+        "ten",
+        "ce",
+        "re"
+      ],
+      "letters": [
+        "T",
+        "E",
+        "N",
+        "C",
+        "E",
+        "R",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 2918,
+    "word": "tencere",
+    "imageUrl": "/images/2918.webp",
+    "audioKeys": {
+      "default": "tencere"
+    },
+    "tags": {
+      "category": "none",
+      "depth": "sığ",
+      "syllables": [
+        "ten",
+        "ce",
+        "re"
+      ],
+      "letters": [
+        "T",
+        "E",
+        "N",
+        "C",
+        "E",
+        "R",
+        "E"
+      ]
+    }
   }
 ] as ImageMetadata[];

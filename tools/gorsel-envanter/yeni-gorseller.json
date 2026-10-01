@@ -2360,6 +2360,172 @@
       "tags": {
         "portion": "yarım"
       }
+    },
+    {
+      "id": 2901,
+      "kaynak": "derin-sig/cukur-derin.jpg",
+      "word": "çukur",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "depth": "derin"
+      }
+    },
+    {
+      "id": 2902,
+      "kaynak": "derin-sig/cukur-sig.jpg",
+      "word": "çukur",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "depth": "sığ"
+      }
+    },
+    {
+      "id": 2903,
+      "kaynak": "derin-sig/firin-derin.jpg",
+      "word": "fırın kabı",
+      "category": "none",
+      "tags": {
+        "depth": "derin"
+      }
+    },
+    {
+      "id": 2904,
+      "kaynak": "derin-sig/firin-sig.jpg",
+      "word": "fırın kabı",
+      "category": "none",
+      "tags": {
+        "depth": "sığ"
+      }
+    },
+    {
+      "id": 2905,
+      "kaynak": "derin-sig/havuz-derin.jpg",
+      "word": "havuz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "depth": "derin"
+      }
+    },
+    {
+      "id": 2906,
+      "kaynak": "derin-sig/havuz-sig.jpg",
+      "word": "havuz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "depth": "sığ"
+      }
+    },
+    {
+      "id": 2907,
+      "kaynak": "derin-sig/kase-derin.jpg",
+      "word": "kase",
+      "category": "none",
+      "tags": {
+        "depth": "derin"
+      }
+    },
+    {
+      "id": 2908,
+      "kaynak": "derin-sig/kase-sig.jpg",
+      "word": "kase",
+      "category": "none",
+      "tags": {
+        "depth": "sığ"
+      }
+    },
+    {
+      "id": 2909,
+      "kaynak": "derin-sig/kova-derin.jpg",
+      "word": "kova",
+      "category": "none",
+      "tags": {
+        "depth": "derin"
+      }
+    },
+    {
+      "id": 2910,
+      "kaynak": "derin-sig/kova-sig.jpg",
+      "word": "kova",
+      "category": "none",
+      "tags": {
+        "depth": "sığ"
+      }
+    },
+    {
+      "id": 2911,
+      "kaynak": "derin-sig/kutu-derin.jpg",
+      "word": "kutu",
+      "category": "none",
+      "tags": {
+        "depth": "derin"
+      }
+    },
+    {
+      "id": 2912,
+      "kaynak": "derin-sig/kutu-sig.jpg",
+      "word": "kutu",
+      "category": "none",
+      "tags": {
+        "depth": "sığ"
+      }
+    },
+    {
+      "id": 2913,
+      "kaynak": "derin-sig/sepet-derin.jpg",
+      "word": "sepet",
+      "category": "none",
+      "tags": {
+        "depth": "derin"
+      }
+    },
+    {
+      "id": 2914,
+      "kaynak": "derin-sig/sepet-sig.jpg",
+      "word": "sepet",
+      "category": "none",
+      "tags": {
+        "depth": "sığ"
+      }
+    },
+    {
+      "id": 2915,
+      "kaynak": "derin-sig/tabak-derin.jpg",
+      "word": "tabak",
+      "category": "none",
+      "tags": {
+        "depth": "derin"
+      }
+    },
+    {
+      "id": 2916,
+      "kaynak": "derin-sig/tabak-sig.jpg",
+      "word": "tabak",
+      "category": "none",
+      "tags": {
+        "depth": "sığ"
+      }
+    },
+    {
+      "id": 2917,
+      "kaynak": "derin-sig/tencere-derin.jpg",
+      "word": "tencere",
+      "category": "none",
+      "tags": {
+        "depth": "derin"
+      }
+    },
+    {
+      "id": 2918,
+      "kaynak": "derin-sig/tencere-sig.jpg",
+      "word": "tencere",
+      "category": "none",
+      "tags": {
+        "depth": "sığ"
+      }
     }
   ]
 }

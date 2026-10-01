@@ -116,6 +116,20 @@ const KAVRAMLAR = [
     kelime: { elma: 'elma', portakal: 'portakal', pizza: 'pizza', pasta: 'pasta', karpuz: 'karpuz',
       ekmek: 'ekmek', limon: 'limon', domates: 'domates' },
   },
+  {
+    klasor: 'derin-sig',
+    dosya: 'derinSigData.ts',
+    exportAdi: 'derinSigDataYeni',
+    activityType: 'DerinSig',
+    idBaslangic: 2901,
+    etiket: 'depth',
+    sahneNesneler: ['cukur', 'havuz'],
+    a: { ek: 'derin', deger: 'derin', soru: 'Derin olan hangisi?', sifat: 'derindir' },
+    b: { ek: 'sig', deger: 'sığ', soru: 'Sığ olan hangisi?', sifat: 'sığdır' },
+    ozne: { havuz: 'havuzun suyu' },
+    kelime: { tabak: 'tabak', kase: 'kase', tencere: 'tencere', kutu: 'kutu', kova: 'kova', sepet: 'sepet',
+      cekmece: 'çekmece', firin: 'fırın kabı', cukur: 'çukur', havuz: 'havuz' },
+  },
 ];
 
 const cap = w => w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1);
