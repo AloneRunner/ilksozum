@@ -50,7 +50,8 @@ Her nesneden 3-4 kademe üretilir (ör. 4 boyda aynı top). Bunlardan hem çift 
 
 ## Aşama 3: Durum ve nitelik (aynı nesne, iki hal)
 - [x] Açık / kapalı bağlandı: 10 çift, 20 soru, id 3001-3020.
-- [ ] Kırık / sağlam
+- [x] Kırık / sağlam bağlandı: 10 çift, 20 soru, id 3101-3120.
+- [ ] YENİ KAVRAM: Bozuk / çalışan (Kaan önerisi). Kırık = parçalanmış, bozuk = çalışmıyor. Görselde zor (yanmayan lamba = kapalı lamba ile karışır). Fikir: aynı oyuncak/alet, çalışan hali hareket/ışık/ses işaretiyle (ör. pervane dönüyor, ekranda görüntü var), bozuk hali duman, ters dönmüş, ekran karanlık ve çatlak değil. Ayrıca düşünülecek.
 - [ ] Temiz / kirli
 - [ ] Islak / kuru
 - [ ] Eski / yeni

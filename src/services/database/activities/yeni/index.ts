@@ -21,3 +21,4 @@ export { fewMuchDataYeni } from './azCokData';
 export { halfQuarterWholeDataYeni } from './butunYarimCeyrekData';
 export { derinSigDataYeni } from './derinSigData';
 export { openClosedDataYeni } from './acikKapaliData';
+export { brokenIntactDataYeni } from './kirikSaglamData';

@@ -2,7 +2,7 @@
 import { ActivityType, ActivityCategory, ImageMetadata, ConceptRound, Word, Story, ScreenState, ConceptOption, ActivityStats, MemoryGameRound, SudokuRound, SudokuItem } from '../types.ts';
 import { storyData } from './staticData.ts';
 import { imageData } from './database/imageData.ts';
-import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni, fewMuchDataYeni, halfQuarterWholeDataYeni, derinSigDataYeni, openClosedDataYeni } from './database/activities/yeni/index.ts';
+import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni, fewMuchDataYeni, halfQuarterWholeDataYeni, derinSigDataYeni, openClosedDataYeni, brokenIntactDataYeni } from './database/activities/yeni/index.ts';
 import { 
     sensesData,
     bigSmallData, longShortData, thinThickData, wideNarrowData, oldNewData, youngOldData, hardSoftData, cleanDirtyData, wetDryData, openClosedData, straightCurvedData, aliveLifelessData, bitterSweetData, heavyLightData, hotColdData, roughSmoothData, brokenIntactData, messyCleanData, tazeBayatData, kirisikDuzgunData, sivriKutData, parlakMatData, tembelCaliskanData, seffafOpakData, dikenliPuruzsuzData, dugumCozukData, hungryFullData, derinSigData, kalabalikTenhaData, tersDuzData,
@@ -1448,7 +1448,7 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.HeavyLight]: heavyLightData,
     [ActivityType.HotCold]: hotColdData,
     [ActivityType.RoughSmooth]: roughSmoothData,
-    [ActivityType.BrokenIntact]: brokenIntactData,
+    [ActivityType.BrokenIntact]: YENI_SORULAR_AKTIF ? brokenIntactDataYeni : brokenIntactData,
     [ActivityType.MessyClean]: messyCleanData,
     [ActivityType.TazeBayat]: tazeBayatData,
     [ActivityType.KirisikDuzgun]: kirisikDuzgunData,

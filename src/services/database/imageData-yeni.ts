@@ -6947,5 +6947,491 @@ export const imageDataYeni: ImageMetadata[] = [
         "E"
       ]
     }
+  },
+  {
+    "id": 3101,
+    "word": "araba",
+    "imageUrl": "/images/3101.webp",
+    "audioKeys": {
+      "default": "araba"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "kırık",
+      "syllables": [
+        "a",
+        "ra",
+        "ba"
+      ],
+      "letters": [
+        "A",
+        "R",
+        "A",
+        "B",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3102,
+    "word": "araba",
+    "imageUrl": "/images/3102.webp",
+    "audioKeys": {
+      "default": "araba"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "sağlam",
+      "syllables": [
+        "a",
+        "ra",
+        "ba"
+      ],
+      "letters": [
+        "A",
+        "R",
+        "A",
+        "B",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3103,
+    "word": "bisküvi",
+    "imageUrl": "/images/3103.webp",
+    "audioKeys": {
+      "default": "bisküvi"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "kırık",
+      "syllables": [
+        "bis",
+        "kü",
+        "vi"
+      ],
+      "letters": [
+        "B",
+        "İ",
+        "S",
+        "K",
+        "Ü",
+        "V",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 3104,
+    "word": "bisküvi",
+    "imageUrl": "/images/3104.webp",
+    "audioKeys": {
+      "default": "bisküvi"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "sağlam",
+      "syllables": [
+        "bis",
+        "kü",
+        "vi"
+      ],
+      "letters": [
+        "B",
+        "İ",
+        "S",
+        "K",
+        "Ü",
+        "V",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 3105,
+    "word": "fincan",
+    "imageUrl": "/images/3105.webp",
+    "audioKeys": {
+      "default": "fincan"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "kırık",
+      "syllables": [
+        "fin",
+        "can"
+      ],
+      "letters": [
+        "F",
+        "İ",
+        "N",
+        "C",
+        "A",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": 3106,
+    "word": "fincan",
+    "imageUrl": "/images/3106.webp",
+    "audioKeys": {
+      "default": "fincan"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "sağlam",
+      "syllables": [
+        "fin",
+        "can"
+      ],
+      "letters": [
+        "F",
+        "İ",
+        "N",
+        "C",
+        "A",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": 3107,
+    "word": "gözlük",
+    "imageUrl": "/images/3107.webp",
+    "audioKeys": {
+      "default": "gözlük"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "kırık",
+      "syllables": [
+        "göz",
+        "lük"
+      ],
+      "letters": [
+        "G",
+        "Ö",
+        "Z",
+        "L",
+        "Ü",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3108,
+    "word": "gözlük",
+    "imageUrl": "/images/3108.webp",
+    "audioKeys": {
+      "default": "gözlük"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "sağlam",
+      "syllables": [
+        "göz",
+        "lük"
+      ],
+      "letters": [
+        "G",
+        "Ö",
+        "Z",
+        "L",
+        "Ü",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3109,
+    "word": "kalem",
+    "imageUrl": "/images/3109.webp",
+    "audioKeys": {
+      "default": "kalem"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "kırık",
+      "syllables": [
+        "ka",
+        "lem"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "L",
+        "E",
+        "M"
+      ]
+    }
+  },
+  {
+    "id": 3110,
+    "word": "kalem",
+    "imageUrl": "/images/3110.webp",
+    "audioKeys": {
+      "default": "kalem"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "sağlam",
+      "syllables": [
+        "ka",
+        "lem"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "L",
+        "E",
+        "M"
+      ]
+    }
+  },
+  {
+    "id": 3111,
+    "word": "robot",
+    "imageUrl": "/images/3111.webp",
+    "audioKeys": {
+      "default": "robot"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "kırık",
+      "syllables": [
+        "ro",
+        "bot"
+      ],
+      "letters": [
+        "R",
+        "O",
+        "B",
+        "O",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 3112,
+    "word": "robot",
+    "imageUrl": "/images/3112.webp",
+    "audioKeys": {
+      "default": "robot"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "sağlam",
+      "syllables": [
+        "ro",
+        "bot"
+      ],
+      "letters": [
+        "R",
+        "O",
+        "B",
+        "O",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 3113,
+    "word": "saksı",
+    "imageUrl": "/images/3113.webp",
+    "audioKeys": {
+      "default": "saksı"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "kırık",
+      "syllables": [
+        "sak",
+        "sı"
+      ],
+      "letters": [
+        "S",
+        "A",
+        "K",
+        "S",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3114,
+    "word": "saksı",
+    "imageUrl": "/images/3114.webp",
+    "audioKeys": {
+      "default": "saksı"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "sağlam",
+      "syllables": [
+        "sak",
+        "sı"
+      ],
+      "letters": [
+        "S",
+        "A",
+        "K",
+        "S",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3115,
+    "word": "sandalye",
+    "imageUrl": "/images/3115.webp",
+    "audioKeys": {
+      "default": "sandalye"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "kırık",
+      "syllables": [
+        "san",
+        "dal",
+        "ye"
+      ],
+      "letters": [
+        "S",
+        "A",
+        "N",
+        "D",
+        "A",
+        "L",
+        "Y",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 3116,
+    "word": "sandalye",
+    "imageUrl": "/images/3116.webp",
+    "audioKeys": {
+      "default": "sandalye"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "sağlam",
+      "syllables": [
+        "san",
+        "dal",
+        "ye"
+      ],
+      "letters": [
+        "S",
+        "A",
+        "N",
+        "D",
+        "A",
+        "L",
+        "Y",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 3117,
+    "word": "tabak",
+    "imageUrl": "/images/3117.webp",
+    "audioKeys": {
+      "default": "tabak"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "kırık",
+      "syllables": [
+        "ta",
+        "bak"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "B",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3118,
+    "word": "tabak",
+    "imageUrl": "/images/3118.webp",
+    "audioKeys": {
+      "default": "tabak"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "sağlam",
+      "syllables": [
+        "ta",
+        "bak"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "B",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3119,
+    "word": "yumurta",
+    "imageUrl": "/images/3119.webp",
+    "audioKeys": {
+      "default": "yumurta"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "kırık",
+      "syllables": [
+        "yu",
+        "mur",
+        "ta"
+      ],
+      "letters": [
+        "Y",
+        "U",
+        "M",
+        "U",
+        "R",
+        "T",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3120,
+    "word": "yumurta",
+    "imageUrl": "/images/3120.webp",
+    "audioKeys": {
+      "default": "yumurta"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "sağlam",
+      "syllables": [
+        "yu",
+        "mur",
+        "ta"
+      ],
+      "letters": [
+        "Y",
+        "U",
+        "M",
+        "U",
+        "R",
+        "T",
+        "A"
+      ]
+    }
   }
 ] as ImageMetadata[];

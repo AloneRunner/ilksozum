@@ -2708,6 +2708,186 @@
       "tags": {
         "state": "kapalı"
       }
+    },
+    {
+      "id": 3101,
+      "kaynak": "kirik-saglam/araba-kirik.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "condition": "kırık"
+      }
+    },
+    {
+      "id": 3102,
+      "kaynak": "kirik-saglam/araba-saglam.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "condition": "sağlam"
+      }
+    },
+    {
+      "id": 3103,
+      "kaynak": "kirik-saglam/biskuvi-kirik.jpg",
+      "word": "bisküvi",
+      "category": "none",
+      "tags": {
+        "condition": "kırık"
+      }
+    },
+    {
+      "id": 3104,
+      "kaynak": "kirik-saglam/biskuvi-saglam.jpg",
+      "word": "bisküvi",
+      "category": "none",
+      "tags": {
+        "condition": "sağlam"
+      }
+    },
+    {
+      "id": 3105,
+      "kaynak": "kirik-saglam/fincan-kirik.jpg",
+      "word": "fincan",
+      "category": "none",
+      "tags": {
+        "condition": "kırık"
+      }
+    },
+    {
+      "id": 3106,
+      "kaynak": "kirik-saglam/fincan-saglam.jpg",
+      "word": "fincan",
+      "category": "none",
+      "tags": {
+        "condition": "sağlam"
+      }
+    },
+    {
+      "id": 3107,
+      "kaynak": "kirik-saglam/gozluk-kirik.jpg",
+      "word": "gözlük",
+      "category": "none",
+      "tags": {
+        "condition": "kırık"
+      }
+    },
+    {
+      "id": 3108,
+      "kaynak": "kirik-saglam/gozluk-saglam.jpg",
+      "word": "gözlük",
+      "category": "none",
+      "tags": {
+        "condition": "sağlam"
+      }
+    },
+    {
+      "id": 3109,
+      "kaynak": "kirik-saglam/kalem-kirik.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "condition": "kırık"
+      }
+    },
+    {
+      "id": 3110,
+      "kaynak": "kirik-saglam/kalem-saglam.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "condition": "sağlam"
+      }
+    },
+    {
+      "id": 3111,
+      "kaynak": "kirik-saglam/robot-kirik.jpg",
+      "word": "robot",
+      "category": "none",
+      "tags": {
+        "condition": "kırık"
+      }
+    },
+    {
+      "id": 3112,
+      "kaynak": "kirik-saglam/robot-saglam.jpg",
+      "word": "robot",
+      "category": "none",
+      "tags": {
+        "condition": "sağlam"
+      }
+    },
+    {
+      "id": 3113,
+      "kaynak": "kirik-saglam/saksi-kirik.jpg",
+      "word": "saksı",
+      "category": "none",
+      "tags": {
+        "condition": "kırık"
+      }
+    },
+    {
+      "id": 3114,
+      "kaynak": "kirik-saglam/saksi-saglam.jpg",
+      "word": "saksı",
+      "category": "none",
+      "tags": {
+        "condition": "sağlam"
+      }
+    },
+    {
+      "id": 3115,
+      "kaynak": "kirik-saglam/sandalye-kirik.jpg",
+      "word": "sandalye",
+      "category": "none",
+      "tags": {
+        "condition": "kırık"
+      }
+    },
+    {
+      "id": 3116,
+      "kaynak": "kirik-saglam/sandalye-saglam.jpg",
+      "word": "sandalye",
+      "category": "none",
+      "tags": {
+        "condition": "sağlam"
+      }
+    },
+    {
+      "id": 3117,
+      "kaynak": "kirik-saglam/tabak-kirik.jpg",
+      "word": "tabak",
+      "category": "none",
+      "tags": {
+        "condition": "kırık"
+      }
+    },
+    {
+      "id": 3118,
+      "kaynak": "kirik-saglam/tabak-saglam.jpg",
+      "word": "tabak",
+      "category": "none",
+      "tags": {
+        "condition": "sağlam"
+      }
+    },
+    {
+      "id": 3119,
+      "kaynak": "kirik-saglam/yumurta-kirik.jpg",
+      "word": "yumurta",
+      "category": "none",
+      "tags": {
+        "condition": "kırık"
+      }
+    },
+    {
+      "id": 3120,
+      "kaynak": "kirik-saglam/yumurta-saglam.jpg",
+      "word": "yumurta",
+      "category": "none",
+      "tags": {
+        "condition": "sağlam"
+      }
     }
   ]
 }

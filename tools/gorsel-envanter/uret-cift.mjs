@@ -144,6 +144,18 @@ const KAVRAMLAR = [
     kelime: { kapi: 'kapı', pencere: 'pencere', kutu: 'kutu', semsiye: 'şemsiye', kitap: 'kitap', kavanoz: 'kavanoz',
       musluk: 'musluk', canta: 'çanta', goz: 'göz', cicek: 'çiçek' },
   },
+  {
+    klasor: 'kirik-saglam',
+    dosya: 'kirikSaglamData.ts',
+    exportAdi: 'brokenIntactDataYeni',
+    activityType: 'BrokenIntact',
+    idBaslangic: 3101,
+    etiket: 'condition',
+    a: { ek: 'kirik', deger: 'kırık', soru: 'Kırık olan hangisi?', sifat: 'kırıktır' },
+    b: { ek: 'saglam', deger: 'sağlam', soru: 'Sağlam olan hangisi?', sifat: 'sağlamdır' },
+    kelime: { tabak: 'tabak', fincan: 'fincan', yumurta: 'yumurta', kalem: 'kalem', araba: 'araba', gozluk: 'gözlük',
+      sandalye: 'sandalye', saksi: 'saksı', biskuvi: 'bisküvi', robot: 'robot' },
+  },
 ];
 
 const cap = w => w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1);
