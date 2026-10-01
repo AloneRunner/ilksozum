@@ -5,8 +5,11 @@ interface SmartImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   disableRealistic?: boolean;
 }
 
+// Yeni .webp görseller zaten gerçekçi; ayrı bir "realistic" karşılıkları yok.
+const isAlreadyRealistic = (src: string): boolean => src.endsWith('.webp');
+
 const getRealisticPngPath = (src: string): string => {
-        if (!src.startsWith('/images/')) return src;
+        if (!src.startsWith('/images/') || isAlreadyRealistic(src)) return src;
 
         const fileName = src.split('/').pop() || '';
         const fileStem = fileName.replace(/\.[^.]+$/, '');
@@ -14,7 +17,7 @@ const getRealisticPngPath = (src: string): string => {
 };
 
 const getMirroredRealisticPath = (src: string): string => {
-    if (!src.startsWith('/images/')) return src;
+    if (!src.startsWith('/images/') || isAlreadyRealistic(src)) return src;
     return src.replace('/images/', '/realistic/');
 };
 

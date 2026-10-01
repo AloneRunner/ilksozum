@@ -1,0 +1,1969 @@
+{
+  "_aciklama": "Yeni (gerçekçi) görsellerin tek kaynağı. 'node tools/gorsel-envanter/gorsel-isle.mjs' bu listeden public/images/<id>.webp ve src/services/database/imageData-2001-2100.ts üretir. category 'none' = sadece kavram sorularında kullanılır (nesne/harf havuzuna girmez).",
+  "gorseller": [
+    {
+      "id": 2001,
+      "kaynak": "kalin-ince/kalem-kalin.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "thickness": "kalın"
+      }
+    },
+    {
+      "id": 2002,
+      "kaynak": "kalin-ince/kalem-ince.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "thickness": "ince"
+      }
+    },
+    {
+      "id": 2003,
+      "kaynak": "kalin-ince/ip-kalin.jpg",
+      "word": "ip",
+      "category": "none",
+      "tags": {
+        "thickness": "kalın"
+      }
+    },
+    {
+      "id": 2004,
+      "kaynak": "kalin-ince/ip-ince.jpg",
+      "word": "ip",
+      "category": "none",
+      "tags": {
+        "thickness": "ince"
+      }
+    },
+    {
+      "id": 2005,
+      "kaynak": "kalin-ince/mum-kalin.jpg",
+      "word": "mum",
+      "category": "none",
+      "tags": {
+        "thickness": "kalın"
+      }
+    },
+    {
+      "id": 2006,
+      "kaynak": "kalin-ince/mum-ince.jpg",
+      "word": "mum",
+      "category": "none",
+      "tags": {
+        "thickness": "ince"
+      }
+    },
+    {
+      "id": 2007,
+      "kaynak": "kalin-ince/havuc-kalin.jpg",
+      "word": "havuç",
+      "category": "none",
+      "tags": {
+        "thickness": "kalın"
+      }
+    },
+    {
+      "id": 2008,
+      "kaynak": "kalin-ince/havuc-ince.jpg",
+      "word": "havuç",
+      "category": "none",
+      "tags": {
+        "thickness": "ince"
+      }
+    },
+    {
+      "id": 2009,
+      "kaynak": "kalin-ince/agac-kalin.jpg",
+      "word": "ağaç",
+      "category": "none",
+      "tags": {
+        "thickness": "kalın"
+      }
+    },
+    {
+      "id": 2010,
+      "kaynak": "kalin-ince/agac-ince.jpg",
+      "word": "ağaç",
+      "category": "none",
+      "tags": {
+        "thickness": "ince"
+      }
+    },
+    {
+      "id": 2011,
+      "kaynak": "kalin-ince/firca-kalin.jpg",
+      "word": "fırça",
+      "category": "none",
+      "tags": {
+        "thickness": "kalın"
+      }
+    },
+    {
+      "id": 2012,
+      "kaynak": "kalin-ince/firca-ince.jpg",
+      "word": "fırça",
+      "category": "none",
+      "tags": {
+        "thickness": "ince"
+      }
+    },
+    {
+      "id": 2013,
+      "kaynak": "kalin-ince/civi-kalin.jpg",
+      "word": "çivi",
+      "category": "none",
+      "tags": {
+        "thickness": "kalın"
+      }
+    },
+    {
+      "id": 2014,
+      "kaynak": "kalin-ince/civi-ince.jpg",
+      "word": "çivi",
+      "category": "none",
+      "tags": {
+        "thickness": "ince"
+      }
+    },
+    {
+      "id": 2015,
+      "kaynak": "kalin-ince/havlu-kalin.jpg",
+      "word": "havlu",
+      "category": "none",
+      "tags": {
+        "thickness": "kalın"
+      }
+    },
+    {
+      "id": 2016,
+      "kaynak": "kalin-ince/havlu-ince.jpg",
+      "word": "havlu",
+      "category": "none",
+      "tags": {
+        "thickness": "ince"
+      }
+    },
+    {
+      "id": 2017,
+      "kaynak": "kalin-ince/kitap-kalin.jpg",
+      "word": "kitap",
+      "category": "none",
+      "tags": {
+        "thickness": "kalın"
+      }
+    },
+    {
+      "id": 2018,
+      "kaynak": "kalin-ince/kitap-ince.jpg",
+      "word": "kitap",
+      "category": "none",
+      "tags": {
+        "thickness": "ince"
+      }
+    },
+    {
+      "id": 2019,
+      "kaynak": "kalin-ince/ekmek-kalin.jpg",
+      "word": "ekmek",
+      "category": "none",
+      "tags": {
+        "thickness": "kalın"
+      }
+    },
+    {
+      "id": 2020,
+      "kaynak": "kalin-ince/ekmek-ince.jpg",
+      "word": "ekmek",
+      "category": "none",
+      "tags": {
+        "thickness": "ince"
+      }
+    },
+    {
+      "id": 2021,
+      "kaynak": "konum-set1-top/altinda.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "position": "altında"
+      }
+    },
+    {
+      "id": 2022,
+      "kaynak": "konum-set1-top/arasinda-degil.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2023,
+      "kaynak": "konum-set1-top/arasinda.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "position": "arasında"
+      }
+    },
+    {
+      "id": 2024,
+      "kaynak": "konum-set1-top/arkasinda.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "position": "arkasında"
+      }
+    },
+    {
+      "id": 2025,
+      "kaynak": "konum-set1-top/asagida.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "position": "aşağıda"
+      }
+    },
+    {
+      "id": 2026,
+      "kaynak": "konum-set1-top/disinda.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "position": "dışında"
+      }
+    },
+    {
+      "id": 2027,
+      "kaynak": "konum-set1-top/icinde.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "position": "içinde"
+      }
+    },
+    {
+      "id": 2028,
+      "kaynak": "konum-set1-top/onunde.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "position": "önünde"
+      }
+    },
+    {
+      "id": 2029,
+      "kaynak": "konum-set1-top/ustunde.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "position": "üstünde"
+      }
+    },
+    {
+      "id": 2030,
+      "kaynak": "konum-set1-top/yaninda.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "position": "yanında"
+      }
+    },
+    {
+      "id": 2031,
+      "kaynak": "konum-set1-top/yukarida.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "position": "yukarıda"
+      }
+    },
+    {
+      "id": 2032,
+      "kaynak": "konum-set1-top/zor-masa-kutu-icinde.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2033,
+      "kaynak": "konum-set2-ayi/altinda.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "position": "altında"
+      }
+    },
+    {
+      "id": 2034,
+      "kaynak": "konum-set2-ayi/arasinda-degil.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2035,
+      "kaynak": "konum-set2-ayi/arasinda.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "position": "arasında"
+      }
+    },
+    {
+      "id": 2036,
+      "kaynak": "konum-set2-ayi/arkasinda.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "position": "arkasında"
+      }
+    },
+    {
+      "id": 2037,
+      "kaynak": "konum-set2-ayi/asagida.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "position": "aşağıda"
+      }
+    },
+    {
+      "id": 2038,
+      "kaynak": "konum-set2-ayi/disinda.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "position": "dışında"
+      }
+    },
+    {
+      "id": 2039,
+      "kaynak": "konum-set2-ayi/icinde.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "position": "içinde"
+      }
+    },
+    {
+      "id": 2040,
+      "kaynak": "konum-set2-ayi/onunde.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "position": "önünde"
+      }
+    },
+    {
+      "id": 2041,
+      "kaynak": "konum-set2-ayi/ustunde.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "position": "üstünde"
+      }
+    },
+    {
+      "id": 2042,
+      "kaynak": "konum-set2-ayi/yaninda.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "position": "yanında"
+      }
+    },
+    {
+      "id": 2043,
+      "kaynak": "konum-set2-ayi/yukarida.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "position": "yukarıda"
+      }
+    },
+    {
+      "id": 2044,
+      "kaynak": "konum-set2-ayi/zor-sandalye-sepet-icinde.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2045,
+      "kaynak": "konum-set3-araba/altinda.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "position": "altında"
+      }
+    },
+    {
+      "id": 2046,
+      "kaynak": "konum-set3-araba/arasinda-degil.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2047,
+      "kaynak": "konum-set3-araba/arasinda.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "position": "arasında"
+      }
+    },
+    {
+      "id": 2048,
+      "kaynak": "konum-set3-araba/arkasinda.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "position": "arkasında"
+      }
+    },
+    {
+      "id": 2049,
+      "kaynak": "konum-set3-araba/asagida.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "position": "aşağıda"
+      }
+    },
+    {
+      "id": 2050,
+      "kaynak": "konum-set3-araba/disinda.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "position": "dışında"
+      }
+    },
+    {
+      "id": 2051,
+      "kaynak": "konum-set3-araba/icinde.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "position": "içinde"
+      }
+    },
+    {
+      "id": 2052,
+      "kaynak": "konum-set3-araba/onunde.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "position": "önünde"
+      }
+    },
+    {
+      "id": 2053,
+      "kaynak": "konum-set3-araba/ustunde.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "position": "üstünde"
+      }
+    },
+    {
+      "id": 2054,
+      "kaynak": "konum-set3-araba/yaninda.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "position": "yanında"
+      }
+    },
+    {
+      "id": 2055,
+      "kaynak": "konum-set3-araba/yukarida.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "position": "yukarıda"
+      }
+    },
+    {
+      "id": 2056,
+      "kaynak": "konum-set3-araba/zor-sehpa-kova-icinde.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2057,
+      "kaynak": "konum-set4-elma/altinda.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "position": "altında"
+      }
+    },
+    {
+      "id": 2058,
+      "kaynak": "konum-set4-elma/arasinda-degil.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2059,
+      "kaynak": "konum-set4-elma/arasinda.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "position": "arasında"
+      }
+    },
+    {
+      "id": 2060,
+      "kaynak": "konum-set4-elma/arkasinda.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "position": "arkasında"
+      }
+    },
+    {
+      "id": 2061,
+      "kaynak": "konum-set4-elma/asagida.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "position": "aşağıda"
+      }
+    },
+    {
+      "id": 2062,
+      "kaynak": "konum-set4-elma/disinda.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "position": "dışında"
+      }
+    },
+    {
+      "id": 2063,
+      "kaynak": "konum-set4-elma/icinde.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "position": "içinde"
+      }
+    },
+    {
+      "id": 2064,
+      "kaynak": "konum-set4-elma/onunde.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "position": "önünde"
+      }
+    },
+    {
+      "id": 2065,
+      "kaynak": "konum-set4-elma/ustunde.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "position": "üstünde"
+      }
+    },
+    {
+      "id": 2066,
+      "kaynak": "konum-set4-elma/yaninda.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "position": "yanında"
+      }
+    },
+    {
+      "id": 2067,
+      "kaynak": "konum-set4-elma/yukarida.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "position": "yukarıda"
+      }
+    },
+    {
+      "id": 2068,
+      "kaynak": "konum-set4-elma/zor-tabure-kase-icinde.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2069,
+      "kaynak": "konum-set5-kalem/altinda.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "position": "altında"
+      }
+    },
+    {
+      "id": 2070,
+      "kaynak": "konum-set5-kalem/arasinda-degil.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2071,
+      "kaynak": "konum-set5-kalem/arasinda.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "position": "arasında"
+      }
+    },
+    {
+      "id": 2072,
+      "kaynak": "konum-set5-kalem/arkasinda.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "position": "arkasında"
+      }
+    },
+    {
+      "id": 2073,
+      "kaynak": "konum-set5-kalem/asagida.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "position": "aşağıda"
+      }
+    },
+    {
+      "id": 2074,
+      "kaynak": "konum-set5-kalem/disinda.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "position": "dışında"
+      }
+    },
+    {
+      "id": 2075,
+      "kaynak": "konum-set5-kalem/icinde.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "position": "içinde"
+      }
+    },
+    {
+      "id": 2076,
+      "kaynak": "konum-set5-kalem/onunde.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "position": "önünde"
+      }
+    },
+    {
+      "id": 2077,
+      "kaynak": "konum-set5-kalem/ustunde.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "position": "üstünde"
+      }
+    },
+    {
+      "id": 2078,
+      "kaynak": "konum-set5-kalem/yaninda.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "position": "yanında"
+      }
+    },
+    {
+      "id": 2079,
+      "kaynak": "konum-set5-kalem/zor-masa-kalemlik-icinde.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2080,
+      "kaynak": "konum-set6-kedi/altinda.jpg",
+      "word": "kedi",
+      "category": "none",
+      "tags": {
+        "position": "altında"
+      }
+    },
+    {
+      "id": 2081,
+      "kaynak": "konum-set6-kedi/arasinda-degil.jpg",
+      "word": "kedi",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2082,
+      "kaynak": "konum-set6-kedi/arasinda.jpg",
+      "word": "kedi",
+      "category": "none",
+      "tags": {
+        "position": "arasında"
+      }
+    },
+    {
+      "id": 2083,
+      "kaynak": "konum-set6-kedi/arkasinda.jpg",
+      "word": "kedi",
+      "category": "none",
+      "tags": {
+        "position": "arkasında"
+      }
+    },
+    {
+      "id": 2084,
+      "kaynak": "konum-set6-kedi/asagida.jpg",
+      "word": "kedi",
+      "category": "none",
+      "tags": {
+        "position": "aşağıda"
+      }
+    },
+    {
+      "id": 2085,
+      "kaynak": "konum-set6-kedi/disinda.jpg",
+      "word": "kedi",
+      "category": "none",
+      "tags": {
+        "position": "dışında"
+      }
+    },
+    {
+      "id": 2086,
+      "kaynak": "konum-set6-kedi/icinde.jpg",
+      "word": "kedi",
+      "category": "none",
+      "tags": {
+        "position": "içinde"
+      }
+    },
+    {
+      "id": 2087,
+      "kaynak": "konum-set6-kedi/onunde.jpg",
+      "word": "kedi",
+      "category": "none",
+      "tags": {
+        "position": "önünde"
+      }
+    },
+    {
+      "id": 2088,
+      "kaynak": "konum-set6-kedi/ustunde.jpg",
+      "word": "kedi",
+      "category": "none",
+      "tags": {
+        "position": "üstünde"
+      }
+    },
+    {
+      "id": 2089,
+      "kaynak": "konum-set6-kedi/yaninda.jpg",
+      "word": "kedi",
+      "category": "none",
+      "tags": {
+        "position": "yanında"
+      }
+    },
+    {
+      "id": 2090,
+      "kaynak": "konum-set6-kedi/yukarida.jpg",
+      "word": "kedi",
+      "category": "none",
+      "tags": {
+        "position": "yukarıda"
+      }
+    },
+    {
+      "id": 2091,
+      "kaynak": "konum-set6-kedi/zor-bank-yatak-icinde.jpg",
+      "word": "kedi",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2092,
+      "kaynak": "konum-set7-kus/altinda.jpg",
+      "word": "kuş",
+      "category": "none",
+      "tags": {
+        "position": "altında"
+      }
+    },
+    {
+      "id": 2093,
+      "kaynak": "konum-set7-kus/arasinda-degil.jpg",
+      "word": "kuş",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2094,
+      "kaynak": "konum-set7-kus/arasinda.jpg",
+      "word": "kuş",
+      "category": "none",
+      "tags": {
+        "position": "arasında"
+      }
+    },
+    {
+      "id": 2095,
+      "kaynak": "konum-set7-kus/asagida.jpg",
+      "word": "kuş",
+      "category": "none",
+      "tags": {
+        "position": "aşağıda"
+      }
+    },
+    {
+      "id": 2096,
+      "kaynak": "konum-set7-kus/disinda.jpg",
+      "word": "kuş",
+      "category": "none",
+      "tags": {
+        "position": "dışında"
+      }
+    },
+    {
+      "id": 2097,
+      "kaynak": "konum-set7-kus/icinde.jpg",
+      "word": "kuş",
+      "category": "none",
+      "tags": {
+        "position": "içinde"
+      }
+    },
+    {
+      "id": 2098,
+      "kaynak": "konum-set7-kus/onunde.jpg",
+      "word": "kuş",
+      "category": "none",
+      "tags": {
+        "position": "önünde"
+      }
+    },
+    {
+      "id": 2099,
+      "kaynak": "konum-set7-kus/ustunde.jpg",
+      "word": "kuş",
+      "category": "none",
+      "tags": {
+        "position": "üstünde"
+      }
+    },
+    {
+      "id": 2100,
+      "kaynak": "konum-set7-kus/yaninda.jpg",
+      "word": "kuş",
+      "category": "none",
+      "tags": {
+        "position": "yanında"
+      }
+    },
+    {
+      "id": 2101,
+      "kaynak": "konum-set7-kus/yukarida.jpg",
+      "word": "kuş",
+      "category": "none",
+      "tags": {
+        "position": "yukarıda"
+      }
+    },
+    {
+      "id": 2102,
+      "kaynak": "konum-set7-kus/zor-sehpa-kafes-icinde.jpg",
+      "word": "kuş",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2103,
+      "kaynak": "konum-set8-bebek/altinda.jpg",
+      "word": "bebek",
+      "category": "none",
+      "tags": {
+        "position": "altında"
+      }
+    },
+    {
+      "id": 2104,
+      "kaynak": "konum-set8-bebek/arasinda-degil.jpg",
+      "word": "bebek",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2105,
+      "kaynak": "konum-set8-bebek/arasinda.jpg",
+      "word": "bebek",
+      "category": "none",
+      "tags": {
+        "position": "arasında"
+      }
+    },
+    {
+      "id": 2106,
+      "kaynak": "konum-set8-bebek/arkasinda.jpg",
+      "word": "bebek",
+      "category": "none",
+      "tags": {
+        "position": "arkasında"
+      }
+    },
+    {
+      "id": 2107,
+      "kaynak": "konum-set8-bebek/asagida.jpg",
+      "word": "bebek",
+      "category": "none",
+      "tags": {
+        "position": "aşağıda"
+      }
+    },
+    {
+      "id": 2108,
+      "kaynak": "konum-set8-bebek/disinda.jpg",
+      "word": "bebek",
+      "category": "none",
+      "tags": {
+        "position": "dışında"
+      }
+    },
+    {
+      "id": 2109,
+      "kaynak": "konum-set8-bebek/icinde.jpg",
+      "word": "bebek",
+      "category": "none",
+      "tags": {
+        "position": "içinde"
+      }
+    },
+    {
+      "id": 2110,
+      "kaynak": "konum-set8-bebek/onunde.jpg",
+      "word": "bebek",
+      "category": "none",
+      "tags": {
+        "position": "önünde"
+      }
+    },
+    {
+      "id": 2111,
+      "kaynak": "konum-set8-bebek/ustunde.jpg",
+      "word": "bebek",
+      "category": "none",
+      "tags": {
+        "position": "üstünde"
+      }
+    },
+    {
+      "id": 2112,
+      "kaynak": "konum-set8-bebek/yaninda.jpg",
+      "word": "bebek",
+      "category": "none",
+      "tags": {
+        "position": "yanında"
+      }
+    },
+    {
+      "id": 2113,
+      "kaynak": "konum-set8-bebek/yukarida.jpg",
+      "word": "bebek",
+      "category": "none",
+      "tags": {
+        "position": "yukarıda"
+      }
+    },
+    {
+      "id": 2114,
+      "kaynak": "konum-set8-bebek/zor-sandalye-besik-icinde.jpg",
+      "word": "bebek",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2201,
+      "kaynak": "genis-dar/kapi-dar.jpg",
+      "word": "kapı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "dar"
+      }
+    },
+    {
+      "id": 2202,
+      "kaynak": "genis-dar/kapi-genis.jpg",
+      "word": "kapı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "geniş"
+      }
+    },
+    {
+      "id": 2203,
+      "kaynak": "genis-dar/kapi-orta.jpg",
+      "word": "kapı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "orta"
+      }
+    },
+    {
+      "id": 2204,
+      "kaynak": "genis-dar/kaydirak-dar.jpg",
+      "word": "kaydırak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "dar"
+      }
+    },
+    {
+      "id": 2205,
+      "kaynak": "genis-dar/kaydirak-genis.jpg",
+      "word": "kaydırak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "geniş"
+      }
+    },
+    {
+      "id": 2206,
+      "kaynak": "genis-dar/kaydirak-orta.jpg",
+      "word": "kaydırak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "orta"
+      }
+    },
+    {
+      "id": 2207,
+      "kaynak": "genis-dar/kopru-dar.jpg",
+      "word": "köprü",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "dar"
+      }
+    },
+    {
+      "id": 2208,
+      "kaynak": "genis-dar/kopru-genis.jpg",
+      "word": "köprü",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "geniş"
+      }
+    },
+    {
+      "id": 2209,
+      "kaynak": "genis-dar/koridor-dar.jpg",
+      "word": "koridor",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "dar"
+      }
+    },
+    {
+      "id": 2210,
+      "kaynak": "genis-dar/koridor-genis.jpg",
+      "word": "koridor",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "geniş"
+      }
+    },
+    {
+      "id": 2211,
+      "kaynak": "genis-dar/merdiven-dar.jpg",
+      "word": "merdiven",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "dar"
+      }
+    },
+    {
+      "id": 2212,
+      "kaynak": "genis-dar/merdiven-genis.jpg",
+      "word": "merdiven",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "geniş"
+      }
+    },
+    {
+      "id": 2213,
+      "kaynak": "genis-dar/nehir-dar.jpg",
+      "word": "nehir",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "dar"
+      }
+    },
+    {
+      "id": 2214,
+      "kaynak": "genis-dar/nehir-genis.jpg",
+      "word": "nehir",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "geniş"
+      }
+    },
+    {
+      "id": 2215,
+      "kaynak": "genis-dar/pencere-dar.jpg",
+      "word": "pencere",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "dar"
+      }
+    },
+    {
+      "id": 2216,
+      "kaynak": "genis-dar/pencere-genis.jpg",
+      "word": "pencere",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "geniş"
+      }
+    },
+    {
+      "id": 2217,
+      "kaynak": "genis-dar/sokak-dar.jpg",
+      "word": "sokak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "dar"
+      }
+    },
+    {
+      "id": 2218,
+      "kaynak": "genis-dar/sokak-genis.jpg",
+      "word": "sokak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "geniş"
+      }
+    },
+    {
+      "id": 2219,
+      "kaynak": "genis-dar/tunel-dar.jpg",
+      "word": "tünel",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "dar"
+      }
+    },
+    {
+      "id": 2220,
+      "kaynak": "genis-dar/tunel-genis.jpg",
+      "word": "tünel",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "geniş"
+      }
+    },
+    {
+      "id": 2221,
+      "kaynak": "genis-dar/yol-dar.jpg",
+      "word": "yol",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "dar"
+      }
+    },
+    {
+      "id": 2222,
+      "kaynak": "genis-dar/yol-genis.jpg",
+      "word": "yol",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "width": "geniş"
+      }
+    },
+    {
+      "id": 2301,
+      "kaynak": "buyuk-kucuk/ayakkabi-buyuk.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "size": "büyük"
+      }
+    },
+    {
+      "id": 2302,
+      "kaynak": "buyuk-kucuk/ayakkabi-kucuk.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "size": "küçük"
+      }
+    },
+    {
+      "id": 2303,
+      "kaynak": "buyuk-kucuk/ayi-buyuk.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "size": "büyük"
+      }
+    },
+    {
+      "id": 2304,
+      "kaynak": "buyuk-kucuk/ayi-kucuk.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "size": "küçük"
+      }
+    },
+    {
+      "id": 2305,
+      "kaynak": "buyuk-kucuk/balon-buyuk.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "size": "büyük"
+      }
+    },
+    {
+      "id": 2306,
+      "kaynak": "buyuk-kucuk/balon-kucuk.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "size": "küçük"
+      }
+    },
+    {
+      "id": 2307,
+      "kaynak": "buyuk-kucuk/elma-buyuk.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "size": "büyük"
+      }
+    },
+    {
+      "id": 2308,
+      "kaynak": "buyuk-kucuk/elma-kucuk.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "size": "küçük"
+      }
+    },
+    {
+      "id": 2309,
+      "kaynak": "buyuk-kucuk/karpuz-buyuk.jpg",
+      "word": "karpuz",
+      "category": "none",
+      "tags": {
+        "size": "büyük"
+      }
+    },
+    {
+      "id": 2310,
+      "kaynak": "buyuk-kucuk/karpuz-kucuk.jpg",
+      "word": "karpuz",
+      "category": "none",
+      "tags": {
+        "size": "küçük"
+      }
+    },
+    {
+      "id": 2311,
+      "kaynak": "buyuk-kucuk/kupa-buyuk.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "size": "büyük"
+      }
+    },
+    {
+      "id": 2312,
+      "kaynak": "buyuk-kucuk/kupa-kucuk.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "size": "küçük"
+      }
+    },
+    {
+      "id": 2313,
+      "kaynak": "buyuk-kucuk/kutu-buyuk.jpg",
+      "word": "kutu",
+      "category": "none",
+      "tags": {
+        "size": "büyük"
+      }
+    },
+    {
+      "id": 2314,
+      "kaynak": "buyuk-kucuk/kutu-kucuk.jpg",
+      "word": "kutu",
+      "category": "none",
+      "tags": {
+        "size": "küçük"
+      }
+    },
+    {
+      "id": 2315,
+      "kaynak": "buyuk-kucuk/tencere-buyuk.jpg",
+      "word": "tencere",
+      "category": "none",
+      "tags": {
+        "size": "büyük"
+      }
+    },
+    {
+      "id": 2316,
+      "kaynak": "buyuk-kucuk/tencere-kucuk.jpg",
+      "word": "tencere",
+      "category": "none",
+      "tags": {
+        "size": "küçük"
+      }
+    },
+    {
+      "id": 2317,
+      "kaynak": "buyuk-kucuk/top-buyuk.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "size": "büyük"
+      }
+    },
+    {
+      "id": 2318,
+      "kaynak": "buyuk-kucuk/top-kucuk.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "size": "küçük"
+      }
+    },
+    {
+      "id": 2319,
+      "kaynak": "buyuk-kucuk/top-orta.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "size": "orta"
+      }
+    },
+    {
+      "id": 2320,
+      "kaynak": "buyuk-kucuk/yastik-buyuk.jpg",
+      "word": "yastık",
+      "category": "none",
+      "tags": {
+        "size": "büyük"
+      }
+    },
+    {
+      "id": 2321,
+      "kaynak": "buyuk-kucuk/yastik-kucuk.jpg",
+      "word": "yastık",
+      "category": "none",
+      "tags": {
+        "size": "küçük"
+      }
+    },
+    {
+      "id": 2401,
+      "kaynak": "uzun-kisa/atki-kisa.jpg",
+      "word": "atkı",
+      "category": "none",
+      "tags": {
+        "length": "kısa"
+      }
+    },
+    {
+      "id": 2402,
+      "kaynak": "uzun-kisa/atki-uzun.jpg",
+      "word": "atkı",
+      "category": "none",
+      "tags": {
+        "length": "uzun"
+      }
+    },
+    {
+      "id": 2403,
+      "kaynak": "uzun-kisa/bank-kisa.jpg",
+      "word": "bank",
+      "category": "none",
+      "tags": {
+        "length": "kısa"
+      }
+    },
+    {
+      "id": 2404,
+      "kaynak": "uzun-kisa/bank-uzun.jpg",
+      "word": "bank",
+      "category": "none",
+      "tags": {
+        "length": "uzun"
+      }
+    },
+    {
+      "id": 2405,
+      "kaynak": "uzun-kisa/corap-kisa.jpg",
+      "word": "çorap",
+      "category": "none",
+      "tags": {
+        "length": "kısa"
+      }
+    },
+    {
+      "id": 2406,
+      "kaynak": "uzun-kisa/corap-uzun.jpg",
+      "word": "çorap",
+      "category": "none",
+      "tags": {
+        "length": "uzun"
+      }
+    },
+    {
+      "id": 2407,
+      "kaynak": "uzun-kisa/kalem-kisa.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "length": "kısa"
+      }
+    },
+    {
+      "id": 2408,
+      "kaynak": "uzun-kisa/kalem-uzun.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "length": "uzun"
+      }
+    },
+    {
+      "id": 2409,
+      "kaynak": "uzun-kisa/kurdele-kisa.jpg",
+      "word": "kurdele",
+      "category": "none",
+      "tags": {
+        "length": "kısa"
+      }
+    },
+    {
+      "id": 2410,
+      "kaynak": "uzun-kisa/kurdele-uzun.jpg",
+      "word": "kurdele",
+      "category": "none",
+      "tags": {
+        "length": "uzun"
+      }
+    },
+    {
+      "id": 2411,
+      "kaynak": "uzun-kisa/pantolon-kisa.jpg",
+      "word": "pantolon",
+      "category": "none",
+      "tags": {
+        "length": "kısa"
+      }
+    },
+    {
+      "id": 2412,
+      "kaynak": "uzun-kisa/pantolon-uzun.jpg",
+      "word": "pantolon",
+      "category": "none",
+      "tags": {
+        "length": "uzun"
+      }
+    },
+    {
+      "id": 2413,
+      "kaynak": "uzun-kisa/sac-kisa.jpg",
+      "word": "saç",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "length": "kısa"
+      }
+    },
+    {
+      "id": 2414,
+      "kaynak": "uzun-kisa/sac-uzun.jpg",
+      "word": "saç",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "length": "uzun"
+      }
+    },
+    {
+      "id": 2415,
+      "kaynak": "uzun-kisa/tisort-kisa.jpg",
+      "word": "tişört kolu",
+      "category": "none",
+      "tags": {
+        "length": "kısa"
+      }
+    },
+    {
+      "id": 2416,
+      "kaynak": "uzun-kisa/tisort-uzun.jpg",
+      "word": "tişört kolu",
+      "category": "none",
+      "tags": {
+        "length": "uzun"
+      }
+    },
+    {
+      "id": 2417,
+      "kaynak": "uzun-kisa/tren-kisa.jpg",
+      "word": "tren",
+      "category": "none",
+      "tags": {
+        "length": "kısa"
+      }
+    },
+    {
+      "id": 2418,
+      "kaynak": "uzun-kisa/tren-uzun.jpg",
+      "word": "tren",
+      "category": "none",
+      "tags": {
+        "length": "uzun"
+      }
+    },
+    {
+      "id": 2419,
+      "kaynak": "uzun-kisa/yilan-kisa.jpg",
+      "word": "yılan",
+      "category": "none",
+      "tags": {
+        "length": "kısa"
+      }
+    },
+    {
+      "id": 2420,
+      "kaynak": "uzun-kisa/yilan-uzun.jpg",
+      "word": "yılan",
+      "category": "none",
+      "tags": {
+        "length": "uzun"
+      }
+    },
+    {
+      "id": 2501,
+      "kaynak": "yuksek-alcak/ayakkabi-alcak.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "height": "alçak"
+      }
+    },
+    {
+      "id": 2502,
+      "kaynak": "yuksek-alcak/ayakkabi-yuksek.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "height": "yüksek"
+      }
+    },
+    {
+      "id": 2503,
+      "kaynak": "yuksek-alcak/bina-alcak.jpg",
+      "word": "bina",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "height": "alçak"
+      }
+    },
+    {
+      "id": 2504,
+      "kaynak": "yuksek-alcak/bina-yuksek.jpg",
+      "word": "bina",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "height": "yüksek"
+      }
+    },
+    {
+      "id": 2505,
+      "kaynak": "yuksek-alcak/blok-alcak.jpg",
+      "word": "blok kulesi",
+      "category": "none",
+      "tags": {
+        "height": "alçak"
+      }
+    },
+    {
+      "id": 2506,
+      "kaynak": "yuksek-alcak/blok-orta.jpg",
+      "word": "blok kulesi",
+      "category": "none",
+      "tags": {
+        "height": "orta"
+      }
+    },
+    {
+      "id": 2507,
+      "kaynak": "yuksek-alcak/blok-yuksek.jpg",
+      "word": "blok kulesi",
+      "category": "none",
+      "tags": {
+        "height": "yüksek"
+      }
+    },
+    {
+      "id": 2508,
+      "kaynak": "yuksek-alcak/cadir-alcak.jpg",
+      "word": "çadır",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "height": "alçak"
+      }
+    },
+    {
+      "id": 2509,
+      "kaynak": "yuksek-alcak/cadir-yuksek.jpg",
+      "word": "çadır",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "height": "yüksek"
+      }
+    },
+    {
+      "id": 2510,
+      "kaynak": "yuksek-alcak/cit-alcak.jpg",
+      "word": "çit",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "height": "alçak"
+      }
+    },
+    {
+      "id": 2511,
+      "kaynak": "yuksek-alcak/cit-yuksek.jpg",
+      "word": "çit",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "height": "yüksek"
+      }
+    },
+    {
+      "id": 2512,
+      "kaynak": "yuksek-alcak/dag-alcak.jpg",
+      "word": "dağ",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "height": "alçak"
+      }
+    },
+    {
+      "id": 2513,
+      "kaynak": "yuksek-alcak/dag-yuksek.jpg",
+      "word": "dağ",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "height": "yüksek"
+      }
+    },
+    {
+      "id": 2514,
+      "kaynak": "yuksek-alcak/duvar-alcak.jpg",
+      "word": "duvar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "height": "alçak"
+      }
+    },
+    {
+      "id": 2515,
+      "kaynak": "yuksek-alcak/duvar-yuksek.jpg",
+      "word": "duvar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "height": "yüksek"
+      }
+    },
+    {
+      "id": 2516,
+      "kaynak": "yuksek-alcak/kitaplik-alcak.jpg",
+      "word": "kitaplık",
+      "category": "none",
+      "tags": {
+        "height": "alçak"
+      }
+    },
+    {
+      "id": 2517,
+      "kaynak": "yuksek-alcak/kitaplik-yuksek.jpg",
+      "word": "kitaplık",
+      "category": "none",
+      "tags": {
+        "height": "yüksek"
+      }
+    },
+    {
+      "id": 2518,
+      "kaynak": "yuksek-alcak/masa-alcak.jpg",
+      "word": "masa",
+      "category": "none",
+      "tags": {
+        "height": "alçak"
+      }
+    },
+    {
+      "id": 2519,
+      "kaynak": "yuksek-alcak/masa-yuksek.jpg",
+      "word": "masa",
+      "category": "none",
+      "tags": {
+        "height": "yüksek"
+      }
+    },
+    {
+      "id": 2520,
+      "kaynak": "yuksek-alcak/tabure-alcak.jpg",
+      "word": "tabure",
+      "category": "none",
+      "tags": {
+        "height": "alçak"
+      }
+    },
+    {
+      "id": 2521,
+      "kaynak": "yuksek-alcak/tabure-yuksek.jpg",
+      "word": "tabure",
+      "category": "none",
+      "tags": {
+        "height": "yüksek"
+      }
+    },
+    {
+      "id": 2601,
+      "kaynak": "dolu-bos/akvaryum-bos.jpg",
+      "word": "akvaryum",
+      "category": "none",
+      "tags": {
+        "fullness": "boş"
+      }
+    },
+    {
+      "id": 2602,
+      "kaynak": "dolu-bos/akvaryum-dolu.jpg",
+      "word": "akvaryum",
+      "category": "none",
+      "tags": {
+        "fullness": "dolu"
+      }
+    },
+    {
+      "id": 2603,
+      "kaynak": "dolu-bos/bardak-bos.jpg",
+      "word": "bardak",
+      "category": "none",
+      "tags": {
+        "fullness": "boş"
+      }
+    },
+    {
+      "id": 2604,
+      "kaynak": "dolu-bos/bardak-dolu.jpg",
+      "word": "bardak",
+      "category": "none",
+      "tags": {
+        "fullness": "dolu"
+      }
+    },
+    {
+      "id": 2605,
+      "kaynak": "dolu-bos/kalemlik-bos.jpg",
+      "word": "kalemlik",
+      "category": "none",
+      "tags": {
+        "fullness": "boş"
+      }
+    },
+    {
+      "id": 2606,
+      "kaynak": "dolu-bos/kalemlik-dolu.jpg",
+      "word": "kalemlik",
+      "category": "none",
+      "tags": {
+        "fullness": "dolu"
+      }
+    },
+    {
+      "id": 2607,
+      "kaynak": "dolu-bos/kavanoz-bos.jpg",
+      "word": "kavanoz",
+      "category": "none",
+      "tags": {
+        "fullness": "boş"
+      }
+    },
+    {
+      "id": 2608,
+      "kaynak": "dolu-bos/kavanoz-dolu.jpg",
+      "word": "kavanoz",
+      "category": "none",
+      "tags": {
+        "fullness": "dolu"
+      }
+    },
+    {
+      "id": 2609,
+      "kaynak": "dolu-bos/koli-bos.jpg",
+      "word": "yumurta kolisi",
+      "category": "none",
+      "tags": {
+        "fullness": "boş"
+      }
+    },
+    {
+      "id": 2610,
+      "kaynak": "dolu-bos/koli-dolu.jpg",
+      "word": "yumurta kolisi",
+      "category": "none",
+      "tags": {
+        "fullness": "dolu"
+      }
+    },
+    {
+      "id": 2611,
+      "kaynak": "dolu-bos/kova-bos.jpg",
+      "word": "kova",
+      "category": "none",
+      "tags": {
+        "fullness": "boş"
+      }
+    },
+    {
+      "id": 2612,
+      "kaynak": "dolu-bos/kova-dolu.jpg",
+      "word": "kova",
+      "category": "none",
+      "tags": {
+        "fullness": "dolu"
+      }
+    },
+    {
+      "id": 2613,
+      "kaynak": "dolu-bos/kumbara-bos.jpg",
+      "word": "kumbara",
+      "category": "none",
+      "tags": {
+        "fullness": "boş"
+      }
+    },
+    {
+      "id": 2614,
+      "kaynak": "dolu-bos/kumbara-dolu.jpg",
+      "word": "kumbara",
+      "category": "none",
+      "tags": {
+        "fullness": "dolu"
+      }
+    },
+    {
+      "id": 2615,
+      "kaynak": "dolu-bos/kutu-bos.jpg",
+      "word": "oyuncak kutusu",
+      "category": "none",
+      "tags": {
+        "fullness": "boş"
+      }
+    },
+    {
+      "id": 2616,
+      "kaynak": "dolu-bos/kutu-dolu.jpg",
+      "word": "oyuncak kutusu",
+      "category": "none",
+      "tags": {
+        "fullness": "dolu"
+      }
+    },
+    {
+      "id": 2617,
+      "kaynak": "dolu-bos/sepet-bos.jpg",
+      "word": "sepet",
+      "category": "none",
+      "tags": {
+        "fullness": "boş"
+      }
+    },
+    {
+      "id": 2618,
+      "kaynak": "dolu-bos/sepet-dolu.jpg",
+      "word": "sepet",
+      "category": "none",
+      "tags": {
+        "fullness": "dolu"
+      }
+    },
+    {
+      "id": 2619,
+      "kaynak": "dolu-bos/tabak-bos.jpg",
+      "word": "tabak",
+      "category": "none",
+      "tags": {
+        "fullness": "boş"
+      }
+    },
+    {
+      "id": 2620,
+      "kaynak": "dolu-bos/tabak-dolu.jpg",
+      "word": "tabak",
+      "category": "none",
+      "tags": {
+        "fullness": "dolu"
+      }
+    }
+  ]
+}

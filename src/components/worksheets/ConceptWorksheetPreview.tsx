@@ -22,12 +22,15 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 function toRealisticPng(url: string): string {
+  // Yeni .webp görseller zaten gerçekçi
+  if (url.endsWith('.webp')) return url;
   const fileName = url.split('/').pop() || '';
   const fileStem = fileName.replace(/\.[^.]+$/, '');
   return `/realistic/${fileStem}.png`;
 }
 
 function toMirroredRealistic(url: string): string {
+  if (url.endsWith('.webp')) return url;
   return url.replace('/images/', '/realistic/');
 }
 

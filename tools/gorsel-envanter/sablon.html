@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Görsel Envanteri</title>
+<style>
+:root {
+  --bg: #f6f5f2; --panel: #ffffff; --ink: #1f2328; --muted: #6b7078; --line: #e3e1dc;
+  --accent: #2f6fdb; --ok: #1f8a4c; --ok-bg: #e5f4ea; --bad: #c2362b; --bad-bg: #fbe7e5;
+  --warn: #9a6400; --warn-bg: #fdf1d8; --chip: #efeee9;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #16181c; --panel: #1f2227; --ink: #e8e9eb; --muted: #9aa0a8; --line: #33373e;
+    --accent: #6c9cf0; --ok: #57c285; --ok-bg: #1d3327; --bad: #ef7a70; --bad-bg: #3a2220;
+    --warn: #e0b04f; --warn-bg: #3a3020; --chip: #2a2e34; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { position: sticky; top: 0; z-index: 5; background: var(--panel); border-bottom: 1px solid var(--line); padding: 10px 16px; }
+h1 { font-size: 17px; margin: 0 0 6px; }
+.stats { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--muted); font-size: 13px; }
+.stats b { color: var(--ink); }
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+.tabs button, .bar button { border: 1px solid var(--line); background: var(--panel); color: var(--ink); padding: 6px 10px; border-radius: 8px; cursor: pointer; font: inherit; }
+.tabs button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+select, input[type=search] { font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); max-width: 100%; }
+main { padding: 12px 16px 60px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 8px; cursor: pointer; position: relative; }
+.card img, .opt img { width: 100%; aspect-ratio: 1; object-fit: contain; background: #fff; border-radius: 6px; display: block; }
+.card .t { font-weight: 600; margin-top: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.card .s { color: var(--muted); font-size: 12px; }
+.badge { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 999px; background: var(--chip); color: var(--muted); margin: 2px 2px 0 0; }
+.badge.ok { background: var(--ok-bg); color: var(--ok); } .badge.bad { background: var(--bad-bg); color: var(--bad); } .badge.warn { background: var(--warn-bg); color: var(--warn); }
+.mark { position: absolute; top: 6px; right: 6px; font-size: 11px; font-weight: 700; padding: 2px 6px; border-radius: 6px; }
+.q { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px; margin-bottom: 10px; }
+.q h3 { font-size: 14px; margin: 0 0 4px; }
+.q .meta { color: var(--muted); font-size: 12px; margin-bottom: 6px; word-break: break-all; }
+.opts { display: flex; gap: 10px; flex-wrap: wrap; }
+.opt { width: 150px; border: 2px solid var(--line); border-radius: 8px; padding: 4px; cursor: pointer; }
+.opt.doğru { border-color: var(--ok); } .opt.yanlış { border-color: var(--line); }
+.opt .w { font-size: 12px; text-align: center; }
+.actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; align-items: center; }
+.actions button { border: 1px solid var(--line); background: var(--panel); color: var(--ink); padding: 4px 8px; border-radius: 6px; cursor: pointer; font: inherit; font-size: 12px; }
+.actions button.on { color: #fff; }
+.actions button.on[data-v=tamam] { background: var(--ok); border-color: var(--ok); }
+.actions button.on[data-v=sorunlu], .actions button.on[data-v=yeniden] { background: var(--warn); border-color: var(--warn); }
+.actions button.on[data-v=sil] { background: var(--bad); border-color: var(--bad); }
+.actions input { flex: 1; min-width: 160px; font: inherit; font-size: 12px; padding: 4px 6px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); }
+dialog { border: 1px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--ink); width: min(760px, calc(100vw - 32px)); max-height: 90vh; padding: 16px; }
+dialog::backdrop { background: rgba(0,0,0,.45); }
+.dlg { display: grid; grid-template-columns: 240px 1fr; gap: 14px; }
+.dlg img { width: 100%; background: #fff; border-radius: 8px; }
+@media (max-width: 600px) { .dlg { grid-template-columns: 1fr; } .opt { width: calc(50% - 5px); } }
+table { border-collapse: collapse; width: 100%; font-size: 12px; }
+td { border-top: 1px solid var(--line); padding: 4px 6px; vertical-align: top; }
+.muted { color: var(--muted); }
+.more { display: block; margin: 12px auto; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Görsel Envanteri</h1>
+  <div class="stats" id="stats"></div>
+  <div class="bar tabs">
+    <button data-tab="sorular" class="on">Sorular (şıklar yan yana)</button>
+    <button data-tab="gorseller">Görseller</button>
+    <span style="flex:1"></span>
+    <button id="export">İşaretleri indir</button>
+    <label class="bar" style="margin:0"><button id="importBtn" type="button">İşaretleri yükle</button><input id="import" type="file" accept=".json" hidden></label>
+  </div>
+  <div class="bar" id="filters"></div>
+</header>
+<main id="main"></main>
+<dialog id="dlg"></dialog>
+<script>
+const DATA = /*__DATA__*/null;
+const IMG = f => '../../public/images/' + f;
+const imgById = new Map(DATA.images.map(i => [i.id, i]));
+const firstFile = id => { const i = imgById.get(id); const f = i && (i.files.find(x => /png|jpe?g/.test(x.name)) || i.files[0]); return f ? IMG(f.name) : ''; };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const kb = n => n > 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.round(n / 1024) + ' KB';
+
+// ---- İşaretler (tarayıcıda saklanır) ----
+const KEY = 'gorsel-envanter-isaretler-v1';
+let marks = {};
+try { marks = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch { marks = {}; }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(marks)); } catch {} renderStats(); };
+const roundKey = r => 'q:' + r.src.split('/').pop() + '|' + r.question + '|' + r.options.map(o => o.id ?? 'svg').join(',');
+const imgKey = id => 'img:' + id;
+
+const Q_MARKS = [['tamam', 'Tamam'], ['sorunlu', 'Görsel soruya uymuyor'], ['sil', 'Soruyu sil']];
+const I_MARKS = [['tamam', 'Tamam'], ['yeniden', 'Yeniden çiz'], ['sil', 'Görseli sil']];
+function actionsHtml(key, opts) {
+  const m = marks[key] || {};
+  return `<div class="actions" data-key="${esc(key)}">` +
+    opts.map(([v, l]) => `<button data-v="${v}" class="${m.v === v ? 'on' : ''}">${l}</button>`).join('') +
+    `<input placeholder="Not (ör. kalın kalem daha uzun)" value="${esc(m.not || '')}"></div>`;
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('.actions button'); if (!b) return;
+  e.stopPropagation();
+  const box = b.parentElement, key = box.dataset.key, m = marks[key] || {};
+  m.v = m.v === b.dataset.v ? undefined : b.dataset.v;
+  if (!m.v && !m.not) delete marks[key]; else marks[key] = m;
+  box.querySelectorAll('button').forEach(x => x.classList.toggle('on', x.dataset.v === m.v));
+  save();
+});
+document.addEventListener('change', e => {
+  const inp = e.target.closest('.actions input'); if (!inp) return;
+  const key = inp.parentElement.dataset.key, m = marks[key] || {};
+  m.not = inp.value.trim() || undefined;
+  if (!m.v && !m.not) delete marks[key]; else marks[key] = m;
+  save();
+});
+document.addEventListener('click', e => { if (e.target.closest('.actions input')) e.stopPropagation(); }, true);
+
+document.getElementById('export').onclick = () => {
+  const out = { olusturma: new Date().toISOString(), sorular: [], gorseller: [] };
+  for (const [k, m] of Object.entries(marks)) {
+    if (k.startsWith('q:')) {
+      const r = DATA.rounds.find(r => roundKey(r) === k);
+      out.sorular.push({ karar: m.v || '', not: m.not || '', soru: r?.question, etkinlik: r?.activity, dosya: r?.src, sıklar: r?.options });
+    } else out.gorseller.push({ id: +k.slice(4), kelime: imgById.get(+k.slice(4))?.word, karar: m.v || '', not: m.not || '' });
+  }
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' }));
+  a.download = 'gorsel-isaretler.json'; a.click();
+};
+document.getElementById('importBtn').onclick = () => document.getElementById('import').click();
+document.getElementById('import').onchange = async e => {
+  const f = e.target.files[0]; if (!f) return;
+  try {
+    const d = JSON.parse(await f.text());
+    for (const s of d.sorular || []) { const r = DATA.rounds.find(r => r.src === s.dosya && r.question === s.soru && r.options.map(o => o.id).join() === (s.sıklar || []).map(o => o.id).join()); if (r) marks[roundKey(r)] = { v: s.karar || undefined, not: s.not || undefined }; }
+    for (const g of d.gorseller || []) marks[imgKey(g.id)] = { v: g.karar || undefined, not: g.not || undefined };
+    save(); render();
+  } catch (err) { alert('Dosya okunamadı: ' + err.message); }
+};
+
+// ---- Özet ----
+function renderStats() {
+  const im = DATA.images;
+  const unused = im.filter(i => i.files.length && !i.activeUses && !i.pool);
+  const marked = Object.values(marks).filter(m => m.v && m.v !== 'tamam').length;
+  document.getElementById('stats').innerHTML = [
+    `<span><b>${im.filter(i => i.files.length).length}</b> görsel</span>`,
+    `<span><b>${im.filter(i => i.activeUses).length}</b> soruda kullanılıyor</span>`,
+    `<span><b>${im.filter(i => !i.activeUses && i.pool).length}</b> yalnız nesne havuzunda</span>`,
+    `<span><b>${unused.length}</b> hiç kullanılmıyor (${kb(unused.reduce((s, i) => s + i.files.reduce((a, f) => a + f.size, 0), 0))})</span>`,
+    `<span><b>${DATA.rounds.filter(r => r.status === 'aktif').length}</b> aktif soru</span>`,
+    `<span><b>${marked}</b> işaretli sorun</span>`,
+  ].join('');
+}
+
+// ---- Sekmeler ----
+let tab = 'sorular';
+const state = { act: '', qf: 'hepsi', search: '', imgf: 'hepsi', cat: '', sort: 'id', limit: 150 };
+document.querySelectorAll('.tabs [data-tab]').forEach(b => b.onclick = () => {
+  tab = b.dataset.tab; state.limit = 150;
+  document.querySelectorAll('.tabs [data-tab]').forEach(x => x.classList.toggle('on', x === b));
+  renderFilters(); render();
+});
+
+function renderFilters() {
+  const f = document.getElementById('filters');
+  if (tab === 'sorular') {
+    const acts = [...new Set(DATA.rounds.filter(r => r.status === 'aktif').map(r => r.activity))].sort((a, b) => a.localeCompare(b, 'tr'));
+    f.innerHTML = `<select id="act"><option value="">Tüm etkinlikler</option>${acts.map(a => `<option ${a === state.act ? 'selected' : ''}>${esc(a)}</option>`).join('')}</select>
+      <select id="qf">${[['hepsi', 'Hepsi (aktif)'], ['farkli', 'Şıklar farklı nesne (kontrol et)'], ['isaretsiz', 'Henüz bakılmamış'], ['isaretli', 'İşaretli sorunlar'], ['olu', 'Ölü / çalışma kağıdı dosyaları']]
+        .map(([v, l]) => `<option value="${v}" ${v === state.qf ? 'selected' : ''}>${l}</option>`).join('')}</select>
+      <input type="search" id="search" placeholder="Soru, kelime veya id ara" value="${esc(state.search)}">`;
+  } else {
+    const cats = [...new Set(DATA.images.map(i => i.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'tr'));
+    f.innerHTML = `<select id="imgf">${[['hepsi', 'Tüm görseller'], ['soruda', 'Soruda kullanılan'], ['havuz', 'Yalnız nesne havuzunda'], ['kullanilmayan', 'Hiç kullanılmayan'], ['cok', '5+ soruda kullanılan'], ['kayitsiz', 'Kayıtsız (imageData\'da yok)'], ['dosyasiz', 'Dosyası yok'], ['isaretli', 'İşaretliler']]
+        .map(([v, l]) => `<option value="${v}" ${v === state.imgf ? 'selected' : ''}>${l}</option>`).join('')}</select>
+      <select id="cat"><option value="">Tüm kategoriler</option>${cats.map(c => `<option ${c === state.cat ? 'selected' : ''}>${esc(c)}</option>`).join('')}</select>
+      <select id="sort">${[['id', 'Numaraya göre'], ['kullanim', 'Kullanım sayısına göre'], ['boyut', 'Dosya boyutuna göre']].map(([v, l]) => `<option value="${v}" ${v === state.sort ? 'selected' : ''}>${l}</option>`).join('')}</select>
+      <input type="search" id="search" placeholder="Kelime veya id ara" value="${esc(state.search)}">`;
+  }
+  f.querySelectorAll('select,input').forEach(el => el.addEventListener('input', () => { state[el.id] = el.value; state.limit = 150; render(); }));
+}
+
+function render() { tab === 'sorular' ? renderQuestions() : renderImages(); }
+
+function renderQuestions() {
+  const s = state.search.toLocaleLowerCase('tr-TR');
+  let list = DATA.rounds.map((r, i) => ({ r, i }));
+  list = list.filter(({ r }) => state.qf === 'olu' ? r.status !== 'aktif' : r.status === 'aktif');
+  if (state.act) list = list.filter(({ r }) => r.activity === state.act);
+  if (state.qf === 'farkli') list = list.filter(({ r }) => r.differentObjects);
+  if (state.qf === 'isaretsiz') list = list.filter(({ r }) => !marks[roundKey(r)]);
+  if (state.qf === 'isaretli') list = list.filter(({ r }) => { const m = marks[roundKey(r)]; return m && m.v && m.v !== 'tamam'; });
+  if (s) list = list.filter(({ r }) => (r.question + ' ' + r.activity + ' ' + r.options.map(o => o.word + ' ' + o.id).join(' ')).toLocaleLowerCase('tr-TR').includes(s));
+  const shown = list.slice(0, state.limit);
+  document.getElementById('main').innerHTML = `<p class="muted">${list.length} soru</p>` + shown.map(({ r }) => `
+    <div class="q">
+      <h3>${esc(r.question || '(soru metni yok)')}</h3>
+      <div class="meta">${esc(r.activity)} · ${esc(r.src.replace('src/services/database/activities/', ''))}
+        ${r.differentObjects ? '<span class="badge warn">şıklar farklı nesne</span>' : ''}
+        ${r.missingFile ? '<span class="badge bad">dosyası eksik görsel</span>' : ''}</div>
+      <div class="opts">${r.options.map(o => `
+        <div class="opt ${o.role}" data-id="${o.id ?? ''}">
+          <img loading="lazy" src="${o.svg ? esc(o.svg) : firstFile(o.id)}" alt="${esc(o.word)}">
+          <div class="w">${o.role === 'doğru' ? '✓ ' : ''}${esc(o.word)} <span class="muted">${o.svg ? 'kodda çizim' : `#${o.id} · ${imgById.get(o.id)?.activeUses || 0} soru`}</span></div>
+        </div>`).join('')}</div>
+      ${actionsHtml(roundKey(r), Q_MARKS)}
+    </div>`).join('') + (list.length > shown.length ? `<button class="more" id="more">Daha fazla göster (${list.length - shown.length})</button>` : '');
+  bindCommon();
+}
+
+function renderImages() {
+  const s = state.search.toLocaleLowerCase('tr-TR');
+  let list = DATA.images.filter(i => i.files.length || state.imgf === 'dosyasiz');
+  const f = state.imgf;
+  if (f === 'soruda') list = list.filter(i => i.activeUses);
+  if (f === 'havuz') list = list.filter(i => !i.activeUses && i.pool);
+  if (f === 'kullanilmayan') list = list.filter(i => !i.activeUses && !i.pool);
+  if (f === 'cok') list = list.filter(i => i.activeUses >= 5);
+  if (f === 'kayitsiz') list = list.filter(i => !i.registered);
+  if (f === 'dosyasiz') list = DATA.images.filter(i => !i.files.length);
+  if (f === 'isaretli') list = list.filter(i => { const m = marks[imgKey(i.id)]; return m && m.v && m.v !== 'tamam'; });
+  if (state.cat) list = list.filter(i => i.category === state.cat);
+  if (s) list = list.filter(i => (i.word + ' ' + i.id + ' ' + Object.values(i.tags).flat().join(' ')).toLocaleLowerCase('tr-TR').includes(s));
+  const size = i => i.files.reduce((a, x) => a + x.size, 0);
+  if (state.sort === 'kullanim') list = [...list].sort((a, b) => b.activeUses - a.activeUses);
+  if (state.sort === 'boyut') list = [...list].sort((a, b) => size(b) - size(a));
+  const shown = list.slice(0, state.limit);
+  document.getElementById('main').innerHTML = `<p class="muted">${list.length} görsel · toplam ${kb(list.reduce((a, i) => a + size(i), 0))}</p><div class="grid">` + shown.map(i => {
+    const m = marks[imgKey(i.id)];
+    const acts = [...new Set(i.uses.filter(u => u.status === 'aktif').map(u => u.activity))];
+    return `<div class="card" data-id="${i.id}">
+      ${m && m.v ? `<span class="mark badge ${m.v === 'tamam' ? 'ok' : m.v === 'sil' ? 'bad' : 'warn'}">${esc(I_MARKS.find(x => x[0] === m.v)?.[1])}</span>` : ''}
+      ${i.files.length ? `<img loading="lazy" src="${firstFile(i.id)}" alt="">` : '<div style="aspect-ratio:1;display:grid;place-items:center" class="muted">dosya yok</div>'}
+      <div class="t">#${i.id} ${esc(i.word || '—')}</div>
+      <div class="s">${esc(i.category || 'kategorisiz')} · ${kb(size(i))}</div>
+      <div>${i.activeUses ? `<span class="badge ok">${i.activeUses} soru</span>` : i.pool ? '<span class="badge">nesne havuzu</span>' : '<span class="badge bad">kullanılmıyor</span>'}
+        ${!i.registered ? '<span class="badge warn">kayıtsız</span>' : ''}
+        ${acts.slice(0, 3).map(a => `<span class="badge">${esc(a)}</span>`).join('')}${acts.length > 3 ? `<span class="badge">+${acts.length - 3}</span>` : ''}</div>
+    </div>`;
+  }).join('') + '</div>' + (list.length > shown.length ? `<button class="more" id="more">Daha fazla göster (${list.length - shown.length})</button>` : '');
+  bindCommon();
+}
+
+function bindCommon() {
+  const more = document.getElementById('more');
+  if (more) more.onclick = () => { state.limit += 300; render(); };
+  document.querySelectorAll('.card, .opt').forEach(el => el.onclick = e => { if (!e.target.closest('.actions') && el.dataset.id) openImage(+el.dataset.id); });
+}
+
+function openImage(id) {
+  const i = imgById.get(id); if (!i) return;
+  const d = document.getElementById('dlg');
+  const byAct = {};
+  for (const u of i.uses) (byAct[u.activity + (u.status !== 'aktif' ? ` (${u.status})` : '')] ||= []).push(u);
+  d.innerHTML = `<div class="dlg">
+    <div>${i.files.map(f => `<img src="${IMG(f.name)}" alt=""><div class="muted">${esc(f.name)} · ${kb(f.size)}</div>`).join('')}</div>
+    <div>
+      <h3 style="margin:0">#${i.id} ${esc(i.word || '—')}</h3>
+      <div class="muted">${esc(i.category || 'kategorisiz')}${i.pool ? ' · nesne/harf etkinliklerinde otomatik kullanılabilir' : ''}${!i.registered ? ' · imageData\'da kaydı yok' : ''}</div>
+      <div style="margin:6px 0">${Object.entries(i.tags).map(([k, v]) => `<span class="badge">${esc(k)}: ${esc([].concat(v).join(', '))}</span>`).join('')}</div>
+      ${actionsHtml(imgKey(i.id), I_MARKS)}
+      <h4>Kullanıldığı yerler (${i.uses.length})</h4>
+      ${i.uses.length ? `<table>${Object.entries(byAct).map(([a, us]) => us.map((u, k) => `<tr><td>${k ? '' : '<b>' + esc(a) + '</b>'}</td><td>${esc(u.question || '')}</td><td><span class="badge ${u.role === 'doğru' ? 'ok' : ''}">${esc(u.role)}</span></td></tr>`).join('')).join('')}</table>` : '<p class="muted">Hiçbir soruda kullanılmıyor.</p>'}
+      <p style="text-align:right"><button onclick="document.getElementById('dlg').close()">Kapat</button></p>
+    </div></div>`;
+  d.showModal();
+}
+document.getElementById('dlg').addEventListener('close', () => render());
+
+if (location.hash === '#gorseller') { tab = 'gorseller'; document.querySelectorAll('.tabs [data-tab]').forEach(x => x.classList.toggle('on', x.dataset.tab === tab)); }
+renderStats(); renderFilters(); render();
+</script>
+</body>
+</html>

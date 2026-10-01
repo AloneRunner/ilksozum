@@ -31,3 +31,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Görsel envanteri çıktıları (node tools/gorsel-envanter/envanter.mjs ile yeniden üretilir)
+/tools/gorsel-envanter/envanter.html
+/tools/gorsel-envanter/envanter.json
+/tools/gorsel-envanter/gorsel-isaretler*.json
+
+# Flow vb. araçlardan gelen ham görseller (büyük, işlenmemiş)
+/gorsel-ham/

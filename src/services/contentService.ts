@@ -2,6 +2,7 @@
 import { ActivityType, ActivityCategory, ImageMetadata, ConceptRound, Word, Story, ScreenState, ConceptOption, ActivityStats, MemoryGameRound, SudokuRound, SudokuItem } from '../types.ts';
 import { storyData } from './staticData.ts';
 import { imageData } from './database/imageData.ts';
+import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni } from './database/activities/yeni/index.ts';
 import { 
     sensesData,
     bigSmallData, longShortData, thinThickData, wideNarrowData, oldNewData, youngOldData, hardSoftData, cleanDirtyData, wetDryData, openClosedData, straightCurvedData, aliveLifelessData, bitterSweetData, heavyLightData, hotColdData, roughSmoothData, brokenIntactData, messyCleanData, tazeBayatData, kirisikDuzgunData, sivriKutData, parlakMatData, tembelCaliskanData, seffafOpakData, dikenliPuruzsuzData, dugumCozukData, hungryFullData, derinSigData, kalabalikTenhaData, tersDuzData,
@@ -1431,10 +1432,10 @@ const createEmotionsRounds = (count: number = 8): ConceptRound[] => {
 // --- NEW, SIMPLIFIED MAIN DATA FETCHER ---
 const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.Senses]: sensesData,
-    [ActivityType.BigSmall]: bigSmallData,
-    [ActivityType.LongShort]: longShortData,
-    [ActivityType.ThinThick]: thinThickData,
-    [ActivityType.WideNarrow]: wideNarrowData,
+    [ActivityType.BigSmall]: YENI_SORULAR_AKTIF ? bigSmallDataYeni : bigSmallData,
+    [ActivityType.LongShort]: YENI_SORULAR_AKTIF ? longShortDataYeni : longShortData,
+    [ActivityType.ThinThick]: YENI_SORULAR_AKTIF ? thinThickDataYeni : thinThickData,
+    [ActivityType.WideNarrow]: YENI_SORULAR_AKTIF ? wideNarrowDataYeni : wideNarrowData,
     [ActivityType.OldNew]: oldNewData,
     [ActivityType.YoungOld]: youngOldData,
     [ActivityType.HardSoft]: hardSoftData,
@@ -1463,18 +1464,18 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.TersDuz]: tersDuzData,
     [ActivityType.FewMuch]: fewMuchData,
     [ActivityType.HalfQuarterWhole]: halfQuarterWholeData,
-    [ActivityType.FullEmpty]: fullEmptyData,
+    [ActivityType.FullEmpty]: YENI_SORULAR_AKTIF ? fullEmptyDataYeni : fullEmptyData,
     [ActivityType.OddEven]: oddEvenData,
     [ActivityType.CountMatch]: countMatchData,
-    [ActivityType.OnUnder]: onUnderData,
-    [ActivityType.BelowAbove]: belowAboveData,
+    [ActivityType.OnUnder]: YENI_SORULAR_AKTIF ? onUnderDataYeni : onUnderData,
+    [ActivityType.BelowAbove]: YENI_SORULAR_AKTIF ? belowAboveDataYeni : belowAboveData,
     [ActivityType.BesideOpposite]: besideOppositeData,
-    [ActivityType.InFrontOfBehind]: inFrontOfBehindData,
-    [ActivityType.InsideOutside]: insideOutsideData,
-    [ActivityType.Between]: betweenData,
+    [ActivityType.InFrontOfBehind]: YENI_SORULAR_AKTIF ? inFrontOfBehindDataYeni : inFrontOfBehindData,
+    [ActivityType.InsideOutside]: YENI_SORULAR_AKTIF ? insideOutsideDataYeni : insideOutsideData,
+    [ActivityType.Between]: YENI_SORULAR_AKTIF ? betweenDataYeni : betweenData,
     [ActivityType.LeftRight]: leftRightData,
     [ActivityType.NearFar]: nearFarData,
-    [ActivityType.HighLow]: highLowData,
+    [ActivityType.HighLow]: YENI_SORULAR_AKTIF ? highLowDataYeni : highLowData,
     [ActivityType.BeforeAfter]: beforeAfterData,
     [ActivityType.DayNight]: dayNightData,
     [ActivityType.FastSlow]: fastSlowData,
