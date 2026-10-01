@@ -2888,6 +2888,190 @@
       "tags": {
         "condition": "sağlam"
       }
+    },
+    {
+      "id": 3201,
+      "kaynak": "temiz-kirli/araba-kirli.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "cleanliness": "kirli"
+      }
+    },
+    {
+      "id": 3202,
+      "kaynak": "temiz-kirli/araba-temiz.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "cleanliness": "temiz"
+      }
+    },
+    {
+      "id": 3203,
+      "kaynak": "temiz-kirli/ayakkabi-kirli.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "cleanliness": "kirli"
+      }
+    },
+    {
+      "id": 3204,
+      "kaynak": "temiz-kirli/ayakkabi-temiz.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "cleanliness": "temiz"
+      }
+    },
+    {
+      "id": 3205,
+      "kaynak": "temiz-kirli/ayi-kirli.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "cleanliness": "kirli"
+      }
+    },
+    {
+      "id": 3206,
+      "kaynak": "temiz-kirli/ayi-temiz.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "cleanliness": "temiz"
+      }
+    },
+    {
+      "id": 3207,
+      "kaynak": "temiz-kirli/bardak-kirli.jpg",
+      "word": "bardak",
+      "category": "none",
+      "tags": {
+        "cleanliness": "kirli"
+      }
+    },
+    {
+      "id": 3208,
+      "kaynak": "temiz-kirli/bardak-temiz.jpg",
+      "word": "bardak",
+      "category": "none",
+      "tags": {
+        "cleanliness": "temiz"
+      }
+    },
+    {
+      "id": 3209,
+      "kaynak": "temiz-kirli/corap-kirli.jpg",
+      "word": "çorap",
+      "category": "none",
+      "tags": {
+        "cleanliness": "kirli"
+      }
+    },
+    {
+      "id": 3210,
+      "kaynak": "temiz-kirli/corap-temiz.jpg",
+      "word": "çorap",
+      "category": "none",
+      "tags": {
+        "cleanliness": "temiz"
+      }
+    },
+    {
+      "id": 3211,
+      "kaynak": "temiz-kirli/eller-kirli.jpg",
+      "word": "el",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "cleanliness": "kirli"
+      }
+    },
+    {
+      "id": 3212,
+      "kaynak": "temiz-kirli/eller-temiz.jpg",
+      "word": "el",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "cleanliness": "temiz"
+      }
+    },
+    {
+      "id": 3213,
+      "kaynak": "temiz-kirli/kopek-kirli.jpg",
+      "word": "köpek",
+      "category": "none",
+      "tags": {
+        "cleanliness": "kirli"
+      }
+    },
+    {
+      "id": 3214,
+      "kaynak": "temiz-kirli/kopek-temiz.jpg",
+      "word": "köpek",
+      "category": "none",
+      "tags": {
+        "cleanliness": "temiz"
+      }
+    },
+    {
+      "id": 3215,
+      "kaynak": "temiz-kirli/tabak-kirli.jpg",
+      "word": "tabak",
+      "category": "none",
+      "tags": {
+        "cleanliness": "kirli"
+      }
+    },
+    {
+      "id": 3216,
+      "kaynak": "temiz-kirli/tabak-temiz.jpg",
+      "word": "tabak",
+      "category": "none",
+      "tags": {
+        "cleanliness": "temiz"
+      }
+    },
+    {
+      "id": 3217,
+      "kaynak": "temiz-kirli/tisort-kirli.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "cleanliness": "kirli"
+      }
+    },
+    {
+      "id": 3218,
+      "kaynak": "temiz-kirli/tisort-temiz.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "cleanliness": "temiz"
+      }
+    },
+    {
+      "id": 3219,
+      "kaynak": "temiz-kirli/yuz-kirli.jpg",
+      "word": "yüz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "cleanliness": "kirli"
+      }
+    },
+    {
+      "id": 3220,
+      "kaynak": "temiz-kirli/yuz-temiz.jpg",
+      "word": "yüz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "cleanliness": "temiz"
+      }
     }
   ]
 }

@@ -7433,5 +7433,463 @@ export const imageDataYeni: ImageMetadata[] = [
         "A"
       ]
     }
+  },
+  {
+    "id": 3201,
+    "word": "araba",
+    "imageUrl": "/images/3201.webp",
+    "audioKeys": {
+      "default": "araba"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "kirli",
+      "syllables": [
+        "a",
+        "ra",
+        "ba"
+      ],
+      "letters": [
+        "A",
+        "R",
+        "A",
+        "B",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3202,
+    "word": "araba",
+    "imageUrl": "/images/3202.webp",
+    "audioKeys": {
+      "default": "araba"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "temiz",
+      "syllables": [
+        "a",
+        "ra",
+        "ba"
+      ],
+      "letters": [
+        "A",
+        "R",
+        "A",
+        "B",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3203,
+    "word": "ayakkabı",
+    "imageUrl": "/images/3203.webp",
+    "audioKeys": {
+      "default": "ayakkabı"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "kirli",
+      "syllables": [
+        "a",
+        "yak",
+        "ka",
+        "bı"
+      ],
+      "letters": [
+        "A",
+        "Y",
+        "A",
+        "K",
+        "K",
+        "A",
+        "B",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3204,
+    "word": "ayakkabı",
+    "imageUrl": "/images/3204.webp",
+    "audioKeys": {
+      "default": "ayakkabı"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "temiz",
+      "syllables": [
+        "a",
+        "yak",
+        "ka",
+        "bı"
+      ],
+      "letters": [
+        "A",
+        "Y",
+        "A",
+        "K",
+        "K",
+        "A",
+        "B",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3205,
+    "word": "ayı",
+    "imageUrl": "/images/3205.webp",
+    "audioKeys": {
+      "default": "ayı"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "kirli",
+      "syllables": [
+        "a",
+        "yı"
+      ],
+      "letters": [
+        "A",
+        "Y",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3206,
+    "word": "ayı",
+    "imageUrl": "/images/3206.webp",
+    "audioKeys": {
+      "default": "ayı"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "temiz",
+      "syllables": [
+        "a",
+        "yı"
+      ],
+      "letters": [
+        "A",
+        "Y",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3207,
+    "word": "bardak",
+    "imageUrl": "/images/3207.webp",
+    "audioKeys": {
+      "default": "bardak"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "kirli",
+      "syllables": [
+        "bar",
+        "dak"
+      ],
+      "letters": [
+        "B",
+        "A",
+        "R",
+        "D",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3208,
+    "word": "bardak",
+    "imageUrl": "/images/3208.webp",
+    "audioKeys": {
+      "default": "bardak"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "temiz",
+      "syllables": [
+        "bar",
+        "dak"
+      ],
+      "letters": [
+        "B",
+        "A",
+        "R",
+        "D",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3209,
+    "word": "çorap",
+    "imageUrl": "/images/3209.webp",
+    "audioKeys": {
+      "default": "çorap"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "kirli",
+      "syllables": [
+        "ço",
+        "rap"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "R",
+        "A",
+        "P"
+      ]
+    }
+  },
+  {
+    "id": 3210,
+    "word": "çorap",
+    "imageUrl": "/images/3210.webp",
+    "audioKeys": {
+      "default": "çorap"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "temiz",
+      "syllables": [
+        "ço",
+        "rap"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "R",
+        "A",
+        "P"
+      ]
+    }
+  },
+  {
+    "id": 3211,
+    "word": "el",
+    "imageUrl": "/images/3211.webp",
+    "audioKeys": {
+      "default": "el"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "kirli",
+      "syllables": [
+        "el"
+      ],
+      "letters": [
+        "E",
+        "L"
+      ]
+    }
+  },
+  {
+    "id": 3212,
+    "word": "el",
+    "imageUrl": "/images/3212.webp",
+    "audioKeys": {
+      "default": "el"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "temiz",
+      "syllables": [
+        "el"
+      ],
+      "letters": [
+        "E",
+        "L"
+      ]
+    }
+  },
+  {
+    "id": 3213,
+    "word": "köpek",
+    "imageUrl": "/images/3213.webp",
+    "audioKeys": {
+      "default": "köpek"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "kirli",
+      "syllables": [
+        "kö",
+        "pek"
+      ],
+      "letters": [
+        "K",
+        "Ö",
+        "P",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3214,
+    "word": "köpek",
+    "imageUrl": "/images/3214.webp",
+    "audioKeys": {
+      "default": "köpek"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "temiz",
+      "syllables": [
+        "kö",
+        "pek"
+      ],
+      "letters": [
+        "K",
+        "Ö",
+        "P",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3215,
+    "word": "tabak",
+    "imageUrl": "/images/3215.webp",
+    "audioKeys": {
+      "default": "tabak"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "kirli",
+      "syllables": [
+        "ta",
+        "bak"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "B",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3216,
+    "word": "tabak",
+    "imageUrl": "/images/3216.webp",
+    "audioKeys": {
+      "default": "tabak"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "temiz",
+      "syllables": [
+        "ta",
+        "bak"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "B",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3217,
+    "word": "tişört",
+    "imageUrl": "/images/3217.webp",
+    "audioKeys": {
+      "default": "tişört"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "kirli",
+      "syllables": [
+        "ti",
+        "şört"
+      ],
+      "letters": [
+        "T",
+        "İ",
+        "Ş",
+        "Ö",
+        "R",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 3218,
+    "word": "tişört",
+    "imageUrl": "/images/3218.webp",
+    "audioKeys": {
+      "default": "tişört"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "temiz",
+      "syllables": [
+        "ti",
+        "şört"
+      ],
+      "letters": [
+        "T",
+        "İ",
+        "Ş",
+        "Ö",
+        "R",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 3219,
+    "word": "yüz",
+    "imageUrl": "/images/3219.webp",
+    "audioKeys": {
+      "default": "yüz"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "kirli",
+      "syllables": [
+        "yüz"
+      ],
+      "letters": [
+        "Y",
+        "Ü",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 3220,
+    "word": "yüz",
+    "imageUrl": "/images/3220.webp",
+    "audioKeys": {
+      "default": "yüz"
+    },
+    "tags": {
+      "category": "none",
+      "cleanliness": "temiz",
+      "syllables": [
+        "yüz"
+      ],
+      "letters": [
+        "Y",
+        "Ü",
+        "Z"
+      ]
+    }
   }
 ] as ImageMetadata[];

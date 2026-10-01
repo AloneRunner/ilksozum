@@ -156,6 +156,20 @@ const KAVRAMLAR = [
     kelime: { tabak: 'tabak', fincan: 'fincan', yumurta: 'yumurta', kalem: 'kalem', araba: 'araba', gozluk: 'gözlük',
       sandalye: 'sandalye', saksi: 'saksı', biskuvi: 'bisküvi', robot: 'robot' },
   },
+  {
+    klasor: 'temiz-kirli',
+    dosya: 'temizKirliData.ts',
+    exportAdi: 'cleanDirtyDataYeni',
+    activityType: 'CleanDirty',
+    idBaslangic: 3201,
+    etiket: 'cleanliness',
+    sahneNesneler: ['yuz', 'eller'],
+    a: { ek: 'temiz', deger: 'temiz', soru: 'Temiz olan hangisi?', sifat: 'temizdir' },
+    b: { ek: 'kirli', deger: 'kirli', soru: 'Kirli olan hangisi?', sifat: 'kirlidir' },
+    ozne: { eller: 'eller', yuz: 'yüz' },
+    kelime: { tisort: 'tişört', corap: 'çorap', ayakkabi: 'ayakkabı', araba: 'araba', tabak: 'tabak', eller: 'el',
+      yuz: 'yüz', kopek: 'köpek', ayi: 'ayı', bardak: 'bardak' },
+  },
 ];
 
 const cap = w => w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1);
