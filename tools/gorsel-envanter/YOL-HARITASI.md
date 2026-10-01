@@ -55,7 +55,7 @@ Her nesneden 3-4 kademe üretilir (ör. 4 boyda aynı top). Bunlardan hem çift 
 - [ ] YENİ KAVRAM: Bozuk / çalışan (Kaan önerisi). Kırık = parçalanmış, bozuk = çalışmıyor. Görselde zor (yanmayan lamba = kapalı lamba ile karışır). Fikir: aynı oyuncak/alet, çalışan hali hareket/ışık/ses işaretiyle (ör. pervane dönüyor, ekranda görüntü var), bozuk hali duman, ters dönmüş, ekran karanlık ve çatlak değil. Ayrıca düşünülecek.
 - [x] Temiz / kirli bağlandı: 10 çift, 20 soru, id 3201-3220.
 - [x] Islak / kuru bağlandı: 9 çift, 18 soru, id 3301+. Kuru şemsiye = Açık/Kapalı'daki açık şemsiye (yeniden kullanım, `yenidenKullan`). Köpek olmadı.
-- [ ] Eski / yeni
+- [x] Eski / yeni bağlandı: 10 çift, 20 soru, id 3401-3420.
 - [ ] Taze / bayat
 - [ ] Dağınık / toplu
 - [ ] Kırışık / düzgün
@@ -110,6 +110,6 @@ Not: kategori adlarında tutarsızlık var ("Hayvanlar" ve "hayvanlar" gibi). Bu
 ## Aşama 6: Kalanlar ve temizlik
 - [ ] 5N1K, sıralama hikayeleri, gündüz/gece, önce/sonra, hızlı/yavaş, duyular
 - [ ] İletişim kartları
-- [ ] 22 GIF'in kaldırılması (61 MB) ve eski kullanılmayan görsellerin silinmesi
+- [ ] 22 GIF: SİLME, hareketli WebP / kısa videoya çevir (Kaan: hızlı/yavaş, ıslak/kuru için hareket önemli). Hızlı/Yavaş yenilenirken Flow video ile aynı hayvanın hızlı/yavaş döngüsü denenebilir. (61 MB) ve eski kullanılmayan görsellerin silinmesi
 - [ ] Gerçekçi set ayarının kaldırılması (tek set kalır)
 - [ ] Kavram menüsünün yeniden gruplanması (bkz. ilk denetim raporu)

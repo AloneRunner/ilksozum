@@ -3231,6 +3231,188 @@
       "tags": {
         "wetness": "kuru"
       }
+    },
+    {
+      "id": 3401,
+      "kaynak": "eski-yeni/araba-eski.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "condition": "eski"
+      }
+    },
+    {
+      "id": 3402,
+      "kaynak": "eski-yeni/araba-yeni.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "condition": "yeni"
+      }
+    },
+    {
+      "id": 3403,
+      "kaynak": "eski-yeni/ayakkabi-eski.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "condition": "eski"
+      }
+    },
+    {
+      "id": 3404,
+      "kaynak": "eski-yeni/ayakkabi-yeni.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "condition": "yeni"
+      }
+    },
+    {
+      "id": 3405,
+      "kaynak": "eski-yeni/ayi-eski.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "condition": "eski"
+      }
+    },
+    {
+      "id": 3406,
+      "kaynak": "eski-yeni/ayi-yeni.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "condition": "yeni"
+      }
+    },
+    {
+      "id": 3407,
+      "kaynak": "eski-yeni/bisiklet-eski.jpg",
+      "word": "bisiklet",
+      "category": "none",
+      "tags": {
+        "condition": "eski"
+      }
+    },
+    {
+      "id": 3408,
+      "kaynak": "eski-yeni/bisiklet-yeni.jpg",
+      "word": "bisiklet",
+      "category": "none",
+      "tags": {
+        "condition": "yeni"
+      }
+    },
+    {
+      "id": 3409,
+      "kaynak": "eski-yeni/canta-eski.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "condition": "eski"
+      }
+    },
+    {
+      "id": 3410,
+      "kaynak": "eski-yeni/canta-yeni.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "condition": "yeni"
+      }
+    },
+    {
+      "id": 3411,
+      "kaynak": "eski-yeni/caydanlik-eski.jpg",
+      "word": "çaydanlık",
+      "category": "none",
+      "tags": {
+        "condition": "eski"
+      }
+    },
+    {
+      "id": 3412,
+      "kaynak": "eski-yeni/caydanlik-yeni.jpg",
+      "word": "çaydanlık",
+      "category": "none",
+      "tags": {
+        "condition": "yeni"
+      }
+    },
+    {
+      "id": 3413,
+      "kaynak": "eski-yeni/kapi-eski.jpg",
+      "word": "kapı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "condition": "eski"
+      }
+    },
+    {
+      "id": 3414,
+      "kaynak": "eski-yeni/kapi-yeni.jpg",
+      "word": "kapı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "condition": "yeni"
+      }
+    },
+    {
+      "id": 3415,
+      "kaynak": "eski-yeni/kitap-eski.jpg",
+      "word": "kitap",
+      "category": "none",
+      "tags": {
+        "condition": "eski"
+      }
+    },
+    {
+      "id": 3416,
+      "kaynak": "eski-yeni/kitap-yeni.jpg",
+      "word": "kitap",
+      "category": "none",
+      "tags": {
+        "condition": "yeni"
+      }
+    },
+    {
+      "id": 3417,
+      "kaynak": "eski-yeni/kova-eski.jpg",
+      "word": "kova",
+      "category": "none",
+      "tags": {
+        "condition": "eski"
+      }
+    },
+    {
+      "id": 3418,
+      "kaynak": "eski-yeni/kova-yeni.jpg",
+      "word": "kova",
+      "category": "none",
+      "tags": {
+        "condition": "yeni"
+      }
+    },
+    {
+      "id": 3419,
+      "kaynak": "eski-yeni/tisort-eski.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "condition": "eski"
+      }
+    },
+    {
+      "id": 3420,
+      "kaynak": "eski-yeni/tisort-yeni.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "condition": "yeni"
+      }
     }
   ]
 }

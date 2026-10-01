@@ -8275,5 +8275,489 @@ export const imageDataYeni: ImageMetadata[] = [
         "R"
       ]
     }
+  },
+  {
+    "id": 3401,
+    "word": "araba",
+    "imageUrl": "/images/3401.webp",
+    "audioKeys": {
+      "default": "araba"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "eski",
+      "syllables": [
+        "a",
+        "ra",
+        "ba"
+      ],
+      "letters": [
+        "A",
+        "R",
+        "A",
+        "B",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3402,
+    "word": "araba",
+    "imageUrl": "/images/3402.webp",
+    "audioKeys": {
+      "default": "araba"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "yeni",
+      "syllables": [
+        "a",
+        "ra",
+        "ba"
+      ],
+      "letters": [
+        "A",
+        "R",
+        "A",
+        "B",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3403,
+    "word": "ayakkabı",
+    "imageUrl": "/images/3403.webp",
+    "audioKeys": {
+      "default": "ayakkabı"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "eski",
+      "syllables": [
+        "a",
+        "yak",
+        "ka",
+        "bı"
+      ],
+      "letters": [
+        "A",
+        "Y",
+        "A",
+        "K",
+        "K",
+        "A",
+        "B",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3404,
+    "word": "ayakkabı",
+    "imageUrl": "/images/3404.webp",
+    "audioKeys": {
+      "default": "ayakkabı"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "yeni",
+      "syllables": [
+        "a",
+        "yak",
+        "ka",
+        "bı"
+      ],
+      "letters": [
+        "A",
+        "Y",
+        "A",
+        "K",
+        "K",
+        "A",
+        "B",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3405,
+    "word": "ayı",
+    "imageUrl": "/images/3405.webp",
+    "audioKeys": {
+      "default": "ayı"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "eski",
+      "syllables": [
+        "a",
+        "yı"
+      ],
+      "letters": [
+        "A",
+        "Y",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3406,
+    "word": "ayı",
+    "imageUrl": "/images/3406.webp",
+    "audioKeys": {
+      "default": "ayı"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "yeni",
+      "syllables": [
+        "a",
+        "yı"
+      ],
+      "letters": [
+        "A",
+        "Y",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3407,
+    "word": "bisiklet",
+    "imageUrl": "/images/3407.webp",
+    "audioKeys": {
+      "default": "bisiklet"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "eski",
+      "syllables": [
+        "bi",
+        "sik",
+        "let"
+      ],
+      "letters": [
+        "B",
+        "İ",
+        "S",
+        "İ",
+        "K",
+        "L",
+        "E",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 3408,
+    "word": "bisiklet",
+    "imageUrl": "/images/3408.webp",
+    "audioKeys": {
+      "default": "bisiklet"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "yeni",
+      "syllables": [
+        "bi",
+        "sik",
+        "let"
+      ],
+      "letters": [
+        "B",
+        "İ",
+        "S",
+        "İ",
+        "K",
+        "L",
+        "E",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 3409,
+    "word": "çanta",
+    "imageUrl": "/images/3409.webp",
+    "audioKeys": {
+      "default": "çanta"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "eski",
+      "syllables": [
+        "çan",
+        "ta"
+      ],
+      "letters": [
+        "Ç",
+        "A",
+        "N",
+        "T",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3410,
+    "word": "çanta",
+    "imageUrl": "/images/3410.webp",
+    "audioKeys": {
+      "default": "çanta"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "yeni",
+      "syllables": [
+        "çan",
+        "ta"
+      ],
+      "letters": [
+        "Ç",
+        "A",
+        "N",
+        "T",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3411,
+    "word": "çaydanlık",
+    "imageUrl": "/images/3411.webp",
+    "audioKeys": {
+      "default": "çaydanlık"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "eski",
+      "syllables": [
+        "çay",
+        "dan",
+        "lık"
+      ],
+      "letters": [
+        "Ç",
+        "A",
+        "Y",
+        "D",
+        "A",
+        "N",
+        "L",
+        "I",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3412,
+    "word": "çaydanlık",
+    "imageUrl": "/images/3412.webp",
+    "audioKeys": {
+      "default": "çaydanlık"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "yeni",
+      "syllables": [
+        "çay",
+        "dan",
+        "lık"
+      ],
+      "letters": [
+        "Ç",
+        "A",
+        "Y",
+        "D",
+        "A",
+        "N",
+        "L",
+        "I",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3413,
+    "word": "kapı",
+    "imageUrl": "/images/3413.webp",
+    "audioKeys": {
+      "default": "kapı"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "eski",
+      "syllables": [
+        "ka",
+        "pı"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "P",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3414,
+    "word": "kapı",
+    "imageUrl": "/images/3414.webp",
+    "audioKeys": {
+      "default": "kapı"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "yeni",
+      "syllables": [
+        "ka",
+        "pı"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "P",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3415,
+    "word": "kitap",
+    "imageUrl": "/images/3415.webp",
+    "audioKeys": {
+      "default": "kitap"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "eski",
+      "syllables": [
+        "ki",
+        "tap"
+      ],
+      "letters": [
+        "K",
+        "İ",
+        "T",
+        "A",
+        "P"
+      ]
+    }
+  },
+  {
+    "id": 3416,
+    "word": "kitap",
+    "imageUrl": "/images/3416.webp",
+    "audioKeys": {
+      "default": "kitap"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "yeni",
+      "syllables": [
+        "ki",
+        "tap"
+      ],
+      "letters": [
+        "K",
+        "İ",
+        "T",
+        "A",
+        "P"
+      ]
+    }
+  },
+  {
+    "id": 3417,
+    "word": "kova",
+    "imageUrl": "/images/3417.webp",
+    "audioKeys": {
+      "default": "kova"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "eski",
+      "syllables": [
+        "ko",
+        "va"
+      ],
+      "letters": [
+        "K",
+        "O",
+        "V",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3418,
+    "word": "kova",
+    "imageUrl": "/images/3418.webp",
+    "audioKeys": {
+      "default": "kova"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "yeni",
+      "syllables": [
+        "ko",
+        "va"
+      ],
+      "letters": [
+        "K",
+        "O",
+        "V",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3419,
+    "word": "tişört",
+    "imageUrl": "/images/3419.webp",
+    "audioKeys": {
+      "default": "tişört"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "eski",
+      "syllables": [
+        "ti",
+        "şört"
+      ],
+      "letters": [
+        "T",
+        "İ",
+        "Ş",
+        "Ö",
+        "R",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 3420,
+    "word": "tişört",
+    "imageUrl": "/images/3420.webp",
+    "audioKeys": {
+      "default": "tişört"
+    },
+    "tags": {
+      "category": "none",
+      "condition": "yeni",
+      "syllables": [
+        "ti",
+        "şört"
+      ],
+      "letters": [
+        "T",
+        "İ",
+        "Ş",
+        "Ö",
+        "R",
+        "T"
+      ]
+    }
   }
 ] as ImageMetadata[];

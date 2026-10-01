@@ -185,6 +185,19 @@ const KAVRAMLAR = [
     kelime: { havlu: 'havlu', tisort: 'tişört', semsiye: 'şemsiye', sac: 'saç', kopek: 'köpek', sunger: 'sünger',
       yaprak: 'yaprak', toprak: 'toprak', kum: 'kum', yer: 'yer' },
   },
+  {
+    klasor: 'eski-yeni',
+    dosya: 'eskiYeniData.ts',
+    exportAdi: 'oldNewDataYeni',
+    activityType: 'OldNew',
+    idBaslangic: 3401,
+    sahneNesneler: ['kapi'],
+    etiket: 'condition',
+    a: { ek: 'eski', deger: 'eski', soru: 'Eski olan hangisi?', sifat: 'eskidir' },
+    b: { ek: 'yeni', deger: 'yeni', soru: 'Yeni olan hangisi?', sifat: 'yenidir' },
+    kelime: { ayi: 'ayı', ayakkabi: 'ayakkabı', tisort: 'tişört', kitap: 'kitap', araba: 'araba', kova: 'kova',
+      bisiklet: 'bisiklet', canta: 'çanta', kapi: 'kapı', caydanlik: 'çaydanlık' },
+  },
 ];
 
 const cap = w => w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1);
