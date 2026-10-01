@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dudak Hareketi Denemesi</title>
+<style>
+  :root { --bg: #fdf7f2; --ink: #3a2a24; --muted: #8a7a72; --accent: #e0483e; --card: #ffffff; --line: #eadfd8; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.4 system-ui, "Segoe UI", sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 20px; margin: 4px 0 2px; }
+  p.alt { color: var(--muted); margin: 0 0 14px; font-size: 14px; }
+  .sahne { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 12px; display: flex; flex-direction: column; align-items: center; }
+  svg.agiz { width: min(420px, 90vw); height: auto; display: block; }
+  .hece { display: flex; gap: 10px; justify-content: center; margin: 6px 0 4px; min-height: 52px; }
+  .hece span { font-size: 38px; font-weight: 800; color: #c9bdb6; transition: color .15s, transform .15s; }
+  .hece span.aktif { color: var(--accent); transform: scale(1.15); }
+  .butonlar { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 14px 0 6px; }
+  button { font: inherit; font-size: 18px; font-weight: 700; padding: 10px 18px; border-radius: 999px; border: 2px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+  button.ana { background: var(--accent); color: #fff; border-color: var(--accent); }
+  button:active { transform: scale(.97); }
+  .ayar { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .ayar label { display: flex; gap: 6px; align-items: center; }
+  h2 { font-size: 16px; margin: 22px 0 8px; }
+  .sesler { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
+  .ses { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 6px; text-align: center; cursor: pointer; }
+  .ses svg { width: 100%; height: auto; }
+  .ses b { display: block; font-size: 20px; color: var(--accent); }
+  .ses small { color: var(--muted); font-size: 12px; }
+  input[type=text] { font: inherit; font-size: 18px; padding: 8px 12px; border-radius: 12px; border: 2px solid var(--line); width: 160px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Dudak Hareketi Denemesi</h1>
+  <p class="alt">Kelimeye bas: dudaklar sesleri sırayla gösterir, aynı anda Türkçe okunur. Kendi çizimimiz, kodla hareket ediyor (görsel dosyası yok).</p>
+
+  <div class="sahne">
+    <svg class="agiz" id="buyuk" viewBox="0 0 200 150" aria-label="Konuşan ağız"></svg>
+    <div class="hece" id="hece"></div>
+  </div>
+
+  <div class="butonlar" id="kelimeler"></div>
+  <div class="butonlar">
+    <input type="text" id="serbest" placeholder="kelime yaz" value="baba">
+    <button class="ana" id="oynat">▶ Söyle</button>
+  </div>
+  <div class="ayar">
+    <label><input type="checkbox" id="sesli" checked> Sesli</label>
+    <label><input type="checkbox" id="yavas" checked> Yavaş</label>
+  </div>
+
+  <h2>Ağız şekilleri (dokun, göster ve söyle)</h2>
+  <div class="sesler" id="sesler"></div>
+</main>
+
+<script>
+// ---- Ağız şekilleri (vizem): açıklık, genişlik, bastırma, dişler, dil ----
+// acik: 0 kapalı → 1 çok açık | gen: dudak genişliği (yuvarlak <1, yayvan >1)
+// bas: dudaklar birbirine bastırılmış (b, m, p) | ust/alt: üst/alt dişler görünür | dil: dil ucu yukarıda | f: alt dudak üst dişlerin altında
+const VIZEM = {
+  dur: { acik: 0.06, gen: 1.0, bas: 0, ust: 0, alt: 0, dil: 0, f: 0, hava: 0, titre: 0, burun: 0 },
+  // b, p, m: dudaklar dışarıdan AYNI kapanır. Fark: p = açılırken hava patlaması, b = boğazda titreşim, m = hava burundan
+  m:   { acik: 0.0,  gen: 1.02, bas: 1, ust: 0, alt: 0, dil: 0, f: 0, hava: 0, titre: 0.6, burun: 1 },
+  b:   { acik: 0.0,  gen: 1.02, bas: 1, ust: 0, alt: 0, dil: 0, f: 0, hava: 0, titre: 1, burun: 0 },
+  p:   { acik: 0.0,  gen: 1.02, bas: 1, ust: 0, alt: 0, dil: 0, f: 0, hava: 0, titre: 0, burun: 0 },
+  a:   { acik: 1.0,  gen: 1.0, bas: 0, ust: 1, alt: 0, dil: 0, f: 0 },
+  e:   { acik: 0.55, gen: 1.18, bas: 0, ust: 1, alt: 1, dil: 0, f: 0 },
+  i:   { acik: 0.3,  gen: 1.28, bas: 0, ust: 1, alt: 1, dil: 0, f: 0 },
+  o:   { acik: 0.7,  gen: 0.62, bas: 0, ust: 0, alt: 0, dil: 0, f: 0 },
+  u:   { acik: 0.32, gen: 0.42, bas: 0, ust: 0, alt: 0, dil: 0, f: 0 },
+  f:   { acik: 0.18, gen: 1.05, bas: 0, ust: 1, alt: 0, dil: 0, f: 1 },
+  d:   { acik: 0.38, gen: 1.05, bas: 0, ust: 1, alt: 1, dil: 1, f: 0 },
+  k:   { acik: 0.45, gen: 1.0, bas: 0, ust: 1, alt: 0, dil: 0, f: 0 },
+};
+for (const v of Object.values(VIZEM)) { v.hava ??= 0; v.titre ??= 0; v.burun ??= 0; }
+const HARF = {
+  b: 'b', m: 'm', p: 'p',
+  a: 'a', e: 'e', i: 'i', ı: 'i', o: 'o', ö: 'o', u: 'u', ü: 'u',
+  f: 'f', v: 'f',
+  d: 'd', t: 'd', n: 'd', l: 'd', s: 'd', z: 'd', c: 'd', ç: 'd', ş: 'd', j: 'd', r: 'd', y: 'e',
+  k: 'k', g: 'k', ğ: 'k', h: 'k',
+};
+const SESLI = 'aeıioöuü';
+
+// ---- Çizim ----
+const L = (a, b, t) => a + (b - a) * t;
+function agizSVG(p, id) {
+  const cx = 100, cy = 80;
+  const W = 52 * p.gen;                    // yarım genişlik
+  const H = 54 * p.acik;                   // açıklık
+  const tu = 13 + 3 * p.bas, tl = 16 + 3 * p.bas;
+  const yu = cy - H * 0.42, yl = cy + H * 0.58;   // iç dudak çizgileri (çene aşağı iner)
+  const Lx = cx - W, Rx = cx + W;
+  const kose = p.bas ? 2 : 0;
+  // ağız boşluğu
+  const bosluk = `M${Lx},${cy} Q${cx - W * 0.62},${yu} ${cx},${yu} Q${cx + W * 0.62},${yu} ${Rx},${cy} Q${cx + W * 0.62},${yl} ${cx},${yl} Q${cx - W * 0.62},${yl} ${Lx},${cy}Z`;
+  // üst dudak (cupid yayı ile)
+  const ust = `M${Lx - kose},${cy} C${Lx + W * 0.3},${yu - tu - 4} ${cx - W * 0.32},${yu - tu - 6} ${cx},${yu - tu + 3}
+    C${cx + W * 0.32},${yu - tu - 6} ${Rx - W * 0.3},${yu - tu - 4} ${Rx + kose},${cy}
+    Q${cx + W * 0.62},${yu} ${cx},${yu} Q${cx - W * 0.62},${yu} ${Lx - kose},${cy}Z`;
+  const alt = `M${Lx - kose},${cy} Q${cx - W * 0.62},${yl} ${cx},${yl} Q${cx + W * 0.62},${yl} ${Rx + kose},${cy}
+    C${Rx - W * 0.22},${yl + tl + 2} ${cx + W * 0.34},${yl + tl + 6} ${cx},${yl + tl + 6}
+    C${cx - W * 0.34},${yl + tl + 6} ${Lx + W * 0.22},${yl + tl + 2} ${Lx - kose},${cy}Z`;
+  const disUst = p.ust * Math.min(1, p.acik * 3);
+  const disAlt = p.alt * Math.min(1, p.acik * 3);
+  const dilY = L(yl - 4, yu + 8, p.dil);
+  return `
+    <defs><clipPath id="k${id}"><path d="${bosluk}"/></clipPath></defs>
+    <circle cx="100" cy="78" r="70" fill="#fbe3d4"/>
+    <path d="M92,12 Q86,26 90,30 Q100,36 110,30 Q114,26 108,12" fill="none" stroke="#3a2a24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="${bosluk}" fill="#5b1418"/>
+    <g clip-path="url(#k${id})">
+      <ellipse cx="${cx}" cy="${dilY + 10}" rx="${W * 0.62}" ry="${14 + 8 * p.dil}" fill="#e98a96"/>
+      <rect x="${cx - W * 0.7}" y="${yu - 2}" width="${W * 1.4}" height="${11 * disUst}" rx="3" fill="#fff"/>
+      <rect x="${cx - W * 0.62}" y="${yl - 9 * disAlt}" width="${W * 1.24}" height="${9 * disAlt + 1}" rx="3" fill="#fff" opacity="${disAlt ? 1 : 0}"/>
+    </g>
+    <path d="${alt}" fill="#d8323a"/>
+    <path d="${ust}" fill="#e2443e"/>
+    ${p.f > 0.01 ? `<rect x="${cx - W * 0.55}" y="${yu - 3}" width="${W * 1.1}" height="${9 * p.f}" rx="3" fill="#fff" opacity="${p.f}"/>` : ''}
+    <path d="M${cx - W * 0.5},${yu - tu * 0.55} Q${cx},${yu - tu * 0.9} ${cx + W * 0.5},${yu - tu * 0.55}" stroke="#fff" stroke-opacity=".35" stroke-width="3" fill="none" stroke-linecap="round"/>
+    ${p.bas > 0.5 ? `<g stroke="#f5b400" stroke-width="3" stroke-linecap="round" opacity="${p.bas}">
+       <path d="M${Lx - 14},${cy - 10} l-8,-5"/><path d="M${Lx - 16},${cy} l-10,0"/><path d="M${Lx - 14},${cy + 10} l-8,5"/>
+       <path d="M${Rx + 14},${cy - 10} l8,-5"/><path d="M${Rx + 16},${cy} l10,0"/><path d="M${Rx + 14},${cy + 10} l8,5"/></g>` : ''}
+    ${p.hava > 0.02 ? `<g fill="#bfe3f7" stroke="#7cc0e6" stroke-width="1.5" opacity="${p.hava}">
+       <circle cx="${cx - 18}" cy="${cy + 4}" r="${7 + 9 * p.hava}"/><circle cx="${cx + 2}" cy="${cy - 2}" r="${9 + 11 * p.hava}"/><circle cx="${cx + 22}" cy="${cy + 5}" r="${7 + 9 * p.hava}"/>
+       <text x="${cx}" y="${cy + 4}" font-size="13" font-weight="800" text-anchor="middle" fill="#2b7bb0" stroke="none">püf</text></g>` : ''}
+    ${p.titre > 0.02 ? `<g stroke="#8a5cd6" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="${p.titre}">
+       <path d="M80,140 l5,-5 l5,5 l5,-5 l5,5 l5,-5 l5,5 l5,-5 l5,5 l5,-5 l5,5"/>
+       <path d="M84,148 l5,-5 l5,5 l5,-5 l5,5 l5,-5 l5,5 l5,-5 l5,5"/></g>` : ''}
+    ${p.burun > 0.02 ? `<g stroke="#7cc0e6" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="${p.burun}">
+       <path d="M90,34 q-4,5 0,10 q4,5 0,10"/><path d="M110,34 q4,5 0,10 q-4,5 0,10"/></g>` : ''}`;
+}
+
+// ---- Animasyon ----
+const buyuk = document.getElementById('buyuk');
+let simdi = { ...VIZEM.dur };
+function ciz(p) { buyuk.innerHTML = agizSVG(p, 'b'); }
+ciz(simdi);
+
+function gecis(hedef, ms) {
+  const bas = { ...simdi };
+  return new Promise(res => {
+    const t0 = performance.now();
+    const adim = t => {
+      let k = Math.min(1, (t - t0) / ms);
+      k = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2; // yumuşak geçiş
+      for (const a in bas) simdi[a] = L(bas[a], hedef[a], k);
+      ciz(simdi);
+      k < 1 ? requestAnimationFrame(adim) : res();
+    };
+    requestAnimationFrame(adim);
+  });
+}
+const bekle = ms => new Promise(r => setTimeout(r, ms));
+
+// Türkçe heceleme (her hece bir ünlü içerir)
+function hecele(kelime) {
+  const s = kelime.toLocaleLowerCase('tr-TR').replace(/[^a-zçğıöşü]/g, '');
+  const ui = [...s].map((c, i) => SESLI.includes(c) ? i : -1).filter(i => i >= 0);
+  if (ui.length <= 1) return [s];
+  const p = []; let bas = 0;
+  for (let k = 0; k < ui.length - 1; k++) {
+    const arada = ui[k + 1] - ui[k] - 1;
+    const kes = arada === 0 ? ui[k] + 1 : ui[k + 1] - 1;
+    p.push(s.slice(bas, kes)); bas = kes;
+  }
+  p.push(s.slice(bas));
+  return p;
+}
+
+function seslendir(metin, hiz) {
+  if (!document.getElementById('sesli').checked || !('speechSynthesis' in window)) return;
+  const u = new SpeechSynthesisUtterance(metin);
+  u.lang = 'tr-TR'; u.rate = hiz;
+  const tr = speechSynthesis.getVoices().find(v => v.lang && v.lang.startsWith('tr'));
+  if (tr) u.voice = tr;
+  speechSynthesis.speak(u);
+}
+
+let calisiyor = false;
+async function soyle(kelime) {
+  if (calisiyor) return; calisiyor = true;
+  const yavas = document.getElementById('yavas').checked;
+  const c = yavas ? 1.9 : 1;
+  const heceler = hecele(kelime);
+  const kutu = document.getElementById('hece');
+  kutu.innerHTML = heceler.map(h => `<span>${h}</span>`).join('');
+  await gecis(VIZEM.dur, 200);
+  let onceki = '';
+  for (let i = 0; i < heceler.length; i++) {
+    kutu.children[i].classList.add('aktif');
+    seslendir(heceler[i], yavas ? 0.55 : 0.9);       // her hece ayrı okunur, ağızla birlikte
+    for (const harf of heceler[i]) {
+      if (onceki === 'p') simdi.hava = 1; // p'den sonra dudak açılırken "püf"
+      onceki = harf;
+      const v = VIZEM[HARF[harf]] || VIZEM.d;
+      const sesliMi = SESLI.includes(harf);
+      await gecis(v, (sesliMi ? 170 : 110) * c);
+      await bekle((sesliMi ? 260 : 120) * c);
+    }
+    kutu.children[i].classList.remove('aktif');
+    await bekle(90 * c);
+  }
+  await gecis(VIZEM.dur, 260);
+  if (heceler.length > 1) { await bekle(250); seslendir(kelime, yavas ? 0.7 : 1); }
+  calisiyor = false;
+}
+
+// ---- Arayüz ----
+const KELIMELER = ['baba', 'papa', 'mama', 'anne', 'bebe', 'pipo', 'top', 'su', 'ev'];
+document.getElementById('kelimeler').innerHTML = KELIMELER.map(k => `<button data-k="${k}">${k}</button>`).join('');
+document.getElementById('kelimeler').onclick = e => { const k = e.target.dataset.k; if (k) { document.getElementById('serbest').value = k; soyle(k); } };
+document.getElementById('oynat').onclick = () => soyle(document.getElementById('serbest').value || 'baba');
+
+const SESKART = [
+  ['a', 'a', 'Ağzını aç'], ['o', 'o', 'Dudaklarını yuvarla'], ['u', 'u', 'Dudaklarını uzat'],
+  ['e', 'e', 'Gülümse, aç'], ['i', 'i', 'Gülümse'], ['b', 'b', 'Kapat, boğaz titrer'], ['p', 'p', 'Kapat, püf diye aç'], ['m', 'm', 'Kapat, burundan'], ['f', 'f / v', 'Dişler alt dudakta'],
+];
+document.getElementById('sesler').innerHTML = SESKART.map(([v, harf, ac], i) =>
+  `<div class="ses" data-v="${v}"><svg viewBox="0 0 200 150">${agizSVG(VIZEM[v], 's' + i)}</svg><b>${harf}</b><small>${ac}</small></div>`).join('');
+document.getElementById('sesler').onclick = async e => {
+  const kart = e.target.closest('.ses'); if (!kart || calisiyor) return;
+  calisiyor = true;
+  const v = kart.dataset.v;
+  await gecis(VIZEM[v], 300);
+  seslendir({ m: 'mmm', f: 'fff', b: 'be', p: 'pe' }[v] || v, 0.6);
+  if (v === 'p') { await bekle(500); simdi.hava = 1; await gecis(VIZEM.a, 260); }
+  await bekle(1100);
+  await gecis(VIZEM.dur, 300);
+  calisiyor = false;
+};
+speechSynthesis && speechSynthesis.getVoices();
+</script>
+</body>
+</html>

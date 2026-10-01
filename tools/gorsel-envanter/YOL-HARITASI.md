@@ -107,6 +107,14 @@ Not: kategori adlarında tutarsızlık var ("Hayvanlar" ve "hayvanlar" gibi). Bu
 ## Aşama 5b: Yeni görselleri diğer etkinliklere açma
 Şu an yeni görseller sadece kavram sorularında (category none). Tek başına nesne olarak uygun olanlar (ör. kırmızı elma, mavi kupa, sarı kova) seçilip kategori, renk ve şekil etiketi alacak. Böylece nesne, renk, şekil ve harf etkinliklerine de girecekler. Sahneler, konum setleri ve yarım/çeyrek görseller girmez. Kaan sordu (2026-10-01).
 
+## Aşama 5c: Kaan'ın eklediği işler (2026-10-02)
+- [x] **Dil kararı (2026-10-02): çoklu dil KALDIRILACAK.** Play Console: kullanıcıların ~%97'si Türkiye (Hollanda/Fransa 1-2 kişi). Yeni sorular sadece Türkçe yazılır. Kaldırma işi: ilk denetimdeki plan (a) kilitle + eksik TR metinleri tamamla, (b) i18n katmanını sil.
+- [ ] **Hangisi farklı / hangisi aynı:** 3 aynı + 1 farklı. Mevcut yeni görsellerden üretilebilir (ör. 3 büyük top + 1 küçük top, 3 temiz + 1 kirli).
+- [ ] **Evet/Hayır baş hareketi:** çocuklar baş hareketinin anlamını bilmiyor. Flow video ile aynı çocuk "evet" (aşağı-yukarı) ve "hayır" (sağa-sola), 2-3 sn döngü → küçük video ya da hareketli WebP.
+- [ ] **Dudak hareketleri (artikülasyon): DEMO VAR → `tools/dudak-demo/index.html`** (SVG dudaklar, kodla hareket, vizem: a/o/u/e/i/m-b-p/f-v/dil/k; heceleyerek TR TTS ile). Yöntem fikri: Kaan'ın "Adım Adım Konuşuyorum" (Prizma/Lali) kitapları; telifli, kopyalanmaz, kendi çizimimiz. Sonra uygulamaya bileşen olarak. her ses için ağız şekli (a açık, o yuvarlak, m kapalı, f diş alt dudakta). Önce durağan görsel, sonra kısa video. BASARA ve harf etkinlikleri ile birleşir.
+- [ ] **Hızlı / yavaş:** GIF'siz (hareket çizgileri, toz, koşan ve yürüyen aynı çocuk).
+- [ ] Harf etkinlikleri, ifade (iletişim) kartları, mini oyunlar, PDF çalışma kağıtları: yeni görsellerle güncelleme.
+
 ## Aşama 6: Kalanlar ve temizlik
 - [ ] 5N1K, sıralama hikayeleri, gündüz/gece, önce/sonra, hızlı/yavaş, duyular
 - [ ] İletişim kartları
