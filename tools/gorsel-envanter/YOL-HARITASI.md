@@ -44,7 +44,7 @@ Her nesneden 3-4 kademe üretilir (ör. 4 boyda aynı top). Bunlardan hem çift 
 - [x] Az / çok bağlandı: 10 çift, 20 soru, id 2701-2720 (az = 2 tane, çok = 12-15, kap yok).
 - [ ] Kalabalık / tenha
 - [x] Dolu / boş bağlandı: 10 çift (kumbara + 9), 20 soru, id 2601-2620.
-- [x] Bütün (tam) / yarım / çeyrek bağlandı: 20 görsel, 19 karşılaştırma, 51 soru. Pizza Claude tarafından kesildi. Ekmek yarımı Kaan yaptı. Eksik: pasta (yukarıdan bütün pasta gelirse kesilecek; çeyrek dilim ham klasörde yedekte), karpuz çeyreği (`flow-butun-yarim-ceyrek.md`).
+- [x] Bütün (tam) / yarım / çeyrek bağlandı: 24 görsel (2801-2824), 24 karşılaştırma, 64 soru. Pizza Claude tarafından kesildi. Ekmek yarımı Kaan yaptı. Pasta (kuşbakışı) ve karpuz çeyreği (yarım karpuzun yarısı) Claude tarafından kesildi; 8 yiyecek tam. (`flow-butun-yarim-ceyrek.md`).
 - [ ] Tek / çift, kaç tane
 - [ ] Ağır / hafif (görselden anlaşılması zor; bilinen nesne çiftleri: fil/tüy gibi)
 

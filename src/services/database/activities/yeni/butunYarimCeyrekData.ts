@@ -1,5 +1,5 @@
 // OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-cift.mjs (butun-yarim-ceyrek). Elle düzenleme.
-// 19 çift, 51 soru. Görseller: gorsel-ham/butun-yarim-ceyrek/ → id 2801-2820.
+// 24 çift, 64 soru. Görseller: gorsel-ham/butun-yarim-ceyrek/ → id 2801-2824.
 import { ConceptRound, ActivityType } from '../../../../types';
 
 export const halfQuarterWholeDataYeni: ConceptRound[] = [
@@ -329,7 +329,7 @@ export const halfQuarterWholeDataYeni: ConceptRound[] = [
         },
         options: [
             { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" },
-            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" }
+            { id: 2812, word: "karpuz", imageUrl: "/images/2812.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" }
         ]
     },
     {
@@ -341,7 +341,7 @@ export const halfQuarterWholeDataYeni: ConceptRound[] = [
             tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Karpuz yarımdır.', wrong: 'Hayır, bu karpuz bütündür.' }
         },
         options: [
-            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2812, word: "karpuz", imageUrl: "/images/2812.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" },
             { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" }
         ]
     },
@@ -355,12 +355,77 @@ export const halfQuarterWholeDataYeni: ConceptRound[] = [
         },
         options: [
             { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2812, word: "karpuz", imageUrl: "/images/2812.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" }
+        ]
+    },
+    {
+        id: 28,
+        question: "Yarım olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Karpuz yarımdır.', wrong: 'Hayır, bu karpuz çeyrektir.' }
+        },
+        options: [
+            { id: 2812, word: "karpuz", imageUrl: "/images/2812.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" }
+        ]
+    },
+    {
+        id: 29,
+        question: "Çeyrek olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Karpuz çeyrektir.', wrong: 'Hayır, bu karpuz yarımdır.' }
+        },
+        options: [
+            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2812, word: "karpuz", imageUrl: "/images/2812.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" }
+        ]
+    },
+    {
+        id: 30,
+        question: "Bütün olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Karpuz bütündür.', wrong: 'Hayır, bu karpuz çeyrektir.' }
+        },
+        options: [
+            { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" }
+        ]
+    },
+    {
+        id: 31,
+        question: "Çeyrek olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Karpuz çeyrektir.', wrong: 'Hayır, bu karpuz bütündür.' }
+        },
+        options: [
+            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" }
+        ]
+    },
+    {
+        id: 32,
+        question: "Tam olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Tam olan hangisi?', correct: 'Evet! Karpuz tamdır.', wrong: 'Hayır, bu karpuz çeyrektir.' }
+        },
+        options: [
+            { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" },
             { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" }
         ]
     },
     // limon
     {
-        id: 28,
+        id: 33,
         question: "Bütün olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HalfQuarterWhole,
@@ -368,12 +433,12 @@ export const halfQuarterWholeDataYeni: ConceptRound[] = [
             tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Limon bütündür.', wrong: 'Hayır, bu limon yarımdır.' }
         },
         options: [
-            { id: 2812, word: "limon", imageUrl: "/images/2812.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
-            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
+            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
+            { id: 2815, word: "limon", imageUrl: "/images/2815.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
         ]
     },
     {
-        id: 29,
+        id: 34,
         question: "Yarım olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HalfQuarterWhole,
@@ -381,73 +446,8 @@ export const halfQuarterWholeDataYeni: ConceptRound[] = [
             tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Limon yarımdır.', wrong: 'Hayır, bu limon bütündür.' }
         },
         options: [
-            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
-            { id: 2812, word: "limon", imageUrl: "/images/2812.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
-        ]
-    },
-    {
-        id: 30,
-        question: "Tam olan hangisi?",
-        questionAudioKey: "",
-        activityType: ActivityType.HalfQuarterWhole,
-        speech: {
-            tr: { question: 'Tam olan hangisi?', correct: 'Evet! Limon tamdır.', wrong: 'Hayır, bu limon yarımdır.' }
-        },
-        options: [
-            { id: 2812, word: "limon", imageUrl: "/images/2812.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
-            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
-        ]
-    },
-    {
-        id: 31,
-        question: "Yarım olan hangisi?",
-        questionAudioKey: "",
-        activityType: ActivityType.HalfQuarterWhole,
-        speech: {
-            tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Limon yarımdır.', wrong: 'Hayır, bu limon çeyrektir.' }
-        },
-        options: [
-            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
+            { id: 2815, word: "limon", imageUrl: "/images/2815.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
             { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
-        ]
-    },
-    {
-        id: 32,
-        question: "Çeyrek olan hangisi?",
-        questionAudioKey: "",
-        activityType: ActivityType.HalfQuarterWhole,
-        speech: {
-            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Limon çeyrektir.', wrong: 'Hayır, bu limon yarımdır.' }
-        },
-        options: [
-            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
-            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
-        ]
-    },
-    {
-        id: 33,
-        question: "Bütün olan hangisi?",
-        questionAudioKey: "",
-        activityType: ActivityType.HalfQuarterWhole,
-        speech: {
-            tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Limon bütündür.', wrong: 'Hayır, bu limon çeyrektir.' }
-        },
-        options: [
-            { id: 2812, word: "limon", imageUrl: "/images/2812.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
-            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
-        ]
-    },
-    {
-        id: 34,
-        question: "Çeyrek olan hangisi?",
-        questionAudioKey: "",
-        activityType: ActivityType.HalfQuarterWhole,
-        speech: {
-            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Limon çeyrektir.', wrong: 'Hayır, bu limon bütündür.' }
-        },
-        options: [
-            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
-            { id: 2812, word: "limon", imageUrl: "/images/2812.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
         ]
     },
     {
@@ -456,103 +456,103 @@ export const halfQuarterWholeDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HalfQuarterWhole,
         speech: {
-            tr: { question: 'Tam olan hangisi?', correct: 'Evet! Limon tamdır.', wrong: 'Hayır, bu limon çeyrektir.' }
+            tr: { question: 'Tam olan hangisi?', correct: 'Evet! Limon tamdır.', wrong: 'Hayır, bu limon yarımdır.' }
         },
         options: [
-            { id: 2812, word: "limon", imageUrl: "/images/2812.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
-            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
+            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
+            { id: 2815, word: "limon", imageUrl: "/images/2815.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
         ]
     },
-    // pizza
     {
         id: 36,
-        question: "Bütün olan hangisi?",
+        question: "Yarım olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HalfQuarterWhole,
         speech: {
-            tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Pizza bütündür.', wrong: 'Hayır, bu pizza yarımdır.' }
+            tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Limon yarımdır.', wrong: 'Hayır, bu limon çeyrektir.' }
         },
         options: [
-            { id: 2815, word: "pizza", imageUrl: "/images/2815.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2817, word: "pizza", imageUrl: "/images/2817.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
+            { id: 2815, word: "limon", imageUrl: "/images/2815.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
+            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
         ]
     },
     {
         id: 37,
-        question: "Yarım olan hangisi?",
-        questionAudioKey: "",
-        activityType: ActivityType.HalfQuarterWhole,
-        speech: {
-            tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Pizza yarımdır.', wrong: 'Hayır, bu pizza bütündür.' }
-        },
-        options: [
-            { id: 2817, word: "pizza", imageUrl: "/images/2817.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2815, word: "pizza", imageUrl: "/images/2815.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
-        ]
-    },
-    {
-        id: 38,
-        question: "Tam olan hangisi?",
-        questionAudioKey: "",
-        activityType: ActivityType.HalfQuarterWhole,
-        speech: {
-            tr: { question: 'Tam olan hangisi?', correct: 'Evet! Pizza tamdır.', wrong: 'Hayır, bu pizza yarımdır.' }
-        },
-        options: [
-            { id: 2815, word: "pizza", imageUrl: "/images/2815.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2817, word: "pizza", imageUrl: "/images/2817.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
-        ]
-    },
-    {
-        id: 39,
-        question: "Yarım olan hangisi?",
-        questionAudioKey: "",
-        activityType: ActivityType.HalfQuarterWhole,
-        speech: {
-            tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Pizza yarımdır.', wrong: 'Hayır, bu pizza çeyrektir.' }
-        },
-        options: [
-            { id: 2817, word: "pizza", imageUrl: "/images/2817.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2816, word: "pizza", imageUrl: "/images/2816.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
-        ]
-    },
-    {
-        id: 40,
         question: "Çeyrek olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HalfQuarterWhole,
         speech: {
-            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Pizza çeyrektir.', wrong: 'Hayır, bu pizza yarımdır.' }
+            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Limon çeyrektir.', wrong: 'Hayır, bu limon yarımdır.' }
         },
         options: [
-            { id: 2816, word: "pizza", imageUrl: "/images/2816.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2817, word: "pizza", imageUrl: "/images/2817.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
+            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
+            { id: 2815, word: "limon", imageUrl: "/images/2815.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
         ]
     },
+    {
+        id: 38,
+        question: "Bütün olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Limon bütündür.', wrong: 'Hayır, bu limon çeyrektir.' }
+        },
+        options: [
+            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
+            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
+        ]
+    },
+    {
+        id: 39,
+        question: "Çeyrek olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Limon çeyrektir.', wrong: 'Hayır, bu limon bütündür.' }
+        },
+        options: [
+            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
+            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
+        ]
+    },
+    {
+        id: 40,
+        question: "Tam olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Tam olan hangisi?', correct: 'Evet! Limon tamdır.', wrong: 'Hayır, bu limon çeyrektir.' }
+        },
+        options: [
+            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" },
+            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" }
+        ]
+    },
+    // pasta
     {
         id: 41,
         question: "Bütün olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HalfQuarterWhole,
         speech: {
-            tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Pizza bütündür.', wrong: 'Hayır, bu pizza çeyrektir.' }
+            tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Pasta bütündür.', wrong: 'Hayır, bu pasta yarımdır.' }
         },
         options: [
-            { id: 2815, word: "pizza", imageUrl: "/images/2815.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2816, word: "pizza", imageUrl: "/images/2816.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
+            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2818, word: "pasta", imageUrl: "/images/2818.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" }
         ]
     },
     {
         id: 42,
-        question: "Çeyrek olan hangisi?",
+        question: "Yarım olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HalfQuarterWhole,
         speech: {
-            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Pizza çeyrektir.', wrong: 'Hayır, bu pizza bütündür.' }
+            tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Pasta yarımdır.', wrong: 'Hayır, bu pasta bütündür.' }
         },
         options: [
-            { id: 2816, word: "pizza", imageUrl: "/images/2816.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2815, word: "pizza", imageUrl: "/images/2815.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
+            { id: 2818, word: "pasta", imageUrl: "/images/2818.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" }
         ]
     },
     {
@@ -561,103 +561,103 @@ export const halfQuarterWholeDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HalfQuarterWhole,
         speech: {
-            tr: { question: 'Tam olan hangisi?', correct: 'Evet! Pizza tamdır.', wrong: 'Hayır, bu pizza çeyrektir.' }
+            tr: { question: 'Tam olan hangisi?', correct: 'Evet! Pasta tamdır.', wrong: 'Hayır, bu pasta yarımdır.' }
         },
         options: [
-            { id: 2815, word: "pizza", imageUrl: "/images/2815.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2816, word: "pizza", imageUrl: "/images/2816.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
+            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2818, word: "pasta", imageUrl: "/images/2818.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" }
         ]
     },
-    // portakal
     {
         id: 44,
-        question: "Bütün olan hangisi?",
+        question: "Yarım olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HalfQuarterWhole,
         speech: {
-            tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Portakal bütündür.', wrong: 'Hayır, bu portakal yarımdır.' }
+            tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Pasta yarımdır.', wrong: 'Hayır, bu pasta çeyrektir.' }
         },
         options: [
-            { id: 2818, word: "portakal", imageUrl: "/images/2818.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2820, word: "portakal", imageUrl: "/images/2820.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
+            { id: 2818, word: "pasta", imageUrl: "/images/2818.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2817, word: "pasta", imageUrl: "/images/2817.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" }
         ]
     },
     {
         id: 45,
-        question: "Yarım olan hangisi?",
-        questionAudioKey: "",
-        activityType: ActivityType.HalfQuarterWhole,
-        speech: {
-            tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Portakal yarımdır.', wrong: 'Hayır, bu portakal bütündür.' }
-        },
-        options: [
-            { id: 2820, word: "portakal", imageUrl: "/images/2820.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2818, word: "portakal", imageUrl: "/images/2818.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
-        ]
-    },
-    {
-        id: 46,
-        question: "Tam olan hangisi?",
-        questionAudioKey: "",
-        activityType: ActivityType.HalfQuarterWhole,
-        speech: {
-            tr: { question: 'Tam olan hangisi?', correct: 'Evet! Portakal tamdır.', wrong: 'Hayır, bu portakal yarımdır.' }
-        },
-        options: [
-            { id: 2818, word: "portakal", imageUrl: "/images/2818.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2820, word: "portakal", imageUrl: "/images/2820.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
-        ]
-    },
-    {
-        id: 47,
-        question: "Yarım olan hangisi?",
-        questionAudioKey: "",
-        activityType: ActivityType.HalfQuarterWhole,
-        speech: {
-            tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Portakal yarımdır.', wrong: 'Hayır, bu portakal çeyrektir.' }
-        },
-        options: [
-            { id: 2820, word: "portakal", imageUrl: "/images/2820.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2819, word: "portakal", imageUrl: "/images/2819.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
-        ]
-    },
-    {
-        id: 48,
         question: "Çeyrek olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HalfQuarterWhole,
         speech: {
-            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Portakal çeyrektir.', wrong: 'Hayır, bu portakal yarımdır.' }
+            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Pasta çeyrektir.', wrong: 'Hayır, bu pasta yarımdır.' }
         },
         options: [
-            { id: 2819, word: "portakal", imageUrl: "/images/2819.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2820, word: "portakal", imageUrl: "/images/2820.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
+            { id: 2817, word: "pasta", imageUrl: "/images/2817.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2818, word: "pasta", imageUrl: "/images/2818.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" }
         ]
     },
+    {
+        id: 46,
+        question: "Bütün olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Pasta bütündür.', wrong: 'Hayır, bu pasta çeyrektir.' }
+        },
+        options: [
+            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2817, word: "pasta", imageUrl: "/images/2817.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" }
+        ]
+    },
+    {
+        id: 47,
+        question: "Çeyrek olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Pasta çeyrektir.', wrong: 'Hayır, bu pasta bütündür.' }
+        },
+        options: [
+            { id: 2817, word: "pasta", imageUrl: "/images/2817.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" }
+        ]
+    },
+    {
+        id: 48,
+        question: "Tam olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Tam olan hangisi?', correct: 'Evet! Pasta tamdır.', wrong: 'Hayır, bu pasta çeyrektir.' }
+        },
+        options: [
+            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2817, word: "pasta", imageUrl: "/images/2817.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" }
+        ]
+    },
+    // pizza
     {
         id: 49,
         question: "Bütün olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HalfQuarterWhole,
         speech: {
-            tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Portakal bütündür.', wrong: 'Hayır, bu portakal çeyrektir.' }
+            tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Pizza bütündür.', wrong: 'Hayır, bu pizza yarımdır.' }
         },
         options: [
-            { id: 2818, word: "portakal", imageUrl: "/images/2818.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2819, word: "portakal", imageUrl: "/images/2819.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
+            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2821, word: "pizza", imageUrl: "/images/2821.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
         ]
     },
     {
         id: 50,
-        question: "Çeyrek olan hangisi?",
+        question: "Yarım olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HalfQuarterWhole,
         speech: {
-            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Portakal çeyrektir.', wrong: 'Hayır, bu portakal bütündür.' }
+            tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Pizza yarımdır.', wrong: 'Hayır, bu pizza bütündür.' }
         },
         options: [
-            { id: 2819, word: "portakal", imageUrl: "/images/2819.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2818, word: "portakal", imageUrl: "/images/2818.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
+            { id: 2821, word: "pizza", imageUrl: "/images/2821.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
         ]
     },
     {
@@ -666,11 +666,181 @@ export const halfQuarterWholeDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HalfQuarterWhole,
         speech: {
+            tr: { question: 'Tam olan hangisi?', correct: 'Evet! Pizza tamdır.', wrong: 'Hayır, bu pizza yarımdır.' }
+        },
+        options: [
+            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2821, word: "pizza", imageUrl: "/images/2821.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
+        ]
+    },
+    {
+        id: 52,
+        question: "Yarım olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Pizza yarımdır.', wrong: 'Hayır, bu pizza çeyrektir.' }
+        },
+        options: [
+            { id: 2821, word: "pizza", imageUrl: "/images/2821.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2820, word: "pizza", imageUrl: "/images/2820.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
+        ]
+    },
+    {
+        id: 53,
+        question: "Çeyrek olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Pizza çeyrektir.', wrong: 'Hayır, bu pizza yarımdır.' }
+        },
+        options: [
+            { id: 2820, word: "pizza", imageUrl: "/images/2820.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2821, word: "pizza", imageUrl: "/images/2821.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
+        ]
+    },
+    {
+        id: 54,
+        question: "Bütün olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Pizza bütündür.', wrong: 'Hayır, bu pizza çeyrektir.' }
+        },
+        options: [
+            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2820, word: "pizza", imageUrl: "/images/2820.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
+        ]
+    },
+    {
+        id: 55,
+        question: "Çeyrek olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Pizza çeyrektir.', wrong: 'Hayır, bu pizza bütündür.' }
+        },
+        options: [
+            { id: 2820, word: "pizza", imageUrl: "/images/2820.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
+        ]
+    },
+    {
+        id: 56,
+        question: "Tam olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Tam olan hangisi?', correct: 'Evet! Pizza tamdır.', wrong: 'Hayır, bu pizza çeyrektir.' }
+        },
+        options: [
+            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2820, word: "pizza", imageUrl: "/images/2820.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" }
+        ]
+    },
+    // portakal
+    {
+        id: 57,
+        question: "Bütün olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Portakal bütündür.', wrong: 'Hayır, bu portakal yarımdır.' }
+        },
+        options: [
+            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2824, word: "portakal", imageUrl: "/images/2824.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
+        ]
+    },
+    {
+        id: 58,
+        question: "Yarım olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Portakal yarımdır.', wrong: 'Hayır, bu portakal bütündür.' }
+        },
+        options: [
+            { id: 2824, word: "portakal", imageUrl: "/images/2824.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
+        ]
+    },
+    {
+        id: 59,
+        question: "Tam olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Tam olan hangisi?', correct: 'Evet! Portakal tamdır.', wrong: 'Hayır, bu portakal yarımdır.' }
+        },
+        options: [
+            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2824, word: "portakal", imageUrl: "/images/2824.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
+        ]
+    },
+    {
+        id: 60,
+        question: "Yarım olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Yarım olan hangisi?', correct: 'Evet! Portakal yarımdır.', wrong: 'Hayır, bu portakal çeyrektir.' }
+        },
+        options: [
+            { id: 2824, word: "portakal", imageUrl: "/images/2824.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2823, word: "portakal", imageUrl: "/images/2823.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
+        ]
+    },
+    {
+        id: 61,
+        question: "Çeyrek olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Portakal çeyrektir.', wrong: 'Hayır, bu portakal yarımdır.' }
+        },
+        options: [
+            { id: 2823, word: "portakal", imageUrl: "/images/2823.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2824, word: "portakal", imageUrl: "/images/2824.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
+        ]
+    },
+    {
+        id: 62,
+        question: "Bütün olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Bütün olan hangisi?', correct: 'Evet! Portakal bütündür.', wrong: 'Hayır, bu portakal çeyrektir.' }
+        },
+        options: [
+            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2823, word: "portakal", imageUrl: "/images/2823.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
+        ]
+    },
+    {
+        id: 63,
+        question: "Çeyrek olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
+            tr: { question: 'Çeyrek olan hangisi?', correct: 'Evet! Portakal çeyrektir.', wrong: 'Hayır, bu portakal bütündür.' }
+        },
+        options: [
+            { id: 2823, word: "portakal", imageUrl: "/images/2823.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
+        ]
+    },
+    {
+        id: 64,
+        question: "Tam olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.HalfQuarterWhole,
+        speech: {
             tr: { question: 'Tam olan hangisi?', correct: 'Evet! Portakal tamdır.', wrong: 'Hayır, bu portakal çeyrektir.' }
         },
         options: [
-            { id: 2818, word: "portakal", imageUrl: "/images/2818.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2819, word: "portakal", imageUrl: "/images/2819.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
+            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2823, word: "portakal", imageUrl: "/images/2823.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" }
         ]
     },
 ];

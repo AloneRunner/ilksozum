@@ -5725,7 +5725,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "portion": "yarım",
+      "portion": "çeyrek",
       "syllables": [
         "kar",
         "puz"
@@ -5742,24 +5742,25 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 2812,
-    "word": "limon",
+    "word": "karpuz",
     "imageUrl": "/images/2812.webp",
     "audioKeys": {
-      "default": "limon"
+      "default": "karpuz"
     },
     "tags": {
       "category": "none",
-      "portion": "bütün",
+      "portion": "yarım",
       "syllables": [
-        "li",
-        "mon"
+        "kar",
+        "puz"
       ],
       "letters": [
-        "L",
-        "İ",
-        "M",
-        "O",
-        "N"
+        "K",
+        "A",
+        "R",
+        "P",
+        "U",
+        "Z"
       ]
     }
   },
@@ -5772,7 +5773,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "portion": "çeyrek",
+      "portion": "bütün",
       "syllables": [
         "li",
         "mon"
@@ -5795,7 +5796,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "portion": "yarım",
+      "portion": "çeyrek",
       "syllables": [
         "li",
         "mon"
@@ -5811,8 +5812,100 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 2815,
-    "word": "pizza",
+    "word": "limon",
     "imageUrl": "/images/2815.webp",
+    "audioKeys": {
+      "default": "limon"
+    },
+    "tags": {
+      "category": "none",
+      "portion": "yarım",
+      "syllables": [
+        "li",
+        "mon"
+      ],
+      "letters": [
+        "L",
+        "İ",
+        "M",
+        "O",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": 2816,
+    "word": "pasta",
+    "imageUrl": "/images/2816.webp",
+    "audioKeys": {
+      "default": "pasta"
+    },
+    "tags": {
+      "category": "none",
+      "portion": "bütün",
+      "syllables": [
+        "pas",
+        "ta"
+      ],
+      "letters": [
+        "P",
+        "A",
+        "S",
+        "T",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 2817,
+    "word": "pasta",
+    "imageUrl": "/images/2817.webp",
+    "audioKeys": {
+      "default": "pasta"
+    },
+    "tags": {
+      "category": "none",
+      "portion": "çeyrek",
+      "syllables": [
+        "pas",
+        "ta"
+      ],
+      "letters": [
+        "P",
+        "A",
+        "S",
+        "T",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 2818,
+    "word": "pasta",
+    "imageUrl": "/images/2818.webp",
+    "audioKeys": {
+      "default": "pasta"
+    },
+    "tags": {
+      "category": "none",
+      "portion": "yarım",
+      "syllables": [
+        "pas",
+        "ta"
+      ],
+      "letters": [
+        "P",
+        "A",
+        "S",
+        "T",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 2819,
+    "word": "pizza",
+    "imageUrl": "/images/2819.webp",
     "audioKeys": {
       "default": "pizza"
     },
@@ -5833,9 +5926,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 2816,
+    "id": 2820,
     "word": "pizza",
-    "imageUrl": "/images/2816.webp",
+    "imageUrl": "/images/2820.webp",
     "audioKeys": {
       "default": "pizza"
     },
@@ -5856,9 +5949,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 2817,
+    "id": 2821,
     "word": "pizza",
-    "imageUrl": "/images/2817.webp",
+    "imageUrl": "/images/2821.webp",
     "audioKeys": {
       "default": "pizza"
     },
@@ -5879,9 +5972,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 2818,
+    "id": 2822,
     "word": "portakal",
-    "imageUrl": "/images/2818.webp",
+    "imageUrl": "/images/2822.webp",
     "audioKeys": {
       "default": "portakal"
     },
@@ -5906,9 +5999,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 2819,
+    "id": 2823,
     "word": "portakal",
-    "imageUrl": "/images/2819.webp",
+    "imageUrl": "/images/2823.webp",
     "audioKeys": {
       "default": "portakal"
     },
@@ -5933,9 +6026,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 2820,
+    "id": 2824,
     "word": "portakal",
-    "imageUrl": "/images/2820.webp",
+    "imageUrl": "/images/2824.webp",
     "audioKeys": {
       "default": "portakal"
     },

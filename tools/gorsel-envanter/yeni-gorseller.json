@@ -2237,6 +2237,15 @@
     },
     {
       "id": 2811,
+      "kaynak": "butun-yarim-ceyrek/karpuz-ceyrek.jpg",
+      "word": "karpuz",
+      "category": "none",
+      "tags": {
+        "portion": "çeyrek"
+      }
+    },
+    {
+      "id": 2812,
       "kaynak": "butun-yarim-ceyrek/karpuz-yarim.jpg",
       "word": "karpuz",
       "category": "none",
@@ -2245,7 +2254,7 @@
       }
     },
     {
-      "id": 2812,
+      "id": 2813,
       "kaynak": "butun-yarim-ceyrek/limon-butun.jpg",
       "word": "limon",
       "category": "none",
@@ -2254,7 +2263,7 @@
       }
     },
     {
-      "id": 2813,
+      "id": 2814,
       "kaynak": "butun-yarim-ceyrek/limon-ceyrek.jpg",
       "word": "limon",
       "category": "none",
@@ -2263,7 +2272,7 @@
       }
     },
     {
-      "id": 2814,
+      "id": 2815,
       "kaynak": "butun-yarim-ceyrek/limon-yarim.jpg",
       "word": "limon",
       "category": "none",
@@ -2272,7 +2281,34 @@
       }
     },
     {
-      "id": 2815,
+      "id": 2816,
+      "kaynak": "butun-yarim-ceyrek/pasta-butun.jpg",
+      "word": "pasta",
+      "category": "none",
+      "tags": {
+        "portion": "bütün"
+      }
+    },
+    {
+      "id": 2817,
+      "kaynak": "butun-yarim-ceyrek/pasta-ceyrek.jpg",
+      "word": "pasta",
+      "category": "none",
+      "tags": {
+        "portion": "çeyrek"
+      }
+    },
+    {
+      "id": 2818,
+      "kaynak": "butun-yarim-ceyrek/pasta-yarim.jpg",
+      "word": "pasta",
+      "category": "none",
+      "tags": {
+        "portion": "yarım"
+      }
+    },
+    {
+      "id": 2819,
       "kaynak": "butun-yarim-ceyrek/pizza-butun.jpg",
       "word": "pizza",
       "category": "none",
@@ -2281,7 +2317,7 @@
       }
     },
     {
-      "id": 2816,
+      "id": 2820,
       "kaynak": "butun-yarim-ceyrek/pizza-ceyrek.jpg",
       "word": "pizza",
       "category": "none",
@@ -2290,7 +2326,7 @@
       }
     },
     {
-      "id": 2817,
+      "id": 2821,
       "kaynak": "butun-yarim-ceyrek/pizza-yarim.jpg",
       "word": "pizza",
       "category": "none",
@@ -2299,7 +2335,7 @@
       }
     },
     {
-      "id": 2818,
+      "id": 2822,
       "kaynak": "butun-yarim-ceyrek/portakal-butun.jpg",
       "word": "portakal",
       "category": "none",
@@ -2308,7 +2344,7 @@
       }
     },
     {
-      "id": 2819,
+      "id": 2823,
       "kaynak": "butun-yarim-ceyrek/portakal-ceyrek.jpg",
       "word": "portakal",
       "category": "none",
@@ -2317,7 +2353,7 @@
       }
     },
     {
-      "id": 2820,
+      "id": 2824,
       "kaynak": "butun-yarim-ceyrek/portakal-yarim.jpg",
       "word": "portakal",
       "category": "none",
