@@ -49,7 +49,7 @@ Her nesneden 3-4 kademe üretilir (ör. 4 boyda aynı top). Bunlardan hem çift 
 - [ ] Ağır / hafif (görselden anlaşılması zor; bilinen nesne çiftleri: fil/tüy gibi)
 
 ## Aşama 3: Durum ve nitelik (aynı nesne, iki hal)
-- [ ] Açık / kapalı
+- [x] Açık / kapalı bağlandı: 10 çift, 20 soru, id 3001-3020.
 - [ ] Kırık / sağlam
 - [ ] Temiz / kirli
 - [ ] Islak / kuru
@@ -101,6 +101,9 @@ Her nesneden 3-4 kademe üretilir (ör. 4 boyda aynı top). Bunlardan hem çift 
 - [ ] Müzik aletleri (9)
 
 Not: kategori adlarında tutarsızlık var ("Hayvanlar" ve "hayvanlar" gibi). Bu aşamada düzeltilecek.
+
+## Aşama 5b: Yeni görselleri diğer etkinliklere açma
+Şu an yeni görseller sadece kavram sorularında (category none). Tek başına nesne olarak uygun olanlar (ör. kırmızı elma, mavi kupa, sarı kova) seçilip kategori, renk ve şekil etiketi alacak. Böylece nesne, renk, şekil ve harf etkinliklerine de girecekler. Sahneler, konum setleri ve yarım/çeyrek görseller girmez. Kaan sordu (2026-10-01).
 
 ## Aşama 6: Kalanlar ve temizlik
 - [ ] 5N1K, sıralama hikayeleri, gündüz/gece, önce/sonra, hızlı/yavaş, duyular

@@ -2526,6 +2526,188 @@
       "tags": {
         "depth": "sığ"
       }
+    },
+    {
+      "id": 3001,
+      "kaynak": "acik-kapali/canta-acik.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "state": "açık"
+      }
+    },
+    {
+      "id": 3002,
+      "kaynak": "acik-kapali/canta-kapali.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "state": "kapalı"
+      }
+    },
+    {
+      "id": 3003,
+      "kaynak": "acik-kapali/cicek-acik.jpg",
+      "word": "çiçek",
+      "category": "none",
+      "tags": {
+        "state": "açık"
+      }
+    },
+    {
+      "id": 3004,
+      "kaynak": "acik-kapali/cicek-kapali.jpg",
+      "word": "çiçek",
+      "category": "none",
+      "tags": {
+        "state": "kapalı"
+      }
+    },
+    {
+      "id": 3005,
+      "kaynak": "acik-kapali/goz-acik.jpg",
+      "word": "göz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "açık"
+      }
+    },
+    {
+      "id": 3006,
+      "kaynak": "acik-kapali/goz-kapali.jpg",
+      "word": "göz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "kapalı"
+      }
+    },
+    {
+      "id": 3007,
+      "kaynak": "acik-kapali/kapi-acik.jpg",
+      "word": "kapı",
+      "category": "none",
+      "tags": {
+        "state": "açık"
+      }
+    },
+    {
+      "id": 3008,
+      "kaynak": "acik-kapali/kapi-kapali.jpg",
+      "word": "kapı",
+      "category": "none",
+      "tags": {
+        "state": "kapalı"
+      }
+    },
+    {
+      "id": 3009,
+      "kaynak": "acik-kapali/kavanoz-acik.jpg",
+      "word": "kavanoz",
+      "category": "none",
+      "tags": {
+        "state": "açık"
+      }
+    },
+    {
+      "id": 3010,
+      "kaynak": "acik-kapali/kavanoz-kapali.jpg",
+      "word": "kavanoz",
+      "category": "none",
+      "tags": {
+        "state": "kapalı"
+      }
+    },
+    {
+      "id": 3011,
+      "kaynak": "acik-kapali/kitap-acik.jpg",
+      "word": "kitap",
+      "category": "none",
+      "tags": {
+        "state": "açık"
+      }
+    },
+    {
+      "id": 3012,
+      "kaynak": "acik-kapali/kitap-kapali.jpg",
+      "word": "kitap",
+      "category": "none",
+      "tags": {
+        "state": "kapalı"
+      }
+    },
+    {
+      "id": 3013,
+      "kaynak": "acik-kapali/kutu-acik.jpg",
+      "word": "kutu",
+      "category": "none",
+      "tags": {
+        "state": "açık"
+      }
+    },
+    {
+      "id": 3014,
+      "kaynak": "acik-kapali/kutu-kapali.jpg",
+      "word": "kutu",
+      "category": "none",
+      "tags": {
+        "state": "kapalı"
+      }
+    },
+    {
+      "id": 3015,
+      "kaynak": "acik-kapali/musluk-acik.jpg",
+      "word": "musluk",
+      "category": "none",
+      "tags": {
+        "state": "açık"
+      }
+    },
+    {
+      "id": 3016,
+      "kaynak": "acik-kapali/musluk-kapali.jpg",
+      "word": "musluk",
+      "category": "none",
+      "tags": {
+        "state": "kapalı"
+      }
+    },
+    {
+      "id": 3017,
+      "kaynak": "acik-kapali/pencere-acik.jpg",
+      "word": "pencere",
+      "category": "none",
+      "tags": {
+        "state": "açık"
+      }
+    },
+    {
+      "id": 3018,
+      "kaynak": "acik-kapali/pencere-kapali.jpg",
+      "word": "pencere",
+      "category": "none",
+      "tags": {
+        "state": "kapalı"
+      }
+    },
+    {
+      "id": 3019,
+      "kaynak": "acik-kapali/semsiye-acik.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "state": "açık"
+      }
+    },
+    {
+      "id": 3020,
+      "kaynak": "acik-kapali/semsiye-kapali.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "state": "kapalı"
+      }
     }
   ]
 }

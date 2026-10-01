@@ -130,6 +130,20 @@ const KAVRAMLAR = [
     kelime: { tabak: 'tabak', kase: 'kase', tencere: 'tencere', kutu: 'kutu', kova: 'kova', sepet: 'sepet',
       cekmece: 'çekmece', firin: 'fırın kabı', cukur: 'çukur', havuz: 'havuz' },
   },
+  {
+    klasor: 'acik-kapali',
+    dosya: 'acikKapaliData.ts',
+    exportAdi: 'openClosedDataYeni',
+    activityType: 'OpenClosed',
+    idBaslangic: 3001,
+    etiket: 'state',
+    sahneNesneler: ['goz'],
+    a: { ek: 'acik', deger: 'açık', soru: 'Açık olan hangisi?', sifat: 'açıktır' },
+    b: { ek: 'kapali', deger: 'kapalı', soru: 'Kapalı olan hangisi?', sifat: 'kapalıdır' },
+    ozne: { goz: 'gözler', cicek: 'çiçek' },
+    kelime: { kapi: 'kapı', pencere: 'pencere', kutu: 'kutu', semsiye: 'şemsiye', kitap: 'kitap', kavanoz: 'kavanoz',
+      musluk: 'musluk', canta: 'çanta', goz: 'göz', cicek: 'çiçek' },
+  },
 ];
 
 const cap = w => w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1);

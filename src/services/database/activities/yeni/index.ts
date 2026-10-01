@@ -20,3 +20,4 @@ export { fullEmptyDataYeni } from './doluBosData';
 export { fewMuchDataYeni } from './azCokData';
 export { halfQuarterWholeDataYeni } from './butunYarimCeyrekData';
 export { derinSigDataYeni } from './derinSigData';
+export { openClosedDataYeni } from './acikKapaliData';

@@ -6477,5 +6477,475 @@ export const imageDataYeni: ImageMetadata[] = [
         "E"
       ]
     }
+  },
+  {
+    "id": 3001,
+    "word": "çanta",
+    "imageUrl": "/images/3001.webp",
+    "audioKeys": {
+      "default": "çanta"
+    },
+    "tags": {
+      "category": "none",
+      "state": "açık",
+      "syllables": [
+        "çan",
+        "ta"
+      ],
+      "letters": [
+        "Ç",
+        "A",
+        "N",
+        "T",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3002,
+    "word": "çanta",
+    "imageUrl": "/images/3002.webp",
+    "audioKeys": {
+      "default": "çanta"
+    },
+    "tags": {
+      "category": "none",
+      "state": "kapalı",
+      "syllables": [
+        "çan",
+        "ta"
+      ],
+      "letters": [
+        "Ç",
+        "A",
+        "N",
+        "T",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3003,
+    "word": "çiçek",
+    "imageUrl": "/images/3003.webp",
+    "audioKeys": {
+      "default": "çiçek"
+    },
+    "tags": {
+      "category": "none",
+      "state": "açık",
+      "syllables": [
+        "çi",
+        "çek"
+      ],
+      "letters": [
+        "Ç",
+        "İ",
+        "Ç",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3004,
+    "word": "çiçek",
+    "imageUrl": "/images/3004.webp",
+    "audioKeys": {
+      "default": "çiçek"
+    },
+    "tags": {
+      "category": "none",
+      "state": "kapalı",
+      "syllables": [
+        "çi",
+        "çek"
+      ],
+      "letters": [
+        "Ç",
+        "İ",
+        "Ç",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3005,
+    "word": "göz",
+    "imageUrl": "/images/3005.webp",
+    "audioKeys": {
+      "default": "göz"
+    },
+    "tags": {
+      "category": "none",
+      "state": "açık",
+      "syllables": [
+        "göz"
+      ],
+      "letters": [
+        "G",
+        "Ö",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 3006,
+    "word": "göz",
+    "imageUrl": "/images/3006.webp",
+    "audioKeys": {
+      "default": "göz"
+    },
+    "tags": {
+      "category": "none",
+      "state": "kapalı",
+      "syllables": [
+        "göz"
+      ],
+      "letters": [
+        "G",
+        "Ö",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 3007,
+    "word": "kapı",
+    "imageUrl": "/images/3007.webp",
+    "audioKeys": {
+      "default": "kapı"
+    },
+    "tags": {
+      "category": "none",
+      "state": "açık",
+      "syllables": [
+        "ka",
+        "pı"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "P",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3008,
+    "word": "kapı",
+    "imageUrl": "/images/3008.webp",
+    "audioKeys": {
+      "default": "kapı"
+    },
+    "tags": {
+      "category": "none",
+      "state": "kapalı",
+      "syllables": [
+        "ka",
+        "pı"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "P",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3009,
+    "word": "kavanoz",
+    "imageUrl": "/images/3009.webp",
+    "audioKeys": {
+      "default": "kavanoz"
+    },
+    "tags": {
+      "category": "none",
+      "state": "açık",
+      "syllables": [
+        "ka",
+        "va",
+        "noz"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "V",
+        "A",
+        "N",
+        "O",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 3010,
+    "word": "kavanoz",
+    "imageUrl": "/images/3010.webp",
+    "audioKeys": {
+      "default": "kavanoz"
+    },
+    "tags": {
+      "category": "none",
+      "state": "kapalı",
+      "syllables": [
+        "ka",
+        "va",
+        "noz"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "V",
+        "A",
+        "N",
+        "O",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 3011,
+    "word": "kitap",
+    "imageUrl": "/images/3011.webp",
+    "audioKeys": {
+      "default": "kitap"
+    },
+    "tags": {
+      "category": "none",
+      "state": "açık",
+      "syllables": [
+        "ki",
+        "tap"
+      ],
+      "letters": [
+        "K",
+        "İ",
+        "T",
+        "A",
+        "P"
+      ]
+    }
+  },
+  {
+    "id": 3012,
+    "word": "kitap",
+    "imageUrl": "/images/3012.webp",
+    "audioKeys": {
+      "default": "kitap"
+    },
+    "tags": {
+      "category": "none",
+      "state": "kapalı",
+      "syllables": [
+        "ki",
+        "tap"
+      ],
+      "letters": [
+        "K",
+        "İ",
+        "T",
+        "A",
+        "P"
+      ]
+    }
+  },
+  {
+    "id": 3013,
+    "word": "kutu",
+    "imageUrl": "/images/3013.webp",
+    "audioKeys": {
+      "default": "kutu"
+    },
+    "tags": {
+      "category": "none",
+      "state": "açık",
+      "syllables": [
+        "ku",
+        "tu"
+      ],
+      "letters": [
+        "K",
+        "U",
+        "T",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 3014,
+    "word": "kutu",
+    "imageUrl": "/images/3014.webp",
+    "audioKeys": {
+      "default": "kutu"
+    },
+    "tags": {
+      "category": "none",
+      "state": "kapalı",
+      "syllables": [
+        "ku",
+        "tu"
+      ],
+      "letters": [
+        "K",
+        "U",
+        "T",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 3015,
+    "word": "musluk",
+    "imageUrl": "/images/3015.webp",
+    "audioKeys": {
+      "default": "musluk"
+    },
+    "tags": {
+      "category": "none",
+      "state": "açık",
+      "syllables": [
+        "mus",
+        "luk"
+      ],
+      "letters": [
+        "M",
+        "U",
+        "S",
+        "L",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3016,
+    "word": "musluk",
+    "imageUrl": "/images/3016.webp",
+    "audioKeys": {
+      "default": "musluk"
+    },
+    "tags": {
+      "category": "none",
+      "state": "kapalı",
+      "syllables": [
+        "mus",
+        "luk"
+      ],
+      "letters": [
+        "M",
+        "U",
+        "S",
+        "L",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3017,
+    "word": "pencere",
+    "imageUrl": "/images/3017.webp",
+    "audioKeys": {
+      "default": "pencere"
+    },
+    "tags": {
+      "category": "none",
+      "state": "açık",
+      "syllables": [
+        "pen",
+        "ce",
+        "re"
+      ],
+      "letters": [
+        "P",
+        "E",
+        "N",
+        "C",
+        "E",
+        "R",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 3018,
+    "word": "pencere",
+    "imageUrl": "/images/3018.webp",
+    "audioKeys": {
+      "default": "pencere"
+    },
+    "tags": {
+      "category": "none",
+      "state": "kapalı",
+      "syllables": [
+        "pen",
+        "ce",
+        "re"
+      ],
+      "letters": [
+        "P",
+        "E",
+        "N",
+        "C",
+        "E",
+        "R",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 3019,
+    "word": "şemsiye",
+    "imageUrl": "/images/3019.webp",
+    "audioKeys": {
+      "default": "şemsiye"
+    },
+    "tags": {
+      "category": "none",
+      "state": "açık",
+      "syllables": [
+        "şem",
+        "si",
+        "ye"
+      ],
+      "letters": [
+        "Ş",
+        "E",
+        "M",
+        "S",
+        "İ",
+        "Y",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 3020,
+    "word": "şemsiye",
+    "imageUrl": "/images/3020.webp",
+    "audioKeys": {
+      "default": "şemsiye"
+    },
+    "tags": {
+      "category": "none",
+      "state": "kapalı",
+      "syllables": [
+        "şem",
+        "si",
+        "ye"
+      ],
+      "letters": [
+        "Ş",
+        "E",
+        "M",
+        "S",
+        "İ",
+        "Y",
+        "E"
+      ]
+    }
   }
 ] as ImageMetadata[];
