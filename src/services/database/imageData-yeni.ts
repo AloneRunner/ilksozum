@@ -7891,5 +7891,389 @@ export const imageDataYeni: ImageMetadata[] = [
         "Z"
       ]
     }
+  },
+  {
+    "id": 3301,
+    "word": "havlu",
+    "imageUrl": "/images/3301.webp",
+    "audioKeys": {
+      "default": "havlu"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "ıslak",
+      "syllables": [
+        "hav",
+        "lu"
+      ],
+      "letters": [
+        "H",
+        "A",
+        "V",
+        "L",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 3302,
+    "word": "havlu",
+    "imageUrl": "/images/3302.webp",
+    "audioKeys": {
+      "default": "havlu"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "kuru",
+      "syllables": [
+        "hav",
+        "lu"
+      ],
+      "letters": [
+        "H",
+        "A",
+        "V",
+        "L",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 3303,
+    "word": "kum",
+    "imageUrl": "/images/3303.webp",
+    "audioKeys": {
+      "default": "kum"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "ıslak",
+      "syllables": [
+        "kum"
+      ],
+      "letters": [
+        "K",
+        "U",
+        "M"
+      ]
+    }
+  },
+  {
+    "id": 3304,
+    "word": "kum",
+    "imageUrl": "/images/3304.webp",
+    "audioKeys": {
+      "default": "kum"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "kuru",
+      "syllables": [
+        "kum"
+      ],
+      "letters": [
+        "K",
+        "U",
+        "M"
+      ]
+    }
+  },
+  {
+    "id": 3305,
+    "word": "saç",
+    "imageUrl": "/images/3305.webp",
+    "audioKeys": {
+      "default": "saç"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "ıslak",
+      "syllables": [
+        "saç"
+      ],
+      "letters": [
+        "S",
+        "A",
+        "Ç"
+      ]
+    }
+  },
+  {
+    "id": 3306,
+    "word": "saç",
+    "imageUrl": "/images/3306.webp",
+    "audioKeys": {
+      "default": "saç"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "kuru",
+      "syllables": [
+        "saç"
+      ],
+      "letters": [
+        "S",
+        "A",
+        "Ç"
+      ]
+    }
+  },
+  {
+    "id": 3307,
+    "word": "şemsiye",
+    "imageUrl": "/images/3307.webp",
+    "audioKeys": {
+      "default": "şemsiye"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "ıslak",
+      "syllables": [
+        "şem",
+        "si",
+        "ye"
+      ],
+      "letters": [
+        "Ş",
+        "E",
+        "M",
+        "S",
+        "İ",
+        "Y",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 3308,
+    "word": "sünger",
+    "imageUrl": "/images/3308.webp",
+    "audioKeys": {
+      "default": "sünger"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "ıslak",
+      "syllables": [
+        "sün",
+        "ger"
+      ],
+      "letters": [
+        "S",
+        "Ü",
+        "N",
+        "G",
+        "E",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 3309,
+    "word": "sünger",
+    "imageUrl": "/images/3309.webp",
+    "audioKeys": {
+      "default": "sünger"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "kuru",
+      "syllables": [
+        "sün",
+        "ger"
+      ],
+      "letters": [
+        "S",
+        "Ü",
+        "N",
+        "G",
+        "E",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 3310,
+    "word": "tişört",
+    "imageUrl": "/images/3310.webp",
+    "audioKeys": {
+      "default": "tişört"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "ıslak",
+      "syllables": [
+        "ti",
+        "şört"
+      ],
+      "letters": [
+        "T",
+        "İ",
+        "Ş",
+        "Ö",
+        "R",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 3311,
+    "word": "tişört",
+    "imageUrl": "/images/3311.webp",
+    "audioKeys": {
+      "default": "tişört"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "kuru",
+      "syllables": [
+        "ti",
+        "şört"
+      ],
+      "letters": [
+        "T",
+        "İ",
+        "Ş",
+        "Ö",
+        "R",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 3312,
+    "word": "toprak",
+    "imageUrl": "/images/3312.webp",
+    "audioKeys": {
+      "default": "toprak"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "ıslak",
+      "syllables": [
+        "top",
+        "rak"
+      ],
+      "letters": [
+        "T",
+        "O",
+        "P",
+        "R",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3313,
+    "word": "toprak",
+    "imageUrl": "/images/3313.webp",
+    "audioKeys": {
+      "default": "toprak"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "kuru",
+      "syllables": [
+        "top",
+        "rak"
+      ],
+      "letters": [
+        "T",
+        "O",
+        "P",
+        "R",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3314,
+    "word": "yaprak",
+    "imageUrl": "/images/3314.webp",
+    "audioKeys": {
+      "default": "yaprak"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "ıslak",
+      "syllables": [
+        "yap",
+        "rak"
+      ],
+      "letters": [
+        "Y",
+        "A",
+        "P",
+        "R",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3315,
+    "word": "yaprak",
+    "imageUrl": "/images/3315.webp",
+    "audioKeys": {
+      "default": "yaprak"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "kuru",
+      "syllables": [
+        "yap",
+        "rak"
+      ],
+      "letters": [
+        "Y",
+        "A",
+        "P",
+        "R",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3316,
+    "word": "yer",
+    "imageUrl": "/images/3316.webp",
+    "audioKeys": {
+      "default": "yer"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "ıslak",
+      "syllables": [
+        "yer"
+      ],
+      "letters": [
+        "Y",
+        "E",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 3317,
+    "word": "yer",
+    "imageUrl": "/images/3317.webp",
+    "audioKeys": {
+      "default": "yer"
+    },
+    "tags": {
+      "category": "none",
+      "wetness": "kuru",
+      "syllables": [
+        "yer"
+      ],
+      "letters": [
+        "Y",
+        "E",
+        "R"
+      ]
+    }
   }
 ] as ImageMetadata[];

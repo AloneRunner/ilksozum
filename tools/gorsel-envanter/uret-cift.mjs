@@ -170,6 +170,21 @@ const KAVRAMLAR = [
     kelime: { tisort: 'tişört', corap: 'çorap', ayakkabi: 'ayakkabı', araba: 'araba', tabak: 'tabak', eller: 'el',
       yuz: 'yüz', kopek: 'köpek', ayi: 'ayı', bardak: 'bardak' },
   },
+  {
+    klasor: 'islak-kuru',
+    dosya: 'islakKuruData.ts',
+    exportAdi: 'wetDryDataYeni',
+    activityType: 'WetDry',
+    idBaslangic: 3301,
+    etiket: 'wetness',
+    sahneNesneler: ['sac', 'yer', 'kum'],
+    yenidenKullan: { 'semsiye-kuru': 'acik-kapali/semsiye-acik.jpg' }, // Kaan: aynı şemsiye
+    a: { ek: 'islak', deger: 'ıslak', soru: 'Islak olan hangisi?', sifat: 'ıslaktır' },
+    b: { ek: 'kuru', deger: 'kuru', soru: 'Kuru olan hangisi?', sifat: 'kurudur' },
+    ozne: { sac: 'saçlar' },
+    kelime: { havlu: 'havlu', tisort: 'tişört', semsiye: 'şemsiye', sac: 'saç', kopek: 'köpek', sunger: 'sünger',
+      yaprak: 'yaprak', toprak: 'toprak', kum: 'kum', yer: 'yer' },
+  },
 ];
 
 const cap = w => w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1);
@@ -182,7 +197,7 @@ for (const k of KAVRAMLAR) {
   const dir = path.join(RAW, k.klasor);
   if (!fs.existsSync(dir)) { console.log(`${k.klasor}: klasör yok, atlandı`); continue; }
   const files = fs.readdirSync(dir).filter(f => f.endsWith('.jpg')).sort();
-  const nesneler = [...new Set(files.map(f => f.replace(/-[^-]+\.jpg$/, '')))];
+  const nesneler = [...new Set([...files, ...Object.keys(k.yenidenKullan || {}).map(a => a + '.jpg')].map(f => f.replace(/-[^-]+\.jpg$/, '')))];
   const word = n => {
     if (!k.kelime[n]) throw new Error(`${k.klasor}: "${n}" için kelime tanımı yok (KAVRAMLAR.kelime)`);
     return k.kelime[n];
@@ -193,7 +208,15 @@ for (const k of KAVRAMLAR) {
   let id = k.idBaslangic;
   const ids = {};
   const yeni = [];
+  // Yeniden kullanım: başka bir kavramın görseli bu kavramda da kullanılır (yeni görsel üretilmez).
+  // Örnek: islak-kuru'da 'semsiye-kuru' = acik-kapali/semsiye-acik.jpg
+  for (const [ad, kaynak] of Object.entries(k.yenidenKullan || {})) {
+    const g = list.gorseller.find(x => x.kaynak === kaynak);
+    if (!g) throw new Error(`${k.klasor}: yeniden kullanılacak görsel bulunamadı: ${kaynak}`);
+    ids[`${ad}.jpg`] = g.id;
+  }
   for (const f of files) {
+    if (k.yenidenKullan && k.yenidenKullan[f.replace(/\.jpg$/, '')]) continue;
     const [, n, ek] = /^(.+)-([^-]+)\.jpg$/.exec(f);
     const deger = haller[ek] ? haller[ek].deger : ek;
     ids[f] = id;

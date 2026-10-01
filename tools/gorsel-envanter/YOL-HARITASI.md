@@ -14,6 +14,7 @@ Yöntem: üret → toplu indir → Claude seçer ve `gorsel-ham/<konu>/` klasör
 
 ## Araçlar
 - `uret-cift.mjs`: çift kavramlar (klasör: `<nesne>-<a>.jpg / <nesne>-<b>.jpg`) → görsel listesi + `yeni/<dosya>.ts`. Yeni kavram = KAVRAMLAR dizisine bir kayıt.
+- `uret-cift.mjs` → `yenidenKullan`: başka kavramdaki görseli tekrar kullan (Kaan: "şemsiye zaten vardı"). Yeni tur hazırlarken önce mevcut görsellere bak.
 - `uret-konum.mjs`: konum setleri.
 - `gorsel-isle.mjs`: liste → `public/images/<id>.webp` + `imageData-yeni.ts`. Sahne görsellerinde `sahne: true` (renkler korunur).
 - Sonra: `contentService.ts` içinde ilgili etkinliği `YENI_SORULAR_AKTIF ? xYeni : x` yap, `yeni/index.ts`'e export ekle.
@@ -53,7 +54,7 @@ Her nesneden 3-4 kademe üretilir (ör. 4 boyda aynı top). Bunlardan hem çift 
 - [x] Kırık / sağlam bağlandı: 10 çift, 20 soru, id 3101-3120.
 - [ ] YENİ KAVRAM: Bozuk / çalışan (Kaan önerisi). Kırık = parçalanmış, bozuk = çalışmıyor. Görselde zor (yanmayan lamba = kapalı lamba ile karışır). Fikir: aynı oyuncak/alet, çalışan hali hareket/ışık/ses işaretiyle (ör. pervane dönüyor, ekranda görüntü var), bozuk hali duman, ters dönmüş, ekran karanlık ve çatlak değil. Ayrıca düşünülecek.
 - [x] Temiz / kirli bağlandı: 10 çift, 20 soru, id 3201-3220.
-- [ ] Islak / kuru
+- [x] Islak / kuru bağlandı: 9 çift, 18 soru, id 3301+. Kuru şemsiye = Açık/Kapalı'daki açık şemsiye (yeniden kullanım, `yenidenKullan`). Köpek olmadı.
 - [ ] Eski / yeni
 - [ ] Taze / bayat
 - [ ] Dağınık / toplu

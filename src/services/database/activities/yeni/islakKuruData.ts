@@ -1,0 +1,249 @@
+// OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-cift.mjs (islak-kuru). Elle düzenleme.
+// 9 çift, 18 soru. Görseller: gorsel-ham/islak-kuru/ → id 3301-3317.
+import { ConceptRound, ActivityType } from '../../../../types';
+
+export const wetDryDataYeni: ConceptRound[] = [
+    // havlu
+    {
+        id: 1,
+        question: "Islak olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Islak olan hangisi?', correct: 'Evet! Havlu ıslaktır.', wrong: 'Hayır, bu havlu kurudur.' }
+        },
+        options: [
+            { id: 3301, word: "havlu", imageUrl: "/images/3301.webp", isCorrect: true, audioKey: "havlu", spokenText: "havlu" },
+            { id: 3302, word: "havlu", imageUrl: "/images/3302.webp", isCorrect: false, audioKey: "havlu", spokenText: "havlu" }
+        ]
+    },
+    {
+        id: 2,
+        question: "Kuru olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Kuru olan hangisi?', correct: 'Evet! Havlu kurudur.', wrong: 'Hayır, bu havlu ıslaktır.' }
+        },
+        options: [
+            { id: 3302, word: "havlu", imageUrl: "/images/3302.webp", isCorrect: true, audioKey: "havlu", spokenText: "havlu" },
+            { id: 3301, word: "havlu", imageUrl: "/images/3301.webp", isCorrect: false, audioKey: "havlu", spokenText: "havlu" }
+        ]
+    },
+    // kum
+    {
+        id: 3,
+        question: "Islak olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Islak olan hangisi?', correct: 'Evet! Kum ıslaktır.', wrong: 'Hayır, bu kum kurudur.' }
+        },
+        options: [
+            { id: 3303, word: "kum", imageUrl: "/images/3303.webp", isCorrect: true, audioKey: "kum", spokenText: "kum" },
+            { id: 3304, word: "kum", imageUrl: "/images/3304.webp", isCorrect: false, audioKey: "kum", spokenText: "kum" }
+        ]
+    },
+    {
+        id: 4,
+        question: "Kuru olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Kuru olan hangisi?', correct: 'Evet! Kum kurudur.', wrong: 'Hayır, bu kum ıslaktır.' }
+        },
+        options: [
+            { id: 3304, word: "kum", imageUrl: "/images/3304.webp", isCorrect: true, audioKey: "kum", spokenText: "kum" },
+            { id: 3303, word: "kum", imageUrl: "/images/3303.webp", isCorrect: false, audioKey: "kum", spokenText: "kum" }
+        ]
+    },
+    // saç
+    {
+        id: 5,
+        question: "Islak olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Islak olan hangisi?', correct: 'Evet! Saçlar ıslaktır.', wrong: 'Hayır, bu saçlar kurudur.' }
+        },
+        options: [
+            { id: 3305, word: "saç", imageUrl: "/images/3305.webp", isCorrect: true, audioKey: "saç", spokenText: "saç" },
+            { id: 3306, word: "saç", imageUrl: "/images/3306.webp", isCorrect: false, audioKey: "saç", spokenText: "saç" }
+        ]
+    },
+    {
+        id: 6,
+        question: "Kuru olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Kuru olan hangisi?', correct: 'Evet! Saçlar kurudur.', wrong: 'Hayır, bu saçlar ıslaktır.' }
+        },
+        options: [
+            { id: 3306, word: "saç", imageUrl: "/images/3306.webp", isCorrect: true, audioKey: "saç", spokenText: "saç" },
+            { id: 3305, word: "saç", imageUrl: "/images/3305.webp", isCorrect: false, audioKey: "saç", spokenText: "saç" }
+        ]
+    },
+    // şemsiye
+    {
+        id: 7,
+        question: "Islak olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Islak olan hangisi?', correct: 'Evet! Şemsiye ıslaktır.', wrong: 'Hayır, bu şemsiye kurudur.' }
+        },
+        options: [
+            { id: 3307, word: "şemsiye", imageUrl: "/images/3307.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
+            { id: 3019, word: "şemsiye", imageUrl: "/images/3019.webp", isCorrect: false, audioKey: "şemsiye", spokenText: "şemsiye" }
+        ]
+    },
+    {
+        id: 8,
+        question: "Kuru olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Kuru olan hangisi?', correct: 'Evet! Şemsiye kurudur.', wrong: 'Hayır, bu şemsiye ıslaktır.' }
+        },
+        options: [
+            { id: 3019, word: "şemsiye", imageUrl: "/images/3019.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
+            { id: 3307, word: "şemsiye", imageUrl: "/images/3307.webp", isCorrect: false, audioKey: "şemsiye", spokenText: "şemsiye" }
+        ]
+    },
+    // sünger
+    {
+        id: 9,
+        question: "Islak olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Islak olan hangisi?', correct: 'Evet! Sünger ıslaktır.', wrong: 'Hayır, bu sünger kurudur.' }
+        },
+        options: [
+            { id: 3308, word: "sünger", imageUrl: "/images/3308.webp", isCorrect: true, audioKey: "sünger", spokenText: "sünger" },
+            { id: 3309, word: "sünger", imageUrl: "/images/3309.webp", isCorrect: false, audioKey: "sünger", spokenText: "sünger" }
+        ]
+    },
+    {
+        id: 10,
+        question: "Kuru olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Kuru olan hangisi?', correct: 'Evet! Sünger kurudur.', wrong: 'Hayır, bu sünger ıslaktır.' }
+        },
+        options: [
+            { id: 3309, word: "sünger", imageUrl: "/images/3309.webp", isCorrect: true, audioKey: "sünger", spokenText: "sünger" },
+            { id: 3308, word: "sünger", imageUrl: "/images/3308.webp", isCorrect: false, audioKey: "sünger", spokenText: "sünger" }
+        ]
+    },
+    // tişört
+    {
+        id: 11,
+        question: "Islak olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Islak olan hangisi?', correct: 'Evet! Tişört ıslaktır.', wrong: 'Hayır, bu tişört kurudur.' }
+        },
+        options: [
+            { id: 3310, word: "tişört", imageUrl: "/images/3310.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
+            { id: 3311, word: "tişört", imageUrl: "/images/3311.webp", isCorrect: false, audioKey: "tişört", spokenText: "tişört" }
+        ]
+    },
+    {
+        id: 12,
+        question: "Kuru olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Kuru olan hangisi?', correct: 'Evet! Tişört kurudur.', wrong: 'Hayır, bu tişört ıslaktır.' }
+        },
+        options: [
+            { id: 3311, word: "tişört", imageUrl: "/images/3311.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
+            { id: 3310, word: "tişört", imageUrl: "/images/3310.webp", isCorrect: false, audioKey: "tişört", spokenText: "tişört" }
+        ]
+    },
+    // toprak
+    {
+        id: 13,
+        question: "Islak olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Islak olan hangisi?', correct: 'Evet! Toprak ıslaktır.', wrong: 'Hayır, bu toprak kurudur.' }
+        },
+        options: [
+            { id: 3312, word: "toprak", imageUrl: "/images/3312.webp", isCorrect: true, audioKey: "toprak", spokenText: "toprak" },
+            { id: 3313, word: "toprak", imageUrl: "/images/3313.webp", isCorrect: false, audioKey: "toprak", spokenText: "toprak" }
+        ]
+    },
+    {
+        id: 14,
+        question: "Kuru olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Kuru olan hangisi?', correct: 'Evet! Toprak kurudur.', wrong: 'Hayır, bu toprak ıslaktır.' }
+        },
+        options: [
+            { id: 3313, word: "toprak", imageUrl: "/images/3313.webp", isCorrect: true, audioKey: "toprak", spokenText: "toprak" },
+            { id: 3312, word: "toprak", imageUrl: "/images/3312.webp", isCorrect: false, audioKey: "toprak", spokenText: "toprak" }
+        ]
+    },
+    // yaprak
+    {
+        id: 15,
+        question: "Islak olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Islak olan hangisi?', correct: 'Evet! Yaprak ıslaktır.', wrong: 'Hayır, bu yaprak kurudur.' }
+        },
+        options: [
+            { id: 3314, word: "yaprak", imageUrl: "/images/3314.webp", isCorrect: true, audioKey: "yaprak", spokenText: "yaprak" },
+            { id: 3315, word: "yaprak", imageUrl: "/images/3315.webp", isCorrect: false, audioKey: "yaprak", spokenText: "yaprak" }
+        ]
+    },
+    {
+        id: 16,
+        question: "Kuru olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Kuru olan hangisi?', correct: 'Evet! Yaprak kurudur.', wrong: 'Hayır, bu yaprak ıslaktır.' }
+        },
+        options: [
+            { id: 3315, word: "yaprak", imageUrl: "/images/3315.webp", isCorrect: true, audioKey: "yaprak", spokenText: "yaprak" },
+            { id: 3314, word: "yaprak", imageUrl: "/images/3314.webp", isCorrect: false, audioKey: "yaprak", spokenText: "yaprak" }
+        ]
+    },
+    // yer
+    {
+        id: 17,
+        question: "Islak olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Islak olan hangisi?', correct: 'Evet! Yer ıslaktır.', wrong: 'Hayır, bu yer kurudur.' }
+        },
+        options: [
+            { id: 3316, word: "yer", imageUrl: "/images/3316.webp", isCorrect: true, audioKey: "yer", spokenText: "yer" },
+            { id: 3317, word: "yer", imageUrl: "/images/3317.webp", isCorrect: false, audioKey: "yer", spokenText: "yer" }
+        ]
+    },
+    {
+        id: 18,
+        question: "Kuru olan hangisi?",
+        questionAudioKey: "",
+        activityType: ActivityType.WetDry,
+        speech: {
+            tr: { question: 'Kuru olan hangisi?', correct: 'Evet! Yer kurudur.', wrong: 'Hayır, bu yer ıslaktır.' }
+        },
+        options: [
+            { id: 3317, word: "yer", imageUrl: "/images/3317.webp", isCorrect: true, audioKey: "yer", spokenText: "yer" },
+            { id: 3316, word: "yer", imageUrl: "/images/3316.webp", isCorrect: false, audioKey: "yer", spokenText: "yer" }
+        ]
+    },
+];

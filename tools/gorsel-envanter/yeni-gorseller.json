@@ -3072,6 +3072,165 @@
       "tags": {
         "cleanliness": "temiz"
       }
+    },
+    {
+      "id": 3301,
+      "kaynak": "islak-kuru/havlu-islak.jpg",
+      "word": "havlu",
+      "category": "none",
+      "tags": {
+        "wetness": "ıslak"
+      }
+    },
+    {
+      "id": 3302,
+      "kaynak": "islak-kuru/havlu-kuru.jpg",
+      "word": "havlu",
+      "category": "none",
+      "tags": {
+        "wetness": "kuru"
+      }
+    },
+    {
+      "id": 3303,
+      "kaynak": "islak-kuru/kum-islak.jpg",
+      "word": "kum",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "wetness": "ıslak"
+      }
+    },
+    {
+      "id": 3304,
+      "kaynak": "islak-kuru/kum-kuru.jpg",
+      "word": "kum",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "wetness": "kuru"
+      }
+    },
+    {
+      "id": 3305,
+      "kaynak": "islak-kuru/sac-islak.jpg",
+      "word": "saç",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "wetness": "ıslak"
+      }
+    },
+    {
+      "id": 3306,
+      "kaynak": "islak-kuru/sac-kuru.jpg",
+      "word": "saç",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "wetness": "kuru"
+      }
+    },
+    {
+      "id": 3307,
+      "kaynak": "islak-kuru/semsiye-islak.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "wetness": "ıslak"
+      }
+    },
+    {
+      "id": 3308,
+      "kaynak": "islak-kuru/sunger-islak.jpg",
+      "word": "sünger",
+      "category": "none",
+      "tags": {
+        "wetness": "ıslak"
+      }
+    },
+    {
+      "id": 3309,
+      "kaynak": "islak-kuru/sunger-kuru.jpg",
+      "word": "sünger",
+      "category": "none",
+      "tags": {
+        "wetness": "kuru"
+      }
+    },
+    {
+      "id": 3310,
+      "kaynak": "islak-kuru/tisort-islak.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "wetness": "ıslak"
+      }
+    },
+    {
+      "id": 3311,
+      "kaynak": "islak-kuru/tisort-kuru.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "wetness": "kuru"
+      }
+    },
+    {
+      "id": 3312,
+      "kaynak": "islak-kuru/toprak-islak.jpg",
+      "word": "toprak",
+      "category": "none",
+      "tags": {
+        "wetness": "ıslak"
+      }
+    },
+    {
+      "id": 3313,
+      "kaynak": "islak-kuru/toprak-kuru.jpg",
+      "word": "toprak",
+      "category": "none",
+      "tags": {
+        "wetness": "kuru"
+      }
+    },
+    {
+      "id": 3314,
+      "kaynak": "islak-kuru/yaprak-islak.jpg",
+      "word": "yaprak",
+      "category": "none",
+      "tags": {
+        "wetness": "ıslak"
+      }
+    },
+    {
+      "id": 3315,
+      "kaynak": "islak-kuru/yaprak-kuru.jpg",
+      "word": "yaprak",
+      "category": "none",
+      "tags": {
+        "wetness": "kuru"
+      }
+    },
+    {
+      "id": 3316,
+      "kaynak": "islak-kuru/yer-islak.jpg",
+      "word": "yer",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "wetness": "ıslak"
+      }
+    },
+    {
+      "id": 3317,
+      "kaynak": "islak-kuru/yer-kuru.jpg",
+      "word": "yer",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "wetness": "kuru"
+      }
     }
   ]
 }
