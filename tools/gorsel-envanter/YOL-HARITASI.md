@@ -41,9 +41,11 @@ Her nesneden 3-4 kademe üretilir (ör. 4 boyda aynı top). Bunlardan hem çift 
 - [x] Uzun / kısa bağlandı (2026-10-01): 10 çift, 20 soru, id 2401-2420. Yılan ve atkıda fark ~1,5-1,7 kat (zayıf ama kabul).
 - [x] Yüksek / alçak bağlandı (2026-10-01): 10 çift, 20 soru, id 2501-2521, blok serisi (8/4/2) tam. Soru numaraları 1001+ (HighLow da i18n sp_ anahtarı arıyor).
 - [ ] Derin / sığ
-- [ ] Az / çok, kalabalık / tenha
+- [x] Az / çok bağlandı: 10 çift, 20 soru, id 2701-2720 (az = 2 tane, çok = 12-15, kap yok).
+- [ ] Kalabalık / tenha
 - [x] Dolu / boş bağlandı: 10 çift (kumbara + 9), 20 soru, id 2601-2620.
-- [ ] Tek / çift, kaç tane, bütün / yarım / çeyrek
+- [x] Bütün (tam) / yarım / çeyrek bağlandı: 20 görsel, 19 karşılaştırma, 51 soru. Pizza Claude tarafından kesildi. Ekmek yarımı Kaan yaptı. Eksik: pasta (yukarıdan bütün pasta gelirse kesilecek; çeyrek dilim ham klasörde yedekte), karpuz çeyreği (`flow-butun-yarim-ceyrek.md`).
+- [ ] Tek / çift, kaç tane
 - [ ] Ağır / hafif (görselden anlaşılması zor; bilinen nesne çiftleri: fil/tüy gibi)
 
 ## Aşama 3: Durum ve nitelik (aynı nesne, iki hal)

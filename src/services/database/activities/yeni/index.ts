@@ -17,3 +17,5 @@ export { bigSmallDataYeni } from './buyukKucukData';
 export { longShortDataYeni } from './uzunKisaData';
 export { highLowDataYeni } from './yuksekAlcakData';
 export { fullEmptyDataYeni } from './doluBosData';
+export { fewMuchDataYeni } from './azCokData';
+export { halfQuarterWholeDataYeni } from './butunYarimCeyrekData';

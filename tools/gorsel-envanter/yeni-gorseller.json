@@ -1964,6 +1964,366 @@
       "tags": {
         "fullness": "dolu"
       }
+    },
+    {
+      "id": 2701,
+      "kaynak": "az-cok/araba-az.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "quantity": "az"
+      }
+    },
+    {
+      "id": 2702,
+      "kaynak": "az-cok/araba-cok.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "quantity": "çok"
+      }
+    },
+    {
+      "id": 2703,
+      "kaynak": "az-cok/balon-az.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "quantity": "az"
+      }
+    },
+    {
+      "id": 2704,
+      "kaynak": "az-cok/balon-cok.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "quantity": "çok"
+      }
+    },
+    {
+      "id": 2705,
+      "kaynak": "az-cok/blok-az.jpg",
+      "word": "blok",
+      "category": "none",
+      "tags": {
+        "quantity": "az"
+      }
+    },
+    {
+      "id": 2706,
+      "kaynak": "az-cok/blok-cok.jpg",
+      "word": "blok",
+      "category": "none",
+      "tags": {
+        "quantity": "çok"
+      }
+    },
+    {
+      "id": 2707,
+      "kaynak": "az-cok/cilek-az.jpg",
+      "word": "çilek",
+      "category": "none",
+      "tags": {
+        "quantity": "az"
+      }
+    },
+    {
+      "id": 2708,
+      "kaynak": "az-cok/cilek-cok.jpg",
+      "word": "çilek",
+      "category": "none",
+      "tags": {
+        "quantity": "çok"
+      }
+    },
+    {
+      "id": 2709,
+      "kaynak": "az-cok/dugme-az.jpg",
+      "word": "düğme",
+      "category": "none",
+      "tags": {
+        "quantity": "az"
+      }
+    },
+    {
+      "id": 2710,
+      "kaynak": "az-cok/dugme-cok.jpg",
+      "word": "düğme",
+      "category": "none",
+      "tags": {
+        "quantity": "çok"
+      }
+    },
+    {
+      "id": 2711,
+      "kaynak": "az-cok/elma-az.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "quantity": "az"
+      }
+    },
+    {
+      "id": 2712,
+      "kaynak": "az-cok/elma-cok.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "quantity": "çok"
+      }
+    },
+    {
+      "id": 2713,
+      "kaynak": "az-cok/kalem-az.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "quantity": "az"
+      }
+    },
+    {
+      "id": 2714,
+      "kaynak": "az-cok/kalem-cok.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "quantity": "çok"
+      }
+    },
+    {
+      "id": 2715,
+      "kaynak": "az-cok/kurabiye-az.jpg",
+      "word": "kurabiye",
+      "category": "none",
+      "tags": {
+        "quantity": "az"
+      }
+    },
+    {
+      "id": 2716,
+      "kaynak": "az-cok/kurabiye-cok.jpg",
+      "word": "kurabiye",
+      "category": "none",
+      "tags": {
+        "quantity": "çok"
+      }
+    },
+    {
+      "id": 2717,
+      "kaynak": "az-cok/top-az.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "quantity": "az"
+      }
+    },
+    {
+      "id": 2718,
+      "kaynak": "az-cok/top-cok.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "quantity": "çok"
+      }
+    },
+    {
+      "id": 2719,
+      "kaynak": "az-cok/yaprak-az.jpg",
+      "word": "yaprak",
+      "category": "none",
+      "tags": {
+        "quantity": "az"
+      }
+    },
+    {
+      "id": 2720,
+      "kaynak": "az-cok/yaprak-cok.jpg",
+      "word": "yaprak",
+      "category": "none",
+      "tags": {
+        "quantity": "çok"
+      }
+    },
+    {
+      "id": 2801,
+      "kaynak": "butun-yarim-ceyrek/domates-butun.jpg",
+      "word": "domates",
+      "category": "none",
+      "tags": {
+        "portion": "bütün"
+      }
+    },
+    {
+      "id": 2802,
+      "kaynak": "butun-yarim-ceyrek/domates-ceyrek.jpg",
+      "word": "domates",
+      "category": "none",
+      "tags": {
+        "portion": "çeyrek"
+      }
+    },
+    {
+      "id": 2803,
+      "kaynak": "butun-yarim-ceyrek/domates-yarim.jpg",
+      "word": "domates",
+      "category": "none",
+      "tags": {
+        "portion": "yarım"
+      }
+    },
+    {
+      "id": 2804,
+      "kaynak": "butun-yarim-ceyrek/ekmek-butun.jpg",
+      "word": "ekmek",
+      "category": "none",
+      "tags": {
+        "portion": "bütün"
+      }
+    },
+    {
+      "id": 2805,
+      "kaynak": "butun-yarim-ceyrek/ekmek-ceyrek.jpg",
+      "word": "ekmek",
+      "category": "none",
+      "tags": {
+        "portion": "çeyrek"
+      }
+    },
+    {
+      "id": 2806,
+      "kaynak": "butun-yarim-ceyrek/ekmek-yarim.jpg",
+      "word": "ekmek",
+      "category": "none",
+      "tags": {
+        "portion": "yarım"
+      }
+    },
+    {
+      "id": 2807,
+      "kaynak": "butun-yarim-ceyrek/elma-butun.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "portion": "bütün"
+      }
+    },
+    {
+      "id": 2808,
+      "kaynak": "butun-yarim-ceyrek/elma-ceyrek.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "portion": "çeyrek"
+      }
+    },
+    {
+      "id": 2809,
+      "kaynak": "butun-yarim-ceyrek/elma-yarim.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "portion": "yarım"
+      }
+    },
+    {
+      "id": 2810,
+      "kaynak": "butun-yarim-ceyrek/karpuz-butun.jpg",
+      "word": "karpuz",
+      "category": "none",
+      "tags": {
+        "portion": "bütün"
+      }
+    },
+    {
+      "id": 2811,
+      "kaynak": "butun-yarim-ceyrek/karpuz-yarim.jpg",
+      "word": "karpuz",
+      "category": "none",
+      "tags": {
+        "portion": "yarım"
+      }
+    },
+    {
+      "id": 2812,
+      "kaynak": "butun-yarim-ceyrek/limon-butun.jpg",
+      "word": "limon",
+      "category": "none",
+      "tags": {
+        "portion": "bütün"
+      }
+    },
+    {
+      "id": 2813,
+      "kaynak": "butun-yarim-ceyrek/limon-ceyrek.jpg",
+      "word": "limon",
+      "category": "none",
+      "tags": {
+        "portion": "çeyrek"
+      }
+    },
+    {
+      "id": 2814,
+      "kaynak": "butun-yarim-ceyrek/limon-yarim.jpg",
+      "word": "limon",
+      "category": "none",
+      "tags": {
+        "portion": "yarım"
+      }
+    },
+    {
+      "id": 2815,
+      "kaynak": "butun-yarim-ceyrek/pizza-butun.jpg",
+      "word": "pizza",
+      "category": "none",
+      "tags": {
+        "portion": "bütün"
+      }
+    },
+    {
+      "id": 2816,
+      "kaynak": "butun-yarim-ceyrek/pizza-ceyrek.jpg",
+      "word": "pizza",
+      "category": "none",
+      "tags": {
+        "portion": "çeyrek"
+      }
+    },
+    {
+      "id": 2817,
+      "kaynak": "butun-yarim-ceyrek/pizza-yarim.jpg",
+      "word": "pizza",
+      "category": "none",
+      "tags": {
+        "portion": "yarım"
+      }
+    },
+    {
+      "id": 2818,
+      "kaynak": "butun-yarim-ceyrek/portakal-butun.jpg",
+      "word": "portakal",
+      "category": "none",
+      "tags": {
+        "portion": "bütün"
+      }
+    },
+    {
+      "id": 2819,
+      "kaynak": "butun-yarim-ceyrek/portakal-ceyrek.jpg",
+      "word": "portakal",
+      "category": "none",
+      "tags": {
+        "portion": "çeyrek"
+      }
+    },
+    {
+      "id": 2820,
+      "kaynak": "butun-yarim-ceyrek/portakal-yarim.jpg",
+      "word": "portakal",
+      "category": "none",
+      "tags": {
+        "portion": "yarım"
+      }
     }
   ]
 }

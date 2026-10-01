@@ -81,12 +81,50 @@ const KAVRAMLAR = [
     kelime: { kumbara: 'kumbara', bardak: 'bardak', kavanoz: 'kavanoz', sepet: 'sepet', kutu: 'oyuncak kutusu',
       kova: 'kova', kalemlik: 'kalemlik', tabak: 'tabak', akvaryum: 'akvaryum', koli: 'yumurta kolisi' },
   },
+  {
+    klasor: 'az-cok',
+    dosya: 'azCokData.ts',
+    exportAdi: 'fewMuchDataYeni',
+    activityType: 'FewMuch',
+    idBaslangic: 2701,
+    etiket: 'quantity',
+    a: { ek: 'cok', deger: 'çok', soru: 'Çok olan hangisi?', sifat: 'çoktur' },
+    b: { ek: 'az', deger: 'az', soru: 'Az olan hangisi?', sifat: 'azdır' },
+    // "Elma çoktur" yerine çoğul özne: "Burada elmalar çoktur"
+    buYok: true, // "Hayır, burada elmalar azdır."
+    ozne: { elma: 'burada elmalar', top: 'burada toplar', kalem: 'burada kalemler', kurabiye: 'burada kurabiyeler',
+      dugme: 'burada düğmeler', blok: 'burada bloklar', araba: 'burada arabalar', balon: 'burada balonlar',
+      yaprak: 'burada yapraklar', cilek: 'burada çilekler' },
+    kelime: { elma: 'elma', top: 'top', kalem: 'kalem', kurabiye: 'kurabiye', dugme: 'düğme', blok: 'blok',
+      araba: 'araba', balon: 'balon', yaprak: 'yaprak', cilek: 'çilek' },
+  },
+  {
+    klasor: 'butun-yarim-ceyrek',
+    dosya: 'butunYarimCeyrekData.ts',
+    exportAdi: 'halfQuarterWholeDataYeni',
+    activityType: 'HalfQuarterWhole',
+    idBaslangic: 2801,
+    etiket: 'portion',
+    haller: {
+      // Kaan: "tam" da lazım. Okulda "tam elma / yarım elma" da deniyor.
+      butun: { deger: 'bütün', soru: 'Bütün olan hangisi?', sifat: 'bütündür', esSoru: 'Tam olan hangisi?', esSifat: 'tamdır' },
+      yarim: { deger: 'yarım', soru: 'Yarım olan hangisi?', sifat: 'yarımdır' },
+      ceyrek: { deger: 'çeyrek', soru: 'Çeyrek olan hangisi?', sifat: 'çeyrektir' },
+    },
+    // Her yiyecekten 3 karşılaştırma: bütün-yarım, yarım-çeyrek, bütün-çeyrek
+    ciftler: [['butun', 'yarim'], ['yarim', 'ceyrek'], ['butun', 'ceyrek']],
+    kelime: { elma: 'elma', portakal: 'portakal', pizza: 'pizza', pasta: 'pasta', karpuz: 'karpuz',
+      ekmek: 'ekmek', limon: 'limon', domates: 'domates' },
+  },
 ];
 
 const cap = w => w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1);
 const list = JSON.parse(fs.readFileSync(LIST, 'utf8'));
 
 for (const k of KAVRAMLAR) {
+  // İki halli kavramlar (a/b) tek karşılaştırmadır. Üç halliler (bütün/yarım/çeyrek) "haller" + "ciftler" ile tanımlanır.
+  const haller = k.haller || { [k.a.ek]: k.a, [k.b.ek]: k.b };
+  const ciftler = k.ciftler || [[k.a.ek, k.b.ek]];
   const dir = path.join(RAW, k.klasor);
   if (!fs.existsSync(dir)) { console.log(`${k.klasor}: klasör yok, atlandı`); continue; }
   const files = fs.readdirSync(dir).filter(f => f.endsWith('.jpg')).sort();
@@ -103,7 +141,7 @@ for (const k of KAVRAMLAR) {
   const yeni = [];
   for (const f of files) {
     const [, n, ek] = /^(.+)-([^-]+)\.jpg$/.exec(f);
-    const deger = ek === k.a.ek ? k.a.deger : ek === k.b.ek ? k.b.deger : ek;
+    const deger = haller[ek] ? haller[ek].deger : ek;
     ids[f] = id;
     const sahne = k.sahne || (k.sahneNesneler || []).includes(n);
     yeni.push({ id: id++, kaynak: `${k.klasor}/${f}`, word: word(n), category: 'none', ...(sahne ? { sahne: true } : {}), tags: { [k.etiket]: deger } });
@@ -132,15 +170,24 @@ ${opt(fNo, w, false)}
   const rounds = [];
   let ciftSayisi = 0;
   for (const n of nesneler) {
-    const fa = `${n}-${k.a.ek}.jpg`, fb = `${n}-${k.b.ek}.jpg`;
-    if (!ids[fa] || !ids[fb]) continue;
-    ciftSayisi++;
     const w = word(n);
     // Cümle öznesi kelimeden farklı olabilir (ör. "ayakkabının topuğu yüksektir")
     const oz = (k.ozne || {})[n] || w;
-    rounds.push(`    // ${w}`);
-    rounds.push(round(k.a.soru, `Evet! ${cap(oz)} ${k.a.sifat}.`, `Hayır, bu ${oz} ${k.b.sifat}.`, fa, fb, w) + ',');
-    rounds.push(round(k.b.soru, `Evet! ${cap(oz)} ${k.b.sifat}.`, `Hayır, bu ${oz} ${k.a.sifat}.`, fb, fa, w) + ',');
+    const bu = k.buYok ? '' : 'bu ';
+    let yazildi = false;
+    for (const [ea, eb] of ciftler) {
+      const fa = `${n}-${ea}.jpg`, fb = `${n}-${eb}.jpg`;
+      if (!ids[fa] || !ids[fb]) continue;
+      if (!yazildi) { rounds.push(`    // ${w}`); yazildi = true; }
+      ciftSayisi++;
+      const A = haller[ea], B = haller[eb];
+      rounds.push(round(A.soru, `Evet! ${cap(oz)} ${A.sifat}.`, `Hayır, ${bu}${oz} ${B.sifat}.`, fa, fb, w) + ',');
+      rounds.push(round(B.soru, `Evet! ${cap(oz)} ${B.sifat}.`, `Hayır, ${bu}${oz} ${A.sifat}.`, fb, fa, w) + ',');
+      // Eş anlamlı soru (ör. bütün = tam): aynı görseller, farklı kelime; turda biri seçilir
+      for (const [X, Y, fx, fy] of [[A, B, fa, fb], [B, A, fb, fa]]) {
+        if (X.esSoru) rounds.push(round(X.esSoru, `Evet! ${cap(oz)} ${X.esSifat}.`, `Hayır, ${bu}${oz} ${Y.sifat}.`, fx, fy, w) + ',');
+      }
+    }
   }
   const soruSayisi = rid - (k.soruIdBaslangic || 1);
   const ts = `// OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-cift.mjs (${k.klasor}). Elle düzenleme.

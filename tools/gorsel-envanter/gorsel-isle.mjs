@@ -82,4 +82,12 @@ import { ImageMetadata } from '../../types.ts';
 export const imageDataYeni: ImageMetadata[] = ${JSON.stringify(entries, null, 2)} as ImageMetadata[];
 `;
 fs.writeFileSync(OUT_TS, ts);
+// Listede artık olmayan yeni görsel dosyalarını (2001-2999) sil
+for (const f of fs.readdirSync(OUT_IMG)) {
+  const m = /^(\d+)\.webp$/.exec(f);
+  if (m && +m[1] >= 2001 && +m[1] <= 2999 && !seen.has(+m[1])) {
+    fs.unlinkSync(path.join(OUT_IMG, f));
+    console.log(`silindi (listede yok): ${f}`);
+  }
+}
 console.log(`\n${entries.length} görsel işlendi → ${path.relative(ROOT, OUT_TS)}`);

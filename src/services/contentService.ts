@@ -2,7 +2,7 @@
 import { ActivityType, ActivityCategory, ImageMetadata, ConceptRound, Word, Story, ScreenState, ConceptOption, ActivityStats, MemoryGameRound, SudokuRound, SudokuItem } from '../types.ts';
 import { storyData } from './staticData.ts';
 import { imageData } from './database/imageData.ts';
-import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni } from './database/activities/yeni/index.ts';
+import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni, fewMuchDataYeni, halfQuarterWholeDataYeni } from './database/activities/yeni/index.ts';
 import { 
     sensesData,
     bigSmallData, longShortData, thinThickData, wideNarrowData, oldNewData, youngOldData, hardSoftData, cleanDirtyData, wetDryData, openClosedData, straightCurvedData, aliveLifelessData, bitterSweetData, heavyLightData, hotColdData, roughSmoothData, brokenIntactData, messyCleanData, tazeBayatData, kirisikDuzgunData, sivriKutData, parlakMatData, tembelCaliskanData, seffafOpakData, dikenliPuruzsuzData, dugumCozukData, hungryFullData, derinSigData, kalabalikTenhaData, tersDuzData,
@@ -1462,8 +1462,8 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.DerinSig]: derinSigData,
     [ActivityType.KalabalikTenha]: kalabalikTenhaData,
     [ActivityType.TersDuz]: tersDuzData,
-    [ActivityType.FewMuch]: fewMuchData,
-    [ActivityType.HalfQuarterWhole]: halfQuarterWholeData,
+    [ActivityType.FewMuch]: YENI_SORULAR_AKTIF ? fewMuchDataYeni : fewMuchData,
+    [ActivityType.HalfQuarterWhole]: YENI_SORULAR_AKTIF ? halfQuarterWholeDataYeni : halfQuarterWholeData,
     [ActivityType.FullEmpty]: YENI_SORULAR_AKTIF ? fullEmptyDataYeni : fullEmptyData,
     [ActivityType.OddEven]: oddEvenData,
     [ActivityType.CountMatch]: countMatchData,
