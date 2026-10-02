@@ -26,3 +26,4 @@ export { cleanDirtyDataYeni } from './temizKirliData';
 export { wetDryDataYeni } from './islakKuruData';
 export { oldNewDataYeni } from './eskiYeniData';
 export { hardSoftDataYeni } from './sertYumusakData';
+export { hotColdDataYeni } from './sicakSogukData';

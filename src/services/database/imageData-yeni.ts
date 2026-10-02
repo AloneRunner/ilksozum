@@ -9140,5 +9140,472 @@ export const imageDataYeni: ImageMetadata[] = [
         "I"
       ]
     }
+  },
+  {
+    "id": 3601,
+    "word": "ateş",
+    "imageUrl": "/images/3601.webp",
+    "audioKeys": {
+      "default": "ateş"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "sıcak",
+      "syllables": [
+        "a",
+        "teş"
+      ],
+      "letters": [
+        "A",
+        "T",
+        "E",
+        "Ş"
+      ]
+    }
+  },
+  {
+    "id": 3602,
+    "word": "kardan adam",
+    "imageUrl": "/images/3602.webp",
+    "audioKeys": {
+      "default": "kardan adam"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "soğuk",
+      "syllables": [
+        "kar",
+        "dan",
+        "a",
+        "dam"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "R",
+        "D",
+        "A",
+        "N",
+        "A",
+        "D",
+        "A",
+        "M"
+      ]
+    }
+  },
+  {
+    "id": 3603,
+    "word": "çaydanlık",
+    "imageUrl": "/images/3603.webp",
+    "audioKeys": {
+      "default": "çaydanlık"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "sıcak",
+      "syllables": [
+        "çay",
+        "dan",
+        "lık"
+      ],
+      "letters": [
+        "Ç",
+        "A",
+        "Y",
+        "D",
+        "A",
+        "N",
+        "L",
+        "I",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3604,
+    "word": "buzlu su",
+    "imageUrl": "/images/3604.webp",
+    "audioKeys": {
+      "default": "buzlu su"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "soğuk",
+      "syllables": [
+        "buz",
+        "lu",
+        "su"
+      ],
+      "letters": [
+        "B",
+        "U",
+        "Z",
+        "L",
+        "U",
+        "S",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 3605,
+    "word": "sıcak çikolata",
+    "imageUrl": "/images/3605.webp",
+    "audioKeys": {
+      "default": "sıcak çikolata"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "sıcak",
+      "syllables": [
+        "sı",
+        "cak",
+        "çi",
+        "ko",
+        "la",
+        "ta"
+      ],
+      "letters": [
+        "S",
+        "I",
+        "C",
+        "A",
+        "K",
+        "Ç",
+        "İ",
+        "K",
+        "O",
+        "L",
+        "A",
+        "T",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3606,
+    "word": "limonata",
+    "imageUrl": "/images/3606.webp",
+    "audioKeys": {
+      "default": "limonata"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "soğuk",
+      "syllables": [
+        "li",
+        "mo",
+        "na",
+        "ta"
+      ],
+      "letters": [
+        "L",
+        "İ",
+        "M",
+        "O",
+        "N",
+        "A",
+        "T",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3607,
+    "word": "çorba",
+    "imageUrl": "/images/3607.webp",
+    "audioKeys": {
+      "default": "çorba"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "sıcak",
+      "syllables": [
+        "çor",
+        "ba"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "R",
+        "B",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3608,
+    "word": "dondurma",
+    "imageUrl": "/images/3608.webp",
+    "audioKeys": {
+      "default": "dondurma"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "soğuk",
+      "syllables": [
+        "don",
+        "dur",
+        "ma"
+      ],
+      "letters": [
+        "D",
+        "O",
+        "N",
+        "D",
+        "U",
+        "R",
+        "M",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3609,
+    "word": "ekmek",
+    "imageUrl": "/images/3609.webp",
+    "audioKeys": {
+      "default": "ekmek"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "sıcak",
+      "syllables": [
+        "ek",
+        "mek"
+      ],
+      "letters": [
+        "E",
+        "K",
+        "M",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3610,
+    "word": "dondurulmuş bezelye",
+    "imageUrl": "/images/3610.webp",
+    "audioKeys": {
+      "default": "dondurulmuş bezelye"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "soğuk",
+      "syllables": [
+        "don",
+        "du",
+        "rul",
+        "muş",
+        "be",
+        "zel",
+        "ye"
+      ],
+      "letters": [
+        "D",
+        "O",
+        "N",
+        "D",
+        "U",
+        "R",
+        "U",
+        "L",
+        "M",
+        "U",
+        "Ş",
+        "B",
+        "E",
+        "Z",
+        "E",
+        "L",
+        "Y",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 3611,
+    "word": "hava",
+    "imageUrl": "/images/3611.webp",
+    "audioKeys": {
+      "default": "hava"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "sıcak",
+      "syllables": [
+        "ha",
+        "va"
+      ],
+      "letters": [
+        "H",
+        "A",
+        "V",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3612,
+    "word": "hava",
+    "imageUrl": "/images/3612.webp",
+    "audioKeys": {
+      "default": "hava"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "soğuk",
+      "syllables": [
+        "ha",
+        "va"
+      ],
+      "letters": [
+        "H",
+        "A",
+        "V",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3613,
+    "word": "kupa",
+    "imageUrl": "/images/3613.webp",
+    "audioKeys": {
+      "default": "kupa"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "sıcak",
+      "syllables": [
+        "ku",
+        "pa"
+      ],
+      "letters": [
+        "K",
+        "U",
+        "P",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3614,
+    "word": "kupa",
+    "imageUrl": "/images/3614.webp",
+    "audioKeys": {
+      "default": "kupa"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "soğuk",
+      "syllables": [
+        "ku",
+        "pa"
+      ],
+      "letters": [
+        "K",
+        "U",
+        "P",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3615,
+    "word": "soba",
+    "imageUrl": "/images/3615.webp",
+    "audioKeys": {
+      "default": "soba"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "sıcak",
+      "syllables": [
+        "so",
+        "ba"
+      ],
+      "letters": [
+        "S",
+        "O",
+        "B",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3616,
+    "word": "buzlu pencere",
+    "imageUrl": "/images/3616.webp",
+    "audioKeys": {
+      "default": "buzlu pencere"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "soğuk",
+      "syllables": [
+        "buz",
+        "lu",
+        "pen",
+        "ce",
+        "re"
+      ],
+      "letters": [
+        "B",
+        "U",
+        "Z",
+        "L",
+        "U",
+        "P",
+        "E",
+        "N",
+        "C",
+        "E",
+        "R",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 3617,
+    "word": "ütü",
+    "imageUrl": "/images/3617.webp",
+    "audioKeys": {
+      "default": "ütü"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "sıcak",
+      "syllables": [
+        "ü",
+        "tü"
+      ],
+      "letters": [
+        "Ü",
+        "T",
+        "Ü"
+      ]
+    }
+  },
+  {
+    "id": 3618,
+    "word": "buz",
+    "imageUrl": "/images/3618.webp",
+    "audioKeys": {
+      "default": "buz"
+    },
+    "tags": {
+      "category": "none",
+      "temperature": "soğuk",
+      "syllables": [
+        "buz"
+      ],
+      "letters": [
+        "B",
+        "U",
+        "Z"
+      ]
+    }
   }
 ] as ImageMetadata[];

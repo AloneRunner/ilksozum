@@ -66,7 +66,7 @@ Her nesneden 3-4 kademe üretilir (ör. 4 boyda aynı top). Bunlardan hem çift 
 - [ ] Ters / düz ve sivri / küt (deneme 1'e ek çiftler)
 
 ## Aşama 4: Duyusal, sosyal, yön
-- [ ] Sıcak / soğuk (ek çiftler; kar tanesi gibi soyut sembol yok)
+- [x] Sıcak / soğuk bağlandı: 9 çift, 18 soru, id 3601+ (kupa deneme 1'den, kar tanesi yok, buhar ve buz ile).
 - [x] Sert / yumuşak bağlandı: 10 çift (iki farklı nesne), 20 soru, 15 yeni görsel (3501+), 5 görsel yeniden kullanıldı.
 - [ ] Pürüzlü / pürüzsüz
 - [ ] Dikenli / pürüzsüz

@@ -3548,6 +3548,174 @@
       "tags": {
         "texture": "yumuşak"
       }
+    },
+    {
+      "id": 3601,
+      "kaynak": "sicak-soguk/ates_kardanadam-sicak.jpg",
+      "word": "ateş",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "temperature": "sıcak"
+      }
+    },
+    {
+      "id": 3602,
+      "kaynak": "sicak-soguk/ates_kardanadam-soguk.jpg",
+      "word": "kardan adam",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "temperature": "soğuk"
+      }
+    },
+    {
+      "id": 3603,
+      "kaynak": "sicak-soguk/caydanlik_surahi-sicak.jpg",
+      "word": "çaydanlık",
+      "category": "none",
+      "tags": {
+        "temperature": "sıcak"
+      }
+    },
+    {
+      "id": 3604,
+      "kaynak": "sicak-soguk/caydanlik_surahi-soguk.jpg",
+      "word": "buzlu su",
+      "category": "none",
+      "tags": {
+        "temperature": "soğuk"
+      }
+    },
+    {
+      "id": 3605,
+      "kaynak": "sicak-soguk/cikolata_limonata-sicak.jpg",
+      "word": "sıcak çikolata",
+      "category": "none",
+      "tags": {
+        "temperature": "sıcak"
+      }
+    },
+    {
+      "id": 3606,
+      "kaynak": "sicak-soguk/cikolata_limonata-soguk.jpg",
+      "word": "limonata",
+      "category": "none",
+      "tags": {
+        "temperature": "soğuk"
+      }
+    },
+    {
+      "id": 3607,
+      "kaynak": "sicak-soguk/corba_dondurma-sicak.jpg",
+      "word": "çorba",
+      "category": "none",
+      "tags": {
+        "temperature": "sıcak"
+      }
+    },
+    {
+      "id": 3608,
+      "kaynak": "sicak-soguk/corba_dondurma-soguk.jpg",
+      "word": "dondurma",
+      "category": "none",
+      "tags": {
+        "temperature": "soğuk"
+      }
+    },
+    {
+      "id": 3609,
+      "kaynak": "sicak-soguk/ekmek_bezelye-sicak.jpg",
+      "word": "ekmek",
+      "category": "none",
+      "tags": {
+        "temperature": "sıcak"
+      }
+    },
+    {
+      "id": 3610,
+      "kaynak": "sicak-soguk/ekmek_bezelye-soguk.jpg",
+      "word": "dondurulmuş bezelye",
+      "category": "none",
+      "tags": {
+        "temperature": "soğuk"
+      }
+    },
+    {
+      "id": 3611,
+      "kaynak": "sicak-soguk/hava-sicak.jpg",
+      "word": "hava",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "temperature": "sıcak"
+      }
+    },
+    {
+      "id": 3612,
+      "kaynak": "sicak-soguk/hava-soguk.jpg",
+      "word": "hava",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "temperature": "soğuk"
+      }
+    },
+    {
+      "id": 3613,
+      "kaynak": "sicak-soguk/kupa-sicak.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "temperature": "sıcak"
+      }
+    },
+    {
+      "id": 3614,
+      "kaynak": "sicak-soguk/kupa-soguk.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "temperature": "soğuk"
+      }
+    },
+    {
+      "id": 3615,
+      "kaynak": "sicak-soguk/soba_pencere-sicak.jpg",
+      "word": "soba",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "temperature": "sıcak"
+      }
+    },
+    {
+      "id": 3616,
+      "kaynak": "sicak-soguk/soba_pencere-soguk.jpg",
+      "word": "buzlu pencere",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "temperature": "soğuk"
+      }
+    },
+    {
+      "id": 3617,
+      "kaynak": "sicak-soguk/utu_buz-sicak.jpg",
+      "word": "ütü",
+      "category": "none",
+      "tags": {
+        "temperature": "sıcak"
+      }
+    },
+    {
+      "id": 3618,
+      "kaynak": "sicak-soguk/utu_buz-soguk.jpg",
+      "word": "buz",
+      "category": "none",
+      "tags": {
+        "temperature": "soğuk"
+      }
     }
   ]
 }

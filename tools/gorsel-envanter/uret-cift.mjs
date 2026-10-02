@@ -223,6 +223,30 @@ const KAVRAMLAR = [
       muz_ceviz: { yumusak: 'muz', sert: 'ceviz' }, puf_sandalye: { yumusak: 'puf', sert: 'sandalye' },
     },
   },
+  {
+    // Kaan: kar tanesi gibi soyut sembol yok. Sıcak = buhar/ateş/kızarmış, soğuk = buz/terleme/kar.
+    // Karışık: bazı çiftler aynı nesne (kupa, hava), bazıları iki farklı nesne.
+    klasor: 'sicak-soguk',
+    dosya: 'sicakSogukData.ts',
+    exportAdi: 'hotColdDataYeni',
+    activityType: 'HotCold',
+    idBaslangic: 3601,
+    etiket: 'temperature',
+    sahneNesneler: ['hava', 'ates_kardanadam', 'soba_pencere'],
+    a: { ek: 'sicak', deger: 'sıcak', soru: 'Sıcak olan hangisi?', sifat: 'sıcaktır' },
+    b: { ek: 'soguk', deger: 'soğuk', soru: 'Soğuk olan hangisi?', sifat: 'soğuktur' },
+    ozne: { kupa: 'kupadaki içecek' },
+    kelime: {
+      kupa: 'kupa', hava: 'hava',
+      corba_dondurma: { sicak: 'çorba', soguk: 'dondurma' },
+      caydanlik_surahi: { sicak: 'çaydanlık', soguk: 'buzlu su' },
+      ates_kardanadam: { sicak: 'ateş', soguk: 'kardan adam' },
+      utu_buz: { sicak: 'ütü', soguk: 'buz' },
+      cikolata_limonata: { sicak: 'sıcak çikolata', soguk: 'limonata' },
+      ekmek_bezelye: { sicak: 'ekmek', soguk: 'dondurulmuş bezelye' },
+      soba_pencere: { sicak: 'soba', soguk: 'buzlu pencere' },
+    },
+  },
 ];
 
 const cap = w => w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1);
