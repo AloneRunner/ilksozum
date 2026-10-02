@@ -198,6 +198,31 @@ const KAVRAMLAR = [
     kelime: { ayi: 'ayı', ayakkabi: 'ayakkabı', tisort: 'tişört', kitap: 'kitap', araba: 'araba', kova: 'kova',
       bisiklet: 'bisiklet', canta: 'çanta', kapi: 'kapı', caydanlik: 'çaydanlık' },
   },
+  {
+    // Sertlik aynı nesnede gösterilemez: her çift İKİ FARKLI nesne (kelime: { yumusak, sert })
+    klasor: 'sert-yumusak',
+    dosya: 'sertYumusakData.ts',
+    exportAdi: 'hardSoftDataYeni',
+    activityType: 'HardSoft',
+    idBaslangic: 3501,
+    etiket: 'texture',
+    a: { ek: 'yumusak', deger: 'yumuşak', soru: 'Yumuşak olan hangisi?', sifat: 'yumuşaktır' },
+    b: { ek: 'sert', deger: 'sert', soru: 'Sert olan hangisi?', sifat: 'serttir' },
+    yenidenKullan: {
+      'yastik_tugla-yumusak': 'buyuk-kucuk/yastik-buyuk.jpg',
+      'ayi_robot-yumusak': 'temiz-kirli/ayi-temiz.jpg',
+      'ayi_robot-sert': 'kirik-saglam/robot-saglam.jpg',
+      'sunger_tas-yumusak': 'islak-kuru/sunger-kuru.jpg',
+      'puf_sandalye-sert': 'kirik-saglam/sandalye-saglam.jpg',
+    },
+    kelime: {
+      yastik_tugla: { yumusak: 'yastık', sert: 'tuğla' }, ayi_robot: { yumusak: 'ayı', sert: 'robot' },
+      sunger_tas: { yumusak: 'sünger', sert: 'taş' }, pamuk_cakil: { yumusak: 'pamuk', sert: 'çakıl taşı' },
+      hamur_blok: { yumusak: 'oyun hamuru', sert: 'tahta blok' }, lokum_akide: { yumusak: 'lokum', sert: 'akide şekeri' },
+      yumak_top: { yumusak: 'yün yumağı', sert: 'tahta top' }, kedi_kaplumbaga: { yumusak: 'kedi', sert: 'kaplumbağa' },
+      muz_ceviz: { yumusak: 'muz', sert: 'ceviz' }, puf_sandalye: { yumusak: 'puf', sert: 'sandalye' },
+    },
+  },
 ];
 
 const cap = w => w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1);
@@ -211,10 +236,14 @@ for (const k of KAVRAMLAR) {
   if (!fs.existsSync(dir)) { console.log(`${k.klasor}: klasör yok, atlandı`); continue; }
   const files = fs.readdirSync(dir).filter(f => f.endsWith('.jpg')).sort();
   const nesneler = [...new Set([...files, ...Object.keys(k.yenidenKullan || {}).map(a => a + '.jpg')].map(f => f.replace(/-[^-]+\.jpg$/, '')))];
-  const word = n => {
-    if (!k.kelime[n]) throw new Error(`${k.klasor}: "${n}" için kelime tanımı yok (KAVRAMLAR.kelime)`);
-    return k.kelime[n];
+  const word = (n, ek) => {
+    const v = k.kelime[n];
+    if (!v) throw new Error(`${k.klasor}: "${n}" için kelime tanımı yok (KAVRAMLAR.kelime)`);
+    if (typeof v === 'string') return v;
+    if (!v[ek]) throw new Error(`${k.klasor}: "${n}-${ek}" için kelime yok`);
+    return v[ek]; // farklı nesneli çift
   };
+  const farkliNesne = n => typeof k.kelime[n] === 'object';
 
   // 1) Görsel listesi: bu klasöre ait eski kayıtları çıkarıp yeniden yaz
   const digerleri = list.gorseller.filter(g => !g.kaynak.startsWith(`${k.klasor}/`));
@@ -234,7 +263,7 @@ for (const k of KAVRAMLAR) {
     const deger = haller[ek] ? haller[ek].deger : ek;
     ids[f] = id;
     const sahne = k.sahne || (k.sahneNesneler || []).includes(n);
-    yeni.push({ id: id++, kaynak: `${k.klasor}/${f}`, word: word(n), category: 'none', ...(sahne ? { sahne: true } : {}), tags: { [k.etiket]: deger } });
+    yeni.push({ id: id++, kaynak: `${k.klasor}/${f}`, word: word(n, ek), category: 'none', ...(sahne ? { sahne: true } : {}), tags: { [k.etiket]: deger } });
   }
   const cakisan = digerleri.find(g => g.id >= k.idBaslangic && g.id < id);
   if (cakisan) throw new Error(`id çakışması: ${cakisan.id} (${cakisan.kaynak})`);
@@ -244,7 +273,7 @@ for (const k of KAVRAMLAR) {
   // Bazı etkinlikler (HighLow gibi konum türleri) eski i18n metnini soru numarasıyla arıyor: o zaman 1001'den başla.
   let rid = k.soruIdBaslangic || 1;
   const opt = (f, w, ok) => `            { id: ${ids[f]}, word: "${w}", imageUrl: "/images/${ids[f]}.webp", isCorrect: ${ok}, audioKey: "${w}", spokenText: "${w}" }`;
-  const round = (q, correct, wrong, fOk, fNo, w) => `    {
+  const round = (q, correct, wrong, fOk, fNo, w, wNo = w) => `    {
         id: ${rid++},
         question: "${q}",
         questionAudioKey: "",
@@ -254,13 +283,13 @@ for (const k of KAVRAMLAR) {
         },
         options: [
 ${opt(fOk, w, true)},
-${opt(fNo, w, false)}
+${opt(fNo, wNo, false)}
         ]
     }`;
   const rounds = [];
   let ciftSayisi = 0;
   for (const n of nesneler) {
-    const w = word(n);
+    const w = farkliNesne(n) ? n : word(n);
     // Cümle öznesi kelimeden farklı olabilir (ör. "ayakkabının topuğu yüksektir")
     const oz = (k.ozne || {})[n] || w;
     const bu = k.buYok ? '' : 'bu ';
@@ -271,6 +300,13 @@ ${opt(fNo, w, false)}
       if (!yazildi) { rounds.push(`    // ${w}`); yazildi = true; }
       ciftSayisi++;
       const A = haller[ea], B = haller[eb];
+      if (farkliNesne(n)) {
+        // İki farklı nesne: "Evet! Taş serttir." / "Hayır, yastık yumuşaktır." (seçilen yanlış nesne anlatılır)
+        const wa = word(n, ea), wb = word(n, eb);
+        rounds.push(round(A.soru, `Evet! ${cap(wa)} ${A.sifat}.`, `Hayır, ${wb} ${B.sifat}.`, fa, fb, wa, wb) + ',');
+        rounds.push(round(B.soru, `Evet! ${cap(wb)} ${B.sifat}.`, `Hayır, ${wa} ${A.sifat}.`, fb, fa, wb, wa) + ',');
+        continue;
+      }
       rounds.push(round(A.soru, `Evet! ${cap(oz)} ${A.sifat}.`, `Hayır, ${bu}${oz} ${B.sifat}.`, fa, fb, w) + ',');
       rounds.push(round(B.soru, `Evet! ${cap(oz)} ${B.sifat}.`, `Hayır, ${bu}${oz} ${A.sifat}.`, fb, fa, w) + ',');
       // Eş anlamlı soru (ör. bütün = tam): aynı görseller, farklı kelime; turda biri seçilir

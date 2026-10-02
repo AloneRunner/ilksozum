@@ -8759,5 +8759,386 @@ export const imageDataYeni: ImageMetadata[] = [
         "T"
       ]
     }
+  },
+  {
+    "id": 3501,
+    "word": "tahta blok",
+    "imageUrl": "/images/3501.webp",
+    "audioKeys": {
+      "default": "tahta blok"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "sert",
+      "syllables": [
+        "tah",
+        "ta",
+        "blok"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "H",
+        "T",
+        "A",
+        "B",
+        "L",
+        "O",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3502,
+    "word": "oyun hamuru",
+    "imageUrl": "/images/3502.webp",
+    "audioKeys": {
+      "default": "oyun hamuru"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "yumuşak",
+      "syllables": [
+        "o",
+        "yun",
+        "ha",
+        "mu",
+        "ru"
+      ],
+      "letters": [
+        "O",
+        "Y",
+        "U",
+        "N",
+        "H",
+        "A",
+        "M",
+        "U",
+        "R",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 3503,
+    "word": "kaplumbağa",
+    "imageUrl": "/images/3503.webp",
+    "audioKeys": {
+      "default": "kaplumbağa"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "sert",
+      "syllables": [
+        "kap",
+        "lum",
+        "ba",
+        "ğa"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "P",
+        "L",
+        "U",
+        "M",
+        "B",
+        "A",
+        "Ğ",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3504,
+    "word": "kedi",
+    "imageUrl": "/images/3504.webp",
+    "audioKeys": {
+      "default": "kedi"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "yumuşak",
+      "syllables": [
+        "ke",
+        "di"
+      ],
+      "letters": [
+        "K",
+        "E",
+        "D",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 3505,
+    "word": "akide şekeri",
+    "imageUrl": "/images/3505.webp",
+    "audioKeys": {
+      "default": "akide şekeri"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "sert",
+      "syllables": [
+        "a",
+        "ki",
+        "de",
+        "şe",
+        "ke",
+        "ri"
+      ],
+      "letters": [
+        "A",
+        "K",
+        "İ",
+        "D",
+        "E",
+        "Ş",
+        "E",
+        "K",
+        "E",
+        "R",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 3506,
+    "word": "lokum",
+    "imageUrl": "/images/3506.webp",
+    "audioKeys": {
+      "default": "lokum"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "yumuşak",
+      "syllables": [
+        "lo",
+        "kum"
+      ],
+      "letters": [
+        "L",
+        "O",
+        "K",
+        "U",
+        "M"
+      ]
+    }
+  },
+  {
+    "id": 3507,
+    "word": "ceviz",
+    "imageUrl": "/images/3507.webp",
+    "audioKeys": {
+      "default": "ceviz"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "sert",
+      "syllables": [
+        "ce",
+        "viz"
+      ],
+      "letters": [
+        "C",
+        "E",
+        "V",
+        "İ",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 3508,
+    "word": "muz",
+    "imageUrl": "/images/3508.webp",
+    "audioKeys": {
+      "default": "muz"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "yumuşak",
+      "syllables": [
+        "muz"
+      ],
+      "letters": [
+        "M",
+        "U",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 3509,
+    "word": "çakıl taşı",
+    "imageUrl": "/images/3509.webp",
+    "audioKeys": {
+      "default": "çakıl taşı"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "sert",
+      "syllables": [
+        "ça",
+        "kıl",
+        "ta",
+        "şı"
+      ],
+      "letters": [
+        "Ç",
+        "A",
+        "K",
+        "I",
+        "L",
+        "T",
+        "A",
+        "Ş",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3510,
+    "word": "pamuk",
+    "imageUrl": "/images/3510.webp",
+    "audioKeys": {
+      "default": "pamuk"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "yumuşak",
+      "syllables": [
+        "pa",
+        "muk"
+      ],
+      "letters": [
+        "P",
+        "A",
+        "M",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 3511,
+    "word": "puf",
+    "imageUrl": "/images/3511.webp",
+    "audioKeys": {
+      "default": "puf"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "yumuşak",
+      "syllables": [
+        "puf"
+      ],
+      "letters": [
+        "P",
+        "U",
+        "F"
+      ]
+    }
+  },
+  {
+    "id": 3512,
+    "word": "taş",
+    "imageUrl": "/images/3512.webp",
+    "audioKeys": {
+      "default": "taş"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "sert",
+      "syllables": [
+        "taş"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "Ş"
+      ]
+    }
+  },
+  {
+    "id": 3513,
+    "word": "tuğla",
+    "imageUrl": "/images/3513.webp",
+    "audioKeys": {
+      "default": "tuğla"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "sert",
+      "syllables": [
+        "tuğ",
+        "la"
+      ],
+      "letters": [
+        "T",
+        "U",
+        "Ğ",
+        "L",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3514,
+    "word": "tahta top",
+    "imageUrl": "/images/3514.webp",
+    "audioKeys": {
+      "default": "tahta top"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "sert",
+      "syllables": [
+        "tah",
+        "ta",
+        "top"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "H",
+        "T",
+        "A",
+        "T",
+        "O",
+        "P"
+      ]
+    }
+  },
+  {
+    "id": 3515,
+    "word": "yün yumağı",
+    "imageUrl": "/images/3515.webp",
+    "audioKeys": {
+      "default": "yün yumağı"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "yumuşak",
+      "syllables": [
+        "yün",
+        "yu",
+        "ma",
+        "ğı"
+      ],
+      "letters": [
+        "Y",
+        "Ü",
+        "N",
+        "Y",
+        "U",
+        "M",
+        "A",
+        "Ğ",
+        "I"
+      ]
+    }
   }
 ] as ImageMetadata[];

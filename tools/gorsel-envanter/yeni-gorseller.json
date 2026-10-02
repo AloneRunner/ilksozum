@@ -3413,6 +3413,141 @@
       "tags": {
         "condition": "yeni"
       }
+    },
+    {
+      "id": 3501,
+      "kaynak": "sert-yumusak/hamur_blok-sert.jpg",
+      "word": "tahta blok",
+      "category": "none",
+      "tags": {
+        "texture": "sert"
+      }
+    },
+    {
+      "id": 3502,
+      "kaynak": "sert-yumusak/hamur_blok-yumusak.jpg",
+      "word": "oyun hamuru",
+      "category": "none",
+      "tags": {
+        "texture": "yumuşak"
+      }
+    },
+    {
+      "id": 3503,
+      "kaynak": "sert-yumusak/kedi_kaplumbaga-sert.jpg",
+      "word": "kaplumbağa",
+      "category": "none",
+      "tags": {
+        "texture": "sert"
+      }
+    },
+    {
+      "id": 3504,
+      "kaynak": "sert-yumusak/kedi_kaplumbaga-yumusak.jpg",
+      "word": "kedi",
+      "category": "none",
+      "tags": {
+        "texture": "yumuşak"
+      }
+    },
+    {
+      "id": 3505,
+      "kaynak": "sert-yumusak/lokum_akide-sert.jpg",
+      "word": "akide şekeri",
+      "category": "none",
+      "tags": {
+        "texture": "sert"
+      }
+    },
+    {
+      "id": 3506,
+      "kaynak": "sert-yumusak/lokum_akide-yumusak.jpg",
+      "word": "lokum",
+      "category": "none",
+      "tags": {
+        "texture": "yumuşak"
+      }
+    },
+    {
+      "id": 3507,
+      "kaynak": "sert-yumusak/muz_ceviz-sert.jpg",
+      "word": "ceviz",
+      "category": "none",
+      "tags": {
+        "texture": "sert"
+      }
+    },
+    {
+      "id": 3508,
+      "kaynak": "sert-yumusak/muz_ceviz-yumusak.jpg",
+      "word": "muz",
+      "category": "none",
+      "tags": {
+        "texture": "yumuşak"
+      }
+    },
+    {
+      "id": 3509,
+      "kaynak": "sert-yumusak/pamuk_cakil-sert.jpg",
+      "word": "çakıl taşı",
+      "category": "none",
+      "tags": {
+        "texture": "sert"
+      }
+    },
+    {
+      "id": 3510,
+      "kaynak": "sert-yumusak/pamuk_cakil-yumusak.jpg",
+      "word": "pamuk",
+      "category": "none",
+      "tags": {
+        "texture": "yumuşak"
+      }
+    },
+    {
+      "id": 3511,
+      "kaynak": "sert-yumusak/puf_sandalye-yumusak.jpg",
+      "word": "puf",
+      "category": "none",
+      "tags": {
+        "texture": "yumuşak"
+      }
+    },
+    {
+      "id": 3512,
+      "kaynak": "sert-yumusak/sunger_tas-sert.jpg",
+      "word": "taş",
+      "category": "none",
+      "tags": {
+        "texture": "sert"
+      }
+    },
+    {
+      "id": 3513,
+      "kaynak": "sert-yumusak/yastik_tugla-sert.jpg",
+      "word": "tuğla",
+      "category": "none",
+      "tags": {
+        "texture": "sert"
+      }
+    },
+    {
+      "id": 3514,
+      "kaynak": "sert-yumusak/yumak_top-sert.jpg",
+      "word": "tahta top",
+      "category": "none",
+      "tags": {
+        "texture": "sert"
+      }
+    },
+    {
+      "id": 3515,
+      "kaynak": "sert-yumusak/yumak_top-yumusak.jpg",
+      "word": "yün yumağı",
+      "category": "none",
+      "tags": {
+        "texture": "yumuşak"
+      }
     }
   ]
 }

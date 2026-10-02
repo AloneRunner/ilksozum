@@ -67,7 +67,7 @@ Her nesneden 3-4 kademe üretilir (ör. 4 boyda aynı top). Bunlardan hem çift 
 
 ## Aşama 4: Duyusal, sosyal, yön
 - [ ] Sıcak / soğuk (ek çiftler; kar tanesi gibi soyut sembol yok)
-- [ ] Sert / yumuşak
+- [x] Sert / yumuşak bağlandı: 10 çift (iki farklı nesne), 20 soru, 15 yeni görsel (3501+), 5 görsel yeniden kullanıldı.
 - [ ] Pürüzlü / pürüzsüz
 - [ ] Dikenli / pürüzsüz
 - [ ] Acı / tatlı
@@ -114,6 +114,8 @@ Not: kategori adlarında tutarsızlık var ("Hayvanlar" ve "hayvanlar" gibi). Bu
 - [ ] **Dudak hareketleri (artikülasyon): DEMO VAR → `tools/dudak-demo/index.html`** (SVG dudaklar, kodla hareket, vizem: a/o/u/e/i/m-b-p/f-v/dil/k; heceleyerek TR TTS ile). Yöntem fikri: Kaan'ın "Adım Adım Konuşuyorum" (Prizma/Lali) kitapları; telifli, kopyalanmaz, kendi çizimimiz. Sonra uygulamaya bileşen olarak. her ses için ağız şekli (a açık, o yuvarlak, m kapalı, f diş alt dudakta). Önce durağan görsel, sonra kısa video. BASARA ve harf etkinlikleri ile birleşir.
 - [ ] **Hızlı / yavaş:** GIF'siz (hareket çizgileri, toz, koşan ve yürüyen aynı çocuk).
 - [ ] Harf etkinlikleri, ifade (iletişim) kartları, mini oyunlar, PDF çalışma kağıtları: yeni görsellerle güncelleme.
+- [ ] **Mini oyunlar:** Kaan izin verdi, gerekirse hepsi sıfırdan, özel çocuklara yönelik (ortak çerçeve, süre baskısı yok, hatasız öğretim).
+- [ ] **Sesler:** Kaan'ın ElevenLabs üyeliği var. Türkçe hece ve kelime sesleri oradan üretilebilir (dudak demosu senkronu, BASARA). Sonra.
 
 ## Aşama 6: Kalanlar ve temizlik
 - [ ] 5N1K, sıralama hikayeleri, gündüz/gece, önce/sonra, hızlı/yavaş, duyular
