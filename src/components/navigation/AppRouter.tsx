@@ -1,4 +1,5 @@
 import { lazy, useCallback, useMemo, useState, useEffect } from 'react';
+import { YENI_SORULAR_AKTIF } from '../../services/database/activities/yeni/index.ts';
 import { useAppContext } from '../../contexts/AppContext.ts';
 import { ScreenState, ActivityType, ActivityCategory } from '../../types.ts';
 import Spinner from '../Spinner.tsx';
@@ -741,7 +742,8 @@ export const AppRouter = () => {
         }
 
         case ScreenState.ConceptActivitiesMenu: return <ConceptActivitiesMenuScreen onSelectActivity={async (act) => {
-            if (act === ActivityType.ClockLearning) {
+            // Saat artık normal kavram sorusu (Kaan: mini oyun değil). Eski oyun ekranı yalnızca eski veriyle.
+            if (act === ActivityType.ClockLearning && !YENI_SORULAR_AKTIF) {
                 setScreenState(ScreenState.ClockLearningGame);
                 return;
             }

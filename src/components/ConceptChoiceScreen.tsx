@@ -1861,6 +1861,8 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     ActivityType.ObjectRecognition, ActivityType.Colors, ActivityType.Shapes, ActivityType.Emotions,
                     // Reasoning with per-round speech overrides
                     ActivityType.WhoseIsThis,
+                    // Saat (kodla çizilmiş saatler)
+                    ActivityType.ClockLearning,
                 ];
                 if (qualityActivities.includes(roundData.activityType)) {
                     const speechOverride = (getSpeechBlock()?.correct) as string | undefined;
@@ -2127,6 +2129,8 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     ActivityType.ObjectRecognition, ActivityType.Colors, ActivityType.Shapes, ActivityType.Emotions,
                     // Reasoning with per-round speech overrides
                     ActivityType.WhoseIsThis,
+                    // Saat (kodla çizilmiş saatler)
+                    ActivityType.ClockLearning,
                 ];
                 if (qualityActivities.includes(roundData.activityType)) {
                     const speechOverride = (getSpeechBlock()?.wrong) as string | undefined;

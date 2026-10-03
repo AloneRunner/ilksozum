@@ -45,3 +45,4 @@ export { messyCleanDataYeni } from './daginikTopluData';
 export { hangisiFarkliKolayYeni, hangisiFarkliZorYeni } from './hangisiFarkliData';
 export { leftRightDataYeni } from './sagSolData';
 export { aliveLifelessDataYeni } from './canliCansizData';
+export { saatDataYeni } from './saatData';
