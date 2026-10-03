@@ -43,7 +43,7 @@ Her nesneden 3-4 kademe üretilir (ör. 4 boyda aynı top). Bunlardan hem çift 
 - [x] Yüksek / alçak bağlandı (2026-10-01): 10 çift, 20 soru, id 2501-2521, blok serisi (8/4/2) tam. Soru numaraları 1001+ (HighLow da i18n sp_ anahtarı arıyor).
 - [x] Derin / sığ bağlandı: 9 çift, 18 soru, id 2901-2918 (çekmece olmadı, çıkarıldı).
 - [x] Az / çok bağlandı: 10 çift, 20 soru, id 2701-2720 (az = 2 tane, çok = 12-15, kap yok).
-- [ ] Kalabalık / tenha
+- [ ] Kalabalık / tenha: HAZIR METİN `flow-calisma-kalabalik.md`
 - [x] Dolu / boş bağlandı: 10 çift (kumbara + 9), 20 soru, id 2601-2620.
 - [x] Bütün (tam) / yarım / çeyrek bağlandı: 24 görsel (2801-2824), 24 karşılaştırma, 64 soru. Pizza Claude tarafından kesildi. Ekmek yarımı Kaan yaptı. Pasta (kuşbakışı) ve karpuz çeyreği (yarım karpuzun yarısı) Claude tarafından kesildi; 8 yiyecek tam. (`flow-butun-yarim-ceyrek.md`).
 - [ ] Tek / çift, kaç tane
@@ -70,11 +70,11 @@ Her nesneden 3-4 kademe üretilir (ör. 4 boyda aynı top). Bunlardan hem çift 
 - [x] Sert / yumuşak bağlandı: 10 çift (iki farklı nesne), 20 soru, 15 yeni görsel (3501+), 5 görsel yeniden kullanıldı.
 - [x] Pürüzlü / pürüzsüz bağlandı: 9 çift, 18 soru (3701+).
 - [x] Dikenli / pürüzsüz bağlandı: 8 çift, 16 soru (3801+). İki kavram tek Flow sayfası (`flow-dokular.md`), 9 görsel yeniden kullanıldı.
-- [ ] Acı / tatlı
-- [ ] Gürültülü / sessiz
-- [ ] Aç / tok
-- [ ] Yaşlı / genç (gerçekten yaşlı vs genç; yavru-yetişkin değil)
-- [ ] Tembel / çalışkan
+- [ ] Acı / tatlı (+ekşi): HAZIR METİN `flow-tat-ses.md`
+- [ ] Gürültülü / sessiz: HAZIR METİN `flow-tat-ses.md`
+- [ ] Aç / tok: HAZIR METİN `flow-sosyal.md`
+- [ ] Yaşlı / genç: HAZIR METİN `flow-sosyal.md` (gerçekten yaşlı vs genç yetişkin)
+- [ ] Tembel / çalışkan: HAZIR METİN `flow-calisma-kalabalik.md`
 - [ ] Canlı / cansız
 - [ ] Sağ / sol
 - [ ] Yakın / uzak
