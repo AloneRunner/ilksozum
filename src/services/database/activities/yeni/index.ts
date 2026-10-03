@@ -42,3 +42,6 @@ export { dugumCozukDataYeni } from './dugumCozukData';
 export { straightCurvedDataYeni } from './duzEgriData';
 export { tazeBayatDataYeni } from './tazeBayatData';
 export { messyCleanDataYeni } from './daginikTopluData';
+export { hangisiFarkliKolayYeni, hangisiFarkliZorYeni } from './hangisiFarkliData';
+export { leftRightDataYeni } from './sagSolData';
+export { aliveLifelessDataYeni } from './canliCansizData';

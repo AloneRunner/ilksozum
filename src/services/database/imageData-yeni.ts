@@ -17117,5 +17117,517 @@ export const imageDataYeni: ImageMetadata[] = [
         "K"
       ]
     }
+  },
+  {
+    "id": 5201,
+    "word": "at",
+    "imageUrl": "/images/5201.webp",
+    "audioKeys": {
+      "default": "at"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sağa",
+      "syllables": [
+        "at"
+      ],
+      "letters": [
+        "A",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 5202,
+    "word": "at",
+    "imageUrl": "/images/5202.webp",
+    "audioKeys": {
+      "default": "at"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sola",
+      "syllables": [
+        "at"
+      ],
+      "letters": [
+        "A",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 5203,
+    "word": "ayakkabı",
+    "imageUrl": "/images/5203.webp",
+    "audioKeys": {
+      "default": "ayakkabı"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sağa",
+      "syllables": [
+        "a",
+        "yak",
+        "ka",
+        "bı"
+      ],
+      "letters": [
+        "A",
+        "Y",
+        "A",
+        "K",
+        "K",
+        "A",
+        "B",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 5204,
+    "word": "ayakkabı",
+    "imageUrl": "/images/5204.webp",
+    "audioKeys": {
+      "default": "ayakkabı"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sola",
+      "syllables": [
+        "a",
+        "yak",
+        "ka",
+        "bı"
+      ],
+      "letters": [
+        "A",
+        "Y",
+        "A",
+        "K",
+        "K",
+        "A",
+        "B",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 5205,
+    "word": "balık",
+    "imageUrl": "/images/5205.webp",
+    "audioKeys": {
+      "default": "balık"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sağa",
+      "syllables": [
+        "ba",
+        "lık"
+      ],
+      "letters": [
+        "B",
+        "A",
+        "L",
+        "I",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 5206,
+    "word": "balık",
+    "imageUrl": "/images/5206.webp",
+    "audioKeys": {
+      "default": "balık"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sola",
+      "syllables": [
+        "ba",
+        "lık"
+      ],
+      "letters": [
+        "B",
+        "A",
+        "L",
+        "I",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 5207,
+    "word": "bisiklet",
+    "imageUrl": "/images/5207.webp",
+    "audioKeys": {
+      "default": "bisiklet"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sağa",
+      "syllables": [
+        "bi",
+        "sik",
+        "let"
+      ],
+      "letters": [
+        "B",
+        "İ",
+        "S",
+        "İ",
+        "K",
+        "L",
+        "E",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 5208,
+    "word": "bisiklet",
+    "imageUrl": "/images/5208.webp",
+    "audioKeys": {
+      "default": "bisiklet"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sola",
+      "syllables": [
+        "bi",
+        "sik",
+        "let"
+      ],
+      "letters": [
+        "B",
+        "İ",
+        "S",
+        "İ",
+        "K",
+        "L",
+        "E",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 5209,
+    "word": "çaydanlık",
+    "imageUrl": "/images/5209.webp",
+    "audioKeys": {
+      "default": "çaydanlık"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sağa",
+      "syllables": [
+        "çay",
+        "dan",
+        "lık"
+      ],
+      "letters": [
+        "Ç",
+        "A",
+        "Y",
+        "D",
+        "A",
+        "N",
+        "L",
+        "I",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 5210,
+    "word": "çaydanlık",
+    "imageUrl": "/images/5210.webp",
+    "audioKeys": {
+      "default": "çaydanlık"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sola",
+      "syllables": [
+        "çay",
+        "dan",
+        "lık"
+      ],
+      "letters": [
+        "Ç",
+        "A",
+        "Y",
+        "D",
+        "A",
+        "N",
+        "L",
+        "I",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 5211,
+    "word": "horoz",
+    "imageUrl": "/images/5211.webp",
+    "audioKeys": {
+      "default": "horoz"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sağa",
+      "syllables": [
+        "ho",
+        "roz"
+      ],
+      "letters": [
+        "H",
+        "O",
+        "R",
+        "O",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 5212,
+    "word": "horoz",
+    "imageUrl": "/images/5212.webp",
+    "audioKeys": {
+      "default": "horoz"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sola",
+      "syllables": [
+        "ho",
+        "roz"
+      ],
+      "letters": [
+        "H",
+        "O",
+        "R",
+        "O",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 5213,
+    "word": "inek",
+    "imageUrl": "/images/5213.webp",
+    "audioKeys": {
+      "default": "inek"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sağa",
+      "syllables": [
+        "i",
+        "nek"
+      ],
+      "letters": [
+        "İ",
+        "N",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 5214,
+    "word": "inek",
+    "imageUrl": "/images/5214.webp",
+    "audioKeys": {
+      "default": "inek"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sola",
+      "syllables": [
+        "i",
+        "nek"
+      ],
+      "letters": [
+        "İ",
+        "N",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 5215,
+    "word": "kaplumbağa",
+    "imageUrl": "/images/5215.webp",
+    "audioKeys": {
+      "default": "kaplumbağa"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sağa",
+      "syllables": [
+        "kap",
+        "lum",
+        "ba",
+        "ğa"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "P",
+        "L",
+        "U",
+        "M",
+        "B",
+        "A",
+        "Ğ",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 5216,
+    "word": "kaplumbağa",
+    "imageUrl": "/images/5216.webp",
+    "audioKeys": {
+      "default": "kaplumbağa"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sola",
+      "syllables": [
+        "kap",
+        "lum",
+        "ba",
+        "ğa"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "P",
+        "L",
+        "U",
+        "M",
+        "B",
+        "A",
+        "Ğ",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 5217,
+    "word": "kirpi",
+    "imageUrl": "/images/5217.webp",
+    "audioKeys": {
+      "default": "kirpi"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sağa",
+      "syllables": [
+        "kir",
+        "pi"
+      ],
+      "letters": [
+        "K",
+        "İ",
+        "R",
+        "P",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 5218,
+    "word": "kirpi",
+    "imageUrl": "/images/5218.webp",
+    "audioKeys": {
+      "default": "kirpi"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sola",
+      "syllables": [
+        "kir",
+        "pi"
+      ],
+      "letters": [
+        "K",
+        "İ",
+        "R",
+        "P",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 5219,
+    "word": "spor ayakkabı",
+    "imageUrl": "/images/5219.webp",
+    "audioKeys": {
+      "default": "spor ayakkabı"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sağa",
+      "syllables": [
+        "spor",
+        "a",
+        "yak",
+        "ka",
+        "bı"
+      ],
+      "letters": [
+        "S",
+        "P",
+        "O",
+        "R",
+        "A",
+        "Y",
+        "A",
+        "K",
+        "K",
+        "A",
+        "B",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 5220,
+    "word": "spor ayakkabı",
+    "imageUrl": "/images/5220.webp",
+    "audioKeys": {
+      "default": "spor ayakkabı"
+    },
+    "tags": {
+      "category": "none",
+      "direction": "sola",
+      "syllables": [
+        "spor",
+        "a",
+        "yak",
+        "ka",
+        "bı"
+      ],
+      "letters": [
+        "S",
+        "P",
+        "O",
+        "R",
+        "A",
+        "Y",
+        "A",
+        "K",
+        "K",
+        "A",
+        "B",
+        "I"
+      ]
+    }
   }
 ] as ImageMetadata[];

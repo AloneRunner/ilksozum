@@ -33,6 +33,7 @@ const ADLAR = {
   youngOldDataYeni: 'Yaşlı / Genç', tembelCaliskanDataYeni: 'Tembel / Çalışkan', kalabalikTenhaDataYeni: 'Kalabalık / Tenha',
   kirisikDuzgunDataYeni: 'Kırışık / Düzgün', dugumCozukDataYeni: 'Düğümlü / Çözük', straightCurvedDataYeni: 'Düz / Eğri',
   tazeBayatDataYeni: 'Taze / Bayat', messyCleanDataYeni: 'Dağınık / Toplu',
+  leftRightDataYeni: 'Sağa / Sola bakan', aliveLifelessDataYeni: 'Canlı / Cansız',
 };
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const img = o => `<img loading="lazy" src="../../public/images/${o.id}.webp" alt="">`;

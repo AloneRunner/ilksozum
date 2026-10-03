@@ -2,7 +2,7 @@
 import { ActivityType, ActivityCategory, ImageMetadata, ConceptRound, Word, Story, ScreenState, ConceptOption, ActivityStats, MemoryGameRound, SudokuRound, SudokuItem } from '../types.ts';
 import { storyData } from './staticData.ts';
 import { imageData } from './database/imageData.ts';
-import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni, fewMuchDataYeni, halfQuarterWholeDataYeni, derinSigDataYeni, openClosedDataYeni, brokenIntactDataYeni, cleanDirtyDataYeni, wetDryDataYeni, oldNewDataYeni, hardSoftDataYeni, hotColdDataYeni, roughSmoothDataYeni, dikenliPuruzsuzDataYeni, parlakMatDataYeni, seffafOpakDataYeni, bitterSweetDataYeni, noisyQuietDataYeni, hungryFullDataYeni, youngOldDataYeni, tembelCaliskanDataYeni, kalabalikTenhaDataYeni, kirisikDuzgunDataYeni, dugumCozukDataYeni, straightCurvedDataYeni, tazeBayatDataYeni, messyCleanDataYeni } from './database/activities/yeni/index.ts';
+import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni, fewMuchDataYeni, halfQuarterWholeDataYeni, derinSigDataYeni, openClosedDataYeni, brokenIntactDataYeni, cleanDirtyDataYeni, wetDryDataYeni, oldNewDataYeni, hardSoftDataYeni, hotColdDataYeni, roughSmoothDataYeni, dikenliPuruzsuzDataYeni, parlakMatDataYeni, seffafOpakDataYeni, bitterSweetDataYeni, noisyQuietDataYeni, hungryFullDataYeni, youngOldDataYeni, tembelCaliskanDataYeni, kalabalikTenhaDataYeni, kirisikDuzgunDataYeni, dugumCozukDataYeni, straightCurvedDataYeni, tazeBayatDataYeni, messyCleanDataYeni, hangisiFarkliKolayYeni, hangisiFarkliZorYeni, leftRightDataYeni, aliveLifelessDataYeni } from './database/activities/yeni/index.ts';
 import { 
     sensesData,
     bigSmallData, longShortData, thinThickData, wideNarrowData, oldNewData, youngOldData, hardSoftData, cleanDirtyData, wetDryData, openClosedData, straightCurvedData, aliveLifelessData, bitterSweetData, heavyLightData, hotColdData, roughSmoothData, brokenIntactData, messyCleanData, tazeBayatData, kirisikDuzgunData, sivriKutData, parlakMatData, tembelCaliskanData, seffafOpakData, dikenliPuruzsuzData, dugumCozukData, hungryFullData, derinSigData, kalabalikTenhaData, tersDuzData,
@@ -1415,7 +1415,7 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.WetDry]: YENI_SORULAR_AKTIF ? wetDryDataYeni : wetDryData,
     [ActivityType.OpenClosed]: YENI_SORULAR_AKTIF ? openClosedDataYeni : openClosedData,
     [ActivityType.StraightCurved]: YENI_SORULAR_AKTIF ? straightCurvedDataYeni : straightCurvedData,
-    [ActivityType.AliveLifeless]: aliveLifelessData,
+    [ActivityType.AliveLifeless]: YENI_SORULAR_AKTIF ? aliveLifelessDataYeni : aliveLifelessData,
     [ActivityType.BitterSweet]: YENI_SORULAR_AKTIF ? bitterSweetDataYeni : bitterSweetData,
     [ActivityType.HeavyLight]: heavyLightData,
     [ActivityType.HotCold]: YENI_SORULAR_AKTIF ? hotColdDataYeni : hotColdData,
@@ -1445,7 +1445,7 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.InFrontOfBehind]: YENI_SORULAR_AKTIF ? inFrontOfBehindDataYeni : inFrontOfBehindData,
     [ActivityType.InsideOutside]: YENI_SORULAR_AKTIF ? insideOutsideDataYeni : insideOutsideData,
     [ActivityType.Between]: YENI_SORULAR_AKTIF ? betweenDataYeni : betweenData,
-    [ActivityType.LeftRight]: leftRightData,
+    [ActivityType.LeftRight]: YENI_SORULAR_AKTIF ? leftRightDataYeni : leftRightData,
     [ActivityType.NearFar]: nearFarData,
     [ActivityType.HighLow]: YENI_SORULAR_AKTIF ? highLowDataYeni : highLowData,
     [ActivityType.BeforeAfter]: beforeAfterData,
@@ -1493,7 +1493,12 @@ export const fetchConceptActivityData = async (
             }
             return maxUnit;
         })();
-        const pool = highestUnlockedUnit >= 9 ? whatDoesntBelongData : whatDoesntBelongData.filter(r => Number(r.id) <= 4);
+        const eskiHavuz = highestUnlockedUnit >= 9 ? whatDoesntBelongData : whatDoesntBelongData.filter(r => Number(r.id) <= 4);
+        // Yeni: 3 tamamen aynı + 1 farklı (Kaan). Kolay = bambaşka nesne; zor = aynı nesnenin öbür hali (ince fark).
+        const pool = !YENI_SORULAR_AKTIF ? eskiHavuz
+            : highestUnlockedUnit >= 9 ? [...whatDoesntBelongData, ...hangisiFarkliZorYeni, ...hangisiFarkliKolayYeni]
+            : highestUnlockedUnit >= 5 ? [...hangisiFarkliKolayYeni, ...hangisiFarkliZorYeni]
+            : hangisiFarkliKolayYeni;
         const rounds = getRandomItems(pool, MAX_QUESTIONS_STATIC).map(round => ({
             ...round,
             options: shuffleArray(round.options),

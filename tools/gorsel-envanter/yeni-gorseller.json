@@ -6633,6 +6633,194 @@
       "tags": {
         "order": "toplu"
       }
+    },
+    {
+      "id": 5201,
+      "kaynak": "sag-sol/at-sag.jpg",
+      "word": "at",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "direction": "sağa"
+      }
+    },
+    {
+      "id": 5202,
+      "kaynak": "sag-sol/at-sol.jpg",
+      "word": "at",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "direction": "sola"
+      }
+    },
+    {
+      "id": 5203,
+      "kaynak": "sag-sol/ayakkabi-sag.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "direction": "sağa"
+      }
+    },
+    {
+      "id": 5204,
+      "kaynak": "sag-sol/ayakkabi-sol.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "direction": "sola"
+      }
+    },
+    {
+      "id": 5205,
+      "kaynak": "sag-sol/balik-sag.jpg",
+      "word": "balık",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "direction": "sağa"
+      }
+    },
+    {
+      "id": 5206,
+      "kaynak": "sag-sol/balik-sol.jpg",
+      "word": "balık",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "direction": "sola"
+      }
+    },
+    {
+      "id": 5207,
+      "kaynak": "sag-sol/bisiklet-sag.jpg",
+      "word": "bisiklet",
+      "category": "none",
+      "tags": {
+        "direction": "sağa"
+      }
+    },
+    {
+      "id": 5208,
+      "kaynak": "sag-sol/bisiklet-sol.jpg",
+      "word": "bisiklet",
+      "category": "none",
+      "tags": {
+        "direction": "sola"
+      }
+    },
+    {
+      "id": 5209,
+      "kaynak": "sag-sol/caydanlik-sag.jpg",
+      "word": "çaydanlık",
+      "category": "none",
+      "tags": {
+        "direction": "sağa"
+      }
+    },
+    {
+      "id": 5210,
+      "kaynak": "sag-sol/caydanlik-sol.jpg",
+      "word": "çaydanlık",
+      "category": "none",
+      "tags": {
+        "direction": "sola"
+      }
+    },
+    {
+      "id": 5211,
+      "kaynak": "sag-sol/horoz-sag.jpg",
+      "word": "horoz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "direction": "sağa"
+      }
+    },
+    {
+      "id": 5212,
+      "kaynak": "sag-sol/horoz-sol.jpg",
+      "word": "horoz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "direction": "sola"
+      }
+    },
+    {
+      "id": 5213,
+      "kaynak": "sag-sol/inek-sag.jpg",
+      "word": "inek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "direction": "sağa"
+      }
+    },
+    {
+      "id": 5214,
+      "kaynak": "sag-sol/inek-sol.jpg",
+      "word": "inek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "direction": "sola"
+      }
+    },
+    {
+      "id": 5215,
+      "kaynak": "sag-sol/kaplumbaga-sag.jpg",
+      "word": "kaplumbağa",
+      "category": "none",
+      "tags": {
+        "direction": "sağa"
+      }
+    },
+    {
+      "id": 5216,
+      "kaynak": "sag-sol/kaplumbaga-sol.jpg",
+      "word": "kaplumbağa",
+      "category": "none",
+      "tags": {
+        "direction": "sola"
+      }
+    },
+    {
+      "id": 5217,
+      "kaynak": "sag-sol/kirpi-sag.jpg",
+      "word": "kirpi",
+      "category": "none",
+      "tags": {
+        "direction": "sağa"
+      }
+    },
+    {
+      "id": 5218,
+      "kaynak": "sag-sol/kirpi-sol.jpg",
+      "word": "kirpi",
+      "category": "none",
+      "tags": {
+        "direction": "sola"
+      }
+    },
+    {
+      "id": 5219,
+      "kaynak": "sag-sol/spor-sag.jpg",
+      "word": "spor ayakkabı",
+      "category": "none",
+      "tags": {
+        "direction": "sağa"
+      }
+    },
+    {
+      "id": 5220,
+      "kaynak": "sag-sol/spor-sol.jpg",
+      "word": "spor ayakkabı",
+      "category": "none",
+      "tags": {
+        "direction": "sola"
+      }
     }
   ]
 }

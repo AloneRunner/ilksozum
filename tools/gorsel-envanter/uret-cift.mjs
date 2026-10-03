@@ -435,6 +435,44 @@ const KAVRAMLAR = [
       havuz: 'havuz', sinema: 'sinema salonu', peron: 'tren peronu', lunapark: 'lunapark' },
   },
   {
+    // Mevcut görseller aynalanarak üretildi (gorsel-ham/sag-sol). Yön izleyiciye göre: ekranın sağına bakan = sağa bakan.
+    klasor: 'sag-sol', dosya: 'sagSolData.ts', exportAdi: 'leftRightDataYeni',
+    activityType: 'LeftRight', idBaslangic: 5201, etiket: 'direction',
+    soruIdBaslangic: 1001, // LeftRight de i18n sp_leftRight_<id> arıyor
+    sahneNesneler: ['at', 'horoz', 'inek', 'balik'],
+    a: { ek: 'sag', deger: 'sağa', soru: 'Sağa bakan hangisi?', sifat: 'sağa bakıyor' },
+    b: { ek: 'sol', deger: 'sola', soru: 'Sola bakan hangisi?', sifat: 'sola bakıyor' },
+    soruKalip: (w, d) => `Hangi ${w} ${d} bakıyor?`,
+    kelime: { kaplumbaga: 'kaplumbağa', kirpi: 'kirpi', bisiklet: 'bisiklet', caydanlik: 'çaydanlık', ayakkabi: 'ayakkabı',
+      spor: 'spor ayakkabı', at: 'at', horoz: 'horoz', inek: 'inek', balik: 'balık' },
+  },
+  {
+    // Hepsi önceki turların görselleri (yeni üretim yok). Canlı = hayvan/bitki, cansız = eşya; çoğu "gerçek / oyuncak" karşıtlığı.
+    klasor: 'canli-cansiz', dosya: 'canliCansizData.ts', exportAdi: 'aliveLifelessDataYeni',
+    activityType: 'AliveLifeless', idBaslangic: 5301, etiket: 'life',
+    a: { ek: 'canli', deger: 'canlı', soru: 'Canlı olan hangisi?', sifat: 'canlıdır' },
+    b: { ek: 'cansiz', deger: 'cansız', soru: 'Cansız olan hangisi?', sifat: 'cansızdır' },
+    yenidenKullan: {
+      'kedi_robot-canli': 'sert-yumusak/kedi_kaplumbaga-yumusak.jpg', 'kedi_robot-cansiz': 'kirik-saglam/robot-saglam.jpg',
+      'kopek_top-canli': 'yasli-genc/kopek-genc.jpg', 'kopek_top-cansiz': 'buyuk-kucuk/top-buyuk.jpg',
+      'kaplumbaga_tas-canli': 'sert-yumusak/kedi_kaplumbaga-sert.jpg', 'kaplumbaga_tas-cansiz': 'sert-yumusak/sunger_tas-sert.jpg',
+      'kirpi_dikenlitop-canli': 'dikenli-puruzsuz/kirpi_yunus-dikenli.jpg', 'kirpi_dikenlitop-cansiz': 'dikenli-puruzsuz/masajtopu_top-dikenli.jpg',
+      'tay_sandalye-canli': 'yasli-genc/at-genc.jpg', 'tay_sandalye-cansiz': 'kirik-saglam/sandalye-saglam.jpg',
+      'civciv_ordek-canli': 'ac-tok/civciv-tok.jpg', 'civciv_ordek-cansiz': 'dikenli-puruzsuz/kirpioyuncak_ordek-puruzsuz.jpg',
+      'lale_kalem-canli': 'acik-kapali/cicek-acik.jpg', 'lale_kalem-cansiz': 'kalin-ince/kalem-kalin.jpg',
+      'agac_bank-canli': 'kalin-ince/agac-kalin.jpg', 'agac_bank-cansiz': 'uzun-kisa/bank-uzun.jpg',
+      'tavsan_ayi-canli': 'ac-tok/tavsan-tok.jpg', 'tavsan_ayi-cansiz': 'temiz-kirli/ayi-temiz.jpg',
+      'kuzu_yastik-canli': 'ac-tok/kuzu-tok.jpg', 'kuzu_yastik-cansiz': 'buyuk-kucuk/yastik-buyuk.jpg',
+    },
+    kelime: {
+      kedi_robot: { canli: 'kedi', cansiz: 'robot' }, kopek_top: { canli: 'köpek', cansiz: 'top' },
+      kaplumbaga_tas: { canli: 'kaplumbağa', cansiz: 'taş' }, kirpi_dikenlitop: { canli: 'kirpi', cansiz: 'dikenli top' },
+      tay_sandalye: { canli: 'tay', cansiz: 'sandalye' }, civciv_ordek: { canli: 'civciv', cansiz: 'oyuncak ördek' },
+      lale_kalem: { canli: 'lale', cansiz: 'kalem' }, agac_bank: { canli: 'ağaç', cansiz: 'bank' },
+      tavsan_ayi: { canli: 'tavşan', cansiz: 'oyuncak ayı' }, kuzu_yastik: { canli: 'kuzu', cansiz: 'yastık' },
+    },
+  },
+  {
     klasor: 'kirisik-duzgun', dosya: 'kirisikDuzgunData.ts', exportAdi: 'kirisikDuzgunDataYeni',
     activityType: 'KirisikDuzgun', idBaslangic: 4701, etiket: 'condition', sahneNesneler: ['masaortusu', 'ortu', 'perde'],
     a: { ek: 'kirisik', deger: 'kırışık', soru: 'Kırışık olan hangisi?', sifat: 'kırışıktır' },
