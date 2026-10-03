@@ -2487,6 +2487,494 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
+    "id": 2115,
+    "word": "dinozor",
+    "imageUrl": "/images/2115.webp",
+    "audioKeys": {
+      "default": "dinozor"
+    },
+    "tags": {
+      "category": "none",
+      "position": "altında",
+      "syllables": [
+        "di",
+        "no",
+        "zor"
+      ],
+      "letters": [
+        "D",
+        "İ",
+        "N",
+        "O",
+        "Z",
+        "O",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 2116,
+    "word": "dinozor",
+    "imageUrl": "/images/2116.webp",
+    "audioKeys": {
+      "default": "dinozor"
+    },
+    "tags": {
+      "category": "none",
+      "syllables": [
+        "di",
+        "no",
+        "zor"
+      ],
+      "letters": [
+        "D",
+        "İ",
+        "N",
+        "O",
+        "Z",
+        "O",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 2117,
+    "word": "dinozor",
+    "imageUrl": "/images/2117.webp",
+    "audioKeys": {
+      "default": "dinozor"
+    },
+    "tags": {
+      "category": "none",
+      "position": "arasında",
+      "syllables": [
+        "di",
+        "no",
+        "zor"
+      ],
+      "letters": [
+        "D",
+        "İ",
+        "N",
+        "O",
+        "Z",
+        "O",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 2118,
+    "word": "dinozor",
+    "imageUrl": "/images/2118.webp",
+    "audioKeys": {
+      "default": "dinozor"
+    },
+    "tags": {
+      "category": "none",
+      "position": "arkasında",
+      "syllables": [
+        "di",
+        "no",
+        "zor"
+      ],
+      "letters": [
+        "D",
+        "İ",
+        "N",
+        "O",
+        "Z",
+        "O",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 2119,
+    "word": "dinozor",
+    "imageUrl": "/images/2119.webp",
+    "audioKeys": {
+      "default": "dinozor"
+    },
+    "tags": {
+      "category": "none",
+      "position": "aşağıda",
+      "syllables": [
+        "di",
+        "no",
+        "zor"
+      ],
+      "letters": [
+        "D",
+        "İ",
+        "N",
+        "O",
+        "Z",
+        "O",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 2120,
+    "word": "dinozor",
+    "imageUrl": "/images/2120.webp",
+    "audioKeys": {
+      "default": "dinozor"
+    },
+    "tags": {
+      "category": "none",
+      "position": "dışında",
+      "syllables": [
+        "di",
+        "no",
+        "zor"
+      ],
+      "letters": [
+        "D",
+        "İ",
+        "N",
+        "O",
+        "Z",
+        "O",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 2121,
+    "word": "dinozor",
+    "imageUrl": "/images/2121.webp",
+    "audioKeys": {
+      "default": "dinozor"
+    },
+    "tags": {
+      "category": "none",
+      "position": "içinde",
+      "syllables": [
+        "di",
+        "no",
+        "zor"
+      ],
+      "letters": [
+        "D",
+        "İ",
+        "N",
+        "O",
+        "Z",
+        "O",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 2122,
+    "word": "dinozor",
+    "imageUrl": "/images/2122.webp",
+    "audioKeys": {
+      "default": "dinozor"
+    },
+    "tags": {
+      "category": "none",
+      "position": "üstünde",
+      "syllables": [
+        "di",
+        "no",
+        "zor"
+      ],
+      "letters": [
+        "D",
+        "İ",
+        "N",
+        "O",
+        "Z",
+        "O",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 2123,
+    "word": "dinozor",
+    "imageUrl": "/images/2123.webp",
+    "audioKeys": {
+      "default": "dinozor"
+    },
+    "tags": {
+      "category": "none",
+      "position": "yanında",
+      "syllables": [
+        "di",
+        "no",
+        "zor"
+      ],
+      "letters": [
+        "D",
+        "İ",
+        "N",
+        "O",
+        "Z",
+        "O",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 2124,
+    "word": "dinozor",
+    "imageUrl": "/images/2124.webp",
+    "audioKeys": {
+      "default": "dinozor"
+    },
+    "tags": {
+      "category": "none",
+      "position": "yukarıda",
+      "syllables": [
+        "di",
+        "no",
+        "zor"
+      ],
+      "letters": [
+        "D",
+        "İ",
+        "N",
+        "O",
+        "Z",
+        "O",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 2125,
+    "word": "ördek",
+    "imageUrl": "/images/2125.webp",
+    "audioKeys": {
+      "default": "ördek"
+    },
+    "tags": {
+      "category": "none",
+      "position": "altında",
+      "syllables": [
+        "ör",
+        "dek"
+      ],
+      "letters": [
+        "Ö",
+        "R",
+        "D",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2126,
+    "word": "ördek",
+    "imageUrl": "/images/2126.webp",
+    "audioKeys": {
+      "default": "ördek"
+    },
+    "tags": {
+      "category": "none",
+      "syllables": [
+        "ör",
+        "dek"
+      ],
+      "letters": [
+        "Ö",
+        "R",
+        "D",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2127,
+    "word": "ördek",
+    "imageUrl": "/images/2127.webp",
+    "audioKeys": {
+      "default": "ördek"
+    },
+    "tags": {
+      "category": "none",
+      "position": "arasında",
+      "syllables": [
+        "ör",
+        "dek"
+      ],
+      "letters": [
+        "Ö",
+        "R",
+        "D",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2128,
+    "word": "ördek",
+    "imageUrl": "/images/2128.webp",
+    "audioKeys": {
+      "default": "ördek"
+    },
+    "tags": {
+      "category": "none",
+      "position": "arkasında",
+      "syllables": [
+        "ör",
+        "dek"
+      ],
+      "letters": [
+        "Ö",
+        "R",
+        "D",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2129,
+    "word": "ördek",
+    "imageUrl": "/images/2129.webp",
+    "audioKeys": {
+      "default": "ördek"
+    },
+    "tags": {
+      "category": "none",
+      "position": "aşağıda",
+      "syllables": [
+        "ör",
+        "dek"
+      ],
+      "letters": [
+        "Ö",
+        "R",
+        "D",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2130,
+    "word": "ördek",
+    "imageUrl": "/images/2130.webp",
+    "audioKeys": {
+      "default": "ördek"
+    },
+    "tags": {
+      "category": "none",
+      "position": "dışında",
+      "syllables": [
+        "ör",
+        "dek"
+      ],
+      "letters": [
+        "Ö",
+        "R",
+        "D",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2131,
+    "word": "ördek",
+    "imageUrl": "/images/2131.webp",
+    "audioKeys": {
+      "default": "ördek"
+    },
+    "tags": {
+      "category": "none",
+      "position": "içinde",
+      "syllables": [
+        "ör",
+        "dek"
+      ],
+      "letters": [
+        "Ö",
+        "R",
+        "D",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2132,
+    "word": "ördek",
+    "imageUrl": "/images/2132.webp",
+    "audioKeys": {
+      "default": "ördek"
+    },
+    "tags": {
+      "category": "none",
+      "position": "üstünde",
+      "syllables": [
+        "ör",
+        "dek"
+      ],
+      "letters": [
+        "Ö",
+        "R",
+        "D",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2133,
+    "word": "ördek",
+    "imageUrl": "/images/2133.webp",
+    "audioKeys": {
+      "default": "ördek"
+    },
+    "tags": {
+      "category": "none",
+      "position": "yanında",
+      "syllables": [
+        "ör",
+        "dek"
+      ],
+      "letters": [
+        "Ö",
+        "R",
+        "D",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2134,
+    "word": "ördek",
+    "imageUrl": "/images/2134.webp",
+    "audioKeys": {
+      "default": "ördek"
+    },
+    "tags": {
+      "category": "none",
+      "position": "yukarıda",
+      "syllables": [
+        "ör",
+        "dek"
+      ],
+      "letters": [
+        "Ö",
+        "R",
+        "D",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
     "id": 2201,
     "word": "kapı",
     "imageUrl": "/images/2201.webp",

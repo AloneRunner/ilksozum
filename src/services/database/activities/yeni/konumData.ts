@@ -220,6 +220,60 @@ export const insideOutsideDataYeni: ConceptRound[] = [
             { id: 2109, word: "bebek", imageUrl: "/images/2109.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" }
         ]
     },
+    // dinozor
+    {
+        id: 1017,
+        question: "Hangi dinozor kutunun içinde?",
+        questionAudioKey: "",
+        activityType: ActivityType.InsideOutside,
+        speech: {
+            tr: { question: 'Hangi dinozor kutunun içinde?', correct: 'Evet! Dinozor kutunun içindedir.', wrong: 'Hayır, dinozor kutunun dışındadır.' }
+        },
+        options: [
+            { id: 2121, word: "dinozor", imageUrl: "/images/2121.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2120, word: "dinozor", imageUrl: "/images/2120.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" }
+        ]
+    },
+    {
+        id: 1018,
+        question: "Hangi dinozor kutunun dışında?",
+        questionAudioKey: "",
+        activityType: ActivityType.InsideOutside,
+        speech: {
+            tr: { question: 'Hangi dinozor kutunun dışında?', correct: 'Evet! Dinozor kutunun dışındadır.', wrong: 'Hayır, dinozor kutunun içindedir.' }
+        },
+        options: [
+            { id: 2120, word: "dinozor", imageUrl: "/images/2120.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2121, word: "dinozor", imageUrl: "/images/2121.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" }
+        ]
+    },
+    // ördek
+    {
+        id: 1019,
+        question: "Hangi ördek sepetin içinde?",
+        questionAudioKey: "",
+        activityType: ActivityType.InsideOutside,
+        speech: {
+            tr: { question: 'Hangi ördek sepetin içinde?', correct: 'Evet! Ördek sepetin içindedir.', wrong: 'Hayır, ördek sepetin dışındadır.' }
+        },
+        options: [
+            { id: 2131, word: "ördek", imageUrl: "/images/2131.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2130, word: "ördek", imageUrl: "/images/2130.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" }
+        ]
+    },
+    {
+        id: 1020,
+        question: "Hangi ördek sepetin dışında?",
+        questionAudioKey: "",
+        activityType: ActivityType.InsideOutside,
+        speech: {
+            tr: { question: 'Hangi ördek sepetin dışında?', correct: 'Evet! Ördek sepetin dışındadır.', wrong: 'Hayır, ördek sepetin içindedir.' }
+        },
+        options: [
+            { id: 2130, word: "ördek", imageUrl: "/images/2130.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2131, word: "ördek", imageUrl: "/images/2131.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" }
+        ]
+    },
 ];
 
 export const onUnderDataYeni: ConceptRound[] = [
@@ -437,6 +491,60 @@ export const onUnderDataYeni: ConceptRound[] = [
         options: [
             { id: 2103, word: "bebek", imageUrl: "/images/2103.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
             { id: 2111, word: "bebek", imageUrl: "/images/2111.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" }
+        ]
+    },
+    // dinozor
+    {
+        id: 1017,
+        question: "Hangi dinozor sehpanın üstünde?",
+        questionAudioKey: "",
+        activityType: ActivityType.OnUnder,
+        speech: {
+            tr: { question: 'Hangi dinozor sehpanın üstünde?', correct: 'Evet! Dinozor sehpanın üstündedir.', wrong: 'Hayır, dinozor sehpanın altındadır.' }
+        },
+        options: [
+            { id: 2122, word: "dinozor", imageUrl: "/images/2122.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2115, word: "dinozor", imageUrl: "/images/2115.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" }
+        ]
+    },
+    {
+        id: 1018,
+        question: "Hangi dinozor sehpanın altında?",
+        questionAudioKey: "",
+        activityType: ActivityType.OnUnder,
+        speech: {
+            tr: { question: 'Hangi dinozor sehpanın altında?', correct: 'Evet! Dinozor sehpanın altındadır.', wrong: 'Hayır, dinozor sehpanın üstündedir.' }
+        },
+        options: [
+            { id: 2115, word: "dinozor", imageUrl: "/images/2115.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2122, word: "dinozor", imageUrl: "/images/2122.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" }
+        ]
+    },
+    // ördek
+    {
+        id: 1019,
+        question: "Hangi ördek taburenin üstünde?",
+        questionAudioKey: "",
+        activityType: ActivityType.OnUnder,
+        speech: {
+            tr: { question: 'Hangi ördek taburenin üstünde?', correct: 'Evet! Ördek taburenin üstündedir.', wrong: 'Hayır, ördek taburenin altındadır.' }
+        },
+        options: [
+            { id: 2132, word: "ördek", imageUrl: "/images/2132.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2125, word: "ördek", imageUrl: "/images/2125.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" }
+        ]
+    },
+    {
+        id: 1020,
+        question: "Hangi ördek taburenin altında?",
+        questionAudioKey: "",
+        activityType: ActivityType.OnUnder,
+        speech: {
+            tr: { question: 'Hangi ördek taburenin altında?', correct: 'Evet! Ördek taburenin altındadır.', wrong: 'Hayır, ördek taburenin üstündedir.' }
+        },
+        options: [
+            { id: 2125, word: "ördek", imageUrl: "/images/2125.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2132, word: "ördek", imageUrl: "/images/2132.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" }
         ]
     },
 ];
@@ -746,6 +854,34 @@ export const betweenDataYeni: ConceptRound[] = [
             { id: 2104, word: "bebek", imageUrl: "/images/2104.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" }
         ]
     },
+    // dinozor
+    {
+        id: 1009,
+        question: "Hangi dinozor iki kutunun arasında?",
+        questionAudioKey: "",
+        activityType: ActivityType.Between,
+        speech: {
+            tr: { question: 'Hangi dinozor iki kutunun arasında?', correct: 'Evet! Dinozor kutuların arasındadır.', wrong: 'Hayır, dinozor kutuların arasında değildir.' }
+        },
+        options: [
+            { id: 2117, word: "dinozor", imageUrl: "/images/2117.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2116, word: "dinozor", imageUrl: "/images/2116.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" }
+        ]
+    },
+    // ördek
+    {
+        id: 1010,
+        question: "Hangi ördek iki sepetin arasında?",
+        questionAudioKey: "",
+        activityType: ActivityType.Between,
+        speech: {
+            tr: { question: 'Hangi ördek iki sepetin arasında?', correct: 'Evet! Ördek sepetlerin arasındadır.', wrong: 'Hayır, ördek sepetlerin arasında değildir.' }
+        },
+        options: [
+            { id: 2127, word: "ördek", imageUrl: "/images/2127.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2126, word: "ördek", imageUrl: "/images/2126.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" }
+        ]
+    },
 ];
 
 export const belowAboveDataYeni: ConceptRound[] = [
@@ -936,6 +1072,60 @@ export const belowAboveDataYeni: ConceptRound[] = [
         options: [
             { id: 2107, word: "bebek", imageUrl: "/images/2107.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
             { id: 2113, word: "bebek", imageUrl: "/images/2113.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" }
+        ]
+    },
+    // dinozor
+    {
+        id: 1015,
+        question: "Hangi dinozor yukarıda?",
+        questionAudioKey: "",
+        activityType: ActivityType.BelowAbove,
+        speech: {
+            tr: { question: 'Hangi dinozor yukarıda?', correct: 'Evet! Dinozor yukarıdadır.', wrong: 'Hayır, dinozor aşağıdadır.' }
+        },
+        options: [
+            { id: 2124, word: "dinozor", imageUrl: "/images/2124.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2119, word: "dinozor", imageUrl: "/images/2119.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" }
+        ]
+    },
+    {
+        id: 1016,
+        question: "Hangi dinozor aşağıda?",
+        questionAudioKey: "",
+        activityType: ActivityType.BelowAbove,
+        speech: {
+            tr: { question: 'Hangi dinozor aşağıda?', correct: 'Evet! Dinozor aşağıdadır.', wrong: 'Hayır, dinozor yukarıdadır.' }
+        },
+        options: [
+            { id: 2119, word: "dinozor", imageUrl: "/images/2119.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2124, word: "dinozor", imageUrl: "/images/2124.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" }
+        ]
+    },
+    // ördek
+    {
+        id: 1017,
+        question: "Hangi ördek yukarıda?",
+        questionAudioKey: "",
+        activityType: ActivityType.BelowAbove,
+        speech: {
+            tr: { question: 'Hangi ördek yukarıda?', correct: 'Evet! Ördek yukarıdadır.', wrong: 'Hayır, ördek aşağıdadır.' }
+        },
+        options: [
+            { id: 2134, word: "ördek", imageUrl: "/images/2134.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2129, word: "ördek", imageUrl: "/images/2129.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" }
+        ]
+    },
+    {
+        id: 1018,
+        question: "Hangi ördek aşağıda?",
+        questionAudioKey: "",
+        activityType: ActivityType.BelowAbove,
+        speech: {
+            tr: { question: 'Hangi ördek aşağıda?', correct: 'Evet! Ördek aşağıdadır.', wrong: 'Hayır, ördek yukarıdadır.' }
+        },
+        options: [
+            { id: 2129, word: "ördek", imageUrl: "/images/2129.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2134, word: "ördek", imageUrl: "/images/2134.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" }
         ]
     },
 ];

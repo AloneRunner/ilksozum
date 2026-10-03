@@ -996,6 +996,182 @@
       "tags": {}
     },
     {
+      "id": 2115,
+      "kaynak": "konum-set9-dinozor/altinda.jpg",
+      "word": "dinozor",
+      "category": "none",
+      "tags": {
+        "position": "altında"
+      }
+    },
+    {
+      "id": 2116,
+      "kaynak": "konum-set9-dinozor/arasinda-degil.jpg",
+      "word": "dinozor",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2117,
+      "kaynak": "konum-set9-dinozor/arasinda.jpg",
+      "word": "dinozor",
+      "category": "none",
+      "tags": {
+        "position": "arasında"
+      }
+    },
+    {
+      "id": 2118,
+      "kaynak": "konum-set9-dinozor/arkasinda.jpg",
+      "word": "dinozor",
+      "category": "none",
+      "tags": {
+        "position": "arkasında"
+      }
+    },
+    {
+      "id": 2119,
+      "kaynak": "konum-set9-dinozor/asagida.jpg",
+      "word": "dinozor",
+      "category": "none",
+      "tags": {
+        "position": "aşağıda"
+      }
+    },
+    {
+      "id": 2120,
+      "kaynak": "konum-set9-dinozor/disinda.jpg",
+      "word": "dinozor",
+      "category": "none",
+      "tags": {
+        "position": "dışında"
+      }
+    },
+    {
+      "id": 2121,
+      "kaynak": "konum-set9-dinozor/icinde.jpg",
+      "word": "dinozor",
+      "category": "none",
+      "tags": {
+        "position": "içinde"
+      }
+    },
+    {
+      "id": 2122,
+      "kaynak": "konum-set9-dinozor/ustunde.jpg",
+      "word": "dinozor",
+      "category": "none",
+      "tags": {
+        "position": "üstünde"
+      }
+    },
+    {
+      "id": 2123,
+      "kaynak": "konum-set9-dinozor/yaninda.jpg",
+      "word": "dinozor",
+      "category": "none",
+      "tags": {
+        "position": "yanında"
+      }
+    },
+    {
+      "id": 2124,
+      "kaynak": "konum-set9-dinozor/yukarida.jpg",
+      "word": "dinozor",
+      "category": "none",
+      "tags": {
+        "position": "yukarıda"
+      }
+    },
+    {
+      "id": 2125,
+      "kaynak": "konum-set10-ordek/altinda.jpg",
+      "word": "ördek",
+      "category": "none",
+      "tags": {
+        "position": "altında"
+      }
+    },
+    {
+      "id": 2126,
+      "kaynak": "konum-set10-ordek/arasinda-degil.jpg",
+      "word": "ördek",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 2127,
+      "kaynak": "konum-set10-ordek/arasinda.jpg",
+      "word": "ördek",
+      "category": "none",
+      "tags": {
+        "position": "arasında"
+      }
+    },
+    {
+      "id": 2128,
+      "kaynak": "konum-set10-ordek/arkasinda.jpg",
+      "word": "ördek",
+      "category": "none",
+      "tags": {
+        "position": "arkasında"
+      }
+    },
+    {
+      "id": 2129,
+      "kaynak": "konum-set10-ordek/asagida.jpg",
+      "word": "ördek",
+      "category": "none",
+      "tags": {
+        "position": "aşağıda"
+      }
+    },
+    {
+      "id": 2130,
+      "kaynak": "konum-set10-ordek/disinda.jpg",
+      "word": "ördek",
+      "category": "none",
+      "tags": {
+        "position": "dışında"
+      }
+    },
+    {
+      "id": 2131,
+      "kaynak": "konum-set10-ordek/icinde.jpg",
+      "word": "ördek",
+      "category": "none",
+      "tags": {
+        "position": "içinde"
+      }
+    },
+    {
+      "id": 2132,
+      "kaynak": "konum-set10-ordek/ustunde.jpg",
+      "word": "ördek",
+      "category": "none",
+      "tags": {
+        "position": "üstünde"
+      }
+    },
+    {
+      "id": 2133,
+      "kaynak": "konum-set10-ordek/yaninda.jpg",
+      "word": "ördek",
+      "category": "none",
+      "tags": {
+        "position": "yanında"
+      }
+    },
+    {
+      "id": 2134,
+      "kaynak": "konum-set10-ordek/yukarida.jpg",
+      "word": "ördek",
+      "category": "none",
+      "tags": {
+        "position": "yukarıda"
+      }
+    },
+    {
       "id": 2201,
       "kaynak": "genis-dar/kapi-dar.jpg",
       "word": "kapı",

@@ -24,6 +24,8 @@ const SETS = [
   { dir: 'konum-set6-kedi', ozne: 'kedi', kap: 'yatağın', kaplar: 'yatakların', iki: 'iki yatağın', mob: 'bankın' },
   { dir: 'konum-set7-kus', ozne: 'kuş', kap: 'kafesin', kaplar: 'kafeslerin', iki: 'iki kafesin', mob: 'sehpanın' },
   { dir: 'konum-set8-bebek', ozne: 'bebek', kap: 'beşiğin', kaplar: 'beşiklerin', iki: 'iki beşiğin', mob: 'sandalyenin' },
+  { dir: 'konum-set9-dinozor', ozne: 'dinozor', kap: 'kutunun', kaplar: 'kutuların', iki: 'iki kutunun', mob: 'sehpanın' },
+  { dir: 'konum-set10-ordek', ozne: 'ördek', kap: 'sepetin', kaplar: 'sepetlerin', iki: 'iki sepetin', mob: 'taburenin' },
 ];
 
 // Dosya adı → konum etiketi
@@ -39,6 +41,7 @@ const ids = {}; // "dir/ad" -> id
 let id = START_ID;
 const konum = [];
 for (const s of SETS) {
+  if (!fs.existsSync(path.join(RAW, s.dir))) { console.log(`${s.dir}: klasör yok, atlandı`); continue; }
   for (const f of fs.readdirSync(path.join(RAW, s.dir)).filter(f => f.endsWith('.jpg')).sort()) {
     const ad = f.replace(/\.jpg$/, '');
     const tags = POS[ad] ? { position: POS[ad] } : {};
