@@ -3945,6 +3945,276 @@
       "tags": {
         "texture": "dikenli"
       }
+    },
+    {
+      "id": 3901,
+      "kaynak": "parlak-mat/araba-mat.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "texture": "mat"
+      }
+    },
+    {
+      "id": 3902,
+      "kaynak": "parlak-mat/araba-parlak.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "texture": "parlak"
+      }
+    },
+    {
+      "id": 3903,
+      "kaynak": "parlak-mat/ayakkabi-mat.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "texture": "mat"
+      }
+    },
+    {
+      "id": 3904,
+      "kaynak": "parlak-mat/ayakkabi-parlak.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "texture": "parlak"
+      }
+    },
+    {
+      "id": 3905,
+      "kaynak": "parlak-mat/balon-parlak.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "texture": "parlak"
+      }
+    },
+    {
+      "id": 3906,
+      "kaynak": "parlak-mat/elma-mat.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "texture": "mat"
+      }
+    },
+    {
+      "id": 3907,
+      "kaynak": "parlak-mat/elma-parlak.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "texture": "parlak"
+      }
+    },
+    {
+      "id": 3908,
+      "kaynak": "parlak-mat/kasik-mat.jpg",
+      "word": "kaşık",
+      "category": "none",
+      "tags": {
+        "texture": "mat"
+      }
+    },
+    {
+      "id": 3909,
+      "kaynak": "parlak-mat/kasik-parlak.jpg",
+      "word": "kaşık",
+      "category": "none",
+      "tags": {
+        "texture": "parlak"
+      }
+    },
+    {
+      "id": 3910,
+      "kaynak": "parlak-mat/kupa-mat.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "texture": "mat"
+      }
+    },
+    {
+      "id": 3911,
+      "kaynak": "parlak-mat/kupa-parlak.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "texture": "parlak"
+      }
+    },
+    {
+      "id": 3912,
+      "kaynak": "parlak-mat/saksi-parlak.jpg",
+      "word": "saksı",
+      "category": "none",
+      "tags": {
+        "texture": "parlak"
+      }
+    },
+    {
+      "id": 3913,
+      "kaynak": "parlak-mat/top-mat.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "texture": "mat"
+      }
+    },
+    {
+      "id": 3914,
+      "kaynak": "parlak-mat/top-parlak.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "texture": "parlak"
+      }
+    },
+    {
+      "id": 3915,
+      "kaynak": "parlak-mat/vazo-mat.jpg",
+      "word": "vazo",
+      "category": "none",
+      "tags": {
+        "texture": "mat"
+      }
+    },
+    {
+      "id": 3916,
+      "kaynak": "parlak-mat/vazo-parlak.jpg",
+      "word": "vazo",
+      "category": "none",
+      "tags": {
+        "texture": "parlak"
+      }
+    },
+    {
+      "id": 4001,
+      "kaynak": "seffaf-opak/balon-seffaf.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "texture": "şeffaf"
+      }
+    },
+    {
+      "id": 4002,
+      "kaynak": "seffaf-opak/bardak-opak.jpg",
+      "word": "bardak",
+      "category": "none",
+      "tags": {
+        "texture": "opak"
+      }
+    },
+    {
+      "id": 4003,
+      "kaynak": "seffaf-opak/bardak-seffaf.jpg",
+      "word": "bardak",
+      "category": "none",
+      "tags": {
+        "texture": "şeffaf"
+      }
+    },
+    {
+      "id": 4004,
+      "kaynak": "seffaf-opak/kalemlik-seffaf.jpg",
+      "word": "kalemlik",
+      "category": "none",
+      "tags": {
+        "texture": "şeffaf"
+      }
+    },
+    {
+      "id": 4005,
+      "kaynak": "seffaf-opak/kavanoz-opak.jpg",
+      "word": "kavanoz",
+      "category": "none",
+      "tags": {
+        "texture": "opak"
+      }
+    },
+    {
+      "id": 4006,
+      "kaynak": "seffaf-opak/kavanoz-seffaf.jpg",
+      "word": "kavanoz",
+      "category": "none",
+      "tags": {
+        "texture": "şeffaf"
+      }
+    },
+    {
+      "id": 4007,
+      "kaynak": "seffaf-opak/kutu-seffaf.jpg",
+      "word": "kutu",
+      "category": "none",
+      "tags": {
+        "texture": "şeffaf"
+      }
+    },
+    {
+      "id": 4008,
+      "kaynak": "seffaf-opak/poset_torba-opak.jpg",
+      "word": "kâğıt torba",
+      "category": "none",
+      "tags": {
+        "texture": "opak"
+      }
+    },
+    {
+      "id": 4009,
+      "kaynak": "seffaf-opak/poset_torba-seffaf.jpg",
+      "word": "poşet",
+      "category": "none",
+      "tags": {
+        "texture": "şeffaf"
+      }
+    },
+    {
+      "id": 4010,
+      "kaynak": "seffaf-opak/semsiye-seffaf.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "texture": "şeffaf"
+      }
+    },
+    {
+      "id": 4011,
+      "kaynak": "seffaf-opak/sise-opak.jpg",
+      "word": "şişe",
+      "category": "none",
+      "tags": {
+        "texture": "opak"
+      }
+    },
+    {
+      "id": 4012,
+      "kaynak": "seffaf-opak/sise-seffaf.jpg",
+      "word": "şişe",
+      "category": "none",
+      "tags": {
+        "texture": "şeffaf"
+      }
+    },
+    {
+      "id": 4013,
+      "kaynak": "seffaf-opak/su_sut-opak.jpg",
+      "word": "süt",
+      "category": "none",
+      "tags": {
+        "texture": "opak"
+      }
+    },
+    {
+      "id": 4014,
+      "kaynak": "seffaf-opak/su_sut-seffaf.jpg",
+      "word": "su",
+      "category": "none",
+      "tags": {
+        "texture": "şeffaf"
+      }
     }
   ]
 }

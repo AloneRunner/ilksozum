@@ -29,3 +29,5 @@ export { hardSoftDataYeni } from './sertYumusakData';
 export { hotColdDataYeni } from './sicakSogukData';
 export { roughSmoothDataYeni } from './puruzluPuruzsuzData';
 export { dikenliPuruzsuzDataYeni } from './dikenliPuruzsuzData';
+export { parlakMatDataYeni } from './parlakMatData';
+export { seffafOpakDataYeni } from './seffafOpakData';

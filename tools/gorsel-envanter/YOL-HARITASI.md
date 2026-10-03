@@ -61,8 +61,8 @@ Her nesneden 3-4 kademe üretilir (ör. 4 boyda aynı top). Bunlardan hem çift 
 - [ ] Kırışık / düzgün
 - [ ] Düğümlü / çözük
 - [ ] Düz / eğri
-- [ ] Parlak / mat
-- [ ] Şeffaf / opak
+- [x] Parlak / mat bağlandı: 9 çift, 18 soru (3901+).
+- [x] Şeffaf / opak bağlandı: 9 çift, 18 soru (4001+). İki kavram tek Flow sayfası (`flow-parlak-seffaf.md`), 7 görsel yeniden kullanıldı.
 - [ ] Ters / düz ve sivri / küt (deneme 1'e ek çiftler)
 
 ## Aşama 4: Duyusal, sosyal, yön

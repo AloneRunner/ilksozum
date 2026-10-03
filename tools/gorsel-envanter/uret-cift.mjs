@@ -295,6 +295,40 @@ const KAVRAMLAR = [
       balonbaligi_japonbaligi: { dikenli: 'balon balığı', puruzsuz: 'japon balığı' },
     },
   },
+  {
+    klasor: 'parlak-mat',
+    dosya: 'parlakMatData.ts',
+    exportAdi: 'parlakMatDataYeni',
+    activityType: 'ParlakMat',
+    idBaslangic: 3901,
+    etiket: 'texture',
+    a: { ek: 'parlak', deger: 'parlak', soru: 'Parlak olan hangisi?', sifat: 'parlaktır' },
+    b: { ek: 'mat', deger: 'mat', soru: 'Mat olan hangisi?', sifat: 'mattır' },
+    yenidenKullan: {
+      'balon-mat': 'buyuk-kucuk/balon-buyuk.jpg',
+      'saksi-mat': 'kirik-saglam/saksi-saglam.jpg',
+    },
+    kelime: { elma: 'elma', ayakkabi: 'ayakkabı', top: 'top', kupa: 'kupa', araba: 'araba', vazo: 'vazo',
+      balon: 'balon', kasik: 'kaşık', saksi: 'saksı' },
+  },
+  {
+    klasor: 'seffaf-opak',
+    dosya: 'seffafOpakData.ts',
+    exportAdi: 'seffafOpakDataYeni',
+    activityType: 'SeffafOpak',
+    idBaslangic: 4001,
+    etiket: 'texture',
+    a: { ek: 'seffaf', deger: 'şeffaf', soru: 'Şeffaf olan hangisi?', sifat: 'şeffaftır' },
+    b: { ek: 'opak', deger: 'opak', soru: 'Opak olan hangisi?', sifat: 'opaktır' },
+    yenidenKullan: {
+      'semsiye-opak': 'acik-kapali/semsiye-acik.jpg',
+      'kutu-opak': 'acik-kapali/kutu-kapali.jpg',
+      'balon-opak': 'buyuk-kucuk/balon-buyuk.jpg',
+      'kalemlik-opak': 'dolu-bos/kalemlik-dolu.jpg',
+    },
+    kelime: { bardak: 'bardak', sise: 'şişe', semsiye: 'şemsiye', kutu: 'kutu', kavanoz: 'kavanoz', balon: 'balon',
+      kalemlik: 'kalemlik', poset_torba: { seffaf: 'poşet', opak: 'kâğıt torba' }, su_sut: { seffaf: 'su', opak: 'süt' } },
+  },
 ];
 
 const cap = w => w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1);
