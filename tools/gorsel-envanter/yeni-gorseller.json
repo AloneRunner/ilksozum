@@ -7224,6 +7224,24 @@
     },
     {
       "id": 5701,
+      "kaynak": "ters-duz/ayakkabicift-duz.jpg",
+      "word": "ayakkabılar",
+      "category": "none",
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5702,
+      "kaynak": "ters-duz/ayakkabicift-ters.jpg",
+      "word": "ayakkabılar",
+      "category": "none",
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5703,
       "kaynak": "ters-duz/ayi-duz.jpg",
       "word": "oyuncak ayı",
       "category": "none",
@@ -7232,7 +7250,7 @@
       }
     },
     {
-      "id": 5702,
+      "id": 5704,
       "kaynak": "ters-duz/ayi-ters.jpg",
       "word": "oyuncak ayı",
       "category": "none",
@@ -7241,7 +7259,25 @@
       }
     },
     {
-      "id": 5703,
+      "id": 5705,
+      "kaynak": "ters-duz/cizme-duz.jpg",
+      "word": "çizmeler",
+      "category": "none",
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5706,
+      "kaynak": "ters-duz/cizme-ters.jpg",
+      "word": "çizmeler",
+      "category": "none",
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5707,
       "kaynak": "ters-duz/fincan-duz.jpg",
       "word": "fincan",
       "category": "none",
@@ -7250,7 +7286,7 @@
       }
     },
     {
-      "id": 5704,
+      "id": 5708,
       "kaynak": "ters-duz/fincan-ters.jpg",
       "word": "fincan",
       "category": "none",
@@ -7259,7 +7295,7 @@
       }
     },
     {
-      "id": 5705,
+      "id": 5709,
       "kaynak": "ters-duz/kova-duz.jpg",
       "word": "kova",
       "category": "none",
@@ -7268,7 +7304,7 @@
       }
     },
     {
-      "id": 5706,
+      "id": 5710,
       "kaynak": "ters-duz/kova-ters.jpg",
       "word": "kova",
       "category": "none",
@@ -7277,7 +7313,7 @@
       }
     },
     {
-      "id": 5707,
+      "id": 5711,
       "kaynak": "ters-duz/pantolon-duz.jpg",
       "word": "pantolon",
       "category": "none",
@@ -7286,7 +7322,7 @@
       }
     },
     {
-      "id": 5708,
+      "id": 5712,
       "kaynak": "ters-duz/pantolon-ters.jpg",
       "word": "pantolon",
       "category": "none",
@@ -7295,7 +7331,7 @@
       }
     },
     {
-      "id": 5709,
+      "id": 5713,
       "kaynak": "ters-duz/saksi-duz.jpg",
       "word": "saksı",
       "category": "none",
@@ -7304,7 +7340,7 @@
       }
     },
     {
-      "id": 5710,
+      "id": 5714,
       "kaynak": "ters-duz/saksi-ters.jpg",
       "word": "saksı",
       "category": "none",
@@ -7313,7 +7349,7 @@
       }
     },
     {
-      "id": 5711,
+      "id": 5715,
       "kaynak": "ters-duz/sandalye-duz.jpg",
       "word": "sandalye",
       "category": "none",
@@ -7322,7 +7358,7 @@
       }
     },
     {
-      "id": 5712,
+      "id": 5716,
       "kaynak": "ters-duz/sandalye-ters.jpg",
       "word": "sandalye",
       "category": "none",
@@ -7331,7 +7367,7 @@
       }
     },
     {
-      "id": 5713,
+      "id": 5717,
       "kaynak": "ters-duz/semsiye-duz.jpg",
       "word": "şemsiye",
       "category": "none",
@@ -7340,7 +7376,7 @@
       }
     },
     {
-      "id": 5714,
+      "id": 5718,
       "kaynak": "ters-duz/semsiye-ters.jpg",
       "word": "şemsiye",
       "category": "none",
@@ -7349,7 +7385,7 @@
       }
     },
     {
-      "id": 5715,
+      "id": 5719,
       "kaynak": "ters-duz/sise-duz.jpg",
       "word": "şişe",
       "category": "none",
@@ -7358,7 +7394,7 @@
       }
     },
     {
-      "id": 5716,
+      "id": 5720,
       "kaynak": "ters-duz/sise-ters.jpg",
       "word": "şişe",
       "category": "none",
@@ -7367,7 +7403,7 @@
       }
     },
     {
-      "id": 5717,
+      "id": 5721,
       "kaynak": "ters-duz/tabure-duz.jpg",
       "word": "tabure",
       "category": "none",
@@ -7376,9 +7412,45 @@
       }
     },
     {
-      "id": 5718,
+      "id": 5722,
       "kaynak": "ters-duz/tabure-ters.jpg",
       "word": "tabure",
+      "category": "none",
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5723,
+      "kaynak": "ters-duz/terlikcift-duz.jpg",
+      "word": "terlikler",
+      "category": "none",
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5724,
+      "kaynak": "ters-duz/terlikcift-ters.jpg",
+      "word": "terlikler",
+      "category": "none",
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5725,
+      "kaynak": "ters-duz/tisort-duz.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5726,
+      "kaynak": "ters-duz/tisort-ters.jpg",
+      "word": "tişört",
       "category": "none",
       "tags": {
         "orientation": "ters"

@@ -32,4 +32,6 @@ IMAGES:
 Start with IMAGE 1.
 
 ## Sonuç
-(Görseller geldikten sonra doldurulacak)
+- Alındı: spor ayakkabı, terlik, çizme (düz hali Flow'dan; ters hali `ters-ayakkabi.py` ile: her tek aynalandı, burunlar 14° dışa). Tişört: düz hali tur 31'den, içi dışına hali bu turdan.
+- Reddedildi: şapka, kazak, çocukta tişört. "EDIT" istense de Flow her seferinde başka çocuk çizdi; kazağın düz hali hiç gelmedi.
+- Ters/Düz böylece 13 çift.

@@ -499,11 +499,13 @@ const KAVRAMLAR = [
     b: { ek: 'duz', deger: 'düz', soru: 'Düz olan hangisi?', sifat: 'düzdür' },
     // Kaan: çocuklar ayakkabı/terliği ters ayağa, kıyafeti içi dışına ya da arkası önde giyiyor → giyim tersleri çok önemli
     ozne: { ayakkabi2: 'çocuğun ayakkabıları', terlik: 'çocuğun terlikleri', ayakkabicift: 'ayakkabılar',
-      tisortarka: 'çocuğun tişörtü', corap: 'çocuğun çorabı', kazak: 'çocuğun kazağı', sapka: 'çocuğun şapkası' },
+      terlikcift: 'terlikler', cizme: 'çizmeler', tisortarka: 'çocuğun tişörtü', corap: 'çocuğun çorabı', kazak: 'çocuğun kazağı', sapka: 'çocuğun şapkası' },
     soruOzel: {
       ayakkabi2: { ters: 'Hangi çocuk ayakkabılarını ters giymiş?', duz: 'Hangi çocuk ayakkabılarını düz giymiş?' },
       terlik: { ters: 'Hangi çocuk terliklerini ters giymiş?', duz: 'Hangi çocuk terliklerini düz giymiş?' },
       ayakkabicift: { ters: 'Hangi ayakkabılar ters duruyor?', duz: 'Hangi ayakkabılar düz duruyor?' },
+      terlikcift: { ters: 'Hangi terlikler ters duruyor?', duz: 'Hangi terlikler düz duruyor?' },
+      cizme: { ters: 'Hangi çizmeler ters duruyor?', duz: 'Hangi çizmeler düz duruyor?' },
       tisortarka: { ters: 'Hangi çocuk tişörtünü ters giymiş?', duz: 'Hangi çocuk tişörtünü düz giymiş?' },
       corap: { ters: 'Hangi çocuk çorabını ters giymiş?', duz: 'Hangi çocuk çorabını düz giymiş?' },
       kazak: { ters: 'Hangi çocuk kazağını ters giymiş?', duz: 'Hangi çocuk kazağını düz giymiş?' },
@@ -511,7 +513,7 @@ const KAVRAMLAR = [
     },
     kelime: { semsiye: 'şemsiye', bardak: 'bardak', kitap: 'kitap', sandalye: 'sandalye', kova: 'kova', saksi: 'saksı',
       fincan: 'fincan', sise: 'şişe', masa: 'masa', ayi: 'oyuncak ayı', tabure: 'tabure',
-      ayakkabi2: 'çocuk', terlik: 'çocuk', ayakkabicift: 'ayakkabılar', tisort: 'tişört', tisortarka: 'çocuk', pantolon: 'pantolon',
+      ayakkabi2: 'çocuk', terlik: 'çocuk', ayakkabicift: 'ayakkabılar', terlikcift: 'terlikler', cizme: 'çizmeler', tisort: 'tişört', tisortarka: 'çocuk', pantolon: 'pantolon',
       corap: 'çocuk', kazak: 'çocuk', sapka: 'çocuk' },
   },
   {
