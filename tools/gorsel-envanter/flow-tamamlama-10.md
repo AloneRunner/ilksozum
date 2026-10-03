@@ -1,6 +1,6 @@
 # Flow turu 27: Her kavramı 10 çifte tamamlama
 
-Gelmeyen ya da beğenilmeyen görseller yüzünden 10'un altında kalan 15 kavram. Flow 56 görsel üretecek.
+Gelmeyen ya da beğenilmeyen görseller yüzünden 10'un altında kalan 15 kavram. Flow 52 görsel üretecek. (Kitaplık ve tezgah çiftleri ayrıca geldi.)
 
 ## Ajana yapıştırılacak metin
 
@@ -13,10 +13,6 @@ GENEL KURALLAR:
 4. Her görseli listeye AYRI YENİ görsel olarak üret, birbirinin üzerine yazma. Çiftin ilkini referans alarak eşini üret. Her 5 görselde bir dur ve onayımı bekle.
 
 DAĞINIK / TOPLU (aynı yer, aynı açı; dağınık ama kirli değil):
-1. Kitaplık TOPLU: renkli kitaplar rafta dik ve düzgün dizilmiş ahşap kitaplık.
-2. Kitaplık DAĞINIK: aynı kitaplık, kitaplar devrilmiş, yatay yığılmış, bazıları yerde.
-3. Mutfak tezgahı TOPLU: düzenli, eşyalar yerinde, temiz mutfak tezgahı.
-4. Mutfak tezgahı DAĞINIK: aynı tezgah, kaplar, kaşıklar, kutular karmakarışık (kirli değil).
 5. Çanta TOPLU: açık mavi sırt çantası, içi görünüyor, defterler ve kalemlik düzgün dizili.
 6. Çanta DAĞINIK: aynı açık çanta, içindekiler karışık, kalemler ve kâğıtlar etrafa saçılmış.
 7. Çekmece TOPLU: açık ahşap çekmece, çoraplar katlanmış, sıra sıra dizili, yukarıdan.

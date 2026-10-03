@@ -14946,36 +14946,68 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 5105,
-    "word": "masa",
+    "word": "kitaplık",
     "imageUrl": "/images/5105.webp",
     "audioKeys": {
-      "default": "masa"
+      "default": "kitaplık"
     },
     "tags": {
       "category": "none",
       "order": "dağınık",
       "syllables": [
-        "ma",
-        "sa"
+        "ki",
+        "tap",
+        "lık"
       ],
       "letters": [
-        "M",
+        "K",
+        "İ",
+        "T",
         "A",
-        "S",
-        "A"
+        "P",
+        "L",
+        "I",
+        "K"
       ]
     }
   },
   {
     "id": 5106,
-    "word": "masa",
+    "word": "kitaplık",
     "imageUrl": "/images/5106.webp",
+    "audioKeys": {
+      "default": "kitaplık"
+    },
+    "tags": {
+      "category": "none",
+      "order": "toplu",
+      "syllables": [
+        "ki",
+        "tap",
+        "lık"
+      ],
+      "letters": [
+        "K",
+        "İ",
+        "T",
+        "A",
+        "P",
+        "L",
+        "I",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 5107,
+    "word": "masa",
+    "imageUrl": "/images/5107.webp",
     "audioKeys": {
       "default": "masa"
     },
     "tags": {
       "category": "none",
-      "order": "toplu",
+      "order": "dağınık",
       "syllables": [
         "ma",
         "sa"
@@ -14984,35 +15016,57 @@ export const imageDataYeni: ImageMetadata[] = [
         "M",
         "A",
         "S",
-        "A"
-      ]
-    }
-  },
-  {
-    "id": 5107,
-    "word": "oda",
-    "imageUrl": "/images/5107.webp",
-    "audioKeys": {
-      "default": "oda"
-    },
-    "tags": {
-      "category": "none",
-      "order": "dağınık",
-      "syllables": [
-        "o",
-        "da"
-      ],
-      "letters": [
-        "O",
-        "D",
         "A"
       ]
     }
   },
   {
     "id": 5108,
-    "word": "oda",
+    "word": "masa",
     "imageUrl": "/images/5108.webp",
+    "audioKeys": {
+      "default": "masa"
+    },
+    "tags": {
+      "category": "none",
+      "order": "toplu",
+      "syllables": [
+        "ma",
+        "sa"
+      ],
+      "letters": [
+        "M",
+        "A",
+        "S",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 5109,
+    "word": "oda",
+    "imageUrl": "/images/5109.webp",
+    "audioKeys": {
+      "default": "oda"
+    },
+    "tags": {
+      "category": "none",
+      "order": "dağınık",
+      "syllables": [
+        "o",
+        "da"
+      ],
+      "letters": [
+        "O",
+        "D",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 5110,
+    "word": "oda",
+    "imageUrl": "/images/5110.webp",
     "audioKeys": {
       "default": "oda"
     },
@@ -15031,9 +15085,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 5109,
+    "id": 5111,
     "word": "oyuncak rafı",
-    "imageUrl": "/images/5109.webp",
+    "imageUrl": "/images/5111.webp",
     "audioKeys": {
       "default": "oyuncak rafı"
     },
@@ -15063,9 +15117,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 5110,
+    "id": 5112,
     "word": "oyuncak rafı",
-    "imageUrl": "/images/5110.webp",
+    "imageUrl": "/images/5112.webp",
     "audioKeys": {
       "default": "oyuncak rafı"
     },
@@ -15095,9 +15149,77 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 5111,
+    "id": 5113,
+    "word": "mutfak tezgahı",
+    "imageUrl": "/images/5113.webp",
+    "audioKeys": {
+      "default": "mutfak tezgahı"
+    },
+    "tags": {
+      "category": "none",
+      "order": "dağınık",
+      "syllables": [
+        "mut",
+        "fak",
+        "tez",
+        "ga",
+        "hı"
+      ],
+      "letters": [
+        "M",
+        "U",
+        "T",
+        "F",
+        "A",
+        "K",
+        "T",
+        "E",
+        "Z",
+        "G",
+        "A",
+        "H",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 5114,
+    "word": "mutfak tezgahı",
+    "imageUrl": "/images/5114.webp",
+    "audioKeys": {
+      "default": "mutfak tezgahı"
+    },
+    "tags": {
+      "category": "none",
+      "order": "toplu",
+      "syllables": [
+        "mut",
+        "fak",
+        "tez",
+        "ga",
+        "hı"
+      ],
+      "letters": [
+        "M",
+        "U",
+        "T",
+        "F",
+        "A",
+        "K",
+        "T",
+        "E",
+        "Z",
+        "G",
+        "A",
+        "H",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 5115,
     "word": "yatak",
-    "imageUrl": "/images/5111.webp",
+    "imageUrl": "/images/5115.webp",
     "audioKeys": {
       "default": "yatak"
     },
@@ -15118,9 +15240,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 5112,
+    "id": 5116,
     "word": "yatak",
-    "imageUrl": "/images/5112.webp",
+    "imageUrl": "/images/5116.webp",
     "audioKeys": {
       "default": "yatak"
     },

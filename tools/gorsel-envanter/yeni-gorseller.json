@@ -5819,6 +5819,26 @@
     },
     {
       "id": 5105,
+      "kaynak": "daginik-toplu/kitaplik-daginik.jpg",
+      "word": "kitaplık",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "dağınık"
+      }
+    },
+    {
+      "id": 5106,
+      "kaynak": "daginik-toplu/kitaplik-toplu.jpg",
+      "word": "kitaplık",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "toplu"
+      }
+    },
+    {
+      "id": 5107,
       "kaynak": "daginik-toplu/masa-daginik.jpg",
       "word": "masa",
       "category": "none",
@@ -5828,7 +5848,7 @@
       }
     },
     {
-      "id": 5106,
+      "id": 5108,
       "kaynak": "daginik-toplu/masa-toplu.jpg",
       "word": "masa",
       "category": "none",
@@ -5838,7 +5858,7 @@
       }
     },
     {
-      "id": 5107,
+      "id": 5109,
       "kaynak": "daginik-toplu/oda-daginik.jpg",
       "word": "oda",
       "category": "none",
@@ -5848,7 +5868,7 @@
       }
     },
     {
-      "id": 5108,
+      "id": 5110,
       "kaynak": "daginik-toplu/oda-toplu.jpg",
       "word": "oda",
       "category": "none",
@@ -5858,7 +5878,7 @@
       }
     },
     {
-      "id": 5109,
+      "id": 5111,
       "kaynak": "daginik-toplu/oyuncak-daginik.jpg",
       "word": "oyuncak rafı",
       "category": "none",
@@ -5868,7 +5888,7 @@
       }
     },
     {
-      "id": 5110,
+      "id": 5112,
       "kaynak": "daginik-toplu/oyuncak-toplu.jpg",
       "word": "oyuncak rafı",
       "category": "none",
@@ -5878,7 +5898,27 @@
       }
     },
     {
-      "id": 5111,
+      "id": 5113,
+      "kaynak": "daginik-toplu/tezgah-daginik.jpg",
+      "word": "mutfak tezgahı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "dağınık"
+      }
+    },
+    {
+      "id": 5114,
+      "kaynak": "daginik-toplu/tezgah-toplu.jpg",
+      "word": "mutfak tezgahı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "toplu"
+      }
+    },
+    {
+      "id": 5115,
       "kaynak": "daginik-toplu/yatak-daginik.jpg",
       "word": "yatak",
       "category": "none",
@@ -5888,7 +5928,7 @@
       }
     },
     {
-      "id": 5112,
+      "id": 5116,
       "kaynak": "daginik-toplu/yatak-toplu.jpg",
       "word": "yatak",
       "category": "none",

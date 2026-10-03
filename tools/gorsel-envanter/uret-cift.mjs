@@ -476,7 +476,7 @@ const KAVRAMLAR = [
     activityType: 'MessyClean', idBaslangic: 5101, sahne: true, etiket: 'order',
     a: { ek: 'daginik', deger: 'dağınık', soru: 'Dağınık olan hangisi?', sifat: 'dağınıktır' },
     b: { ek: 'toplu', deger: 'toplu', soru: 'Toplu olan hangisi?', sifat: 'topludur' },
-    kelime: { kitaplik2: 'kitaplık', tezgah2: 'mutfak tezgahı', canta: 'çanta', cekmece: 'çekmece', oda: 'oda', masa: 'masa', yatak: 'yatak', dolap: 'dolap', kitaplik: 'kitaplık', ayakkabilik: 'ayakkabılık',
+    kelime: { canta: 'çanta', cekmece: 'çekmece', oda: 'oda', masa: 'masa', yatak: 'yatak', dolap: 'dolap', kitaplik: 'kitaplık', ayakkabilik: 'ayakkabılık',
       oyuncak: 'oyuncak rafı', tezgah: 'mutfak tezgahı' },
   },
 ];
