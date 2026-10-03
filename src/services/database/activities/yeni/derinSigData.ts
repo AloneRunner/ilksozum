@@ -60,11 +60,11 @@ export const derinSigDataYeni: ConceptRound[] = [
     // havuz
     {
         id: 5,
-        question: "Derin olan hangisi?",
+        question: "Suyu derin olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Derin olan hangisi?', correct: 'Evet! Havuzun suyu derindir.', wrong: 'Hayır, bu havuzun suyu sığdır.' }
+            tr: { question: 'Suyu derin olan hangisi?', correct: 'Evet! Havuzun suyu derindir.', wrong: 'Hayır, bu havuzun suyu sığdır.' }
         },
         options: [
             { id: 2905, word: "havuz", imageUrl: "/images/2905.webp", isCorrect: true, audioKey: "havuz", spokenText: "havuz" },
@@ -73,11 +73,11 @@ export const derinSigDataYeni: ConceptRound[] = [
     },
     {
         id: 6,
-        question: "Sığ olan hangisi?",
+        question: "Suyu sığ olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Sığ olan hangisi?', correct: 'Evet! Havuzun suyu sığdır.', wrong: 'Hayır, bu havuzun suyu derindir.' }
+            tr: { question: 'Suyu sığ olan hangisi?', correct: 'Evet! Havuzun suyu sığdır.', wrong: 'Hayır, bu havuzun suyu derindir.' }
         },
         options: [
             { id: 2906, word: "havuz", imageUrl: "/images/2906.webp", isCorrect: true, audioKey: "havuz", spokenText: "havuz" },

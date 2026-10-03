@@ -60,11 +60,11 @@ export const openClosedDataYeni: ConceptRound[] = [
     // göz
     {
         id: 5,
-        question: "Açık olan hangisi?",
+        question: "Gözleri açık olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Açık olan hangisi?', correct: 'Evet! Gözler açıktır.', wrong: 'Hayır, bu gözler kapalıdır.' }
+            tr: { question: 'Gözleri açık olan hangisi?', correct: 'Evet! Gözler açıktır.', wrong: 'Hayır, bu gözler kapalıdır.' }
         },
         options: [
             { id: 3005, word: "göz", imageUrl: "/images/3005.webp", isCorrect: true, audioKey: "göz", spokenText: "göz" },
@@ -73,11 +73,11 @@ export const openClosedDataYeni: ConceptRound[] = [
     },
     {
         id: 6,
-        question: "Kapalı olan hangisi?",
+        question: "Gözleri kapalı olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Kapalı olan hangisi?', correct: 'Evet! Gözler kapalıdır.', wrong: 'Hayır, bu gözler açıktır.' }
+            tr: { question: 'Gözleri kapalı olan hangisi?', correct: 'Evet! Gözler kapalıdır.', wrong: 'Hayır, bu gözler açıktır.' }
         },
         options: [
             { id: 3006, word: "göz", imageUrl: "/images/3006.webp", isCorrect: true, audioKey: "göz", spokenText: "göz" },

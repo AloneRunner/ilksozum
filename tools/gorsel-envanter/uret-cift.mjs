@@ -47,6 +47,10 @@ const KAVRAMLAR = [
     exportAdi: 'longShortDataYeni',
     activityType: 'LongShort',
     idBaslangic: 2401,
+    soruOzel: {
+      tisort: { uzun: 'Kolu uzun olan hangisi?', kisa: 'Kolu kısa olan hangisi?' },
+      sac: { uzun: 'Saçı uzun olan hangisi?', kisa: 'Saçı kısa olan hangisi?' },
+    },
     etiket: 'length',
     sahneNesneler: ['sac'], // portre: gri arka plan, renkler korunur
     a: { ek: 'uzun', deger: 'uzun', soru: 'Uzun olan hangisi?', sifat: 'uzundur' },
@@ -61,6 +65,7 @@ const KAVRAMLAR = [
     activityType: 'HighLow',
     idBaslangic: 2501,
     soruIdBaslangic: 1001, // HighLow eski i18n'den questions.sp_highlow_<id>_* arıyor
+    soruOzel: { ayakkabi: { yuksek: 'Topuğu yüksek olan hangisi?', alcak: 'Topuğu alçak olan hangisi?' } },
     etiket: 'height',
     sahneNesneler: ['bina', 'dag', 'cit', 'duvar', 'cadir'],
     ozne: { ayakkabi: 'ayakkabının topuğu' },
@@ -122,6 +127,7 @@ const KAVRAMLAR = [
     exportAdi: 'derinSigDataYeni',
     activityType: 'DerinSig',
     idBaslangic: 2901,
+    soruOzel: { havuz: { derin: 'Suyu derin olan hangisi?', sig: 'Suyu sığ olan hangisi?' } },
     etiket: 'depth',
     sahneNesneler: ['cukur', 'havuz'],
     a: { ek: 'derin', deger: 'derin', soru: 'Derin olan hangisi?', sifat: 'derindir' },
@@ -136,6 +142,7 @@ const KAVRAMLAR = [
     exportAdi: 'openClosedDataYeni',
     activityType: 'OpenClosed',
     idBaslangic: 3001,
+    soruOzel: { goz: { acik: 'Gözleri açık olan hangisi?', kapali: 'Gözleri kapalı olan hangisi?' } },
     etiket: 'state',
     sahneNesneler: ['goz'],
     a: { ek: 'acik', deger: 'açık', soru: 'Açık olan hangisi?', sifat: 'açıktır' },
@@ -162,6 +169,7 @@ const KAVRAMLAR = [
     exportAdi: 'cleanDirtyDataYeni',
     activityType: 'CleanDirty',
     idBaslangic: 3201,
+    soruOzel: { eller: { temiz: 'Elleri temiz olan hangisi?', kirli: 'Elleri kirli olan hangisi?' }, yuz: { temiz: 'Yüzü temiz olan hangisi?', kirli: 'Yüzü kirli olan hangisi?' } },
     etiket: 'cleanliness',
     sahneNesneler: ['yuz', 'eller'],
     a: { ek: 'temiz', deger: 'temiz', soru: 'Temiz olan hangisi?', sifat: 'temizdir' },
@@ -176,6 +184,7 @@ const KAVRAMLAR = [
     exportAdi: 'wetDryDataYeni',
     activityType: 'WetDry',
     idBaslangic: 3301,
+    soruOzel: { sac: { islak: 'Saçı ıslak olan hangisi?', kuru: 'Saçı kuru olan hangisi?' } },
     etiket: 'wetness',
     sahneNesneler: ['sac', 'yer', 'kum'],
     yenidenKullan: { 'semsiye-kuru': 'acik-kapali/semsiye-acik.jpg' }, // Kaan: aynı şemsiye
@@ -232,7 +241,7 @@ const KAVRAMLAR = [
     activityType: 'HotCold',
     idBaslangic: 3601,
     etiket: 'temperature',
-    sahneNesneler: ['hava', 'ates_kardanadam', 'soba_pencere'],
+    sahneNesneler: ['hava', 'ates_kardanadam', 'soba_pencere', 'utu_buz'], // buz: beyazlatınca kayboluyor
     a: { ek: 'sicak', deger: 'sıcak', soru: 'Sıcak olan hangisi?', sifat: 'sıcaktır' },
     b: { ek: 'soguk', deger: 'soğuk', soru: 'Soğuk olan hangisi?', sifat: 'soğuktur' },
     ozne: { kupa: 'kupadaki içecek' },
@@ -505,8 +514,10 @@ ${opt(fNo, wNo, false)}
         rounds.push(round(B.soru, `Evet! ${cap(wb)} ${B.sifat}.`, `Hayır, ${wa} ${A.sifat}.`, fb, fa, wb, wa) + ',');
         continue;
       }
-      rounds.push(round(A.soru, `Evet! ${cap(oz)} ${A.sifat}.`, `Hayır, ${bu}${oz} ${B.sifat}.`, fa, fb, w) + ',');
-      rounds.push(round(B.soru, `Evet! ${cap(oz)} ${B.sifat}.`, `Hayır, ${bu}${oz} ${A.sifat}.`, fb, fa, w) + ',');
+      // Soru nesneye göre özelleştirilebilir (Kaan: "Kolu kısa olan hangisi?", "Saçı kısa olan hangisi?")
+      const qA = (k.soruOzel?.[n]?.[ea]) || A.soru, qB = (k.soruOzel?.[n]?.[eb]) || B.soru;
+      rounds.push(round(qA, `Evet! ${cap(oz)} ${A.sifat}.`, `Hayır, ${bu}${oz} ${B.sifat}.`, fa, fb, w) + ',');
+      rounds.push(round(qB, `Evet! ${cap(oz)} ${B.sifat}.`, `Hayır, ${bu}${oz} ${A.sifat}.`, fb, fa, w) + ',');
       // Eş anlamlı soru (ör. bütün = tam): aynı görseller, farklı kelime; turda biri seçilir
       for (const [X, Y, fx, fy] of [[A, B, fa, fb], [B, A, fb, fa]]) {
         if (X.esSoru) rounds.push(round(X.esSoru, `Evet! ${cap(oz)} ${X.esSifat}.`, `Hayır, ${bu}${oz} ${Y.sifat}.`, fx, fy, w) + ',');

@@ -115,11 +115,11 @@ export const thinThickDataYeni: ConceptRound[] = [
     // Ağaç
     {
         id: 9,
-        question: "Kalın olan hangisi?",
-        questionAudioKey: "q_which_is_thick",
+        question: "Gövdesi kalın olan hangisi?",
+        questionAudioKey: "", // özel soru: ekranda bu metin görünsün
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Ağacın gövdesi kalındır.', wrong: 'Hayır, bu ağaç incedir.' }
+            tr: { question: 'Gövdesi kalın olan hangisi?', correct: 'Evet! Ağacın gövdesi kalındır.', wrong: 'Hayır, bu ağacın gövdesi incedir.' }
         },
         options: [
             { id: 2009, word: "ağaç", imageUrl: "/images/2009.webp", isCorrect: true, audioKey: "ağaç", spokenText: "ağaç" },
@@ -128,11 +128,11 @@ export const thinThickDataYeni: ConceptRound[] = [
     },
     {
         id: 10,
-        question: "İnce olan hangisi?",
-        questionAudioKey: "q_which_is_thin",
+        question: "Gövdesi ince olan hangisi?",
+        questionAudioKey: "", // özel soru: ekranda bu metin görünsün
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Ağacın gövdesi incedir.', wrong: 'Hayır, bu ağaç kalındır.' }
+            tr: { question: 'Gövdesi ince olan hangisi?', correct: 'Evet! Ağacın gövdesi incedir.', wrong: 'Hayır, bu ağacın gövdesi kalındır.' }
         },
         options: [
             { id: 2009, word: "ağaç", imageUrl: "/images/2009.webp", isCorrect: false, audioKey: "ağaç", spokenText: "ağaç" },

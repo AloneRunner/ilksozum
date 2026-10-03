@@ -168,11 +168,11 @@ export const longShortDataYeni: ConceptRound[] = [
     // saç
     {
         id: 13,
-        question: "Uzun olan hangisi?",
+        question: "Saçı uzun olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Uzun olan hangisi?', correct: 'Evet! Saç uzundur.', wrong: 'Hayır, bu saç kısadır.' }
+            tr: { question: 'Saçı uzun olan hangisi?', correct: 'Evet! Saç uzundur.', wrong: 'Hayır, bu saç kısadır.' }
         },
         options: [
             { id: 2414, word: "saç", imageUrl: "/images/2414.webp", isCorrect: true, audioKey: "saç", spokenText: "saç" },
@@ -181,11 +181,11 @@ export const longShortDataYeni: ConceptRound[] = [
     },
     {
         id: 14,
-        question: "Kısa olan hangisi?",
+        question: "Saçı kısa olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Kısa olan hangisi?', correct: 'Evet! Saç kısadır.', wrong: 'Hayır, bu saç uzundur.' }
+            tr: { question: 'Saçı kısa olan hangisi?', correct: 'Evet! Saç kısadır.', wrong: 'Hayır, bu saç uzundur.' }
         },
         options: [
             { id: 2413, word: "saç", imageUrl: "/images/2413.webp", isCorrect: true, audioKey: "saç", spokenText: "saç" },
@@ -195,11 +195,11 @@ export const longShortDataYeni: ConceptRound[] = [
     // tişört kolu
     {
         id: 15,
-        question: "Uzun olan hangisi?",
+        question: "Kolu uzun olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Uzun olan hangisi?', correct: 'Evet! Tişört kolu uzundur.', wrong: 'Hayır, bu tişört kolu kısadır.' }
+            tr: { question: 'Kolu uzun olan hangisi?', correct: 'Evet! Tişört kolu uzundur.', wrong: 'Hayır, bu tişört kolu kısadır.' }
         },
         options: [
             { id: 2416, word: "tişört kolu", imageUrl: "/images/2416.webp", isCorrect: true, audioKey: "tişört kolu", spokenText: "tişört kolu" },
@@ -208,11 +208,11 @@ export const longShortDataYeni: ConceptRound[] = [
     },
     {
         id: 16,
-        question: "Kısa olan hangisi?",
+        question: "Kolu kısa olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Kısa olan hangisi?', correct: 'Evet! Tişört kolu kısadır.', wrong: 'Hayır, bu tişört kolu uzundur.' }
+            tr: { question: 'Kolu kısa olan hangisi?', correct: 'Evet! Tişört kolu kısadır.', wrong: 'Hayır, bu tişört kolu uzundur.' }
         },
         options: [
             { id: 2415, word: "tişört kolu", imageUrl: "/images/2415.webp", isCorrect: true, audioKey: "tişört kolu", spokenText: "tişört kolu" },

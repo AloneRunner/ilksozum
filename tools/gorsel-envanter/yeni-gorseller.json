@@ -3704,6 +3704,7 @@
       "kaynak": "sicak-soguk/utu_buz-sicak.jpg",
       "word": "ütü",
       "category": "none",
+      "sahne": true,
       "tags": {
         "temperature": "sıcak"
       }
@@ -3713,6 +3714,7 @@
       "kaynak": "sicak-soguk/utu_buz-soguk.jpg",
       "word": "buz",
       "category": "none",
+      "sahne": true,
       "tags": {
         "temperature": "soğuk"
       }

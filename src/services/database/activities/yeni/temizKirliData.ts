@@ -141,11 +141,11 @@ export const cleanDirtyDataYeni: ConceptRound[] = [
     // el
     {
         id: 11,
-        question: "Temiz olan hangisi?",
+        question: "Elleri temiz olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.CleanDirty,
         speech: {
-            tr: { question: 'Temiz olan hangisi?', correct: 'Evet! Eller temizdir.', wrong: 'Hayır, bu eller kirlidir.' }
+            tr: { question: 'Elleri temiz olan hangisi?', correct: 'Evet! Eller temizdir.', wrong: 'Hayır, bu eller kirlidir.' }
         },
         options: [
             { id: 3212, word: "el", imageUrl: "/images/3212.webp", isCorrect: true, audioKey: "el", spokenText: "el" },
@@ -154,11 +154,11 @@ export const cleanDirtyDataYeni: ConceptRound[] = [
     },
     {
         id: 12,
-        question: "Kirli olan hangisi?",
+        question: "Elleri kirli olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.CleanDirty,
         speech: {
-            tr: { question: 'Kirli olan hangisi?', correct: 'Evet! Eller kirlidir.', wrong: 'Hayır, bu eller temizdir.' }
+            tr: { question: 'Elleri kirli olan hangisi?', correct: 'Evet! Eller kirlidir.', wrong: 'Hayır, bu eller temizdir.' }
         },
         options: [
             { id: 3211, word: "el", imageUrl: "/images/3211.webp", isCorrect: true, audioKey: "el", spokenText: "el" },
@@ -249,11 +249,11 @@ export const cleanDirtyDataYeni: ConceptRound[] = [
     // yüz
     {
         id: 19,
-        question: "Temiz olan hangisi?",
+        question: "Yüzü temiz olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.CleanDirty,
         speech: {
-            tr: { question: 'Temiz olan hangisi?', correct: 'Evet! Yüz temizdir.', wrong: 'Hayır, bu yüz kirlidir.' }
+            tr: { question: 'Yüzü temiz olan hangisi?', correct: 'Evet! Yüz temizdir.', wrong: 'Hayır, bu yüz kirlidir.' }
         },
         options: [
             { id: 3220, word: "yüz", imageUrl: "/images/3220.webp", isCorrect: true, audioKey: "yüz", spokenText: "yüz" },
@@ -262,11 +262,11 @@ export const cleanDirtyDataYeni: ConceptRound[] = [
     },
     {
         id: 20,
-        question: "Kirli olan hangisi?",
+        question: "Yüzü kirli olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.CleanDirty,
         speech: {
-            tr: { question: 'Kirli olan hangisi?', correct: 'Evet! Yüz kirlidir.', wrong: 'Hayır, bu yüz temizdir.' }
+            tr: { question: 'Yüzü kirli olan hangisi?', correct: 'Evet! Yüz kirlidir.', wrong: 'Hayır, bu yüz temizdir.' }
         },
         options: [
             { id: 3219, word: "yüz", imageUrl: "/images/3219.webp", isCorrect: true, audioKey: "yüz", spokenText: "yüz" },

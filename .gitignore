@@ -39,3 +39,4 @@ dist-ssr
 
 # Flow vb. araçlardan gelen ham görseller (büyük, işlenmemiş)
 /gorsel-ham/
+/tools/gorsel-envanter/kontrol.html

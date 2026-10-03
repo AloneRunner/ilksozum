@@ -6,11 +6,11 @@ export const highLowDataYeni: ConceptRound[] = [
     // ayakkabı
     {
         id: 1001,
-        question: "Yüksek olan hangisi?",
+        question: "Topuğu yüksek olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Yüksek olan hangisi?', correct: 'Evet! Ayakkabının topuğu yüksektir.', wrong: 'Hayır, bu ayakkabının topuğu alçaktır.' }
+            tr: { question: 'Topuğu yüksek olan hangisi?', correct: 'Evet! Ayakkabının topuğu yüksektir.', wrong: 'Hayır, bu ayakkabının topuğu alçaktır.' }
         },
         options: [
             { id: 2502, word: "ayakkabı", imageUrl: "/images/2502.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" },
@@ -19,11 +19,11 @@ export const highLowDataYeni: ConceptRound[] = [
     },
     {
         id: 1002,
-        question: "Alçak olan hangisi?",
+        question: "Topuğu alçak olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Alçak olan hangisi?', correct: 'Evet! Ayakkabının topuğu alçaktır.', wrong: 'Hayır, bu ayakkabının topuğu yüksektir.' }
+            tr: { question: 'Topuğu alçak olan hangisi?', correct: 'Evet! Ayakkabının topuğu alçaktır.', wrong: 'Hayır, bu ayakkabının topuğu yüksektir.' }
         },
         options: [
             { id: 2501, word: "ayakkabı", imageUrl: "/images/2501.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" },

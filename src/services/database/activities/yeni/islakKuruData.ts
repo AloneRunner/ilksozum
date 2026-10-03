@@ -60,11 +60,11 @@ export const wetDryDataYeni: ConceptRound[] = [
     // saç
     {
         id: 5,
-        question: "Islak olan hangisi?",
+        question: "Saçı ıslak olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Islak olan hangisi?', correct: 'Evet! Saçlar ıslaktır.', wrong: 'Hayır, bu saçlar kurudur.' }
+            tr: { question: 'Saçı ıslak olan hangisi?', correct: 'Evet! Saçlar ıslaktır.', wrong: 'Hayır, bu saçlar kurudur.' }
         },
         options: [
             { id: 3305, word: "saç", imageUrl: "/images/3305.webp", isCorrect: true, audioKey: "saç", spokenText: "saç" },
@@ -73,11 +73,11 @@ export const wetDryDataYeni: ConceptRound[] = [
     },
     {
         id: 6,
-        question: "Kuru olan hangisi?",
+        question: "Saçı kuru olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Kuru olan hangisi?', correct: 'Evet! Saçlar kurudur.', wrong: 'Hayır, bu saçlar ıslaktır.' }
+            tr: { question: 'Saçı kuru olan hangisi?', correct: 'Evet! Saçlar kurudur.', wrong: 'Hayır, bu saçlar ıslaktır.' }
         },
         options: [
             { id: 3306, word: "saç", imageUrl: "/images/3306.webp", isCorrect: true, audioKey: "saç", spokenText: "saç" },
