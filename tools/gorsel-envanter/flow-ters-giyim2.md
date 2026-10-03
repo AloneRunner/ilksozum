@@ -33,5 +33,6 @@ Start with IMAGE 1.
 
 ## Sonuç
 - Alındı: spor ayakkabı, terlik, çizme (düz hali Flow'dan; ters hali `ters-ayakkabi.py` ile: her tek aynalandı, burunlar 14° dışa). Tişört: düz hali tur 31'den, içi dışına hali bu turdan.
-- Reddedildi: şapka, kazak, çocukta tişört. "EDIT" istense de Flow her seferinde başka çocuk çizdi; kazağın düz hali hiç gelmedi.
-- Ters/Düz böylece 13 çift.
+- "EDIT" istense de Flow her seferinde başka çocuk çizdi. Kaan: şapka ve kazak farklı çocukla da olur. Tur 31'den alındı: kazak 9 (düz) / 8 (içi dışına, aynı çocuk), şapka 10 (düz) / 4 (ters; ikisi de oturan çocuk, benzer oda).
+- Çocukta tişört (arkası önde) alınmadı.
+- Ters/Düz böylece 15 çift.

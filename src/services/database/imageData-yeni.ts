@@ -18846,30 +18846,76 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 5709,
-    "word": "kova",
+    "word": "çocuk",
     "imageUrl": "/images/5709.webp",
     "audioKeys": {
-      "default": "kova"
+      "default": "çocuk"
     },
     "tags": {
       "category": "none",
       "orientation": "düz",
       "syllables": [
-        "ko",
-        "va"
+        "ço",
+        "cuk"
       ],
       "letters": [
-        "K",
+        "Ç",
         "O",
-        "V",
-        "A"
+        "C",
+        "U",
+        "K"
       ]
     }
   },
   {
     "id": 5710,
-    "word": "kova",
+    "word": "çocuk",
     "imageUrl": "/images/5710.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "orientation": "ters",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 5711,
+    "word": "kova",
+    "imageUrl": "/images/5711.webp",
+    "audioKeys": {
+      "default": "kova"
+    },
+    "tags": {
+      "category": "none",
+      "orientation": "düz",
+      "syllables": [
+        "ko",
+        "va"
+      ],
+      "letters": [
+        "K",
+        "O",
+        "V",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 5712,
+    "word": "kova",
+    "imageUrl": "/images/5712.webp",
     "audioKeys": {
       "default": "kova"
     },
@@ -18889,86 +18935,86 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 5711,
-    "word": "pantolon",
-    "imageUrl": "/images/5711.webp",
-    "audioKeys": {
-      "default": "pantolon"
-    },
-    "tags": {
-      "category": "none",
-      "orientation": "düz",
-      "syllables": [
-        "pan",
-        "to",
-        "lon"
-      ],
-      "letters": [
-        "P",
-        "A",
-        "N",
-        "T",
-        "O",
-        "L",
-        "O",
-        "N"
-      ]
-    }
-  },
-  {
-    "id": 5712,
-    "word": "pantolon",
-    "imageUrl": "/images/5712.webp",
-    "audioKeys": {
-      "default": "pantolon"
-    },
-    "tags": {
-      "category": "none",
-      "orientation": "ters",
-      "syllables": [
-        "pan",
-        "to",
-        "lon"
-      ],
-      "letters": [
-        "P",
-        "A",
-        "N",
-        "T",
-        "O",
-        "L",
-        "O",
-        "N"
-      ]
-    }
-  },
-  {
     "id": 5713,
-    "word": "saksı",
+    "word": "pantolon",
     "imageUrl": "/images/5713.webp",
     "audioKeys": {
-      "default": "saksı"
+      "default": "pantolon"
     },
     "tags": {
       "category": "none",
       "orientation": "düz",
       "syllables": [
-        "sak",
-        "sı"
+        "pan",
+        "to",
+        "lon"
       ],
       "letters": [
-        "S",
+        "P",
         "A",
-        "K",
-        "S",
-        "I"
+        "N",
+        "T",
+        "O",
+        "L",
+        "O",
+        "N"
       ]
     }
   },
   {
     "id": 5714,
-    "word": "saksı",
+    "word": "pantolon",
     "imageUrl": "/images/5714.webp",
+    "audioKeys": {
+      "default": "pantolon"
+    },
+    "tags": {
+      "category": "none",
+      "orientation": "ters",
+      "syllables": [
+        "pan",
+        "to",
+        "lon"
+      ],
+      "letters": [
+        "P",
+        "A",
+        "N",
+        "T",
+        "O",
+        "L",
+        "O",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": 5715,
+    "word": "saksı",
+    "imageUrl": "/images/5715.webp",
+    "audioKeys": {
+      "default": "saksı"
+    },
+    "tags": {
+      "category": "none",
+      "orientation": "düz",
+      "syllables": [
+        "sak",
+        "sı"
+      ],
+      "letters": [
+        "S",
+        "A",
+        "K",
+        "S",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 5716,
+    "word": "saksı",
+    "imageUrl": "/images/5716.webp",
     "audioKeys": {
       "default": "saksı"
     },
@@ -18989,80 +19035,27 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 5715,
-    "word": "sandalye",
-    "imageUrl": "/images/5715.webp",
-    "audioKeys": {
-      "default": "sandalye"
-    },
-    "tags": {
-      "category": "none",
-      "orientation": "düz",
-      "syllables": [
-        "san",
-        "dal",
-        "ye"
-      ],
-      "letters": [
-        "S",
-        "A",
-        "N",
-        "D",
-        "A",
-        "L",
-        "Y",
-        "E"
-      ]
-    }
-  },
-  {
-    "id": 5716,
-    "word": "sandalye",
-    "imageUrl": "/images/5716.webp",
-    "audioKeys": {
-      "default": "sandalye"
-    },
-    "tags": {
-      "category": "none",
-      "orientation": "ters",
-      "syllables": [
-        "san",
-        "dal",
-        "ye"
-      ],
-      "letters": [
-        "S",
-        "A",
-        "N",
-        "D",
-        "A",
-        "L",
-        "Y",
-        "E"
-      ]
-    }
-  },
-  {
     "id": 5717,
-    "word": "şemsiye",
+    "word": "sandalye",
     "imageUrl": "/images/5717.webp",
     "audioKeys": {
-      "default": "şemsiye"
+      "default": "sandalye"
     },
     "tags": {
       "category": "none",
       "orientation": "düz",
       "syllables": [
-        "şem",
-        "si",
+        "san",
+        "dal",
         "ye"
       ],
       "letters": [
-        "Ş",
-        "E",
-        "M",
         "S",
-        "İ",
+        "A",
+        "N",
+        "D",
+        "A",
+        "L",
         "Y",
         "E"
       ]
@@ -19070,8 +19063,107 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 5718,
-    "word": "şemsiye",
+    "word": "sandalye",
     "imageUrl": "/images/5718.webp",
+    "audioKeys": {
+      "default": "sandalye"
+    },
+    "tags": {
+      "category": "none",
+      "orientation": "ters",
+      "syllables": [
+        "san",
+        "dal",
+        "ye"
+      ],
+      "letters": [
+        "S",
+        "A",
+        "N",
+        "D",
+        "A",
+        "L",
+        "Y",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 5719,
+    "word": "çocuk",
+    "imageUrl": "/images/5719.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "orientation": "düz",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 5720,
+    "word": "çocuk",
+    "imageUrl": "/images/5720.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "orientation": "ters",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 5721,
+    "word": "şemsiye",
+    "imageUrl": "/images/5721.webp",
+    "audioKeys": {
+      "default": "şemsiye"
+    },
+    "tags": {
+      "category": "none",
+      "orientation": "düz",
+      "syllables": [
+        "şem",
+        "si",
+        "ye"
+      ],
+      "letters": [
+        "Ş",
+        "E",
+        "M",
+        "S",
+        "İ",
+        "Y",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 5722,
+    "word": "şemsiye",
+    "imageUrl": "/images/5722.webp",
     "audioKeys": {
       "default": "şemsiye"
     },
@@ -19095,131 +19187,131 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 5719,
-    "word": "şişe",
-    "imageUrl": "/images/5719.webp",
-    "audioKeys": {
-      "default": "şişe"
-    },
-    "tags": {
-      "category": "none",
-      "orientation": "düz",
-      "syllables": [
-        "şi",
-        "şe"
-      ],
-      "letters": [
-        "Ş",
-        "İ",
-        "Ş",
-        "E"
-      ]
-    }
-  },
-  {
-    "id": 5720,
-    "word": "şişe",
-    "imageUrl": "/images/5720.webp",
-    "audioKeys": {
-      "default": "şişe"
-    },
-    "tags": {
-      "category": "none",
-      "orientation": "ters",
-      "syllables": [
-        "şi",
-        "şe"
-      ],
-      "letters": [
-        "Ş",
-        "İ",
-        "Ş",
-        "E"
-      ]
-    }
-  },
-  {
-    "id": 5721,
-    "word": "tabure",
-    "imageUrl": "/images/5721.webp",
-    "audioKeys": {
-      "default": "tabure"
-    },
-    "tags": {
-      "category": "none",
-      "orientation": "düz",
-      "syllables": [
-        "ta",
-        "bu",
-        "re"
-      ],
-      "letters": [
-        "T",
-        "A",
-        "B",
-        "U",
-        "R",
-        "E"
-      ]
-    }
-  },
-  {
-    "id": 5722,
-    "word": "tabure",
-    "imageUrl": "/images/5722.webp",
-    "audioKeys": {
-      "default": "tabure"
-    },
-    "tags": {
-      "category": "none",
-      "orientation": "ters",
-      "syllables": [
-        "ta",
-        "bu",
-        "re"
-      ],
-      "letters": [
-        "T",
-        "A",
-        "B",
-        "U",
-        "R",
-        "E"
-      ]
-    }
-  },
-  {
     "id": 5723,
-    "word": "terlikler",
+    "word": "şişe",
     "imageUrl": "/images/5723.webp",
     "audioKeys": {
-      "default": "terlikler"
+      "default": "şişe"
     },
     "tags": {
       "category": "none",
       "orientation": "düz",
       "syllables": [
-        "ter",
-        "lik",
-        "ler"
+        "şi",
+        "şe"
       ],
       "letters": [
-        "T",
-        "E",
-        "R",
-        "L",
+        "Ş",
         "İ",
-        "K",
-        "L",
-        "E",
-        "R"
+        "Ş",
+        "E"
       ]
     }
   },
   {
     "id": 5724,
-    "word": "terlikler",
+    "word": "şişe",
     "imageUrl": "/images/5724.webp",
+    "audioKeys": {
+      "default": "şişe"
+    },
+    "tags": {
+      "category": "none",
+      "orientation": "ters",
+      "syllables": [
+        "şi",
+        "şe"
+      ],
+      "letters": [
+        "Ş",
+        "İ",
+        "Ş",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 5725,
+    "word": "tabure",
+    "imageUrl": "/images/5725.webp",
+    "audioKeys": {
+      "default": "tabure"
+    },
+    "tags": {
+      "category": "none",
+      "orientation": "düz",
+      "syllables": [
+        "ta",
+        "bu",
+        "re"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "B",
+        "U",
+        "R",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 5726,
+    "word": "tabure",
+    "imageUrl": "/images/5726.webp",
+    "audioKeys": {
+      "default": "tabure"
+    },
+    "tags": {
+      "category": "none",
+      "orientation": "ters",
+      "syllables": [
+        "ta",
+        "bu",
+        "re"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "B",
+        "U",
+        "R",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 5727,
+    "word": "terlikler",
+    "imageUrl": "/images/5727.webp",
+    "audioKeys": {
+      "default": "terlikler"
+    },
+    "tags": {
+      "category": "none",
+      "orientation": "düz",
+      "syllables": [
+        "ter",
+        "lik",
+        "ler"
+      ],
+      "letters": [
+        "T",
+        "E",
+        "R",
+        "L",
+        "İ",
+        "K",
+        "L",
+        "E",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 5728,
+    "word": "terlikler",
+    "imageUrl": "/images/5728.webp",
     "audioKeys": {
       "default": "terlikler"
     },
@@ -19245,9 +19337,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 5725,
+    "id": 5729,
     "word": "tişört",
-    "imageUrl": "/images/5725.webp",
+    "imageUrl": "/images/5729.webp",
     "audioKeys": {
       "default": "tişört"
     },
@@ -19269,9 +19361,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 5726,
+    "id": 5730,
     "word": "tişört",
-    "imageUrl": "/images/5726.webp",
+    "imageUrl": "/images/5730.webp",
     "audioKeys": {
       "default": "tişört"
     },

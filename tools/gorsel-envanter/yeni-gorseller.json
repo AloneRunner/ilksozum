@@ -7296,6 +7296,26 @@
     },
     {
       "id": 5709,
+      "kaynak": "ters-duz/kazak-duz.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5710,
+      "kaynak": "ters-duz/kazak-ters.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5711,
       "kaynak": "ters-duz/kova-duz.jpg",
       "word": "kova",
       "category": "none",
@@ -7304,7 +7324,7 @@
       }
     },
     {
-      "id": 5710,
+      "id": 5712,
       "kaynak": "ters-duz/kova-ters.jpg",
       "word": "kova",
       "category": "none",
@@ -7313,7 +7333,7 @@
       }
     },
     {
-      "id": 5711,
+      "id": 5713,
       "kaynak": "ters-duz/pantolon-duz.jpg",
       "word": "pantolon",
       "category": "none",
@@ -7322,7 +7342,7 @@
       }
     },
     {
-      "id": 5712,
+      "id": 5714,
       "kaynak": "ters-duz/pantolon-ters.jpg",
       "word": "pantolon",
       "category": "none",
@@ -7331,7 +7351,7 @@
       }
     },
     {
-      "id": 5713,
+      "id": 5715,
       "kaynak": "ters-duz/saksi-duz.jpg",
       "word": "saksı",
       "category": "none",
@@ -7340,7 +7360,7 @@
       }
     },
     {
-      "id": 5714,
+      "id": 5716,
       "kaynak": "ters-duz/saksi-ters.jpg",
       "word": "saksı",
       "category": "none",
@@ -7349,7 +7369,7 @@
       }
     },
     {
-      "id": 5715,
+      "id": 5717,
       "kaynak": "ters-duz/sandalye-duz.jpg",
       "word": "sandalye",
       "category": "none",
@@ -7358,7 +7378,7 @@
       }
     },
     {
-      "id": 5716,
+      "id": 5718,
       "kaynak": "ters-duz/sandalye-ters.jpg",
       "word": "sandalye",
       "category": "none",
@@ -7367,7 +7387,27 @@
       }
     },
     {
-      "id": 5717,
+      "id": 5719,
+      "kaynak": "ters-duz/sapka-duz.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5720,
+      "kaynak": "ters-duz/sapka-ters.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5721,
       "kaynak": "ters-duz/semsiye-duz.jpg",
       "word": "şemsiye",
       "category": "none",
@@ -7376,7 +7416,7 @@
       }
     },
     {
-      "id": 5718,
+      "id": 5722,
       "kaynak": "ters-duz/semsiye-ters.jpg",
       "word": "şemsiye",
       "category": "none",
@@ -7385,7 +7425,7 @@
       }
     },
     {
-      "id": 5719,
+      "id": 5723,
       "kaynak": "ters-duz/sise-duz.jpg",
       "word": "şişe",
       "category": "none",
@@ -7394,7 +7434,7 @@
       }
     },
     {
-      "id": 5720,
+      "id": 5724,
       "kaynak": "ters-duz/sise-ters.jpg",
       "word": "şişe",
       "category": "none",
@@ -7403,7 +7443,7 @@
       }
     },
     {
-      "id": 5721,
+      "id": 5725,
       "kaynak": "ters-duz/tabure-duz.jpg",
       "word": "tabure",
       "category": "none",
@@ -7412,7 +7452,7 @@
       }
     },
     {
-      "id": 5722,
+      "id": 5726,
       "kaynak": "ters-duz/tabure-ters.jpg",
       "word": "tabure",
       "category": "none",
@@ -7421,7 +7461,7 @@
       }
     },
     {
-      "id": 5723,
+      "id": 5727,
       "kaynak": "ters-duz/terlikcift-duz.jpg",
       "word": "terlikler",
       "category": "none",
@@ -7430,7 +7470,7 @@
       }
     },
     {
-      "id": 5724,
+      "id": 5728,
       "kaynak": "ters-duz/terlikcift-ters.jpg",
       "word": "terlikler",
       "category": "none",
@@ -7439,7 +7479,7 @@
       }
     },
     {
-      "id": 5725,
+      "id": 5729,
       "kaynak": "ters-duz/tisort-duz.jpg",
       "word": "tişört",
       "category": "none",
@@ -7448,7 +7488,7 @@
       }
     },
     {
-      "id": 5726,
+      "id": 5730,
       "kaynak": "ters-duz/tisort-ters.jpg",
       "word": "tişört",
       "category": "none",
