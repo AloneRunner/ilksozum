@@ -114,11 +114,11 @@ export const roughSmoothDataYeni: ConceptRound[] = [
     // tahta
     {
         id: 9,
-        question: "Pürüzlü olan hangisi?",
+        question: "Hangi tahta pürüzlü?",
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Tahta pürüzlüdür.', wrong: 'Hayır, bu tahta pürüzsüzdür.' }
+            tr: { question: 'Hangi tahta pürüzlü?', correct: 'Evet! Tahta pürüzlüdür.', wrong: 'Hayır, bu tahta pürüzsüzdür.' }
         },
         options: [
             { id: 3707, word: "tahta", imageUrl: "/images/3707.webp", isCorrect: true, audioKey: "tahta", spokenText: "tahta" },
@@ -127,11 +127,11 @@ export const roughSmoothDataYeni: ConceptRound[] = [
     },
     {
         id: 10,
-        question: "Pürüzsüz olan hangisi?",
+        question: "Hangi tahta pürüzsüz?",
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Tahta pürüzsüzdür.', wrong: 'Hayır, bu tahta pürüzlüdür.' }
+            tr: { question: 'Hangi tahta pürüzsüz?', correct: 'Evet! Tahta pürüzsüzdür.', wrong: 'Hayır, bu tahta pürüzlüdür.' }
         },
         options: [
             { id: 3708, word: "tahta", imageUrl: "/images/3708.webp", isCorrect: true, audioKey: "tahta", spokenText: "tahta" },

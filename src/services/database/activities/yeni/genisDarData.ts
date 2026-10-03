@@ -6,11 +6,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     // kapı
     {
         id: 1,
-        question: "Geniş olan hangisi?",
+        question: "Hangi kapı geniş?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Geniş olan hangisi?', correct: 'Evet! Kapı geniştir.', wrong: 'Hayır, bu kapı dardır.' }
+            tr: { question: 'Hangi kapı geniş?', correct: 'Evet! Kapı geniştir.', wrong: 'Hayır, bu kapı dardır.' }
         },
         options: [
             { id: 2202, word: "kapı", imageUrl: "/images/2202.webp", isCorrect: true, audioKey: "kapı", spokenText: "kapı" },
@@ -19,11 +19,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     },
     {
         id: 2,
-        question: "Dar olan hangisi?",
+        question: "Hangi kapı dar?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Dar olan hangisi?', correct: 'Evet! Kapı dardır.', wrong: 'Hayır, bu kapı geniştir.' }
+            tr: { question: 'Hangi kapı dar?', correct: 'Evet! Kapı dardır.', wrong: 'Hayır, bu kapı geniştir.' }
         },
         options: [
             { id: 2201, word: "kapı", imageUrl: "/images/2201.webp", isCorrect: true, audioKey: "kapı", spokenText: "kapı" },
@@ -33,11 +33,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     // kaydırak
     {
         id: 3,
-        question: "Geniş olan hangisi?",
+        question: "Hangi kaydırak geniş?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Geniş olan hangisi?', correct: 'Evet! Kaydırak geniştir.', wrong: 'Hayır, bu kaydırak dardır.' }
+            tr: { question: 'Hangi kaydırak geniş?', correct: 'Evet! Kaydırak geniştir.', wrong: 'Hayır, bu kaydırak dardır.' }
         },
         options: [
             { id: 2205, word: "kaydırak", imageUrl: "/images/2205.webp", isCorrect: true, audioKey: "kaydırak", spokenText: "kaydırak" },
@@ -46,11 +46,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     },
     {
         id: 4,
-        question: "Dar olan hangisi?",
+        question: "Hangi kaydırak dar?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Dar olan hangisi?', correct: 'Evet! Kaydırak dardır.', wrong: 'Hayır, bu kaydırak geniştir.' }
+            tr: { question: 'Hangi kaydırak dar?', correct: 'Evet! Kaydırak dardır.', wrong: 'Hayır, bu kaydırak geniştir.' }
         },
         options: [
             { id: 2204, word: "kaydırak", imageUrl: "/images/2204.webp", isCorrect: true, audioKey: "kaydırak", spokenText: "kaydırak" },
@@ -60,11 +60,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     // köprü
     {
         id: 5,
-        question: "Geniş olan hangisi?",
+        question: "Hangi köprü geniş?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Geniş olan hangisi?', correct: 'Evet! Köprü geniştir.', wrong: 'Hayır, bu köprü dardır.' }
+            tr: { question: 'Hangi köprü geniş?', correct: 'Evet! Köprü geniştir.', wrong: 'Hayır, bu köprü dardır.' }
         },
         options: [
             { id: 2208, word: "köprü", imageUrl: "/images/2208.webp", isCorrect: true, audioKey: "köprü", spokenText: "köprü" },
@@ -73,11 +73,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     },
     {
         id: 6,
-        question: "Dar olan hangisi?",
+        question: "Hangi köprü dar?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Dar olan hangisi?', correct: 'Evet! Köprü dardır.', wrong: 'Hayır, bu köprü geniştir.' }
+            tr: { question: 'Hangi köprü dar?', correct: 'Evet! Köprü dardır.', wrong: 'Hayır, bu köprü geniştir.' }
         },
         options: [
             { id: 2207, word: "köprü", imageUrl: "/images/2207.webp", isCorrect: true, audioKey: "köprü", spokenText: "köprü" },
@@ -87,11 +87,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     // koridor
     {
         id: 7,
-        question: "Geniş olan hangisi?",
+        question: "Hangi koridor geniş?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Geniş olan hangisi?', correct: 'Evet! Koridor geniştir.', wrong: 'Hayır, bu koridor dardır.' }
+            tr: { question: 'Hangi koridor geniş?', correct: 'Evet! Koridor geniştir.', wrong: 'Hayır, bu koridor dardır.' }
         },
         options: [
             { id: 2210, word: "koridor", imageUrl: "/images/2210.webp", isCorrect: true, audioKey: "koridor", spokenText: "koridor" },
@@ -100,11 +100,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     },
     {
         id: 8,
-        question: "Dar olan hangisi?",
+        question: "Hangi koridor dar?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Dar olan hangisi?', correct: 'Evet! Koridor dardır.', wrong: 'Hayır, bu koridor geniştir.' }
+            tr: { question: 'Hangi koridor dar?', correct: 'Evet! Koridor dardır.', wrong: 'Hayır, bu koridor geniştir.' }
         },
         options: [
             { id: 2209, word: "koridor", imageUrl: "/images/2209.webp", isCorrect: true, audioKey: "koridor", spokenText: "koridor" },
@@ -114,11 +114,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     // merdiven
     {
         id: 9,
-        question: "Geniş olan hangisi?",
+        question: "Hangi merdiven geniş?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Geniş olan hangisi?', correct: 'Evet! Merdiven geniştir.', wrong: 'Hayır, bu merdiven dardır.' }
+            tr: { question: 'Hangi merdiven geniş?', correct: 'Evet! Merdiven geniştir.', wrong: 'Hayır, bu merdiven dardır.' }
         },
         options: [
             { id: 2212, word: "merdiven", imageUrl: "/images/2212.webp", isCorrect: true, audioKey: "merdiven", spokenText: "merdiven" },
@@ -127,11 +127,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     },
     {
         id: 10,
-        question: "Dar olan hangisi?",
+        question: "Hangi merdiven dar?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Dar olan hangisi?', correct: 'Evet! Merdiven dardır.', wrong: 'Hayır, bu merdiven geniştir.' }
+            tr: { question: 'Hangi merdiven dar?', correct: 'Evet! Merdiven dardır.', wrong: 'Hayır, bu merdiven geniştir.' }
         },
         options: [
             { id: 2211, word: "merdiven", imageUrl: "/images/2211.webp", isCorrect: true, audioKey: "merdiven", spokenText: "merdiven" },
@@ -141,11 +141,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     // nehir
     {
         id: 11,
-        question: "Geniş olan hangisi?",
+        question: "Hangi nehir geniş?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Geniş olan hangisi?', correct: 'Evet! Nehir geniştir.', wrong: 'Hayır, bu nehir dardır.' }
+            tr: { question: 'Hangi nehir geniş?', correct: 'Evet! Nehir geniştir.', wrong: 'Hayır, bu nehir dardır.' }
         },
         options: [
             { id: 2214, word: "nehir", imageUrl: "/images/2214.webp", isCorrect: true, audioKey: "nehir", spokenText: "nehir" },
@@ -154,11 +154,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     },
     {
         id: 12,
-        question: "Dar olan hangisi?",
+        question: "Hangi nehir dar?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Dar olan hangisi?', correct: 'Evet! Nehir dardır.', wrong: 'Hayır, bu nehir geniştir.' }
+            tr: { question: 'Hangi nehir dar?', correct: 'Evet! Nehir dardır.', wrong: 'Hayır, bu nehir geniştir.' }
         },
         options: [
             { id: 2213, word: "nehir", imageUrl: "/images/2213.webp", isCorrect: true, audioKey: "nehir", spokenText: "nehir" },
@@ -168,11 +168,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     // pencere
     {
         id: 13,
-        question: "Geniş olan hangisi?",
+        question: "Hangi pencere geniş?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Geniş olan hangisi?', correct: 'Evet! Pencere geniştir.', wrong: 'Hayır, bu pencere dardır.' }
+            tr: { question: 'Hangi pencere geniş?', correct: 'Evet! Pencere geniştir.', wrong: 'Hayır, bu pencere dardır.' }
         },
         options: [
             { id: 2216, word: "pencere", imageUrl: "/images/2216.webp", isCorrect: true, audioKey: "pencere", spokenText: "pencere" },
@@ -181,11 +181,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     },
     {
         id: 14,
-        question: "Dar olan hangisi?",
+        question: "Hangi pencere dar?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Dar olan hangisi?', correct: 'Evet! Pencere dardır.', wrong: 'Hayır, bu pencere geniştir.' }
+            tr: { question: 'Hangi pencere dar?', correct: 'Evet! Pencere dardır.', wrong: 'Hayır, bu pencere geniştir.' }
         },
         options: [
             { id: 2215, word: "pencere", imageUrl: "/images/2215.webp", isCorrect: true, audioKey: "pencere", spokenText: "pencere" },
@@ -195,11 +195,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     // sokak
     {
         id: 15,
-        question: "Geniş olan hangisi?",
+        question: "Hangi sokak geniş?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Geniş olan hangisi?', correct: 'Evet! Sokak geniştir.', wrong: 'Hayır, bu sokak dardır.' }
+            tr: { question: 'Hangi sokak geniş?', correct: 'Evet! Sokak geniştir.', wrong: 'Hayır, bu sokak dardır.' }
         },
         options: [
             { id: 2218, word: "sokak", imageUrl: "/images/2218.webp", isCorrect: true, audioKey: "sokak", spokenText: "sokak" },
@@ -208,11 +208,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     },
     {
         id: 16,
-        question: "Dar olan hangisi?",
+        question: "Hangi sokak dar?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Dar olan hangisi?', correct: 'Evet! Sokak dardır.', wrong: 'Hayır, bu sokak geniştir.' }
+            tr: { question: 'Hangi sokak dar?', correct: 'Evet! Sokak dardır.', wrong: 'Hayır, bu sokak geniştir.' }
         },
         options: [
             { id: 2217, word: "sokak", imageUrl: "/images/2217.webp", isCorrect: true, audioKey: "sokak", spokenText: "sokak" },
@@ -222,11 +222,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     // tünel
     {
         id: 17,
-        question: "Geniş olan hangisi?",
+        question: "Hangi tünel geniş?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Geniş olan hangisi?', correct: 'Evet! Tünel geniştir.', wrong: 'Hayır, bu tünel dardır.' }
+            tr: { question: 'Hangi tünel geniş?', correct: 'Evet! Tünel geniştir.', wrong: 'Hayır, bu tünel dardır.' }
         },
         options: [
             { id: 2220, word: "tünel", imageUrl: "/images/2220.webp", isCorrect: true, audioKey: "tünel", spokenText: "tünel" },
@@ -235,11 +235,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     },
     {
         id: 18,
-        question: "Dar olan hangisi?",
+        question: "Hangi tünel dar?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Dar olan hangisi?', correct: 'Evet! Tünel dardır.', wrong: 'Hayır, bu tünel geniştir.' }
+            tr: { question: 'Hangi tünel dar?', correct: 'Evet! Tünel dardır.', wrong: 'Hayır, bu tünel geniştir.' }
         },
         options: [
             { id: 2219, word: "tünel", imageUrl: "/images/2219.webp", isCorrect: true, audioKey: "tünel", spokenText: "tünel" },
@@ -249,11 +249,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     // yol
     {
         id: 19,
-        question: "Geniş olan hangisi?",
+        question: "Hangi yol geniş?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Geniş olan hangisi?', correct: 'Evet! Yol geniştir.', wrong: 'Hayır, bu yol dardır.' }
+            tr: { question: 'Hangi yol geniş?', correct: 'Evet! Yol geniştir.', wrong: 'Hayır, bu yol dardır.' }
         },
         options: [
             { id: 2222, word: "yol", imageUrl: "/images/2222.webp", isCorrect: true, audioKey: "yol", spokenText: "yol" },
@@ -262,11 +262,11 @@ export const wideNarrowDataYeni: ConceptRound[] = [
     },
     {
         id: 20,
-        question: "Dar olan hangisi?",
+        question: "Hangi yol dar?",
         questionAudioKey: "",
         activityType: ActivityType.WideNarrow,
         speech: {
-            tr: { question: 'Dar olan hangisi?', correct: 'Evet! Yol dardır.', wrong: 'Hayır, bu yol geniştir.' }
+            tr: { question: 'Hangi yol dar?', correct: 'Evet! Yol dardır.', wrong: 'Hayır, bu yol geniştir.' }
         },
         options: [
             { id: 2221, word: "yol", imageUrl: "/images/2221.webp", isCorrect: true, audioKey: "yol", spokenText: "yol" },

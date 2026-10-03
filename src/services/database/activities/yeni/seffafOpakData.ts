@@ -6,11 +6,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     // balon
     {
         id: 1,
-        question: "Şeffaf olan hangisi?",
+        question: "Hangi balon şeffaf?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Şeffaf olan hangisi?', correct: 'Evet! Balon şeffaftır.', wrong: 'Hayır, bu balon opaktır.' }
+            tr: { question: 'Hangi balon şeffaf?', correct: 'Evet! Balon şeffaftır.', wrong: 'Hayır, bu balon opaktır.' }
         },
         options: [
             { id: 4001, word: "balon", imageUrl: "/images/4001.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -19,11 +19,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     },
     {
         id: 2,
-        question: "Opak olan hangisi?",
+        question: "Hangi balon opak?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Opak olan hangisi?', correct: 'Evet! Balon opaktır.', wrong: 'Hayır, bu balon şeffaftır.' }
+            tr: { question: 'Hangi balon opak?', correct: 'Evet! Balon opaktır.', wrong: 'Hayır, bu balon şeffaftır.' }
         },
         options: [
             { id: 2305, word: "balon", imageUrl: "/images/2305.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -33,11 +33,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     // bardak
     {
         id: 3,
-        question: "Şeffaf olan hangisi?",
+        question: "Hangi bardak şeffaf?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Şeffaf olan hangisi?', correct: 'Evet! Bardak şeffaftır.', wrong: 'Hayır, bu bardak opaktır.' }
+            tr: { question: 'Hangi bardak şeffaf?', correct: 'Evet! Bardak şeffaftır.', wrong: 'Hayır, bu bardak opaktır.' }
         },
         options: [
             { id: 4003, word: "bardak", imageUrl: "/images/4003.webp", isCorrect: true, audioKey: "bardak", spokenText: "bardak" },
@@ -46,11 +46,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     },
     {
         id: 4,
-        question: "Opak olan hangisi?",
+        question: "Hangi bardak opak?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Opak olan hangisi?', correct: 'Evet! Bardak opaktır.', wrong: 'Hayır, bu bardak şeffaftır.' }
+            tr: { question: 'Hangi bardak opak?', correct: 'Evet! Bardak opaktır.', wrong: 'Hayır, bu bardak şeffaftır.' }
         },
         options: [
             { id: 4002, word: "bardak", imageUrl: "/images/4002.webp", isCorrect: true, audioKey: "bardak", spokenText: "bardak" },
@@ -60,11 +60,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     // kalemlik
     {
         id: 5,
-        question: "Şeffaf olan hangisi?",
+        question: "Hangi kalemlik şeffaf?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Şeffaf olan hangisi?', correct: 'Evet! Kalemlik şeffaftır.', wrong: 'Hayır, bu kalemlik opaktır.' }
+            tr: { question: 'Hangi kalemlik şeffaf?', correct: 'Evet! Kalemlik şeffaftır.', wrong: 'Hayır, bu kalemlik opaktır.' }
         },
         options: [
             { id: 4004, word: "kalemlik", imageUrl: "/images/4004.webp", isCorrect: true, audioKey: "kalemlik", spokenText: "kalemlik" },
@@ -73,11 +73,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     },
     {
         id: 6,
-        question: "Opak olan hangisi?",
+        question: "Hangi kalemlik opak?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Opak olan hangisi?', correct: 'Evet! Kalemlik opaktır.', wrong: 'Hayır, bu kalemlik şeffaftır.' }
+            tr: { question: 'Hangi kalemlik opak?', correct: 'Evet! Kalemlik opaktır.', wrong: 'Hayır, bu kalemlik şeffaftır.' }
         },
         options: [
             { id: 2606, word: "kalemlik", imageUrl: "/images/2606.webp", isCorrect: true, audioKey: "kalemlik", spokenText: "kalemlik" },
@@ -87,11 +87,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     // kavanoz
     {
         id: 7,
-        question: "Şeffaf olan hangisi?",
+        question: "Hangi kavanoz şeffaf?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Şeffaf olan hangisi?', correct: 'Evet! Kavanoz şeffaftır.', wrong: 'Hayır, bu kavanoz opaktır.' }
+            tr: { question: 'Hangi kavanoz şeffaf?', correct: 'Evet! Kavanoz şeffaftır.', wrong: 'Hayır, bu kavanoz opaktır.' }
         },
         options: [
             { id: 4006, word: "kavanoz", imageUrl: "/images/4006.webp", isCorrect: true, audioKey: "kavanoz", spokenText: "kavanoz" },
@@ -100,11 +100,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     },
     {
         id: 8,
-        question: "Opak olan hangisi?",
+        question: "Hangi kavanoz opak?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Opak olan hangisi?', correct: 'Evet! Kavanoz opaktır.', wrong: 'Hayır, bu kavanoz şeffaftır.' }
+            tr: { question: 'Hangi kavanoz opak?', correct: 'Evet! Kavanoz opaktır.', wrong: 'Hayır, bu kavanoz şeffaftır.' }
         },
         options: [
             { id: 4005, word: "kavanoz", imageUrl: "/images/4005.webp", isCorrect: true, audioKey: "kavanoz", spokenText: "kavanoz" },
@@ -114,11 +114,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     // kutu
     {
         id: 9,
-        question: "Şeffaf olan hangisi?",
+        question: "Hangi kutu şeffaf?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Şeffaf olan hangisi?', correct: 'Evet! Kutu şeffaftır.', wrong: 'Hayır, bu kutu opaktır.' }
+            tr: { question: 'Hangi kutu şeffaf?', correct: 'Evet! Kutu şeffaftır.', wrong: 'Hayır, bu kutu opaktır.' }
         },
         options: [
             { id: 4007, word: "kutu", imageUrl: "/images/4007.webp", isCorrect: true, audioKey: "kutu", spokenText: "kutu" },
@@ -127,11 +127,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     },
     {
         id: 10,
-        question: "Opak olan hangisi?",
+        question: "Hangi kutu opak?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Opak olan hangisi?', correct: 'Evet! Kutu opaktır.', wrong: 'Hayır, bu kutu şeffaftır.' }
+            tr: { question: 'Hangi kutu opak?', correct: 'Evet! Kutu opaktır.', wrong: 'Hayır, bu kutu şeffaftır.' }
         },
         options: [
             { id: 3014, word: "kutu", imageUrl: "/images/3014.webp", isCorrect: true, audioKey: "kutu", spokenText: "kutu" },
@@ -168,11 +168,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     // şemsiye
     {
         id: 13,
-        question: "Şeffaf olan hangisi?",
+        question: "Hangi şemsiye şeffaf?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Şeffaf olan hangisi?', correct: 'Evet! Şemsiye şeffaftır.', wrong: 'Hayır, bu şemsiye opaktır.' }
+            tr: { question: 'Hangi şemsiye şeffaf?', correct: 'Evet! Şemsiye şeffaftır.', wrong: 'Hayır, bu şemsiye opaktır.' }
         },
         options: [
             { id: 4010, word: "şemsiye", imageUrl: "/images/4010.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -181,11 +181,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     },
     {
         id: 14,
-        question: "Opak olan hangisi?",
+        question: "Hangi şemsiye opak?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Opak olan hangisi?', correct: 'Evet! Şemsiye opaktır.', wrong: 'Hayır, bu şemsiye şeffaftır.' }
+            tr: { question: 'Hangi şemsiye opak?', correct: 'Evet! Şemsiye opaktır.', wrong: 'Hayır, bu şemsiye şeffaftır.' }
         },
         options: [
             { id: 3019, word: "şemsiye", imageUrl: "/images/3019.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -195,11 +195,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     // şişe
     {
         id: 15,
-        question: "Şeffaf olan hangisi?",
+        question: "Hangi şişe şeffaf?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Şeffaf olan hangisi?', correct: 'Evet! Şişe şeffaftır.', wrong: 'Hayır, bu şişe opaktır.' }
+            tr: { question: 'Hangi şişe şeffaf?', correct: 'Evet! Şişe şeffaftır.', wrong: 'Hayır, bu şişe opaktır.' }
         },
         options: [
             { id: 4012, word: "şişe", imageUrl: "/images/4012.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -208,11 +208,11 @@ export const seffafOpakDataYeni: ConceptRound[] = [
     },
     {
         id: 16,
-        question: "Opak olan hangisi?",
+        question: "Hangi şişe opak?",
         questionAudioKey: "",
         activityType: ActivityType.SeffafOpak,
         speech: {
-            tr: { question: 'Opak olan hangisi?', correct: 'Evet! Şişe opaktır.', wrong: 'Hayır, bu şişe şeffaftır.' }
+            tr: { question: 'Hangi şişe opak?', correct: 'Evet! Şişe opaktır.', wrong: 'Hayır, bu şişe şeffaftır.' }
         },
         options: [
             { id: 4011, word: "şişe", imageUrl: "/images/4011.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },

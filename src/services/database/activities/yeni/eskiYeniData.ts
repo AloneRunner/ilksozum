@@ -6,11 +6,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     // araba
     {
         id: 1,
-        question: "Eski olan hangisi?",
+        question: "Hangi araba eski?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Eski olan hangisi?', correct: 'Evet! Araba eskidir.', wrong: 'Hayır, bu araba yenidir.' }
+            tr: { question: 'Hangi araba eski?', correct: 'Evet! Araba eskidir.', wrong: 'Hayır, bu araba yenidir.' }
         },
         options: [
             { id: 3401, word: "araba", imageUrl: "/images/3401.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -19,11 +19,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     },
     {
         id: 2,
-        question: "Yeni olan hangisi?",
+        question: "Hangi araba yeni?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Yeni olan hangisi?', correct: 'Evet! Araba yenidir.', wrong: 'Hayır, bu araba eskidir.' }
+            tr: { question: 'Hangi araba yeni?', correct: 'Evet! Araba yenidir.', wrong: 'Hayır, bu araba eskidir.' }
         },
         options: [
             { id: 3402, word: "araba", imageUrl: "/images/3402.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -33,11 +33,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     // ayakkabı
     {
         id: 3,
-        question: "Eski olan hangisi?",
+        question: "Hangi ayakkabı eski?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Eski olan hangisi?', correct: 'Evet! Ayakkabı eskidir.', wrong: 'Hayır, bu ayakkabı yenidir.' }
+            tr: { question: 'Hangi ayakkabı eski?', correct: 'Evet! Ayakkabı eskidir.', wrong: 'Hayır, bu ayakkabı yenidir.' }
         },
         options: [
             { id: 3403, word: "ayakkabı", imageUrl: "/images/3403.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" },
@@ -46,11 +46,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     },
     {
         id: 4,
-        question: "Yeni olan hangisi?",
+        question: "Hangi ayakkabı yeni?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Yeni olan hangisi?', correct: 'Evet! Ayakkabı yenidir.', wrong: 'Hayır, bu ayakkabı eskidir.' }
+            tr: { question: 'Hangi ayakkabı yeni?', correct: 'Evet! Ayakkabı yenidir.', wrong: 'Hayır, bu ayakkabı eskidir.' }
         },
         options: [
             { id: 3404, word: "ayakkabı", imageUrl: "/images/3404.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" },
@@ -60,11 +60,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     // ayı
     {
         id: 5,
-        question: "Eski olan hangisi?",
+        question: "Hangi ayı eski?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Eski olan hangisi?', correct: 'Evet! Ayı eskidir.', wrong: 'Hayır, bu ayı yenidir.' }
+            tr: { question: 'Hangi ayı eski?', correct: 'Evet! Ayı eskidir.', wrong: 'Hayır, bu ayı yenidir.' }
         },
         options: [
             { id: 3405, word: "ayı", imageUrl: "/images/3405.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -73,11 +73,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     },
     {
         id: 6,
-        question: "Yeni olan hangisi?",
+        question: "Hangi ayı yeni?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Yeni olan hangisi?', correct: 'Evet! Ayı yenidir.', wrong: 'Hayır, bu ayı eskidir.' }
+            tr: { question: 'Hangi ayı yeni?', correct: 'Evet! Ayı yenidir.', wrong: 'Hayır, bu ayı eskidir.' }
         },
         options: [
             { id: 3406, word: "ayı", imageUrl: "/images/3406.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -87,11 +87,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     // bisiklet
     {
         id: 7,
-        question: "Eski olan hangisi?",
+        question: "Hangi bisiklet eski?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Eski olan hangisi?', correct: 'Evet! Bisiklet eskidir.', wrong: 'Hayır, bu bisiklet yenidir.' }
+            tr: { question: 'Hangi bisiklet eski?', correct: 'Evet! Bisiklet eskidir.', wrong: 'Hayır, bu bisiklet yenidir.' }
         },
         options: [
             { id: 3407, word: "bisiklet", imageUrl: "/images/3407.webp", isCorrect: true, audioKey: "bisiklet", spokenText: "bisiklet" },
@@ -100,11 +100,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     },
     {
         id: 8,
-        question: "Yeni olan hangisi?",
+        question: "Hangi bisiklet yeni?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Yeni olan hangisi?', correct: 'Evet! Bisiklet yenidir.', wrong: 'Hayır, bu bisiklet eskidir.' }
+            tr: { question: 'Hangi bisiklet yeni?', correct: 'Evet! Bisiklet yenidir.', wrong: 'Hayır, bu bisiklet eskidir.' }
         },
         options: [
             { id: 3408, word: "bisiklet", imageUrl: "/images/3408.webp", isCorrect: true, audioKey: "bisiklet", spokenText: "bisiklet" },
@@ -114,11 +114,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     // çanta
     {
         id: 9,
-        question: "Eski olan hangisi?",
+        question: "Hangi çanta eski?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Eski olan hangisi?', correct: 'Evet! Çanta eskidir.', wrong: 'Hayır, bu çanta yenidir.' }
+            tr: { question: 'Hangi çanta eski?', correct: 'Evet! Çanta eskidir.', wrong: 'Hayır, bu çanta yenidir.' }
         },
         options: [
             { id: 3409, word: "çanta", imageUrl: "/images/3409.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -127,11 +127,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     },
     {
         id: 10,
-        question: "Yeni olan hangisi?",
+        question: "Hangi çanta yeni?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Yeni olan hangisi?', correct: 'Evet! Çanta yenidir.', wrong: 'Hayır, bu çanta eskidir.' }
+            tr: { question: 'Hangi çanta yeni?', correct: 'Evet! Çanta yenidir.', wrong: 'Hayır, bu çanta eskidir.' }
         },
         options: [
             { id: 3410, word: "çanta", imageUrl: "/images/3410.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -141,11 +141,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     // çaydanlık
     {
         id: 11,
-        question: "Eski olan hangisi?",
+        question: "Hangi çaydanlık eski?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Eski olan hangisi?', correct: 'Evet! Çaydanlık eskidir.', wrong: 'Hayır, bu çaydanlık yenidir.' }
+            tr: { question: 'Hangi çaydanlık eski?', correct: 'Evet! Çaydanlık eskidir.', wrong: 'Hayır, bu çaydanlık yenidir.' }
         },
         options: [
             { id: 3411, word: "çaydanlık", imageUrl: "/images/3411.webp", isCorrect: true, audioKey: "çaydanlık", spokenText: "çaydanlık" },
@@ -154,11 +154,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     },
     {
         id: 12,
-        question: "Yeni olan hangisi?",
+        question: "Hangi çaydanlık yeni?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Yeni olan hangisi?', correct: 'Evet! Çaydanlık yenidir.', wrong: 'Hayır, bu çaydanlık eskidir.' }
+            tr: { question: 'Hangi çaydanlık yeni?', correct: 'Evet! Çaydanlık yenidir.', wrong: 'Hayır, bu çaydanlık eskidir.' }
         },
         options: [
             { id: 3412, word: "çaydanlık", imageUrl: "/images/3412.webp", isCorrect: true, audioKey: "çaydanlık", spokenText: "çaydanlık" },
@@ -168,11 +168,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     // kapı
     {
         id: 13,
-        question: "Eski olan hangisi?",
+        question: "Hangi kapı eski?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Eski olan hangisi?', correct: 'Evet! Kapı eskidir.', wrong: 'Hayır, bu kapı yenidir.' }
+            tr: { question: 'Hangi kapı eski?', correct: 'Evet! Kapı eskidir.', wrong: 'Hayır, bu kapı yenidir.' }
         },
         options: [
             { id: 3413, word: "kapı", imageUrl: "/images/3413.webp", isCorrect: true, audioKey: "kapı", spokenText: "kapı" },
@@ -181,11 +181,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     },
     {
         id: 14,
-        question: "Yeni olan hangisi?",
+        question: "Hangi kapı yeni?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Yeni olan hangisi?', correct: 'Evet! Kapı yenidir.', wrong: 'Hayır, bu kapı eskidir.' }
+            tr: { question: 'Hangi kapı yeni?', correct: 'Evet! Kapı yenidir.', wrong: 'Hayır, bu kapı eskidir.' }
         },
         options: [
             { id: 3414, word: "kapı", imageUrl: "/images/3414.webp", isCorrect: true, audioKey: "kapı", spokenText: "kapı" },
@@ -195,11 +195,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     // kitap
     {
         id: 15,
-        question: "Eski olan hangisi?",
+        question: "Hangi kitap eski?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Eski olan hangisi?', correct: 'Evet! Kitap eskidir.', wrong: 'Hayır, bu kitap yenidir.' }
+            tr: { question: 'Hangi kitap eski?', correct: 'Evet! Kitap eskidir.', wrong: 'Hayır, bu kitap yenidir.' }
         },
         options: [
             { id: 3415, word: "kitap", imageUrl: "/images/3415.webp", isCorrect: true, audioKey: "kitap", spokenText: "kitap" },
@@ -208,11 +208,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     },
     {
         id: 16,
-        question: "Yeni olan hangisi?",
+        question: "Hangi kitap yeni?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Yeni olan hangisi?', correct: 'Evet! Kitap yenidir.', wrong: 'Hayır, bu kitap eskidir.' }
+            tr: { question: 'Hangi kitap yeni?', correct: 'Evet! Kitap yenidir.', wrong: 'Hayır, bu kitap eskidir.' }
         },
         options: [
             { id: 3416, word: "kitap", imageUrl: "/images/3416.webp", isCorrect: true, audioKey: "kitap", spokenText: "kitap" },
@@ -222,11 +222,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     // kova
     {
         id: 17,
-        question: "Eski olan hangisi?",
+        question: "Hangi kova eski?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Eski olan hangisi?', correct: 'Evet! Kova eskidir.', wrong: 'Hayır, bu kova yenidir.' }
+            tr: { question: 'Hangi kova eski?', correct: 'Evet! Kova eskidir.', wrong: 'Hayır, bu kova yenidir.' }
         },
         options: [
             { id: 3417, word: "kova", imageUrl: "/images/3417.webp", isCorrect: true, audioKey: "kova", spokenText: "kova" },
@@ -235,11 +235,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     },
     {
         id: 18,
-        question: "Yeni olan hangisi?",
+        question: "Hangi kova yeni?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Yeni olan hangisi?', correct: 'Evet! Kova yenidir.', wrong: 'Hayır, bu kova eskidir.' }
+            tr: { question: 'Hangi kova yeni?', correct: 'Evet! Kova yenidir.', wrong: 'Hayır, bu kova eskidir.' }
         },
         options: [
             { id: 3418, word: "kova", imageUrl: "/images/3418.webp", isCorrect: true, audioKey: "kova", spokenText: "kova" },
@@ -249,11 +249,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     // tişört
     {
         id: 19,
-        question: "Eski olan hangisi?",
+        question: "Hangi tişört eski?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Eski olan hangisi?', correct: 'Evet! Tişört eskidir.', wrong: 'Hayır, bu tişört yenidir.' }
+            tr: { question: 'Hangi tişört eski?', correct: 'Evet! Tişört eskidir.', wrong: 'Hayır, bu tişört yenidir.' }
         },
         options: [
             { id: 3419, word: "tişört", imageUrl: "/images/3419.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -262,11 +262,11 @@ export const oldNewDataYeni: ConceptRound[] = [
     },
     {
         id: 20,
-        question: "Yeni olan hangisi?",
+        question: "Hangi tişört yeni?",
         questionAudioKey: "",
         activityType: ActivityType.OldNew,
         speech: {
-            tr: { question: 'Yeni olan hangisi?', correct: 'Evet! Tişört yenidir.', wrong: 'Hayır, bu tişört eskidir.' }
+            tr: { question: 'Hangi tişört yeni?', correct: 'Evet! Tişört yenidir.', wrong: 'Hayır, bu tişört eskidir.' }
         },
         options: [
             { id: 3420, word: "tişört", imageUrl: "/images/3420.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },

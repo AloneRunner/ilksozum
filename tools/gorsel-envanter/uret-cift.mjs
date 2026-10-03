@@ -48,8 +48,8 @@ const KAVRAMLAR = [
     activityType: 'LongShort',
     idBaslangic: 2401,
     soruOzel: {
-      tisort: { uzun: 'Kolu uzun olan hangisi?', kisa: 'Kolu kısa olan hangisi?' },
-      sac: { uzun: 'Saçı uzun olan hangisi?', kisa: 'Saçı kısa olan hangisi?' },
+      tisort: { uzun: 'Hangi tişörtün kolu uzun?', kisa: 'Hangi tişörtün kolu kısa?' },
+      sac: { uzun: 'Hangi kızın saçı uzun?', kisa: 'Hangi kızın saçı kısa?' },
     },
     etiket: 'length',
     sahneNesneler: ['sac'], // portre: gri arka plan, renkler korunur
@@ -65,7 +65,7 @@ const KAVRAMLAR = [
     activityType: 'HighLow',
     idBaslangic: 2501,
     soruIdBaslangic: 1001, // HighLow eski i18n'den questions.sp_highlow_<id>_* arıyor
-    soruOzel: { ayakkabi: { yuksek: 'Topuğu yüksek olan hangisi?', alcak: 'Topuğu alçak olan hangisi?' } },
+    soruOzel: { ayakkabi: { yuksek: 'Hangi ayakkabının topuğu yüksek?', alcak: 'Hangi ayakkabının topuğu alçak?' } },
     etiket: 'height',
     sahneNesneler: ['bina', 'dag', 'cit', 'duvar', 'cadir'],
     ozne: { ayakkabi: 'ayakkabının topuğu' },
@@ -92,6 +92,7 @@ const KAVRAMLAR = [
     exportAdi: 'fewMuchDataYeni',
     activityType: 'FewMuch',
     idBaslangic: 2701,
+    soruKalip: (w, d) => `Hangi resimde ${w} ${d}?`,
     etiket: 'quantity',
     a: { ek: 'cok', deger: 'çok', soru: 'Çok olan hangisi?', sifat: 'çoktur' },
     b: { ek: 'az', deger: 'az', soru: 'Az olan hangisi?', sifat: 'azdır' },
@@ -112,7 +113,7 @@ const KAVRAMLAR = [
     etiket: 'portion',
     haller: {
       // Kaan: "tam" da lazım. Okulda "tam elma / yarım elma" da deniyor.
-      butun: { deger: 'bütün', soru: 'Bütün olan hangisi?', sifat: 'bütündür', esSoru: 'Tam olan hangisi?', esSifat: 'tamdır' },
+      butun: { deger: 'bütün', soru: 'Bütün olan hangisi?', sifat: 'bütündür', esSoru: 'Tam olan hangisi?', esDeger: 'tam', esSifat: 'tamdır' },
       yarim: { deger: 'yarım', soru: 'Yarım olan hangisi?', sifat: 'yarımdır' },
       ceyrek: { deger: 'çeyrek', soru: 'Çeyrek olan hangisi?', sifat: 'çeyrektir' },
     },
@@ -127,7 +128,7 @@ const KAVRAMLAR = [
     exportAdi: 'derinSigDataYeni',
     activityType: 'DerinSig',
     idBaslangic: 2901,
-    soruOzel: { havuz: { derin: 'Suyu derin olan hangisi?', sig: 'Suyu sığ olan hangisi?' } },
+    soruOzel: { havuz: { derin: 'Hangi havuzun suyu derin?', sig: 'Hangi havuzun suyu sığ?' } },
     etiket: 'depth',
     sahneNesneler: ['cukur', 'havuz'],
     a: { ek: 'derin', deger: 'derin', soru: 'Derin olan hangisi?', sifat: 'derindir' },
@@ -142,7 +143,7 @@ const KAVRAMLAR = [
     exportAdi: 'openClosedDataYeni',
     activityType: 'OpenClosed',
     idBaslangic: 3001,
-    soruOzel: { goz: { acik: 'Gözleri açık olan hangisi?', kapali: 'Gözleri kapalı olan hangisi?' } },
+    soruOzel: { goz: { acik: 'Hangi çocuğun gözleri açık?', kapali: 'Hangi çocuğun gözleri kapalı?' } },
     etiket: 'state',
     sahneNesneler: ['goz'],
     a: { ek: 'acik', deger: 'açık', soru: 'Açık olan hangisi?', sifat: 'açıktır' },
@@ -169,7 +170,7 @@ const KAVRAMLAR = [
     exportAdi: 'cleanDirtyDataYeni',
     activityType: 'CleanDirty',
     idBaslangic: 3201,
-    soruOzel: { eller: { temiz: 'Elleri temiz olan hangisi?', kirli: 'Elleri kirli olan hangisi?' }, yuz: { temiz: 'Yüzü temiz olan hangisi?', kirli: 'Yüzü kirli olan hangisi?' } },
+    soruOzel: { eller: { temiz: 'Hangi çocuğun elleri temiz?', kirli: 'Hangi çocuğun elleri kirli?' }, yuz: { temiz: 'Hangi çocuğun yüzü temiz?', kirli: 'Hangi çocuğun yüzü kirli?' } },
     etiket: 'cleanliness',
     sahneNesneler: ['yuz', 'eller'],
     a: { ek: 'temiz', deger: 'temiz', soru: 'Temiz olan hangisi?', sifat: 'temizdir' },
@@ -184,7 +185,7 @@ const KAVRAMLAR = [
     exportAdi: 'wetDryDataYeni',
     activityType: 'WetDry',
     idBaslangic: 3301,
-    soruOzel: { sac: { islak: 'Saçı ıslak olan hangisi?', kuru: 'Saçı kuru olan hangisi?' } },
+    soruOzel: { sac: { islak: 'Hangi çocuğun saçı ıslak?', kuru: 'Hangi çocuğun saçı kuru?' } },
     etiket: 'wetness',
     sahneNesneler: ['sac', 'yer', 'kum'],
     yenidenKullan: { 'semsiye-kuru': 'acik-kapali/semsiye-acik.jpg' }, // Kaan: aynı şemsiye
@@ -240,6 +241,7 @@ const KAVRAMLAR = [
     exportAdi: 'hotColdDataYeni',
     activityType: 'HotCold',
     idBaslangic: 3601,
+    soruOzel: { hava: { sicak: 'Hangi resimde hava sıcak?', soguk: 'Hangi resimde hava soğuk?' } },
     etiket: 'temperature',
     sahneNesneler: ['hava', 'ates_kardanadam', 'soba_pencere', 'utu_buz'], // buz: beyazlatınca kayboluyor
     a: { ek: 'sicak', deger: 'sıcak', soru: 'Sıcak olan hangisi?', sifat: 'sıcaktır' },
@@ -515,12 +517,14 @@ ${opt(fNo, wNo, false)}
         continue;
       }
       // Soru nesneye göre özelleştirilebilir (Kaan: "Kolu kısa olan hangisi?", "Saçı kısa olan hangisi?")
-      const qA = (k.soruOzel?.[n]?.[ea]) || A.soru, qB = (k.soruOzel?.[n]?.[eb]) || B.soru;
+      // Nesne adıyla sor: "Hangi kalem kalın?" (somut, tek odak). k.soruKalip ile değiştirilebilir.
+      const kalip = k.soruKalip || ((w, d) => `Hangi ${w} ${d}?`);
+      const qA = (k.soruOzel?.[n]?.[ea]) || kalip(w, A.deger), qB = (k.soruOzel?.[n]?.[eb]) || kalip(w, B.deger);
       rounds.push(round(qA, `Evet! ${cap(oz)} ${A.sifat}.`, `Hayır, ${bu}${oz} ${B.sifat}.`, fa, fb, w) + ',');
       rounds.push(round(qB, `Evet! ${cap(oz)} ${B.sifat}.`, `Hayır, ${bu}${oz} ${A.sifat}.`, fb, fa, w) + ',');
       // Eş anlamlı soru (ör. bütün = tam): aynı görseller, farklı kelime; turda biri seçilir
       for (const [X, Y, fx, fy] of [[A, B, fa, fb], [B, A, fb, fa]]) {
-        if (X.esSoru) rounds.push(round(X.esSoru, `Evet! ${cap(oz)} ${X.esSifat}.`, `Hayır, ${bu}${oz} ${Y.sifat}.`, fx, fy, w) + ',');
+        if (X.esSoru) rounds.push(round(X.esDeger ? kalip(w, X.esDeger) : X.esSoru, `Evet! ${cap(oz)} ${X.esSifat}.`, `Hayır, ${bu}${oz} ${Y.sifat}.`, fx, fy, w) + ',');
       }
     }
   }

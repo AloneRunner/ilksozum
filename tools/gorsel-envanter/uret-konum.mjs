@@ -46,8 +46,8 @@ for (const s of SETS) {
     konum.push({ id: id++, kaynak: `${s.dir}/${f}`, word: s.ozne, category: 'none', tags });
   }
 }
-if (others.some(g => g.id >= START_ID)) throw new Error('Konum dışı bir görsel 2021+ aralığında; START_ID değiştir.');
-list.gorseller = [...others, ...konum];
+if (others.some(g => g.id >= START_ID && g.id < id)) throw new Error(`Konum aralığı (${START_ID}-${id - 1}) başka görsellerle çakışıyor.`);
+list.gorseller = [...others, ...konum].sort((x, y) => x.id - y.id);
 fs.writeFileSync(LIST, JSON.stringify(list, null, 2) + '\n');
 
 // 2) Soruları üret
@@ -76,19 +76,19 @@ ${opt(s, b, false)}
 // Çift: [etkinlik, A dosyası, B dosyası, soru(A), soru(B), cümle(A), cümle(B)]
 const PAIRS = [
   ['InsideOutside', 'icinde', 'disinda',
-    s => `${cap(s.kap)} içinde olan hangisi?`, s => `${cap(s.kap)} dışında olan hangisi?`,
+    s => `Hangi ${s.ozne} ${s.kap} içinde?`, s => `Hangi ${s.ozne} ${s.kap} dışında?`,
     s => `${cap(s.ozne)} ${s.kap} içindedir.`, s => `${cap(s.ozne)} ${s.kap} dışındadır.`],
   ['OnUnder', 'ustunde', 'altinda',
-    s => `${cap(s.mob)} üstünde olan hangisi?`, s => `${cap(s.mob)} altında olan hangisi?`,
+    s => `Hangi ${s.ozne} ${s.mob} üstünde?`, s => `Hangi ${s.ozne} ${s.mob} altında?`,
     s => `${cap(s.ozne)} ${s.mob} üstündedir.`, s => `${cap(s.ozne)} ${s.mob} altındadır.`],
   ['InFrontOfBehind', 'onunde', 'arkasinda',
-    s => `${cap(s.kap)} önünde olan hangisi?`, s => `${cap(s.kap)} arkasında olan hangisi?`,
+    s => `Hangi ${s.ozne} ${s.kap} önünde?`, s => `Hangi ${s.ozne} ${s.kap} arkasında?`,
     s => `${cap(s.ozne)} ${s.kap} önündedir.`, s => `${cap(s.ozne)} ${s.kap} arkasındadır.`],
   ['Between', 'arasinda', 'arasinda-degil',
-    s => `${cap(s.iki)} arasında olan hangisi?`, s => `${cap(s.kaplar)} arasında olmayan hangisi?`,
+    s => `Hangi ${s.ozne} ${s.iki} arasında?`, s => `${cap(s.kaplar)} arasında olmayan hangisi?`,
     s => `${cap(s.ozne)} ${s.kaplar} arasındadır.`, s => `${cap(s.ozne)} ${s.kaplar} arasında değildir.`],
   ['BelowAbove', 'yukarida', 'asagida',
-    s => `Yukarıda olan hangisi?`, s => `Aşağıda olan hangisi?`,
+    s => `Hangi ${s.ozne} yukarıda?`, s => `Hangi ${s.ozne} aşağıda?`,
     s => `${cap(s.ozne)} yukarıdadır.`, s => `${cap(s.ozne)} aşağıdadır.`],
 ];
 

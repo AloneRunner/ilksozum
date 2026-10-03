@@ -2,13 +2,14 @@ import { ConceptRound, ActivityType } from '../../../../types';
 
 // İnce / Kalın: 10 çift, 20 soru. Görseller 2001-2020 (gerçekçi, Flow ile üretildi, 2026-10).
 // Her çiftte aynı nesne, aynı boy; sadece kalınlık farklı. Kaynak: tools/gorsel-envanter/flow-kalin-ince.md
+// Sorular nesne adıyla ("Hangi kalem kalın?"): somut, tek odak.
 // Turda her çiftten tek soru seçilir (contentService), şıklar karıştırılır.
 export const thinThickDataYeni: ConceptRound[] = [
     // Kalem
     {
         id: 1,
-        question: "Kalın olan hangisi?",
-        questionAudioKey: "q_which_is_thick",
+        question: "Hangi kalem kalın?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Kalem kalındır.', wrong: 'Hayır, bu kalem incedir.' }
@@ -20,8 +21,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     },
     {
         id: 2,
-        question: "İnce olan hangisi?",
-        questionAudioKey: "q_which_is_thin",
+        question: "Hangi kalem ince?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Kalem incedir.', wrong: 'Hayır, bu kalem kalındır.' }
@@ -34,8 +35,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     // İp
     {
         id: 3,
-        question: "Kalın olan hangisi?",
-        questionAudioKey: "q_which_is_thick",
+        question: "Hangi ip kalın?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! İp kalındır.', wrong: 'Hayır, bu ip incedir.' }
@@ -47,8 +48,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     },
     {
         id: 4,
-        question: "İnce olan hangisi?",
-        questionAudioKey: "q_which_is_thin",
+        question: "Hangi ip ince?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! İp incedir.', wrong: 'Hayır, bu ip kalındır.' }
@@ -61,8 +62,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     // Mum
     {
         id: 5,
-        question: "Kalın olan hangisi?",
-        questionAudioKey: "q_which_is_thick",
+        question: "Hangi mum kalın?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Mum kalındır.', wrong: 'Hayır, bu mum incedir.' }
@@ -74,8 +75,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     },
     {
         id: 6,
-        question: "İnce olan hangisi?",
-        questionAudioKey: "q_which_is_thin",
+        question: "Hangi mum ince?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Mum incedir.', wrong: 'Hayır, bu mum kalındır.' }
@@ -88,8 +89,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     // Havuç
     {
         id: 7,
-        question: "Kalın olan hangisi?",
-        questionAudioKey: "q_which_is_thick",
+        question: "Hangi havuç kalın?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Havuç kalındır.', wrong: 'Hayır, bu havuç incedir.' }
@@ -101,8 +102,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     },
     {
         id: 8,
-        question: "İnce olan hangisi?",
-        questionAudioKey: "q_which_is_thin",
+        question: "Hangi havuç ince?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Havuç incedir.', wrong: 'Hayır, bu havuç kalındır.' }
@@ -115,11 +116,11 @@ export const thinThickDataYeni: ConceptRound[] = [
     // Ağaç
     {
         id: 9,
-        question: "Gövdesi kalın olan hangisi?",
+        question: "Hangi ağacın gövdesi kalın?",
         questionAudioKey: "", // özel soru: ekranda bu metin görünsün
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { question: 'Gövdesi kalın olan hangisi?', correct: 'Evet! Ağacın gövdesi kalındır.', wrong: 'Hayır, bu ağacın gövdesi incedir.' }
+            tr: { question: 'Hangi ağacın gövdesi kalın?', correct: 'Evet! Ağacın gövdesi kalındır.', wrong: 'Hayır, bu ağacın gövdesi incedir.' }
         },
         options: [
             { id: 2009, word: "ağaç", imageUrl: "/images/2009.webp", isCorrect: true, audioKey: "ağaç", spokenText: "ağaç" },
@@ -128,11 +129,11 @@ export const thinThickDataYeni: ConceptRound[] = [
     },
     {
         id: 10,
-        question: "Gövdesi ince olan hangisi?",
+        question: "Hangi ağacın gövdesi ince?",
         questionAudioKey: "", // özel soru: ekranda bu metin görünsün
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { question: 'Gövdesi ince olan hangisi?', correct: 'Evet! Ağacın gövdesi incedir.', wrong: 'Hayır, bu ağacın gövdesi kalındır.' }
+            tr: { question: 'Hangi ağacın gövdesi ince?', correct: 'Evet! Ağacın gövdesi incedir.', wrong: 'Hayır, bu ağacın gövdesi kalındır.' }
         },
         options: [
             { id: 2009, word: "ağaç", imageUrl: "/images/2009.webp", isCorrect: false, audioKey: "ağaç", spokenText: "ağaç" },
@@ -142,8 +143,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     // Fırça
     {
         id: 11,
-        question: "Kalın olan hangisi?",
-        questionAudioKey: "q_which_is_thick",
+        question: "Hangi fırça kalın?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Fırça kalındır.', wrong: 'Hayır, bu fırça incedir.' }
@@ -155,8 +156,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     },
     {
         id: 12,
-        question: "İnce olan hangisi?",
-        questionAudioKey: "q_which_is_thin",
+        question: "Hangi fırça ince?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Fırça incedir.', wrong: 'Hayır, bu fırça kalındır.' }
@@ -169,8 +170,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     // Çivi
     {
         id: 13,
-        question: "Kalın olan hangisi?",
-        questionAudioKey: "q_which_is_thick",
+        question: "Hangi çivi kalın?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Çivi kalındır.', wrong: 'Hayır, bu çivi incedir.' }
@@ -182,8 +183,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     },
     {
         id: 14,
-        question: "İnce olan hangisi?",
-        questionAudioKey: "q_which_is_thin",
+        question: "Hangi çivi ince?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Çivi incedir.', wrong: 'Hayır, bu çivi kalındır.' }
@@ -196,8 +197,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     // Havlu
     {
         id: 15,
-        question: "Kalın olan hangisi?",
-        questionAudioKey: "q_which_is_thick",
+        question: "Hangi havlu kalın?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Havlu kalındır.', wrong: 'Hayır, bu havlu incedir.' }
@@ -209,8 +210,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     },
     {
         id: 16,
-        question: "İnce olan hangisi?",
-        questionAudioKey: "q_which_is_thin",
+        question: "Hangi havlu ince?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Havlu incedir.', wrong: 'Hayır, bu havlu kalındır.' }
@@ -223,8 +224,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     // Kitap
     {
         id: 17,
-        question: "Kalın olan hangisi?",
-        questionAudioKey: "q_which_is_thick",
+        question: "Hangi kitap kalın?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Kitap kalındır.', wrong: 'Hayır, bu kitap incedir.' }
@@ -236,8 +237,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     },
     {
         id: 18,
-        question: "İnce olan hangisi?",
-        questionAudioKey: "q_which_is_thin",
+        question: "Hangi kitap ince?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Kitap incedir.', wrong: 'Hayır, bu kitap kalındır.' }
@@ -250,8 +251,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     // Ekmek dilimi
     {
         id: 19,
-        question: "Kalın olan hangisi?",
-        questionAudioKey: "q_which_is_thick",
+        question: "Hangi ekmek dilimi kalın?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Ekmek dilimi kalındır.', wrong: 'Hayır, bu ekmek incedir.' }
@@ -263,8 +264,8 @@ export const thinThickDataYeni: ConceptRound[] = [
     },
     {
         id: 20,
-        question: "İnce olan hangisi?",
-        questionAudioKey: "q_which_is_thin",
+        question: "Hangi ekmek dilimi ince?",
+        questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
             tr: { correct: 'Evet! Ekmek dilimi incedir.', wrong: 'Hayır, bu ekmek kalındır.' }

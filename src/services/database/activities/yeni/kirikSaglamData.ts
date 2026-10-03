@@ -6,11 +6,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     // araba
     {
         id: 1,
-        question: "Kırık olan hangisi?",
+        question: "Hangi araba kırık?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Kırık olan hangisi?', correct: 'Evet! Araba kırıktır.', wrong: 'Hayır, bu araba sağlamdır.' }
+            tr: { question: 'Hangi araba kırık?', correct: 'Evet! Araba kırıktır.', wrong: 'Hayır, bu araba sağlamdır.' }
         },
         options: [
             { id: 3101, word: "araba", imageUrl: "/images/3101.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -19,11 +19,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     },
     {
         id: 2,
-        question: "Sağlam olan hangisi?",
+        question: "Hangi araba sağlam?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Sağlam olan hangisi?', correct: 'Evet! Araba sağlamdır.', wrong: 'Hayır, bu araba kırıktır.' }
+            tr: { question: 'Hangi araba sağlam?', correct: 'Evet! Araba sağlamdır.', wrong: 'Hayır, bu araba kırıktır.' }
         },
         options: [
             { id: 3102, word: "araba", imageUrl: "/images/3102.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -33,11 +33,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     // bisküvi
     {
         id: 3,
-        question: "Kırık olan hangisi?",
+        question: "Hangi bisküvi kırık?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Kırık olan hangisi?', correct: 'Evet! Bisküvi kırıktır.', wrong: 'Hayır, bu bisküvi sağlamdır.' }
+            tr: { question: 'Hangi bisküvi kırık?', correct: 'Evet! Bisküvi kırıktır.', wrong: 'Hayır, bu bisküvi sağlamdır.' }
         },
         options: [
             { id: 3103, word: "bisküvi", imageUrl: "/images/3103.webp", isCorrect: true, audioKey: "bisküvi", spokenText: "bisküvi" },
@@ -46,11 +46,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     },
     {
         id: 4,
-        question: "Sağlam olan hangisi?",
+        question: "Hangi bisküvi sağlam?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Sağlam olan hangisi?', correct: 'Evet! Bisküvi sağlamdır.', wrong: 'Hayır, bu bisküvi kırıktır.' }
+            tr: { question: 'Hangi bisküvi sağlam?', correct: 'Evet! Bisküvi sağlamdır.', wrong: 'Hayır, bu bisküvi kırıktır.' }
         },
         options: [
             { id: 3104, word: "bisküvi", imageUrl: "/images/3104.webp", isCorrect: true, audioKey: "bisküvi", spokenText: "bisküvi" },
@@ -60,11 +60,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     // fincan
     {
         id: 5,
-        question: "Kırık olan hangisi?",
+        question: "Hangi fincan kırık?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Kırık olan hangisi?', correct: 'Evet! Fincan kırıktır.', wrong: 'Hayır, bu fincan sağlamdır.' }
+            tr: { question: 'Hangi fincan kırık?', correct: 'Evet! Fincan kırıktır.', wrong: 'Hayır, bu fincan sağlamdır.' }
         },
         options: [
             { id: 3105, word: "fincan", imageUrl: "/images/3105.webp", isCorrect: true, audioKey: "fincan", spokenText: "fincan" },
@@ -73,11 +73,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     },
     {
         id: 6,
-        question: "Sağlam olan hangisi?",
+        question: "Hangi fincan sağlam?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Sağlam olan hangisi?', correct: 'Evet! Fincan sağlamdır.', wrong: 'Hayır, bu fincan kırıktır.' }
+            tr: { question: 'Hangi fincan sağlam?', correct: 'Evet! Fincan sağlamdır.', wrong: 'Hayır, bu fincan kırıktır.' }
         },
         options: [
             { id: 3106, word: "fincan", imageUrl: "/images/3106.webp", isCorrect: true, audioKey: "fincan", spokenText: "fincan" },
@@ -87,11 +87,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     // gözlük
     {
         id: 7,
-        question: "Kırık olan hangisi?",
+        question: "Hangi gözlük kırık?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Kırık olan hangisi?', correct: 'Evet! Gözlük kırıktır.', wrong: 'Hayır, bu gözlük sağlamdır.' }
+            tr: { question: 'Hangi gözlük kırık?', correct: 'Evet! Gözlük kırıktır.', wrong: 'Hayır, bu gözlük sağlamdır.' }
         },
         options: [
             { id: 3107, word: "gözlük", imageUrl: "/images/3107.webp", isCorrect: true, audioKey: "gözlük", spokenText: "gözlük" },
@@ -100,11 +100,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     },
     {
         id: 8,
-        question: "Sağlam olan hangisi?",
+        question: "Hangi gözlük sağlam?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Sağlam olan hangisi?', correct: 'Evet! Gözlük sağlamdır.', wrong: 'Hayır, bu gözlük kırıktır.' }
+            tr: { question: 'Hangi gözlük sağlam?', correct: 'Evet! Gözlük sağlamdır.', wrong: 'Hayır, bu gözlük kırıktır.' }
         },
         options: [
             { id: 3108, word: "gözlük", imageUrl: "/images/3108.webp", isCorrect: true, audioKey: "gözlük", spokenText: "gözlük" },
@@ -114,11 +114,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     // kalem
     {
         id: 9,
-        question: "Kırık olan hangisi?",
+        question: "Hangi kalem kırık?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Kırık olan hangisi?', correct: 'Evet! Kalem kırıktır.', wrong: 'Hayır, bu kalem sağlamdır.' }
+            tr: { question: 'Hangi kalem kırık?', correct: 'Evet! Kalem kırıktır.', wrong: 'Hayır, bu kalem sağlamdır.' }
         },
         options: [
             { id: 3109, word: "kalem", imageUrl: "/images/3109.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -127,11 +127,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     },
     {
         id: 10,
-        question: "Sağlam olan hangisi?",
+        question: "Hangi kalem sağlam?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Sağlam olan hangisi?', correct: 'Evet! Kalem sağlamdır.', wrong: 'Hayır, bu kalem kırıktır.' }
+            tr: { question: 'Hangi kalem sağlam?', correct: 'Evet! Kalem sağlamdır.', wrong: 'Hayır, bu kalem kırıktır.' }
         },
         options: [
             { id: 3110, word: "kalem", imageUrl: "/images/3110.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -141,11 +141,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     // robot
     {
         id: 11,
-        question: "Kırık olan hangisi?",
+        question: "Hangi robot kırık?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Kırık olan hangisi?', correct: 'Evet! Robot kırıktır.', wrong: 'Hayır, bu robot sağlamdır.' }
+            tr: { question: 'Hangi robot kırık?', correct: 'Evet! Robot kırıktır.', wrong: 'Hayır, bu robot sağlamdır.' }
         },
         options: [
             { id: 3111, word: "robot", imageUrl: "/images/3111.webp", isCorrect: true, audioKey: "robot", spokenText: "robot" },
@@ -154,11 +154,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     },
     {
         id: 12,
-        question: "Sağlam olan hangisi?",
+        question: "Hangi robot sağlam?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Sağlam olan hangisi?', correct: 'Evet! Robot sağlamdır.', wrong: 'Hayır, bu robot kırıktır.' }
+            tr: { question: 'Hangi robot sağlam?', correct: 'Evet! Robot sağlamdır.', wrong: 'Hayır, bu robot kırıktır.' }
         },
         options: [
             { id: 3112, word: "robot", imageUrl: "/images/3112.webp", isCorrect: true, audioKey: "robot", spokenText: "robot" },
@@ -168,11 +168,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     // saksı
     {
         id: 13,
-        question: "Kırık olan hangisi?",
+        question: "Hangi saksı kırık?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Kırık olan hangisi?', correct: 'Evet! Saksı kırıktır.', wrong: 'Hayır, bu saksı sağlamdır.' }
+            tr: { question: 'Hangi saksı kırık?', correct: 'Evet! Saksı kırıktır.', wrong: 'Hayır, bu saksı sağlamdır.' }
         },
         options: [
             { id: 3113, word: "saksı", imageUrl: "/images/3113.webp", isCorrect: true, audioKey: "saksı", spokenText: "saksı" },
@@ -181,11 +181,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     },
     {
         id: 14,
-        question: "Sağlam olan hangisi?",
+        question: "Hangi saksı sağlam?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Sağlam olan hangisi?', correct: 'Evet! Saksı sağlamdır.', wrong: 'Hayır, bu saksı kırıktır.' }
+            tr: { question: 'Hangi saksı sağlam?', correct: 'Evet! Saksı sağlamdır.', wrong: 'Hayır, bu saksı kırıktır.' }
         },
         options: [
             { id: 3114, word: "saksı", imageUrl: "/images/3114.webp", isCorrect: true, audioKey: "saksı", spokenText: "saksı" },
@@ -195,11 +195,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     // sandalye
     {
         id: 15,
-        question: "Kırık olan hangisi?",
+        question: "Hangi sandalye kırık?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Kırık olan hangisi?', correct: 'Evet! Sandalye kırıktır.', wrong: 'Hayır, bu sandalye sağlamdır.' }
+            tr: { question: 'Hangi sandalye kırık?', correct: 'Evet! Sandalye kırıktır.', wrong: 'Hayır, bu sandalye sağlamdır.' }
         },
         options: [
             { id: 3115, word: "sandalye", imageUrl: "/images/3115.webp", isCorrect: true, audioKey: "sandalye", spokenText: "sandalye" },
@@ -208,11 +208,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     },
     {
         id: 16,
-        question: "Sağlam olan hangisi?",
+        question: "Hangi sandalye sağlam?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Sağlam olan hangisi?', correct: 'Evet! Sandalye sağlamdır.', wrong: 'Hayır, bu sandalye kırıktır.' }
+            tr: { question: 'Hangi sandalye sağlam?', correct: 'Evet! Sandalye sağlamdır.', wrong: 'Hayır, bu sandalye kırıktır.' }
         },
         options: [
             { id: 3116, word: "sandalye", imageUrl: "/images/3116.webp", isCorrect: true, audioKey: "sandalye", spokenText: "sandalye" },
@@ -222,11 +222,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     // tabak
     {
         id: 17,
-        question: "Kırık olan hangisi?",
+        question: "Hangi tabak kırık?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Kırık olan hangisi?', correct: 'Evet! Tabak kırıktır.', wrong: 'Hayır, bu tabak sağlamdır.' }
+            tr: { question: 'Hangi tabak kırık?', correct: 'Evet! Tabak kırıktır.', wrong: 'Hayır, bu tabak sağlamdır.' }
         },
         options: [
             { id: 3117, word: "tabak", imageUrl: "/images/3117.webp", isCorrect: true, audioKey: "tabak", spokenText: "tabak" },
@@ -235,11 +235,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     },
     {
         id: 18,
-        question: "Sağlam olan hangisi?",
+        question: "Hangi tabak sağlam?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Sağlam olan hangisi?', correct: 'Evet! Tabak sağlamdır.', wrong: 'Hayır, bu tabak kırıktır.' }
+            tr: { question: 'Hangi tabak sağlam?', correct: 'Evet! Tabak sağlamdır.', wrong: 'Hayır, bu tabak kırıktır.' }
         },
         options: [
             { id: 3118, word: "tabak", imageUrl: "/images/3118.webp", isCorrect: true, audioKey: "tabak", spokenText: "tabak" },
@@ -249,11 +249,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     // yumurta
     {
         id: 19,
-        question: "Kırık olan hangisi?",
+        question: "Hangi yumurta kırık?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Kırık olan hangisi?', correct: 'Evet! Yumurta kırıktır.', wrong: 'Hayır, bu yumurta sağlamdır.' }
+            tr: { question: 'Hangi yumurta kırık?', correct: 'Evet! Yumurta kırıktır.', wrong: 'Hayır, bu yumurta sağlamdır.' }
         },
         options: [
             { id: 3119, word: "yumurta", imageUrl: "/images/3119.webp", isCorrect: true, audioKey: "yumurta", spokenText: "yumurta" },
@@ -262,11 +262,11 @@ export const brokenIntactDataYeni: ConceptRound[] = [
     },
     {
         id: 20,
-        question: "Sağlam olan hangisi?",
+        question: "Hangi yumurta sağlam?",
         questionAudioKey: "",
         activityType: ActivityType.BrokenIntact,
         speech: {
-            tr: { question: 'Sağlam olan hangisi?', correct: 'Evet! Yumurta sağlamdır.', wrong: 'Hayır, bu yumurta kırıktır.' }
+            tr: { question: 'Hangi yumurta sağlam?', correct: 'Evet! Yumurta sağlamdır.', wrong: 'Hayır, bu yumurta kırıktır.' }
         },
         options: [
             { id: 3120, word: "yumurta", imageUrl: "/images/3120.webp", isCorrect: true, audioKey: "yumurta", spokenText: "yumurta" },
