@@ -494,11 +494,25 @@ const KAVRAMLAR = [
   {
     klasor: 'ters-duz', dosya: 'tersDuzData.ts', exportAdi: 'tersDuzDataYeni',
     activityType: 'TersDuz', idBaslangic: 5701, etiket: 'orientation',
-    sahneNesneler: ['agac', 'ev'],
+    sahneNesneler: ['agac', 'ev', 'ayakkabi2', 'terlik', 'tisortarka', 'corap', 'kazak', 'sapka'],
     a: { ek: 'ters', deger: 'ters', soru: 'Ters olan hangisi?', sifat: 'terstir' },
     b: { ek: 'duz', deger: 'düz', soru: 'Düz olan hangisi?', sifat: 'düzdür' },
+    // Kaan: çocuklar ayakkabı/terliği ters ayağa, kıyafeti içi dışına ya da arkası önde giyiyor → giyim tersleri çok önemli
+    ozne: { ayakkabi2: 'çocuğun ayakkabıları', terlik: 'çocuğun terlikleri', ayakkabicift: 'ayakkabılar',
+      tisortarka: 'çocuğun tişörtü', corap: 'çocuğun çorabı', kazak: 'çocuğun kazağı', sapka: 'çocuğun şapkası' },
+    soruOzel: {
+      ayakkabi2: { ters: 'Hangi çocuk ayakkabılarını ters giymiş?', duz: 'Hangi çocuk ayakkabılarını düz giymiş?' },
+      terlik: { ters: 'Hangi çocuk terliklerini ters giymiş?', duz: 'Hangi çocuk terliklerini düz giymiş?' },
+      ayakkabicift: { ters: 'Hangi ayakkabılar ters duruyor?', duz: 'Hangi ayakkabılar düz duruyor?' },
+      tisortarka: { ters: 'Hangi çocuk tişörtünü ters giymiş?', duz: 'Hangi çocuk tişörtünü düz giymiş?' },
+      corap: { ters: 'Hangi çocuk çorabını ters giymiş?', duz: 'Hangi çocuk çorabını düz giymiş?' },
+      kazak: { ters: 'Hangi çocuk kazağını ters giymiş?', duz: 'Hangi çocuk kazağını düz giymiş?' },
+      sapka: { ters: 'Hangi çocuk şapkasını ters takmış?', duz: 'Hangi çocuk şapkasını düz takmış?' },
+    },
     kelime: { semsiye: 'şemsiye', bardak: 'bardak', kitap: 'kitap', sandalye: 'sandalye', kova: 'kova', saksi: 'saksı',
-      fincan: 'fincan', sise: 'şişe', masa: 'masa', ayi: 'oyuncak ayı', tabure: 'tabure' },
+      fincan: 'fincan', sise: 'şişe', masa: 'masa', ayi: 'oyuncak ayı', tabure: 'tabure',
+      ayakkabi2: 'çocuk', terlik: 'çocuk', ayakkabicift: 'ayakkabılar', tisort: 'tişört', tisortarka: 'çocuk', pantolon: 'pantolon',
+      corap: 'çocuk', kazak: 'çocuk', sapka: 'çocuk' },
   },
   {
     klasor: 'sivri-kut', dosya: 'sivriKutData.ts', exportAdi: 'sivriKutDataYeni',
