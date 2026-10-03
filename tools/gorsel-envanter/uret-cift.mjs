@@ -380,7 +380,7 @@ const KAVRAMLAR = [
     etiket: 'sound',
     a: { ek: 'gurultulu', deger: 'gürültülü', soru: 'Gürültülü olan hangisi?', sifat: 'gürültülüdür' },
     b: { ek: 'sessiz', deger: 'sessiz', soru: 'Sessiz olan hangisi?', sifat: 'sessizdir' },
-    kelime: { cocuk: 'çocuk', kopek: 'köpek', bebek: 'bebek', horoz: 'horoz', sinif: 'sınıf', mutfak: 'mutfak' },
+    kelime: { cocuk: 'çocuk', kopek: 'köpek', bebek: 'bebek', horoz: 'horoz', sinif: 'sınıf', mutfak: 'çocuk' },
   },
   {
     klasor: 'ac-tok',

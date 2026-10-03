@@ -4217,6 +4217,681 @@
       "tags": {
         "texture": "şeffaf"
       }
+    },
+    {
+      "id": 4101,
+      "kaynak": "aci-tatli/acisos_dondurma-aci.jpg",
+      "word": "acı sos",
+      "category": "none",
+      "tags": {
+        "taste": "acı"
+      }
+    },
+    {
+      "id": 4102,
+      "kaynak": "aci-tatli/biber_bal-aci.jpg",
+      "word": "acı biber",
+      "category": "none",
+      "tags": {
+        "taste": "acı"
+      }
+    },
+    {
+      "id": 4103,
+      "kaynak": "aci-tatli/biber_bal-tatli.jpg",
+      "word": "bal",
+      "category": "none",
+      "tags": {
+        "taste": "tatlı"
+      }
+    },
+    {
+      "id": 4104,
+      "kaynak": "aci-tatli/eriksek_cilek-eksi.jpg",
+      "word": "yeşil erik",
+      "category": "none",
+      "tags": {
+        "taste": "ekşi"
+      }
+    },
+    {
+      "id": 4105,
+      "kaynak": "aci-tatli/eriksek_cilek-tatli.jpg",
+      "word": "çilek",
+      "category": "none",
+      "tags": {
+        "taste": "tatlı"
+      }
+    },
+    {
+      "id": 4106,
+      "kaynak": "aci-tatli/greyfurt_uzum-eksi.jpg",
+      "word": "greyfurt",
+      "category": "none",
+      "tags": {
+        "taste": "ekşi"
+      }
+    },
+    {
+      "id": 4107,
+      "kaynak": "aci-tatli/greyfurt_uzum-tatli.jpg",
+      "word": "üzüm",
+      "category": "none",
+      "tags": {
+        "taste": "tatlı"
+      }
+    },
+    {
+      "id": 4108,
+      "kaynak": "aci-tatli/hardal_lokum-aci.jpg",
+      "word": "hardal",
+      "category": "none",
+      "tags": {
+        "taste": "acı"
+      }
+    },
+    {
+      "id": 4109,
+      "kaynak": "aci-tatli/limon_pasta-eksi.jpg",
+      "word": "limon",
+      "category": "none",
+      "tags": {
+        "taste": "ekşi"
+      }
+    },
+    {
+      "id": 4110,
+      "kaynak": "aci-tatli/sivribiber_muz-aci.jpg",
+      "word": "sivri biber",
+      "category": "none",
+      "tags": {
+        "taste": "acı"
+      }
+    },
+    {
+      "id": 4111,
+      "kaynak": "aci-tatli/sogan_cikolata-aci.jpg",
+      "word": "soğan",
+      "category": "none",
+      "tags": {
+        "taste": "acı"
+      }
+    },
+    {
+      "id": 4112,
+      "kaynak": "aci-tatli/sogan_cikolata-tatli.jpg",
+      "word": "çikolata",
+      "category": "none",
+      "tags": {
+        "taste": "tatlı"
+      }
+    },
+    {
+      "id": 4113,
+      "kaynak": "aci-tatli/turp_karpuz-aci.jpg",
+      "word": "turp",
+      "category": "none",
+      "tags": {
+        "taste": "acı"
+      }
+    },
+    {
+      "id": 4114,
+      "kaynak": "aci-tatli/tursu_seker-eksi.jpg",
+      "word": "turşu",
+      "category": "none",
+      "tags": {
+        "taste": "ekşi"
+      }
+    },
+    {
+      "id": 4115,
+      "kaynak": "aci-tatli/tursu_seker-tatli.jpg",
+      "word": "şeker",
+      "category": "none",
+      "tags": {
+        "taste": "tatlı"
+      }
+    },
+    {
+      "id": 4201,
+      "kaynak": "gurultulu-sessiz/bebek-gurultulu.jpg",
+      "word": "bebek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "sound": "gürültülü"
+      }
+    },
+    {
+      "id": 4202,
+      "kaynak": "gurultulu-sessiz/bebek-sessiz.jpg",
+      "word": "bebek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "sound": "sessiz"
+      }
+    },
+    {
+      "id": 4203,
+      "kaynak": "gurultulu-sessiz/cocuk-gurultulu.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "sound": "gürültülü"
+      }
+    },
+    {
+      "id": 4204,
+      "kaynak": "gurultulu-sessiz/cocuk-sessiz.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "sound": "sessiz"
+      }
+    },
+    {
+      "id": 4205,
+      "kaynak": "gurultulu-sessiz/horoz-gurultulu.jpg",
+      "word": "horoz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "sound": "gürültülü"
+      }
+    },
+    {
+      "id": 4206,
+      "kaynak": "gurultulu-sessiz/horoz-sessiz.jpg",
+      "word": "horoz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "sound": "sessiz"
+      }
+    },
+    {
+      "id": 4207,
+      "kaynak": "gurultulu-sessiz/kopek-gurultulu.jpg",
+      "word": "köpek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "sound": "gürültülü"
+      }
+    },
+    {
+      "id": 4208,
+      "kaynak": "gurultulu-sessiz/kopek-sessiz.jpg",
+      "word": "köpek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "sound": "sessiz"
+      }
+    },
+    {
+      "id": 4209,
+      "kaynak": "gurultulu-sessiz/mutfak-gurultulu.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "sound": "gürültülü"
+      }
+    },
+    {
+      "id": 4210,
+      "kaynak": "gurultulu-sessiz/mutfak-sessiz.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "sound": "sessiz"
+      }
+    },
+    {
+      "id": 4211,
+      "kaynak": "gurultulu-sessiz/sinif-gurultulu.jpg",
+      "word": "sınıf",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "sound": "gürültülü"
+      }
+    },
+    {
+      "id": 4212,
+      "kaynak": "gurultulu-sessiz/sinif-sessiz.jpg",
+      "word": "sınıf",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "sound": "sessiz"
+      }
+    },
+    {
+      "id": 4301,
+      "kaynak": "ac-tok/bebek-ac.jpg",
+      "word": "bebek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "aç"
+      }
+    },
+    {
+      "id": 4302,
+      "kaynak": "ac-tok/bebek-tok.jpg",
+      "word": "bebek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "tok"
+      }
+    },
+    {
+      "id": 4303,
+      "kaynak": "ac-tok/cocuk-ac.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "aç"
+      }
+    },
+    {
+      "id": 4304,
+      "kaynak": "ac-tok/cocuk-tok.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "tok"
+      }
+    },
+    {
+      "id": 4305,
+      "kaynak": "ac-tok/kedi-ac.jpg",
+      "word": "kedi",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "aç"
+      }
+    },
+    {
+      "id": 4306,
+      "kaynak": "ac-tok/kedi-tok.jpg",
+      "word": "kedi",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "tok"
+      }
+    },
+    {
+      "id": 4307,
+      "kaynak": "ac-tok/kopek-ac.jpg",
+      "word": "köpek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "aç"
+      }
+    },
+    {
+      "id": 4308,
+      "kaynak": "ac-tok/kopek-tok.jpg",
+      "word": "köpek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "tok"
+      }
+    },
+    {
+      "id": 4309,
+      "kaynak": "ac-tok/kus-ac.jpg",
+      "word": "kuş",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "aç"
+      }
+    },
+    {
+      "id": 4310,
+      "kaynak": "ac-tok/kus-tok.jpg",
+      "word": "kuş",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "tok"
+      }
+    },
+    {
+      "id": 4401,
+      "kaynak": "yasli-genc/adam-genc.jpg",
+      "word": "adam",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "age": "genç"
+      }
+    },
+    {
+      "id": 4402,
+      "kaynak": "yasli-genc/adam-yasli.jpg",
+      "word": "adam",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "age": "yaşlı"
+      }
+    },
+    {
+      "id": 4403,
+      "kaynak": "yasli-genc/aslan-genc.jpg",
+      "word": "aslan",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "age": "genç"
+      }
+    },
+    {
+      "id": 4404,
+      "kaynak": "yasli-genc/aslan-yasli.jpg",
+      "word": "aslan",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "age": "yaşlı"
+      }
+    },
+    {
+      "id": 4405,
+      "kaynak": "yasli-genc/at-genc.jpg",
+      "word": "at",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "age": "genç"
+      }
+    },
+    {
+      "id": 4406,
+      "kaynak": "yasli-genc/at-yasli.jpg",
+      "word": "at",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "age": "yaşlı"
+      }
+    },
+    {
+      "id": 4407,
+      "kaynak": "yasli-genc/kadin-genc.jpg",
+      "word": "kadın",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "age": "genç"
+      }
+    },
+    {
+      "id": 4408,
+      "kaynak": "yasli-genc/kadin-yasli.jpg",
+      "word": "kadın",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "age": "yaşlı"
+      }
+    },
+    {
+      "id": 4409,
+      "kaynak": "yasli-genc/kedi-genc.jpg",
+      "word": "kedi",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "age": "genç"
+      }
+    },
+    {
+      "id": 4410,
+      "kaynak": "yasli-genc/kedi-yasli.jpg",
+      "word": "kedi",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "age": "yaşlı"
+      }
+    },
+    {
+      "id": 4411,
+      "kaynak": "yasli-genc/kopek-genc.jpg",
+      "word": "köpek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "age": "genç"
+      }
+    },
+    {
+      "id": 4412,
+      "kaynak": "yasli-genc/kopek-yasli.jpg",
+      "word": "köpek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "age": "yaşlı"
+      }
+    },
+    {
+      "id": 4501,
+      "kaynak": "tembel-caliskan/bahce-caliskan.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "çalışkan"
+      }
+    },
+    {
+      "id": 4502,
+      "kaynak": "tembel-caliskan/bahce-tembel.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "tembel"
+      }
+    },
+    {
+      "id": 4503,
+      "kaynak": "tembel-caliskan/karinca_agustos-caliskan.jpg",
+      "word": "karınca",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "çalışkan"
+      }
+    },
+    {
+      "id": 4504,
+      "kaynak": "tembel-caliskan/karinca_agustos-tembel.jpg",
+      "word": "ağustos böceği",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "tembel"
+      }
+    },
+    {
+      "id": 4505,
+      "kaynak": "tembel-caliskan/odev-caliskan.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "çalışkan"
+      }
+    },
+    {
+      "id": 4506,
+      "kaynak": "tembel-caliskan/odev-tembel.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "tembel"
+      }
+    },
+    {
+      "id": 4507,
+      "kaynak": "tembel-caliskan/sofra-caliskan.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "çalışkan"
+      }
+    },
+    {
+      "id": 4508,
+      "kaynak": "tembel-caliskan/sofra-tembel.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "state": "tembel"
+      }
+    },
+    {
+      "id": 4601,
+      "kaynak": "kalabalik-tenha/market-kalabalik.jpg",
+      "word": "market",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "crowd": "kalabalık"
+      }
+    },
+    {
+      "id": 4602,
+      "kaynak": "kalabalik-tenha/market-tenha.jpg",
+      "word": "market",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "crowd": "tenha"
+      }
+    },
+    {
+      "id": 4603,
+      "kaynak": "kalabalik-tenha/otobus-kalabalik.jpg",
+      "word": "otobüs",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "crowd": "kalabalık"
+      }
+    },
+    {
+      "id": 4604,
+      "kaynak": "kalabalik-tenha/otobus-tenha.jpg",
+      "word": "otobüs",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "crowd": "tenha"
+      }
+    },
+    {
+      "id": 4605,
+      "kaynak": "kalabalik-tenha/oyunparki-kalabalik.jpg",
+      "word": "oyun parkı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "crowd": "kalabalık"
+      }
+    },
+    {
+      "id": 4606,
+      "kaynak": "kalabalik-tenha/oyunparki-tenha.jpg",
+      "word": "oyun parkı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "crowd": "tenha"
+      }
+    },
+    {
+      "id": 4607,
+      "kaynak": "kalabalik-tenha/park-kalabalik.jpg",
+      "word": "park",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "crowd": "kalabalık"
+      }
+    },
+    {
+      "id": 4608,
+      "kaynak": "kalabalik-tenha/park-tenha.jpg",
+      "word": "park",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "crowd": "tenha"
+      }
+    },
+    {
+      "id": 4609,
+      "kaynak": "kalabalik-tenha/plaj-kalabalik.jpg",
+      "word": "plaj",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "crowd": "kalabalık"
+      }
+    },
+    {
+      "id": 4610,
+      "kaynak": "kalabalik-tenha/plaj-tenha.jpg",
+      "word": "plaj",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "crowd": "tenha"
+      }
+    },
+    {
+      "id": 4611,
+      "kaynak": "kalabalik-tenha/sokak-kalabalik.jpg",
+      "word": "sokak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "crowd": "kalabalık"
+      }
+    },
+    {
+      "id": 4612,
+      "kaynak": "kalabalik-tenha/sokak-tenha.jpg",
+      "word": "sokak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "crowd": "tenha"
+      }
     }
   ]
 }

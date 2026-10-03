@@ -2,7 +2,7 @@
 import { ActivityType, ActivityCategory, ImageMetadata, ConceptRound, Word, Story, ScreenState, ConceptOption, ActivityStats, MemoryGameRound, SudokuRound, SudokuItem } from '../types.ts';
 import { storyData } from './staticData.ts';
 import { imageData } from './database/imageData.ts';
-import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni, fewMuchDataYeni, halfQuarterWholeDataYeni, derinSigDataYeni, openClosedDataYeni, brokenIntactDataYeni, cleanDirtyDataYeni, wetDryDataYeni, oldNewDataYeni, hardSoftDataYeni, hotColdDataYeni, roughSmoothDataYeni, dikenliPuruzsuzDataYeni, parlakMatDataYeni, seffafOpakDataYeni } from './database/activities/yeni/index.ts';
+import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni, fewMuchDataYeni, halfQuarterWholeDataYeni, derinSigDataYeni, openClosedDataYeni, brokenIntactDataYeni, cleanDirtyDataYeni, wetDryDataYeni, oldNewDataYeni, hardSoftDataYeni, hotColdDataYeni, roughSmoothDataYeni, dikenliPuruzsuzDataYeni, parlakMatDataYeni, seffafOpakDataYeni, bitterSweetDataYeni, noisyQuietDataYeni, hungryFullDataYeni, youngOldDataYeni, tembelCaliskanDataYeni, kalabalikTenhaDataYeni } from './database/activities/yeni/index.ts';
 import { 
     sensesData,
     bigSmallData, longShortData, thinThickData, wideNarrowData, oldNewData, youngOldData, hardSoftData, cleanDirtyData, wetDryData, openClosedData, straightCurvedData, aliveLifelessData, bitterSweetData, heavyLightData, hotColdData, roughSmoothData, brokenIntactData, messyCleanData, tazeBayatData, kirisikDuzgunData, sivriKutData, parlakMatData, tembelCaliskanData, seffafOpakData, dikenliPuruzsuzData, dugumCozukData, hungryFullData, derinSigData, kalabalikTenhaData, tersDuzData,
@@ -1409,14 +1409,14 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.ThinThick]: YENI_SORULAR_AKTIF ? thinThickDataYeni : thinThickData,
     [ActivityType.WideNarrow]: YENI_SORULAR_AKTIF ? wideNarrowDataYeni : wideNarrowData,
     [ActivityType.OldNew]: YENI_SORULAR_AKTIF ? oldNewDataYeni : oldNewData,
-    [ActivityType.YoungOld]: youngOldData,
+    [ActivityType.YoungOld]: YENI_SORULAR_AKTIF ? youngOldDataYeni : youngOldData,
     [ActivityType.HardSoft]: YENI_SORULAR_AKTIF ? hardSoftDataYeni : hardSoftData,
     [ActivityType.CleanDirty]: YENI_SORULAR_AKTIF ? cleanDirtyDataYeni : cleanDirtyData,
     [ActivityType.WetDry]: YENI_SORULAR_AKTIF ? wetDryDataYeni : wetDryData,
     [ActivityType.OpenClosed]: YENI_SORULAR_AKTIF ? openClosedDataYeni : openClosedData,
     [ActivityType.StraightCurved]: straightCurvedData,
     [ActivityType.AliveLifeless]: aliveLifelessData,
-    [ActivityType.BitterSweet]: bitterSweetData,
+    [ActivityType.BitterSweet]: YENI_SORULAR_AKTIF ? bitterSweetDataYeni : bitterSweetData,
     [ActivityType.HeavyLight]: heavyLightData,
     [ActivityType.HotCold]: YENI_SORULAR_AKTIF ? hotColdDataYeni : hotColdData,
     [ActivityType.RoughSmooth]: YENI_SORULAR_AKTIF ? roughSmoothDataYeni : roughSmoothData,
@@ -1426,13 +1426,13 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.KirisikDuzgun]: kirisikDuzgunData,
     [ActivityType.SivriKut]: sivriKutData,
     [ActivityType.ParlakMat]: YENI_SORULAR_AKTIF ? parlakMatDataYeni : parlakMatData,
-    [ActivityType.TembelCaliskan]: tembelCaliskanData,
+    [ActivityType.TembelCaliskan]: YENI_SORULAR_AKTIF ? tembelCaliskanDataYeni : tembelCaliskanData,
     [ActivityType.SeffafOpak]: YENI_SORULAR_AKTIF ? seffafOpakDataYeni : seffafOpakData,
     [ActivityType.DikenliPuruzsuz]: YENI_SORULAR_AKTIF ? dikenliPuruzsuzDataYeni : dikenliPuruzsuzData,
     [ActivityType.DugumCozuk]: dugumCozukData,
-    [ActivityType.HungryFull]: hungryFullData,
+    [ActivityType.HungryFull]: YENI_SORULAR_AKTIF ? hungryFullDataYeni : hungryFullData,
     [ActivityType.DerinSig]: YENI_SORULAR_AKTIF ? derinSigDataYeni : derinSigData,
-    [ActivityType.KalabalikTenha]: kalabalikTenhaData,
+    [ActivityType.KalabalikTenha]: YENI_SORULAR_AKTIF ? kalabalikTenhaDataYeni : kalabalikTenhaData,
     [ActivityType.TersDuz]: tersDuzData,
     [ActivityType.FewMuch]: YENI_SORULAR_AKTIF ? fewMuchDataYeni : fewMuchData,
     [ActivityType.HalfQuarterWhole]: YENI_SORULAR_AKTIF ? halfQuarterWholeDataYeni : halfQuarterWholeData,
@@ -1451,7 +1451,7 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.BeforeAfter]: beforeAfterData,
     [ActivityType.DayNight]: dayNightData,
     [ActivityType.FastSlow]: fastSlowData,
-    [ActivityType.NoisyQuiet]: noisyQuietData,
+    [ActivityType.NoisyQuiet]: YENI_SORULAR_AKTIF ? noisyQuietDataYeni : noisyQuietData,
     // WhatDoesntBelong is now handled dynamically
     // FunctionalMatching removed - now integrated into 5N1K "What?" category
     [ActivityType.FiveWOneH]: fiveWOneHData,
