@@ -1,5 +1,5 @@
 // OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-cift.mjs (seffaf-opak). Elle düzenleme.
-// 9 çift, 18 soru. Görseller: gorsel-ham/seffaf-opak/ → id 4001-4014.
+// 10 çift, 20 soru. Görseller: gorsel-ham/seffaf-opak/ → id 4001-4016.
 import { ConceptRound, ActivityType } from '../../../../types';
 
 export const seffafOpakDataYeni: ConceptRound[] = [
@@ -244,6 +244,33 @@ export const seffafOpakDataYeni: ConceptRound[] = [
         options: [
             { id: 4013, word: "süt", imageUrl: "/images/4013.webp", isCorrect: true, audioKey: "süt", spokenText: "süt" },
             { id: 4014, word: "su", imageUrl: "/images/4014.webp", isCorrect: false, audioKey: "su", spokenText: "su" }
+        ]
+    },
+    // vazo
+    {
+        id: 19,
+        question: "Hangi vazo şeffaf?",
+        questionAudioKey: "",
+        activityType: ActivityType.SeffafOpak,
+        speech: {
+            tr: { question: 'Hangi vazo şeffaf?', correct: 'Evet! Vazo şeffaftır.', wrong: 'Hayır, bu vazo opaktır.' }
+        },
+        options: [
+            { id: 4016, word: "vazo", imageUrl: "/images/4016.webp", isCorrect: true, audioKey: "vazo", spokenText: "vazo" },
+            { id: 4015, word: "vazo", imageUrl: "/images/4015.webp", isCorrect: false, audioKey: "vazo", spokenText: "vazo" }
+        ]
+    },
+    {
+        id: 20,
+        question: "Hangi vazo opak?",
+        questionAudioKey: "",
+        activityType: ActivityType.SeffafOpak,
+        speech: {
+            tr: { question: 'Hangi vazo opak?', correct: 'Evet! Vazo opaktır.', wrong: 'Hayır, bu vazo şeffaftır.' }
+        },
+        options: [
+            { id: 4015, word: "vazo", imageUrl: "/images/4015.webp", isCorrect: true, audioKey: "vazo", spokenText: "vazo" },
+            { id: 4016, word: "vazo", imageUrl: "/images/4016.webp", isCorrect: false, audioKey: "vazo", spokenText: "vazo" }
         ]
     },
 ];

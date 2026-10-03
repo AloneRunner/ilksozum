@@ -175,7 +175,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
             tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Sünger yumuşaktır.', wrong: 'Hayır, taş serttir.' }
         },
         options: [
-            { id: 3309, word: "sünger", imageUrl: "/images/3309.webp", isCorrect: true, audioKey: "sünger", spokenText: "sünger" },
+            { id: 3311, word: "sünger", imageUrl: "/images/3311.webp", isCorrect: true, audioKey: "sünger", spokenText: "sünger" },
             { id: 3512, word: "taş", imageUrl: "/images/3512.webp", isCorrect: false, audioKey: "taş", spokenText: "taş" }
         ]
     },
@@ -189,7 +189,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         },
         options: [
             { id: 3512, word: "taş", imageUrl: "/images/3512.webp", isCorrect: true, audioKey: "taş", spokenText: "taş" },
-            { id: 3309, word: "sünger", imageUrl: "/images/3309.webp", isCorrect: false, audioKey: "sünger", spokenText: "sünger" }
+            { id: 3311, word: "sünger", imageUrl: "/images/3311.webp", isCorrect: false, audioKey: "sünger", spokenText: "sünger" }
         ]
     },
     // yastik_tugla

@@ -436,7 +436,7 @@ const KAVRAMLAR = [
   },
   {
     klasor: 'kirisik-duzgun', dosya: 'kirisikDuzgunData.ts', exportAdi: 'kirisikDuzgunDataYeni',
-    activityType: 'KirisikDuzgun', idBaslangic: 4701, etiket: 'condition',
+    activityType: 'KirisikDuzgun', idBaslangic: 4701, etiket: 'condition', sahneNesneler: ['masaortusu', 'ortu', 'perde'],
     a: { ek: 'kirisik', deger: 'kırışık', soru: 'Kırışık olan hangisi?', sifat: 'kırışıktır' },
     b: { ek: 'duzgun', deger: 'düzgün', soru: 'Düzgün olan hangisi?', sifat: 'düzgündür' },
     kelime: { elbise: 'elbise', masaortusu: 'masa örtüsü', tisort: 'tişört', gomlek: 'gömlek', kagit: 'kâğıt', etek: 'etek', ortu: 'yatak örtüsü',
@@ -458,7 +458,7 @@ const KAVRAMLAR = [
   {
     klasor: 'duz-egri', dosya: 'duzEgriData.ts', exportAdi: 'straightCurvedDataYeni',
     activityType: 'StraightCurved', idBaslangic: 4901, etiket: 'shape',
-    sahneNesneler: ['yol', 'ray', 'agac'],
+    sahneNesneler: ['yol', 'ray', 'agac', 'cit'],
     a: { ek: 'duz', deger: 'düz', soru: 'Düz olan hangisi?', sifat: 'düzdür' },
     b: { ek: 'egri', deger: 'eğri', soru: 'Eğri olan hangisi?', sifat: 'eğridir' },
     kelime: { kasik: 'kaşık', cit: 'çit', yol: 'yol', ray: 'tren rayı', pipet: 'pipet', tel: 'tel', civi: 'çivi', agac: 'ağaç', ip: 'ip', cubuk: 'çubuk' },

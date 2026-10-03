@@ -1,5 +1,5 @@
 // OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-cift.mjs (yasli-genc). Elle düzenleme.
-// 7 çift, 14 soru. Görseller: gorsel-ham/yasli-genc/ → id 4401-4414.
+// 10 çift, 20 soru. Görseller: gorsel-ham/yasli-genc/ → id 4401-4420.
 import { ConceptRound, ActivityType } from '../../../../types';
 
 export const youngOldDataYeni: ConceptRound[] = [
@@ -111,9 +111,36 @@ export const youngOldDataYeni: ConceptRound[] = [
             { id: 4408, word: "adam", imageUrl: "/images/4408.webp", isCorrect: false, audioKey: "adam", spokenText: "adam" }
         ]
     },
-    // kadın
+    // inek
     {
         id: 9,
+        question: "Hangi inek yaşlı?",
+        questionAudioKey: "",
+        activityType: ActivityType.YoungOld,
+        speech: {
+            tr: { question: 'Hangi inek yaşlı?', correct: 'Evet! İnek yaşlıdır.', wrong: 'Hayır, bu inek gençtir.' }
+        },
+        options: [
+            { id: 4410, word: "inek", imageUrl: "/images/4410.webp", isCorrect: true, audioKey: "inek", spokenText: "inek" },
+            { id: 4409, word: "inek", imageUrl: "/images/4409.webp", isCorrect: false, audioKey: "inek", spokenText: "inek" }
+        ]
+    },
+    {
+        id: 10,
+        question: "Hangi inek genç?",
+        questionAudioKey: "",
+        activityType: ActivityType.YoungOld,
+        speech: {
+            tr: { question: 'Hangi inek genç?', correct: 'Evet! İnek gençtir.', wrong: 'Hayır, bu inek yaşlıdır.' }
+        },
+        options: [
+            { id: 4409, word: "inek", imageUrl: "/images/4409.webp", isCorrect: true, audioKey: "inek", spokenText: "inek" },
+            { id: 4410, word: "inek", imageUrl: "/images/4410.webp", isCorrect: false, audioKey: "inek", spokenText: "inek" }
+        ]
+    },
+    // kadın
+    {
+        id: 11,
         question: "Hangi kadın yaşlı?",
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
@@ -121,12 +148,12 @@ export const youngOldDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi kadın yaşlı?', correct: 'Evet! Kadın yaşlıdır.', wrong: 'Hayır, bu kadın gençtir.' }
         },
         options: [
-            { id: 4410, word: "kadın", imageUrl: "/images/4410.webp", isCorrect: true, audioKey: "kadın", spokenText: "kadın" },
-            { id: 4409, word: "kadın", imageUrl: "/images/4409.webp", isCorrect: false, audioKey: "kadın", spokenText: "kadın" }
+            { id: 4412, word: "kadın", imageUrl: "/images/4412.webp", isCorrect: true, audioKey: "kadın", spokenText: "kadın" },
+            { id: 4411, word: "kadın", imageUrl: "/images/4411.webp", isCorrect: false, audioKey: "kadın", spokenText: "kadın" }
         ]
     },
     {
-        id: 10,
+        id: 12,
         question: "Hangi kadın genç?",
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
@@ -134,13 +161,13 @@ export const youngOldDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi kadın genç?', correct: 'Evet! Kadın gençtir.', wrong: 'Hayır, bu kadın yaşlıdır.' }
         },
         options: [
-            { id: 4409, word: "kadın", imageUrl: "/images/4409.webp", isCorrect: true, audioKey: "kadın", spokenText: "kadın" },
-            { id: 4410, word: "kadın", imageUrl: "/images/4410.webp", isCorrect: false, audioKey: "kadın", spokenText: "kadın" }
+            { id: 4411, word: "kadın", imageUrl: "/images/4411.webp", isCorrect: true, audioKey: "kadın", spokenText: "kadın" },
+            { id: 4412, word: "kadın", imageUrl: "/images/4412.webp", isCorrect: false, audioKey: "kadın", spokenText: "kadın" }
         ]
     },
     // kedi
     {
-        id: 11,
+        id: 13,
         question: "Hangi kedi yaşlı?",
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
@@ -148,12 +175,12 @@ export const youngOldDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi kedi yaşlı?', correct: 'Evet! Kedi yaşlıdır.', wrong: 'Hayır, bu kedi gençtir.' }
         },
         options: [
-            { id: 4412, word: "kedi", imageUrl: "/images/4412.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
-            { id: 4411, word: "kedi", imageUrl: "/images/4411.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" }
+            { id: 4414, word: "kedi", imageUrl: "/images/4414.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
+            { id: 4413, word: "kedi", imageUrl: "/images/4413.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" }
         ]
     },
     {
-        id: 12,
+        id: 14,
         question: "Hangi kedi genç?",
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
@@ -161,13 +188,13 @@ export const youngOldDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi kedi genç?', correct: 'Evet! Kedi gençtir.', wrong: 'Hayır, bu kedi yaşlıdır.' }
         },
         options: [
-            { id: 4411, word: "kedi", imageUrl: "/images/4411.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
-            { id: 4412, word: "kedi", imageUrl: "/images/4412.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" }
+            { id: 4413, word: "kedi", imageUrl: "/images/4413.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
+            { id: 4414, word: "kedi", imageUrl: "/images/4414.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" }
         ]
     },
     // köpek
     {
-        id: 13,
+        id: 15,
         question: "Hangi köpek yaşlı?",
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
@@ -175,12 +202,12 @@ export const youngOldDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi köpek yaşlı?', correct: 'Evet! Köpek yaşlıdır.', wrong: 'Hayır, bu köpek gençtir.' }
         },
         options: [
-            { id: 4414, word: "köpek", imageUrl: "/images/4414.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
-            { id: 4413, word: "köpek", imageUrl: "/images/4413.webp", isCorrect: false, audioKey: "köpek", spokenText: "köpek" }
+            { id: 4416, word: "köpek", imageUrl: "/images/4416.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
+            { id: 4415, word: "köpek", imageUrl: "/images/4415.webp", isCorrect: false, audioKey: "köpek", spokenText: "köpek" }
         ]
     },
     {
-        id: 14,
+        id: 16,
         question: "Hangi köpek genç?",
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
@@ -188,8 +215,62 @@ export const youngOldDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi köpek genç?', correct: 'Evet! Köpek gençtir.', wrong: 'Hayır, bu köpek yaşlıdır.' }
         },
         options: [
-            { id: 4413, word: "köpek", imageUrl: "/images/4413.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
-            { id: 4414, word: "köpek", imageUrl: "/images/4414.webp", isCorrect: false, audioKey: "köpek", spokenText: "köpek" }
+            { id: 4415, word: "köpek", imageUrl: "/images/4415.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
+            { id: 4416, word: "köpek", imageUrl: "/images/4416.webp", isCorrect: false, audioKey: "köpek", spokenText: "köpek" }
+        ]
+    },
+    // koyun
+    {
+        id: 17,
+        question: "Hangi koyun yaşlı?",
+        questionAudioKey: "",
+        activityType: ActivityType.YoungOld,
+        speech: {
+            tr: { question: 'Hangi koyun yaşlı?', correct: 'Evet! Koyun yaşlıdır.', wrong: 'Hayır, bu koyun gençtir.' }
+        },
+        options: [
+            { id: 4418, word: "koyun", imageUrl: "/images/4418.webp", isCorrect: true, audioKey: "koyun", spokenText: "koyun" },
+            { id: 4417, word: "koyun", imageUrl: "/images/4417.webp", isCorrect: false, audioKey: "koyun", spokenText: "koyun" }
+        ]
+    },
+    {
+        id: 18,
+        question: "Hangi koyun genç?",
+        questionAudioKey: "",
+        activityType: ActivityType.YoungOld,
+        speech: {
+            tr: { question: 'Hangi koyun genç?', correct: 'Evet! Koyun gençtir.', wrong: 'Hayır, bu koyun yaşlıdır.' }
+        },
+        options: [
+            { id: 4417, word: "koyun", imageUrl: "/images/4417.webp", isCorrect: true, audioKey: "koyun", spokenText: "koyun" },
+            { id: 4418, word: "koyun", imageUrl: "/images/4418.webp", isCorrect: false, audioKey: "koyun", spokenText: "koyun" }
+        ]
+    },
+    // kadın
+    {
+        id: 19,
+        question: "Hangi kadın yaşlı?",
+        questionAudioKey: "",
+        activityType: ActivityType.YoungOld,
+        speech: {
+            tr: { question: 'Hangi kadın yaşlı?', correct: 'Evet! Kadın yaşlıdır.', wrong: 'Hayır, bu kadın gençtir.' }
+        },
+        options: [
+            { id: 4420, word: "kadın", imageUrl: "/images/4420.webp", isCorrect: true, audioKey: "kadın", spokenText: "kadın" },
+            { id: 4419, word: "kadın", imageUrl: "/images/4419.webp", isCorrect: false, audioKey: "kadın", spokenText: "kadın" }
+        ]
+    },
+    {
+        id: 20,
+        question: "Hangi kadın genç?",
+        questionAudioKey: "",
+        activityType: ActivityType.YoungOld,
+        speech: {
+            tr: { question: 'Hangi kadın genç?', correct: 'Evet! Kadın gençtir.', wrong: 'Hayır, bu kadın yaşlıdır.' }
+        },
+        options: [
+            { id: 4419, word: "kadın", imageUrl: "/images/4419.webp", isCorrect: true, audioKey: "kadın", spokenText: "kadın" },
+            { id: 4420, word: "kadın", imageUrl: "/images/4420.webp", isCorrect: false, audioKey: "kadın", spokenText: "kadın" }
         ]
     },
 ];

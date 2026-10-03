@@ -1,5 +1,5 @@
 // OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-cift.mjs (parlak-mat). Elle düzenleme.
-// 9 çift, 18 soru. Görseller: gorsel-ham/parlak-mat/ → id 3901-3916.
+// 10 çift, 20 soru. Görseller: gorsel-ham/parlak-mat/ → id 3901-3918.
 import { ConceptRound, ActivityType } from '../../../../types';
 
 export const parlakMatDataYeni: ConceptRound[] = [
@@ -192,9 +192,36 @@ export const parlakMatDataYeni: ConceptRound[] = [
             { id: 3912, word: "saksı", imageUrl: "/images/3912.webp", isCorrect: false, audioKey: "saksı", spokenText: "saksı" }
         ]
     },
-    // top
+    // tencere
     {
         id: 15,
+        question: "Hangi tencere parlak?",
+        questionAudioKey: "",
+        activityType: ActivityType.ParlakMat,
+        speech: {
+            tr: { question: 'Hangi tencere parlak?', correct: 'Evet! Tencere parlaktır.', wrong: 'Hayır, bu tencere mattır.' }
+        },
+        options: [
+            { id: 3914, word: "tencere", imageUrl: "/images/3914.webp", isCorrect: true, audioKey: "tencere", spokenText: "tencere" },
+            { id: 3913, word: "tencere", imageUrl: "/images/3913.webp", isCorrect: false, audioKey: "tencere", spokenText: "tencere" }
+        ]
+    },
+    {
+        id: 16,
+        question: "Hangi tencere mat?",
+        questionAudioKey: "",
+        activityType: ActivityType.ParlakMat,
+        speech: {
+            tr: { question: 'Hangi tencere mat?', correct: 'Evet! Tencere mattır.', wrong: 'Hayır, bu tencere parlaktır.' }
+        },
+        options: [
+            { id: 3913, word: "tencere", imageUrl: "/images/3913.webp", isCorrect: true, audioKey: "tencere", spokenText: "tencere" },
+            { id: 3914, word: "tencere", imageUrl: "/images/3914.webp", isCorrect: false, audioKey: "tencere", spokenText: "tencere" }
+        ]
+    },
+    // top
+    {
+        id: 17,
         question: "Hangi top parlak?",
         questionAudioKey: "",
         activityType: ActivityType.ParlakMat,
@@ -202,12 +229,12 @@ export const parlakMatDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi top parlak?', correct: 'Evet! Top parlaktır.', wrong: 'Hayır, bu top mattır.' }
         },
         options: [
-            { id: 3914, word: "top", imageUrl: "/images/3914.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
-            { id: 3913, word: "top", imageUrl: "/images/3913.webp", isCorrect: false, audioKey: "top", spokenText: "top" }
+            { id: 3916, word: "top", imageUrl: "/images/3916.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
+            { id: 3915, word: "top", imageUrl: "/images/3915.webp", isCorrect: false, audioKey: "top", spokenText: "top" }
         ]
     },
     {
-        id: 16,
+        id: 18,
         question: "Hangi top mat?",
         questionAudioKey: "",
         activityType: ActivityType.ParlakMat,
@@ -215,13 +242,13 @@ export const parlakMatDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi top mat?', correct: 'Evet! Top mattır.', wrong: 'Hayır, bu top parlaktır.' }
         },
         options: [
-            { id: 3913, word: "top", imageUrl: "/images/3913.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
-            { id: 3914, word: "top", imageUrl: "/images/3914.webp", isCorrect: false, audioKey: "top", spokenText: "top" }
+            { id: 3915, word: "top", imageUrl: "/images/3915.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
+            { id: 3916, word: "top", imageUrl: "/images/3916.webp", isCorrect: false, audioKey: "top", spokenText: "top" }
         ]
     },
     // vazo
     {
-        id: 17,
+        id: 19,
         question: "Hangi vazo parlak?",
         questionAudioKey: "",
         activityType: ActivityType.ParlakMat,
@@ -229,12 +256,12 @@ export const parlakMatDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi vazo parlak?', correct: 'Evet! Vazo parlaktır.', wrong: 'Hayır, bu vazo mattır.' }
         },
         options: [
-            { id: 3916, word: "vazo", imageUrl: "/images/3916.webp", isCorrect: true, audioKey: "vazo", spokenText: "vazo" },
-            { id: 3915, word: "vazo", imageUrl: "/images/3915.webp", isCorrect: false, audioKey: "vazo", spokenText: "vazo" }
+            { id: 3918, word: "vazo", imageUrl: "/images/3918.webp", isCorrect: true, audioKey: "vazo", spokenText: "vazo" },
+            { id: 3917, word: "vazo", imageUrl: "/images/3917.webp", isCorrect: false, audioKey: "vazo", spokenText: "vazo" }
         ]
     },
     {
-        id: 18,
+        id: 20,
         question: "Hangi vazo mat?",
         questionAudioKey: "",
         activityType: ActivityType.ParlakMat,
@@ -242,8 +269,8 @@ export const parlakMatDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi vazo mat?', correct: 'Evet! Vazo mattır.', wrong: 'Hayır, bu vazo parlaktır.' }
         },
         options: [
-            { id: 3915, word: "vazo", imageUrl: "/images/3915.webp", isCorrect: true, audioKey: "vazo", spokenText: "vazo" },
-            { id: 3916, word: "vazo", imageUrl: "/images/3916.webp", isCorrect: false, audioKey: "vazo", spokenText: "vazo" }
+            { id: 3917, word: "vazo", imageUrl: "/images/3917.webp", isCorrect: true, audioKey: "vazo", spokenText: "vazo" },
+            { id: 3918, word: "vazo", imageUrl: "/images/3918.webp", isCorrect: false, audioKey: "vazo", spokenText: "vazo" }
         ]
     },
 ];

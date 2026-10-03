@@ -1,5 +1,5 @@
 // OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-cift.mjs (sicak-soguk). Elle düzenleme.
-// 9 çift, 18 soru. Görseller: gorsel-ham/sicak-soguk/ → id 3601-3618.
+// 10 çift, 20 soru. Görseller: gorsel-ham/sicak-soguk/ → id 3601-3620.
 import { ConceptRound, ActivityType } from '../../../../types';
 
 export const hotColdDataYeni: ConceptRound[] = [
@@ -219,9 +219,36 @@ export const hotColdDataYeni: ConceptRound[] = [
             { id: 3615, word: "soba", imageUrl: "/images/3615.webp", isCorrect: false, audioKey: "soba", spokenText: "soba" }
         ]
     },
-    // utu_buz
+    // süt
     {
         id: 17,
+        question: "Hangi süt sıcak?",
+        questionAudioKey: "",
+        activityType: ActivityType.HotCold,
+        speech: {
+            tr: { question: 'Hangi süt sıcak?', correct: 'Evet! Süt sıcaktır.', wrong: 'Hayır, bu süt soğuktur.' }
+        },
+        options: [
+            { id: 3617, word: "süt", imageUrl: "/images/3617.webp", isCorrect: true, audioKey: "süt", spokenText: "süt" },
+            { id: 3618, word: "süt", imageUrl: "/images/3618.webp", isCorrect: false, audioKey: "süt", spokenText: "süt" }
+        ]
+    },
+    {
+        id: 18,
+        question: "Hangi süt soğuk?",
+        questionAudioKey: "",
+        activityType: ActivityType.HotCold,
+        speech: {
+            tr: { question: 'Hangi süt soğuk?', correct: 'Evet! Süt soğuktur.', wrong: 'Hayır, bu süt sıcaktır.' }
+        },
+        options: [
+            { id: 3618, word: "süt", imageUrl: "/images/3618.webp", isCorrect: true, audioKey: "süt", spokenText: "süt" },
+            { id: 3617, word: "süt", imageUrl: "/images/3617.webp", isCorrect: false, audioKey: "süt", spokenText: "süt" }
+        ]
+    },
+    // utu_buz
+    {
+        id: 19,
         question: "Sıcak olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HotCold,
@@ -229,12 +256,12 @@ export const hotColdDataYeni: ConceptRound[] = [
             tr: { question: 'Sıcak olan hangisi?', correct: 'Evet! Ütü sıcaktır.', wrong: 'Hayır, buz soğuktur.' }
         },
         options: [
-            { id: 3617, word: "ütü", imageUrl: "/images/3617.webp", isCorrect: true, audioKey: "ütü", spokenText: "ütü" },
-            { id: 3618, word: "buz", imageUrl: "/images/3618.webp", isCorrect: false, audioKey: "buz", spokenText: "buz" }
+            { id: 3619, word: "ütü", imageUrl: "/images/3619.webp", isCorrect: true, audioKey: "ütü", spokenText: "ütü" },
+            { id: 3620, word: "buz", imageUrl: "/images/3620.webp", isCorrect: false, audioKey: "buz", spokenText: "buz" }
         ]
     },
     {
-        id: 18,
+        id: 20,
         question: "Soğuk olan hangisi?",
         questionAudioKey: "",
         activityType: ActivityType.HotCold,
@@ -242,8 +269,8 @@ export const hotColdDataYeni: ConceptRound[] = [
             tr: { question: 'Soğuk olan hangisi?', correct: 'Evet! Buz soğuktur.', wrong: 'Hayır, ütü sıcaktır.' }
         },
         options: [
-            { id: 3618, word: "buz", imageUrl: "/images/3618.webp", isCorrect: true, audioKey: "buz", spokenText: "buz" },
-            { id: 3617, word: "ütü", imageUrl: "/images/3617.webp", isCorrect: false, audioKey: "ütü", spokenText: "ütü" }
+            { id: 3620, word: "buz", imageUrl: "/images/3620.webp", isCorrect: true, audioKey: "buz", spokenText: "buz" },
+            { id: 3619, word: "ütü", imageUrl: "/images/3619.webp", isCorrect: false, audioKey: "ütü", spokenText: "ütü" }
         ]
     },
 ];
