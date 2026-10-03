@@ -46,3 +46,5 @@ export { hangisiFarkliKolayYeni, hangisiFarkliZorYeni } from './hangisiFarkliDat
 export { leftRightDataYeni } from './sagSolData';
 export { aliveLifelessDataYeni } from './canliCansizData';
 export { saatDataYeni } from './saatData';
+export { nearFarDataYeni } from './yakinUzakData';
+export { besideOppositeDataYeni } from './yanyanaKarsiData';

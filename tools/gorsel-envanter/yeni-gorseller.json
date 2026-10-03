@@ -6821,6 +6821,366 @@
       "tags": {
         "direction": "sola"
       }
+    },
+    {
+      "id": 5501,
+      "kaynak": "yakin-uzak/agac-uzak.jpg",
+      "word": "ağaç",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "uzak"
+      }
+    },
+    {
+      "id": 5502,
+      "kaynak": "yakin-uzak/agac-yakin.jpg",
+      "word": "ağaç",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "yakın"
+      }
+    },
+    {
+      "id": 5503,
+      "kaynak": "yakin-uzak/bisiklet-uzak.jpg",
+      "word": "bisiklet",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "uzak"
+      }
+    },
+    {
+      "id": 5504,
+      "kaynak": "yakin-uzak/bisiklet-yakin.jpg",
+      "word": "bisiklet",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "yakın"
+      }
+    },
+    {
+      "id": 5505,
+      "kaynak": "yakin-uzak/cocuk-uzak.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "uzak"
+      }
+    },
+    {
+      "id": 5506,
+      "kaynak": "yakin-uzak/cocuk-yakin.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "yakın"
+      }
+    },
+    {
+      "id": 5507,
+      "kaynak": "yakin-uzak/ev-uzak.jpg",
+      "word": "ev",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "uzak"
+      }
+    },
+    {
+      "id": 5508,
+      "kaynak": "yakin-uzak/ev-yakin.jpg",
+      "word": "ev",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "yakın"
+      }
+    },
+    {
+      "id": 5509,
+      "kaynak": "yakin-uzak/inek-uzak.jpg",
+      "word": "inek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "uzak"
+      }
+    },
+    {
+      "id": 5510,
+      "kaynak": "yakin-uzak/inek-yakin.jpg",
+      "word": "inek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "yakın"
+      }
+    },
+    {
+      "id": 5511,
+      "kaynak": "yakin-uzak/kopek-uzak.jpg",
+      "word": "köpek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "uzak"
+      }
+    },
+    {
+      "id": 5512,
+      "kaynak": "yakin-uzak/kopek-yakin.jpg",
+      "word": "köpek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "yakın"
+      }
+    },
+    {
+      "id": 5513,
+      "kaynak": "yakin-uzak/tekne-uzak.jpg",
+      "word": "tekne",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "uzak"
+      }
+    },
+    {
+      "id": 5514,
+      "kaynak": "yakin-uzak/tekne-yakin.jpg",
+      "word": "tekne",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "yakın"
+      }
+    },
+    {
+      "id": 5515,
+      "kaynak": "yakin-uzak/top-uzak.jpg",
+      "word": "top",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "uzak"
+      }
+    },
+    {
+      "id": 5516,
+      "kaynak": "yakin-uzak/top-yakin.jpg",
+      "word": "top",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "yakın"
+      }
+    },
+    {
+      "id": 5601,
+      "kaynak": "yanyana-karsi/araba-karsi.jpg",
+      "word": "arabalar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "karşı karşıya"
+      }
+    },
+    {
+      "id": 5602,
+      "kaynak": "yanyana-karsi/araba-yanyana.jpg",
+      "word": "arabalar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "yan yana"
+      }
+    },
+    {
+      "id": 5603,
+      "kaynak": "yanyana-karsi/at-karsi.jpg",
+      "word": "atlar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "karşı karşıya"
+      }
+    },
+    {
+      "id": 5604,
+      "kaynak": "yanyana-karsi/at-yanyana.jpg",
+      "word": "atlar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "yan yana"
+      }
+    },
+    {
+      "id": 5605,
+      "kaynak": "yanyana-karsi/ayi-karsi.jpg",
+      "word": "ayılar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "karşı karşıya"
+      }
+    },
+    {
+      "id": 5606,
+      "kaynak": "yanyana-karsi/ayi-yanyana.jpg",
+      "word": "ayılar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "yan yana"
+      }
+    },
+    {
+      "id": 5607,
+      "kaynak": "yanyana-karsi/cocuk-karsi.jpg",
+      "word": "çocuklar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "karşı karşıya"
+      }
+    },
+    {
+      "id": 5608,
+      "kaynak": "yanyana-karsi/cocuk-yanyana.jpg",
+      "word": "çocuklar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "yan yana"
+      }
+    },
+    {
+      "id": 5609,
+      "kaynak": "yanyana-karsi/fincan-karsi.jpg",
+      "word": "fincanlar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "karşı karşıya"
+      }
+    },
+    {
+      "id": 5610,
+      "kaynak": "yanyana-karsi/fincan-yanyana.jpg",
+      "word": "fincanlar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "yan yana"
+      }
+    },
+    {
+      "id": 5611,
+      "kaynak": "yanyana-karsi/kedi-karsi.jpg",
+      "word": "kediler",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "karşı karşıya"
+      }
+    },
+    {
+      "id": 5612,
+      "kaynak": "yanyana-karsi/kedi-yanyana.jpg",
+      "word": "kediler",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "yan yana"
+      }
+    },
+    {
+      "id": 5613,
+      "kaynak": "yanyana-karsi/koltuk-karsi.jpg",
+      "word": "koltuklar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "karşı karşıya"
+      }
+    },
+    {
+      "id": 5614,
+      "kaynak": "yanyana-karsi/koltuk-yanyana.jpg",
+      "word": "koltuklar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "yan yana"
+      }
+    },
+    {
+      "id": 5615,
+      "kaynak": "yanyana-karsi/kus-karsi.jpg",
+      "word": "kuşlar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "karşı karşıya"
+      }
+    },
+    {
+      "id": 5616,
+      "kaynak": "yanyana-karsi/kus-yanyana.jpg",
+      "word": "kuşlar",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "yan yana"
+      }
+    },
+    {
+      "id": 5617,
+      "kaynak": "yanyana-karsi/ordek-karsi.jpg",
+      "word": "ördekler",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "karşı karşıya"
+      }
+    },
+    {
+      "id": 5618,
+      "kaynak": "yanyana-karsi/ordek-yanyana.jpg",
+      "word": "ördekler",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "yan yana"
+      }
+    },
+    {
+      "id": 5619,
+      "kaynak": "yanyana-karsi/sandalye-karsi.jpg",
+      "word": "sandalyeler",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "karşı karşıya"
+      }
+    },
+    {
+      "id": 5620,
+      "kaynak": "yanyana-karsi/sandalye-yanyana.jpg",
+      "word": "sandalyeler",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "position": "yan yana"
+      }
     }
   ]
 }

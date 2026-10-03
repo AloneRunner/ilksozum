@@ -473,6 +473,25 @@ const KAVRAMLAR = [
     },
   },
   {
+    klasor: 'yakin-uzak', dosya: 'yakinUzakData.ts', exportAdi: 'nearFarDataYeni',
+    activityType: 'NearFar', idBaslangic: 5501, sahne: true, etiket: 'distance',
+    soruIdBaslangic: 1001, // NearFar i18n sp_nearfar_<id> arıyor
+    a: { ek: 'yakin', deger: 'yakın', soru: 'Yakın olan hangisi?', sifat: 'yakındır' },
+    b: { ek: 'uzak', deger: 'uzak', soru: 'Uzak olan hangisi?', sifat: 'uzaktır' },
+    kelime: { bisiklet: 'bisiklet', kopek: 'köpek', cocuk: 'çocuk', inek: 'inek', agac: 'ağaç', ev: 'ev', top: 'top',
+      tekne: 'tekne', araba: 'araba', balon: 'balon' },
+  },
+  {
+    klasor: 'yanyana-karsi', dosya: 'yanyanaKarsiData.ts', exportAdi: 'besideOppositeDataYeni',
+    activityType: 'BesideOpposite', idBaslangic: 5601, sahne: true, etiket: 'position',
+    soruIdBaslangic: 1001, // BesideOpposite i18n sp_beside_<id> arıyor
+    a: { ek: 'yanyana', deger: 'yan yana', soru: 'Yan yana olanlar hangisi?', sifat: 'yan yanadır' },
+    b: { ek: 'karsi', deger: 'karşı karşıya', soru: 'Karşı karşıya olanlar hangisi?', sifat: 'karşı karşıyadır' },
+    buYok: true,
+    kelime: { sandalye: 'sandalyeler', cocuk: 'çocuklar', kedi: 'kediler', ayi: 'ayılar', araba: 'arabalar',
+      koltuk: 'koltuklar', kus: 'kuşlar', ordek: 'ördekler', at: 'atlar', fincan: 'fincanlar' },
+  },
+  {
     klasor: 'kirisik-duzgun', dosya: 'kirisikDuzgunData.ts', exportAdi: 'kirisikDuzgunDataYeni',
     activityType: 'KirisikDuzgun', idBaslangic: 4701, etiket: 'condition', sahneNesneler: ['masaortusu', 'ortu', 'perde'],
     a: { ek: 'kirisik', deger: 'kırışık', soru: 'Kırışık olan hangisi?', sifat: 'kırışıktır' },
