@@ -538,6 +538,35 @@ const KAVRAMLAR = [
       yaprak: 'yaprak', ayakkabi: 'ayakkabı', kaya: 'taş', cati: 'çatı', civi: 'çivi' },
   },
   {
+    klasor: 'gunduz-gece', dosya: 'gunduzGeceData.ts', exportAdi: 'dayNightDataYeni',
+    activityType: 'DayNight', idBaslangic: 5901, etiket: 'time',
+    sahne: true, // gece görselleri karanlık: renk/zemin düzeltmesi yapılmaz
+    a: { ek: 'gunduz', deger: 'gündüz', soru: 'Gündüz olan hangisi?', sifat: 'gündüz' },
+    b: { ek: 'gece', deger: 'gece', soru: 'Gece olan hangisi?', sifat: 'gece' },
+    // Aynı yer, iki saat: "Hangi resimde gece?" → "Evet! Burada gece." / "Hayır, burada gündüz."
+    soruKalip: (w, d) => `Hangi resimde ${d}?`,
+    buYok: true,
+    ozne: Object.fromEntries(['park', 'ev', 'sokak', 'plaj', 'pencere', 'kasaba', 'ahir', 'cadir', 'sandal', 'bahce'].map(n => [n, 'burada'])),
+    kelime: { park: 'park', ev: 'ev', sokak: 'sokak', plaj: 'plaj', pencere: 'pencere', kasaba: 'kasaba', ahir: 'ahır',
+      cadir: 'çadır', sandal: 'sandal', bahce: 'bahçe' },
+  },
+  {
+    klasor: 'hizli-yavas', dosya: 'hizliYavasData.ts', exportAdi: 'fastSlowDataYeni',
+    activityType: 'FastSlow', idBaslangic: 6001, etiket: 'speed',
+    sahne: true,
+    a: { ek: 'hizli', deger: 'hızlı', soru: 'Hızlı olan hangisi?', sifat: 'hızlıdır' },
+    b: { ek: 'yavas', deger: 'yavaş', soru: 'Yavaş olan hangisi?', sifat: 'yavaştır' },
+    soruOzel: { cocuk: { hizli: 'Hangi çocuk hızlı koşuyor?', yavas: 'Hangi çocuk yavaş yürüyor?' } },
+    // Yarış arabası çizgi film gibi geldi (tur 33): traktörün eşi şimdilik tren (tren_traktor-hizli.jpg = aynı tren fotoğrafı)
+    kelime: {
+      tavsan_kaplumbaga: { hizli: 'tavşan', yavas: 'kaplumbağa' }, cita_salyangoz: { hizli: 'çita', yavas: 'salyangoz' },
+      ucak_balon: { hizli: 'uçak', yavas: 'balon' }, tren_atarabasi: { hizli: 'tren', yavas: 'at arabası' },
+      tren_traktor: { hizli: 'tren', yavas: 'traktör' }, tekne_sandal: { hizli: 'sürat teknesi', yavas: 'sandal' },
+      at_inek: { hizli: 'at', yavas: 'inek' }, kopek_tembelhayvan: { hizli: 'köpek', yavas: 'tembel hayvan' },
+      sahin_tirtil: { hizli: 'şahin', yavas: 'tırtıl' }, cocuk: 'çocuk',
+    },
+  },
+  {
     klasor: 'kirisik-duzgun', dosya: 'kirisikDuzgunData.ts', exportAdi: 'kirisikDuzgunDataYeni',
     activityType: 'KirisikDuzgun', idBaslangic: 4701, etiket: 'condition', sahneNesneler: ['masaortusu', 'ortu', 'perde'],
     a: { ek: 'kirisik', deger: 'kırışık', soru: 'Kırışık olan hangisi?', sifat: 'kırışıktır' },

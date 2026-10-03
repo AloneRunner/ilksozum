@@ -1,10 +1,10 @@
 // OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-farkli.mjs. Elle düzenleme.
-// "Hangisi farklı?": 3 aynı + 1 farklı. KOLAY 40 soru (bambaşka nesne), ZOR 380 soru (aynı nesnenin öbür hali).
+// "Hangisi farklı?": 3 aynı + 1 farklı. KOLAY 40 soru (bambaşka nesne), ZOR 392 soru (aynı nesnenin öbür hali).
 import { ConceptRound, ActivityType } from '../../../../types';
 
 export const hangisiFarkliKolayYeni: ConceptRound[] = [
     { // kolay
-        id: 5381,
+        id: 5393,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -17,7 +17,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5382,
+        id: 5394,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -30,7 +30,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5383,
+        id: 5395,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -43,7 +43,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5384,
+        id: 5396,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -56,7 +56,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5385,
+        id: 5397,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -69,7 +69,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5386,
+        id: 5398,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -82,7 +82,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5387,
+        id: 5399,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -95,7 +95,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5388,
+        id: 5400,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -108,7 +108,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5389,
+        id: 5401,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -121,7 +121,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5390,
+        id: 5402,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -134,7 +134,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5391,
+        id: 5403,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -147,7 +147,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5392,
+        id: 5404,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -160,7 +160,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5393,
+        id: 5405,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -173,7 +173,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5394,
+        id: 5406,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -186,7 +186,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5395,
+        id: 5407,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -199,7 +199,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5396,
+        id: 5408,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -212,7 +212,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5397,
+        id: 5409,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -225,7 +225,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5398,
+        id: 5410,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -238,7 +238,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5399,
+        id: 5411,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -251,7 +251,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5400,
+        id: 5412,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -264,7 +264,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5401,
+        id: 5413,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -277,7 +277,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5402,
+        id: 5414,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -290,7 +290,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5403,
+        id: 5415,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -303,7 +303,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5404,
+        id: 5416,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -316,7 +316,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5405,
+        id: 5417,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -329,7 +329,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5406,
+        id: 5418,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -342,7 +342,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5407,
+        id: 5419,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -355,7 +355,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5408,
+        id: 5420,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -368,7 +368,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5409,
+        id: 5421,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -381,7 +381,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5410,
+        id: 5422,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -394,7 +394,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5411,
+        id: 5423,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -407,7 +407,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5412,
+        id: 5424,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -420,7 +420,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5413,
+        id: 5425,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -433,7 +433,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5414,
+        id: 5426,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -446,7 +446,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5415,
+        id: 5427,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -459,7 +459,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5416,
+        id: 5428,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -472,7 +472,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5417,
+        id: 5429,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -485,7 +485,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5418,
+        id: 5430,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -498,7 +498,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5419,
+        id: 5431,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -511,7 +511,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5420,
+        id: 5432,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -611,10 +611,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2102, word: "kuş", imageUrl: "/images/2102.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
-            { id: 2102, word: "kuş", imageUrl: "/images/2102.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
-            { id: 2102, word: "kuş", imageUrl: "/images/2102.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
-            { id: 2096, word: "kuş", imageUrl: "/images/2096.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" }
+            { id: 2103, word: "kuş", imageUrl: "/images/2103.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
+            { id: 2103, word: "kuş", imageUrl: "/images/2103.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
+            { id: 2103, word: "kuş", imageUrl: "/images/2103.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
+            { id: 2097, word: "kuş", imageUrl: "/images/2097.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" }
         ]
     },
     { // ince fark: belowAboveDataYeni
@@ -624,10 +624,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2108, word: "bebek", imageUrl: "/images/2108.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2108, word: "bebek", imageUrl: "/images/2108.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2108, word: "bebek", imageUrl: "/images/2108.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2114, word: "bebek", imageUrl: "/images/2114.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" }
+            { id: 2109, word: "bebek", imageUrl: "/images/2109.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2109, word: "bebek", imageUrl: "/images/2109.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2109, word: "bebek", imageUrl: "/images/2109.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2115, word: "bebek", imageUrl: "/images/2115.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" }
         ]
     },
     { // ince fark: belowAboveDataYeni
@@ -637,10 +637,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2126, word: "dinozor", imageUrl: "/images/2126.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2126, word: "dinozor", imageUrl: "/images/2126.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2126, word: "dinozor", imageUrl: "/images/2126.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2120, word: "dinozor", imageUrl: "/images/2120.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" }
+            { id: 2127, word: "dinozor", imageUrl: "/images/2127.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2127, word: "dinozor", imageUrl: "/images/2127.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2127, word: "dinozor", imageUrl: "/images/2127.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2121, word: "dinozor", imageUrl: "/images/2121.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" }
         ]
     },
     { // ince fark: belowAboveDataYeni
@@ -650,10 +650,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2131, word: "ördek", imageUrl: "/images/2131.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2131, word: "ördek", imageUrl: "/images/2131.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2131, word: "ördek", imageUrl: "/images/2131.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2137, word: "ördek", imageUrl: "/images/2137.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" }
+            { id: 2132, word: "ördek", imageUrl: "/images/2132.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2132, word: "ördek", imageUrl: "/images/2132.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2132, word: "ördek", imageUrl: "/images/2132.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2138, word: "ördek", imageUrl: "/images/2138.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" }
         ]
     },
     { // ince fark: besideOppositeDataYeni
@@ -884,10 +884,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2105, word: "bebek", imageUrl: "/images/2105.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2105, word: "bebek", imageUrl: "/images/2105.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2105, word: "bebek", imageUrl: "/images/2105.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2106, word: "bebek", imageUrl: "/images/2106.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" }
+            { id: 2106, word: "bebek", imageUrl: "/images/2106.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2106, word: "bebek", imageUrl: "/images/2106.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2106, word: "bebek", imageUrl: "/images/2106.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2107, word: "bebek", imageUrl: "/images/2107.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" }
         ]
     },
     { // ince fark: betweenDataYeni
@@ -897,10 +897,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2118, word: "dinozor", imageUrl: "/images/2118.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2118, word: "dinozor", imageUrl: "/images/2118.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2118, word: "dinozor", imageUrl: "/images/2118.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2117, word: "dinozor", imageUrl: "/images/2117.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" }
+            { id: 2119, word: "dinozor", imageUrl: "/images/2119.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2119, word: "dinozor", imageUrl: "/images/2119.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2119, word: "dinozor", imageUrl: "/images/2119.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2118, word: "dinozor", imageUrl: "/images/2118.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" }
         ]
     },
     { // ince fark: betweenDataYeni
@@ -910,10 +910,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2128, word: "ördek", imageUrl: "/images/2128.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2128, word: "ördek", imageUrl: "/images/2128.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2128, word: "ördek", imageUrl: "/images/2128.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2129, word: "ördek", imageUrl: "/images/2129.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" }
+            { id: 2129, word: "ördek", imageUrl: "/images/2129.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2129, word: "ördek", imageUrl: "/images/2129.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2129, word: "ördek", imageUrl: "/images/2129.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2130, word: "ördek", imageUrl: "/images/2130.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" }
         ]
     },
     { // ince fark: bigSmallDataYeni
@@ -1306,8 +1306,138 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
             { id: 3220, word: "yüz", imageUrl: "/images/3220.webp", isCorrect: true, audioKey: "yüz", spokenText: "yüz" }
         ]
     },
-    { // ince fark: derinSigDataYeni
+    { // ince fark: dayNightDataYeni
         id: 5061,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 5902, word: "ahır", imageUrl: "/images/5902.webp", isCorrect: false, audioKey: "ahır", spokenText: "ahır" },
+            { id: 5902, word: "ahır", imageUrl: "/images/5902.webp", isCorrect: false, audioKey: "ahır", spokenText: "ahır" },
+            { id: 5902, word: "ahır", imageUrl: "/images/5902.webp", isCorrect: false, audioKey: "ahır", spokenText: "ahır" },
+            { id: 5901, word: "ahır", imageUrl: "/images/5901.webp", isCorrect: true, audioKey: "ahır", spokenText: "ahır" }
+        ]
+    },
+    { // ince fark: dayNightDataYeni
+        id: 5062,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 5903, word: "bahçe", imageUrl: "/images/5903.webp", isCorrect: false, audioKey: "bahçe", spokenText: "bahçe" },
+            { id: 5903, word: "bahçe", imageUrl: "/images/5903.webp", isCorrect: false, audioKey: "bahçe", spokenText: "bahçe" },
+            { id: 5903, word: "bahçe", imageUrl: "/images/5903.webp", isCorrect: false, audioKey: "bahçe", spokenText: "bahçe" },
+            { id: 5904, word: "bahçe", imageUrl: "/images/5904.webp", isCorrect: true, audioKey: "bahçe", spokenText: "bahçe" }
+        ]
+    },
+    { // ince fark: dayNightDataYeni
+        id: 5063,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 5906, word: "çadır", imageUrl: "/images/5906.webp", isCorrect: false, audioKey: "çadır", spokenText: "çadır" },
+            { id: 5906, word: "çadır", imageUrl: "/images/5906.webp", isCorrect: false, audioKey: "çadır", spokenText: "çadır" },
+            { id: 5906, word: "çadır", imageUrl: "/images/5906.webp", isCorrect: false, audioKey: "çadır", spokenText: "çadır" },
+            { id: 5905, word: "çadır", imageUrl: "/images/5905.webp", isCorrect: true, audioKey: "çadır", spokenText: "çadır" }
+        ]
+    },
+    { // ince fark: dayNightDataYeni
+        id: 5064,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 5907, word: "ev", imageUrl: "/images/5907.webp", isCorrect: false, audioKey: "ev", spokenText: "ev" },
+            { id: 5907, word: "ev", imageUrl: "/images/5907.webp", isCorrect: false, audioKey: "ev", spokenText: "ev" },
+            { id: 5907, word: "ev", imageUrl: "/images/5907.webp", isCorrect: false, audioKey: "ev", spokenText: "ev" },
+            { id: 5908, word: "ev", imageUrl: "/images/5908.webp", isCorrect: true, audioKey: "ev", spokenText: "ev" }
+        ]
+    },
+    { // ince fark: dayNightDataYeni
+        id: 5065,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 5910, word: "kasaba", imageUrl: "/images/5910.webp", isCorrect: false, audioKey: "kasaba", spokenText: "kasaba" },
+            { id: 5910, word: "kasaba", imageUrl: "/images/5910.webp", isCorrect: false, audioKey: "kasaba", spokenText: "kasaba" },
+            { id: 5910, word: "kasaba", imageUrl: "/images/5910.webp", isCorrect: false, audioKey: "kasaba", spokenText: "kasaba" },
+            { id: 5909, word: "kasaba", imageUrl: "/images/5909.webp", isCorrect: true, audioKey: "kasaba", spokenText: "kasaba" }
+        ]
+    },
+    { // ince fark: dayNightDataYeni
+        id: 5066,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 5911, word: "park", imageUrl: "/images/5911.webp", isCorrect: false, audioKey: "park", spokenText: "park" },
+            { id: 5911, word: "park", imageUrl: "/images/5911.webp", isCorrect: false, audioKey: "park", spokenText: "park" },
+            { id: 5911, word: "park", imageUrl: "/images/5911.webp", isCorrect: false, audioKey: "park", spokenText: "park" },
+            { id: 5912, word: "park", imageUrl: "/images/5912.webp", isCorrect: true, audioKey: "park", spokenText: "park" }
+        ]
+    },
+    { // ince fark: dayNightDataYeni
+        id: 5067,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 5914, word: "pencere", imageUrl: "/images/5914.webp", isCorrect: false, audioKey: "pencere", spokenText: "pencere" },
+            { id: 5914, word: "pencere", imageUrl: "/images/5914.webp", isCorrect: false, audioKey: "pencere", spokenText: "pencere" },
+            { id: 5914, word: "pencere", imageUrl: "/images/5914.webp", isCorrect: false, audioKey: "pencere", spokenText: "pencere" },
+            { id: 5913, word: "pencere", imageUrl: "/images/5913.webp", isCorrect: true, audioKey: "pencere", spokenText: "pencere" }
+        ]
+    },
+    { // ince fark: dayNightDataYeni
+        id: 5068,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 5915, word: "plaj", imageUrl: "/images/5915.webp", isCorrect: false, audioKey: "plaj", spokenText: "plaj" },
+            { id: 5915, word: "plaj", imageUrl: "/images/5915.webp", isCorrect: false, audioKey: "plaj", spokenText: "plaj" },
+            { id: 5915, word: "plaj", imageUrl: "/images/5915.webp", isCorrect: false, audioKey: "plaj", spokenText: "plaj" },
+            { id: 5916, word: "plaj", imageUrl: "/images/5916.webp", isCorrect: true, audioKey: "plaj", spokenText: "plaj" }
+        ]
+    },
+    { // ince fark: dayNightDataYeni
+        id: 5069,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 5918, word: "sandal", imageUrl: "/images/5918.webp", isCorrect: false, audioKey: "sandal", spokenText: "sandal" },
+            { id: 5918, word: "sandal", imageUrl: "/images/5918.webp", isCorrect: false, audioKey: "sandal", spokenText: "sandal" },
+            { id: 5918, word: "sandal", imageUrl: "/images/5918.webp", isCorrect: false, audioKey: "sandal", spokenText: "sandal" },
+            { id: 5917, word: "sandal", imageUrl: "/images/5917.webp", isCorrect: true, audioKey: "sandal", spokenText: "sandal" }
+        ]
+    },
+    { // ince fark: dayNightDataYeni
+        id: 5070,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 5919, word: "sokak", imageUrl: "/images/5919.webp", isCorrect: false, audioKey: "sokak", spokenText: "sokak" },
+            { id: 5919, word: "sokak", imageUrl: "/images/5919.webp", isCorrect: false, audioKey: "sokak", spokenText: "sokak" },
+            { id: 5919, word: "sokak", imageUrl: "/images/5919.webp", isCorrect: false, audioKey: "sokak", spokenText: "sokak" },
+            { id: 5920, word: "sokak", imageUrl: "/images/5920.webp", isCorrect: true, audioKey: "sokak", spokenText: "sokak" }
+        ]
+    },
+    { // ince fark: derinSigDataYeni
+        id: 5071,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1320,7 +1450,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: derinSigDataYeni
-        id: 5062,
+        id: 5072,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1333,7 +1463,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: derinSigDataYeni
-        id: 5063,
+        id: 5073,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1346,7 +1476,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: derinSigDataYeni
-        id: 5064,
+        id: 5074,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1359,7 +1489,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: derinSigDataYeni
-        id: 5065,
+        id: 5075,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1372,7 +1502,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: derinSigDataYeni
-        id: 5066,
+        id: 5076,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1385,7 +1515,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: derinSigDataYeni
-        id: 5067,
+        id: 5077,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1398,7 +1528,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: derinSigDataYeni
-        id: 5068,
+        id: 5078,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1411,7 +1541,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: derinSigDataYeni
-        id: 5069,
+        id: 5079,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1424,7 +1554,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: derinSigDataYeni
-        id: 5070,
+        id: 5080,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1437,7 +1567,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: dikenliPuruzsuzDataYeni
-        id: 5071,
+        id: 5081,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1450,7 +1580,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: dugumCozukDataYeni
-        id: 5072,
+        id: 5082,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1463,7 +1593,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: dugumCozukDataYeni
-        id: 5073,
+        id: 5083,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1476,7 +1606,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: dugumCozukDataYeni
-        id: 5074,
+        id: 5084,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1489,7 +1619,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: dugumCozukDataYeni
-        id: 5075,
+        id: 5085,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1502,7 +1632,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: dugumCozukDataYeni
-        id: 5076,
+        id: 5086,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1515,7 +1645,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: dugumCozukDataYeni
-        id: 5077,
+        id: 5087,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1528,7 +1658,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: dugumCozukDataYeni
-        id: 5078,
+        id: 5088,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1541,7 +1671,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: dugumCozukDataYeni
-        id: 5079,
+        id: 5089,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1554,7 +1684,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: dugumCozukDataYeni
-        id: 5080,
+        id: 5090,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1567,7 +1697,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: dugumCozukDataYeni
-        id: 5081,
+        id: 5091,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -1579,407 +1709,277 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
             { id: 4819, word: "poşet", imageUrl: "/images/4819.webp", isCorrect: true, audioKey: "poşet", spokenText: "poşet" }
         ]
     },
-    { // ince fark: fewMuchDataYeni
-        id: 5082,
-        question: "Hangisi farklı?",
-        questionAudioKey: "",
-        activityType: ActivityType.WhatDoesntBelong,
-        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
-        options: [
-            { id: 2701, word: "araba", imageUrl: "/images/2701.webp", isCorrect: false, audioKey: "araba", spokenText: "araba" },
-            { id: 2701, word: "araba", imageUrl: "/images/2701.webp", isCorrect: false, audioKey: "araba", spokenText: "araba" },
-            { id: 2701, word: "araba", imageUrl: "/images/2701.webp", isCorrect: false, audioKey: "araba", spokenText: "araba" },
-            { id: 2702, word: "araba", imageUrl: "/images/2702.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" }
-        ]
-    },
-    { // ince fark: fewMuchDataYeni
-        id: 5083,
-        question: "Hangisi farklı?",
-        questionAudioKey: "",
-        activityType: ActivityType.WhatDoesntBelong,
-        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
-        options: [
-            { id: 2704, word: "balon", imageUrl: "/images/2704.webp", isCorrect: false, audioKey: "balon", spokenText: "balon" },
-            { id: 2704, word: "balon", imageUrl: "/images/2704.webp", isCorrect: false, audioKey: "balon", spokenText: "balon" },
-            { id: 2704, word: "balon", imageUrl: "/images/2704.webp", isCorrect: false, audioKey: "balon", spokenText: "balon" },
-            { id: 2703, word: "balon", imageUrl: "/images/2703.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" }
-        ]
-    },
-    { // ince fark: fewMuchDataYeni
-        id: 5084,
-        question: "Hangisi farklı?",
-        questionAudioKey: "",
-        activityType: ActivityType.WhatDoesntBelong,
-        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
-        options: [
-            { id: 2705, word: "blok", imageUrl: "/images/2705.webp", isCorrect: false, audioKey: "blok", spokenText: "blok" },
-            { id: 2705, word: "blok", imageUrl: "/images/2705.webp", isCorrect: false, audioKey: "blok", spokenText: "blok" },
-            { id: 2705, word: "blok", imageUrl: "/images/2705.webp", isCorrect: false, audioKey: "blok", spokenText: "blok" },
-            { id: 2706, word: "blok", imageUrl: "/images/2706.webp", isCorrect: true, audioKey: "blok", spokenText: "blok" }
-        ]
-    },
-    { // ince fark: fewMuchDataYeni
-        id: 5085,
-        question: "Hangisi farklı?",
-        questionAudioKey: "",
-        activityType: ActivityType.WhatDoesntBelong,
-        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
-        options: [
-            { id: 2708, word: "çilek", imageUrl: "/images/2708.webp", isCorrect: false, audioKey: "çilek", spokenText: "çilek" },
-            { id: 2708, word: "çilek", imageUrl: "/images/2708.webp", isCorrect: false, audioKey: "çilek", spokenText: "çilek" },
-            { id: 2708, word: "çilek", imageUrl: "/images/2708.webp", isCorrect: false, audioKey: "çilek", spokenText: "çilek" },
-            { id: 2707, word: "çilek", imageUrl: "/images/2707.webp", isCorrect: true, audioKey: "çilek", spokenText: "çilek" }
-        ]
-    },
-    { // ince fark: fewMuchDataYeni
-        id: 5086,
-        question: "Hangisi farklı?",
-        questionAudioKey: "",
-        activityType: ActivityType.WhatDoesntBelong,
-        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
-        options: [
-            { id: 2709, word: "düğme", imageUrl: "/images/2709.webp", isCorrect: false, audioKey: "düğme", spokenText: "düğme" },
-            { id: 2709, word: "düğme", imageUrl: "/images/2709.webp", isCorrect: false, audioKey: "düğme", spokenText: "düğme" },
-            { id: 2709, word: "düğme", imageUrl: "/images/2709.webp", isCorrect: false, audioKey: "düğme", spokenText: "düğme" },
-            { id: 2710, word: "düğme", imageUrl: "/images/2710.webp", isCorrect: true, audioKey: "düğme", spokenText: "düğme" }
-        ]
-    },
-    { // ince fark: fewMuchDataYeni
-        id: 5087,
-        question: "Hangisi farklı?",
-        questionAudioKey: "",
-        activityType: ActivityType.WhatDoesntBelong,
-        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
-        options: [
-            { id: 2712, word: "elma", imageUrl: "/images/2712.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2712, word: "elma", imageUrl: "/images/2712.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2712, word: "elma", imageUrl: "/images/2712.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2711, word: "elma", imageUrl: "/images/2711.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" }
-        ]
-    },
-    { // ince fark: fewMuchDataYeni
-        id: 5088,
-        question: "Hangisi farklı?",
-        questionAudioKey: "",
-        activityType: ActivityType.WhatDoesntBelong,
-        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
-        options: [
-            { id: 2713, word: "kalem", imageUrl: "/images/2713.webp", isCorrect: false, audioKey: "kalem", spokenText: "kalem" },
-            { id: 2713, word: "kalem", imageUrl: "/images/2713.webp", isCorrect: false, audioKey: "kalem", spokenText: "kalem" },
-            { id: 2713, word: "kalem", imageUrl: "/images/2713.webp", isCorrect: false, audioKey: "kalem", spokenText: "kalem" },
-            { id: 2714, word: "kalem", imageUrl: "/images/2714.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" }
-        ]
-    },
-    { // ince fark: fewMuchDataYeni
-        id: 5089,
-        question: "Hangisi farklı?",
-        questionAudioKey: "",
-        activityType: ActivityType.WhatDoesntBelong,
-        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
-        options: [
-            { id: 2716, word: "kurabiye", imageUrl: "/images/2716.webp", isCorrect: false, audioKey: "kurabiye", spokenText: "kurabiye" },
-            { id: 2716, word: "kurabiye", imageUrl: "/images/2716.webp", isCorrect: false, audioKey: "kurabiye", spokenText: "kurabiye" },
-            { id: 2716, word: "kurabiye", imageUrl: "/images/2716.webp", isCorrect: false, audioKey: "kurabiye", spokenText: "kurabiye" },
-            { id: 2715, word: "kurabiye", imageUrl: "/images/2715.webp", isCorrect: true, audioKey: "kurabiye", spokenText: "kurabiye" }
-        ]
-    },
-    { // ince fark: fewMuchDataYeni
-        id: 5090,
-        question: "Hangisi farklı?",
-        questionAudioKey: "",
-        activityType: ActivityType.WhatDoesntBelong,
-        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
-        options: [
-            { id: 2717, word: "top", imageUrl: "/images/2717.webp", isCorrect: false, audioKey: "top", spokenText: "top" },
-            { id: 2717, word: "top", imageUrl: "/images/2717.webp", isCorrect: false, audioKey: "top", spokenText: "top" },
-            { id: 2717, word: "top", imageUrl: "/images/2717.webp", isCorrect: false, audioKey: "top", spokenText: "top" },
-            { id: 2718, word: "top", imageUrl: "/images/2718.webp", isCorrect: true, audioKey: "top", spokenText: "top" }
-        ]
-    },
-    { // ince fark: fewMuchDataYeni
-        id: 5091,
-        question: "Hangisi farklı?",
-        questionAudioKey: "",
-        activityType: ActivityType.WhatDoesntBelong,
-        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
-        options: [
-            { id: 2720, word: "yaprak", imageUrl: "/images/2720.webp", isCorrect: false, audioKey: "yaprak", spokenText: "yaprak" },
-            { id: 2720, word: "yaprak", imageUrl: "/images/2720.webp", isCorrect: false, audioKey: "yaprak", spokenText: "yaprak" },
-            { id: 2720, word: "yaprak", imageUrl: "/images/2720.webp", isCorrect: false, audioKey: "yaprak", spokenText: "yaprak" },
-            { id: 2719, word: "yaprak", imageUrl: "/images/2719.webp", isCorrect: true, audioKey: "yaprak", spokenText: "yaprak" }
-        ]
-    },
-    { // ince fark: fullEmptyDataYeni
+    { // ince fark: fastSlowDataYeni
         id: 5092,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2601, word: "akvaryum", imageUrl: "/images/2601.webp", isCorrect: false, audioKey: "akvaryum", spokenText: "akvaryum" },
-            { id: 2601, word: "akvaryum", imageUrl: "/images/2601.webp", isCorrect: false, audioKey: "akvaryum", spokenText: "akvaryum" },
-            { id: 2601, word: "akvaryum", imageUrl: "/images/2601.webp", isCorrect: false, audioKey: "akvaryum", spokenText: "akvaryum" },
-            { id: 2602, word: "akvaryum", imageUrl: "/images/2602.webp", isCorrect: true, audioKey: "akvaryum", spokenText: "akvaryum" }
+            { id: 6006, word: "çocuk", imageUrl: "/images/6006.webp", isCorrect: false, audioKey: "çocuk", spokenText: "çocuk" },
+            { id: 6006, word: "çocuk", imageUrl: "/images/6006.webp", isCorrect: false, audioKey: "çocuk", spokenText: "çocuk" },
+            { id: 6006, word: "çocuk", imageUrl: "/images/6006.webp", isCorrect: false, audioKey: "çocuk", spokenText: "çocuk" },
+            { id: 6005, word: "çocuk", imageUrl: "/images/6005.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" }
         ]
     },
-    { // ince fark: fullEmptyDataYeni
+    { // ince fark: fewMuchDataYeni
         id: 5093,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2604, word: "bardak", imageUrl: "/images/2604.webp", isCorrect: false, audioKey: "bardak", spokenText: "bardak" },
-            { id: 2604, word: "bardak", imageUrl: "/images/2604.webp", isCorrect: false, audioKey: "bardak", spokenText: "bardak" },
-            { id: 2604, word: "bardak", imageUrl: "/images/2604.webp", isCorrect: false, audioKey: "bardak", spokenText: "bardak" },
-            { id: 2603, word: "bardak", imageUrl: "/images/2603.webp", isCorrect: true, audioKey: "bardak", spokenText: "bardak" }
+            { id: 2702, word: "araba", imageUrl: "/images/2702.webp", isCorrect: false, audioKey: "araba", spokenText: "araba" },
+            { id: 2702, word: "araba", imageUrl: "/images/2702.webp", isCorrect: false, audioKey: "araba", spokenText: "araba" },
+            { id: 2702, word: "araba", imageUrl: "/images/2702.webp", isCorrect: false, audioKey: "araba", spokenText: "araba" },
+            { id: 2701, word: "araba", imageUrl: "/images/2701.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" }
         ]
     },
-    { // ince fark: fullEmptyDataYeni
+    { // ince fark: fewMuchDataYeni
         id: 5094,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2605, word: "kalemlik", imageUrl: "/images/2605.webp", isCorrect: false, audioKey: "kalemlik", spokenText: "kalemlik" },
-            { id: 2605, word: "kalemlik", imageUrl: "/images/2605.webp", isCorrect: false, audioKey: "kalemlik", spokenText: "kalemlik" },
-            { id: 2605, word: "kalemlik", imageUrl: "/images/2605.webp", isCorrect: false, audioKey: "kalemlik", spokenText: "kalemlik" },
-            { id: 2606, word: "kalemlik", imageUrl: "/images/2606.webp", isCorrect: true, audioKey: "kalemlik", spokenText: "kalemlik" }
+            { id: 2703, word: "balon", imageUrl: "/images/2703.webp", isCorrect: false, audioKey: "balon", spokenText: "balon" },
+            { id: 2703, word: "balon", imageUrl: "/images/2703.webp", isCorrect: false, audioKey: "balon", spokenText: "balon" },
+            { id: 2703, word: "balon", imageUrl: "/images/2703.webp", isCorrect: false, audioKey: "balon", spokenText: "balon" },
+            { id: 2704, word: "balon", imageUrl: "/images/2704.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" }
         ]
     },
-    { // ince fark: fullEmptyDataYeni
+    { // ince fark: fewMuchDataYeni
         id: 5095,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2608, word: "kavanoz", imageUrl: "/images/2608.webp", isCorrect: false, audioKey: "kavanoz", spokenText: "kavanoz" },
-            { id: 2608, word: "kavanoz", imageUrl: "/images/2608.webp", isCorrect: false, audioKey: "kavanoz", spokenText: "kavanoz" },
-            { id: 2608, word: "kavanoz", imageUrl: "/images/2608.webp", isCorrect: false, audioKey: "kavanoz", spokenText: "kavanoz" },
-            { id: 2607, word: "kavanoz", imageUrl: "/images/2607.webp", isCorrect: true, audioKey: "kavanoz", spokenText: "kavanoz" }
+            { id: 2706, word: "blok", imageUrl: "/images/2706.webp", isCorrect: false, audioKey: "blok", spokenText: "blok" },
+            { id: 2706, word: "blok", imageUrl: "/images/2706.webp", isCorrect: false, audioKey: "blok", spokenText: "blok" },
+            { id: 2706, word: "blok", imageUrl: "/images/2706.webp", isCorrect: false, audioKey: "blok", spokenText: "blok" },
+            { id: 2705, word: "blok", imageUrl: "/images/2705.webp", isCorrect: true, audioKey: "blok", spokenText: "blok" }
         ]
     },
-    { // ince fark: fullEmptyDataYeni
+    { // ince fark: fewMuchDataYeni
         id: 5096,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2609, word: "yumurta kolisi", imageUrl: "/images/2609.webp", isCorrect: false, audioKey: "yumurta kolisi", spokenText: "yumurta kolisi" },
-            { id: 2609, word: "yumurta kolisi", imageUrl: "/images/2609.webp", isCorrect: false, audioKey: "yumurta kolisi", spokenText: "yumurta kolisi" },
-            { id: 2609, word: "yumurta kolisi", imageUrl: "/images/2609.webp", isCorrect: false, audioKey: "yumurta kolisi", spokenText: "yumurta kolisi" },
-            { id: 2610, word: "yumurta kolisi", imageUrl: "/images/2610.webp", isCorrect: true, audioKey: "yumurta kolisi", spokenText: "yumurta kolisi" }
+            { id: 2707, word: "çilek", imageUrl: "/images/2707.webp", isCorrect: false, audioKey: "çilek", spokenText: "çilek" },
+            { id: 2707, word: "çilek", imageUrl: "/images/2707.webp", isCorrect: false, audioKey: "çilek", spokenText: "çilek" },
+            { id: 2707, word: "çilek", imageUrl: "/images/2707.webp", isCorrect: false, audioKey: "çilek", spokenText: "çilek" },
+            { id: 2708, word: "çilek", imageUrl: "/images/2708.webp", isCorrect: true, audioKey: "çilek", spokenText: "çilek" }
         ]
     },
-    { // ince fark: fullEmptyDataYeni
+    { // ince fark: fewMuchDataYeni
         id: 5097,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2612, word: "kova", imageUrl: "/images/2612.webp", isCorrect: false, audioKey: "kova", spokenText: "kova" },
-            { id: 2612, word: "kova", imageUrl: "/images/2612.webp", isCorrect: false, audioKey: "kova", spokenText: "kova" },
-            { id: 2612, word: "kova", imageUrl: "/images/2612.webp", isCorrect: false, audioKey: "kova", spokenText: "kova" },
-            { id: 2611, word: "kova", imageUrl: "/images/2611.webp", isCorrect: true, audioKey: "kova", spokenText: "kova" }
+            { id: 2710, word: "düğme", imageUrl: "/images/2710.webp", isCorrect: false, audioKey: "düğme", spokenText: "düğme" },
+            { id: 2710, word: "düğme", imageUrl: "/images/2710.webp", isCorrect: false, audioKey: "düğme", spokenText: "düğme" },
+            { id: 2710, word: "düğme", imageUrl: "/images/2710.webp", isCorrect: false, audioKey: "düğme", spokenText: "düğme" },
+            { id: 2709, word: "düğme", imageUrl: "/images/2709.webp", isCorrect: true, audioKey: "düğme", spokenText: "düğme" }
         ]
     },
-    { // ince fark: fullEmptyDataYeni
+    { // ince fark: fewMuchDataYeni
         id: 5098,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2613, word: "kumbara", imageUrl: "/images/2613.webp", isCorrect: false, audioKey: "kumbara", spokenText: "kumbara" },
-            { id: 2613, word: "kumbara", imageUrl: "/images/2613.webp", isCorrect: false, audioKey: "kumbara", spokenText: "kumbara" },
-            { id: 2613, word: "kumbara", imageUrl: "/images/2613.webp", isCorrect: false, audioKey: "kumbara", spokenText: "kumbara" },
-            { id: 2614, word: "kumbara", imageUrl: "/images/2614.webp", isCorrect: true, audioKey: "kumbara", spokenText: "kumbara" }
+            { id: 2711, word: "elma", imageUrl: "/images/2711.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2711, word: "elma", imageUrl: "/images/2711.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2711, word: "elma", imageUrl: "/images/2711.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2712, word: "elma", imageUrl: "/images/2712.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" }
         ]
     },
-    { // ince fark: fullEmptyDataYeni
+    { // ince fark: fewMuchDataYeni
         id: 5099,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2616, word: "oyuncak kutusu", imageUrl: "/images/2616.webp", isCorrect: false, audioKey: "oyuncak kutusu", spokenText: "oyuncak kutusu" },
-            { id: 2616, word: "oyuncak kutusu", imageUrl: "/images/2616.webp", isCorrect: false, audioKey: "oyuncak kutusu", spokenText: "oyuncak kutusu" },
-            { id: 2616, word: "oyuncak kutusu", imageUrl: "/images/2616.webp", isCorrect: false, audioKey: "oyuncak kutusu", spokenText: "oyuncak kutusu" },
-            { id: 2615, word: "oyuncak kutusu", imageUrl: "/images/2615.webp", isCorrect: true, audioKey: "oyuncak kutusu", spokenText: "oyuncak kutusu" }
+            { id: 2714, word: "kalem", imageUrl: "/images/2714.webp", isCorrect: false, audioKey: "kalem", spokenText: "kalem" },
+            { id: 2714, word: "kalem", imageUrl: "/images/2714.webp", isCorrect: false, audioKey: "kalem", spokenText: "kalem" },
+            { id: 2714, word: "kalem", imageUrl: "/images/2714.webp", isCorrect: false, audioKey: "kalem", spokenText: "kalem" },
+            { id: 2713, word: "kalem", imageUrl: "/images/2713.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" }
         ]
     },
-    { // ince fark: fullEmptyDataYeni
+    { // ince fark: fewMuchDataYeni
         id: 5100,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2617, word: "sepet", imageUrl: "/images/2617.webp", isCorrect: false, audioKey: "sepet", spokenText: "sepet" },
-            { id: 2617, word: "sepet", imageUrl: "/images/2617.webp", isCorrect: false, audioKey: "sepet", spokenText: "sepet" },
-            { id: 2617, word: "sepet", imageUrl: "/images/2617.webp", isCorrect: false, audioKey: "sepet", spokenText: "sepet" },
-            { id: 2618, word: "sepet", imageUrl: "/images/2618.webp", isCorrect: true, audioKey: "sepet", spokenText: "sepet" }
+            { id: 2715, word: "kurabiye", imageUrl: "/images/2715.webp", isCorrect: false, audioKey: "kurabiye", spokenText: "kurabiye" },
+            { id: 2715, word: "kurabiye", imageUrl: "/images/2715.webp", isCorrect: false, audioKey: "kurabiye", spokenText: "kurabiye" },
+            { id: 2715, word: "kurabiye", imageUrl: "/images/2715.webp", isCorrect: false, audioKey: "kurabiye", spokenText: "kurabiye" },
+            { id: 2716, word: "kurabiye", imageUrl: "/images/2716.webp", isCorrect: true, audioKey: "kurabiye", spokenText: "kurabiye" }
         ]
     },
-    { // ince fark: fullEmptyDataYeni
+    { // ince fark: fewMuchDataYeni
         id: 5101,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2620, word: "tabak", imageUrl: "/images/2620.webp", isCorrect: false, audioKey: "tabak", spokenText: "tabak" },
-            { id: 2620, word: "tabak", imageUrl: "/images/2620.webp", isCorrect: false, audioKey: "tabak", spokenText: "tabak" },
-            { id: 2620, word: "tabak", imageUrl: "/images/2620.webp", isCorrect: false, audioKey: "tabak", spokenText: "tabak" },
-            { id: 2619, word: "tabak", imageUrl: "/images/2619.webp", isCorrect: true, audioKey: "tabak", spokenText: "tabak" }
+            { id: 2718, word: "top", imageUrl: "/images/2718.webp", isCorrect: false, audioKey: "top", spokenText: "top" },
+            { id: 2718, word: "top", imageUrl: "/images/2718.webp", isCorrect: false, audioKey: "top", spokenText: "top" },
+            { id: 2718, word: "top", imageUrl: "/images/2718.webp", isCorrect: false, audioKey: "top", spokenText: "top" },
+            { id: 2717, word: "top", imageUrl: "/images/2717.webp", isCorrect: true, audioKey: "top", spokenText: "top" }
         ]
     },
-    { // ince fark: halfQuarterWholeDataYeni
+    { // ince fark: fewMuchDataYeni
         id: 5102,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2803, word: "domates", imageUrl: "/images/2803.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
-            { id: 2803, word: "domates", imageUrl: "/images/2803.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
-            { id: 2803, word: "domates", imageUrl: "/images/2803.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
-            { id: 2801, word: "domates", imageUrl: "/images/2801.webp", isCorrect: true, audioKey: "domates", spokenText: "domates" }
+            { id: 2719, word: "yaprak", imageUrl: "/images/2719.webp", isCorrect: false, audioKey: "yaprak", spokenText: "yaprak" },
+            { id: 2719, word: "yaprak", imageUrl: "/images/2719.webp", isCorrect: false, audioKey: "yaprak", spokenText: "yaprak" },
+            { id: 2719, word: "yaprak", imageUrl: "/images/2719.webp", isCorrect: false, audioKey: "yaprak", spokenText: "yaprak" },
+            { id: 2720, word: "yaprak", imageUrl: "/images/2720.webp", isCorrect: true, audioKey: "yaprak", spokenText: "yaprak" }
         ]
     },
-    { // ince fark: halfQuarterWholeDataYeni
+    { // ince fark: fullEmptyDataYeni
         id: 5103,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2803, word: "domates", imageUrl: "/images/2803.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
-            { id: 2803, word: "domates", imageUrl: "/images/2803.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
-            { id: 2803, word: "domates", imageUrl: "/images/2803.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
-            { id: 2802, word: "domates", imageUrl: "/images/2802.webp", isCorrect: true, audioKey: "domates", spokenText: "domates" }
+            { id: 2602, word: "akvaryum", imageUrl: "/images/2602.webp", isCorrect: false, audioKey: "akvaryum", spokenText: "akvaryum" },
+            { id: 2602, word: "akvaryum", imageUrl: "/images/2602.webp", isCorrect: false, audioKey: "akvaryum", spokenText: "akvaryum" },
+            { id: 2602, word: "akvaryum", imageUrl: "/images/2602.webp", isCorrect: false, audioKey: "akvaryum", spokenText: "akvaryum" },
+            { id: 2601, word: "akvaryum", imageUrl: "/images/2601.webp", isCorrect: true, audioKey: "akvaryum", spokenText: "akvaryum" }
         ]
     },
-    { // ince fark: halfQuarterWholeDataYeni
+    { // ince fark: fullEmptyDataYeni
         id: 5104,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2802, word: "domates", imageUrl: "/images/2802.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
-            { id: 2802, word: "domates", imageUrl: "/images/2802.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
-            { id: 2802, word: "domates", imageUrl: "/images/2802.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
-            { id: 2801, word: "domates", imageUrl: "/images/2801.webp", isCorrect: true, audioKey: "domates", spokenText: "domates" }
+            { id: 2603, word: "bardak", imageUrl: "/images/2603.webp", isCorrect: false, audioKey: "bardak", spokenText: "bardak" },
+            { id: 2603, word: "bardak", imageUrl: "/images/2603.webp", isCorrect: false, audioKey: "bardak", spokenText: "bardak" },
+            { id: 2603, word: "bardak", imageUrl: "/images/2603.webp", isCorrect: false, audioKey: "bardak", spokenText: "bardak" },
+            { id: 2604, word: "bardak", imageUrl: "/images/2604.webp", isCorrect: true, audioKey: "bardak", spokenText: "bardak" }
         ]
     },
-    { // ince fark: halfQuarterWholeDataYeni
+    { // ince fark: fullEmptyDataYeni
         id: 5105,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2804, word: "ekmek", imageUrl: "/images/2804.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
-            { id: 2804, word: "ekmek", imageUrl: "/images/2804.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
-            { id: 2804, word: "ekmek", imageUrl: "/images/2804.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
-            { id: 2806, word: "ekmek", imageUrl: "/images/2806.webp", isCorrect: true, audioKey: "ekmek", spokenText: "ekmek" }
+            { id: 2606, word: "kalemlik", imageUrl: "/images/2606.webp", isCorrect: false, audioKey: "kalemlik", spokenText: "kalemlik" },
+            { id: 2606, word: "kalemlik", imageUrl: "/images/2606.webp", isCorrect: false, audioKey: "kalemlik", spokenText: "kalemlik" },
+            { id: 2606, word: "kalemlik", imageUrl: "/images/2606.webp", isCorrect: false, audioKey: "kalemlik", spokenText: "kalemlik" },
+            { id: 2605, word: "kalemlik", imageUrl: "/images/2605.webp", isCorrect: true, audioKey: "kalemlik", spokenText: "kalemlik" }
         ]
     },
-    { // ince fark: halfQuarterWholeDataYeni
+    { // ince fark: fullEmptyDataYeni
         id: 5106,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2805, word: "ekmek", imageUrl: "/images/2805.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
-            { id: 2805, word: "ekmek", imageUrl: "/images/2805.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
-            { id: 2805, word: "ekmek", imageUrl: "/images/2805.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
-            { id: 2806, word: "ekmek", imageUrl: "/images/2806.webp", isCorrect: true, audioKey: "ekmek", spokenText: "ekmek" }
+            { id: 2607, word: "kavanoz", imageUrl: "/images/2607.webp", isCorrect: false, audioKey: "kavanoz", spokenText: "kavanoz" },
+            { id: 2607, word: "kavanoz", imageUrl: "/images/2607.webp", isCorrect: false, audioKey: "kavanoz", spokenText: "kavanoz" },
+            { id: 2607, word: "kavanoz", imageUrl: "/images/2607.webp", isCorrect: false, audioKey: "kavanoz", spokenText: "kavanoz" },
+            { id: 2608, word: "kavanoz", imageUrl: "/images/2608.webp", isCorrect: true, audioKey: "kavanoz", spokenText: "kavanoz" }
         ]
     },
-    { // ince fark: halfQuarterWholeDataYeni
+    { // ince fark: fullEmptyDataYeni
         id: 5107,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2804, word: "ekmek", imageUrl: "/images/2804.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
-            { id: 2804, word: "ekmek", imageUrl: "/images/2804.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
-            { id: 2804, word: "ekmek", imageUrl: "/images/2804.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
-            { id: 2805, word: "ekmek", imageUrl: "/images/2805.webp", isCorrect: true, audioKey: "ekmek", spokenText: "ekmek" }
+            { id: 2610, word: "yumurta kolisi", imageUrl: "/images/2610.webp", isCorrect: false, audioKey: "yumurta kolisi", spokenText: "yumurta kolisi" },
+            { id: 2610, word: "yumurta kolisi", imageUrl: "/images/2610.webp", isCorrect: false, audioKey: "yumurta kolisi", spokenText: "yumurta kolisi" },
+            { id: 2610, word: "yumurta kolisi", imageUrl: "/images/2610.webp", isCorrect: false, audioKey: "yumurta kolisi", spokenText: "yumurta kolisi" },
+            { id: 2609, word: "yumurta kolisi", imageUrl: "/images/2609.webp", isCorrect: true, audioKey: "yumurta kolisi", spokenText: "yumurta kolisi" }
         ]
     },
-    { // ince fark: halfQuarterWholeDataYeni
+    { // ince fark: fullEmptyDataYeni
         id: 5108,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2809, word: "elma", imageUrl: "/images/2809.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2809, word: "elma", imageUrl: "/images/2809.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2809, word: "elma", imageUrl: "/images/2809.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2807, word: "elma", imageUrl: "/images/2807.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" }
+            { id: 2611, word: "kova", imageUrl: "/images/2611.webp", isCorrect: false, audioKey: "kova", spokenText: "kova" },
+            { id: 2611, word: "kova", imageUrl: "/images/2611.webp", isCorrect: false, audioKey: "kova", spokenText: "kova" },
+            { id: 2611, word: "kova", imageUrl: "/images/2611.webp", isCorrect: false, audioKey: "kova", spokenText: "kova" },
+            { id: 2612, word: "kova", imageUrl: "/images/2612.webp", isCorrect: true, audioKey: "kova", spokenText: "kova" }
         ]
     },
-    { // ince fark: halfQuarterWholeDataYeni
+    { // ince fark: fullEmptyDataYeni
         id: 5109,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2809, word: "elma", imageUrl: "/images/2809.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2809, word: "elma", imageUrl: "/images/2809.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2809, word: "elma", imageUrl: "/images/2809.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2808, word: "elma", imageUrl: "/images/2808.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" }
+            { id: 2614, word: "kumbara", imageUrl: "/images/2614.webp", isCorrect: false, audioKey: "kumbara", spokenText: "kumbara" },
+            { id: 2614, word: "kumbara", imageUrl: "/images/2614.webp", isCorrect: false, audioKey: "kumbara", spokenText: "kumbara" },
+            { id: 2614, word: "kumbara", imageUrl: "/images/2614.webp", isCorrect: false, audioKey: "kumbara", spokenText: "kumbara" },
+            { id: 2613, word: "kumbara", imageUrl: "/images/2613.webp", isCorrect: true, audioKey: "kumbara", spokenText: "kumbara" }
         ]
     },
-    { // ince fark: halfQuarterWholeDataYeni
+    { // ince fark: fullEmptyDataYeni
         id: 5110,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2808, word: "elma", imageUrl: "/images/2808.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2808, word: "elma", imageUrl: "/images/2808.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2808, word: "elma", imageUrl: "/images/2808.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2807, word: "elma", imageUrl: "/images/2807.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" }
+            { id: 2615, word: "oyuncak kutusu", imageUrl: "/images/2615.webp", isCorrect: false, audioKey: "oyuncak kutusu", spokenText: "oyuncak kutusu" },
+            { id: 2615, word: "oyuncak kutusu", imageUrl: "/images/2615.webp", isCorrect: false, audioKey: "oyuncak kutusu", spokenText: "oyuncak kutusu" },
+            { id: 2615, word: "oyuncak kutusu", imageUrl: "/images/2615.webp", isCorrect: false, audioKey: "oyuncak kutusu", spokenText: "oyuncak kutusu" },
+            { id: 2616, word: "oyuncak kutusu", imageUrl: "/images/2616.webp", isCorrect: true, audioKey: "oyuncak kutusu", spokenText: "oyuncak kutusu" }
         ]
     },
-    { // ince fark: halfQuarterWholeDataYeni
+    { // ince fark: fullEmptyDataYeni
         id: 5111,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
-            { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
-            { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
-            { id: 2812, word: "karpuz", imageUrl: "/images/2812.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" }
+            { id: 2618, word: "sepet", imageUrl: "/images/2618.webp", isCorrect: false, audioKey: "sepet", spokenText: "sepet" },
+            { id: 2618, word: "sepet", imageUrl: "/images/2618.webp", isCorrect: false, audioKey: "sepet", spokenText: "sepet" },
+            { id: 2618, word: "sepet", imageUrl: "/images/2618.webp", isCorrect: false, audioKey: "sepet", spokenText: "sepet" },
+            { id: 2617, word: "sepet", imageUrl: "/images/2617.webp", isCorrect: true, audioKey: "sepet", spokenText: "sepet" }
         ]
     },
-    { // ince fark: halfQuarterWholeDataYeni
+    { // ince fark: fullEmptyDataYeni
         id: 5112,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
-            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
-            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
-            { id: 2812, word: "karpuz", imageUrl: "/images/2812.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" }
+            { id: 2619, word: "tabak", imageUrl: "/images/2619.webp", isCorrect: false, audioKey: "tabak", spokenText: "tabak" },
+            { id: 2619, word: "tabak", imageUrl: "/images/2619.webp", isCorrect: false, audioKey: "tabak", spokenText: "tabak" },
+            { id: 2619, word: "tabak", imageUrl: "/images/2619.webp", isCorrect: false, audioKey: "tabak", spokenText: "tabak" },
+            { id: 2620, word: "tabak", imageUrl: "/images/2620.webp", isCorrect: true, audioKey: "tabak", spokenText: "tabak" }
         ]
     },
     { // ince fark: halfQuarterWholeDataYeni
@@ -1989,10 +1989,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
-            { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
-            { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
-            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" }
+            { id: 2801, word: "domates", imageUrl: "/images/2801.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
+            { id: 2801, word: "domates", imageUrl: "/images/2801.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
+            { id: 2801, word: "domates", imageUrl: "/images/2801.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
+            { id: 2803, word: "domates", imageUrl: "/images/2803.webp", isCorrect: true, audioKey: "domates", spokenText: "domates" }
         ]
     },
     { // ince fark: halfQuarterWholeDataYeni
@@ -2002,10 +2002,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2815, word: "limon", imageUrl: "/images/2815.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
-            { id: 2815, word: "limon", imageUrl: "/images/2815.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
-            { id: 2815, word: "limon", imageUrl: "/images/2815.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
-            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" }
+            { id: 2802, word: "domates", imageUrl: "/images/2802.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
+            { id: 2802, word: "domates", imageUrl: "/images/2802.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
+            { id: 2802, word: "domates", imageUrl: "/images/2802.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
+            { id: 2803, word: "domates", imageUrl: "/images/2803.webp", isCorrect: true, audioKey: "domates", spokenText: "domates" }
         ]
     },
     { // ince fark: halfQuarterWholeDataYeni
@@ -2015,10 +2015,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2815, word: "limon", imageUrl: "/images/2815.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
-            { id: 2815, word: "limon", imageUrl: "/images/2815.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
-            { id: 2815, word: "limon", imageUrl: "/images/2815.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
-            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" }
+            { id: 2801, word: "domates", imageUrl: "/images/2801.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
+            { id: 2801, word: "domates", imageUrl: "/images/2801.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
+            { id: 2801, word: "domates", imageUrl: "/images/2801.webp", isCorrect: false, audioKey: "domates", spokenText: "domates" },
+            { id: 2802, word: "domates", imageUrl: "/images/2802.webp", isCorrect: true, audioKey: "domates", spokenText: "domates" }
         ]
     },
     { // ince fark: halfQuarterWholeDataYeni
@@ -2028,10 +2028,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
-            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
-            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
-            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" }
+            { id: 2806, word: "ekmek", imageUrl: "/images/2806.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
+            { id: 2806, word: "ekmek", imageUrl: "/images/2806.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
+            { id: 2806, word: "ekmek", imageUrl: "/images/2806.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
+            { id: 2804, word: "ekmek", imageUrl: "/images/2804.webp", isCorrect: true, audioKey: "ekmek", spokenText: "ekmek" }
         ]
     },
     { // ince fark: halfQuarterWholeDataYeni
@@ -2041,10 +2041,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
-            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
-            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
-            { id: 2818, word: "pasta", imageUrl: "/images/2818.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" }
+            { id: 2806, word: "ekmek", imageUrl: "/images/2806.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
+            { id: 2806, word: "ekmek", imageUrl: "/images/2806.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
+            { id: 2806, word: "ekmek", imageUrl: "/images/2806.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
+            { id: 2805, word: "ekmek", imageUrl: "/images/2805.webp", isCorrect: true, audioKey: "ekmek", spokenText: "ekmek" }
         ]
     },
     { // ince fark: halfQuarterWholeDataYeni
@@ -2054,10 +2054,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2817, word: "pasta", imageUrl: "/images/2817.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
-            { id: 2817, word: "pasta", imageUrl: "/images/2817.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
-            { id: 2817, word: "pasta", imageUrl: "/images/2817.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
-            { id: 2818, word: "pasta", imageUrl: "/images/2818.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" }
+            { id: 2805, word: "ekmek", imageUrl: "/images/2805.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
+            { id: 2805, word: "ekmek", imageUrl: "/images/2805.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
+            { id: 2805, word: "ekmek", imageUrl: "/images/2805.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
+            { id: 2804, word: "ekmek", imageUrl: "/images/2804.webp", isCorrect: true, audioKey: "ekmek", spokenText: "ekmek" }
         ]
     },
     { // ince fark: halfQuarterWholeDataYeni
@@ -2067,10 +2067,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
-            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
-            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
-            { id: 2817, word: "pasta", imageUrl: "/images/2817.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" }
+            { id: 2807, word: "elma", imageUrl: "/images/2807.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2807, word: "elma", imageUrl: "/images/2807.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2807, word: "elma", imageUrl: "/images/2807.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2809, word: "elma", imageUrl: "/images/2809.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" }
         ]
     },
     { // ince fark: halfQuarterWholeDataYeni
@@ -2080,10 +2080,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2821, word: "pizza", imageUrl: "/images/2821.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2821, word: "pizza", imageUrl: "/images/2821.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2821, word: "pizza", imageUrl: "/images/2821.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" }
+            { id: 2808, word: "elma", imageUrl: "/images/2808.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2808, word: "elma", imageUrl: "/images/2808.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2808, word: "elma", imageUrl: "/images/2808.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2809, word: "elma", imageUrl: "/images/2809.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" }
         ]
     },
     { // ince fark: halfQuarterWholeDataYeni
@@ -2093,10 +2093,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2821, word: "pizza", imageUrl: "/images/2821.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2821, word: "pizza", imageUrl: "/images/2821.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2821, word: "pizza", imageUrl: "/images/2821.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2820, word: "pizza", imageUrl: "/images/2820.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" }
+            { id: 2807, word: "elma", imageUrl: "/images/2807.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2807, word: "elma", imageUrl: "/images/2807.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2807, word: "elma", imageUrl: "/images/2807.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2808, word: "elma", imageUrl: "/images/2808.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" }
         ]
     },
     { // ince fark: halfQuarterWholeDataYeni
@@ -2106,10 +2106,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2820, word: "pizza", imageUrl: "/images/2820.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2820, word: "pizza", imageUrl: "/images/2820.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2820, word: "pizza", imageUrl: "/images/2820.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
-            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" }
+            { id: 2812, word: "karpuz", imageUrl: "/images/2812.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2812, word: "karpuz", imageUrl: "/images/2812.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2812, word: "karpuz", imageUrl: "/images/2812.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" }
         ]
     },
     { // ince fark: halfQuarterWholeDataYeni
@@ -2119,10 +2119,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2824, word: "portakal", imageUrl: "/images/2824.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" }
+            { id: 2812, word: "karpuz", imageUrl: "/images/2812.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2812, word: "karpuz", imageUrl: "/images/2812.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2812, word: "karpuz", imageUrl: "/images/2812.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" }
         ]
     },
     { // ince fark: halfQuarterWholeDataYeni
@@ -2132,10 +2132,10 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2823, word: "portakal", imageUrl: "/images/2823.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2823, word: "portakal", imageUrl: "/images/2823.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2823, word: "portakal", imageUrl: "/images/2823.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2824, word: "portakal", imageUrl: "/images/2824.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" }
+            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2811, word: "karpuz", imageUrl: "/images/2811.webp", isCorrect: false, audioKey: "karpuz", spokenText: "karpuz" },
+            { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" }
         ]
     },
     { // ince fark: halfQuarterWholeDataYeni
@@ -2145,430 +2145,586 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
-            { id: 2823, word: "portakal", imageUrl: "/images/2823.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" }
+            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
+            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
+            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
+            { id: 2815, word: "limon", imageUrl: "/images/2815.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" }
         ]
     },
-    { // ince fark: highLowDataYeni
+    { // ince fark: halfQuarterWholeDataYeni
         id: 5126,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2501, word: "ayakkabı", imageUrl: "/images/2501.webp", isCorrect: false, audioKey: "ayakkabı", spokenText: "ayakkabı" },
-            { id: 2501, word: "ayakkabı", imageUrl: "/images/2501.webp", isCorrect: false, audioKey: "ayakkabı", spokenText: "ayakkabı" },
-            { id: 2501, word: "ayakkabı", imageUrl: "/images/2501.webp", isCorrect: false, audioKey: "ayakkabı", spokenText: "ayakkabı" },
-            { id: 2502, word: "ayakkabı", imageUrl: "/images/2502.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" }
+            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
+            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
+            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
+            { id: 2815, word: "limon", imageUrl: "/images/2815.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" }
         ]
     },
-    { // ince fark: highLowDataYeni
+    { // ince fark: halfQuarterWholeDataYeni
         id: 5127,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2504, word: "bina", imageUrl: "/images/2504.webp", isCorrect: false, audioKey: "bina", spokenText: "bina" },
-            { id: 2504, word: "bina", imageUrl: "/images/2504.webp", isCorrect: false, audioKey: "bina", spokenText: "bina" },
-            { id: 2504, word: "bina", imageUrl: "/images/2504.webp", isCorrect: false, audioKey: "bina", spokenText: "bina" },
-            { id: 2503, word: "bina", imageUrl: "/images/2503.webp", isCorrect: true, audioKey: "bina", spokenText: "bina" }
+            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
+            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
+            { id: 2813, word: "limon", imageUrl: "/images/2813.webp", isCorrect: false, audioKey: "limon", spokenText: "limon" },
+            { id: 2814, word: "limon", imageUrl: "/images/2814.webp", isCorrect: true, audioKey: "limon", spokenText: "limon" }
         ]
     },
-    { // ince fark: highLowDataYeni
+    { // ince fark: halfQuarterWholeDataYeni
         id: 5128,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2505, word: "blok kulesi", imageUrl: "/images/2505.webp", isCorrect: false, audioKey: "blok kulesi", spokenText: "blok kulesi" },
-            { id: 2505, word: "blok kulesi", imageUrl: "/images/2505.webp", isCorrect: false, audioKey: "blok kulesi", spokenText: "blok kulesi" },
-            { id: 2505, word: "blok kulesi", imageUrl: "/images/2505.webp", isCorrect: false, audioKey: "blok kulesi", spokenText: "blok kulesi" },
-            { id: 2507, word: "blok kulesi", imageUrl: "/images/2507.webp", isCorrect: true, audioKey: "blok kulesi", spokenText: "blok kulesi" }
+            { id: 2818, word: "pasta", imageUrl: "/images/2818.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2818, word: "pasta", imageUrl: "/images/2818.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2818, word: "pasta", imageUrl: "/images/2818.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" }
         ]
     },
-    { // ince fark: highLowDataYeni
+    { // ince fark: halfQuarterWholeDataYeni
         id: 5129,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2509, word: "çadır", imageUrl: "/images/2509.webp", isCorrect: false, audioKey: "çadır", spokenText: "çadır" },
-            { id: 2509, word: "çadır", imageUrl: "/images/2509.webp", isCorrect: false, audioKey: "çadır", spokenText: "çadır" },
-            { id: 2509, word: "çadır", imageUrl: "/images/2509.webp", isCorrect: false, audioKey: "çadır", spokenText: "çadır" },
-            { id: 2508, word: "çadır", imageUrl: "/images/2508.webp", isCorrect: true, audioKey: "çadır", spokenText: "çadır" }
+            { id: 2818, word: "pasta", imageUrl: "/images/2818.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2818, word: "pasta", imageUrl: "/images/2818.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2818, word: "pasta", imageUrl: "/images/2818.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2817, word: "pasta", imageUrl: "/images/2817.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" }
         ]
     },
-    { // ince fark: highLowDataYeni
+    { // ince fark: halfQuarterWholeDataYeni
         id: 5130,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2510, word: "çit", imageUrl: "/images/2510.webp", isCorrect: false, audioKey: "çit", spokenText: "çit" },
-            { id: 2510, word: "çit", imageUrl: "/images/2510.webp", isCorrect: false, audioKey: "çit", spokenText: "çit" },
-            { id: 2510, word: "çit", imageUrl: "/images/2510.webp", isCorrect: false, audioKey: "çit", spokenText: "çit" },
-            { id: 2511, word: "çit", imageUrl: "/images/2511.webp", isCorrect: true, audioKey: "çit", spokenText: "çit" }
+            { id: 2817, word: "pasta", imageUrl: "/images/2817.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2817, word: "pasta", imageUrl: "/images/2817.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2817, word: "pasta", imageUrl: "/images/2817.webp", isCorrect: false, audioKey: "pasta", spokenText: "pasta" },
+            { id: 2816, word: "pasta", imageUrl: "/images/2816.webp", isCorrect: true, audioKey: "pasta", spokenText: "pasta" }
         ]
     },
-    { // ince fark: highLowDataYeni
+    { // ince fark: halfQuarterWholeDataYeni
         id: 5131,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2513, word: "dağ", imageUrl: "/images/2513.webp", isCorrect: false, audioKey: "dağ", spokenText: "dağ" },
-            { id: 2513, word: "dağ", imageUrl: "/images/2513.webp", isCorrect: false, audioKey: "dağ", spokenText: "dağ" },
-            { id: 2513, word: "dağ", imageUrl: "/images/2513.webp", isCorrect: false, audioKey: "dağ", spokenText: "dağ" },
-            { id: 2512, word: "dağ", imageUrl: "/images/2512.webp", isCorrect: true, audioKey: "dağ", spokenText: "dağ" }
+            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2821, word: "pizza", imageUrl: "/images/2821.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" }
         ]
     },
-    { // ince fark: highLowDataYeni
+    { // ince fark: halfQuarterWholeDataYeni
         id: 5132,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2514, word: "duvar", imageUrl: "/images/2514.webp", isCorrect: false, audioKey: "duvar", spokenText: "duvar" },
-            { id: 2514, word: "duvar", imageUrl: "/images/2514.webp", isCorrect: false, audioKey: "duvar", spokenText: "duvar" },
-            { id: 2514, word: "duvar", imageUrl: "/images/2514.webp", isCorrect: false, audioKey: "duvar", spokenText: "duvar" },
-            { id: 2515, word: "duvar", imageUrl: "/images/2515.webp", isCorrect: true, audioKey: "duvar", spokenText: "duvar" }
+            { id: 2820, word: "pizza", imageUrl: "/images/2820.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2820, word: "pizza", imageUrl: "/images/2820.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2820, word: "pizza", imageUrl: "/images/2820.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2821, word: "pizza", imageUrl: "/images/2821.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" }
         ]
     },
-    { // ince fark: highLowDataYeni
+    { // ince fark: halfQuarterWholeDataYeni
         id: 5133,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2517, word: "kitaplık", imageUrl: "/images/2517.webp", isCorrect: false, audioKey: "kitaplık", spokenText: "kitaplık" },
-            { id: 2517, word: "kitaplık", imageUrl: "/images/2517.webp", isCorrect: false, audioKey: "kitaplık", spokenText: "kitaplık" },
-            { id: 2517, word: "kitaplık", imageUrl: "/images/2517.webp", isCorrect: false, audioKey: "kitaplık", spokenText: "kitaplık" },
-            { id: 2516, word: "kitaplık", imageUrl: "/images/2516.webp", isCorrect: true, audioKey: "kitaplık", spokenText: "kitaplık" }
+            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2819, word: "pizza", imageUrl: "/images/2819.webp", isCorrect: false, audioKey: "pizza", spokenText: "pizza" },
+            { id: 2820, word: "pizza", imageUrl: "/images/2820.webp", isCorrect: true, audioKey: "pizza", spokenText: "pizza" }
         ]
     },
-    { // ince fark: highLowDataYeni
+    { // ince fark: halfQuarterWholeDataYeni
         id: 5134,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2518, word: "masa", imageUrl: "/images/2518.webp", isCorrect: false, audioKey: "masa", spokenText: "masa" },
-            { id: 2518, word: "masa", imageUrl: "/images/2518.webp", isCorrect: false, audioKey: "masa", spokenText: "masa" },
-            { id: 2518, word: "masa", imageUrl: "/images/2518.webp", isCorrect: false, audioKey: "masa", spokenText: "masa" },
-            { id: 2519, word: "masa", imageUrl: "/images/2519.webp", isCorrect: true, audioKey: "masa", spokenText: "masa" }
+            { id: 2824, word: "portakal", imageUrl: "/images/2824.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2824, word: "portakal", imageUrl: "/images/2824.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2824, word: "portakal", imageUrl: "/images/2824.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" }
         ]
     },
-    { // ince fark: highLowDataYeni
+    { // ince fark: halfQuarterWholeDataYeni
         id: 5135,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2521, word: "tabure", imageUrl: "/images/2521.webp", isCorrect: false, audioKey: "tabure", spokenText: "tabure" },
-            { id: 2521, word: "tabure", imageUrl: "/images/2521.webp", isCorrect: false, audioKey: "tabure", spokenText: "tabure" },
-            { id: 2521, word: "tabure", imageUrl: "/images/2521.webp", isCorrect: false, audioKey: "tabure", spokenText: "tabure" },
-            { id: 2520, word: "tabure", imageUrl: "/images/2520.webp", isCorrect: true, audioKey: "tabure", spokenText: "tabure" }
+            { id: 2824, word: "portakal", imageUrl: "/images/2824.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2824, word: "portakal", imageUrl: "/images/2824.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2824, word: "portakal", imageUrl: "/images/2824.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2823, word: "portakal", imageUrl: "/images/2823.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" }
         ]
     },
-    { // ince fark: hotColdDataYeni
+    { // ince fark: halfQuarterWholeDataYeni
         id: 5136,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 3612, word: "hava", imageUrl: "/images/3612.webp", isCorrect: false, audioKey: "hava", spokenText: "hava" },
-            { id: 3612, word: "hava", imageUrl: "/images/3612.webp", isCorrect: false, audioKey: "hava", spokenText: "hava" },
-            { id: 3612, word: "hava", imageUrl: "/images/3612.webp", isCorrect: false, audioKey: "hava", spokenText: "hava" },
-            { id: 3611, word: "hava", imageUrl: "/images/3611.webp", isCorrect: true, audioKey: "hava", spokenText: "hava" }
+            { id: 2823, word: "portakal", imageUrl: "/images/2823.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2823, word: "portakal", imageUrl: "/images/2823.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2823, word: "portakal", imageUrl: "/images/2823.webp", isCorrect: false, audioKey: "portakal", spokenText: "portakal" },
+            { id: 2822, word: "portakal", imageUrl: "/images/2822.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" }
         ]
     },
-    { // ince fark: hotColdDataYeni
+    { // ince fark: highLowDataYeni
         id: 5137,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 3613, word: "kupa", imageUrl: "/images/3613.webp", isCorrect: false, audioKey: "kupa", spokenText: "kupa" },
-            { id: 3613, word: "kupa", imageUrl: "/images/3613.webp", isCorrect: false, audioKey: "kupa", spokenText: "kupa" },
-            { id: 3613, word: "kupa", imageUrl: "/images/3613.webp", isCorrect: false, audioKey: "kupa", spokenText: "kupa" },
-            { id: 3614, word: "kupa", imageUrl: "/images/3614.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" }
+            { id: 2502, word: "ayakkabı", imageUrl: "/images/2502.webp", isCorrect: false, audioKey: "ayakkabı", spokenText: "ayakkabı" },
+            { id: 2502, word: "ayakkabı", imageUrl: "/images/2502.webp", isCorrect: false, audioKey: "ayakkabı", spokenText: "ayakkabı" },
+            { id: 2502, word: "ayakkabı", imageUrl: "/images/2502.webp", isCorrect: false, audioKey: "ayakkabı", spokenText: "ayakkabı" },
+            { id: 2501, word: "ayakkabı", imageUrl: "/images/2501.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" }
         ]
     },
-    { // ince fark: hotColdDataYeni
+    { // ince fark: highLowDataYeni
         id: 5138,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 3618, word: "süt", imageUrl: "/images/3618.webp", isCorrect: false, audioKey: "süt", spokenText: "süt" },
-            { id: 3618, word: "süt", imageUrl: "/images/3618.webp", isCorrect: false, audioKey: "süt", spokenText: "süt" },
-            { id: 3618, word: "süt", imageUrl: "/images/3618.webp", isCorrect: false, audioKey: "süt", spokenText: "süt" },
-            { id: 3617, word: "süt", imageUrl: "/images/3617.webp", isCorrect: true, audioKey: "süt", spokenText: "süt" }
+            { id: 2503, word: "bina", imageUrl: "/images/2503.webp", isCorrect: false, audioKey: "bina", spokenText: "bina" },
+            { id: 2503, word: "bina", imageUrl: "/images/2503.webp", isCorrect: false, audioKey: "bina", spokenText: "bina" },
+            { id: 2503, word: "bina", imageUrl: "/images/2503.webp", isCorrect: false, audioKey: "bina", spokenText: "bina" },
+            { id: 2504, word: "bina", imageUrl: "/images/2504.webp", isCorrect: true, audioKey: "bina", spokenText: "bina" }
         ]
     },
-    { // ince fark: hungryFullDataYeni
+    { // ince fark: highLowDataYeni
         id: 5139,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 4301, word: "at", imageUrl: "/images/4301.webp", isCorrect: false, audioKey: "at", spokenText: "at" },
-            { id: 4301, word: "at", imageUrl: "/images/4301.webp", isCorrect: false, audioKey: "at", spokenText: "at" },
-            { id: 4301, word: "at", imageUrl: "/images/4301.webp", isCorrect: false, audioKey: "at", spokenText: "at" },
-            { id: 4302, word: "at", imageUrl: "/images/4302.webp", isCorrect: true, audioKey: "at", spokenText: "at" }
+            { id: 2507, word: "blok kulesi", imageUrl: "/images/2507.webp", isCorrect: false, audioKey: "blok kulesi", spokenText: "blok kulesi" },
+            { id: 2507, word: "blok kulesi", imageUrl: "/images/2507.webp", isCorrect: false, audioKey: "blok kulesi", spokenText: "blok kulesi" },
+            { id: 2507, word: "blok kulesi", imageUrl: "/images/2507.webp", isCorrect: false, audioKey: "blok kulesi", spokenText: "blok kulesi" },
+            { id: 2505, word: "blok kulesi", imageUrl: "/images/2505.webp", isCorrect: true, audioKey: "blok kulesi", spokenText: "blok kulesi" }
         ]
     },
-    { // ince fark: hungryFullDataYeni
+    { // ince fark: highLowDataYeni
         id: 5140,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 4304, word: "bebek", imageUrl: "/images/4304.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 4304, word: "bebek", imageUrl: "/images/4304.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 4304, word: "bebek", imageUrl: "/images/4304.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 4303, word: "bebek", imageUrl: "/images/4303.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" }
+            { id: 2508, word: "çadır", imageUrl: "/images/2508.webp", isCorrect: false, audioKey: "çadır", spokenText: "çadır" },
+            { id: 2508, word: "çadır", imageUrl: "/images/2508.webp", isCorrect: false, audioKey: "çadır", spokenText: "çadır" },
+            { id: 2508, word: "çadır", imageUrl: "/images/2508.webp", isCorrect: false, audioKey: "çadır", spokenText: "çadır" },
+            { id: 2509, word: "çadır", imageUrl: "/images/2509.webp", isCorrect: true, audioKey: "çadır", spokenText: "çadır" }
         ]
     },
-    { // ince fark: hungryFullDataYeni
+    { // ince fark: highLowDataYeni
         id: 5141,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 4305, word: "civciv", imageUrl: "/images/4305.webp", isCorrect: false, audioKey: "civciv", spokenText: "civciv" },
-            { id: 4305, word: "civciv", imageUrl: "/images/4305.webp", isCorrect: false, audioKey: "civciv", spokenText: "civciv" },
-            { id: 4305, word: "civciv", imageUrl: "/images/4305.webp", isCorrect: false, audioKey: "civciv", spokenText: "civciv" },
-            { id: 4306, word: "civciv", imageUrl: "/images/4306.webp", isCorrect: true, audioKey: "civciv", spokenText: "civciv" }
+            { id: 2511, word: "çit", imageUrl: "/images/2511.webp", isCorrect: false, audioKey: "çit", spokenText: "çit" },
+            { id: 2511, word: "çit", imageUrl: "/images/2511.webp", isCorrect: false, audioKey: "çit", spokenText: "çit" },
+            { id: 2511, word: "çit", imageUrl: "/images/2511.webp", isCorrect: false, audioKey: "çit", spokenText: "çit" },
+            { id: 2510, word: "çit", imageUrl: "/images/2510.webp", isCorrect: true, audioKey: "çit", spokenText: "çit" }
         ]
     },
-    { // ince fark: hungryFullDataYeni
+    { // ince fark: highLowDataYeni
         id: 5142,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 4308, word: "çocuk", imageUrl: "/images/4308.webp", isCorrect: false, audioKey: "çocuk", spokenText: "çocuk" },
-            { id: 4308, word: "çocuk", imageUrl: "/images/4308.webp", isCorrect: false, audioKey: "çocuk", spokenText: "çocuk" },
-            { id: 4308, word: "çocuk", imageUrl: "/images/4308.webp", isCorrect: false, audioKey: "çocuk", spokenText: "çocuk" },
-            { id: 4307, word: "çocuk", imageUrl: "/images/4307.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" }
+            { id: 2512, word: "dağ", imageUrl: "/images/2512.webp", isCorrect: false, audioKey: "dağ", spokenText: "dağ" },
+            { id: 2512, word: "dağ", imageUrl: "/images/2512.webp", isCorrect: false, audioKey: "dağ", spokenText: "dağ" },
+            { id: 2512, word: "dağ", imageUrl: "/images/2512.webp", isCorrect: false, audioKey: "dağ", spokenText: "dağ" },
+            { id: 2513, word: "dağ", imageUrl: "/images/2513.webp", isCorrect: true, audioKey: "dağ", spokenText: "dağ" }
         ]
     },
-    { // ince fark: hungryFullDataYeni
+    { // ince fark: highLowDataYeni
         id: 5143,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 4309, word: "inek", imageUrl: "/images/4309.webp", isCorrect: false, audioKey: "inek", spokenText: "inek" },
-            { id: 4309, word: "inek", imageUrl: "/images/4309.webp", isCorrect: false, audioKey: "inek", spokenText: "inek" },
-            { id: 4309, word: "inek", imageUrl: "/images/4309.webp", isCorrect: false, audioKey: "inek", spokenText: "inek" },
-            { id: 4310, word: "inek", imageUrl: "/images/4310.webp", isCorrect: true, audioKey: "inek", spokenText: "inek" }
+            { id: 2515, word: "duvar", imageUrl: "/images/2515.webp", isCorrect: false, audioKey: "duvar", spokenText: "duvar" },
+            { id: 2515, word: "duvar", imageUrl: "/images/2515.webp", isCorrect: false, audioKey: "duvar", spokenText: "duvar" },
+            { id: 2515, word: "duvar", imageUrl: "/images/2515.webp", isCorrect: false, audioKey: "duvar", spokenText: "duvar" },
+            { id: 2514, word: "duvar", imageUrl: "/images/2514.webp", isCorrect: true, audioKey: "duvar", spokenText: "duvar" }
         ]
     },
-    { // ince fark: hungryFullDataYeni
+    { // ince fark: highLowDataYeni
         id: 5144,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 4312, word: "kedi", imageUrl: "/images/4312.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" },
-            { id: 4312, word: "kedi", imageUrl: "/images/4312.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" },
-            { id: 4312, word: "kedi", imageUrl: "/images/4312.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" },
-            { id: 4311, word: "kedi", imageUrl: "/images/4311.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" }
+            { id: 2516, word: "kitaplık", imageUrl: "/images/2516.webp", isCorrect: false, audioKey: "kitaplık", spokenText: "kitaplık" },
+            { id: 2516, word: "kitaplık", imageUrl: "/images/2516.webp", isCorrect: false, audioKey: "kitaplık", spokenText: "kitaplık" },
+            { id: 2516, word: "kitaplık", imageUrl: "/images/2516.webp", isCorrect: false, audioKey: "kitaplık", spokenText: "kitaplık" },
+            { id: 2517, word: "kitaplık", imageUrl: "/images/2517.webp", isCorrect: true, audioKey: "kitaplık", spokenText: "kitaplık" }
         ]
     },
-    { // ince fark: hungryFullDataYeni
+    { // ince fark: highLowDataYeni
         id: 5145,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 4313, word: "köpek", imageUrl: "/images/4313.webp", isCorrect: false, audioKey: "köpek", spokenText: "köpek" },
-            { id: 4313, word: "köpek", imageUrl: "/images/4313.webp", isCorrect: false, audioKey: "köpek", spokenText: "köpek" },
-            { id: 4313, word: "köpek", imageUrl: "/images/4313.webp", isCorrect: false, audioKey: "köpek", spokenText: "köpek" },
-            { id: 4314, word: "köpek", imageUrl: "/images/4314.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" }
+            { id: 2519, word: "masa", imageUrl: "/images/2519.webp", isCorrect: false, audioKey: "masa", spokenText: "masa" },
+            { id: 2519, word: "masa", imageUrl: "/images/2519.webp", isCorrect: false, audioKey: "masa", spokenText: "masa" },
+            { id: 2519, word: "masa", imageUrl: "/images/2519.webp", isCorrect: false, audioKey: "masa", spokenText: "masa" },
+            { id: 2518, word: "masa", imageUrl: "/images/2518.webp", isCorrect: true, audioKey: "masa", spokenText: "masa" }
         ]
     },
-    { // ince fark: hungryFullDataYeni
+    { // ince fark: highLowDataYeni
         id: 5146,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 4316, word: "kuş", imageUrl: "/images/4316.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
-            { id: 4316, word: "kuş", imageUrl: "/images/4316.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
-            { id: 4316, word: "kuş", imageUrl: "/images/4316.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
-            { id: 4315, word: "kuş", imageUrl: "/images/4315.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" }
+            { id: 2520, word: "tabure", imageUrl: "/images/2520.webp", isCorrect: false, audioKey: "tabure", spokenText: "tabure" },
+            { id: 2520, word: "tabure", imageUrl: "/images/2520.webp", isCorrect: false, audioKey: "tabure", spokenText: "tabure" },
+            { id: 2520, word: "tabure", imageUrl: "/images/2520.webp", isCorrect: false, audioKey: "tabure", spokenText: "tabure" },
+            { id: 2521, word: "tabure", imageUrl: "/images/2521.webp", isCorrect: true, audioKey: "tabure", spokenText: "tabure" }
         ]
     },
-    { // ince fark: hungryFullDataYeni
+    { // ince fark: hotColdDataYeni
         id: 5147,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 4317, word: "kuzu", imageUrl: "/images/4317.webp", isCorrect: false, audioKey: "kuzu", spokenText: "kuzu" },
-            { id: 4317, word: "kuzu", imageUrl: "/images/4317.webp", isCorrect: false, audioKey: "kuzu", spokenText: "kuzu" },
-            { id: 4317, word: "kuzu", imageUrl: "/images/4317.webp", isCorrect: false, audioKey: "kuzu", spokenText: "kuzu" },
-            { id: 4318, word: "kuzu", imageUrl: "/images/4318.webp", isCorrect: true, audioKey: "kuzu", spokenText: "kuzu" }
+            { id: 3611, word: "hava", imageUrl: "/images/3611.webp", isCorrect: false, audioKey: "hava", spokenText: "hava" },
+            { id: 3611, word: "hava", imageUrl: "/images/3611.webp", isCorrect: false, audioKey: "hava", spokenText: "hava" },
+            { id: 3611, word: "hava", imageUrl: "/images/3611.webp", isCorrect: false, audioKey: "hava", spokenText: "hava" },
+            { id: 3612, word: "hava", imageUrl: "/images/3612.webp", isCorrect: true, audioKey: "hava", spokenText: "hava" }
         ]
     },
-    { // ince fark: hungryFullDataYeni
+    { // ince fark: hotColdDataYeni
         id: 5148,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 4320, word: "tavşan", imageUrl: "/images/4320.webp", isCorrect: false, audioKey: "tavşan", spokenText: "tavşan" },
-            { id: 4320, word: "tavşan", imageUrl: "/images/4320.webp", isCorrect: false, audioKey: "tavşan", spokenText: "tavşan" },
-            { id: 4320, word: "tavşan", imageUrl: "/images/4320.webp", isCorrect: false, audioKey: "tavşan", spokenText: "tavşan" },
-            { id: 4319, word: "tavşan", imageUrl: "/images/4319.webp", isCorrect: true, audioKey: "tavşan", spokenText: "tavşan" }
+            { id: 3614, word: "kupa", imageUrl: "/images/3614.webp", isCorrect: false, audioKey: "kupa", spokenText: "kupa" },
+            { id: 3614, word: "kupa", imageUrl: "/images/3614.webp", isCorrect: false, audioKey: "kupa", spokenText: "kupa" },
+            { id: 3614, word: "kupa", imageUrl: "/images/3614.webp", isCorrect: false, audioKey: "kupa", spokenText: "kupa" },
+            { id: 3613, word: "kupa", imageUrl: "/images/3613.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" }
         ]
     },
-    { // ince fark: inFrontOfBehindDataYeni
+    { // ince fark: hotColdDataYeni
         id: 5149,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2028, word: "top", imageUrl: "/images/2028.webp", isCorrect: false, audioKey: "top", spokenText: "top" },
-            { id: 2028, word: "top", imageUrl: "/images/2028.webp", isCorrect: false, audioKey: "top", spokenText: "top" },
-            { id: 2028, word: "top", imageUrl: "/images/2028.webp", isCorrect: false, audioKey: "top", spokenText: "top" },
-            { id: 2024, word: "top", imageUrl: "/images/2024.webp", isCorrect: true, audioKey: "top", spokenText: "top" }
+            { id: 3617, word: "süt", imageUrl: "/images/3617.webp", isCorrect: false, audioKey: "süt", spokenText: "süt" },
+            { id: 3617, word: "süt", imageUrl: "/images/3617.webp", isCorrect: false, audioKey: "süt", spokenText: "süt" },
+            { id: 3617, word: "süt", imageUrl: "/images/3617.webp", isCorrect: false, audioKey: "süt", spokenText: "süt" },
+            { id: 3618, word: "süt", imageUrl: "/images/3618.webp", isCorrect: true, audioKey: "süt", spokenText: "süt" }
         ]
     },
-    { // ince fark: inFrontOfBehindDataYeni
+    { // ince fark: hungryFullDataYeni
         id: 5150,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2036, word: "ayı", imageUrl: "/images/2036.webp", isCorrect: false, audioKey: "ayı", spokenText: "ayı" },
-            { id: 2036, word: "ayı", imageUrl: "/images/2036.webp", isCorrect: false, audioKey: "ayı", spokenText: "ayı" },
-            { id: 2036, word: "ayı", imageUrl: "/images/2036.webp", isCorrect: false, audioKey: "ayı", spokenText: "ayı" },
-            { id: 2040, word: "ayı", imageUrl: "/images/2040.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" }
+            { id: 4302, word: "at", imageUrl: "/images/4302.webp", isCorrect: false, audioKey: "at", spokenText: "at" },
+            { id: 4302, word: "at", imageUrl: "/images/4302.webp", isCorrect: false, audioKey: "at", spokenText: "at" },
+            { id: 4302, word: "at", imageUrl: "/images/4302.webp", isCorrect: false, audioKey: "at", spokenText: "at" },
+            { id: 4301, word: "at", imageUrl: "/images/4301.webp", isCorrect: true, audioKey: "at", spokenText: "at" }
         ]
     },
-    { // ince fark: inFrontOfBehindDataYeni
+    { // ince fark: hungryFullDataYeni
         id: 5151,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2052, word: "araba", imageUrl: "/images/2052.webp", isCorrect: false, audioKey: "araba", spokenText: "araba" },
-            { id: 2052, word: "araba", imageUrl: "/images/2052.webp", isCorrect: false, audioKey: "araba", spokenText: "araba" },
-            { id: 2052, word: "araba", imageUrl: "/images/2052.webp", isCorrect: false, audioKey: "araba", spokenText: "araba" },
-            { id: 2048, word: "araba", imageUrl: "/images/2048.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" }
+            { id: 4303, word: "bebek", imageUrl: "/images/4303.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 4303, word: "bebek", imageUrl: "/images/4303.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 4303, word: "bebek", imageUrl: "/images/4303.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 4304, word: "bebek", imageUrl: "/images/4304.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" }
         ]
     },
-    { // ince fark: inFrontOfBehindDataYeni
+    { // ince fark: hungryFullDataYeni
         id: 5152,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2060, word: "elma", imageUrl: "/images/2060.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2060, word: "elma", imageUrl: "/images/2060.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2060, word: "elma", imageUrl: "/images/2060.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
-            { id: 2064, word: "elma", imageUrl: "/images/2064.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" }
+            { id: 4306, word: "civciv", imageUrl: "/images/4306.webp", isCorrect: false, audioKey: "civciv", spokenText: "civciv" },
+            { id: 4306, word: "civciv", imageUrl: "/images/4306.webp", isCorrect: false, audioKey: "civciv", spokenText: "civciv" },
+            { id: 4306, word: "civciv", imageUrl: "/images/4306.webp", isCorrect: false, audioKey: "civciv", spokenText: "civciv" },
+            { id: 4305, word: "civciv", imageUrl: "/images/4305.webp", isCorrect: true, audioKey: "civciv", spokenText: "civciv" }
         ]
     },
-    { // ince fark: inFrontOfBehindDataYeni
+    { // ince fark: hungryFullDataYeni
         id: 5153,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2076, word: "kalem", imageUrl: "/images/2076.webp", isCorrect: false, audioKey: "kalem", spokenText: "kalem" },
-            { id: 2076, word: "kalem", imageUrl: "/images/2076.webp", isCorrect: false, audioKey: "kalem", spokenText: "kalem" },
-            { id: 2076, word: "kalem", imageUrl: "/images/2076.webp", isCorrect: false, audioKey: "kalem", spokenText: "kalem" },
-            { id: 2072, word: "kalem", imageUrl: "/images/2072.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" }
+            { id: 4307, word: "çocuk", imageUrl: "/images/4307.webp", isCorrect: false, audioKey: "çocuk", spokenText: "çocuk" },
+            { id: 4307, word: "çocuk", imageUrl: "/images/4307.webp", isCorrect: false, audioKey: "çocuk", spokenText: "çocuk" },
+            { id: 4307, word: "çocuk", imageUrl: "/images/4307.webp", isCorrect: false, audioKey: "çocuk", spokenText: "çocuk" },
+            { id: 4308, word: "çocuk", imageUrl: "/images/4308.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" }
         ]
     },
-    { // ince fark: inFrontOfBehindDataYeni
+    { // ince fark: hungryFullDataYeni
         id: 5154,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2084, word: "kedi", imageUrl: "/images/2084.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" },
-            { id: 2084, word: "kedi", imageUrl: "/images/2084.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" },
-            { id: 2084, word: "kedi", imageUrl: "/images/2084.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" },
-            { id: 2088, word: "kedi", imageUrl: "/images/2088.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" }
+            { id: 4310, word: "inek", imageUrl: "/images/4310.webp", isCorrect: false, audioKey: "inek", spokenText: "inek" },
+            { id: 4310, word: "inek", imageUrl: "/images/4310.webp", isCorrect: false, audioKey: "inek", spokenText: "inek" },
+            { id: 4310, word: "inek", imageUrl: "/images/4310.webp", isCorrect: false, audioKey: "inek", spokenText: "inek" },
+            { id: 4309, word: "inek", imageUrl: "/images/4309.webp", isCorrect: true, audioKey: "inek", spokenText: "inek" }
         ]
     },
-    { // ince fark: inFrontOfBehindDataYeni
+    { // ince fark: hungryFullDataYeni
         id: 5155,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2111, word: "bebek", imageUrl: "/images/2111.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2111, word: "bebek", imageUrl: "/images/2111.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2111, word: "bebek", imageUrl: "/images/2111.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2107, word: "bebek", imageUrl: "/images/2107.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" }
+            { id: 4311, word: "kedi", imageUrl: "/images/4311.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" },
+            { id: 4311, word: "kedi", imageUrl: "/images/4311.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" },
+            { id: 4311, word: "kedi", imageUrl: "/images/4311.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" },
+            { id: 4312, word: "kedi", imageUrl: "/images/4312.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" }
         ]
     },
-    { // ince fark: inFrontOfBehindDataYeni
+    { // ince fark: hungryFullDataYeni
         id: 5156,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2119, word: "dinozor", imageUrl: "/images/2119.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2119, word: "dinozor", imageUrl: "/images/2119.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2119, word: "dinozor", imageUrl: "/images/2119.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2123, word: "dinozor", imageUrl: "/images/2123.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" }
+            { id: 4314, word: "köpek", imageUrl: "/images/4314.webp", isCorrect: false, audioKey: "köpek", spokenText: "köpek" },
+            { id: 4314, word: "köpek", imageUrl: "/images/4314.webp", isCorrect: false, audioKey: "köpek", spokenText: "köpek" },
+            { id: 4314, word: "köpek", imageUrl: "/images/4314.webp", isCorrect: false, audioKey: "köpek", spokenText: "köpek" },
+            { id: 4313, word: "köpek", imageUrl: "/images/4313.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" }
         ]
     },
-    { // ince fark: inFrontOfBehindDataYeni
+    { // ince fark: hungryFullDataYeni
         id: 5157,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2134, word: "ördek", imageUrl: "/images/2134.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2134, word: "ördek", imageUrl: "/images/2134.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2134, word: "ördek", imageUrl: "/images/2134.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2130, word: "ördek", imageUrl: "/images/2130.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" }
+            { id: 4315, word: "kuş", imageUrl: "/images/4315.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
+            { id: 4315, word: "kuş", imageUrl: "/images/4315.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
+            { id: 4315, word: "kuş", imageUrl: "/images/4315.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
+            { id: 4316, word: "kuş", imageUrl: "/images/4316.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" }
+        ]
+    },
+    { // ince fark: hungryFullDataYeni
+        id: 5158,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 4318, word: "kuzu", imageUrl: "/images/4318.webp", isCorrect: false, audioKey: "kuzu", spokenText: "kuzu" },
+            { id: 4318, word: "kuzu", imageUrl: "/images/4318.webp", isCorrect: false, audioKey: "kuzu", spokenText: "kuzu" },
+            { id: 4318, word: "kuzu", imageUrl: "/images/4318.webp", isCorrect: false, audioKey: "kuzu", spokenText: "kuzu" },
+            { id: 4317, word: "kuzu", imageUrl: "/images/4317.webp", isCorrect: true, audioKey: "kuzu", spokenText: "kuzu" }
+        ]
+    },
+    { // ince fark: hungryFullDataYeni
+        id: 5159,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 4319, word: "tavşan", imageUrl: "/images/4319.webp", isCorrect: false, audioKey: "tavşan", spokenText: "tavşan" },
+            { id: 4319, word: "tavşan", imageUrl: "/images/4319.webp", isCorrect: false, audioKey: "tavşan", spokenText: "tavşan" },
+            { id: 4319, word: "tavşan", imageUrl: "/images/4319.webp", isCorrect: false, audioKey: "tavşan", spokenText: "tavşan" },
+            { id: 4320, word: "tavşan", imageUrl: "/images/4320.webp", isCorrect: true, audioKey: "tavşan", spokenText: "tavşan" }
+        ]
+    },
+    { // ince fark: inFrontOfBehindDataYeni
+        id: 5160,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 2024, word: "top", imageUrl: "/images/2024.webp", isCorrect: false, audioKey: "top", spokenText: "top" },
+            { id: 2024, word: "top", imageUrl: "/images/2024.webp", isCorrect: false, audioKey: "top", spokenText: "top" },
+            { id: 2024, word: "top", imageUrl: "/images/2024.webp", isCorrect: false, audioKey: "top", spokenText: "top" },
+            { id: 2028, word: "top", imageUrl: "/images/2028.webp", isCorrect: true, audioKey: "top", spokenText: "top" }
+        ]
+    },
+    { // ince fark: inFrontOfBehindDataYeni
+        id: 5161,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 2040, word: "ayı", imageUrl: "/images/2040.webp", isCorrect: false, audioKey: "ayı", spokenText: "ayı" },
+            { id: 2040, word: "ayı", imageUrl: "/images/2040.webp", isCorrect: false, audioKey: "ayı", spokenText: "ayı" },
+            { id: 2040, word: "ayı", imageUrl: "/images/2040.webp", isCorrect: false, audioKey: "ayı", spokenText: "ayı" },
+            { id: 2036, word: "ayı", imageUrl: "/images/2036.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" }
+        ]
+    },
+    { // ince fark: inFrontOfBehindDataYeni
+        id: 5162,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 2048, word: "araba", imageUrl: "/images/2048.webp", isCorrect: false, audioKey: "araba", spokenText: "araba" },
+            { id: 2048, word: "araba", imageUrl: "/images/2048.webp", isCorrect: false, audioKey: "araba", spokenText: "araba" },
+            { id: 2048, word: "araba", imageUrl: "/images/2048.webp", isCorrect: false, audioKey: "araba", spokenText: "araba" },
+            { id: 2052, word: "araba", imageUrl: "/images/2052.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" }
+        ]
+    },
+    { // ince fark: inFrontOfBehindDataYeni
+        id: 5163,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 2064, word: "elma", imageUrl: "/images/2064.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2064, word: "elma", imageUrl: "/images/2064.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2064, word: "elma", imageUrl: "/images/2064.webp", isCorrect: false, audioKey: "elma", spokenText: "elma" },
+            { id: 2060, word: "elma", imageUrl: "/images/2060.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" }
+        ]
+    },
+    { // ince fark: inFrontOfBehindDataYeni
+        id: 5164,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 2072, word: "kalem", imageUrl: "/images/2072.webp", isCorrect: false, audioKey: "kalem", spokenText: "kalem" },
+            { id: 2072, word: "kalem", imageUrl: "/images/2072.webp", isCorrect: false, audioKey: "kalem", spokenText: "kalem" },
+            { id: 2072, word: "kalem", imageUrl: "/images/2072.webp", isCorrect: false, audioKey: "kalem", spokenText: "kalem" },
+            { id: 2076, word: "kalem", imageUrl: "/images/2076.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" }
+        ]
+    },
+    { // ince fark: inFrontOfBehindDataYeni
+        id: 5165,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 2088, word: "kedi", imageUrl: "/images/2088.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" },
+            { id: 2088, word: "kedi", imageUrl: "/images/2088.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" },
+            { id: 2088, word: "kedi", imageUrl: "/images/2088.webp", isCorrect: false, audioKey: "kedi", spokenText: "kedi" },
+            { id: 2084, word: "kedi", imageUrl: "/images/2084.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" }
+        ]
+    },
+    { // ince fark: inFrontOfBehindDataYeni
+        id: 5166,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 2096, word: "kuş", imageUrl: "/images/2096.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
+            { id: 2096, word: "kuş", imageUrl: "/images/2096.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
+            { id: 2096, word: "kuş", imageUrl: "/images/2096.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
+            { id: 2100, word: "kuş", imageUrl: "/images/2100.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" }
+        ]
+    },
+    { // ince fark: inFrontOfBehindDataYeni
+        id: 5167,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 2112, word: "bebek", imageUrl: "/images/2112.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2112, word: "bebek", imageUrl: "/images/2112.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2112, word: "bebek", imageUrl: "/images/2112.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2108, word: "bebek", imageUrl: "/images/2108.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" }
+        ]
+    },
+    { // ince fark: inFrontOfBehindDataYeni
+        id: 5168,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 2120, word: "dinozor", imageUrl: "/images/2120.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2120, word: "dinozor", imageUrl: "/images/2120.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2120, word: "dinozor", imageUrl: "/images/2120.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2124, word: "dinozor", imageUrl: "/images/2124.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" }
+        ]
+    },
+    { // ince fark: inFrontOfBehindDataYeni
+        id: 5169,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 2135, word: "ördek", imageUrl: "/images/2135.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2135, word: "ördek", imageUrl: "/images/2135.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2135, word: "ördek", imageUrl: "/images/2135.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2131, word: "ördek", imageUrl: "/images/2131.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" }
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5158,
+        id: 5170,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2581,7 +2737,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5159,
+        id: 5171,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2594,7 +2750,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5160,
+        id: 5172,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2607,7 +2763,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5161,
+        id: 5173,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2620,7 +2776,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5162,
+        id: 5174,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2633,7 +2789,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5163,
+        id: 5175,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2646,59 +2802,59 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5164,
+        id: 5176,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2097, word: "kuş", imageUrl: "/images/2097.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
-            { id: 2097, word: "kuş", imageUrl: "/images/2097.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
-            { id: 2097, word: "kuş", imageUrl: "/images/2097.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
-            { id: 2098, word: "kuş", imageUrl: "/images/2098.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" }
+            { id: 2098, word: "kuş", imageUrl: "/images/2098.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
+            { id: 2098, word: "kuş", imageUrl: "/images/2098.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
+            { id: 2098, word: "kuş", imageUrl: "/images/2098.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
+            { id: 2099, word: "kuş", imageUrl: "/images/2099.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" }
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5165,
+        id: 5177,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2110, word: "bebek", imageUrl: "/images/2110.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2110, word: "bebek", imageUrl: "/images/2110.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2110, word: "bebek", imageUrl: "/images/2110.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2109, word: "bebek", imageUrl: "/images/2109.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" }
+            { id: 2111, word: "bebek", imageUrl: "/images/2111.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2111, word: "bebek", imageUrl: "/images/2111.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2111, word: "bebek", imageUrl: "/images/2111.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2110, word: "bebek", imageUrl: "/images/2110.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" }
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5166,
+        id: 5178,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2121, word: "dinozor", imageUrl: "/images/2121.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2121, word: "dinozor", imageUrl: "/images/2121.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2121, word: "dinozor", imageUrl: "/images/2121.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2122, word: "dinozor", imageUrl: "/images/2122.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" }
+            { id: 2122, word: "dinozor", imageUrl: "/images/2122.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2122, word: "dinozor", imageUrl: "/images/2122.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2122, word: "dinozor", imageUrl: "/images/2122.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2123, word: "dinozor", imageUrl: "/images/2123.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" }
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5167,
+        id: 5179,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2133, word: "ördek", imageUrl: "/images/2133.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2133, word: "ördek", imageUrl: "/images/2133.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2133, word: "ördek", imageUrl: "/images/2133.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2132, word: "ördek", imageUrl: "/images/2132.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" }
+            { id: 2134, word: "ördek", imageUrl: "/images/2134.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2134, word: "ördek", imageUrl: "/images/2134.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2134, word: "ördek", imageUrl: "/images/2134.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2133, word: "ördek", imageUrl: "/images/2133.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" }
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5168,
+        id: 5180,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2711,7 +2867,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5169,
+        id: 5181,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2724,7 +2880,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5170,
+        id: 5182,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2737,7 +2893,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5171,
+        id: 5183,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2750,7 +2906,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5172,
+        id: 5184,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2763,7 +2919,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5173,
+        id: 5185,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2776,7 +2932,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5174,
+        id: 5186,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2789,7 +2945,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5175,
+        id: 5187,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2802,7 +2958,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5176,
+        id: 5188,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2815,7 +2971,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5177,
+        id: 5189,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2828,7 +2984,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5178,
+        id: 5190,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2841,7 +2997,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5179,
+        id: 5191,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2854,7 +3010,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5180,
+        id: 5192,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2867,7 +3023,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5181,
+        id: 5193,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2880,7 +3036,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5182,
+        id: 5194,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2893,7 +3049,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5183,
+        id: 5195,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2906,7 +3062,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5184,
+        id: 5196,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2919,7 +3075,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5185,
+        id: 5197,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2932,7 +3088,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5186,
+        id: 5198,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2945,7 +3101,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5187,
+        id: 5199,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2958,7 +3114,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5188,
+        id: 5200,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2971,7 +3127,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5189,
+        id: 5201,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2984,7 +3140,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5190,
+        id: 5202,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -2997,7 +3153,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5191,
+        id: 5203,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3010,7 +3166,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5192,
+        id: 5204,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3023,7 +3179,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5193,
+        id: 5205,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3036,7 +3192,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5194,
+        id: 5206,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3049,7 +3205,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5195,
+        id: 5207,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3062,7 +3218,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5196,
+        id: 5208,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3075,7 +3231,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5197,
+        id: 5209,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3088,7 +3244,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5198,
+        id: 5210,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3101,7 +3257,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5199,
+        id: 5211,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3114,7 +3270,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5200,
+        id: 5212,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3127,7 +3283,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5201,
+        id: 5213,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3140,7 +3296,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5202,
+        id: 5214,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3153,7 +3309,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5203,
+        id: 5215,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3166,7 +3322,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5204,
+        id: 5216,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3179,7 +3335,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5205,
+        id: 5217,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3192,7 +3348,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5206,
+        id: 5218,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3205,7 +3361,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5207,
+        id: 5219,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3218,7 +3374,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5208,
+        id: 5220,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3231,7 +3387,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5209,
+        id: 5221,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3244,7 +3400,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5210,
+        id: 5222,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3257,7 +3413,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5211,
+        id: 5223,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3270,7 +3426,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5212,
+        id: 5224,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3283,7 +3439,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5213,
+        id: 5225,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3296,7 +3452,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5214,
+        id: 5226,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3309,7 +3465,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5215,
+        id: 5227,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3322,7 +3478,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5216,
+        id: 5228,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3335,7 +3491,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5217,
+        id: 5229,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3348,7 +3504,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5218,
+        id: 5230,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3361,7 +3517,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5219,
+        id: 5231,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3374,7 +3530,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5220,
+        id: 5232,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3387,7 +3543,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5221,
+        id: 5233,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3400,7 +3556,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5222,
+        id: 5234,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3413,7 +3569,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5223,
+        id: 5235,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3426,7 +3582,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5224,
+        id: 5236,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3439,7 +3595,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5225,
+        id: 5237,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3452,7 +3608,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5226,
+        id: 5238,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3465,7 +3621,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5227,
+        id: 5239,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3478,7 +3634,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5228,
+        id: 5240,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3491,7 +3647,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5229,
+        id: 5241,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3504,7 +3660,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5230,
+        id: 5242,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3517,7 +3673,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5231,
+        id: 5243,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3530,7 +3686,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5232,
+        id: 5244,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3543,7 +3699,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5233,
+        id: 5245,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3556,7 +3712,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5234,
+        id: 5246,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3569,7 +3725,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5235,
+        id: 5247,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3582,7 +3738,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5236,
+        id: 5248,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3595,7 +3751,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5237,
+        id: 5249,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3608,7 +3764,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5238,
+        id: 5250,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3621,7 +3777,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5239,
+        id: 5251,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3634,7 +3790,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5240,
+        id: 5252,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3647,7 +3803,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5241,
+        id: 5253,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3660,7 +3816,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5242,
+        id: 5254,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3673,7 +3829,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5243,
+        id: 5255,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3686,7 +3842,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5244,
+        id: 5256,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3699,7 +3855,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5245,
+        id: 5257,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3712,7 +3868,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5246,
+        id: 5258,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3725,7 +3881,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5247,
+        id: 5259,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3738,7 +3894,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5248,
+        id: 5260,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3751,7 +3907,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5249,
+        id: 5261,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3764,7 +3920,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5250,
+        id: 5262,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3777,7 +3933,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5251,
+        id: 5263,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3790,7 +3946,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5252,
+        id: 5264,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3803,7 +3959,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5253,
+        id: 5265,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3816,7 +3972,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5254,
+        id: 5266,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3825,50 +3981,50 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
             { id: 2093, word: "kuş", imageUrl: "/images/2093.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
             { id: 2093, word: "kuş", imageUrl: "/images/2093.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
             { id: 2093, word: "kuş", imageUrl: "/images/2093.webp", isCorrect: false, audioKey: "kuş", spokenText: "kuş" },
-            { id: 2100, word: "kuş", imageUrl: "/images/2100.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" }
+            { id: 2101, word: "kuş", imageUrl: "/images/2101.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" }
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5255,
+        id: 5267,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2112, word: "bebek", imageUrl: "/images/2112.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2112, word: "bebek", imageUrl: "/images/2112.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2112, word: "bebek", imageUrl: "/images/2112.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
-            { id: 2104, word: "bebek", imageUrl: "/images/2104.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" }
+            { id: 2113, word: "bebek", imageUrl: "/images/2113.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2113, word: "bebek", imageUrl: "/images/2113.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2113, word: "bebek", imageUrl: "/images/2113.webp", isCorrect: false, audioKey: "bebek", spokenText: "bebek" },
+            { id: 2105, word: "bebek", imageUrl: "/images/2105.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" }
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5256,
+        id: 5268,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2116, word: "dinozor", imageUrl: "/images/2116.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2116, word: "dinozor", imageUrl: "/images/2116.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2116, word: "dinozor", imageUrl: "/images/2116.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
-            { id: 2124, word: "dinozor", imageUrl: "/images/2124.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" }
+            { id: 2117, word: "dinozor", imageUrl: "/images/2117.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2117, word: "dinozor", imageUrl: "/images/2117.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2117, word: "dinozor", imageUrl: "/images/2117.webp", isCorrect: false, audioKey: "dinozor", spokenText: "dinozor" },
+            { id: 2125, word: "dinozor", imageUrl: "/images/2125.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" }
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5257,
+        id: 5269,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
         speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
         options: [
-            { id: 2135, word: "ördek", imageUrl: "/images/2135.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2135, word: "ördek", imageUrl: "/images/2135.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2135, word: "ördek", imageUrl: "/images/2135.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
-            { id: 2127, word: "ördek", imageUrl: "/images/2127.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" }
+            { id: 2136, word: "ördek", imageUrl: "/images/2136.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2136, word: "ördek", imageUrl: "/images/2136.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2136, word: "ördek", imageUrl: "/images/2136.webp", isCorrect: false, audioKey: "ördek", spokenText: "ördek" },
+            { id: 2128, word: "ördek", imageUrl: "/images/2128.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" }
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5258,
+        id: 5270,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3881,7 +4037,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5259,
+        id: 5271,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3894,7 +4050,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5260,
+        id: 5272,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3907,7 +4063,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5261,
+        id: 5273,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3920,7 +4076,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5262,
+        id: 5274,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3933,7 +4089,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5263,
+        id: 5275,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3946,7 +4102,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5264,
+        id: 5276,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3959,7 +4115,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5265,
+        id: 5277,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3972,7 +4128,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5266,
+        id: 5278,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3985,7 +4141,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5267,
+        id: 5279,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3998,7 +4154,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5268,
+        id: 5280,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4011,7 +4167,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5269,
+        id: 5281,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4024,7 +4180,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5270,
+        id: 5282,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4037,7 +4193,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5271,
+        id: 5283,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4050,7 +4206,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5272,
+        id: 5284,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4063,7 +4219,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5273,
+        id: 5285,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4076,7 +4232,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5274,
+        id: 5286,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4089,7 +4245,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5275,
+        id: 5287,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4102,7 +4258,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5276,
+        id: 5288,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4115,7 +4271,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5277,
+        id: 5289,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4128,7 +4284,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: roughSmoothDataYeni
-        id: 5278,
+        id: 5290,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4141,7 +4297,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5279,
+        id: 5291,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4154,7 +4310,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5280,
+        id: 5292,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4167,7 +4323,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5281,
+        id: 5293,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4180,7 +4336,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5282,
+        id: 5294,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4193,7 +4349,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5283,
+        id: 5295,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4206,7 +4362,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5284,
+        id: 5296,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4219,7 +4375,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5285,
+        id: 5297,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4232,7 +4388,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5286,
+        id: 5298,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4245,7 +4401,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5287,
+        id: 5299,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4258,7 +4414,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5288,
+        id: 5300,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4271,7 +4427,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5289,
+        id: 5301,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4284,7 +4440,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5290,
+        id: 5302,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4297,7 +4453,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5291,
+        id: 5303,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4310,7 +4466,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5292,
+        id: 5304,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4323,7 +4479,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5293,
+        id: 5305,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4336,7 +4492,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5294,
+        id: 5306,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4349,7 +4505,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5295,
+        id: 5307,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4362,7 +4518,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5296,
+        id: 5308,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4375,7 +4531,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5297,
+        id: 5309,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4388,7 +4544,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5298,
+        id: 5310,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4401,7 +4557,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5299,
+        id: 5311,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4414,7 +4570,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5300,
+        id: 5312,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4427,7 +4583,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5301,
+        id: 5313,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4440,7 +4596,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5302,
+        id: 5314,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4453,7 +4609,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5303,
+        id: 5315,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4466,7 +4622,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5304,
+        id: 5316,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4479,7 +4635,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5305,
+        id: 5317,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4492,7 +4648,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5306,
+        id: 5318,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4505,7 +4661,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5307,
+        id: 5319,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4518,7 +4674,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5308,
+        id: 5320,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4531,7 +4687,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5309,
+        id: 5321,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4544,7 +4700,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5310,
+        id: 5322,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4557,7 +4713,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5311,
+        id: 5323,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4570,7 +4726,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5312,
+        id: 5324,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4583,7 +4739,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5313,
+        id: 5325,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4596,7 +4752,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5314,
+        id: 5326,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4609,7 +4765,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5315,
+        id: 5327,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4622,7 +4778,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5316,
+        id: 5328,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4635,7 +4791,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5317,
+        id: 5329,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4648,7 +4804,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5318,
+        id: 5330,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4661,7 +4817,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5319,
+        id: 5331,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4674,7 +4830,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5320,
+        id: 5332,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4687,7 +4843,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5321,
+        id: 5333,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4700,7 +4856,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5322,
+        id: 5334,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4713,7 +4869,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5323,
+        id: 5335,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4726,7 +4882,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5324,
+        id: 5336,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4739,7 +4895,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5325,
+        id: 5337,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4752,7 +4908,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5326,
+        id: 5338,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4765,7 +4921,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5327,
+        id: 5339,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4778,7 +4934,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5328,
+        id: 5340,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4791,7 +4947,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5329,
+        id: 5341,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4804,7 +4960,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5330,
+        id: 5342,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4817,7 +4973,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5331,
+        id: 5343,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4830,7 +4986,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5332,
+        id: 5344,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4843,7 +4999,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5333,
+        id: 5345,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4856,7 +5012,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5334,
+        id: 5346,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4869,7 +5025,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5335,
+        id: 5347,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4882,7 +5038,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5336,
+        id: 5348,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4895,7 +5051,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5337,
+        id: 5349,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4908,7 +5064,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5338,
+        id: 5350,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4921,7 +5077,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5339,
+        id: 5351,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4934,7 +5090,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5340,
+        id: 5352,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4947,7 +5103,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5341,
+        id: 5353,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4960,7 +5116,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5342,
+        id: 5354,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4973,7 +5129,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5343,
+        id: 5355,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4986,7 +5142,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5344,
+        id: 5356,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4999,7 +5155,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5345,
+        id: 5357,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5012,7 +5168,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5346,
+        id: 5358,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5025,7 +5181,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5347,
+        id: 5359,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5038,7 +5194,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5348,
+        id: 5360,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5051,7 +5207,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5349,
+        id: 5361,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5064,7 +5220,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5350,
+        id: 5362,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5077,7 +5233,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5351,
+        id: 5363,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5090,7 +5246,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5352,
+        id: 5364,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5103,7 +5259,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5353,
+        id: 5365,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5116,7 +5272,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5354,
+        id: 5366,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5129,7 +5285,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5355,
+        id: 5367,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5142,7 +5298,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5356,
+        id: 5368,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5155,7 +5311,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5357,
+        id: 5369,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5168,7 +5324,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5358,
+        id: 5370,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5181,7 +5337,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5359,
+        id: 5371,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5194,7 +5350,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5360,
+        id: 5372,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5207,7 +5363,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5361,
+        id: 5373,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5220,7 +5376,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5362,
+        id: 5374,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5233,7 +5389,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5363,
+        id: 5375,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5246,7 +5402,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5364,
+        id: 5376,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5259,7 +5415,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5365,
+        id: 5377,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5272,7 +5428,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5366,
+        id: 5378,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5285,7 +5441,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5367,
+        id: 5379,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5298,7 +5454,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5368,
+        id: 5380,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5311,7 +5467,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5369,
+        id: 5381,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5324,7 +5480,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5370,
+        id: 5382,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5337,7 +5493,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5371,
+        id: 5383,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5350,7 +5506,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5372,
+        id: 5384,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5363,7 +5519,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5373,
+        id: 5385,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5376,7 +5532,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5374,
+        id: 5386,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5389,7 +5545,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5375,
+        id: 5387,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5402,7 +5558,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5376,
+        id: 5388,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5415,7 +5571,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5377,
+        id: 5389,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5428,7 +5584,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5378,
+        id: 5390,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5441,7 +5597,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5379,
+        id: 5391,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5454,7 +5610,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5380,
+        id: 5392,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,

@@ -1863,6 +1863,8 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     ActivityType.WhoseIsThis,
                     // Saat (kodla çizilmiş saatler)
                     ActivityType.ClockLearning,
+                    // Zaman kavramları (yeni sorular)
+                    ActivityType.DayNight, ActivityType.FastSlow, ActivityType.BeforeAfter,
                 ];
                 if (qualityActivities.includes(roundData.activityType)) {
                     const speechOverride = (getSpeechBlock()?.correct) as string | undefined;
@@ -2131,6 +2133,8 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     ActivityType.WhoseIsThis,
                     // Saat (kodla çizilmiş saatler)
                     ActivityType.ClockLearning,
+                    // Zaman kavramları (yeni sorular)
+                    ActivityType.DayNight, ActivityType.FastSlow, ActivityType.BeforeAfter,
                 ];
                 if (qualityActivities.includes(roundData.activityType)) {
                     const speechOverride = (getSpeechBlock()?.wrong) as string | undefined;

@@ -832,6 +832,15 @@
     },
     {
       "id": 2096,
+      "kaynak": "konum-set7-kus/arkasinda.jpg",
+      "word": "kuş",
+      "category": "none",
+      "tags": {
+        "position": "arkasında"
+      }
+    },
+    {
+      "id": 2097,
       "kaynak": "konum-set7-kus/asagida.jpg",
       "word": "kuş",
       "category": "none",
@@ -840,7 +849,7 @@
       }
     },
     {
-      "id": 2097,
+      "id": 2098,
       "kaynak": "konum-set7-kus/disinda.jpg",
       "word": "kuş",
       "category": "none",
@@ -849,7 +858,7 @@
       }
     },
     {
-      "id": 2098,
+      "id": 2099,
       "kaynak": "konum-set7-kus/icinde.jpg",
       "word": "kuş",
       "category": "none",
@@ -858,7 +867,7 @@
       }
     },
     {
-      "id": 2099,
+      "id": 2100,
       "kaynak": "konum-set7-kus/onunde.jpg",
       "word": "kuş",
       "category": "none",
@@ -867,7 +876,7 @@
       }
     },
     {
-      "id": 2100,
+      "id": 2101,
       "kaynak": "konum-set7-kus/ustunde.jpg",
       "word": "kuş",
       "category": "none",
@@ -876,7 +885,7 @@
       }
     },
     {
-      "id": 2101,
+      "id": 2102,
       "kaynak": "konum-set7-kus/yaninda.jpg",
       "word": "kuş",
       "category": "none",
@@ -885,7 +894,7 @@
       }
     },
     {
-      "id": 2102,
+      "id": 2103,
       "kaynak": "konum-set7-kus/yukarida.jpg",
       "word": "kuş",
       "category": "none",
@@ -894,14 +903,14 @@
       }
     },
     {
-      "id": 2103,
+      "id": 2104,
       "kaynak": "konum-set7-kus/zor-sehpa-kafes-icinde.jpg",
       "word": "kuş",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2104,
+      "id": 2105,
       "kaynak": "konum-set8-bebek/altinda.jpg",
       "word": "bebek",
       "category": "none",
@@ -910,14 +919,14 @@
       }
     },
     {
-      "id": 2105,
+      "id": 2106,
       "kaynak": "konum-set8-bebek/arasinda-degil.jpg",
       "word": "bebek",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2106,
+      "id": 2107,
       "kaynak": "konum-set8-bebek/arasinda.jpg",
       "word": "bebek",
       "category": "none",
@@ -926,7 +935,7 @@
       }
     },
     {
-      "id": 2107,
+      "id": 2108,
       "kaynak": "konum-set8-bebek/arkasinda.jpg",
       "word": "bebek",
       "category": "none",
@@ -935,7 +944,7 @@
       }
     },
     {
-      "id": 2108,
+      "id": 2109,
       "kaynak": "konum-set8-bebek/asagida.jpg",
       "word": "bebek",
       "category": "none",
@@ -944,7 +953,7 @@
       }
     },
     {
-      "id": 2109,
+      "id": 2110,
       "kaynak": "konum-set8-bebek/disinda.jpg",
       "word": "bebek",
       "category": "none",
@@ -953,7 +962,7 @@
       }
     },
     {
-      "id": 2110,
+      "id": 2111,
       "kaynak": "konum-set8-bebek/icinde.jpg",
       "word": "bebek",
       "category": "none",
@@ -962,7 +971,7 @@
       }
     },
     {
-      "id": 2111,
+      "id": 2112,
       "kaynak": "konum-set8-bebek/onunde.jpg",
       "word": "bebek",
       "category": "none",
@@ -971,7 +980,7 @@
       }
     },
     {
-      "id": 2112,
+      "id": 2113,
       "kaynak": "konum-set8-bebek/ustunde.jpg",
       "word": "bebek",
       "category": "none",
@@ -980,7 +989,7 @@
       }
     },
     {
-      "id": 2113,
+      "id": 2114,
       "kaynak": "konum-set8-bebek/yaninda.jpg",
       "word": "bebek",
       "category": "none",
@@ -989,7 +998,7 @@
       }
     },
     {
-      "id": 2114,
+      "id": 2115,
       "kaynak": "konum-set8-bebek/yukarida.jpg",
       "word": "bebek",
       "category": "none",
@@ -998,14 +1007,14 @@
       }
     },
     {
-      "id": 2115,
+      "id": 2116,
       "kaynak": "konum-set8-bebek/zor-sandalye-besik-icinde.jpg",
       "word": "bebek",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2116,
+      "id": 2117,
       "kaynak": "konum-set9-dinozor/altinda.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1014,14 +1023,14 @@
       }
     },
     {
-      "id": 2117,
+      "id": 2118,
       "kaynak": "konum-set9-dinozor/arasinda-degil.jpg",
       "word": "dinozor",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2118,
+      "id": 2119,
       "kaynak": "konum-set9-dinozor/arasinda.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1030,7 +1039,7 @@
       }
     },
     {
-      "id": 2119,
+      "id": 2120,
       "kaynak": "konum-set9-dinozor/arkasinda.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1039,7 +1048,7 @@
       }
     },
     {
-      "id": 2120,
+      "id": 2121,
       "kaynak": "konum-set9-dinozor/asagida.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1048,7 +1057,7 @@
       }
     },
     {
-      "id": 2121,
+      "id": 2122,
       "kaynak": "konum-set9-dinozor/disinda.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1057,7 +1066,7 @@
       }
     },
     {
-      "id": 2122,
+      "id": 2123,
       "kaynak": "konum-set9-dinozor/icinde.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1066,7 +1075,7 @@
       }
     },
     {
-      "id": 2123,
+      "id": 2124,
       "kaynak": "konum-set9-dinozor/onunde.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1075,7 +1084,7 @@
       }
     },
     {
-      "id": 2124,
+      "id": 2125,
       "kaynak": "konum-set9-dinozor/ustunde.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1084,7 +1093,7 @@
       }
     },
     {
-      "id": 2125,
+      "id": 2126,
       "kaynak": "konum-set9-dinozor/yaninda.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1093,7 +1102,7 @@
       }
     },
     {
-      "id": 2126,
+      "id": 2127,
       "kaynak": "konum-set9-dinozor/yukarida.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1102,7 +1111,7 @@
       }
     },
     {
-      "id": 2127,
+      "id": 2128,
       "kaynak": "konum-set10-ordek/altinda.jpg",
       "word": "ördek",
       "category": "none",
@@ -1111,14 +1120,14 @@
       }
     },
     {
-      "id": 2128,
+      "id": 2129,
       "kaynak": "konum-set10-ordek/arasinda-degil.jpg",
       "word": "ördek",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2129,
+      "id": 2130,
       "kaynak": "konum-set10-ordek/arasinda.jpg",
       "word": "ördek",
       "category": "none",
@@ -1127,7 +1136,7 @@
       }
     },
     {
-      "id": 2130,
+      "id": 2131,
       "kaynak": "konum-set10-ordek/arkasinda.jpg",
       "word": "ördek",
       "category": "none",
@@ -1136,7 +1145,7 @@
       }
     },
     {
-      "id": 2131,
+      "id": 2132,
       "kaynak": "konum-set10-ordek/asagida.jpg",
       "word": "ördek",
       "category": "none",
@@ -1145,7 +1154,7 @@
       }
     },
     {
-      "id": 2132,
+      "id": 2133,
       "kaynak": "konum-set10-ordek/disinda.jpg",
       "word": "ördek",
       "category": "none",
@@ -1154,7 +1163,7 @@
       }
     },
     {
-      "id": 2133,
+      "id": 2134,
       "kaynak": "konum-set10-ordek/icinde.jpg",
       "word": "ördek",
       "category": "none",
@@ -1163,7 +1172,7 @@
       }
     },
     {
-      "id": 2134,
+      "id": 2135,
       "kaynak": "konum-set10-ordek/onunde.jpg",
       "word": "ördek",
       "category": "none",
@@ -1172,7 +1181,7 @@
       }
     },
     {
-      "id": 2135,
+      "id": 2136,
       "kaynak": "konum-set10-ordek/ustunde.jpg",
       "word": "ördek",
       "category": "none",
@@ -1181,7 +1190,7 @@
       }
     },
     {
-      "id": 2136,
+      "id": 2137,
       "kaynak": "konum-set10-ordek/yaninda.jpg",
       "word": "ördek",
       "category": "none",
@@ -1190,7 +1199,7 @@
       }
     },
     {
-      "id": 2137,
+      "id": 2138,
       "kaynak": "konum-set10-ordek/yukarida.jpg",
       "word": "ördek",
       "category": "none",
@@ -7674,6 +7683,406 @@
       "category": "none",
       "tags": {
         "shape": "sivri"
+      }
+    },
+    {
+      "id": 5901,
+      "kaynak": "gunduz-gece/ahir-gece.jpg",
+      "word": "ahır",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gece"
+      }
+    },
+    {
+      "id": 5902,
+      "kaynak": "gunduz-gece/ahir-gunduz.jpg",
+      "word": "ahır",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gündüz"
+      }
+    },
+    {
+      "id": 5903,
+      "kaynak": "gunduz-gece/bahce-gece.jpg",
+      "word": "bahçe",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gece"
+      }
+    },
+    {
+      "id": 5904,
+      "kaynak": "gunduz-gece/bahce-gunduz.jpg",
+      "word": "bahçe",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gündüz"
+      }
+    },
+    {
+      "id": 5905,
+      "kaynak": "gunduz-gece/cadir-gece.jpg",
+      "word": "çadır",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gece"
+      }
+    },
+    {
+      "id": 5906,
+      "kaynak": "gunduz-gece/cadir-gunduz.jpg",
+      "word": "çadır",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gündüz"
+      }
+    },
+    {
+      "id": 5907,
+      "kaynak": "gunduz-gece/ev-gece.jpg",
+      "word": "ev",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gece"
+      }
+    },
+    {
+      "id": 5908,
+      "kaynak": "gunduz-gece/ev-gunduz.jpg",
+      "word": "ev",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gündüz"
+      }
+    },
+    {
+      "id": 5909,
+      "kaynak": "gunduz-gece/kasaba-gece.jpg",
+      "word": "kasaba",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gece"
+      }
+    },
+    {
+      "id": 5910,
+      "kaynak": "gunduz-gece/kasaba-gunduz.jpg",
+      "word": "kasaba",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gündüz"
+      }
+    },
+    {
+      "id": 5911,
+      "kaynak": "gunduz-gece/park-gece.jpg",
+      "word": "park",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gece"
+      }
+    },
+    {
+      "id": 5912,
+      "kaynak": "gunduz-gece/park-gunduz.jpg",
+      "word": "park",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gündüz"
+      }
+    },
+    {
+      "id": 5913,
+      "kaynak": "gunduz-gece/pencere-gece.jpg",
+      "word": "pencere",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gece"
+      }
+    },
+    {
+      "id": 5914,
+      "kaynak": "gunduz-gece/pencere-gunduz.jpg",
+      "word": "pencere",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gündüz"
+      }
+    },
+    {
+      "id": 5915,
+      "kaynak": "gunduz-gece/plaj-gece.jpg",
+      "word": "plaj",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gece"
+      }
+    },
+    {
+      "id": 5916,
+      "kaynak": "gunduz-gece/plaj-gunduz.jpg",
+      "word": "plaj",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gündüz"
+      }
+    },
+    {
+      "id": 5917,
+      "kaynak": "gunduz-gece/sandal-gece.jpg",
+      "word": "sandal",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gece"
+      }
+    },
+    {
+      "id": 5918,
+      "kaynak": "gunduz-gece/sandal-gunduz.jpg",
+      "word": "sandal",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gündüz"
+      }
+    },
+    {
+      "id": 5919,
+      "kaynak": "gunduz-gece/sokak-gece.jpg",
+      "word": "sokak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gece"
+      }
+    },
+    {
+      "id": 5920,
+      "kaynak": "gunduz-gece/sokak-gunduz.jpg",
+      "word": "sokak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "gündüz"
+      }
+    },
+    {
+      "id": 6001,
+      "kaynak": "hizli-yavas/at_inek-hizli.jpg",
+      "word": "at",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "hızlı"
+      }
+    },
+    {
+      "id": 6002,
+      "kaynak": "hizli-yavas/at_inek-yavas.jpg",
+      "word": "inek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "yavaş"
+      }
+    },
+    {
+      "id": 6003,
+      "kaynak": "hizli-yavas/cita_salyangoz-hizli.jpg",
+      "word": "çita",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "hızlı"
+      }
+    },
+    {
+      "id": 6004,
+      "kaynak": "hizli-yavas/cita_salyangoz-yavas.jpg",
+      "word": "salyangoz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "yavaş"
+      }
+    },
+    {
+      "id": 6005,
+      "kaynak": "hizli-yavas/cocuk-hizli.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "hızlı"
+      }
+    },
+    {
+      "id": 6006,
+      "kaynak": "hizli-yavas/cocuk-yavas.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "yavaş"
+      }
+    },
+    {
+      "id": 6007,
+      "kaynak": "hizli-yavas/kopek_tembelhayvan-hizli.jpg",
+      "word": "köpek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "hızlı"
+      }
+    },
+    {
+      "id": 6008,
+      "kaynak": "hizli-yavas/kopek_tembelhayvan-yavas.jpg",
+      "word": "tembel hayvan",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "yavaş"
+      }
+    },
+    {
+      "id": 6009,
+      "kaynak": "hizli-yavas/sahin_tirtil-hizli.jpg",
+      "word": "şahin",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "hızlı"
+      }
+    },
+    {
+      "id": 6010,
+      "kaynak": "hizli-yavas/sahin_tirtil-yavas.jpg",
+      "word": "tırtıl",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "yavaş"
+      }
+    },
+    {
+      "id": 6011,
+      "kaynak": "hizli-yavas/tavsan_kaplumbaga-hizli.jpg",
+      "word": "tavşan",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "hızlı"
+      }
+    },
+    {
+      "id": 6012,
+      "kaynak": "hizli-yavas/tavsan_kaplumbaga-yavas.jpg",
+      "word": "kaplumbağa",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "yavaş"
+      }
+    },
+    {
+      "id": 6013,
+      "kaynak": "hizli-yavas/tekne_sandal-hizli.jpg",
+      "word": "sürat teknesi",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "hızlı"
+      }
+    },
+    {
+      "id": 6014,
+      "kaynak": "hizli-yavas/tekne_sandal-yavas.jpg",
+      "word": "sandal",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "yavaş"
+      }
+    },
+    {
+      "id": 6015,
+      "kaynak": "hizli-yavas/tren_atarabasi-hizli.jpg",
+      "word": "tren",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "hızlı"
+      }
+    },
+    {
+      "id": 6016,
+      "kaynak": "hizli-yavas/tren_atarabasi-yavas.jpg",
+      "word": "at arabası",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "yavaş"
+      }
+    },
+    {
+      "id": 6017,
+      "kaynak": "hizli-yavas/tren_traktor-hizli.jpg",
+      "word": "tren",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "hızlı"
+      }
+    },
+    {
+      "id": 6018,
+      "kaynak": "hizli-yavas/tren_traktor-yavas.jpg",
+      "word": "traktör",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "yavaş"
+      }
+    },
+    {
+      "id": 6019,
+      "kaynak": "hizli-yavas/ucak_balon-hizli.jpg",
+      "word": "uçak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "hızlı"
+      }
+    },
+    {
+      "id": 6020,
+      "kaynak": "hizli-yavas/ucak_balon-yavas.jpg",
+      "word": "balon",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "yavaş"
       }
     }
   ]

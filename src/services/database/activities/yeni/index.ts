@@ -50,3 +50,5 @@ export { nearFarDataYeni } from './yakinUzakData';
 export { besideOppositeDataYeni } from './yanyanaKarsiData';
 export { tersDuzDataYeni } from './tersDuzData';
 export { sivriKutDataYeni } from './sivriKutData';
+export { dayNightDataYeni } from './gunduzGeceData';
+export { fastSlowDataYeni } from './hizliYavasData';
