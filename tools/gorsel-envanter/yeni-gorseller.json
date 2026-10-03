@@ -5212,6 +5212,690 @@
       "tags": {
         "crowd": "tenha"
       }
+    },
+    {
+      "id": 4701,
+      "kaynak": "kirisik-duzgun/etek-duzgun.jpg",
+      "word": "etek",
+      "category": "none",
+      "tags": {
+        "condition": "düzgün"
+      }
+    },
+    {
+      "id": 4702,
+      "kaynak": "kirisik-duzgun/etek-kirisik.jpg",
+      "word": "etek",
+      "category": "none",
+      "tags": {
+        "condition": "kırışık"
+      }
+    },
+    {
+      "id": 4703,
+      "kaynak": "kirisik-duzgun/gomlek-duzgun.jpg",
+      "word": "gömlek",
+      "category": "none",
+      "tags": {
+        "condition": "düzgün"
+      }
+    },
+    {
+      "id": 4704,
+      "kaynak": "kirisik-duzgun/gomlek-kirisik.jpg",
+      "word": "gömlek",
+      "category": "none",
+      "tags": {
+        "condition": "kırışık"
+      }
+    },
+    {
+      "id": 4705,
+      "kaynak": "kirisik-duzgun/kagit-duzgun.jpg",
+      "word": "kâğıt",
+      "category": "none",
+      "tags": {
+        "condition": "düzgün"
+      }
+    },
+    {
+      "id": 4706,
+      "kaynak": "kirisik-duzgun/kagit-kirisik.jpg",
+      "word": "kâğıt",
+      "category": "none",
+      "tags": {
+        "condition": "kırışık"
+      }
+    },
+    {
+      "id": 4707,
+      "kaynak": "kirisik-duzgun/ortu-duzgun.jpg",
+      "word": "yatak örtüsü",
+      "category": "none",
+      "tags": {
+        "condition": "düzgün"
+      }
+    },
+    {
+      "id": 4708,
+      "kaynak": "kirisik-duzgun/ortu-kirisik.jpg",
+      "word": "yatak örtüsü",
+      "category": "none",
+      "tags": {
+        "condition": "kırışık"
+      }
+    },
+    {
+      "id": 4709,
+      "kaynak": "kirisik-duzgun/pantolon-duzgun.jpg",
+      "word": "pantolon",
+      "category": "none",
+      "tags": {
+        "condition": "düzgün"
+      }
+    },
+    {
+      "id": 4710,
+      "kaynak": "kirisik-duzgun/pantolon-kirisik.jpg",
+      "word": "pantolon",
+      "category": "none",
+      "tags": {
+        "condition": "kırışık"
+      }
+    },
+    {
+      "id": 4711,
+      "kaynak": "kirisik-duzgun/pecete-duzgun.jpg",
+      "word": "peçete",
+      "category": "none",
+      "tags": {
+        "condition": "düzgün"
+      }
+    },
+    {
+      "id": 4712,
+      "kaynak": "kirisik-duzgun/pecete-kirisik.jpg",
+      "word": "peçete",
+      "category": "none",
+      "tags": {
+        "condition": "kırışık"
+      }
+    },
+    {
+      "id": 4713,
+      "kaynak": "kirisik-duzgun/perde-duzgun.jpg",
+      "word": "perde",
+      "category": "none",
+      "tags": {
+        "condition": "düzgün"
+      }
+    },
+    {
+      "id": 4714,
+      "kaynak": "kirisik-duzgun/perde-kirisik.jpg",
+      "word": "perde",
+      "category": "none",
+      "tags": {
+        "condition": "kırışık"
+      }
+    },
+    {
+      "id": 4715,
+      "kaynak": "kirisik-duzgun/tisort-duzgun.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "condition": "düzgün"
+      }
+    },
+    {
+      "id": 4716,
+      "kaynak": "kirisik-duzgun/tisort-kirisik.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "condition": "kırışık"
+      }
+    },
+    {
+      "id": 4801,
+      "kaynak": "dugum-cozuk/atki-cozuk.jpg",
+      "word": "atkı",
+      "category": "none",
+      "tags": {
+        "condition": "çözük"
+      }
+    },
+    {
+      "id": 4802,
+      "kaynak": "dugum-cozuk/atki-dugumlu.jpg",
+      "word": "atkı",
+      "category": "none",
+      "tags": {
+        "condition": "düğümlü"
+      }
+    },
+    {
+      "id": 4803,
+      "kaynak": "dugum-cozuk/ayakkabi-cozuk.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "condition": "çözük"
+      }
+    },
+    {
+      "id": 4804,
+      "kaynak": "dugum-cozuk/ayakkabi-dugumlu.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "condition": "düğümlü"
+      }
+    },
+    {
+      "id": 4805,
+      "kaynak": "dugum-cozuk/balon-cozuk.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "condition": "çözük"
+      }
+    },
+    {
+      "id": 4806,
+      "kaynak": "dugum-cozuk/balon-dugumlu.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "condition": "düğümlü"
+      }
+    },
+    {
+      "id": 4807,
+      "kaynak": "dugum-cozuk/halat-cozuk.jpg",
+      "word": "halat",
+      "category": "none",
+      "tags": {
+        "condition": "çözük"
+      }
+    },
+    {
+      "id": 4808,
+      "kaynak": "dugum-cozuk/halat-dugumlu.jpg",
+      "word": "halat",
+      "category": "none",
+      "tags": {
+        "condition": "düğümlü"
+      }
+    },
+    {
+      "id": 4809,
+      "kaynak": "dugum-cozuk/ip-cozuk.jpg",
+      "word": "ip",
+      "category": "none",
+      "tags": {
+        "condition": "çözük"
+      }
+    },
+    {
+      "id": 4810,
+      "kaynak": "dugum-cozuk/ip-dugumlu.jpg",
+      "word": "ip",
+      "category": "none",
+      "tags": {
+        "condition": "düğümlü"
+      }
+    },
+    {
+      "id": 4811,
+      "kaynak": "dugum-cozuk/kurdele-cozuk.jpg",
+      "word": "kurdele",
+      "category": "none",
+      "tags": {
+        "condition": "çözük"
+      }
+    },
+    {
+      "id": 4812,
+      "kaynak": "dugum-cozuk/kurdele-dugumlu.jpg",
+      "word": "kurdele",
+      "category": "none",
+      "tags": {
+        "condition": "düğümlü"
+      }
+    },
+    {
+      "id": 4813,
+      "kaynak": "dugum-cozuk/poset-cozuk.jpg",
+      "word": "poşet",
+      "category": "none",
+      "tags": {
+        "condition": "çözük"
+      }
+    },
+    {
+      "id": 4814,
+      "kaynak": "dugum-cozuk/poset-dugumlu.jpg",
+      "word": "poşet",
+      "category": "none",
+      "tags": {
+        "condition": "düğümlü"
+      }
+    },
+    {
+      "id": 4901,
+      "kaynak": "duz-egri/agac-duz.jpg",
+      "word": "ağaç",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "shape": "düz"
+      }
+    },
+    {
+      "id": 4902,
+      "kaynak": "duz-egri/agac-egri.jpg",
+      "word": "ağaç",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "shape": "eğri"
+      }
+    },
+    {
+      "id": 4903,
+      "kaynak": "duz-egri/civi-duz.jpg",
+      "word": "çivi",
+      "category": "none",
+      "tags": {
+        "shape": "düz"
+      }
+    },
+    {
+      "id": 4904,
+      "kaynak": "duz-egri/civi-egri.jpg",
+      "word": "çivi",
+      "category": "none",
+      "tags": {
+        "shape": "eğri"
+      }
+    },
+    {
+      "id": 4905,
+      "kaynak": "duz-egri/cubuk-duz.jpg",
+      "word": "çubuk",
+      "category": "none",
+      "tags": {
+        "shape": "düz"
+      }
+    },
+    {
+      "id": 4906,
+      "kaynak": "duz-egri/cubuk-egri.jpg",
+      "word": "çubuk",
+      "category": "none",
+      "tags": {
+        "shape": "eğri"
+      }
+    },
+    {
+      "id": 4907,
+      "kaynak": "duz-egri/ip-duz.jpg",
+      "word": "ip",
+      "category": "none",
+      "tags": {
+        "shape": "düz"
+      }
+    },
+    {
+      "id": 4908,
+      "kaynak": "duz-egri/ip-egri.jpg",
+      "word": "ip",
+      "category": "none",
+      "tags": {
+        "shape": "eğri"
+      }
+    },
+    {
+      "id": 4909,
+      "kaynak": "duz-egri/pipet-duz.jpg",
+      "word": "pipet",
+      "category": "none",
+      "tags": {
+        "shape": "düz"
+      }
+    },
+    {
+      "id": 4910,
+      "kaynak": "duz-egri/pipet-egri.jpg",
+      "word": "pipet",
+      "category": "none",
+      "tags": {
+        "shape": "eğri"
+      }
+    },
+    {
+      "id": 4911,
+      "kaynak": "duz-egri/ray-duz.jpg",
+      "word": "tren rayı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "shape": "düz"
+      }
+    },
+    {
+      "id": 4912,
+      "kaynak": "duz-egri/ray-egri.jpg",
+      "word": "tren rayı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "shape": "eğri"
+      }
+    },
+    {
+      "id": 4913,
+      "kaynak": "duz-egri/tel-duz.jpg",
+      "word": "tel",
+      "category": "none",
+      "tags": {
+        "shape": "düz"
+      }
+    },
+    {
+      "id": 4914,
+      "kaynak": "duz-egri/tel-egri.jpg",
+      "word": "tel",
+      "category": "none",
+      "tags": {
+        "shape": "eğri"
+      }
+    },
+    {
+      "id": 4915,
+      "kaynak": "duz-egri/yol-duz.jpg",
+      "word": "yol",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "shape": "düz"
+      }
+    },
+    {
+      "id": 4916,
+      "kaynak": "duz-egri/yol-egri.jpg",
+      "word": "yol",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "shape": "eğri"
+      }
+    },
+    {
+      "id": 5001,
+      "kaynak": "taze-bayat/domates-bayat.jpg",
+      "word": "domates",
+      "category": "none",
+      "tags": {
+        "freshness": "bayat"
+      }
+    },
+    {
+      "id": 5002,
+      "kaynak": "taze-bayat/domates-taze.jpg",
+      "word": "domates",
+      "category": "none",
+      "tags": {
+        "freshness": "taze"
+      }
+    },
+    {
+      "id": 5003,
+      "kaynak": "taze-bayat/ekmek-bayat.jpg",
+      "word": "ekmek",
+      "category": "none",
+      "tags": {
+        "freshness": "bayat"
+      }
+    },
+    {
+      "id": 5004,
+      "kaynak": "taze-bayat/ekmek-taze.jpg",
+      "word": "ekmek",
+      "category": "none",
+      "tags": {
+        "freshness": "taze"
+      }
+    },
+    {
+      "id": 5005,
+      "kaynak": "taze-bayat/elma-bayat.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "freshness": "bayat"
+      }
+    },
+    {
+      "id": 5006,
+      "kaynak": "taze-bayat/elma-taze.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "freshness": "taze"
+      }
+    },
+    {
+      "id": 5007,
+      "kaynak": "taze-bayat/havuc-bayat.jpg",
+      "word": "havuç",
+      "category": "none",
+      "tags": {
+        "freshness": "bayat"
+      }
+    },
+    {
+      "id": 5008,
+      "kaynak": "taze-bayat/havuc-taze.jpg",
+      "word": "havuç",
+      "category": "none",
+      "tags": {
+        "freshness": "taze"
+      }
+    },
+    {
+      "id": 5009,
+      "kaynak": "taze-bayat/marul-bayat.jpg",
+      "word": "marul",
+      "category": "none",
+      "tags": {
+        "freshness": "bayat"
+      }
+    },
+    {
+      "id": 5010,
+      "kaynak": "taze-bayat/marul-taze.jpg",
+      "word": "marul",
+      "category": "none",
+      "tags": {
+        "freshness": "taze"
+      }
+    },
+    {
+      "id": 5011,
+      "kaynak": "taze-bayat/muz-bayat.jpg",
+      "word": "muz",
+      "category": "none",
+      "tags": {
+        "freshness": "bayat"
+      }
+    },
+    {
+      "id": 5012,
+      "kaynak": "taze-bayat/muz-taze.jpg",
+      "word": "muz",
+      "category": "none",
+      "tags": {
+        "freshness": "taze"
+      }
+    },
+    {
+      "id": 5013,
+      "kaynak": "taze-bayat/salatalik-bayat.jpg",
+      "word": "salatalık",
+      "category": "none",
+      "tags": {
+        "freshness": "bayat"
+      }
+    },
+    {
+      "id": 5014,
+      "kaynak": "taze-bayat/salatalik-taze.jpg",
+      "word": "salatalık",
+      "category": "none",
+      "tags": {
+        "freshness": "taze"
+      }
+    },
+    {
+      "id": 5015,
+      "kaynak": "taze-bayat/simit-bayat.jpg",
+      "word": "simit",
+      "category": "none",
+      "tags": {
+        "freshness": "bayat"
+      }
+    },
+    {
+      "id": 5016,
+      "kaynak": "taze-bayat/simit-taze.jpg",
+      "word": "simit",
+      "category": "none",
+      "tags": {
+        "freshness": "taze"
+      }
+    },
+    {
+      "id": 5101,
+      "kaynak": "daginik-toplu/ayakkabilik-daginik.jpg",
+      "word": "ayakkabılık",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "dağınık"
+      }
+    },
+    {
+      "id": 5102,
+      "kaynak": "daginik-toplu/ayakkabilik-toplu.jpg",
+      "word": "ayakkabılık",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "toplu"
+      }
+    },
+    {
+      "id": 5103,
+      "kaynak": "daginik-toplu/dolap-daginik.jpg",
+      "word": "dolap",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "dağınık"
+      }
+    },
+    {
+      "id": 5104,
+      "kaynak": "daginik-toplu/dolap-toplu.jpg",
+      "word": "dolap",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "toplu"
+      }
+    },
+    {
+      "id": 5105,
+      "kaynak": "daginik-toplu/masa-daginik.jpg",
+      "word": "masa",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "dağınık"
+      }
+    },
+    {
+      "id": 5106,
+      "kaynak": "daginik-toplu/masa-toplu.jpg",
+      "word": "masa",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "toplu"
+      }
+    },
+    {
+      "id": 5107,
+      "kaynak": "daginik-toplu/oda-daginik.jpg",
+      "word": "oda",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "dağınık"
+      }
+    },
+    {
+      "id": 5108,
+      "kaynak": "daginik-toplu/oda-toplu.jpg",
+      "word": "oda",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "toplu"
+      }
+    },
+    {
+      "id": 5109,
+      "kaynak": "daginik-toplu/oyuncak-daginik.jpg",
+      "word": "oyuncak rafı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "dağınık"
+      }
+    },
+    {
+      "id": 5110,
+      "kaynak": "daginik-toplu/oyuncak-toplu.jpg",
+      "word": "oyuncak rafı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "toplu"
+      }
+    },
+    {
+      "id": 5111,
+      "kaynak": "daginik-toplu/yatak-daginik.jpg",
+      "word": "yatak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "dağınık"
+      }
+    },
+    {
+      "id": 5112,
+      "kaynak": "daginik-toplu/yatak-toplu.jpg",
+      "word": "yatak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "order": "toplu"
+      }
     }
   ]
 }

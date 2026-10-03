@@ -37,3 +37,8 @@ export { hungryFullDataYeni } from './acTokData';
 export { youngOldDataYeni } from './yasliGencData';
 export { tembelCaliskanDataYeni } from './tembelCaliskanData';
 export { kalabalikTenhaDataYeni } from './kalabalikTenhaData';
+export { kirisikDuzgunDataYeni } from './kirisikDuzgunData';
+export { dugumCozukDataYeni } from './dugumCozukData';
+export { straightCurvedDataYeni } from './duzEgriData';
+export { tazeBayatDataYeni } from './tazeBayatData';
+export { messyCleanDataYeni } from './daginikTopluData';

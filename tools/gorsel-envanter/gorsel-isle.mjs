@@ -48,7 +48,7 @@ const entries = [];
 for (const g of gorseller) {
   if (seen.has(g.id)) throw new Error(`Aynı id iki kez: ${g.id}`);
   seen.add(g.id);
-  if (g.id < 2001 || g.id > 4999) throw new Error(`id 2001-4999 aralığında olmalı: ${g.id}`);
+  if (g.id < 2001 || g.id > 9999) throw new Error(`id 2001-9999 aralığında olmalı: ${g.id}`);
   const src = path.join(RAW, g.kaynak);
   if (!fs.existsSync(src)) throw new Error(`Kaynak yok: ${g.kaynak}`);
   const dst = path.join(OUT_IMG, `${g.id}.webp`);
@@ -82,10 +82,10 @@ import { ImageMetadata } from '../../types.ts';
 export const imageDataYeni: ImageMetadata[] = ${JSON.stringify(entries, null, 2)} as ImageMetadata[];
 `;
 fs.writeFileSync(OUT_TS, ts);
-// Listede artık olmayan yeni görsel dosyalarını (2001-4999) sil
+// Listede artık olmayan yeni görsel dosyalarını (2001-9999) sil
 for (const f of fs.readdirSync(OUT_IMG)) {
   const m = /^(\d+)\.webp$/.exec(f);
-  if (m && +m[1] >= 2001 && +m[1] <= 4999 && !seen.has(+m[1])) {
+  if (m && +m[1] >= 2001 && +m[1] <= 9999 && !seen.has(+m[1])) {
     fs.unlinkSync(path.join(OUT_IMG, f));
     console.log(`silindi (listede yok): ${f}`);
   }

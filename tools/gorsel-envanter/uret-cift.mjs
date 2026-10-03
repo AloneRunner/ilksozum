@@ -134,7 +134,7 @@ const KAVRAMLAR = [
     a: { ek: 'derin', deger: 'derin', soru: 'Derin olan hangisi?', sifat: 'derindir' },
     b: { ek: 'sig', deger: 'sığ', soru: 'Sığ olan hangisi?', sifat: 'sığdır' },
     ozne: { havuz: 'havuzun suyu' },
-    kelime: { tabak: 'tabak', kase: 'kase', tencere: 'tencere', kutu: 'kutu', kova: 'kova', sepet: 'sepet',
+    kelime: { legen: 'leğen', tabak: 'tabak', kase: 'kase', tencere: 'tencere', kutu: 'kutu', kova: 'kova', sepet: 'sepet',
       cekmece: 'çekmece', firin: 'fırın kabı', cukur: 'çukur', havuz: 'havuz' },
   },
   {
@@ -192,7 +192,7 @@ const KAVRAMLAR = [
     a: { ek: 'islak', deger: 'ıslak', soru: 'Islak olan hangisi?', sifat: 'ıslaktır' },
     b: { ek: 'kuru', deger: 'kuru', soru: 'Kuru olan hangisi?', sifat: 'kurudur' },
     ozne: { sac: 'saçlar' },
-    kelime: { havlu: 'havlu', tisort: 'tişört', semsiye: 'şemsiye', sac: 'saç', kopek: 'köpek', sunger: 'sünger',
+    kelime: { corap: 'çorap', havlu: 'havlu', tisort: 'tişört', semsiye: 'şemsiye', sac: 'saç', kopek: 'köpek', sunger: 'sünger',
       yaprak: 'yaprak', toprak: 'toprak', kum: 'kum', yer: 'yer' },
   },
   {
@@ -247,7 +247,7 @@ const KAVRAMLAR = [
     a: { ek: 'sicak', deger: 'sıcak', soru: 'Sıcak olan hangisi?', sifat: 'sıcaktır' },
     b: { ek: 'soguk', deger: 'soğuk', soru: 'Soğuk olan hangisi?', sifat: 'soğuktur' },
     ozne: { kupa: 'kupadaki içecek' },
-    kelime: {
+    kelime: { sut: 'süt',
       kupa: 'kupa', hava: 'hava',
       corba_dondurma: { sicak: 'çorba', soguk: 'dondurma' },
       caydanlik_surahi: { sicak: 'çaydanlık', soguk: 'buzlu su' },
@@ -275,7 +275,7 @@ const KAVRAMLAR = [
       'portakal_elma-puruzsuz': 'butun-yarim-ceyrek/elma-butun.jpg',
       'volkanik_dere-puruzsuz': 'sert-yumusak/sunger_tas-sert.jpg',
     },
-    kelime: {
+    kelime: { ananas_mango: { puruzlu: 'ananas', puruzsuz: 'mango' },
       tahta: 'tahta',
       kavun_karpuz: { puruzlu: 'kavun', puruzsuz: 'karpuz' }, tugla_fayans: { puruzlu: 'tuğla', puruzsuz: 'fayans' },
       ceviz_yumurta: { puruzlu: 'ceviz', puruzsuz: 'yumurta' }, portakal_elma: { puruzlu: 'portakal', puruzsuz: 'elma' },
@@ -298,7 +298,7 @@ const KAVRAMLAR = [
       'gul_lale-puruzsuz': 'acik-kapali/cicek-acik.jpg',
       'masajtopu_top-puruzsuz': 'buyuk-kucuk/top-buyuk.jpg',
     },
-    kelime: {
+    kelime: { bogurtlen_bambu: { dikenli: 'böğürtlen dalı', puruzsuz: 'bambu' }, kirpioyuncak_ordek: { dikenli: 'dikenli oyuncak', puruzsuz: 'lastik ördek' },
       kestane: 'kestane',
       kaktus_elma: { dikenli: 'kaktüs', puruzsuz: 'elma' }, kirpi_yunus: { dikenli: 'kirpi', puruzsuz: 'yunus' },
       gul_lale: { dikenli: 'gül', puruzsuz: 'lale' }, denizkestanesi_kabuk: { dikenli: 'deniz kestanesi', puruzsuz: 'deniz kabuğu' },
@@ -319,7 +319,7 @@ const KAVRAMLAR = [
       'balon-mat': 'buyuk-kucuk/balon-buyuk.jpg',
       'saksi-mat': 'kirik-saglam/saksi-saglam.jpg',
     },
-    kelime: { elma: 'elma', ayakkabi: 'ayakkabı', top: 'top', kupa: 'kupa', araba: 'araba', vazo: 'vazo',
+    kelime: { tencere2: 'tencere', elma: 'elma', ayakkabi: 'ayakkabı', top: 'top', kupa: 'kupa', araba: 'araba', vazo: 'vazo',
       balon: 'balon', kasik: 'kaşık', saksi: 'saksı' },
   },
   {
@@ -337,7 +337,7 @@ const KAVRAMLAR = [
       'balon-opak': 'buyuk-kucuk/balon-buyuk.jpg',
       'kalemlik-opak': 'dolu-bos/kalemlik-dolu.jpg',
     },
-    kelime: { bardak: 'bardak', sise: 'şişe', semsiye: 'şemsiye', kutu: 'kutu', kavanoz: 'kavanoz', balon: 'balon',
+    kelime: { vazo: 'vazo', bardak: 'bardak', sise: 'şişe', semsiye: 'şemsiye', kutu: 'kutu', kavanoz: 'kavanoz', balon: 'balon',
       kalemlik: 'kalemlik', poset_torba: { seffaf: 'poşet', opak: 'kâğıt torba' }, su_sut: { seffaf: 'su', opak: 'süt' } },
   },
   {
@@ -393,7 +393,7 @@ const KAVRAMLAR = [
     etiket: 'state',
     a: { ek: 'ac', deger: 'aç', soru: 'Aç olan hangisi?', sifat: 'açtır' },
     b: { ek: 'tok', deger: 'tok', soru: 'Tok olan hangisi?', sifat: 'toktur' },
-    kelime: { cocuk: 'çocuk', bebek: 'bebek', kopek: 'köpek', kedi: 'kedi', kus: 'kuş', tavsan: 'tavşan', at: 'at', civciv: 'civciv', kuzu: 'kuzu' },
+    kelime: { inek: 'inek', cocuk: 'çocuk', bebek: 'bebek', kopek: 'köpek', kedi: 'kedi', kus: 'kuş', tavsan: 'tavşan', at: 'at', civciv: 'civciv', kuzu: 'kuzu' },
   },
   {
     // Yaşlı (ağarmış) ile genç. İnsanlarda genç yetişkin; hayvanlarda YAVRU (Kaan: yetişkin-yaşlı ayrımı çocuk için zor).
@@ -406,7 +406,7 @@ const KAVRAMLAR = [
     etiket: 'age',
     a: { ek: 'yasli', deger: 'yaşlı', soru: 'Yaşlı olan hangisi?', sifat: 'yaşlıdır' },
     b: { ek: 'genc', deger: 'genç', soru: 'Genç olan hangisi?', sifat: 'gençtir' },
-    kelime: { adam: 'adam', kadin: 'kadın', kopek: 'köpek', kedi: 'kedi', aslan: 'aslan', at: 'at', dede: 'adam' },
+    kelime: { inek: 'inek', koyun: 'koyun', nine: 'kadın', adam: 'adam', kadin: 'kadın', kopek: 'köpek', kedi: 'kedi', aslan: 'aslan', at: 'at', dede: 'adam' },
   },
   {
     klasor: 'tembel-caliskan',
@@ -418,7 +418,7 @@ const KAVRAMLAR = [
     etiket: 'state',
     a: { ek: 'caliskan', deger: 'çalışkan', soru: 'Çalışkan olan hangisi?', sifat: 'çalışkandır' },
     b: { ek: 'tembel', deger: 'tembel', soru: 'Tembel olan hangisi?', sifat: 'tembeldir' },
-    kelime: { odev: 'çocuk', bahce: 'çocuk', karinca_agustos: { caliskan: 'karınca', tembel: 'ağustos böceği' },
+    kelime: { boyaci: 'boyacı', asci: 'aşçı', kopek: 'köpek', odev: 'çocuk', bahce: 'çocuk', karinca_agustos: { caliskan: 'karınca', tembel: 'ağustos böceği' },
       sofra: 'çocuk', ciftci: 'çiftçi', firinci: 'fırıncı', supurme: 'çocuk' },
   },
   {
@@ -433,6 +433,51 @@ const KAVRAMLAR = [
     b: { ek: 'tenha', deger: 'tenha', soru: 'Tenha olan hangisi?', sifat: 'tenhadır' },
     kelime: { park: 'park', plaj: 'plaj', otobus: 'otobüs', sokak: 'sokak', oyunparki: 'oyun parkı', market: 'market',
       havuz: 'havuz', sinema: 'sinema salonu', peron: 'tren peronu', lunapark: 'lunapark' },
+  },
+  {
+    klasor: 'kirisik-duzgun', dosya: 'kirisikDuzgunData.ts', exportAdi: 'kirisikDuzgunDataYeni',
+    activityType: 'KirisikDuzgun', idBaslangic: 4701, etiket: 'condition',
+    a: { ek: 'kirisik', deger: 'kırışık', soru: 'Kırışık olan hangisi?', sifat: 'kırışıktır' },
+    b: { ek: 'duzgun', deger: 'düzgün', soru: 'Düzgün olan hangisi?', sifat: 'düzgündür' },
+    kelime: { elbise: 'elbise', masaortusu: 'masa örtüsü', tisort: 'tişört', gomlek: 'gömlek', kagit: 'kâğıt', etek: 'etek', ortu: 'yatak örtüsü',
+      pecete: 'peçete', perde: 'perde', pantolon: 'pantolon' },
+  },
+  {
+    klasor: 'dugum-cozuk', dosya: 'dugumCozukData.ts', exportAdi: 'dugumCozukDataYeni',
+    activityType: 'DugumCozuk', idBaslangic: 4801, etiket: 'condition',
+    a: { ek: 'dugumlu', deger: 'düğümlü', soru: 'Düğümlü olan hangisi?', sifat: 'düğümlüdür' },
+    b: { ek: 'cozuk', deger: 'çözük', soru: 'Çözük olan hangisi?', sifat: 'çözüktür' },
+    ozne: { ayakkabi: 'ayakkabının bağcığı', poset: 'poşetin ağzı', balon: 'balonun ipi' },
+    soruOzel: {
+      ayakkabi: { dugumlu: 'Hangi ayakkabının bağcığı düğümlü?', cozuk: 'Hangi ayakkabının bağcığı çözük?' },
+      poset: { dugumlu: 'Hangi poşetin ağzı düğümlü?', cozuk: 'Hangi poşetin ağzı çözük?' },
+      balon: { dugumlu: 'Hangi balonun ipi düğümlü?', cozuk: 'Hangi balonun ipi çözük?' },
+    },
+    kelime: { hediye: 'hediye paketi', cop: 'çöp poşeti', bezcanta: 'bez çanta', ip: 'ip', ayakkabi: 'ayakkabı', kurdele: 'kurdele', poset: 'poşet', balon: 'balon', halat: 'halat', atki: 'atkı' },
+  },
+  {
+    klasor: 'duz-egri', dosya: 'duzEgriData.ts', exportAdi: 'straightCurvedDataYeni',
+    activityType: 'StraightCurved', idBaslangic: 4901, etiket: 'shape',
+    sahneNesneler: ['yol', 'ray', 'agac'],
+    a: { ek: 'duz', deger: 'düz', soru: 'Düz olan hangisi?', sifat: 'düzdür' },
+    b: { ek: 'egri', deger: 'eğri', soru: 'Eğri olan hangisi?', sifat: 'eğridir' },
+    kelime: { kasik: 'kaşık', cit: 'çit', yol: 'yol', ray: 'tren rayı', pipet: 'pipet', tel: 'tel', civi: 'çivi', agac: 'ağaç', ip: 'ip', cubuk: 'çubuk' },
+  },
+  {
+    klasor: 'taze-bayat', dosya: 'tazeBayatData.ts', exportAdi: 'tazeBayatDataYeni',
+    activityType: 'TazeBayat', idBaslangic: 5001, etiket: 'freshness',
+    a: { ek: 'taze', deger: 'taze', soru: 'Taze olan hangisi?', sifat: 'tazedir' },
+    b: { ek: 'bayat', deger: 'bayat', soru: 'Bayat olan hangisi?', sifat: 'bayattır' },
+    kelime: { cilek: 'çilek', portakal: 'portakal', ekmek: 'ekmek', muz: 'muz', elma: 'elma', marul: 'marul', domates: 'domates', havuc: 'havuç',
+      salatalik: 'salatalık', simit: 'simit' },
+  },
+  {
+    klasor: 'daginik-toplu', dosya: 'daginikTopluData.ts', exportAdi: 'messyCleanDataYeni',
+    activityType: 'MessyClean', idBaslangic: 5101, sahne: true, etiket: 'order',
+    a: { ek: 'daginik', deger: 'dağınık', soru: 'Dağınık olan hangisi?', sifat: 'dağınıktır' },
+    b: { ek: 'toplu', deger: 'toplu', soru: 'Toplu olan hangisi?', sifat: 'topludur' },
+    kelime: { kitaplik2: 'kitaplık', tezgah2: 'mutfak tezgahı', canta: 'çanta', cekmece: 'çekmece', oda: 'oda', masa: 'masa', yatak: 'yatak', dolap: 'dolap', kitaplik: 'kitaplık', ayakkabilik: 'ayakkabılık',
+      oyuncak: 'oyuncak rafı', tezgah: 'mutfak tezgahı' },
   },
 ];
 
