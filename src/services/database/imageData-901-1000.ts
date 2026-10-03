@@ -88,7 +88,7 @@ export const imageData_901_1000: ImageMetadata[] = [
   {
     "id": 907,
     "word": "bisiklet",
-    "imageUrl": "/images/907.gif",
+    "imageUrl": "/images/907.webp",
     "audioKeys": { "default": "bisiklet", "concept": "yavaş" },
     "tags": {
       "category": "none",
@@ -102,7 +102,7 @@ export const imageData_901_1000: ImageMetadata[] = [
   {
     "id": 908,
     "word": "gergedan",
-    "imageUrl": "/images/908.gif",
+    "imageUrl": "/images/908.webp",
     "audioKeys": { "default": "gergedan", "concept": "hızlı" },
     "tags": {
       "category": "hayvanlar",
@@ -116,7 +116,7 @@ export const imageData_901_1000: ImageMetadata[] = [
   {
     "id": 909,
     "word": "deve",
-    "imageUrl": "/images/909.gif",
+    "imageUrl": "/images/909.webp",
     "audioKeys": { "default": "deve", "concept": "yavaş" },
     "tags": {
       "category": "hayvanlar",
@@ -130,7 +130,7 @@ export const imageData_901_1000: ImageMetadata[] = [
   {
     "id": 910,
     "word": "bisiklet",
-    "imageUrl": "/images/910.gif",
+    "imageUrl": "/images/910.webp",
     "audioKeys": { "default": "bisiklet", "concept": "hızlı" },
     "tags": {
       "category": "none",
@@ -144,7 +144,7 @@ export const imageData_901_1000: ImageMetadata[] = [
   {
     "id": 911,
     "word": "araba",
-    "imageUrl": "/images/911.gif",
+    "imageUrl": "/images/911.webp",
     "audioKeys": { "default": "araba", "concept": "yavaş" },
     "tags": {
       "category": "none",
@@ -158,7 +158,7 @@ export const imageData_901_1000: ImageMetadata[] = [
   {
     "id": 912,
     "word": "araba",
-    "imageUrl": "/images/912.gif",
+    "imageUrl": "/images/912.webp",
     "audioKeys": { "default": "araba", "concept": "hızlı" },
     "tags": {
       "category": "none",
@@ -172,7 +172,7 @@ export const imageData_901_1000: ImageMetadata[] = [
   {
     "id": 913,
     "word": "tren",
-    "imageUrl": "/images/913.gif",
+    "imageUrl": "/images/913.webp",
     "audioKeys": { "default": "tren", "concept": "yavaş" },
     "tags": {
       "category": "none",
@@ -187,7 +187,7 @@ export const imageData_901_1000: ImageMetadata[] = [
   {
     "id": 914,
     "word": "hızlı tren",
-    "imageUrl": "/images/914.gif",
+    "imageUrl": "/images/914.webp",
     "audioKeys": { "default": "hızlı tren", "concept": "hızlı" },
     "tags": {
       "category": "none",

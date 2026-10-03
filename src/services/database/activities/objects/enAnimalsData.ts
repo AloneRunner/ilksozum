@@ -145,7 +145,7 @@ export const enAnimalsData: ConceptRound[] = [
       { id: 42, word: 'kaplumbağa', imageUrl: '/images/42.png', isCorrect: true, audioKey: 'kaplumbağa', spokenText: 'turtle' },
       { id: 323, word: 'yılan', imageUrl: '/images/323.png', isCorrect: false, audioKey: 'yılan', spokenText: 'snake' },
       { id: 275, word: 'kurbağa', imageUrl: '/images/275.png', isCorrect: false, audioKey: 'kurbağa', spokenText: 'frog' },
-      { id: 222, word: 'salyangoz', imageUrl: '/images/222.gif', isCorrect: false, audioKey: 'salyangoz', spokenText: 'snail' }
+      { id: 222, word: 'salyangoz', imageUrl: '/images/222.webp', isCorrect: false, audioKey: 'salyangoz', spokenText: 'snail' }
     ]
   }
 ];

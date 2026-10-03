@@ -155,7 +155,7 @@ export const imageData_001_100: ImageMetadata[] = [
   {
     "id": 11,
     "word": "manzara",
-    "imageUrl": "/images/11.gif",
+    "imageUrl": "/images/11.webp",
     "audioKeys": { "default": "manzara", "concept": "gündüz" },
     "tags": {
       "category": "Doğal Yapılar & Uzay",
@@ -170,7 +170,7 @@ export const imageData_001_100: ImageMetadata[] = [
   {
     "id": 12,
     "word": "manzara",
-    "imageUrl": "/images/12.gif",
+    "imageUrl": "/images/12.webp",
     "audioKeys": { "default": "manzara", "concept": "gece" },
     "tags": {
       "category": "none",
@@ -201,7 +201,7 @@ export const imageData_001_100: ImageMetadata[] = [
   {
     "id": 14,
     "word": "tişört",
-    "imageUrl": "/images/14.gif",
+    "imageUrl": "/images/14.webp",
     "audioKeys": { "default": "tişört", "concept": "kirli" },
     "tags": {
       "category": "none",
@@ -215,7 +215,7 @@ export const imageData_001_100: ImageMetadata[] = [
   {
     "id": 15,
     "word": "tişört",
-    "imageUrl": "/images/15.gif",
+    "imageUrl": "/images/15.webp",
     "audioKeys": { "default": "tişört", "concept": "ıslak" },
     "tags": {
       "category": "none",
@@ -602,7 +602,7 @@ export const imageData_001_100: ImageMetadata[] = [
   {
     "id": 41,
     "word": "tavşan",
-    "imageUrl": "/images/41.gif",
+    "imageUrl": "/images/41.webp",
     "audioKeys": { "default": "tavşan", "concept": "hızlı" },
     "tags": {
       "category": "Hayvanlar",
@@ -617,7 +617,7 @@ export const imageData_001_100: ImageMetadata[] = [
   {
     "id": 42,
     "word": "kaplumbağa",
-    "imageUrl": "/images/42.gif",
+    "imageUrl": "/images/42.webp",
     "audioKeys": { "default": "kaplumbağa", "concept": "yavaş" },
     "tags": {
       "category": "Hayvanlar",

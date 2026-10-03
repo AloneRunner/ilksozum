@@ -653,7 +653,7 @@ export const imageData_101_200: ImageMetadata[] = [
   {
     "id": 145,
     "word": "çita",
-    "imageUrl": "/images/145.gif",
+    "imageUrl": "/images/145.webp",
     "audioKeys": { "default": "çita", "concept": "hızlı" },
     "tags": {
       "category": "Hayvanlar",
@@ -966,7 +966,7 @@ export const imageData_101_200: ImageMetadata[] = [
   {
     "id": 166,
     "word": "sünger",
-    "imageUrl": "/images/166.gif",
+    "imageUrl": "/images/166.webp",
     "audioKeys": { "default": "sünger", "concept": "ıslak" },
     "tags": {
       "category": "Ev Eşyaları",
@@ -980,7 +980,7 @@ export const imageData_101_200: ImageMetadata[] = [
   {
     "id": 167,
     "word": "sünger",
-    "imageUrl": "/images/167.gif",
+    "imageUrl": "/images/167.webp",
     "audioKeys": { "default": "sünger", "concept": "kuru" },
     "tags": {
       "category": "none",

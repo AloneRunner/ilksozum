@@ -245,7 +245,7 @@ export const sivriKutData: ConceptRound[] = [
         },
         options: [
             { id: 418, word: "kirpi", imageUrl: "/images/418.png", isCorrect: true, audioKey: "kirpi", spokenText: "kirpi" },
-            { id: 42, word: "kaplumbağa", imageUrl: "/images/42.gif", isCorrect: false, audioKey: "kaplumbaga", spokenText: "kaplumbağa" }
+            { id: 42, word: "kaplumbağa", imageUrl: "/images/42.webp", isCorrect: false, audioKey: "kaplumbaga", spokenText: "kaplumbağa" }
         ]
     },
     { 
@@ -263,7 +263,7 @@ export const sivriKutData: ConceptRound[] = [
         },
         options: [
             { id: 418, word: "kirpi", imageUrl: "/images/418.png", isCorrect: false, audioKey: "kirpi", spokenText: "kirpi" },
-            { id: 42, word: "kaplumbağa", imageUrl: "/images/42.gif", isCorrect: true, audioKey: "kaplumbaga", spokenText: "kaplumbağa" }
+            { id: 42, word: "kaplumbağa", imageUrl: "/images/42.webp", isCorrect: true, audioKey: "kaplumbaga", spokenText: "kaplumbağa" }
         ]
     },
 

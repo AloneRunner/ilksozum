@@ -329,8 +329,8 @@ export const dayNightData: ConceptRound[] = [
             az: { correct: 'Bəli! Bu gündüz mənzərəsidir.', wrong: 'Xeyr, bu gecə mənzərəsidir.' }
         },
         options: [
-            { id: 11, word: "manzara", imageUrl: "/images/11.gif", isCorrect: true, audioKey: "manzara_gunduz", spokenText: "gündüz manzara" },
-            { id: 12, word: "manzara", imageUrl: "/images/12.gif", isCorrect: false, audioKey: "manzara_gece", spokenText: "gece manzara" }
+            { id: 11, word: "manzara", imageUrl: "/images/11.webp", isCorrect: true, audioKey: "manzara_gunduz", spokenText: "gündüz manzara" },
+            { id: 12, word: "manzara", imageUrl: "/images/12.webp", isCorrect: false, audioKey: "manzara_gece", spokenText: "gece manzara" }
         ]
     },
     { 
@@ -347,8 +347,8 @@ export const dayNightData: ConceptRound[] = [
             az: { correct: 'Bəli! Bu gecə mənzərəsidir.', wrong: 'Xeyr, bu gündüz mənzərəsidir.' }
         },
         options: [
-            { id: 11, word: "manzara", imageUrl: "/images/11.gif", isCorrect: false, audioKey: "manzara_gunduz", spokenText: "gündüz manzara" },
-            { id: 12, word: "manzara", imageUrl: "/images/12.gif", isCorrect: true, audioKey: "manzara_gece", spokenText: "gece manzara" }
+            { id: 11, word: "manzara", imageUrl: "/images/11.webp", isCorrect: false, audioKey: "manzara_gunduz", spokenText: "gündüz manzara" },
+            { id: 12, word: "manzara", imageUrl: "/images/12.webp", isCorrect: true, audioKey: "manzara_gece", spokenText: "gece manzara" }
         ]
     },
     // 3. Gökyüzü
@@ -521,8 +521,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! Dovşan sürətlidir.', wrong: 'Xeyr, tısbağa yavaşdır.' }
         },
         options: [
-            { id: 41, word: "tavşan", imageUrl: "/images/41.gif", isCorrect: true, audioKey: "tavsan", spokenText: "tavşan" },
-            { id: 42, word: "kaplumbağa", imageUrl: "/images/42.gif", isCorrect: false, audioKey: "kaplumbaga", spokenText: "kaplumbağa" }
+            { id: 41, word: "tavşan", imageUrl: "/images/41.webp", isCorrect: true, audioKey: "tavsan", spokenText: "tavşan" },
+            { id: 42, word: "kaplumbağa", imageUrl: "/images/42.webp", isCorrect: false, audioKey: "kaplumbaga", spokenText: "kaplumbağa" }
         ]
     },
     { 
@@ -539,8 +539,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! Tısbağa yavaşdır.', wrong: 'Xeyr, dovşan sürətlidir.' }
         },
         options: [
-            { id: 41, word: "tavşan", imageUrl: "/images/41.gif", isCorrect: false, audioKey: "tavsan", spokenText: "tavşan" },
-            { id: 42, word: "kaplumbağa", imageUrl: "/images/42.gif", isCorrect: true, audioKey: "kaplumbaga", spokenText: "kaplumbağa" }
+            { id: 41, word: "tavşan", imageUrl: "/images/41.webp", isCorrect: false, audioKey: "tavsan", spokenText: "tavşan" },
+            { id: 42, word: "kaplumbağa", imageUrl: "/images/42.webp", isCorrect: true, audioKey: "kaplumbaga", spokenText: "kaplumbağa" }
         ]
     },
     // 2. Çita vs Salyangoz
@@ -558,8 +558,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! Hepard sürətlidir.', wrong: 'Xeyr, ilbiz yavaşdır.' }
         },
         options: [
-            { id: 145, word: "çita", imageUrl: "/images/145.gif", isCorrect: true, audioKey: "cita", spokenText: "çita" },
-            { id: 222, word: "salyangoz", imageUrl: "/images/222.gif", isCorrect: false, audioKey: "salyangoz", spokenText: "salyangoz" }
+            { id: 145, word: "çita", imageUrl: "/images/145.webp", isCorrect: true, audioKey: "cita", spokenText: "çita" },
+            { id: 222, word: "salyangoz", imageUrl: "/images/222.webp", isCorrect: false, audioKey: "salyangoz", spokenText: "salyangoz" }
         ]
     },
     { 
@@ -576,8 +576,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! İlbiz yavaşdır.', wrong: 'Xeyr, hepard sürətlidir.' }
         },
         options: [
-            { id: 145, word: "çita", imageUrl: "/images/145.gif", isCorrect: false, audioKey: "cita", spokenText: "çita" },
-            { id: 222, word: "salyangoz", imageUrl: "/images/222.gif", isCorrect: true, audioKey: "salyangoz", spokenText: "salyangoz" }
+            { id: 145, word: "çita", imageUrl: "/images/145.webp", isCorrect: false, audioKey: "cita", spokenText: "çita" },
+            { id: 222, word: "salyangoz", imageUrl: "/images/222.webp", isCorrect: true, audioKey: "salyangoz", spokenText: "salyangoz" }
         ]
     },
     // 3. Roket vs Sandal
@@ -632,8 +632,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! Bu velosiped sürətlidir.', wrong: 'Xeyr, bu velosiped yavaşdır.' }
         },
         options: [
-            { id: 910, word: "bisiklet", imageUrl: "/images/910.gif", isCorrect: true, audioKey: "hizli_bisiklet", spokenText: "hızlı bisiklet" },
-            { id: 907, word: "bisiklet", imageUrl: "/images/907.gif", isCorrect: false, audioKey: "yavas_bisiklet", spokenText: "yavaş bisiklet" }
+            { id: 910, word: "bisiklet", imageUrl: "/images/910.webp", isCorrect: true, audioKey: "hizli_bisiklet", spokenText: "hızlı bisiklet" },
+            { id: 907, word: "bisiklet", imageUrl: "/images/907.webp", isCorrect: false, audioKey: "yavas_bisiklet", spokenText: "yavaş bisiklet" }
         ]
     },
     { 
@@ -650,8 +650,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! Bu velosiped yavaşdır.', wrong: 'Xeyr, bu velosiped sürətlidir.' }
         },
         options: [
-            { id: 910, word: "bisiklet", imageUrl: "/images/910.gif", isCorrect: false, audioKey: "hizli_bisiklet", spokenText: "hızlı bisiklet" },
-            { id: 907, word: "bisiklet", imageUrl: "/images/907.gif", isCorrect: true, audioKey: "yavas_bisiklet", spokenText: "yavaş bisiklet" }
+            { id: 910, word: "bisiklet", imageUrl: "/images/910.webp", isCorrect: false, audioKey: "hizli_bisiklet", spokenText: "hızlı bisiklet" },
+            { id: 907, word: "bisiklet", imageUrl: "/images/907.webp", isCorrect: true, audioKey: "yavas_bisiklet", spokenText: "yavaş bisiklet" }
         ]
     },
     // 5. Gergedan vs Deve
@@ -669,8 +669,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! Kərgədan sürətlidir.', wrong: 'Xeyr, dəvə yavaşdır.' }
         },
         options: [
-            { id: 908, word: "gergedan", imageUrl: "/images/908.gif", isCorrect: true, audioKey: "gergedan", spokenText: "gergedan" },
-            { id: 909, word: "deve", imageUrl: "/images/909.gif", isCorrect: false, audioKey: "deve", spokenText: "deve" }
+            { id: 908, word: "gergedan", imageUrl: "/images/908.webp", isCorrect: true, audioKey: "gergedan", spokenText: "gergedan" },
+            { id: 909, word: "deve", imageUrl: "/images/909.webp", isCorrect: false, audioKey: "deve", spokenText: "deve" }
         ]
     },
     { 
@@ -687,8 +687,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! Dəvə yavaşdır.', wrong: 'Xeyr, kərgədan sürətlidir.' }
         },
         options: [
-            { id: 908, word: "gergedan", imageUrl: "/images/908.gif", isCorrect: false, audioKey: "gergedan", spokenText: "gergedan" },
-            { id: 909, word: "deve", imageUrl: "/images/909.gif", isCorrect: true, audioKey: "deve", spokenText: "deve" }
+            { id: 908, word: "gergedan", imageUrl: "/images/908.webp", isCorrect: false, audioKey: "gergedan", spokenText: "gergedan" },
+            { id: 909, word: "deve", imageUrl: "/images/909.webp", isCorrect: true, audioKey: "deve", spokenText: "deve" }
         ]
     },
     // 6. Arabalar
@@ -706,8 +706,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! Bu maşın sürətlidir.', wrong: 'Xeyr, bu maşın yavaşdır.' }
         },
         options: [
-            { id: 912, word: "araba", imageUrl: "/images/912.gif", isCorrect: true, audioKey: "hizli_araba", spokenText: "hızlı araba" },
-            { id: 911, word: "araba", imageUrl: "/images/911.gif", isCorrect: false, audioKey: "yavas_araba", spokenText: "yavaş araba" }
+            { id: 912, word: "araba", imageUrl: "/images/912.webp", isCorrect: true, audioKey: "hizli_araba", spokenText: "hızlı araba" },
+            { id: 911, word: "araba", imageUrl: "/images/911.webp", isCorrect: false, audioKey: "yavas_araba", spokenText: "yavaş araba" }
         ]
     },
     { 
@@ -724,8 +724,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! Bu maşın yavaşdır.', wrong: 'Xeyr, bu maşın sürətlidir.' }
         },
         options: [
-            { id: 912, word: "araba", imageUrl: "/images/912.gif", isCorrect: false, audioKey: "hizli_araba", spokenText: "hızlı araba" },
-            { id: 911, word: "araba", imageUrl: "/images/911.gif", isCorrect: true, audioKey: "yavas_araba", spokenText: "yavaş araba" }
+            { id: 912, word: "araba", imageUrl: "/images/912.webp", isCorrect: false, audioKey: "hizli_araba", spokenText: "hızlı araba" },
+            { id: 911, word: "araba", imageUrl: "/images/911.webp", isCorrect: true, audioKey: "yavas_araba", spokenText: "yavaş araba" }
         ]
     },
     // 7. Trenler
@@ -743,8 +743,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! Bu qatar sürətlidir.', wrong: 'Xeyr, bu qatar yavaşdır.' }
         },
         options: [
-            { id: 914, word: "tren", imageUrl: "/images/914.gif", isCorrect: true, audioKey: "hizli_tren", spokenText: "hızlı tren" },
-            { id: 913, word: "tren", imageUrl: "/images/913.gif", isCorrect: false, audioKey: "yavas_tren", spokenText: "yavaş tren" }
+            { id: 914, word: "tren", imageUrl: "/images/914.webp", isCorrect: true, audioKey: "hizli_tren", spokenText: "hızlı tren" },
+            { id: 913, word: "tren", imageUrl: "/images/913.webp", isCorrect: false, audioKey: "yavas_tren", spokenText: "yavaş tren" }
         ]
     },
     { 
@@ -761,8 +761,8 @@ export const fastSlowData: ConceptRound[] = [
             az: { correct: 'Bəli! Bu qatar yavaşdır.', wrong: 'Xeyr, bu qatar sürətlidir.' }
         },
         options: [
-            { id: 914, word: "tren", imageUrl: "/images/914.gif", isCorrect: false, audioKey: "hizli_tren", spokenText: "hızlı tren" },
-            { id: 913, word: "tren", imageUrl: "/images/913.gif", isCorrect: true, audioKey: "yavas_tren", spokenText: "yavaş tren" }
+            { id: 914, word: "tren", imageUrl: "/images/914.webp", isCorrect: false, audioKey: "hizli_tren", spokenText: "hızlı tren" },
+            { id: 913, word: "tren", imageUrl: "/images/913.webp", isCorrect: true, audioKey: "yavas_tren", spokenText: "yavaş tren" }
         ]
     },
 ];

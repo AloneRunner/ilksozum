@@ -295,7 +295,7 @@ export const imageData_201_300: ImageMetadata[] = [
   {
     "id": 222,
     "word": "salyangoz",
-    "imageUrl": "/images/222.gif",
+    "imageUrl": "/images/222.webp",
     "audioKeys": { "default": "salyangoz", "concept": "yavaş" },
     "tags": {
       "category": "Hayvanlar",

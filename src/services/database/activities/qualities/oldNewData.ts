@@ -16,8 +16,8 @@ export const oldNewData: ConceptRound[] = [
             az: { correct: 'Bəli! Velosiped köhnədir.', wrong: 'Xeyr, velosiped yenidir.' }
         },
         options: [
-            { id: 907, word: "bisiklet", imageUrl: "/images/907.gif", isCorrect: true, audioKey: "bisiklet", spokenText: "eski bisiklet" },
-            { id: 910, word: "bisiklet", imageUrl: "/images/910.gif", isCorrect: false, audioKey: "bisiklet", spokenText: "yeni bisiklet" }
+            { id: 907, word: "bisiklet", imageUrl: "/images/907.webp", isCorrect: true, audioKey: "bisiklet", spokenText: "eski bisiklet" },
+            { id: 910, word: "bisiklet", imageUrl: "/images/910.webp", isCorrect: false, audioKey: "bisiklet", spokenText: "yeni bisiklet" }
         ]
     },
     { 
@@ -34,8 +34,8 @@ export const oldNewData: ConceptRound[] = [
             az: { correct: 'Bəli! Velosiped yenidir.', wrong: 'Xeyr, velosiped köhnədir.' }
         },
         options: [
-            { id: 907, word: "bisiklet", imageUrl: "/images/907.gif", isCorrect: false, audioKey: "bisiklet", spokenText: "eski bisiklet" },
-            { id: 910, word: "bisiklet", imageUrl: "/images/910.gif", isCorrect: true, audioKey: "bisiklet", spokenText: "yeni bisiklet" }
+            { id: 907, word: "bisiklet", imageUrl: "/images/907.webp", isCorrect: false, audioKey: "bisiklet", spokenText: "eski bisiklet" },
+            { id: 910, word: "bisiklet", imageUrl: "/images/910.webp", isCorrect: true, audioKey: "bisiklet", spokenText: "yeni bisiklet" }
         ]
     },
 
@@ -54,8 +54,8 @@ export const oldNewData: ConceptRound[] = [
             az: { correct: 'Bəli! Maşın köhnədir.', wrong: 'Xeyr, maşın yenidir.' }
         },
         options: [
-            { id: 911, word: "araba", imageUrl: "/images/911.gif", isCorrect: true, audioKey: "araba", spokenText: "eski araba" },
-            { id: 912, word: "araba", imageUrl: "/images/912.gif", isCorrect: false, audioKey: "araba", spokenText: "yeni araba" }
+            { id: 911, word: "araba", imageUrl: "/images/911.webp", isCorrect: true, audioKey: "araba", spokenText: "eski araba" },
+            { id: 912, word: "araba", imageUrl: "/images/912.webp", isCorrect: false, audioKey: "araba", spokenText: "yeni araba" }
         ]
     },
     { 
@@ -72,8 +72,8 @@ export const oldNewData: ConceptRound[] = [
             az: { correct: 'Bəli! Maşın yenidir.', wrong: 'Xeyr, maşın köhnədir.' }
         },
         options: [
-            { id: 911, word: "araba", imageUrl: "/images/911.gif", isCorrect: false, audioKey: "araba", spokenText: "eski araba" },
-            { id: 912, word: "araba", imageUrl: "/images/912.gif", isCorrect: true, audioKey: "araba", spokenText: "yeni araba" }
+            { id: 911, word: "araba", imageUrl: "/images/911.webp", isCorrect: false, audioKey: "araba", spokenText: "eski araba" },
+            { id: 912, word: "araba", imageUrl: "/images/912.webp", isCorrect: true, audioKey: "araba", spokenText: "yeni araba" }
         ]
     },
 
@@ -92,8 +92,8 @@ export const oldNewData: ConceptRound[] = [
             az: { correct: 'Bəli! Qatar köhnədir.', wrong: 'Xeyr, qatar yenidir.' }
         },
         options: [
-            { id: 913, word: "tren", imageUrl: "/images/913.gif", isCorrect: true, audioKey: "tren", spokenText: "eski tren" },
-            { id: 914, word: "tren", imageUrl: "/images/914.gif", isCorrect: false, audioKey: "tren", spokenText: "yeni tren" }
+            { id: 913, word: "tren", imageUrl: "/images/913.webp", isCorrect: true, audioKey: "tren", spokenText: "eski tren" },
+            { id: 914, word: "tren", imageUrl: "/images/914.webp", isCorrect: false, audioKey: "tren", spokenText: "yeni tren" }
         ]
     },
     { 
@@ -110,8 +110,8 @@ export const oldNewData: ConceptRound[] = [
             az: { correct: 'Bəli! Qatar yenidir.', wrong: 'Xeyr, qatar köhnədir.' }
         },
         options: [
-            { id: 913, word: "tren", imageUrl: "/images/913.gif", isCorrect: false, audioKey: "tren", spokenText: "eski tren" },
-            { id: 914, word: "tren", imageUrl: "/images/914.gif", isCorrect: true, audioKey: "tren", spokenText: "yeni tren" }
+            { id: 913, word: "tren", imageUrl: "/images/913.webp", isCorrect: false, audioKey: "tren", spokenText: "eski tren" },
+            { id: 914, word: "tren", imageUrl: "/images/914.webp", isCorrect: true, audioKey: "tren", spokenText: "yeni tren" }
         ]
     },
 

@@ -21,16 +21,21 @@ function shuffle<T>(arr: T[]): T[] {
   return [...arr].sort(() => 0.5 - Math.random());
 }
 
+function isAlreadyRealistic(url: string): boolean {
+  const m = /\/images\/(\d+)\.webp$/.exec(url);
+  return !!m && Number(m[1]) >= 2001;
+}
+
 function toRealisticPng(url: string): string {
-  // Yeni .webp görseller zaten gerçekçi
-  if (url.endsWith('.webp')) return url;
+  // Yeni gerçekçi görseller (id 2001+ .webp) zaten gerçekçi
+  if (isAlreadyRealistic(url)) return url;
   const fileName = url.split('/').pop() || '';
   const fileStem = fileName.replace(/\.[^.]+$/, '');
   return `/realistic/${fileStem}.png`;
 }
 
 function toMirroredRealistic(url: string): string {
-  if (url.endsWith('.webp')) return url;
+  if (isAlreadyRealistic(url)) return url;
   return url.replace('/images/', '/realistic/');
 }
 

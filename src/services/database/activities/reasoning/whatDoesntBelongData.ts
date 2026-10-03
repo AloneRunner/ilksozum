@@ -630,7 +630,7 @@ export const whatDoesntBelongData: ConceptRound[] = [
             { id: 42, word: "kaplumbağa", imageUrl: "/images/42.png", isCorrect: false, audioKey: "kaplumbaga", spokenText: "kaplumbağa" },
             { id: 217, word: "tornavida", imageUrl: "/images/217.png", isCorrect: true, audioKey: "tornavida", spokenText: "tornavida" },
             { id: 275, word: "kurbağa", imageUrl: "/images/275.png", isCorrect: false, audioKey: "kurbaga", spokenText: "kurbağa" },
-            { id: 222, word: "salyangoz", imageUrl: "/images/222.gif", isCorrect: false, audioKey: "salyangoz", spokenText: "salyangoz" }
+            { id: 222, word: "salyangoz", imageUrl: "/images/222.webp", isCorrect: false, audioKey: "salyangoz", spokenText: "salyangoz" }
         ]
     },
     { 

@@ -294,7 +294,7 @@ export const imageData_501_600: ImageMetadata[] = [
   {
     "id": 521,
     "word": "köpek",
-    "imageUrl": "/images/521.gif",
+    "imageUrl": "/images/521.webp",
     "audioKeys": { "default": "köpek", "concept": "kuru" },
     "tags": {
       "category": "none",
@@ -308,7 +308,7 @@ export const imageData_501_600: ImageMetadata[] = [
   {
     "id": 522,
     "word": "köpek",
-    "imageUrl": "/images/522.gif",
+    "imageUrl": "/images/522.webp",
     "audioKeys": { "default": "köpek", "concept": "ıslak" },
     "tags": {
       "category": "none",

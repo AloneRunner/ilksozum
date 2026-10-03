@@ -131,7 +131,7 @@ export const cleanDirtyData: ConceptRound[] = [
         },
         options: [
             { id: 13, word: "tişört", imageUrl: "/images/13.png", isCorrect: true, audioKey: "temiz_tisort", spokenText: "tişört" },
-            { id: 14, word: "tişört", imageUrl: "/images/14.gif", isCorrect: false, audioKey: "kirli_tisort", spokenText: "tişört" }
+            { id: 14, word: "tişört", imageUrl: "/images/14.webp", isCorrect: false, audioKey: "kirli_tisort", spokenText: "tişört" }
         ]
     },
     { 
@@ -149,7 +149,7 @@ export const cleanDirtyData: ConceptRound[] = [
         },
         options: [
             { id: 13, word: "tişört", imageUrl: "/images/13.png", isCorrect: false, audioKey: "temiz_tisort", spokenText: "tişört" },
-            { id: 14, word: "tişört", imageUrl: "/images/14.gif", isCorrect: true, audioKey: "kirli_tisort", spokenText: "tişört" }
+            { id: 14, word: "tişört", imageUrl: "/images/14.webp", isCorrect: true, audioKey: "kirli_tisort", spokenText: "tişört" }
         ]
     },
 

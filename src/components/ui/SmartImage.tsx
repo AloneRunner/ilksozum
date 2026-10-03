@@ -5,8 +5,12 @@ interface SmartImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   disableRealistic?: boolean;
 }
 
-// Yeni .webp görseller zaten gerçekçi; ayrı bir "realistic" karşılıkları yok.
-const isAlreadyRealistic = (src: string): boolean => src.endsWith('.webp');
+// Yeni gerçekçi görseller (id 2001+ .webp) zaten gerçekçi; ayrı bir "realistic" karşılıkları yok.
+// (id < 2001 .webp dosyaları eski GIF'lerin dönüştürülmüş hali: gerçekçi karşılıkları /realistic/<id>.png.)
+const isAlreadyRealistic = (src: string): boolean => {
+    const m = /\/images\/(\d+)\.webp$/.exec(src);
+    return !!m && Number(m[1]) >= 2001;
+};
 
 const getRealisticPngPath = (src: string): string => {
         if (!src.startsWith('/images/') || isAlreadyRealistic(src)) return src;

@@ -168,7 +168,7 @@ export const tembelCaliskanData: ConceptRound[] = [
             az: { correct: 'Bəli! Tısbağa tənbəldir.', wrong: 'Xeyr, xoruz çalışqandır.' }
         },
         options: [
-            { id: 42, word: "kaplumbağa", imageUrl: "/images/42.gif", isCorrect: true, audioKey: "kaplumbaga", spokenText: "kaplumbağa" },
+            { id: 42, word: "kaplumbağa", imageUrl: "/images/42.webp", isCorrect: true, audioKey: "kaplumbaga", spokenText: "kaplumbağa" },
             { id: 102, word: "horoz", imageUrl: "/images/102.png", isCorrect: false, audioKey: "horoz", spokenText: "horoz" }
         ]
     },
@@ -186,7 +186,7 @@ export const tembelCaliskanData: ConceptRound[] = [
             az: { correct: 'Bəli! Xoruz çalışqandır.', wrong: 'Xeyr, tısbağa tənbəldir.' }
         },
         options: [
-            { id: 42, word: "kaplumbağa", imageUrl: "/images/42.gif", isCorrect: false, audioKey: "kaplumbaga", spokenText: "kaplumbağa" },
+            { id: 42, word: "kaplumbağa", imageUrl: "/images/42.webp", isCorrect: false, audioKey: "kaplumbaga", spokenText: "kaplumbağa" },
             { id: 102, word: "horoz", imageUrl: "/images/102.png", isCorrect: true, audioKey: "horoz", spokenText: "horoz" }
         ]
     },
