@@ -7181,6 +7181,42 @@
       "tags": {
         "position": "yan yana"
       }
+    },
+    {
+      "id": 5701,
+      "kaynak": "ters-duz/semsiye-duz.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5702,
+      "kaynak": "ters-duz/semsiye-ters.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5801,
+      "kaynak": "sivri-kut/kalem-kut.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "shape": "küt"
+      }
+    },
+    {
+      "id": 5802,
+      "kaynak": "sivri-kut/kalem-sivri.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "shape": "sivri"
+      }
     }
   ]
 }
