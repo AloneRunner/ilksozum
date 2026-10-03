@@ -48,3 +48,5 @@ export { aliveLifelessDataYeni } from './canliCansizData';
 export { saatDataYeni } from './saatData';
 export { nearFarDataYeni } from './yakinUzakData';
 export { besideOppositeDataYeni } from './yanyanaKarsiData';
+export { tersDuzDataYeni } from './tersDuzData';
+export { sivriKutDataYeni } from './sivriKutData';

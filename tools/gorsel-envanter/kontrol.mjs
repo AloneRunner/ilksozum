@@ -35,6 +35,7 @@ const ADLAR = {
   tazeBayatDataYeni: 'Taze / Bayat', messyCleanDataYeni: 'Dağınık / Toplu',
   leftRightDataYeni: 'Sağa / Sola bakan', aliveLifelessDataYeni: 'Canlı / Cansız',
   nearFarDataYeni: 'Yakın / Uzak', besideOppositeDataYeni: 'Yan yana / Karşı karşıya', saatDataYeni: 'Saat',
+  tersDuzDataYeni: 'Ters / Düz', sivriKutDataYeni: 'Sivri / Küt',
 };
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const img = o => `<img loading="lazy" src="../../public/images/${o.id}.webp" alt="">`;

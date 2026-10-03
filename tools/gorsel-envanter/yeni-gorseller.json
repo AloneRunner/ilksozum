@@ -6844,6 +6844,46 @@
     },
     {
       "id": 5503,
+      "kaynak": "yakin-uzak/araba-uzak.jpg",
+      "word": "araba",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "uzak"
+      }
+    },
+    {
+      "id": 5504,
+      "kaynak": "yakin-uzak/araba-yakin.jpg",
+      "word": "araba",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "yakın"
+      }
+    },
+    {
+      "id": 5505,
+      "kaynak": "yakin-uzak/balon-uzak.jpg",
+      "word": "balon",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "uzak"
+      }
+    },
+    {
+      "id": 5506,
+      "kaynak": "yakin-uzak/balon-yakin.jpg",
+      "word": "balon",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "distance": "yakın"
+      }
+    },
+    {
+      "id": 5507,
       "kaynak": "yakin-uzak/bisiklet-uzak.jpg",
       "word": "bisiklet",
       "category": "none",
@@ -6853,7 +6893,7 @@
       }
     },
     {
-      "id": 5504,
+      "id": 5508,
       "kaynak": "yakin-uzak/bisiklet-yakin.jpg",
       "word": "bisiklet",
       "category": "none",
@@ -6863,7 +6903,7 @@
       }
     },
     {
-      "id": 5505,
+      "id": 5509,
       "kaynak": "yakin-uzak/cocuk-uzak.jpg",
       "word": "çocuk",
       "category": "none",
@@ -6873,7 +6913,7 @@
       }
     },
     {
-      "id": 5506,
+      "id": 5510,
       "kaynak": "yakin-uzak/cocuk-yakin.jpg",
       "word": "çocuk",
       "category": "none",
@@ -6883,7 +6923,7 @@
       }
     },
     {
-      "id": 5507,
+      "id": 5511,
       "kaynak": "yakin-uzak/ev-uzak.jpg",
       "word": "ev",
       "category": "none",
@@ -6893,7 +6933,7 @@
       }
     },
     {
-      "id": 5508,
+      "id": 5512,
       "kaynak": "yakin-uzak/ev-yakin.jpg",
       "word": "ev",
       "category": "none",
@@ -6903,7 +6943,7 @@
       }
     },
     {
-      "id": 5509,
+      "id": 5513,
       "kaynak": "yakin-uzak/inek-uzak.jpg",
       "word": "inek",
       "category": "none",
@@ -6913,7 +6953,7 @@
       }
     },
     {
-      "id": 5510,
+      "id": 5514,
       "kaynak": "yakin-uzak/inek-yakin.jpg",
       "word": "inek",
       "category": "none",
@@ -6923,7 +6963,7 @@
       }
     },
     {
-      "id": 5511,
+      "id": 5515,
       "kaynak": "yakin-uzak/kopek-uzak.jpg",
       "word": "köpek",
       "category": "none",
@@ -6933,7 +6973,7 @@
       }
     },
     {
-      "id": 5512,
+      "id": 5516,
       "kaynak": "yakin-uzak/kopek-yakin.jpg",
       "word": "köpek",
       "category": "none",
@@ -6943,7 +6983,7 @@
       }
     },
     {
-      "id": 5513,
+      "id": 5517,
       "kaynak": "yakin-uzak/tekne-uzak.jpg",
       "word": "tekne",
       "category": "none",
@@ -6953,7 +6993,7 @@
       }
     },
     {
-      "id": 5514,
+      "id": 5518,
       "kaynak": "yakin-uzak/tekne-yakin.jpg",
       "word": "tekne",
       "category": "none",
@@ -6963,7 +7003,7 @@
       }
     },
     {
-      "id": 5515,
+      "id": 5519,
       "kaynak": "yakin-uzak/top-uzak.jpg",
       "word": "top",
       "category": "none",
@@ -6973,7 +7013,7 @@
       }
     },
     {
-      "id": 5516,
+      "id": 5520,
       "kaynak": "yakin-uzak/top-yakin.jpg",
       "word": "top",
       "category": "none",
@@ -7184,6 +7224,96 @@
     },
     {
       "id": 5701,
+      "kaynak": "ters-duz/ayi-duz.jpg",
+      "word": "oyuncak ayı",
+      "category": "none",
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5702,
+      "kaynak": "ters-duz/ayi-ters.jpg",
+      "word": "oyuncak ayı",
+      "category": "none",
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5703,
+      "kaynak": "ters-duz/fincan-duz.jpg",
+      "word": "fincan",
+      "category": "none",
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5704,
+      "kaynak": "ters-duz/fincan-ters.jpg",
+      "word": "fincan",
+      "category": "none",
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5705,
+      "kaynak": "ters-duz/kova-duz.jpg",
+      "word": "kova",
+      "category": "none",
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5706,
+      "kaynak": "ters-duz/kova-ters.jpg",
+      "word": "kova",
+      "category": "none",
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5707,
+      "kaynak": "ters-duz/saksi-duz.jpg",
+      "word": "saksı",
+      "category": "none",
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5708,
+      "kaynak": "ters-duz/saksi-ters.jpg",
+      "word": "saksı",
+      "category": "none",
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5709,
+      "kaynak": "ters-duz/sandalye-duz.jpg",
+      "word": "sandalye",
+      "category": "none",
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5710,
+      "kaynak": "ters-duz/sandalye-ters.jpg",
+      "word": "sandalye",
+      "category": "none",
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5711,
       "kaynak": "ters-duz/semsiye-duz.jpg",
       "word": "şemsiye",
       "category": "none",
@@ -7192,7 +7322,7 @@
       }
     },
     {
-      "id": 5702,
+      "id": 5712,
       "kaynak": "ters-duz/semsiye-ters.jpg",
       "word": "şemsiye",
       "category": "none",
@@ -7201,7 +7331,115 @@
       }
     },
     {
+      "id": 5713,
+      "kaynak": "ters-duz/sise-duz.jpg",
+      "word": "şişe",
+      "category": "none",
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5714,
+      "kaynak": "ters-duz/sise-ters.jpg",
+      "word": "şişe",
+      "category": "none",
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5715,
+      "kaynak": "ters-duz/tabure-duz.jpg",
+      "word": "tabure",
+      "category": "none",
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5716,
+      "kaynak": "ters-duz/tabure-ters.jpg",
+      "word": "tabure",
+      "category": "none",
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
       "id": 5801,
+      "kaynak": "sivri-kut/cati-kut.jpg",
+      "word": "çatı",
+      "category": "none",
+      "tags": {
+        "shape": "küt"
+      }
+    },
+    {
+      "id": 5802,
+      "kaynak": "sivri-kut/cati-sivri.jpg",
+      "word": "çatı",
+      "category": "none",
+      "tags": {
+        "shape": "sivri"
+      }
+    },
+    {
+      "id": 5803,
+      "kaynak": "sivri-kut/civi-kut.jpg",
+      "word": "çivi",
+      "category": "none",
+      "tags": {
+        "shape": "küt"
+      }
+    },
+    {
+      "id": 5804,
+      "kaynak": "sivri-kut/civi-sivri.jpg",
+      "word": "çivi",
+      "category": "none",
+      "tags": {
+        "shape": "sivri"
+      }
+    },
+    {
+      "id": 5805,
+      "kaynak": "sivri-kut/cubuk-kut.jpg",
+      "word": "çubuk",
+      "category": "none",
+      "tags": {
+        "shape": "küt"
+      }
+    },
+    {
+      "id": 5806,
+      "kaynak": "sivri-kut/cubuk-sivri.jpg",
+      "word": "çubuk",
+      "category": "none",
+      "tags": {
+        "shape": "sivri"
+      }
+    },
+    {
+      "id": 5807,
+      "kaynak": "sivri-kut/havuc-kut.jpg",
+      "word": "havuç",
+      "category": "none",
+      "tags": {
+        "shape": "küt"
+      }
+    },
+    {
+      "id": 5808,
+      "kaynak": "sivri-kut/havuc-sivri.jpg",
+      "word": "havuç",
+      "category": "none",
+      "tags": {
+        "shape": "sivri"
+      }
+    },
+    {
+      "id": 5809,
       "kaynak": "sivri-kut/kalem-kut.jpg",
       "word": "kalem",
       "category": "none",
@@ -7210,9 +7448,81 @@
       }
     },
     {
-      "id": 5802,
+      "id": 5810,
       "kaynak": "sivri-kut/kalem-sivri.jpg",
       "word": "kalem",
+      "category": "none",
+      "tags": {
+        "shape": "sivri"
+      }
+    },
+    {
+      "id": 5811,
+      "kaynak": "sivri-kut/kalem2-kut.jpg",
+      "word": "boya kalemi",
+      "category": "none",
+      "tags": {
+        "shape": "küt"
+      }
+    },
+    {
+      "id": 5812,
+      "kaynak": "sivri-kut/kalem2-sivri.jpg",
+      "word": "boya kalemi",
+      "category": "none",
+      "tags": {
+        "shape": "sivri"
+      }
+    },
+    {
+      "id": 5813,
+      "kaynak": "sivri-kut/kaya-kut.jpg",
+      "word": "taş",
+      "category": "none",
+      "tags": {
+        "shape": "küt"
+      }
+    },
+    {
+      "id": 5814,
+      "kaynak": "sivri-kut/kaya-sivri.jpg",
+      "word": "taş",
+      "category": "none",
+      "tags": {
+        "shape": "sivri"
+      }
+    },
+    {
+      "id": 5815,
+      "kaynak": "sivri-kut/kazik-kut.jpg",
+      "word": "kazık",
+      "category": "none",
+      "tags": {
+        "shape": "küt"
+      }
+    },
+    {
+      "id": 5816,
+      "kaynak": "sivri-kut/kazik-sivri.jpg",
+      "word": "kazık",
+      "category": "none",
+      "tags": {
+        "shape": "sivri"
+      }
+    },
+    {
+      "id": 5817,
+      "kaynak": "sivri-kut/makas-kut.jpg",
+      "word": "makas",
+      "category": "none",
+      "tags": {
+        "shape": "küt"
+      }
+    },
+    {
+      "id": 5818,
+      "kaynak": "sivri-kut/makas-sivri.jpg",
+      "word": "makas",
       "category": "none",
       "tags": {
         "shape": "sivri"

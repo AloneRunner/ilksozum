@@ -498,7 +498,7 @@ const KAVRAMLAR = [
     a: { ek: 'ters', deger: 'ters', soru: 'Ters olan hangisi?', sifat: 'terstir' },
     b: { ek: 'duz', deger: 'düz', soru: 'Düz olan hangisi?', sifat: 'düzdür' },
     kelime: { semsiye: 'şemsiye', bardak: 'bardak', kitap: 'kitap', sandalye: 'sandalye', kova: 'kova', saksi: 'saksı',
-      fincan: 'fincan', sise: 'şişe', masa: 'masa', ayi: 'oyuncak ayı' },
+      fincan: 'fincan', sise: 'şişe', masa: 'masa', ayi: 'oyuncak ayı', tabure: 'tabure' },
   },
   {
     klasor: 'sivri-kut', dosya: 'sivriKutData.ts', exportAdi: 'sivriKutDataYeni',
@@ -506,7 +506,7 @@ const KAVRAMLAR = [
     a: { ek: 'sivri', deger: 'sivri', soru: 'Sivri olan hangisi?', sifat: 'sivridir' },
     b: { ek: 'kut', deger: 'küt', soru: 'Küt olan hangisi?', sifat: 'küttür' },
     ozne: { kalem: 'kalemin ucu', kalem2: 'boya kaleminin ucu', makas: 'makasın ucu', cubuk: 'çubuğun ucu', havuc: 'havucun ucu',
-      kazik: 'kazığın ucu', yaprak: 'yaprağın ucu', ayakkabi: 'ayakkabının burnu' },
+      kazik: 'kazığın ucu', yaprak: 'yaprağın ucu', ayakkabi: 'ayakkabının burnu', civi: 'çivinin ucu' },
     soruOzel: {
       kalem: { sivri: 'Hangi kalemin ucu sivri?', kut: 'Hangi kalemin ucu küt?' },
       kalem2: { sivri: 'Hangi boya kaleminin ucu sivri?', kut: 'Hangi boya kaleminin ucu küt?' },
@@ -516,9 +516,10 @@ const KAVRAMLAR = [
       kazik: { sivri: 'Hangi kazığın ucu sivri?', kut: 'Hangi kazığın ucu küt?' },
       yaprak: { sivri: 'Hangi yaprağın ucu sivri?', kut: 'Hangi yaprağın ucu küt?' },
       ayakkabi: { sivri: 'Hangi ayakkabının burnu sivri?', kut: 'Hangi ayakkabının burnu küt?' },
+      civi: { sivri: 'Hangi çivinin ucu sivri?', kut: 'Hangi çivinin ucu küt?' },
     },
     kelime: { kalem: 'kalem', kalem2: 'boya kalemi', makas: 'makas', cubuk: 'çubuk', havuc: 'havuç', kazik: 'kazık',
-      yaprak: 'yaprak', ayakkabi: 'ayakkabı', kaya: 'taş', cati: 'çatı' },
+      yaprak: 'yaprak', ayakkabi: 'ayakkabı', kaya: 'taş', cati: 'çatı', civi: 'çivi' },
   },
   {
     klasor: 'kirisik-duzgun', dosya: 'kirisikDuzgunData.ts', exportAdi: 'kirisikDuzgunDataYeni',
