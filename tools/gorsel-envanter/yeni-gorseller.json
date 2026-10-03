@@ -687,13 +687,22 @@
     },
     {
       "id": 2079,
+      "kaynak": "konum-set5-kalem/yukarida.jpg",
+      "word": "kalem",
+      "category": "none",
+      "tags": {
+        "position": "yukarıda"
+      }
+    },
+    {
+      "id": 2080,
       "kaynak": "konum-set5-kalem/zor-masa-kalemlik-icinde.jpg",
       "word": "kalem",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2080,
+      "id": 2081,
       "kaynak": "konum-set6-kedi/altinda.jpg",
       "word": "kedi",
       "category": "none",
@@ -702,14 +711,14 @@
       }
     },
     {
-      "id": 2081,
+      "id": 2082,
       "kaynak": "konum-set6-kedi/arasinda-degil.jpg",
       "word": "kedi",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2082,
+      "id": 2083,
       "kaynak": "konum-set6-kedi/arasinda.jpg",
       "word": "kedi",
       "category": "none",
@@ -718,7 +727,7 @@
       }
     },
     {
-      "id": 2083,
+      "id": 2084,
       "kaynak": "konum-set6-kedi/arkasinda.jpg",
       "word": "kedi",
       "category": "none",
@@ -727,7 +736,7 @@
       }
     },
     {
-      "id": 2084,
+      "id": 2085,
       "kaynak": "konum-set6-kedi/asagida.jpg",
       "word": "kedi",
       "category": "none",
@@ -736,7 +745,7 @@
       }
     },
     {
-      "id": 2085,
+      "id": 2086,
       "kaynak": "konum-set6-kedi/disinda.jpg",
       "word": "kedi",
       "category": "none",
@@ -745,7 +754,7 @@
       }
     },
     {
-      "id": 2086,
+      "id": 2087,
       "kaynak": "konum-set6-kedi/icinde.jpg",
       "word": "kedi",
       "category": "none",
@@ -754,7 +763,7 @@
       }
     },
     {
-      "id": 2087,
+      "id": 2088,
       "kaynak": "konum-set6-kedi/onunde.jpg",
       "word": "kedi",
       "category": "none",
@@ -763,7 +772,7 @@
       }
     },
     {
-      "id": 2088,
+      "id": 2089,
       "kaynak": "konum-set6-kedi/ustunde.jpg",
       "word": "kedi",
       "category": "none",
@@ -772,7 +781,7 @@
       }
     },
     {
-      "id": 2089,
+      "id": 2090,
       "kaynak": "konum-set6-kedi/yaninda.jpg",
       "word": "kedi",
       "category": "none",
@@ -781,7 +790,7 @@
       }
     },
     {
-      "id": 2090,
+      "id": 2091,
       "kaynak": "konum-set6-kedi/yukarida.jpg",
       "word": "kedi",
       "category": "none",
@@ -790,14 +799,14 @@
       }
     },
     {
-      "id": 2091,
+      "id": 2092,
       "kaynak": "konum-set6-kedi/zor-bank-yatak-icinde.jpg",
       "word": "kedi",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2092,
+      "id": 2093,
       "kaynak": "konum-set7-kus/altinda.jpg",
       "word": "kuş",
       "category": "none",
@@ -806,14 +815,14 @@
       }
     },
     {
-      "id": 2093,
+      "id": 2094,
       "kaynak": "konum-set7-kus/arasinda-degil.jpg",
       "word": "kuş",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2094,
+      "id": 2095,
       "kaynak": "konum-set7-kus/arasinda.jpg",
       "word": "kuş",
       "category": "none",
@@ -822,7 +831,7 @@
       }
     },
     {
-      "id": 2095,
+      "id": 2096,
       "kaynak": "konum-set7-kus/asagida.jpg",
       "word": "kuş",
       "category": "none",
@@ -831,7 +840,7 @@
       }
     },
     {
-      "id": 2096,
+      "id": 2097,
       "kaynak": "konum-set7-kus/disinda.jpg",
       "word": "kuş",
       "category": "none",
@@ -840,7 +849,7 @@
       }
     },
     {
-      "id": 2097,
+      "id": 2098,
       "kaynak": "konum-set7-kus/icinde.jpg",
       "word": "kuş",
       "category": "none",
@@ -849,7 +858,7 @@
       }
     },
     {
-      "id": 2098,
+      "id": 2099,
       "kaynak": "konum-set7-kus/onunde.jpg",
       "word": "kuş",
       "category": "none",
@@ -858,7 +867,7 @@
       }
     },
     {
-      "id": 2099,
+      "id": 2100,
       "kaynak": "konum-set7-kus/ustunde.jpg",
       "word": "kuş",
       "category": "none",
@@ -867,7 +876,7 @@
       }
     },
     {
-      "id": 2100,
+      "id": 2101,
       "kaynak": "konum-set7-kus/yaninda.jpg",
       "word": "kuş",
       "category": "none",
@@ -876,7 +885,7 @@
       }
     },
     {
-      "id": 2101,
+      "id": 2102,
       "kaynak": "konum-set7-kus/yukarida.jpg",
       "word": "kuş",
       "category": "none",
@@ -885,14 +894,14 @@
       }
     },
     {
-      "id": 2102,
+      "id": 2103,
       "kaynak": "konum-set7-kus/zor-sehpa-kafes-icinde.jpg",
       "word": "kuş",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2103,
+      "id": 2104,
       "kaynak": "konum-set8-bebek/altinda.jpg",
       "word": "bebek",
       "category": "none",
@@ -901,14 +910,14 @@
       }
     },
     {
-      "id": 2104,
+      "id": 2105,
       "kaynak": "konum-set8-bebek/arasinda-degil.jpg",
       "word": "bebek",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2105,
+      "id": 2106,
       "kaynak": "konum-set8-bebek/arasinda.jpg",
       "word": "bebek",
       "category": "none",
@@ -917,7 +926,7 @@
       }
     },
     {
-      "id": 2106,
+      "id": 2107,
       "kaynak": "konum-set8-bebek/arkasinda.jpg",
       "word": "bebek",
       "category": "none",
@@ -926,7 +935,7 @@
       }
     },
     {
-      "id": 2107,
+      "id": 2108,
       "kaynak": "konum-set8-bebek/asagida.jpg",
       "word": "bebek",
       "category": "none",
@@ -935,7 +944,7 @@
       }
     },
     {
-      "id": 2108,
+      "id": 2109,
       "kaynak": "konum-set8-bebek/disinda.jpg",
       "word": "bebek",
       "category": "none",
@@ -944,7 +953,7 @@
       }
     },
     {
-      "id": 2109,
+      "id": 2110,
       "kaynak": "konum-set8-bebek/icinde.jpg",
       "word": "bebek",
       "category": "none",
@@ -953,7 +962,7 @@
       }
     },
     {
-      "id": 2110,
+      "id": 2111,
       "kaynak": "konum-set8-bebek/onunde.jpg",
       "word": "bebek",
       "category": "none",
@@ -962,7 +971,7 @@
       }
     },
     {
-      "id": 2111,
+      "id": 2112,
       "kaynak": "konum-set8-bebek/ustunde.jpg",
       "word": "bebek",
       "category": "none",
@@ -971,7 +980,7 @@
       }
     },
     {
-      "id": 2112,
+      "id": 2113,
       "kaynak": "konum-set8-bebek/yaninda.jpg",
       "word": "bebek",
       "category": "none",
@@ -980,7 +989,7 @@
       }
     },
     {
-      "id": 2113,
+      "id": 2114,
       "kaynak": "konum-set8-bebek/yukarida.jpg",
       "word": "bebek",
       "category": "none",
@@ -989,14 +998,14 @@
       }
     },
     {
-      "id": 2114,
+      "id": 2115,
       "kaynak": "konum-set8-bebek/zor-sandalye-besik-icinde.jpg",
       "word": "bebek",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2115,
+      "id": 2116,
       "kaynak": "konum-set9-dinozor/altinda.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1005,14 +1014,14 @@
       }
     },
     {
-      "id": 2116,
+      "id": 2117,
       "kaynak": "konum-set9-dinozor/arasinda-degil.jpg",
       "word": "dinozor",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2117,
+      "id": 2118,
       "kaynak": "konum-set9-dinozor/arasinda.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1021,7 +1030,7 @@
       }
     },
     {
-      "id": 2118,
+      "id": 2119,
       "kaynak": "konum-set9-dinozor/arkasinda.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1030,7 +1039,7 @@
       }
     },
     {
-      "id": 2119,
+      "id": 2120,
       "kaynak": "konum-set9-dinozor/asagida.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1039,7 +1048,7 @@
       }
     },
     {
-      "id": 2120,
+      "id": 2121,
       "kaynak": "konum-set9-dinozor/disinda.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1048,7 +1057,7 @@
       }
     },
     {
-      "id": 2121,
+      "id": 2122,
       "kaynak": "konum-set9-dinozor/icinde.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1057,7 +1066,16 @@
       }
     },
     {
-      "id": 2122,
+      "id": 2123,
+      "kaynak": "konum-set9-dinozor/onunde.jpg",
+      "word": "dinozor",
+      "category": "none",
+      "tags": {
+        "position": "önünde"
+      }
+    },
+    {
+      "id": 2124,
       "kaynak": "konum-set9-dinozor/ustunde.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1066,7 +1084,7 @@
       }
     },
     {
-      "id": 2123,
+      "id": 2125,
       "kaynak": "konum-set9-dinozor/yaninda.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1075,7 +1093,7 @@
       }
     },
     {
-      "id": 2124,
+      "id": 2126,
       "kaynak": "konum-set9-dinozor/yukarida.jpg",
       "word": "dinozor",
       "category": "none",
@@ -1084,7 +1102,7 @@
       }
     },
     {
-      "id": 2125,
+      "id": 2127,
       "kaynak": "konum-set10-ordek/altinda.jpg",
       "word": "ördek",
       "category": "none",
@@ -1093,14 +1111,14 @@
       }
     },
     {
-      "id": 2126,
+      "id": 2128,
       "kaynak": "konum-set10-ordek/arasinda-degil.jpg",
       "word": "ördek",
       "category": "none",
       "tags": {}
     },
     {
-      "id": 2127,
+      "id": 2129,
       "kaynak": "konum-set10-ordek/arasinda.jpg",
       "word": "ördek",
       "category": "none",
@@ -1109,7 +1127,7 @@
       }
     },
     {
-      "id": 2128,
+      "id": 2130,
       "kaynak": "konum-set10-ordek/arkasinda.jpg",
       "word": "ördek",
       "category": "none",
@@ -1118,7 +1136,7 @@
       }
     },
     {
-      "id": 2129,
+      "id": 2131,
       "kaynak": "konum-set10-ordek/asagida.jpg",
       "word": "ördek",
       "category": "none",
@@ -1127,7 +1145,7 @@
       }
     },
     {
-      "id": 2130,
+      "id": 2132,
       "kaynak": "konum-set10-ordek/disinda.jpg",
       "word": "ördek",
       "category": "none",
@@ -1136,7 +1154,7 @@
       }
     },
     {
-      "id": 2131,
+      "id": 2133,
       "kaynak": "konum-set10-ordek/icinde.jpg",
       "word": "ördek",
       "category": "none",
@@ -1145,7 +1163,16 @@
       }
     },
     {
-      "id": 2132,
+      "id": 2134,
+      "kaynak": "konum-set10-ordek/onunde.jpg",
+      "word": "ördek",
+      "category": "none",
+      "tags": {
+        "position": "önünde"
+      }
+    },
+    {
+      "id": 2135,
       "kaynak": "konum-set10-ordek/ustunde.jpg",
       "word": "ördek",
       "category": "none",
@@ -1154,7 +1181,7 @@
       }
     },
     {
-      "id": 2133,
+      "id": 2136,
       "kaynak": "konum-set10-ordek/yaninda.jpg",
       "word": "ördek",
       "category": "none",
@@ -1163,7 +1190,7 @@
       }
     },
     {
-      "id": 2134,
+      "id": 2137,
       "kaynak": "konum-set10-ordek/yukarida.jpg",
       "word": "ördek",
       "category": "none",

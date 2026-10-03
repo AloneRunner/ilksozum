@@ -73,3 +73,11 @@ GÖRSEL 1 ile başla.
 
 ## Sonuç
 (Görseller geldikten sonra doldurulacak)
+
+## Sonuç (2026-10-03)
+Set 9 ve 10'dan 10'ar görsel kullanıldı. Flow kapları mobilyanın üstüne koydu (kabul). Eksikler: iki sette de ÖNÜNDE görseli yok, kalem setinde YUKARIDA yok. Aşağıdaki kısa tur bunları tamamlar.
+
+### Kısa tur: önceki sayfalara (Set 9 ve Set 10) yaz
+SET 9 sayfasına: "Dinozor kutunun ÖNÜNDE: aynı mavi kutu aynı ahşap sehpanın üstünde, dinozor sehpanın üstünde kutunun hemen ÖNÜNDE (kameraya daha yakın), tamamen görünüyor. Referans modu, ayrı yeni görsel."
+SET 10 sayfasına: "Ördek sepetin ÖNÜNDE: aynı mor sepet aynı yeşil taburenin üstünde, ördek taburenin üstünde sepetin hemen ÖNÜNDE (kameraya daha yakın), tamamen görünüyor. Referans modu, ayrı yeni görsel."
+KALEM (Set 5) sayfasına: "Kalem YUKARIDA: aynı ahşap masanın üstündeki üç renkli kitaplık yığının tepesinde yeşil boya kalemi. Kitaplar yazısız. Referans modu, ayrı yeni görsel."

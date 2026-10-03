@@ -1719,6 +1719,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
+      "position": "yukarıda",
       "syllables": [
         "ka",
         "lem"
@@ -1734,23 +1735,23 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 2080,
-    "word": "kedi",
+    "word": "kalem",
     "imageUrl": "/images/2080.webp",
     "audioKeys": {
-      "default": "kedi"
+      "default": "kalem"
     },
     "tags": {
       "category": "none",
-      "position": "altında",
       "syllables": [
-        "ke",
-        "di"
+        "ka",
+        "lem"
       ],
       "letters": [
         "K",
+        "A",
+        "L",
         "E",
-        "D",
-        "İ"
+        "M"
       ]
     }
   },
@@ -1763,6 +1764,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
+      "position": "altında",
       "syllables": [
         "ke",
         "di"
@@ -1784,7 +1786,6 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "arasında",
       "syllables": [
         "ke",
         "di"
@@ -1806,7 +1807,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "arkasında",
+      "position": "arasında",
       "syllables": [
         "ke",
         "di"
@@ -1828,7 +1829,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "aşağıda",
+      "position": "arkasında",
       "syllables": [
         "ke",
         "di"
@@ -1850,7 +1851,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "dışında",
+      "position": "aşağıda",
       "syllables": [
         "ke",
         "di"
@@ -1872,7 +1873,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "içinde",
+      "position": "dışında",
       "syllables": [
         "ke",
         "di"
@@ -1894,7 +1895,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "önünde",
+      "position": "içinde",
       "syllables": [
         "ke",
         "di"
@@ -1916,7 +1917,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "üstünde",
+      "position": "önünde",
       "syllables": [
         "ke",
         "di"
@@ -1938,7 +1939,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "yanında",
+      "position": "üstünde",
       "syllables": [
         "ke",
         "di"
@@ -1960,7 +1961,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "yukarıda",
+      "position": "yanında",
       "syllables": [
         "ke",
         "di"
@@ -1982,6 +1983,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
+      "position": "yukarıda",
       "syllables": [
         "ke",
         "di"
@@ -1996,21 +1998,22 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 2092,
-    "word": "kuş",
+    "word": "kedi",
     "imageUrl": "/images/2092.webp",
     "audioKeys": {
-      "default": "kuş"
+      "default": "kedi"
     },
     "tags": {
       "category": "none",
-      "position": "altında",
       "syllables": [
-        "kuş"
+        "ke",
+        "di"
       ],
       "letters": [
         "K",
-        "U",
-        "Ş"
+        "E",
+        "D",
+        "İ"
       ]
     }
   },
@@ -2023,6 +2026,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
+      "position": "altında",
       "syllables": [
         "kuş"
       ],
@@ -2042,7 +2046,6 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "arasında",
       "syllables": [
         "kuş"
       ],
@@ -2062,7 +2065,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "aşağıda",
+      "position": "arasında",
       "syllables": [
         "kuş"
       ],
@@ -2082,7 +2085,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "dışında",
+      "position": "aşağıda",
       "syllables": [
         "kuş"
       ],
@@ -2102,7 +2105,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "içinde",
+      "position": "dışında",
       "syllables": [
         "kuş"
       ],
@@ -2122,7 +2125,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "önünde",
+      "position": "içinde",
       "syllables": [
         "kuş"
       ],
@@ -2142,7 +2145,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "üstünde",
+      "position": "önünde",
       "syllables": [
         "kuş"
       ],
@@ -2162,7 +2165,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "yanında",
+      "position": "üstünde",
       "syllables": [
         "kuş"
       ],
@@ -2182,7 +2185,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "yukarıda",
+      "position": "yanında",
       "syllables": [
         "kuş"
       ],
@@ -2202,6 +2205,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
+      "position": "yukarıda",
       "syllables": [
         "kuş"
       ],
@@ -2214,24 +2218,20 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 2103,
-    "word": "bebek",
+    "word": "kuş",
     "imageUrl": "/images/2103.webp",
     "audioKeys": {
-      "default": "bebek"
+      "default": "kuş"
     },
     "tags": {
       "category": "none",
-      "position": "altında",
       "syllables": [
-        "be",
-        "bek"
+        "kuş"
       ],
       "letters": [
-        "B",
-        "E",
-        "B",
-        "E",
-        "K"
+        "K",
+        "U",
+        "Ş"
       ]
     }
   },
@@ -2244,6 +2244,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
+      "position": "altında",
       "syllables": [
         "be",
         "bek"
@@ -2266,7 +2267,6 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "arasında",
       "syllables": [
         "be",
         "bek"
@@ -2289,7 +2289,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "arkasında",
+      "position": "arasında",
       "syllables": [
         "be",
         "bek"
@@ -2312,7 +2312,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "aşağıda",
+      "position": "arkasında",
       "syllables": [
         "be",
         "bek"
@@ -2335,7 +2335,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "dışında",
+      "position": "aşağıda",
       "syllables": [
         "be",
         "bek"
@@ -2358,7 +2358,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "içinde",
+      "position": "dışında",
       "syllables": [
         "be",
         "bek"
@@ -2381,7 +2381,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "önünde",
+      "position": "içinde",
       "syllables": [
         "be",
         "bek"
@@ -2404,7 +2404,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "üstünde",
+      "position": "önünde",
       "syllables": [
         "be",
         "bek"
@@ -2427,7 +2427,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "yanında",
+      "position": "üstünde",
       "syllables": [
         "be",
         "bek"
@@ -2450,7 +2450,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "yukarıda",
+      "position": "yanında",
       "syllables": [
         "be",
         "bek"
@@ -2473,6 +2473,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
+      "position": "yukarıda",
       "syllables": [
         "be",
         "bek"
@@ -2488,27 +2489,23 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 2115,
-    "word": "dinozor",
+    "word": "bebek",
     "imageUrl": "/images/2115.webp",
     "audioKeys": {
-      "default": "dinozor"
+      "default": "bebek"
     },
     "tags": {
       "category": "none",
-      "position": "altında",
       "syllables": [
-        "di",
-        "no",
-        "zor"
+        "be",
+        "bek"
       ],
       "letters": [
-        "D",
-        "İ",
-        "N",
-        "O",
-        "Z",
-        "O",
-        "R"
+        "B",
+        "E",
+        "B",
+        "E",
+        "K"
       ]
     }
   },
@@ -2521,6 +2518,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
+      "position": "altında",
       "syllables": [
         "di",
         "no",
@@ -2546,7 +2544,6 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "arasında",
       "syllables": [
         "di",
         "no",
@@ -2572,7 +2569,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "arkasında",
+      "position": "arasında",
       "syllables": [
         "di",
         "no",
@@ -2598,7 +2595,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "aşağıda",
+      "position": "arkasında",
       "syllables": [
         "di",
         "no",
@@ -2624,7 +2621,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "dışında",
+      "position": "aşağıda",
       "syllables": [
         "di",
         "no",
@@ -2650,7 +2647,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "içinde",
+      "position": "dışında",
       "syllables": [
         "di",
         "no",
@@ -2676,7 +2673,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "üstünde",
+      "position": "içinde",
       "syllables": [
         "di",
         "no",
@@ -2702,7 +2699,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "yanında",
+      "position": "önünde",
       "syllables": [
         "di",
         "no",
@@ -2728,7 +2725,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "yukarıda",
+      "position": "üstünde",
       "syllables": [
         "di",
         "no",
@@ -2747,46 +2744,53 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 2125,
-    "word": "ördek",
+    "word": "dinozor",
     "imageUrl": "/images/2125.webp",
     "audioKeys": {
-      "default": "ördek"
+      "default": "dinozor"
     },
     "tags": {
       "category": "none",
-      "position": "altında",
+      "position": "yanında",
       "syllables": [
-        "ör",
-        "dek"
+        "di",
+        "no",
+        "zor"
       ],
       "letters": [
-        "Ö",
-        "R",
         "D",
-        "E",
-        "K"
+        "İ",
+        "N",
+        "O",
+        "Z",
+        "O",
+        "R"
       ]
     }
   },
   {
     "id": 2126,
-    "word": "ördek",
+    "word": "dinozor",
     "imageUrl": "/images/2126.webp",
     "audioKeys": {
-      "default": "ördek"
+      "default": "dinozor"
     },
     "tags": {
       "category": "none",
+      "position": "yukarıda",
       "syllables": [
-        "ör",
-        "dek"
+        "di",
+        "no",
+        "zor"
       ],
       "letters": [
-        "Ö",
-        "R",
         "D",
-        "E",
-        "K"
+        "İ",
+        "N",
+        "O",
+        "Z",
+        "O",
+        "R"
       ]
     }
   },
@@ -2799,7 +2803,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "arasında",
+      "position": "altında",
       "syllables": [
         "ör",
         "dek"
@@ -2822,7 +2826,6 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "arkasında",
       "syllables": [
         "ör",
         "dek"
@@ -2845,7 +2848,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "aşağıda",
+      "position": "arasında",
       "syllables": [
         "ör",
         "dek"
@@ -2868,7 +2871,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "dışında",
+      "position": "arkasında",
       "syllables": [
         "ör",
         "dek"
@@ -2891,7 +2894,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "içinde",
+      "position": "aşağıda",
       "syllables": [
         "ör",
         "dek"
@@ -2914,7 +2917,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "üstünde",
+      "position": "dışında",
       "syllables": [
         "ör",
         "dek"
@@ -2937,7 +2940,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "position": "yanında",
+      "position": "içinde",
       "syllables": [
         "ör",
         "dek"
@@ -2955,6 +2958,75 @@ export const imageDataYeni: ImageMetadata[] = [
     "id": 2134,
     "word": "ördek",
     "imageUrl": "/images/2134.webp",
+    "audioKeys": {
+      "default": "ördek"
+    },
+    "tags": {
+      "category": "none",
+      "position": "önünde",
+      "syllables": [
+        "ör",
+        "dek"
+      ],
+      "letters": [
+        "Ö",
+        "R",
+        "D",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2135,
+    "word": "ördek",
+    "imageUrl": "/images/2135.webp",
+    "audioKeys": {
+      "default": "ördek"
+    },
+    "tags": {
+      "category": "none",
+      "position": "üstünde",
+      "syllables": [
+        "ör",
+        "dek"
+      ],
+      "letters": [
+        "Ö",
+        "R",
+        "D",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2136,
+    "word": "ördek",
+    "imageUrl": "/images/2136.webp",
+    "audioKeys": {
+      "default": "ördek"
+    },
+    "tags": {
+      "category": "none",
+      "position": "yanında",
+      "syllables": [
+        "ör",
+        "dek"
+      ],
+      "letters": [
+        "Ö",
+        "R",
+        "D",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 2137,
+    "word": "ördek",
+    "imageUrl": "/images/2137.webp",
     "audioKeys": {
       "default": "ördek"
     },
