@@ -11357,37 +11357,60 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 4201,
-    "word": "bebek",
+    "word": "aslan",
     "imageUrl": "/images/4201.webp",
     "audioKeys": {
-      "default": "bebek"
+      "default": "aslan"
     },
     "tags": {
       "category": "none",
       "sound": "gürültülü",
       "syllables": [
-        "be",
-        "bek"
+        "as",
+        "lan"
       ],
       "letters": [
-        "B",
-        "E",
-        "B",
-        "E",
-        "K"
+        "A",
+        "S",
+        "L",
+        "A",
+        "N"
       ]
     }
   },
   {
     "id": 4202,
-    "word": "bebek",
+    "word": "aslan",
     "imageUrl": "/images/4202.webp",
+    "audioKeys": {
+      "default": "aslan"
+    },
+    "tags": {
+      "category": "none",
+      "sound": "sessiz",
+      "syllables": [
+        "as",
+        "lan"
+      ],
+      "letters": [
+        "A",
+        "S",
+        "L",
+        "A",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": 4203,
+    "word": "bebek",
+    "imageUrl": "/images/4203.webp",
     "audioKeys": {
       "default": "bebek"
     },
     "tags": {
       "category": "none",
-      "sound": "sessiz",
+      "sound": "gürültülü",
       "syllables": [
         "be",
         "bek"
@@ -11397,37 +11420,60 @@ export const imageDataYeni: ImageMetadata[] = [
         "E",
         "B",
         "E",
-        "K"
-      ]
-    }
-  },
-  {
-    "id": 4203,
-    "word": "çocuk",
-    "imageUrl": "/images/4203.webp",
-    "audioKeys": {
-      "default": "çocuk"
-    },
-    "tags": {
-      "category": "none",
-      "sound": "gürültülü",
-      "syllables": [
-        "ço",
-        "cuk"
-      ],
-      "letters": [
-        "Ç",
-        "O",
-        "C",
-        "U",
         "K"
       ]
     }
   },
   {
     "id": 4204,
-    "word": "çocuk",
+    "word": "bebek",
     "imageUrl": "/images/4204.webp",
+    "audioKeys": {
+      "default": "bebek"
+    },
+    "tags": {
+      "category": "none",
+      "sound": "sessiz",
+      "syllables": [
+        "be",
+        "bek"
+      ],
+      "letters": [
+        "B",
+        "E",
+        "B",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4205,
+    "word": "çocuk",
+    "imageUrl": "/images/4205.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "sound": "gürültülü",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4206,
+    "word": "çocuk",
+    "imageUrl": "/images/4206.webp",
     "audioKeys": {
       "default": "çocuk"
     },
@@ -11448,69 +11494,22 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4205,
-    "word": "horoz",
-    "imageUrl": "/images/4205.webp",
-    "audioKeys": {
-      "default": "horoz"
-    },
-    "tags": {
-      "category": "none",
-      "sound": "gürültülü",
-      "syllables": [
-        "ho",
-        "roz"
-      ],
-      "letters": [
-        "H",
-        "O",
-        "R",
-        "O",
-        "Z"
-      ]
-    }
-  },
-  {
-    "id": 4206,
-    "word": "horoz",
-    "imageUrl": "/images/4206.webp",
-    "audioKeys": {
-      "default": "horoz"
-    },
-    "tags": {
-      "category": "none",
-      "sound": "sessiz",
-      "syllables": [
-        "ho",
-        "roz"
-      ],
-      "letters": [
-        "H",
-        "O",
-        "R",
-        "O",
-        "Z"
-      ]
-    }
-  },
-  {
     "id": 4207,
-    "word": "köpek",
+    "word": "eşek",
     "imageUrl": "/images/4207.webp",
     "audioKeys": {
-      "default": "köpek"
+      "default": "eşek"
     },
     "tags": {
       "category": "none",
       "sound": "gürültülü",
       "syllables": [
-        "kö",
-        "pek"
+        "e",
+        "şek"
       ],
       "letters": [
-        "K",
-        "Ö",
-        "P",
+        "E",
+        "Ş",
         "E",
         "K"
       ]
@@ -11518,8 +11517,187 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 4208,
-    "word": "köpek",
+    "word": "eşek",
     "imageUrl": "/images/4208.webp",
+    "audioKeys": {
+      "default": "eşek"
+    },
+    "tags": {
+      "category": "none",
+      "sound": "sessiz",
+      "syllables": [
+        "e",
+        "şek"
+      ],
+      "letters": [
+        "E",
+        "Ş",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4209,
+    "word": "horoz",
+    "imageUrl": "/images/4209.webp",
+    "audioKeys": {
+      "default": "horoz"
+    },
+    "tags": {
+      "category": "none",
+      "sound": "gürültülü",
+      "syllables": [
+        "ho",
+        "roz"
+      ],
+      "letters": [
+        "H",
+        "O",
+        "R",
+        "O",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 4210,
+    "word": "horoz",
+    "imageUrl": "/images/4210.webp",
+    "audioKeys": {
+      "default": "horoz"
+    },
+    "tags": {
+      "category": "none",
+      "sound": "sessiz",
+      "syllables": [
+        "ho",
+        "roz"
+      ],
+      "letters": [
+        "H",
+        "O",
+        "R",
+        "O",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 4211,
+    "word": "inek",
+    "imageUrl": "/images/4211.webp",
+    "audioKeys": {
+      "default": "inek"
+    },
+    "tags": {
+      "category": "none",
+      "sound": "gürültülü",
+      "syllables": [
+        "i",
+        "nek"
+      ],
+      "letters": [
+        "İ",
+        "N",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4212,
+    "word": "inek",
+    "imageUrl": "/images/4212.webp",
+    "audioKeys": {
+      "default": "inek"
+    },
+    "tags": {
+      "category": "none",
+      "sound": "sessiz",
+      "syllables": [
+        "i",
+        "nek"
+      ],
+      "letters": [
+        "İ",
+        "N",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4213,
+    "word": "kedi",
+    "imageUrl": "/images/4213.webp",
+    "audioKeys": {
+      "default": "kedi"
+    },
+    "tags": {
+      "category": "none",
+      "sound": "gürültülü",
+      "syllables": [
+        "ke",
+        "di"
+      ],
+      "letters": [
+        "K",
+        "E",
+        "D",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 4214,
+    "word": "kedi",
+    "imageUrl": "/images/4214.webp",
+    "audioKeys": {
+      "default": "kedi"
+    },
+    "tags": {
+      "category": "none",
+      "sound": "sessiz",
+      "syllables": [
+        "ke",
+        "di"
+      ],
+      "letters": [
+        "K",
+        "E",
+        "D",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 4215,
+    "word": "köpek",
+    "imageUrl": "/images/4215.webp",
+    "audioKeys": {
+      "default": "köpek"
+    },
+    "tags": {
+      "category": "none",
+      "sound": "gürültülü",
+      "syllables": [
+        "kö",
+        "pek"
+      ],
+      "letters": [
+        "K",
+        "Ö",
+        "P",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4216,
+    "word": "köpek",
+    "imageUrl": "/images/4216.webp",
     "audioKeys": {
       "default": "köpek"
     },
@@ -11540,9 +11718,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4209,
+    "id": 4217,
     "word": "çocuk",
-    "imageUrl": "/images/4209.webp",
+    "imageUrl": "/images/4217.webp",
     "audioKeys": {
       "default": "çocuk"
     },
@@ -11563,9 +11741,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4210,
+    "id": 4218,
     "word": "çocuk",
-    "imageUrl": "/images/4210.webp",
+    "imageUrl": "/images/4218.webp",
     "audioKeys": {
       "default": "çocuk"
     },
@@ -11586,9 +11764,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4211,
+    "id": 4219,
     "word": "sınıf",
-    "imageUrl": "/images/4211.webp",
+    "imageUrl": "/images/4219.webp",
     "audioKeys": {
       "default": "sınıf"
     },
@@ -11609,9 +11787,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4212,
+    "id": 4220,
     "word": "sınıf",
-    "imageUrl": "/images/4212.webp",
+    "imageUrl": "/images/4220.webp",
     "audioKeys": {
       "default": "sınıf"
     },
@@ -11633,37 +11811,52 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 4301,
-    "word": "bebek",
+    "word": "at",
     "imageUrl": "/images/4301.webp",
     "audioKeys": {
-      "default": "bebek"
+      "default": "at"
     },
     "tags": {
       "category": "none",
       "state": "aç",
       "syllables": [
-        "be",
-        "bek"
+        "at"
       ],
       "letters": [
-        "B",
-        "E",
-        "B",
-        "E",
-        "K"
+        "A",
+        "T"
       ]
     }
   },
   {
     "id": 4302,
-    "word": "bebek",
+    "word": "at",
     "imageUrl": "/images/4302.webp",
+    "audioKeys": {
+      "default": "at"
+    },
+    "tags": {
+      "category": "none",
+      "state": "tok",
+      "syllables": [
+        "at"
+      ],
+      "letters": [
+        "A",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 4303,
+    "word": "bebek",
+    "imageUrl": "/images/4303.webp",
     "audioKeys": {
       "default": "bebek"
     },
     "tags": {
       "category": "none",
-      "state": "tok",
+      "state": "aç",
       "syllables": [
         "be",
         "bek"
@@ -11673,37 +11866,108 @@ export const imageDataYeni: ImageMetadata[] = [
         "E",
         "B",
         "E",
-        "K"
-      ]
-    }
-  },
-  {
-    "id": 4303,
-    "word": "çocuk",
-    "imageUrl": "/images/4303.webp",
-    "audioKeys": {
-      "default": "çocuk"
-    },
-    "tags": {
-      "category": "none",
-      "state": "aç",
-      "syllables": [
-        "ço",
-        "cuk"
-      ],
-      "letters": [
-        "Ç",
-        "O",
-        "C",
-        "U",
         "K"
       ]
     }
   },
   {
     "id": 4304,
-    "word": "çocuk",
+    "word": "bebek",
     "imageUrl": "/images/4304.webp",
+    "audioKeys": {
+      "default": "bebek"
+    },
+    "tags": {
+      "category": "none",
+      "state": "tok",
+      "syllables": [
+        "be",
+        "bek"
+      ],
+      "letters": [
+        "B",
+        "E",
+        "B",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4305,
+    "word": "civciv",
+    "imageUrl": "/images/4305.webp",
+    "audioKeys": {
+      "default": "civciv"
+    },
+    "tags": {
+      "category": "none",
+      "state": "aç",
+      "syllables": [
+        "civ",
+        "civ"
+      ],
+      "letters": [
+        "C",
+        "İ",
+        "V",
+        "C",
+        "İ",
+        "V"
+      ]
+    }
+  },
+  {
+    "id": 4306,
+    "word": "civciv",
+    "imageUrl": "/images/4306.webp",
+    "audioKeys": {
+      "default": "civciv"
+    },
+    "tags": {
+      "category": "none",
+      "state": "tok",
+      "syllables": [
+        "civ",
+        "civ"
+      ],
+      "letters": [
+        "C",
+        "İ",
+        "V",
+        "C",
+        "İ",
+        "V"
+      ]
+    }
+  },
+  {
+    "id": 4307,
+    "word": "çocuk",
+    "imageUrl": "/images/4307.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "state": "aç",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4308,
+    "word": "çocuk",
+    "imageUrl": "/images/4308.webp",
     "audioKeys": {
       "default": "çocuk"
     },
@@ -11724,119 +11988,119 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4305,
-    "word": "kedi",
-    "imageUrl": "/images/4305.webp",
-    "audioKeys": {
-      "default": "kedi"
-    },
-    "tags": {
-      "category": "none",
-      "state": "aç",
-      "syllables": [
-        "ke",
-        "di"
-      ],
-      "letters": [
-        "K",
-        "E",
-        "D",
-        "İ"
-      ]
-    }
-  },
-  {
-    "id": 4306,
-    "word": "kedi",
-    "imageUrl": "/images/4306.webp",
-    "audioKeys": {
-      "default": "kedi"
-    },
-    "tags": {
-      "category": "none",
-      "state": "tok",
-      "syllables": [
-        "ke",
-        "di"
-      ],
-      "letters": [
-        "K",
-        "E",
-        "D",
-        "İ"
-      ]
-    }
-  },
-  {
-    "id": 4307,
-    "word": "köpek",
-    "imageUrl": "/images/4307.webp",
-    "audioKeys": {
-      "default": "köpek"
-    },
-    "tags": {
-      "category": "none",
-      "state": "aç",
-      "syllables": [
-        "kö",
-        "pek"
-      ],
-      "letters": [
-        "K",
-        "Ö",
-        "P",
-        "E",
-        "K"
-      ]
-    }
-  },
-  {
-    "id": 4308,
-    "word": "köpek",
-    "imageUrl": "/images/4308.webp",
-    "audioKeys": {
-      "default": "köpek"
-    },
-    "tags": {
-      "category": "none",
-      "state": "tok",
-      "syllables": [
-        "kö",
-        "pek"
-      ],
-      "letters": [
-        "K",
-        "Ö",
-        "P",
-        "E",
-        "K"
-      ]
-    }
-  },
-  {
     "id": 4309,
-    "word": "kuş",
+    "word": "kedi",
     "imageUrl": "/images/4309.webp",
     "audioKeys": {
-      "default": "kuş"
+      "default": "kedi"
     },
     "tags": {
       "category": "none",
       "state": "aç",
       "syllables": [
-        "kuş"
+        "ke",
+        "di"
       ],
       "letters": [
         "K",
-        "U",
-        "Ş"
+        "E",
+        "D",
+        "İ"
       ]
     }
   },
   {
     "id": 4310,
-    "word": "kuş",
+    "word": "kedi",
     "imageUrl": "/images/4310.webp",
+    "audioKeys": {
+      "default": "kedi"
+    },
+    "tags": {
+      "category": "none",
+      "state": "tok",
+      "syllables": [
+        "ke",
+        "di"
+      ],
+      "letters": [
+        "K",
+        "E",
+        "D",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 4311,
+    "word": "köpek",
+    "imageUrl": "/images/4311.webp",
+    "audioKeys": {
+      "default": "köpek"
+    },
+    "tags": {
+      "category": "none",
+      "state": "aç",
+      "syllables": [
+        "kö",
+        "pek"
+      ],
+      "letters": [
+        "K",
+        "Ö",
+        "P",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4312,
+    "word": "köpek",
+    "imageUrl": "/images/4312.webp",
+    "audioKeys": {
+      "default": "köpek"
+    },
+    "tags": {
+      "category": "none",
+      "state": "tok",
+      "syllables": [
+        "kö",
+        "pek"
+      ],
+      "letters": [
+        "K",
+        "Ö",
+        "P",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4313,
+    "word": "kuş",
+    "imageUrl": "/images/4313.webp",
+    "audioKeys": {
+      "default": "kuş"
+    },
+    "tags": {
+      "category": "none",
+      "state": "aç",
+      "syllables": [
+        "kuş"
+      ],
+      "letters": [
+        "K",
+        "U",
+        "Ş"
+      ]
+    }
+  },
+  {
+    "id": 4314,
+    "word": "kuş",
+    "imageUrl": "/images/4314.webp",
     "audioKeys": {
       "default": "kuş"
     },
@@ -11850,6 +12114,98 @@ export const imageDataYeni: ImageMetadata[] = [
         "K",
         "U",
         "Ş"
+      ]
+    }
+  },
+  {
+    "id": 4315,
+    "word": "kuzu",
+    "imageUrl": "/images/4315.webp",
+    "audioKeys": {
+      "default": "kuzu"
+    },
+    "tags": {
+      "category": "none",
+      "state": "aç",
+      "syllables": [
+        "ku",
+        "zu"
+      ],
+      "letters": [
+        "K",
+        "U",
+        "Z",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 4316,
+    "word": "kuzu",
+    "imageUrl": "/images/4316.webp",
+    "audioKeys": {
+      "default": "kuzu"
+    },
+    "tags": {
+      "category": "none",
+      "state": "tok",
+      "syllables": [
+        "ku",
+        "zu"
+      ],
+      "letters": [
+        "K",
+        "U",
+        "Z",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 4317,
+    "word": "tavşan",
+    "imageUrl": "/images/4317.webp",
+    "audioKeys": {
+      "default": "tavşan"
+    },
+    "tags": {
+      "category": "none",
+      "state": "aç",
+      "syllables": [
+        "tav",
+        "şan"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "V",
+        "Ş",
+        "A",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": 4318,
+    "word": "tavşan",
+    "imageUrl": "/images/4318.webp",
+    "audioKeys": {
+      "default": "tavşan"
+    },
+    "tags": {
+      "category": "none",
+      "state": "tok",
+      "syllables": [
+        "tav",
+        "şan"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "V",
+        "Ş",
+        "A",
+        "N"
       ]
     }
   },
@@ -11983,31 +12339,75 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 4407,
-    "word": "kadın",
+    "word": "adam",
     "imageUrl": "/images/4407.webp",
     "audioKeys": {
-      "default": "kadın"
+      "default": "adam"
     },
     "tags": {
       "category": "none",
       "age": "genç",
       "syllables": [
-        "ka",
-        "dın"
+        "a",
+        "dam"
       ],
       "letters": [
-        "K",
         "A",
         "D",
-        "I",
-        "N"
+        "A",
+        "M"
       ]
     }
   },
   {
     "id": 4408,
-    "word": "kadın",
+    "word": "adam",
     "imageUrl": "/images/4408.webp",
+    "audioKeys": {
+      "default": "adam"
+    },
+    "tags": {
+      "category": "none",
+      "age": "yaşlı",
+      "syllables": [
+        "a",
+        "dam"
+      ],
+      "letters": [
+        "A",
+        "D",
+        "A",
+        "M"
+      ]
+    }
+  },
+  {
+    "id": 4409,
+    "word": "kadın",
+    "imageUrl": "/images/4409.webp",
+    "audioKeys": {
+      "default": "kadın"
+    },
+    "tags": {
+      "category": "none",
+      "age": "genç",
+      "syllables": [
+        "ka",
+        "dın"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "D",
+        "I",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": 4410,
+    "word": "kadın",
+    "imageUrl": "/images/4410.webp",
     "audioKeys": {
       "default": "kadın"
     },
@@ -12028,9 +12428,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4409,
+    "id": 4411,
     "word": "kedi",
-    "imageUrl": "/images/4409.webp",
+    "imageUrl": "/images/4411.webp",
     "audioKeys": {
       "default": "kedi"
     },
@@ -12050,9 +12450,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4410,
+    "id": 4412,
     "word": "kedi",
-    "imageUrl": "/images/4410.webp",
+    "imageUrl": "/images/4412.webp",
     "audioKeys": {
       "default": "kedi"
     },
@@ -12072,9 +12472,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4411,
+    "id": 4413,
     "word": "köpek",
-    "imageUrl": "/images/4411.webp",
+    "imageUrl": "/images/4413.webp",
     "audioKeys": {
       "default": "köpek"
     },
@@ -12095,9 +12495,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4412,
+    "id": 4414,
     "word": "köpek",
-    "imageUrl": "/images/4412.webp",
+    "imageUrl": "/images/4414.webp",
     "audioKeys": {
       "default": "köpek"
     },
@@ -12165,8 +12565,108 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 4503,
-    "word": "karınca",
+    "word": "çiftçi",
     "imageUrl": "/images/4503.webp",
+    "audioKeys": {
+      "default": "çiftçi"
+    },
+    "tags": {
+      "category": "none",
+      "state": "çalışkan",
+      "syllables": [
+        "çift",
+        "çi"
+      ],
+      "letters": [
+        "Ç",
+        "İ",
+        "F",
+        "T",
+        "Ç",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 4504,
+    "word": "çiftçi",
+    "imageUrl": "/images/4504.webp",
+    "audioKeys": {
+      "default": "çiftçi"
+    },
+    "tags": {
+      "category": "none",
+      "state": "tembel",
+      "syllables": [
+        "çift",
+        "çi"
+      ],
+      "letters": [
+        "Ç",
+        "İ",
+        "F",
+        "T",
+        "Ç",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 4505,
+    "word": "fırıncı",
+    "imageUrl": "/images/4505.webp",
+    "audioKeys": {
+      "default": "fırıncı"
+    },
+    "tags": {
+      "category": "none",
+      "state": "çalışkan",
+      "syllables": [
+        "fı",
+        "rın",
+        "cı"
+      ],
+      "letters": [
+        "F",
+        "I",
+        "R",
+        "I",
+        "N",
+        "C",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 4506,
+    "word": "fırıncı",
+    "imageUrl": "/images/4506.webp",
+    "audioKeys": {
+      "default": "fırıncı"
+    },
+    "tags": {
+      "category": "none",
+      "state": "tembel",
+      "syllables": [
+        "fı",
+        "rın",
+        "cı"
+      ],
+      "letters": [
+        "F",
+        "I",
+        "R",
+        "I",
+        "N",
+        "C",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 4507,
+    "word": "karınca",
+    "imageUrl": "/images/4507.webp",
     "audioKeys": {
       "default": "karınca"
     },
@@ -12190,9 +12690,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4504,
+    "id": 4508,
     "word": "ağustos böceği",
-    "imageUrl": "/images/4504.webp",
+    "imageUrl": "/images/4508.webp",
     "audioKeys": {
       "default": "ağustos böceği"
     },
@@ -12225,9 +12725,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4505,
+    "id": 4509,
     "word": "çocuk",
-    "imageUrl": "/images/4505.webp",
+    "imageUrl": "/images/4509.webp",
     "audioKeys": {
       "default": "çocuk"
     },
@@ -12248,9 +12748,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4506,
+    "id": 4510,
     "word": "çocuk",
-    "imageUrl": "/images/4506.webp",
+    "imageUrl": "/images/4510.webp",
     "audioKeys": {
       "default": "çocuk"
     },
@@ -12271,9 +12771,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4507,
+    "id": 4511,
     "word": "çocuk",
-    "imageUrl": "/images/4507.webp",
+    "imageUrl": "/images/4511.webp",
     "audioKeys": {
       "default": "çocuk"
     },
@@ -12294,9 +12794,55 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4508,
+    "id": 4512,
     "word": "çocuk",
-    "imageUrl": "/images/4508.webp",
+    "imageUrl": "/images/4512.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "state": "tembel",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4513,
+    "word": "çocuk",
+    "imageUrl": "/images/4513.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "state": "çalışkan",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4514,
+    "word": "çocuk",
+    "imageUrl": "/images/4514.webp",
     "audioKeys": {
       "default": "çocuk"
     },
@@ -12318,32 +12864,132 @@ export const imageDataYeni: ImageMetadata[] = [
   },
   {
     "id": 4601,
-    "word": "market",
+    "word": "havuz",
     "imageUrl": "/images/4601.webp",
     "audioKeys": {
-      "default": "market"
+      "default": "havuz"
     },
     "tags": {
       "category": "none",
       "crowd": "kalabalık",
       "syllables": [
-        "mar",
-        "ket"
+        "ha",
+        "vuz"
       ],
       "letters": [
-        "M",
+        "H",
         "A",
-        "R",
-        "K",
-        "E",
-        "T"
+        "V",
+        "U",
+        "Z"
       ]
     }
   },
   {
     "id": 4602,
-    "word": "market",
+    "word": "havuz",
     "imageUrl": "/images/4602.webp",
+    "audioKeys": {
+      "default": "havuz"
+    },
+    "tags": {
+      "category": "none",
+      "crowd": "tenha",
+      "syllables": [
+        "ha",
+        "vuz"
+      ],
+      "letters": [
+        "H",
+        "A",
+        "V",
+        "U",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 4603,
+    "word": "lunapark",
+    "imageUrl": "/images/4603.webp",
+    "audioKeys": {
+      "default": "lunapark"
+    },
+    "tags": {
+      "category": "none",
+      "crowd": "kalabalık",
+      "syllables": [
+        "lu",
+        "na",
+        "park"
+      ],
+      "letters": [
+        "L",
+        "U",
+        "N",
+        "A",
+        "P",
+        "A",
+        "R",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4604,
+    "word": "lunapark",
+    "imageUrl": "/images/4604.webp",
+    "audioKeys": {
+      "default": "lunapark"
+    },
+    "tags": {
+      "category": "none",
+      "crowd": "tenha",
+      "syllables": [
+        "lu",
+        "na",
+        "park"
+      ],
+      "letters": [
+        "L",
+        "U",
+        "N",
+        "A",
+        "P",
+        "A",
+        "R",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4605,
+    "word": "market",
+    "imageUrl": "/images/4605.webp",
+    "audioKeys": {
+      "default": "market"
+    },
+    "tags": {
+      "category": "none",
+      "crowd": "kalabalık",
+      "syllables": [
+        "mar",
+        "ket"
+      ],
+      "letters": [
+        "M",
+        "A",
+        "R",
+        "K",
+        "E",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 4606,
+    "word": "market",
+    "imageUrl": "/images/4606.webp",
     "audioKeys": {
       "default": "market"
     },
@@ -12365,138 +13011,138 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4603,
-    "word": "otobüs",
-    "imageUrl": "/images/4603.webp",
-    "audioKeys": {
-      "default": "otobüs"
-    },
-    "tags": {
-      "category": "none",
-      "crowd": "kalabalık",
-      "syllables": [
-        "o",
-        "to",
-        "büs"
-      ],
-      "letters": [
-        "O",
-        "T",
-        "O",
-        "B",
-        "Ü",
-        "S"
-      ]
-    }
-  },
-  {
-    "id": 4604,
-    "word": "otobüs",
-    "imageUrl": "/images/4604.webp",
-    "audioKeys": {
-      "default": "otobüs"
-    },
-    "tags": {
-      "category": "none",
-      "crowd": "tenha",
-      "syllables": [
-        "o",
-        "to",
-        "büs"
-      ],
-      "letters": [
-        "O",
-        "T",
-        "O",
-        "B",
-        "Ü",
-        "S"
-      ]
-    }
-  },
-  {
-    "id": 4605,
-    "word": "oyun parkı",
-    "imageUrl": "/images/4605.webp",
-    "audioKeys": {
-      "default": "oyun parkı"
-    },
-    "tags": {
-      "category": "none",
-      "crowd": "kalabalık",
-      "syllables": [
-        "o",
-        "yun",
-        "par",
-        "kı"
-      ],
-      "letters": [
-        "O",
-        "Y",
-        "U",
-        "N",
-        "P",
-        "A",
-        "R",
-        "K",
-        "I"
-      ]
-    }
-  },
-  {
-    "id": 4606,
-    "word": "oyun parkı",
-    "imageUrl": "/images/4606.webp",
-    "audioKeys": {
-      "default": "oyun parkı"
-    },
-    "tags": {
-      "category": "none",
-      "crowd": "tenha",
-      "syllables": [
-        "o",
-        "yun",
-        "par",
-        "kı"
-      ],
-      "letters": [
-        "O",
-        "Y",
-        "U",
-        "N",
-        "P",
-        "A",
-        "R",
-        "K",
-        "I"
-      ]
-    }
-  },
-  {
     "id": 4607,
-    "word": "park",
+    "word": "otobüs",
     "imageUrl": "/images/4607.webp",
     "audioKeys": {
-      "default": "park"
+      "default": "otobüs"
     },
     "tags": {
       "category": "none",
       "crowd": "kalabalık",
       "syllables": [
-        "park"
+        "o",
+        "to",
+        "büs"
       ],
       "letters": [
-        "P",
-        "A",
-        "R",
-        "K"
+        "O",
+        "T",
+        "O",
+        "B",
+        "Ü",
+        "S"
       ]
     }
   },
   {
     "id": 4608,
-    "word": "park",
+    "word": "otobüs",
     "imageUrl": "/images/4608.webp",
+    "audioKeys": {
+      "default": "otobüs"
+    },
+    "tags": {
+      "category": "none",
+      "crowd": "tenha",
+      "syllables": [
+        "o",
+        "to",
+        "büs"
+      ],
+      "letters": [
+        "O",
+        "T",
+        "O",
+        "B",
+        "Ü",
+        "S"
+      ]
+    }
+  },
+  {
+    "id": 4609,
+    "word": "oyun parkı",
+    "imageUrl": "/images/4609.webp",
+    "audioKeys": {
+      "default": "oyun parkı"
+    },
+    "tags": {
+      "category": "none",
+      "crowd": "kalabalık",
+      "syllables": [
+        "o",
+        "yun",
+        "par",
+        "kı"
+      ],
+      "letters": [
+        "O",
+        "Y",
+        "U",
+        "N",
+        "P",
+        "A",
+        "R",
+        "K",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 4610,
+    "word": "oyun parkı",
+    "imageUrl": "/images/4610.webp",
+    "audioKeys": {
+      "default": "oyun parkı"
+    },
+    "tags": {
+      "category": "none",
+      "crowd": "tenha",
+      "syllables": [
+        "o",
+        "yun",
+        "par",
+        "kı"
+      ],
+      "letters": [
+        "O",
+        "Y",
+        "U",
+        "N",
+        "P",
+        "A",
+        "R",
+        "K",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 4611,
+    "word": "park",
+    "imageUrl": "/images/4611.webp",
+    "audioKeys": {
+      "default": "park"
+    },
+    "tags": {
+      "category": "none",
+      "crowd": "kalabalık",
+      "syllables": [
+        "park"
+      ],
+      "letters": [
+        "P",
+        "A",
+        "R",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 4612,
+    "word": "park",
+    "imageUrl": "/images/4612.webp",
     "audioKeys": {
       "default": "park"
     },
@@ -12515,9 +13161,69 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4609,
+    "id": 4613,
+    "word": "tren peronu",
+    "imageUrl": "/images/4613.webp",
+    "audioKeys": {
+      "default": "tren peronu"
+    },
+    "tags": {
+      "category": "none",
+      "crowd": "kalabalık",
+      "syllables": [
+        "tren",
+        "pe",
+        "ro",
+        "nu"
+      ],
+      "letters": [
+        "T",
+        "R",
+        "E",
+        "N",
+        "P",
+        "E",
+        "R",
+        "O",
+        "N",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 4614,
+    "word": "tren peronu",
+    "imageUrl": "/images/4614.webp",
+    "audioKeys": {
+      "default": "tren peronu"
+    },
+    "tags": {
+      "category": "none",
+      "crowd": "tenha",
+      "syllables": [
+        "tren",
+        "pe",
+        "ro",
+        "nu"
+      ],
+      "letters": [
+        "T",
+        "R",
+        "E",
+        "N",
+        "P",
+        "E",
+        "R",
+        "O",
+        "N",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 4615,
     "word": "plaj",
-    "imageUrl": "/images/4609.webp",
+    "imageUrl": "/images/4615.webp",
     "audioKeys": {
       "default": "plaj"
     },
@@ -12536,9 +13242,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4610,
+    "id": 4616,
     "word": "plaj",
-    "imageUrl": "/images/4610.webp",
+    "imageUrl": "/images/4616.webp",
     "audioKeys": {
       "default": "plaj"
     },
@@ -12557,9 +13263,77 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4611,
+    "id": 4617,
+    "word": "sinema salonu",
+    "imageUrl": "/images/4617.webp",
+    "audioKeys": {
+      "default": "sinema salonu"
+    },
+    "tags": {
+      "category": "none",
+      "crowd": "kalabalık",
+      "syllables": [
+        "si",
+        "ne",
+        "ma",
+        "sa",
+        "lo",
+        "nu"
+      ],
+      "letters": [
+        "S",
+        "İ",
+        "N",
+        "E",
+        "M",
+        "A",
+        "S",
+        "A",
+        "L",
+        "O",
+        "N",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 4618,
+    "word": "sinema salonu",
+    "imageUrl": "/images/4618.webp",
+    "audioKeys": {
+      "default": "sinema salonu"
+    },
+    "tags": {
+      "category": "none",
+      "crowd": "tenha",
+      "syllables": [
+        "si",
+        "ne",
+        "ma",
+        "sa",
+        "lo",
+        "nu"
+      ],
+      "letters": [
+        "S",
+        "İ",
+        "N",
+        "E",
+        "M",
+        "A",
+        "S",
+        "A",
+        "L",
+        "O",
+        "N",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 4619,
     "word": "sokak",
-    "imageUrl": "/images/4611.webp",
+    "imageUrl": "/images/4619.webp",
     "audioKeys": {
       "default": "sokak"
     },
@@ -12580,9 +13354,9 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
-    "id": 4612,
+    "id": 4620,
     "word": "sokak",
-    "imageUrl": "/images/4612.webp",
+    "imageUrl": "/images/4620.webp",
     "audioKeys": {
       "default": "sokak"
     },

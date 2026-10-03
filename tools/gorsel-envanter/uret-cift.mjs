@@ -380,7 +380,8 @@ const KAVRAMLAR = [
     etiket: 'sound',
     a: { ek: 'gurultulu', deger: 'gürültülü', soru: 'Gürültülü olan hangisi?', sifat: 'gürültülüdür' },
     b: { ek: 'sessiz', deger: 'sessiz', soru: 'Sessiz olan hangisi?', sifat: 'sessizdir' },
-    kelime: { cocuk: 'çocuk', kopek: 'köpek', bebek: 'bebek', horoz: 'horoz', sinif: 'sınıf', mutfak: 'çocuk' },
+    kelime: { cocuk: 'çocuk', kopek: 'köpek', bebek: 'bebek', horoz: 'horoz', sinif: 'sınıf', mutfak: 'çocuk',
+      inek: 'inek', kedi: 'kedi', aslan: 'aslan', esek: 'eşek' },
   },
   {
     klasor: 'ac-tok',
@@ -392,10 +393,10 @@ const KAVRAMLAR = [
     etiket: 'state',
     a: { ek: 'ac', deger: 'aç', soru: 'Aç olan hangisi?', sifat: 'açtır' },
     b: { ek: 'tok', deger: 'tok', soru: 'Tok olan hangisi?', sifat: 'toktur' },
-    kelime: { cocuk: 'çocuk', bebek: 'bebek', kopek: 'köpek', kedi: 'kedi', kus: 'kuş' },
+    kelime: { cocuk: 'çocuk', bebek: 'bebek', kopek: 'köpek', kedi: 'kedi', kus: 'kuş', tavsan: 'tavşan', at: 'at', civciv: 'civciv', kuzu: 'kuzu' },
   },
   {
-    // Gerçekten yaşlı ve genç (yavru/yetişkin DEĞİL; eski denetim hatası).
+    // Yaşlı (ağarmış) ile genç. İnsanlarda genç yetişkin; hayvanlarda YAVRU (Kaan: yetişkin-yaşlı ayrımı çocuk için zor).
     klasor: 'yasli-genc',
     dosya: 'yasliGencData.ts',
     exportAdi: 'youngOldDataYeni',
@@ -405,7 +406,7 @@ const KAVRAMLAR = [
     etiket: 'age',
     a: { ek: 'yasli', deger: 'yaşlı', soru: 'Yaşlı olan hangisi?', sifat: 'yaşlıdır' },
     b: { ek: 'genc', deger: 'genç', soru: 'Genç olan hangisi?', sifat: 'gençtir' },
-    kelime: { adam: 'adam', kadin: 'kadın', kopek: 'köpek', kedi: 'kedi', aslan: 'aslan', at: 'at' },
+    kelime: { adam: 'adam', kadin: 'kadın', kopek: 'köpek', kedi: 'kedi', aslan: 'aslan', at: 'at', dede: 'adam' },
   },
   {
     klasor: 'tembel-caliskan',
@@ -418,7 +419,7 @@ const KAVRAMLAR = [
     a: { ek: 'caliskan', deger: 'çalışkan', soru: 'Çalışkan olan hangisi?', sifat: 'çalışkandır' },
     b: { ek: 'tembel', deger: 'tembel', soru: 'Tembel olan hangisi?', sifat: 'tembeldir' },
     kelime: { odev: 'çocuk', bahce: 'çocuk', karinca_agustos: { caliskan: 'karınca', tembel: 'ağustos böceği' },
-      sofra: 'çocuk' },
+      sofra: 'çocuk', ciftci: 'çiftçi', firinci: 'fırıncı', supurme: 'çocuk' },
   },
   {
     klasor: 'kalabalik-tenha',
@@ -430,7 +431,8 @@ const KAVRAMLAR = [
     etiket: 'crowd',
     a: { ek: 'kalabalik', deger: 'kalabalık', soru: 'Kalabalık olan hangisi?', sifat: 'kalabalıktır' },
     b: { ek: 'tenha', deger: 'tenha', soru: 'Tenha olan hangisi?', sifat: 'tenhadır' },
-    kelime: { park: 'park', plaj: 'plaj', otobus: 'otobüs', sokak: 'sokak', oyunparki: 'oyun parkı', market: 'market' },
+    kelime: { park: 'park', plaj: 'plaj', otobus: 'otobüs', sokak: 'sokak', oyunparki: 'oyun parkı', market: 'market',
+      havuz: 'havuz', sinema: 'sinema salonu', peron: 'tren peronu', lunapark: 'lunapark' },
   },
 ];
 
