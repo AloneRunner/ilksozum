@@ -4,16 +4,9 @@ import { TextToSpeech } from '@capacitor-community/text-to-speech';
 // Current language code for TTS (BCP-47)
 let speechLang = 'tr-TR';
 
-export function setSpeechLanguage(lang: 'tr' | 'en' | 'de' | 'fr' | 'nl' | 'az') {
-    const map: Record<string, string> = {
-        tr: 'tr-TR',
-        en: 'en-US',
-        de: 'de-DE',
-        fr: 'fr-FR',
-        nl: 'nl-NL',
-        az: 'az-Latn-AZ', // Azerice Latin
-    };
-    speechLang = map[lang] || 'en-US';
+// Uygulama yalnızca Türkçe: konuşma dili her zaman tr-TR.
+export function setSpeechLanguage(_lang?: 'tr' | 'en' | 'de' | 'fr' | 'nl' | 'az') {
+    speechLang = 'tr-TR';
 }
 
 let isMuted = false;

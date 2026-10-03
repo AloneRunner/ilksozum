@@ -1,8 +1,0 @@
-{
-  "sequencingStories": {
-    "q_order_events": {
-      "correct": "Bəli! Bu düzgün sıradır.",
-      "wrong": "Xeyr, bu düzgün sıra deyil. Yenidən cəhd et."
-    }
-  }
-}

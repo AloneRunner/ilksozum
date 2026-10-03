@@ -1,7 +1,7 @@
 // FIX: Import React to use React.Dispatch and React.SetStateAction types.
 import React, { useMemo, useCallback, useEffect, useState } from 'react';
 import { Capacitor } from '@capacitor/core';
-import { getCurrentLanguage, setCurrentLanguage, type Locale } from '../i18n/index.ts';
+import { setCurrentLanguage, type Locale } from '../i18n/index.ts';
 import { useLocalStorage } from './useLocalStorage.ts';
 import { purchasePremium, getPaywallOptions, purchasePackageByIdentifier, syncPremiumEntitlement, restorePurchases } from '../services/monetizationService.ts';
 import { FREE_THEMES } from '../themes/themeManager.ts';
@@ -30,7 +30,10 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
     const [isUnderwaterMusicEnabled, setIsUnderwaterMusicEnabled] = useLocalStorage<boolean>('isUnderwaterMusicEnabled', false);
     const [isRealisticImagesEnabled, setIsRealisticImagesEnabled] = useLocalStorage<boolean>('isRealisticImagesEnabled_v1', false);
     const [theme, setTheme] = useLocalStorage<string>('theme_v2', 'simple');
-    const [language, setLanguage] = useLocalStorage<Locale>('lang_v1', getCurrentLanguage());
+    // Uygulama yalnızca Türkçe. Eski 'lang_v1' kaydı (ör. 'en') artık okunmaz, Türkçeye çekilir.
+    const language: Locale = 'tr';
+    const setLanguage = (_l: Locale) => {};
+    useEffect(() => { try { if (localStorage.getItem('lang_v1') !== '"tr"') localStorage.setItem('lang_v1', '"tr"'); } catch {} }, []);
     
     useEffect(() => {
         // This runs only once on the very first launch for a user

@@ -1039,27 +1039,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
             <div>
   <h2 className={`text-xl font-bold pt-4 pb-2 border-b ${sectionBorderClass} ${sectionTitleColor} ${isCosmicTheme ? 'drop-shadow-[0_4px_12px_rgba(14,165,233,0.35)]' : ''}`}>{t('settingsEx.general.title', 'Genel Ayarlar')}</h2>
                 <div className="space-y-3 mt-2">
-                    {/* Language selector */}
-                    <SettingsRow title={t('settings.language')} subtitle={t('settings.languageSubtitle')} isThemed={isThemed} themeVariant={themeVariant}>
-                        <select
-                          value={settings.language}
-                          onChange={(e) => settings.onChangeLanguage(e.target.value as any)}
-                          className={`px-3 py-2 rounded-lg border bg-white text-slate-800 ${isThemed ? 'border-white/30' : 'border-slate-300'}`}
-                          aria-label={t('settings.language')}
-                        >
-                          <option value="tr">Türkçe</option>
-                          <option value="en">English</option>
-                          <option value="de">Deutsch</option>
-                          <option value="fr">Français</option>
-                          <option value="nl">Nederlands</option>
-                          <option value="az">Azərbaycan dili</option>
-                        </select>
-                    </SettingsRow>
-                    <p className={`text-xs ${subTextColor} -mt-2 mb-1`}>{t('settings.languageNote')}</p>
-                    {/* AI translation apology / feedback note (optional) */}
-          {t('settings.languageAutoNote') && (
-            <p className={`text-xs ${subTextColor} -mt-1 mb-2 italic text-[11px]`}>{t('settings.languageAutoNote')}</p>
-          )}
+                    {/* Dil seçici kaldırıldı: uygulama yalnızca Türkçe (2026-10). */}
           <SettingsRow title={t('settingsEx.mute.title', 'Sessiz Mod')} subtitle={t('settingsEx.mute.subtitle', 'Tüm sesleri kapatır')} isThemed={isThemed} themeVariant={themeVariant}>
                         <ToggleSwitch isEnabled={isMuted} onToggle={onToggleMute} themeVariant={themeVariant} />
                     </SettingsRow>

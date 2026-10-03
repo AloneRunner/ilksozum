@@ -23,15 +23,7 @@ export default defineConfig({
             if (p.includes('/lodash-es/')) return 'vendor_lodash';
             return 'vendor';
           }
-          if (p.includes('/src/i18n/')) {
-            if (p.includes('/src/i18n/en/')) return 'i18n_en';
-            if (p.includes('/src/i18n/tr/')) return 'i18n_tr';
-            if (p.includes('/src/i18n/de/')) return 'i18n_de';
-            if (p.includes('/src/i18n/fr/')) return 'i18n_fr';
-            if (p.includes('/src/i18n/nl/')) return 'i18n_nl';
-            if (p.includes('/src/i18n/az/')) return 'i18n_az';
-            return 'i18n';
-          }
+          if (p.includes('/src/i18n/')) return 'i18n_tr';
         }
       }
     }

@@ -1,8 +1,0 @@
-{
-  "sequencingStories": {
-    "q_order_events": {
-      "correct": "Yes! That's the correct order.",
-      "wrong": "No, that's not the correct order. Try again."
-    }
-  }
-}

@@ -16,11 +16,6 @@ import { CONCEPT_ACTIVITIES, LETTER_SOUND_ACTIVITIES, REASONING_ACTIVITIES, LETT
 import { getActivityMetadata } from '../constants/activityMetadata';
 import { shuffleArray, getValueFromLocalStorage } from '../utils.ts';
 import { getCurrentLanguage, t } from '../i18n/index.ts';
-import wordmapTrEn from '../utils/wordmap.tr-en.json';
-import wordmapTrDe from '../utils/wordmap.tr-de.json';
-import wordmapTrFr from '../utils/wordmap.tr-fr.json';
-import wordmapTrNl from '../utils/wordmap.tr-nl.json';
-import wordmapTrAz from '../utils/wordmap.tr-az.json';
 
 
 // --- UTILITY FUNCTIONS ---
@@ -161,31 +156,8 @@ const pickBalancedRoundFromPairGroup = (
     return shuffleArray(candidates)[0];
 };
 
-// Helper to translate Turkish word to target language using wordmap
-const translateWord = (turkishWord: string, targetLang: string): string => {
-    if (targetLang === 'tr') return turkishWord;
-    
-    const wordmaps: Record<string, any> = {
-        'en': wordmapTrEn,
-        'de': wordmapTrDe,
-        'fr': wordmapTrFr,
-        'nl': wordmapTrNl,
-        'az': wordmapTrAz
-    };
-    
-    const wordmap = wordmaps[targetLang];
-    if (!wordmap) return turkishWord;
-    
-    // Search through all categories in wordmap
-    for (const category in wordmap) {
-        if (wordmap[category][turkishWord]) {
-            return wordmap[category][turkishWord];
-        }
-    }
-    
-    // Fallback to Turkish if no translation found
-    return turkishWord;
-};
+// Uygulama yalnızca Türkçe: kelime olduğu gibi döner.
+const translateWord = (turkishWord: string, _targetLang: string): string => turkishWord;
 
 // A map to define the primary image ID for words with multiple visuals.
 const mainVisualMap: { [word: string]: number } = {

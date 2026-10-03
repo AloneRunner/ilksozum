@@ -1,0 +1,82 @@
+{
+  "_aciklama": "2026-10: Kodda kullanılıp Türkçe karşılığı olmayan metinler (ekranda İngilizce ya da anahtar adı görünüyordu). Çoklu dil kaldırılırken eklendi.",
+  "menu": {
+    "announcements": "Duyurular"
+  },
+  "common": {
+    "back": "Geri",
+    "play": "Oynat",
+    "pause": "Duraklat",
+    "level": "Seviye"
+  },
+  "concepts": {
+    "position": "Konum",
+    "senses": "Duyularımız",
+    "relative": "Karşılaştırma",
+    "changeSize": "Boyutu Değiştir",
+    "activities": {
+      "noisyQuiet": "Gürültülü / Sessiz",
+      "countMatch": "Kaç Tane?"
+    },
+    "subtitles": {
+      "discoverSpiky": "Dikenli yüzeyleri keşfet",
+      "recognizeMoisture": "Islaklığı fark et",
+      "discoverTastes": "Tatları keşfet",
+      "learnPositions": "Konumları öğren",
+      "matchPlacement": "Yerleşimi eşleştir",
+      "discoverDirections": "Yönleri keşfet",
+      "comparePlacement": "Yerleşimi karşılaştır",
+      "noticeArrangement": "Dizilişi fark et",
+      "strengthenDirections": "Yönleri pekiştir",
+      "measureDistance": "Uzaklığı karşılaştır",
+      "noticeLevels": "Yükseklikleri fark et",
+      "noticeOrientation": "Yönü fark et",
+      "distinguishTime": "Zamanı ayırt et",
+      "compareAmounts": "Miktarları karşılaştır",
+      "recognizeFractions": "Parçaları tanı",
+      "findNumberType": "Tek mi çift mi, bul",
+      "compareContainers": "Kapları karşılaştır",
+      "matchCounts": "Sayıları eşleştir",
+      "distinguishCondition": "Durumu ayırt et",
+      "compareActivity": "Hareketi karşılaştır",
+      "noticeFreshness": "Tazeliği fark et",
+      "exploreSenses": "Duyularımızı keşfet",
+      "recogniseLife": "Canlıları tanı",
+      "evaluateState": "Durumu değerlendir",
+      "interpretFeelings": "Duyguları anla",
+      "discoverAge": "Yaş farkını keşfet",
+      "evaluateCleanliness": "Temizliği değerlendir",
+      "compareOrder": "Düzeni karşılaştır"
+    }
+  },
+  "fineMotor": {
+    "developingNote": "Bu bölüm geliştirme aşamasında.",
+    "activities": {
+      "lineTracing": { "title": "Çizgi Takip" },
+      "letterTracing": { "title": "Harf Çizgisi" },
+      "coloring": { "title": "Şekil Boyama", "subtitle": "Şekilleri boya" },
+      "constrainedColoring": { "title": "Kısıtlı Boyama" },
+      "rhythm": { "title": "Ritim Takip", "subtitle": "Ritmi takip et" }
+    }
+  },
+  "lineTracing": {
+    "instruction": "Çizgiyi parmağınla takip et."
+  },
+  "letterTracing": {
+    "instruction": "Harfi dikkatlice çiz."
+  },
+  "constrainedColoring": {
+    "instruction": "Her bölgede izin verilen renkleri kullan."
+  },
+  "reasoning": {
+    "activities": {
+      "causeEffect": { "title": "Neden - Sonuç" },
+      "dragAndDropPositioning": { "boxLabel": "KUTU" }
+    }
+  },
+  "achievements": {
+    "categories": {
+      "fineMotor": "İnce Motor"
+    }
+  }
+}
