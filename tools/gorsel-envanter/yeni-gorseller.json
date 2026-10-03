@@ -3716,6 +3716,235 @@
       "tags": {
         "temperature": "soğuk"
       }
+    },
+    {
+      "id": 3701,
+      "kaynak": "puruzlu-puruzsuz/kabuk_sise-puruzlu.jpg",
+      "word": "ağaç kabuğu",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzlü"
+      }
+    },
+    {
+      "id": 3702,
+      "kaynak": "puruzlu-puruzsuz/kabuk_sise-puruzsuz.jpg",
+      "word": "cam şişe",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzsüz"
+      }
+    },
+    {
+      "id": 3703,
+      "kaynak": "puruzlu-puruzsuz/kavun_karpuz-puruzlu.jpg",
+      "word": "kavun",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzlü"
+      }
+    },
+    {
+      "id": 3704,
+      "kaynak": "puruzlu-puruzsuz/portakal_elma-puruzlu.jpg",
+      "word": "portakal",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzlü"
+      }
+    },
+    {
+      "id": 3705,
+      "kaynak": "puruzlu-puruzsuz/sungertasi_sabun-puruzlu.jpg",
+      "word": "sünger taşı",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzlü"
+      }
+    },
+    {
+      "id": 3706,
+      "kaynak": "puruzlu-puruzsuz/sungertasi_sabun-puruzsuz.jpg",
+      "word": "sabun",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzsüz"
+      }
+    },
+    {
+      "id": 3707,
+      "kaynak": "puruzlu-puruzsuz/tahta-puruzlu.jpg",
+      "word": "tahta",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzlü"
+      }
+    },
+    {
+      "id": 3708,
+      "kaynak": "puruzlu-puruzsuz/tahta-puruzsuz.jpg",
+      "word": "tahta",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzsüz"
+      }
+    },
+    {
+      "id": 3709,
+      "kaynak": "puruzlu-puruzsuz/tugla_fayans-puruzsuz.jpg",
+      "word": "fayans",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzsüz"
+      }
+    },
+    {
+      "id": 3710,
+      "kaynak": "puruzlu-puruzsuz/volkanik_dere-puruzlu.jpg",
+      "word": "pürüzlü taş",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzlü"
+      }
+    },
+    {
+      "id": 3711,
+      "kaynak": "puruzlu-puruzsuz/zimpara_kagit-puruzlu.jpg",
+      "word": "zımpara kâğıdı",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzlü"
+      }
+    },
+    {
+      "id": 3712,
+      "kaynak": "puruzlu-puruzsuz/zimpara_kagit-puruzsuz.jpg",
+      "word": "kâğıt",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzsüz"
+      }
+    },
+    {
+      "id": 3801,
+      "kaynak": "dikenli-puruzsuz/balonbaligi_japonbaligi-dikenli.jpg",
+      "word": "balon balığı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "texture": "dikenli"
+      }
+    },
+    {
+      "id": 3802,
+      "kaynak": "dikenli-puruzsuz/balonbaligi_japonbaligi-puruzsuz.jpg",
+      "word": "japon balığı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "texture": "pürüzsüz"
+      }
+    },
+    {
+      "id": 3803,
+      "kaynak": "dikenli-puruzsuz/denizkestanesi_kabuk-dikenli.jpg",
+      "word": "deniz kestanesi",
+      "category": "none",
+      "tags": {
+        "texture": "dikenli"
+      }
+    },
+    {
+      "id": 3804,
+      "kaynak": "dikenli-puruzsuz/denizkestanesi_kabuk-puruzsuz.jpg",
+      "word": "deniz kabuğu",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzsüz"
+      }
+    },
+    {
+      "id": 3805,
+      "kaynak": "dikenli-puruzsuz/devedikeni_nergis-dikenli.jpg",
+      "word": "deve dikeni",
+      "category": "none",
+      "tags": {
+        "texture": "dikenli"
+      }
+    },
+    {
+      "id": 3806,
+      "kaynak": "dikenli-puruzsuz/devedikeni_nergis-puruzsuz.jpg",
+      "word": "nergis",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzsüz"
+      }
+    },
+    {
+      "id": 3807,
+      "kaynak": "dikenli-puruzsuz/gul_lale-dikenli.jpg",
+      "word": "gül",
+      "category": "none",
+      "tags": {
+        "texture": "dikenli"
+      }
+    },
+    {
+      "id": 3808,
+      "kaynak": "dikenli-puruzsuz/kaktus_elma-dikenli.jpg",
+      "word": "kaktüs",
+      "category": "none",
+      "tags": {
+        "texture": "dikenli"
+      }
+    },
+    {
+      "id": 3809,
+      "kaynak": "dikenli-puruzsuz/kestane-dikenli.jpg",
+      "word": "kestane",
+      "category": "none",
+      "tags": {
+        "texture": "dikenli"
+      }
+    },
+    {
+      "id": 3810,
+      "kaynak": "dikenli-puruzsuz/kestane-puruzsuz.jpg",
+      "word": "kestane",
+      "category": "none",
+      "tags": {
+        "texture": "pürüzsüz"
+      }
+    },
+    {
+      "id": 3811,
+      "kaynak": "dikenli-puruzsuz/kirpi_yunus-dikenli.jpg",
+      "word": "kirpi",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "texture": "dikenli"
+      }
+    },
+    {
+      "id": 3812,
+      "kaynak": "dikenli-puruzsuz/kirpi_yunus-puruzsuz.jpg",
+      "word": "yunus",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "texture": "pürüzsüz"
+      }
+    },
+    {
+      "id": 3813,
+      "kaynak": "dikenli-puruzsuz/masajtopu_top-dikenli.jpg",
+      "word": "dikenli top",
+      "category": "none",
+      "tags": {
+        "texture": "dikenli"
+      }
     }
   ]
 }

@@ -68,8 +68,8 @@ Her nesneden 3-4 kademe üretilir (ör. 4 boyda aynı top). Bunlardan hem çift 
 ## Aşama 4: Duyusal, sosyal, yön
 - [x] Sıcak / soğuk bağlandı: 9 çift, 18 soru, id 3601+ (kupa deneme 1'den, kar tanesi yok, buhar ve buz ile).
 - [x] Sert / yumuşak bağlandı: 10 çift (iki farklı nesne), 20 soru, 15 yeni görsel (3501+), 5 görsel yeniden kullanıldı.
-- [ ] Pürüzlü / pürüzsüz
-- [ ] Dikenli / pürüzsüz
+- [x] Pürüzlü / pürüzsüz bağlandı: 9 çift, 18 soru (3701+).
+- [x] Dikenli / pürüzsüz bağlandı: 8 çift, 16 soru (3801+). İki kavram tek Flow sayfası (`flow-dokular.md`), 9 görsel yeniden kullanıldı.
 - [ ] Acı / tatlı
 - [ ] Gürültülü / sessiz
 - [ ] Aç / tok

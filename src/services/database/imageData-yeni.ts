@@ -9607,5 +9607,682 @@ export const imageDataYeni: ImageMetadata[] = [
         "Z"
       ]
     }
+  },
+  {
+    "id": 3701,
+    "word": "ağaç kabuğu",
+    "imageUrl": "/images/3701.webp",
+    "audioKeys": {
+      "default": "ağaç kabuğu"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzlü",
+      "syllables": [
+        "a",
+        "ğaç",
+        "ka",
+        "bu",
+        "ğu"
+      ],
+      "letters": [
+        "A",
+        "Ğ",
+        "A",
+        "Ç",
+        "K",
+        "A",
+        "B",
+        "U",
+        "Ğ",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 3702,
+    "word": "cam şişe",
+    "imageUrl": "/images/3702.webp",
+    "audioKeys": {
+      "default": "cam şişe"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzsüz",
+      "syllables": [
+        "cam",
+        "şi",
+        "şe"
+      ],
+      "letters": [
+        "C",
+        "A",
+        "M",
+        "Ş",
+        "İ",
+        "Ş",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 3703,
+    "word": "kavun",
+    "imageUrl": "/images/3703.webp",
+    "audioKeys": {
+      "default": "kavun"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzlü",
+      "syllables": [
+        "ka",
+        "vun"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "V",
+        "U",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": 3704,
+    "word": "portakal",
+    "imageUrl": "/images/3704.webp",
+    "audioKeys": {
+      "default": "portakal"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzlü",
+      "syllables": [
+        "por",
+        "ta",
+        "kal"
+      ],
+      "letters": [
+        "P",
+        "O",
+        "R",
+        "T",
+        "A",
+        "K",
+        "A",
+        "L"
+      ]
+    }
+  },
+  {
+    "id": 3705,
+    "word": "sünger taşı",
+    "imageUrl": "/images/3705.webp",
+    "audioKeys": {
+      "default": "sünger taşı"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzlü",
+      "syllables": [
+        "sün",
+        "ger",
+        "ta",
+        "şı"
+      ],
+      "letters": [
+        "S",
+        "Ü",
+        "N",
+        "G",
+        "E",
+        "R",
+        "T",
+        "A",
+        "Ş",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3706,
+    "word": "sabun",
+    "imageUrl": "/images/3706.webp",
+    "audioKeys": {
+      "default": "sabun"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzsüz",
+      "syllables": [
+        "sa",
+        "bun"
+      ],
+      "letters": [
+        "S",
+        "A",
+        "B",
+        "U",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": 3707,
+    "word": "tahta",
+    "imageUrl": "/images/3707.webp",
+    "audioKeys": {
+      "default": "tahta"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzlü",
+      "syllables": [
+        "tah",
+        "ta"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "H",
+        "T",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3708,
+    "word": "tahta",
+    "imageUrl": "/images/3708.webp",
+    "audioKeys": {
+      "default": "tahta"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzsüz",
+      "syllables": [
+        "tah",
+        "ta"
+      ],
+      "letters": [
+        "T",
+        "A",
+        "H",
+        "T",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 3709,
+    "word": "fayans",
+    "imageUrl": "/images/3709.webp",
+    "audioKeys": {
+      "default": "fayans"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzsüz",
+      "syllables": [
+        "fa",
+        "yans"
+      ],
+      "letters": [
+        "F",
+        "A",
+        "Y",
+        "A",
+        "N",
+        "S"
+      ]
+    }
+  },
+  {
+    "id": 3710,
+    "word": "pürüzlü taş",
+    "imageUrl": "/images/3710.webp",
+    "audioKeys": {
+      "default": "pürüzlü taş"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzlü",
+      "syllables": [
+        "pü",
+        "rüz",
+        "lü",
+        "taş"
+      ],
+      "letters": [
+        "P",
+        "Ü",
+        "R",
+        "Ü",
+        "Z",
+        "L",
+        "Ü",
+        "T",
+        "A",
+        "Ş"
+      ]
+    }
+  },
+  {
+    "id": 3711,
+    "word": "zımpara kâğıdı",
+    "imageUrl": "/images/3711.webp",
+    "audioKeys": {
+      "default": "zımpara kâğıdı"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzlü",
+      "syllables": [
+        "zım",
+        "pa",
+        "ra",
+        "kâ",
+        "ğı",
+        "dı"
+      ],
+      "letters": [
+        "Z",
+        "I",
+        "M",
+        "P",
+        "A",
+        "R",
+        "A",
+        "K",
+        "Â",
+        "Ğ",
+        "I",
+        "D",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3712,
+    "word": "kâğıt",
+    "imageUrl": "/images/3712.webp",
+    "audioKeys": {
+      "default": "kâğıt"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzsüz",
+      "syllables": [
+        "kâ",
+        "ğıt"
+      ],
+      "letters": [
+        "K",
+        "Â",
+        "Ğ",
+        "I",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 3801,
+    "word": "balon balığı",
+    "imageUrl": "/images/3801.webp",
+    "audioKeys": {
+      "default": "balon balığı"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "dikenli",
+      "syllables": [
+        "ba",
+        "lon",
+        "ba",
+        "lı",
+        "ğı"
+      ],
+      "letters": [
+        "B",
+        "A",
+        "L",
+        "O",
+        "N",
+        "B",
+        "A",
+        "L",
+        "I",
+        "Ğ",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3802,
+    "word": "japon balığı",
+    "imageUrl": "/images/3802.webp",
+    "audioKeys": {
+      "default": "japon balığı"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzsüz",
+      "syllables": [
+        "ja",
+        "pon",
+        "ba",
+        "lı",
+        "ğı"
+      ],
+      "letters": [
+        "J",
+        "A",
+        "P",
+        "O",
+        "N",
+        "B",
+        "A",
+        "L",
+        "I",
+        "Ğ",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 3803,
+    "word": "deniz kestanesi",
+    "imageUrl": "/images/3803.webp",
+    "audioKeys": {
+      "default": "deniz kestanesi"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "dikenli",
+      "syllables": [
+        "de",
+        "niz",
+        "kes",
+        "ta",
+        "ne",
+        "si"
+      ],
+      "letters": [
+        "D",
+        "E",
+        "N",
+        "İ",
+        "Z",
+        "K",
+        "E",
+        "S",
+        "T",
+        "A",
+        "N",
+        "E",
+        "S",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 3804,
+    "word": "deniz kabuğu",
+    "imageUrl": "/images/3804.webp",
+    "audioKeys": {
+      "default": "deniz kabuğu"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzsüz",
+      "syllables": [
+        "de",
+        "niz",
+        "ka",
+        "bu",
+        "ğu"
+      ],
+      "letters": [
+        "D",
+        "E",
+        "N",
+        "İ",
+        "Z",
+        "K",
+        "A",
+        "B",
+        "U",
+        "Ğ",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 3805,
+    "word": "deve dikeni",
+    "imageUrl": "/images/3805.webp",
+    "audioKeys": {
+      "default": "deve dikeni"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "dikenli",
+      "syllables": [
+        "de",
+        "ve",
+        "di",
+        "ke",
+        "ni"
+      ],
+      "letters": [
+        "D",
+        "E",
+        "V",
+        "E",
+        "D",
+        "İ",
+        "K",
+        "E",
+        "N",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 3806,
+    "word": "nergis",
+    "imageUrl": "/images/3806.webp",
+    "audioKeys": {
+      "default": "nergis"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzsüz",
+      "syllables": [
+        "ner",
+        "gis"
+      ],
+      "letters": [
+        "N",
+        "E",
+        "R",
+        "G",
+        "İ",
+        "S"
+      ]
+    }
+  },
+  {
+    "id": 3807,
+    "word": "gül",
+    "imageUrl": "/images/3807.webp",
+    "audioKeys": {
+      "default": "gül"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "dikenli",
+      "syllables": [
+        "gül"
+      ],
+      "letters": [
+        "G",
+        "Ü",
+        "L"
+      ]
+    }
+  },
+  {
+    "id": 3808,
+    "word": "kaktüs",
+    "imageUrl": "/images/3808.webp",
+    "audioKeys": {
+      "default": "kaktüs"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "dikenli",
+      "syllables": [
+        "kak",
+        "tüs"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "K",
+        "T",
+        "Ü",
+        "S"
+      ]
+    }
+  },
+  {
+    "id": 3809,
+    "word": "kestane",
+    "imageUrl": "/images/3809.webp",
+    "audioKeys": {
+      "default": "kestane"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "dikenli",
+      "syllables": [
+        "kes",
+        "ta",
+        "ne"
+      ],
+      "letters": [
+        "K",
+        "E",
+        "S",
+        "T",
+        "A",
+        "N",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 3810,
+    "word": "kestane",
+    "imageUrl": "/images/3810.webp",
+    "audioKeys": {
+      "default": "kestane"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzsüz",
+      "syllables": [
+        "kes",
+        "ta",
+        "ne"
+      ],
+      "letters": [
+        "K",
+        "E",
+        "S",
+        "T",
+        "A",
+        "N",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 3811,
+    "word": "kirpi",
+    "imageUrl": "/images/3811.webp",
+    "audioKeys": {
+      "default": "kirpi"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "dikenli",
+      "syllables": [
+        "kir",
+        "pi"
+      ],
+      "letters": [
+        "K",
+        "İ",
+        "R",
+        "P",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 3812,
+    "word": "yunus",
+    "imageUrl": "/images/3812.webp",
+    "audioKeys": {
+      "default": "yunus"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "pürüzsüz",
+      "syllables": [
+        "yu",
+        "nus"
+      ],
+      "letters": [
+        "Y",
+        "U",
+        "N",
+        "U",
+        "S"
+      ]
+    }
+  },
+  {
+    "id": 3813,
+    "word": "dikenli top",
+    "imageUrl": "/images/3813.webp",
+    "audioKeys": {
+      "default": "dikenli top"
+    },
+    "tags": {
+      "category": "none",
+      "texture": "dikenli",
+      "syllables": [
+        "di",
+        "ken",
+        "li",
+        "top"
+      ],
+      "letters": [
+        "D",
+        "İ",
+        "K",
+        "E",
+        "N",
+        "L",
+        "İ",
+        "T",
+        "O",
+        "P"
+      ]
+    }
   }
 ] as ImageMetadata[];
