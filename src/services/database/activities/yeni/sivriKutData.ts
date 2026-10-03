@@ -1,5 +1,5 @@
 // OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-cift.mjs (sivri-kut). Elle düzenleme.
-// 9 çift, 18 soru. Görseller: gorsel-ham/sivri-kut/ → id 5801-5818.
+// 10 çift, 20 soru. Görseller: gorsel-ham/sivri-kut/ → id 5801-5820.
 import { ConceptRound, ActivityType } from '../../../../types';
 
 export const sivriKutDataYeni: ConceptRound[] = [
@@ -244,6 +244,33 @@ export const sivriKutDataYeni: ConceptRound[] = [
         options: [
             { id: 5817, word: "makas", imageUrl: "/images/5817.webp", isCorrect: true, audioKey: "makas", spokenText: "makas" },
             { id: 5818, word: "makas", imageUrl: "/images/5818.webp", isCorrect: false, audioKey: "makas", spokenText: "makas" }
+        ]
+    },
+    // yaprak
+    {
+        id: 19,
+        question: "Hangi yaprağın ucu sivri?",
+        questionAudioKey: "",
+        activityType: ActivityType.SivriKut,
+        speech: {
+            tr: { question: 'Hangi yaprağın ucu sivri?', correct: 'Evet! Yaprağın ucu sivridir.', wrong: 'Hayır, bu yaprağın ucu küttür.' }
+        },
+        options: [
+            { id: 5820, word: "yaprak", imageUrl: "/images/5820.webp", isCorrect: true, audioKey: "yaprak", spokenText: "yaprak" },
+            { id: 5819, word: "yaprak", imageUrl: "/images/5819.webp", isCorrect: false, audioKey: "yaprak", spokenText: "yaprak" }
+        ]
+    },
+    {
+        id: 20,
+        question: "Hangi yaprağın ucu küt?",
+        questionAudioKey: "",
+        activityType: ActivityType.SivriKut,
+        speech: {
+            tr: { question: 'Hangi yaprağın ucu küt?', correct: 'Evet! Yaprağın ucu küttür.', wrong: 'Hayır, bu yaprağın ucu sivridir.' }
+        },
+        options: [
+            { id: 5819, word: "yaprak", imageUrl: "/images/5819.webp", isCorrect: true, audioKey: "yaprak", spokenText: "yaprak" },
+            { id: 5820, word: "yaprak", imageUrl: "/images/5820.webp", isCorrect: false, audioKey: "yaprak", spokenText: "yaprak" }
         ]
     },
 ];

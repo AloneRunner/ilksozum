@@ -7278,6 +7278,24 @@
     },
     {
       "id": 5707,
+      "kaynak": "ters-duz/pantolon-duz.jpg",
+      "word": "pantolon",
+      "category": "none",
+      "tags": {
+        "orientation": "düz"
+      }
+    },
+    {
+      "id": 5708,
+      "kaynak": "ters-duz/pantolon-ters.jpg",
+      "word": "pantolon",
+      "category": "none",
+      "tags": {
+        "orientation": "ters"
+      }
+    },
+    {
+      "id": 5709,
       "kaynak": "ters-duz/saksi-duz.jpg",
       "word": "saksı",
       "category": "none",
@@ -7286,7 +7304,7 @@
       }
     },
     {
-      "id": 5708,
+      "id": 5710,
       "kaynak": "ters-duz/saksi-ters.jpg",
       "word": "saksı",
       "category": "none",
@@ -7295,7 +7313,7 @@
       }
     },
     {
-      "id": 5709,
+      "id": 5711,
       "kaynak": "ters-duz/sandalye-duz.jpg",
       "word": "sandalye",
       "category": "none",
@@ -7304,7 +7322,7 @@
       }
     },
     {
-      "id": 5710,
+      "id": 5712,
       "kaynak": "ters-duz/sandalye-ters.jpg",
       "word": "sandalye",
       "category": "none",
@@ -7313,7 +7331,7 @@
       }
     },
     {
-      "id": 5711,
+      "id": 5713,
       "kaynak": "ters-duz/semsiye-duz.jpg",
       "word": "şemsiye",
       "category": "none",
@@ -7322,7 +7340,7 @@
       }
     },
     {
-      "id": 5712,
+      "id": 5714,
       "kaynak": "ters-duz/semsiye-ters.jpg",
       "word": "şemsiye",
       "category": "none",
@@ -7331,7 +7349,7 @@
       }
     },
     {
-      "id": 5713,
+      "id": 5715,
       "kaynak": "ters-duz/sise-duz.jpg",
       "word": "şişe",
       "category": "none",
@@ -7340,7 +7358,7 @@
       }
     },
     {
-      "id": 5714,
+      "id": 5716,
       "kaynak": "ters-duz/sise-ters.jpg",
       "word": "şişe",
       "category": "none",
@@ -7349,7 +7367,7 @@
       }
     },
     {
-      "id": 5715,
+      "id": 5717,
       "kaynak": "ters-duz/tabure-duz.jpg",
       "word": "tabure",
       "category": "none",
@@ -7358,7 +7376,7 @@
       }
     },
     {
-      "id": 5716,
+      "id": 5718,
       "kaynak": "ters-duz/tabure-ters.jpg",
       "word": "tabure",
       "category": "none",
@@ -7523,6 +7541,24 @@
       "id": 5818,
       "kaynak": "sivri-kut/makas-sivri.jpg",
       "word": "makas",
+      "category": "none",
+      "tags": {
+        "shape": "sivri"
+      }
+    },
+    {
+      "id": 5819,
+      "kaynak": "sivri-kut/yaprak-kut.jpg",
+      "word": "yaprak",
+      "category": "none",
+      "tags": {
+        "shape": "küt"
+      }
+    },
+    {
+      "id": 5820,
+      "kaynak": "sivri-kut/yaprak-sivri.jpg",
+      "word": "yaprak",
       "category": "none",
       "tags": {
         "shape": "sivri"

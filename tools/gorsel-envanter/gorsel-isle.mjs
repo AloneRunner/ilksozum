@@ -82,10 +82,10 @@ import { ImageMetadata } from '../../types.ts';
 export const imageDataYeni: ImageMetadata[] = ${JSON.stringify(entries, null, 2)} as ImageMetadata[];
 `;
 fs.writeFileSync(OUT_TS, ts);
-// Listede artık olmayan yeni görsel dosyalarını (2001-9999) sil
+// Listede artık olmayan yeni görsel dosyalarını (2001-9999) sil. 5401-5499 saat (uret-saat.mjs kodla çizer), dokunma.
 for (const f of fs.readdirSync(OUT_IMG)) {
   const m = /^(\d+)\.webp$/.exec(f);
-  if (m && +m[1] >= 2001 && +m[1] <= 9999 && !seen.has(+m[1])) {
+  if (m && +m[1] >= 2001 && +m[1] <= 9999 && !seen.has(+m[1]) && !(+m[1] >= 5401 && +m[1] <= 5499)) {
     fs.unlinkSync(path.join(OUT_IMG, f));
     console.log(`silindi (listede yok): ${f}`);
   }

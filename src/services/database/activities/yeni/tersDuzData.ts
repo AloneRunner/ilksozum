@@ -1,5 +1,5 @@
 // OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-cift.mjs (ters-duz). Elle düzenleme.
-// 8 çift, 16 soru. Görseller: gorsel-ham/ters-duz/ → id 5701-5716.
+// 9 çift, 18 soru. Görseller: gorsel-ham/ters-duz/ → id 5701-5718.
 import { ConceptRound, ActivityType } from '../../../../types';
 
 export const tersDuzDataYeni: ConceptRound[] = [
@@ -84,9 +84,36 @@ export const tersDuzDataYeni: ConceptRound[] = [
             { id: 5706, word: "kova", imageUrl: "/images/5706.webp", isCorrect: false, audioKey: "kova", spokenText: "kova" }
         ]
     },
-    // saksı
+    // pantolon
     {
         id: 7,
+        question: "Hangi pantolon ters?",
+        questionAudioKey: "",
+        activityType: ActivityType.TersDuz,
+        speech: {
+            tr: { question: 'Hangi pantolon ters?', correct: 'Evet! Pantolon terstir.', wrong: 'Hayır, bu pantolon düzdür.' }
+        },
+        options: [
+            { id: 5708, word: "pantolon", imageUrl: "/images/5708.webp", isCorrect: true, audioKey: "pantolon", spokenText: "pantolon" },
+            { id: 5707, word: "pantolon", imageUrl: "/images/5707.webp", isCorrect: false, audioKey: "pantolon", spokenText: "pantolon" }
+        ]
+    },
+    {
+        id: 8,
+        question: "Hangi pantolon düz?",
+        questionAudioKey: "",
+        activityType: ActivityType.TersDuz,
+        speech: {
+            tr: { question: 'Hangi pantolon düz?', correct: 'Evet! Pantolon düzdür.', wrong: 'Hayır, bu pantolon terstir.' }
+        },
+        options: [
+            { id: 5707, word: "pantolon", imageUrl: "/images/5707.webp", isCorrect: true, audioKey: "pantolon", spokenText: "pantolon" },
+            { id: 5708, word: "pantolon", imageUrl: "/images/5708.webp", isCorrect: false, audioKey: "pantolon", spokenText: "pantolon" }
+        ]
+    },
+    // saksı
+    {
+        id: 9,
         question: "Hangi saksı ters?",
         questionAudioKey: "",
         activityType: ActivityType.TersDuz,
@@ -94,12 +121,12 @@ export const tersDuzDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi saksı ters?', correct: 'Evet! Saksı terstir.', wrong: 'Hayır, bu saksı düzdür.' }
         },
         options: [
-            { id: 5708, word: "saksı", imageUrl: "/images/5708.webp", isCorrect: true, audioKey: "saksı", spokenText: "saksı" },
-            { id: 5707, word: "saksı", imageUrl: "/images/5707.webp", isCorrect: false, audioKey: "saksı", spokenText: "saksı" }
+            { id: 5710, word: "saksı", imageUrl: "/images/5710.webp", isCorrect: true, audioKey: "saksı", spokenText: "saksı" },
+            { id: 5709, word: "saksı", imageUrl: "/images/5709.webp", isCorrect: false, audioKey: "saksı", spokenText: "saksı" }
         ]
     },
     {
-        id: 8,
+        id: 10,
         question: "Hangi saksı düz?",
         questionAudioKey: "",
         activityType: ActivityType.TersDuz,
@@ -107,13 +134,13 @@ export const tersDuzDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi saksı düz?', correct: 'Evet! Saksı düzdür.', wrong: 'Hayır, bu saksı terstir.' }
         },
         options: [
-            { id: 5707, word: "saksı", imageUrl: "/images/5707.webp", isCorrect: true, audioKey: "saksı", spokenText: "saksı" },
-            { id: 5708, word: "saksı", imageUrl: "/images/5708.webp", isCorrect: false, audioKey: "saksı", spokenText: "saksı" }
+            { id: 5709, word: "saksı", imageUrl: "/images/5709.webp", isCorrect: true, audioKey: "saksı", spokenText: "saksı" },
+            { id: 5710, word: "saksı", imageUrl: "/images/5710.webp", isCorrect: false, audioKey: "saksı", spokenText: "saksı" }
         ]
     },
     // sandalye
     {
-        id: 9,
+        id: 11,
         question: "Hangi sandalye ters?",
         questionAudioKey: "",
         activityType: ActivityType.TersDuz,
@@ -121,12 +148,12 @@ export const tersDuzDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi sandalye ters?', correct: 'Evet! Sandalye terstir.', wrong: 'Hayır, bu sandalye düzdür.' }
         },
         options: [
-            { id: 5710, word: "sandalye", imageUrl: "/images/5710.webp", isCorrect: true, audioKey: "sandalye", spokenText: "sandalye" },
-            { id: 5709, word: "sandalye", imageUrl: "/images/5709.webp", isCorrect: false, audioKey: "sandalye", spokenText: "sandalye" }
+            { id: 5712, word: "sandalye", imageUrl: "/images/5712.webp", isCorrect: true, audioKey: "sandalye", spokenText: "sandalye" },
+            { id: 5711, word: "sandalye", imageUrl: "/images/5711.webp", isCorrect: false, audioKey: "sandalye", spokenText: "sandalye" }
         ]
     },
     {
-        id: 10,
+        id: 12,
         question: "Hangi sandalye düz?",
         questionAudioKey: "",
         activityType: ActivityType.TersDuz,
@@ -134,13 +161,13 @@ export const tersDuzDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi sandalye düz?', correct: 'Evet! Sandalye düzdür.', wrong: 'Hayır, bu sandalye terstir.' }
         },
         options: [
-            { id: 5709, word: "sandalye", imageUrl: "/images/5709.webp", isCorrect: true, audioKey: "sandalye", spokenText: "sandalye" },
-            { id: 5710, word: "sandalye", imageUrl: "/images/5710.webp", isCorrect: false, audioKey: "sandalye", spokenText: "sandalye" }
+            { id: 5711, word: "sandalye", imageUrl: "/images/5711.webp", isCorrect: true, audioKey: "sandalye", spokenText: "sandalye" },
+            { id: 5712, word: "sandalye", imageUrl: "/images/5712.webp", isCorrect: false, audioKey: "sandalye", spokenText: "sandalye" }
         ]
     },
     // şemsiye
     {
-        id: 11,
+        id: 13,
         question: "Hangi şemsiye ters?",
         questionAudioKey: "",
         activityType: ActivityType.TersDuz,
@@ -148,12 +175,12 @@ export const tersDuzDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi şemsiye ters?', correct: 'Evet! Şemsiye terstir.', wrong: 'Hayır, bu şemsiye düzdür.' }
         },
         options: [
-            { id: 5712, word: "şemsiye", imageUrl: "/images/5712.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
-            { id: 5711, word: "şemsiye", imageUrl: "/images/5711.webp", isCorrect: false, audioKey: "şemsiye", spokenText: "şemsiye" }
+            { id: 5714, word: "şemsiye", imageUrl: "/images/5714.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
+            { id: 5713, word: "şemsiye", imageUrl: "/images/5713.webp", isCorrect: false, audioKey: "şemsiye", spokenText: "şemsiye" }
         ]
     },
     {
-        id: 12,
+        id: 14,
         question: "Hangi şemsiye düz?",
         questionAudioKey: "",
         activityType: ActivityType.TersDuz,
@@ -161,13 +188,13 @@ export const tersDuzDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi şemsiye düz?', correct: 'Evet! Şemsiye düzdür.', wrong: 'Hayır, bu şemsiye terstir.' }
         },
         options: [
-            { id: 5711, word: "şemsiye", imageUrl: "/images/5711.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
-            { id: 5712, word: "şemsiye", imageUrl: "/images/5712.webp", isCorrect: false, audioKey: "şemsiye", spokenText: "şemsiye" }
+            { id: 5713, word: "şemsiye", imageUrl: "/images/5713.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
+            { id: 5714, word: "şemsiye", imageUrl: "/images/5714.webp", isCorrect: false, audioKey: "şemsiye", spokenText: "şemsiye" }
         ]
     },
     // şişe
     {
-        id: 13,
+        id: 15,
         question: "Hangi şişe ters?",
         questionAudioKey: "",
         activityType: ActivityType.TersDuz,
@@ -175,12 +202,12 @@ export const tersDuzDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi şişe ters?', correct: 'Evet! Şişe terstir.', wrong: 'Hayır, bu şişe düzdür.' }
         },
         options: [
-            { id: 5714, word: "şişe", imageUrl: "/images/5714.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
-            { id: 5713, word: "şişe", imageUrl: "/images/5713.webp", isCorrect: false, audioKey: "şişe", spokenText: "şişe" }
+            { id: 5716, word: "şişe", imageUrl: "/images/5716.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
+            { id: 5715, word: "şişe", imageUrl: "/images/5715.webp", isCorrect: false, audioKey: "şişe", spokenText: "şişe" }
         ]
     },
     {
-        id: 14,
+        id: 16,
         question: "Hangi şişe düz?",
         questionAudioKey: "",
         activityType: ActivityType.TersDuz,
@@ -188,13 +215,13 @@ export const tersDuzDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi şişe düz?', correct: 'Evet! Şişe düzdür.', wrong: 'Hayır, bu şişe terstir.' }
         },
         options: [
-            { id: 5713, word: "şişe", imageUrl: "/images/5713.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
-            { id: 5714, word: "şişe", imageUrl: "/images/5714.webp", isCorrect: false, audioKey: "şişe", spokenText: "şişe" }
+            { id: 5715, word: "şişe", imageUrl: "/images/5715.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
+            { id: 5716, word: "şişe", imageUrl: "/images/5716.webp", isCorrect: false, audioKey: "şişe", spokenText: "şişe" }
         ]
     },
     // tabure
     {
-        id: 15,
+        id: 17,
         question: "Hangi tabure ters?",
         questionAudioKey: "",
         activityType: ActivityType.TersDuz,
@@ -202,12 +229,12 @@ export const tersDuzDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi tabure ters?', correct: 'Evet! Tabure terstir.', wrong: 'Hayır, bu tabure düzdür.' }
         },
         options: [
-            { id: 5716, word: "tabure", imageUrl: "/images/5716.webp", isCorrect: true, audioKey: "tabure", spokenText: "tabure" },
-            { id: 5715, word: "tabure", imageUrl: "/images/5715.webp", isCorrect: false, audioKey: "tabure", spokenText: "tabure" }
+            { id: 5718, word: "tabure", imageUrl: "/images/5718.webp", isCorrect: true, audioKey: "tabure", spokenText: "tabure" },
+            { id: 5717, word: "tabure", imageUrl: "/images/5717.webp", isCorrect: false, audioKey: "tabure", spokenText: "tabure" }
         ]
     },
     {
-        id: 16,
+        id: 18,
         question: "Hangi tabure düz?",
         questionAudioKey: "",
         activityType: ActivityType.TersDuz,
@@ -215,8 +242,8 @@ export const tersDuzDataYeni: ConceptRound[] = [
             tr: { question: 'Hangi tabure düz?', correct: 'Evet! Tabure düzdür.', wrong: 'Hayır, bu tabure terstir.' }
         },
         options: [
-            { id: 5715, word: "tabure", imageUrl: "/images/5715.webp", isCorrect: true, audioKey: "tabure", spokenText: "tabure" },
-            { id: 5716, word: "tabure", imageUrl: "/images/5716.webp", isCorrect: false, audioKey: "tabure", spokenText: "tabure" }
+            { id: 5717, word: "tabure", imageUrl: "/images/5717.webp", isCorrect: true, audioKey: "tabure", spokenText: "tabure" },
+            { id: 5718, word: "tabure", imageUrl: "/images/5718.webp", isCorrect: false, audioKey: "tabure", spokenText: "tabure" }
         ]
     },
 ];
