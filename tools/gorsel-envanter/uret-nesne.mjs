@@ -45,7 +45,20 @@ for (const [eskiId, deger] of Object.entries(esleme)) {
   harita[eskiId] = `/images/${id}.webp`;
 }
 
-liste.gorseller = [...liste.gorseller.filter(g => !g.kaynak.startsWith('nesne/')), ...yeni].sort((a, b) => a.id - b.id);
+// 3) Uygulamada hiç olmayan yeni kelimeler (Kaan: "önceden olmayan yeni şeyler de ekle").
+//    nesne-yeni-kelimeler.json: [{ ad, word, category, color? }] — sıra sabit, id = 9001 + sıra (yalnız sona ekle).
+//    Dosya: gorsel-ham/nesne-yeni/<ad>.jpg. Kendi kategorisinde nesne havuzuna girer (hece/harf gorsel-isle'de).
+const YENI_KELIME = path.join(HERE, 'nesne-yeni-kelimeler.json');
+const yeniKelimeler = fs.existsSync(YENI_KELIME) ? JSON.parse(fs.readFileSync(YENI_KELIME, 'utf8')) : [];
+let yeniKelimeSay = 0;
+yeniKelimeler.forEach((k, i) => {
+  const dosya = `nesne-yeni/${k.ad}.jpg`;
+  if (!fs.existsSync(path.join(RAW, dosya))) return;
+  yeni.push({ id: 9001 + i, kaynak: dosya, word: k.word, category: k.category, tags: k.color ? { color: k.color } : {} });
+  yeniKelimeSay++;
+});
+
+liste.gorseller = [...liste.gorseller.filter(g => !g.kaynak.startsWith('nesne/') && !g.kaynak.startsWith('nesne-yeni/')), ...yeni].sort((a, b) => a.id - b.id);
 fs.writeFileSync(LIST, JSON.stringify(liste, null, 2) + '\n');
 
 const satirlar = Object.entries(harita).sort((a, b) => a[0] - b[0]).map(([k, v]) => `  ${k}: '${v}', // ${eskiKayit[k]?.word ?? ''}`);
@@ -59,4 +72,4 @@ ${satirlar.join('\n')}
 export const NESNE_RENK: Record<number, string> = ${JSON.stringify(renkler)};
 `);
 const toplam = Object.keys(eskiKayit).length;
-console.log(`nesne: ${yeni.length} yeni görsel, ${Object.keys(harita).length - yeni.length} yeniden kullanım; ${Object.keys(harita).length}/${toplam} nesne yeni`);
+console.log(`nesne: ${yeni.length - yeniKelimeSay} yeni görsel, ${yeniKelimeSay} yeni kelime, ${Object.keys(harita).length - (yeni.length - yeniKelimeSay)} yeniden kullanım; ${Object.keys(harita).length}/${toplam} nesne yeni`);

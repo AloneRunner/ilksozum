@@ -1,0 +1,110 @@
+[
+  {
+    "ad": "kayisi",
+    "word": "kayısı",
+    "category": "Meyveler",
+    "color": "turuncu"
+  },
+  {
+    "ad": "ayva",
+    "word": "ayva",
+    "category": "Meyveler",
+    "color": "sarı"
+  },
+  {
+    "ad": "dut",
+    "word": "dut",
+    "category": "Meyveler",
+    "color": "mor"
+  },
+  {
+    "ad": "kabak",
+    "word": "kabak",
+    "category": "Sebzeler",
+    "color": "yeşil"
+  },
+  {
+    "ad": "taze-fasulye",
+    "word": "taze fasulye",
+    "category": "Sebzeler",
+    "color": "yeşil"
+  },
+  {
+    "ad": "mantar",
+    "word": "mantar",
+    "category": "Sebzeler",
+    "color": "kahverengi"
+  },
+  {
+    "ad": "maydanoz",
+    "word": "maydanoz",
+    "category": "Sebzeler",
+    "color": "yeşil"
+  },
+  {
+    "ad": "nane",
+    "word": "nane",
+    "category": "Sebzeler",
+    "color": "yeşil"
+  },
+  {
+    "ad": "borek",
+    "word": "börek",
+    "category": "Diğer Yiyecekler",
+    "color": "sarı"
+  },
+  {
+    "ad": "pogaca",
+    "word": "poğaça",
+    "category": "Diğer Yiyecekler",
+    "color": "sarı"
+  },
+  {
+    "ad": "tost",
+    "word": "tost",
+    "category": "Diğer Yiyecekler",
+    "color": "kahverengi"
+  },
+  {
+    "ad": "kek",
+    "word": "kek",
+    "category": "Diğer Yiyecekler",
+    "color": "kahverengi"
+  },
+  {
+    "ad": "kurabiye",
+    "word": "kurabiye",
+    "category": "Diğer Yiyecekler",
+    "color": "kahverengi"
+  },
+  {
+    "ad": "pilav",
+    "word": "pilav",
+    "category": "Diğer Yiyecekler",
+    "color": "beyaz"
+  },
+  {
+    "ad": "misir-gevregi",
+    "word": "mısır gevreği",
+    "category": "Diğer Yiyecekler",
+    "color": "sarı"
+  },
+  {
+    "ad": "patates-kizartmasi",
+    "word": "patates kızartması",
+    "category": "Diğer Yiyecekler",
+    "color": "sarı"
+  },
+  {
+    "ad": "omlet",
+    "word": "omlet",
+    "category": "Diğer Yiyecekler",
+    "color": "sarı"
+  },
+  {
+    "ad": "seker",
+    "word": "şeker",
+    "category": "Diğer Yiyecekler",
+    "color": "çok renkli"
+  }
+]

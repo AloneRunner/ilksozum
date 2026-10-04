@@ -1,4 +1,8 @@
-# Nesne turu 1: meyveler, sebzeler, içecekler (38 görsel)
+# Nesne turu 1: meyveler, sebzeler, içecekler (46 görsel)
+
+Kaan: "Yeni şeyler de ekleyebilirsin, önceden olmayan." Son 8 görsel uygulamada hiç olmayan yeni kelimeler:
+kayısı, ayva, dut, kabak, taze fasulye, mantar, maydanoz, nane. Bunlar kendi kategorilerinde yeni nesne olarak eklenecek
+(hece/harf bilgisi otomatik).
 
 Nesneleri Tanıyalım ve tüm uygulamadaki eski çizim nesne resimleri yenileniyor (eski numaraya bağlanıyor, `uret-nesne.mjs`).
 Kavram turlarından 75 nesne hazır (elma, muz, domates, havuç...). Bu tur eksik meyve, sebze ve içecekler.
@@ -59,6 +63,16 @@ DRINKS (in a glass or cup, side view):
 36. A glass of fizzy orange soda with bubbles.
 37. A glass of ayran (white yogurt drink) with foam on top, in a blue patterned cup.
 38. A clear glass of water.
+
+NEW WORDS (not in the app before):
+39. A few orange apricots.
+40. A whole yellow quince.
+41. A small pile of dark purple mulberries.
+42. A green zucchini.
+43. A handful of fresh green beans.
+44. A few brown mushrooms.
+45. A bunch of fresh parsley.
+46. A bunch of fresh mint leaves.
 
 Start with IMAGE 1.
 

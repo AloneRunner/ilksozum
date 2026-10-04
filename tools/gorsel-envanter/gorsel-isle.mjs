@@ -45,6 +45,11 @@ const letters = word => [...word.replace(/\s+/g, '')].map(c => c.toLocaleUpperCa
 
 const seen = new Set();
 const entries = [];
+let atlanan = 0;
+// Önbellek: her id'de en son hangi kaynak/ayar işlendi. Id'ler kayabilir (kavrama nesne eklenince),
+// o zaman aynı id'de başka resim durur; imza tutmazsa yeniden işlenir.
+const ONBELLEK = path.join(HERE, 'isle-onbellek.json');
+const onbellek = fs.existsSync(ONBELLEK) ? JSON.parse(fs.readFileSync(ONBELLEK, 'utf8')) : {};
 for (const g of gorseller) {
   if (seen.has(g.id)) throw new Error(`Aynı id iki kez: ${g.id}`);
   seen.add(g.id);
@@ -52,6 +57,21 @@ for (const g of gorseller) {
   const src = path.join(RAW, g.kaynak);
   if (!fs.existsSync(src)) throw new Error(`Kaynak yok: ${g.kaynak}`);
   const dst = path.join(OUT_IMG, `${g.id}.webp`);
+
+  const kayit = {
+    id: g.id,
+    word: g.word,
+    imageUrl: `/images/${g.id}.webp`,
+    audioKeys: { default: g.word },
+    tags: { category: g.category || 'none', ...(g.tags || {}), syllables: syllabify(g.word), letters: letters(g.word) },
+  };
+  // Kaynak değişmediyse yeniden işleme (HEPSI=1 ile hepsi baştan). Kayıt yine yazılır.
+  const imza = `${g.kaynak}|${g.sahne ? 1 : 0}`;
+  if (!process.env.HEPSI && onbellek[g.id] === imza && fs.existsSync(dst) && fs.statSync(dst).mtimeMs > fs.statSync(src).mtimeMs) {
+    atlanan++;
+    entries.push(kayit);
+    continue;
+  }
 
   // Arka plan parlaklığı: dört köşenin ortalaması. Bu değer beyaza (255) çekilir.
   const bg = ['NorthWest', 'NorthEast', 'SouthWest', 'SouthEast']
@@ -63,16 +83,11 @@ for (const g of gorseller) {
   args.push('-resize', `${SIZE}x${SIZE}`, '-background', 'white', '-gravity', 'center', '-extent', `${SIZE}x${SIZE}`,
     '-strip', '-quality', String(QUALITY), dst);
   magick(...args);
+  onbellek[g.id] = imza;
   const kb = (fs.statSync(dst).size / 1024).toFixed(0);
   console.log(`${g.id} ${g.word.padEnd(8)} ${g.sahne ? 'sahne (renk korunur)' : `arka plan ${bg.toFixed(0)} → 255`}  ${kb} KB`);
 
-  entries.push({
-    id: g.id,
-    word: g.word,
-    imageUrl: `/images/${g.id}.webp`,
-    audioKeys: { default: g.word },
-    tags: { category: g.category || 'none', ...(g.tags || {}), syllables: syllabify(g.word), letters: letters(g.word) },
-  });
+  entries.push(kayit);
 }
 
 const ts = `// OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/gorsel-isle.mjs
@@ -91,4 +106,5 @@ for (const f of fs.readdirSync(OUT_IMG)) {
     console.log(`silindi (listede yok): ${f}`);
   }
 }
-console.log(`\n${entries.length} görsel işlendi → ${path.relative(ROOT, OUT_TS)}`);
+fs.writeFileSync(ONBELLEK, JSON.stringify(onbellek));
+console.log(`\n${entries.length} görsel (${entries.length - atlanan} işlendi, ${atlanan} değişmemiş) → ${path.relative(ROOT, OUT_TS)}`);
