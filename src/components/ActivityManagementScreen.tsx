@@ -118,6 +118,7 @@ const ActivityManagementScreen: React.FC<ActivityManagementScreenProps> = ({
         case ActivityType.ParlakMat: return t('concepts.activities.parlakMat', fallback);
         case ActivityType.AcikKoyu: return t('concepts.activities.acikKoyu', fallback);
         case ActivityType.HavaDurumu: return t('concepts.activities.havaDurumu', fallback);
+        case ActivityType.IlkSon: return t('concepts.activities.ilkSon', fallback);
         case ActivityType.TehlikeliGuvenli: return t('concepts.activities.tehlikeliGuvenli', fallback);
         case ActivityType.YenirYenmez: return t('concepts.activities.yenirYenmez', fallback);
         case ActivityType.SeffafOpak: return t('concepts.activities.seffafOpak', fallback);

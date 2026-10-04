@@ -634,6 +634,8 @@ const KAVRAMLAR = [
       peynir_sunger: { yenir: 'peynir', yenmez: 'sünger' }, havuc_boya: { yenir: 'havuç', yenmez: 'pastel boya' },
       cikolata_sabun: { yenir: 'çikolata', yenmez: 'sabun' }, elma_top: { yenir: 'elma', yenmez: 'top' },
       kurabiye_altlik: { yenir: 'kurabiye', yenmez: 'bardak altlığı' },
+      muz_oyuncakmuz: { yenir: 'muz', yenmez: 'oyuncak muz' }, cilek_silgi: { yenir: 'çilek', yenmez: 'çilek silgi' },
+      meyvesuyu_sabun: { yenir: 'meyve suyu', yenmez: 'sıvı sabun' },
     },
   },
   {
@@ -647,6 +649,8 @@ const KAVRAMLAR = [
       priz_blok: { tehlikeli: 'priz', guvenli: 'oyuncak blok' }, utu_yastik: { tehlikeli: 'sıcak ütü', guvenli: 'yastık' },
       kibrit_boya: { tehlikeli: 'yanan kibrit', guvenli: 'pastel boya' }, kirikbardak_bardak: { tehlikeli: 'kırık bardak', guvenli: 'plastik bardak' },
       tencere_oyuncak: { tehlikeli: 'kaynayan tencere', guvenli: 'oyuncak tencere' },
+      ilac_boyakutusu: { tehlikeli: 'ilaç', guvenli: 'boya kutusu' }, sprey_subisesi: { tehlikeli: 'temizlik spreyi', guvenli: 'su şişesi' },
+      igne_pamuk: { tehlikeli: 'iğne', guvenli: 'pamuk' },
     },
   },
   {
@@ -665,6 +669,32 @@ const KAVRAMLAR = [
     buYok: true,
     ozne: { ev: 'burada', park: 'burada', yol: 'burada', cocuk: 'burada' },
     kelime: { ev: 'ev', park: 'oyun parkı', yol: 'park yolu', cocuk: 'çocuk' },
+  },
+  {
+    klasor: 'tek-cift', dosya: 'tekCiftData.ts', exportAdi: 'oddEvenDataYeni',
+    activityType: 'OddEven', idBaslangic: 6951, etiket: 'adet',
+    // Çiftten tek eşya kesildi (tek-cift.py). "Hangi resimde tek eldiven var?" / "Hangi resimde bir çift eldiven var?"
+    a: { ek: 'tek', deger: 'tek', soru: 'Tek olan hangisi?', sifat: (w) => `tek ${w} var` },
+    b: { ek: 'cift', deger: 'çift', soru: 'Çift olan hangisi?', sifat: (w) => `bir çift ${w} var` },
+    soruKalip: (w, d) => d === 'tek' ? `Hangi resimde tek ${w} var?` : `Hangi resimde bir çift ${w} var?`,
+    buYok: true,
+    ozne: Object.fromEntries(['ayakkabi', 'terlik', 'cizme', 'kahveayakkabi', 'sandalet', 'paten', 'kupe', 'eldiven', 'corap', 'baget'].map(n => [n, 'burada'])),
+    kelime: { ayakkabi: 'spor ayakkabı', terlik: 'terlik', cizme: 'çizme', kahveayakkabi: 'ayakkabı', sandalet: 'sandalet', paten: 'paten',
+      kupe: 'küpe', eldiven: 'eldiven', corap: 'çorap', baget: 'davul çubuğu' },
+  },
+  {
+    klasor: 'ilk-son', dosya: 'ilkSonData.ts', exportAdi: 'ilkSonDataYeni',
+    activityType: 'IlkSon', idBaslangic: 7001, etiket: 'sira',
+    // ilk-son.py: sola bakan nesneler, solda bitiş çizgisi. "Hangi resimde kırmızı araba ilk sırada?"
+    a: { ek: 'ilk', deger: 'ilk sırada', soru: 'İlk sırada olan hangisi?', sifat: 'ilk sırada' },
+    b: { ek: 'son', deger: 'son sırada', soru: 'Son sırada olan hangisi?', sifat: 'son sırada' },
+    soruKalip: (w, d) => `Hangi resimde ${w} ${d}?`,
+    buYok: true,
+    kelime: {
+      araba_kirmizi: 'kırmızı araba', araba_mavi: 'mavi araba', araba3_yesil: 'yeşil araba', araba_sari: 'sarı araba',
+      ordek_sari: 'sarı ördek', ordek_pembe: 'pembe ördek', ordek3_mavi: 'mavi ördek', ordek_turuncu: 'turuncu ördek',
+      ayi_kahverengi: 'kahverengi ayı', ayi3_gri: 'gri ayı',
+    },
   },
   {
     klasor: 'kirisik-duzgun', dosya: 'kirisikDuzgunData.ts', exportAdi: 'kirisikDuzgunDataYeni',
@@ -800,12 +830,14 @@ ${opt(fNo, wNo, false)}
       // Soru nesneye göre özelleştirilebilir (Kaan: "Kolu kısa olan hangisi?", "Saçı kısa olan hangisi?")
       // Nesne adıyla sor: "Hangi kalem kalın?" (somut, tek odak). k.soruKalip ile değiştirilebilir.
       const kalip = k.soruKalip || ((w, d) => `Hangi ${w} ${d}?`);
+      // sıfat nesne adına göre kurulabilir: (w) => `tek ${w} var` → "Evet! Burada tek eldiven var."
+      const sf = (H, w) => (typeof H.sifat === 'function' ? H.sifat(w) : H.sifat);
       const qA = (k.soruOzel?.[n]?.[ea]) || kalip(w, A.deger), qB = (k.soruOzel?.[n]?.[eb]) || kalip(w, B.deger);
-      rounds.push(round(qA, `Evet! ${cap(oz)} ${A.sifat}.`, `Hayır, ${bu}${oz} ${B.sifat}.`, fa, fb, w) + ',');
-      rounds.push(round(qB, `Evet! ${cap(oz)} ${B.sifat}.`, `Hayır, ${bu}${oz} ${A.sifat}.`, fb, fa, w) + ',');
+      rounds.push(round(qA, `Evet! ${cap(oz)} ${sf(A, w)}.`, `Hayır, ${bu}${oz} ${sf(B, w)}.`, fa, fb, w) + ',');
+      rounds.push(round(qB, `Evet! ${cap(oz)} ${sf(B, w)}.`, `Hayır, ${bu}${oz} ${sf(A, w)}.`, fb, fa, w) + ',');
       // Eş anlamlı soru (ör. bütün = tam): aynı görseller, farklı kelime; turda biri seçilir
       for (const [X, Y, fx, fy] of [[A, B, fa, fb], [B, A, fb, fa]]) {
-        if (X.esSoru) rounds.push(round(X.esDeger ? kalip(w, X.esDeger) : X.esSoru, `Evet! ${cap(oz)} ${X.esSifat}.`, `Hayır, ${bu}${oz} ${Y.sifat}.`, fx, fy, w) + ',');
+        if (X.esSoru) rounds.push(round(X.esDeger ? kalip(w, X.esDeger) : X.esSoru, `Evet! ${cap(oz)} ${X.esSifat}.`, `Hayır, ${bu}${oz} ${sf(Y, w)}.`, fx, fy, w) + ',');
       }
     }
   }

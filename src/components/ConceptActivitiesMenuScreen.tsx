@@ -101,6 +101,11 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
           subtitle: isTr ? "Güneş, yağmur, kar, rüzgâr" : t("concepts.subtitles.havaDurumu", "Sun, rain, snow, wind"),
         },
         {
+          type: ActivityType.IlkSon,
+          title: isTr ? "İlk / Son" : t("concepts.activities.ilkSon", "First / Last"),
+          subtitle: isTr ? "Sıranın başı ve sonu" : t("concepts.subtitles.ilkSon", "Front and back of the line"),
+        },
+        {
           type: ActivityType.TehlikeliGuvenli,
           title: isTr ? "Tehlikeli / Güvenli" : t("concepts.activities.tehlikeliGuvenli", "Dangerous / Safe"),
           subtitle: isTr ? "Tehlikeleri tanı" : t("concepts.subtitles.tehlikeliGuvenli", "Recognize dangers"),
@@ -293,7 +298,7 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
         {
           type: ActivityType.OddEven,
           title: isTr ? "Tek / Çift" : t("concepts.activities.oddEven", "Odd / Even"),
-          subtitle: isTr ? "Sayı türünü bul" : t("concepts.subtitles.findNumberType", "Find the number type"),
+          subtitle: isTr ? "Tek mi, bir çift mi?" : t("concepts.subtitles.findNumberType", "Find the number type"),
         },
         {
           type: ActivityType.FullEmpty,

@@ -9447,6 +9447,56 @@
       }
     },
     {
+      "id": 6726,
+      "kaynak": "sayi/el-1.jpg",
+      "word": "bir parmak gösteren el",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "count": 1
+      }
+    },
+    {
+      "id": 6727,
+      "kaynak": "sayi/el-2.jpg",
+      "word": "iki parmak gösteren el",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "count": 2
+      }
+    },
+    {
+      "id": 6728,
+      "kaynak": "sayi/el-3.jpg",
+      "word": "üç parmak gösteren el",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "count": 3
+      }
+    },
+    {
+      "id": 6729,
+      "kaynak": "sayi/el-4.jpg",
+      "word": "dört parmak gösteren el",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "count": 4
+      }
+    },
+    {
+      "id": 6730,
+      "kaynak": "sayi/el-5.jpg",
+      "word": "beş parmak gösteren el",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "count": 5
+      }
+    },
+    {
       "id": 6801,
       "kaynak": "yenir-yenmez/cikolata_sabun-yenir.jpg",
       "word": "çikolata",
@@ -9466,6 +9516,24 @@
     },
     {
       "id": 6803,
+      "kaynak": "yenir-yenmez/cilek_silgi-yenir.jpg",
+      "word": "çilek",
+      "category": "none",
+      "tags": {
+        "yenir": "yenir"
+      }
+    },
+    {
+      "id": 6804,
+      "kaynak": "yenir-yenmez/cilek_silgi-yenmez.jpg",
+      "word": "çilek silgi",
+      "category": "none",
+      "tags": {
+        "yenir": "yenmez"
+      }
+    },
+    {
+      "id": 6805,
       "kaynak": "yenir-yenmez/elma_top-yenir.jpg",
       "word": "elma",
       "category": "none",
@@ -9474,7 +9542,7 @@
       }
     },
     {
-      "id": 6804,
+      "id": 6806,
       "kaynak": "yenir-yenmez/elma_top-yenmez.jpg",
       "word": "top",
       "category": "none",
@@ -9483,7 +9551,7 @@
       }
     },
     {
-      "id": 6805,
+      "id": 6807,
       "kaynak": "yenir-yenmez/havuc_boya-yenir.jpg",
       "word": "havuç",
       "category": "none",
@@ -9492,7 +9560,7 @@
       }
     },
     {
-      "id": 6806,
+      "id": 6808,
       "kaynak": "yenir-yenmez/havuc_boya-yenmez.jpg",
       "word": "pastel boya",
       "category": "none",
@@ -9501,7 +9569,7 @@
       }
     },
     {
-      "id": 6807,
+      "id": 6809,
       "kaynak": "yenir-yenmez/kurabiye_altlik-yenir.jpg",
       "word": "kurabiye",
       "category": "none",
@@ -9510,7 +9578,7 @@
       }
     },
     {
-      "id": 6808,
+      "id": 6810,
       "kaynak": "yenir-yenmez/kurabiye_altlik-yenmez.jpg",
       "word": "bardak altlığı",
       "category": "none",
@@ -9519,7 +9587,43 @@
       }
     },
     {
-      "id": 6809,
+      "id": 6811,
+      "kaynak": "yenir-yenmez/meyvesuyu_sabun-yenir.jpg",
+      "word": "meyve suyu",
+      "category": "none",
+      "tags": {
+        "yenir": "yenir"
+      }
+    },
+    {
+      "id": 6812,
+      "kaynak": "yenir-yenmez/meyvesuyu_sabun-yenmez.jpg",
+      "word": "sıvı sabun",
+      "category": "none",
+      "tags": {
+        "yenir": "yenmez"
+      }
+    },
+    {
+      "id": 6813,
+      "kaynak": "yenir-yenmez/muz_oyuncakmuz-yenir.jpg",
+      "word": "muz",
+      "category": "none",
+      "tags": {
+        "yenir": "yenir"
+      }
+    },
+    {
+      "id": 6814,
+      "kaynak": "yenir-yenmez/muz_oyuncakmuz-yenmez.jpg",
+      "word": "oyuncak muz",
+      "category": "none",
+      "tags": {
+        "yenir": "yenmez"
+      }
+    },
+    {
+      "id": 6815,
       "kaynak": "yenir-yenmez/peynir_sunger-yenir.jpg",
       "word": "peynir",
       "category": "none",
@@ -9528,7 +9632,7 @@
       }
     },
     {
-      "id": 6810,
+      "id": 6816,
       "kaynak": "yenir-yenmez/peynir_sunger-yenmez.jpg",
       "word": "sünger",
       "category": "none",
@@ -9537,7 +9641,7 @@
       }
     },
     {
-      "id": 6811,
+      "id": 6817,
       "kaynak": "yenir-yenmez/seker_dugme-yenir.jpg",
       "word": "şeker",
       "category": "none",
@@ -9546,7 +9650,7 @@
       }
     },
     {
-      "id": 6812,
+      "id": 6818,
       "kaynak": "yenir-yenmez/seker_dugme-yenmez.jpg",
       "word": "düğme",
       "category": "none",
@@ -9555,7 +9659,7 @@
       }
     },
     {
-      "id": 6813,
+      "id": 6819,
       "kaynak": "yenir-yenmez/uzum_bilye-yenir.jpg",
       "word": "üzüm",
       "category": "none",
@@ -9564,7 +9668,7 @@
       }
     },
     {
-      "id": 6814,
+      "id": 6820,
       "kaynak": "yenir-yenmez/uzum_bilye-yenmez.jpg",
       "word": "bilye",
       "category": "none",
@@ -9592,6 +9696,42 @@
     },
     {
       "id": 6853,
+      "kaynak": "tehlikeli-guvenli/igne_pamuk-guvenli.jpg",
+      "word": "pamuk",
+      "category": "none",
+      "tags": {
+        "guvenlik": "güvenli"
+      }
+    },
+    {
+      "id": 6854,
+      "kaynak": "tehlikeli-guvenli/igne_pamuk-tehlikeli.jpg",
+      "word": "iğne",
+      "category": "none",
+      "tags": {
+        "guvenlik": "tehlikeli"
+      }
+    },
+    {
+      "id": 6855,
+      "kaynak": "tehlikeli-guvenli/ilac_boyakutusu-guvenli.jpg",
+      "word": "boya kutusu",
+      "category": "none",
+      "tags": {
+        "guvenlik": "güvenli"
+      }
+    },
+    {
+      "id": 6856,
+      "kaynak": "tehlikeli-guvenli/ilac_boyakutusu-tehlikeli.jpg",
+      "word": "ilaç",
+      "category": "none",
+      "tags": {
+        "guvenlik": "tehlikeli"
+      }
+    },
+    {
+      "id": 6857,
       "kaynak": "tehlikeli-guvenli/kibrit_boya-guvenli.jpg",
       "word": "pastel boya",
       "category": "none",
@@ -9600,7 +9740,7 @@
       }
     },
     {
-      "id": 6854,
+      "id": 6858,
       "kaynak": "tehlikeli-guvenli/kibrit_boya-tehlikeli.jpg",
       "word": "yanan kibrit",
       "category": "none",
@@ -9609,7 +9749,7 @@
       }
     },
     {
-      "id": 6855,
+      "id": 6859,
       "kaynak": "tehlikeli-guvenli/kirikbardak_bardak-guvenli.jpg",
       "word": "plastik bardak",
       "category": "none",
@@ -9618,7 +9758,7 @@
       }
     },
     {
-      "id": 6856,
+      "id": 6860,
       "kaynak": "tehlikeli-guvenli/kirikbardak_bardak-tehlikeli.jpg",
       "word": "kırık bardak",
       "category": "none",
@@ -9627,7 +9767,7 @@
       }
     },
     {
-      "id": 6857,
+      "id": 6861,
       "kaynak": "tehlikeli-guvenli/makas_ayi-guvenli.jpg",
       "word": "oyuncak ayı",
       "category": "none",
@@ -9636,7 +9776,7 @@
       }
     },
     {
-      "id": 6858,
+      "id": 6862,
       "kaynak": "tehlikeli-guvenli/makas_ayi-tehlikeli.jpg",
       "word": "makas",
       "category": "none",
@@ -9645,7 +9785,7 @@
       }
     },
     {
-      "id": 6859,
+      "id": 6863,
       "kaynak": "tehlikeli-guvenli/priz_blok-guvenli.jpg",
       "word": "oyuncak blok",
       "category": "none",
@@ -9654,7 +9794,7 @@
       }
     },
     {
-      "id": 6860,
+      "id": 6864,
       "kaynak": "tehlikeli-guvenli/priz_blok-tehlikeli.jpg",
       "word": "priz",
       "category": "none",
@@ -9663,7 +9803,25 @@
       }
     },
     {
-      "id": 6861,
+      "id": 6865,
+      "kaynak": "tehlikeli-guvenli/sprey_subisesi-guvenli.jpg",
+      "word": "su şişesi",
+      "category": "none",
+      "tags": {
+        "guvenlik": "güvenli"
+      }
+    },
+    {
+      "id": 6866,
+      "kaynak": "tehlikeli-guvenli/sprey_subisesi-tehlikeli.jpg",
+      "word": "temizlik spreyi",
+      "category": "none",
+      "tags": {
+        "guvenlik": "tehlikeli"
+      }
+    },
+    {
+      "id": 6867,
       "kaynak": "tehlikeli-guvenli/tencere_oyuncak-guvenli.jpg",
       "word": "oyuncak tencere",
       "category": "none",
@@ -9673,7 +9831,7 @@
       }
     },
     {
-      "id": 6862,
+      "id": 6868,
       "kaynak": "tehlikeli-guvenli/tencere_oyuncak-tehlikeli.jpg",
       "word": "kaynayan tencere",
       "category": "none",
@@ -9683,7 +9841,7 @@
       }
     },
     {
-      "id": 6863,
+      "id": 6869,
       "kaynak": "tehlikeli-guvenli/utu_yastik-guvenli.jpg",
       "word": "yastık",
       "category": "none",
@@ -9692,7 +9850,7 @@
       }
     },
     {
-      "id": 6864,
+      "id": 6870,
       "kaynak": "tehlikeli-guvenli/utu_yastik-tehlikeli.jpg",
       "word": "sıcak ütü",
       "category": "none",
@@ -9858,6 +10016,366 @@
       "sahne": true,
       "tags": {
         "hava": "yağmurlu"
+      }
+    },
+    {
+      "id": 6951,
+      "kaynak": "tek-cift/ayakkabi-cift.jpg",
+      "word": "spor ayakkabı",
+      "category": "none",
+      "tags": {
+        "adet": "çift"
+      }
+    },
+    {
+      "id": 6952,
+      "kaynak": "tek-cift/ayakkabi-tek.jpg",
+      "word": "spor ayakkabı",
+      "category": "none",
+      "tags": {
+        "adet": "tek"
+      }
+    },
+    {
+      "id": 6953,
+      "kaynak": "tek-cift/baget-cift.jpg",
+      "word": "davul çubuğu",
+      "category": "none",
+      "tags": {
+        "adet": "çift"
+      }
+    },
+    {
+      "id": 6954,
+      "kaynak": "tek-cift/baget-tek.jpg",
+      "word": "davul çubuğu",
+      "category": "none",
+      "tags": {
+        "adet": "tek"
+      }
+    },
+    {
+      "id": 6955,
+      "kaynak": "tek-cift/cizme-cift.jpg",
+      "word": "çizme",
+      "category": "none",
+      "tags": {
+        "adet": "çift"
+      }
+    },
+    {
+      "id": 6956,
+      "kaynak": "tek-cift/cizme-tek.jpg",
+      "word": "çizme",
+      "category": "none",
+      "tags": {
+        "adet": "tek"
+      }
+    },
+    {
+      "id": 6957,
+      "kaynak": "tek-cift/corap-cift.jpg",
+      "word": "çorap",
+      "category": "none",
+      "tags": {
+        "adet": "çift"
+      }
+    },
+    {
+      "id": 6958,
+      "kaynak": "tek-cift/corap-tek.jpg",
+      "word": "çorap",
+      "category": "none",
+      "tags": {
+        "adet": "tek"
+      }
+    },
+    {
+      "id": 6959,
+      "kaynak": "tek-cift/eldiven-cift.jpg",
+      "word": "eldiven",
+      "category": "none",
+      "tags": {
+        "adet": "çift"
+      }
+    },
+    {
+      "id": 6960,
+      "kaynak": "tek-cift/eldiven-tek.jpg",
+      "word": "eldiven",
+      "category": "none",
+      "tags": {
+        "adet": "tek"
+      }
+    },
+    {
+      "id": 6961,
+      "kaynak": "tek-cift/kahveayakkabi-cift.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "adet": "çift"
+      }
+    },
+    {
+      "id": 6962,
+      "kaynak": "tek-cift/kahveayakkabi-tek.jpg",
+      "word": "ayakkabı",
+      "category": "none",
+      "tags": {
+        "adet": "tek"
+      }
+    },
+    {
+      "id": 6963,
+      "kaynak": "tek-cift/kupe-cift.jpg",
+      "word": "küpe",
+      "category": "none",
+      "tags": {
+        "adet": "çift"
+      }
+    },
+    {
+      "id": 6964,
+      "kaynak": "tek-cift/kupe-tek.jpg",
+      "word": "küpe",
+      "category": "none",
+      "tags": {
+        "adet": "tek"
+      }
+    },
+    {
+      "id": 6965,
+      "kaynak": "tek-cift/paten-cift.jpg",
+      "word": "paten",
+      "category": "none",
+      "tags": {
+        "adet": "çift"
+      }
+    },
+    {
+      "id": 6966,
+      "kaynak": "tek-cift/paten-tek.jpg",
+      "word": "paten",
+      "category": "none",
+      "tags": {
+        "adet": "tek"
+      }
+    },
+    {
+      "id": 6967,
+      "kaynak": "tek-cift/sandalet-cift.jpg",
+      "word": "sandalet",
+      "category": "none",
+      "tags": {
+        "adet": "çift"
+      }
+    },
+    {
+      "id": 6968,
+      "kaynak": "tek-cift/sandalet-tek.jpg",
+      "word": "sandalet",
+      "category": "none",
+      "tags": {
+        "adet": "tek"
+      }
+    },
+    {
+      "id": 6969,
+      "kaynak": "tek-cift/terlik-cift.jpg",
+      "word": "terlik",
+      "category": "none",
+      "tags": {
+        "adet": "çift"
+      }
+    },
+    {
+      "id": 6970,
+      "kaynak": "tek-cift/terlik-tek.jpg",
+      "word": "terlik",
+      "category": "none",
+      "tags": {
+        "adet": "tek"
+      }
+    },
+    {
+      "id": 7001,
+      "kaynak": "ilk-son/araba3_yesil-ilk.jpg",
+      "word": "yeşil araba",
+      "category": "none",
+      "tags": {
+        "sira": "ilk sırada"
+      }
+    },
+    {
+      "id": 7002,
+      "kaynak": "ilk-son/araba3_yesil-son.jpg",
+      "word": "yeşil araba",
+      "category": "none",
+      "tags": {
+        "sira": "son sırada"
+      }
+    },
+    {
+      "id": 7003,
+      "kaynak": "ilk-son/araba_kirmizi-ilk.jpg",
+      "word": "kırmızı araba",
+      "category": "none",
+      "tags": {
+        "sira": "ilk sırada"
+      }
+    },
+    {
+      "id": 7004,
+      "kaynak": "ilk-son/araba_kirmizi-son.jpg",
+      "word": "kırmızı araba",
+      "category": "none",
+      "tags": {
+        "sira": "son sırada"
+      }
+    },
+    {
+      "id": 7005,
+      "kaynak": "ilk-son/araba_mavi-ilk.jpg",
+      "word": "mavi araba",
+      "category": "none",
+      "tags": {
+        "sira": "ilk sırada"
+      }
+    },
+    {
+      "id": 7006,
+      "kaynak": "ilk-son/araba_mavi-son.jpg",
+      "word": "mavi araba",
+      "category": "none",
+      "tags": {
+        "sira": "son sırada"
+      }
+    },
+    {
+      "id": 7007,
+      "kaynak": "ilk-son/araba_sari-ilk.jpg",
+      "word": "sarı araba",
+      "category": "none",
+      "tags": {
+        "sira": "ilk sırada"
+      }
+    },
+    {
+      "id": 7008,
+      "kaynak": "ilk-son/araba_sari-son.jpg",
+      "word": "sarı araba",
+      "category": "none",
+      "tags": {
+        "sira": "son sırada"
+      }
+    },
+    {
+      "id": 7009,
+      "kaynak": "ilk-son/ayi3_gri-ilk.jpg",
+      "word": "gri ayı",
+      "category": "none",
+      "tags": {
+        "sira": "ilk sırada"
+      }
+    },
+    {
+      "id": 7010,
+      "kaynak": "ilk-son/ayi3_gri-son.jpg",
+      "word": "gri ayı",
+      "category": "none",
+      "tags": {
+        "sira": "son sırada"
+      }
+    },
+    {
+      "id": 7011,
+      "kaynak": "ilk-son/ayi_kahverengi-ilk.jpg",
+      "word": "kahverengi ayı",
+      "category": "none",
+      "tags": {
+        "sira": "ilk sırada"
+      }
+    },
+    {
+      "id": 7012,
+      "kaynak": "ilk-son/ayi_kahverengi-son.jpg",
+      "word": "kahverengi ayı",
+      "category": "none",
+      "tags": {
+        "sira": "son sırada"
+      }
+    },
+    {
+      "id": 7013,
+      "kaynak": "ilk-son/ordek3_mavi-ilk.jpg",
+      "word": "mavi ördek",
+      "category": "none",
+      "tags": {
+        "sira": "ilk sırada"
+      }
+    },
+    {
+      "id": 7014,
+      "kaynak": "ilk-son/ordek3_mavi-son.jpg",
+      "word": "mavi ördek",
+      "category": "none",
+      "tags": {
+        "sira": "son sırada"
+      }
+    },
+    {
+      "id": 7015,
+      "kaynak": "ilk-son/ordek_pembe-ilk.jpg",
+      "word": "pembe ördek",
+      "category": "none",
+      "tags": {
+        "sira": "ilk sırada"
+      }
+    },
+    {
+      "id": 7016,
+      "kaynak": "ilk-son/ordek_pembe-son.jpg",
+      "word": "pembe ördek",
+      "category": "none",
+      "tags": {
+        "sira": "son sırada"
+      }
+    },
+    {
+      "id": 7017,
+      "kaynak": "ilk-son/ordek_sari-ilk.jpg",
+      "word": "sarı ördek",
+      "category": "none",
+      "tags": {
+        "sira": "ilk sırada"
+      }
+    },
+    {
+      "id": 7018,
+      "kaynak": "ilk-son/ordek_sari-son.jpg",
+      "word": "sarı ördek",
+      "category": "none",
+      "tags": {
+        "sira": "son sırada"
+      }
+    },
+    {
+      "id": 7019,
+      "kaynak": "ilk-son/ordek_turuncu-ilk.jpg",
+      "word": "turuncu ördek",
+      "category": "none",
+      "tags": {
+        "sira": "ilk sırada"
+      }
+    },
+    {
+      "id": 7020,
+      "kaynak": "ilk-son/ordek_turuncu-son.jpg",
+      "word": "turuncu ördek",
+      "category": "none",
+      "tags": {
+        "sira": "son sırada"
       }
     }
   ]

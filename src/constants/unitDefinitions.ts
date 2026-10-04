@@ -130,6 +130,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       ActivityType.ParlakMat,
       ActivityType.AcikKoyu,
       ActivityType.HavaDurumu,
+      ActivityType.IlkSon,
       ActivityType.TehlikeliGuvenli,
       ActivityType.YenirYenmez,
       ActivityType.OldNew,

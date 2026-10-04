@@ -105,6 +105,7 @@ const ParentReportScreen: React.FC<ParentReportScreenProps> = ({ activityStats, 
     if (activityType === ActivityType.ParlakMat) return t('concepts.activities.shinyMatte', 'Parlak / Mat');
     if (activityType === ActivityType.AcikKoyu) return t('concepts.activities.acikKoyu', 'Açık / Koyu');
     if (activityType === ActivityType.HavaDurumu) return t('concepts.activities.havaDurumu', 'Hava Durumu');
+    if (activityType === ActivityType.IlkSon) return t('concepts.activities.ilkSon', 'İlk / Son');
     if (activityType === ActivityType.TehlikeliGuvenli) return t('concepts.activities.tehlikeliGuvenli', 'Tehlikeli / Güvenli');
     if (activityType === ActivityType.YenirYenmez) return t('concepts.activities.yenirYenmez', 'Yenir / Yenmez');
     if (activityType === ActivityType.TembelCaliskan) return t('concepts.activities.lazyHardworking', 'Tembel / Çalışkan');

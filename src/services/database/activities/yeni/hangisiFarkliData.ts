@@ -1,10 +1,10 @@
 // OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-farkli.mjs. Elle düzenleme.
-// "Hangisi farklı?": 3 aynı + 1 farklı. KOLAY 40 soru (bambaşka nesne), ZOR 441 soru (aynı nesnenin öbür hali).
+// "Hangisi farklı?": 3 aynı + 1 farklı. KOLAY 40 soru (bambaşka nesne), ZOR 461 soru (aynı nesnenin öbür hali).
 import { ConceptRound, ActivityType } from '../../../../types';
 
 export const hangisiFarkliKolayYeni: ConceptRound[] = [
     { // kolay
-        id: 5442,
+        id: 5462,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -17,7 +17,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5443,
+        id: 5463,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -30,7 +30,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5444,
+        id: 5464,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -43,7 +43,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5445,
+        id: 5465,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -56,7 +56,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5446,
+        id: 5466,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -69,7 +69,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5447,
+        id: 5467,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -82,7 +82,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5448,
+        id: 5468,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -95,7 +95,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5449,
+        id: 5469,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -108,7 +108,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5450,
+        id: 5470,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -121,7 +121,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5451,
+        id: 5471,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -134,7 +134,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5452,
+        id: 5472,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -147,7 +147,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5453,
+        id: 5473,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -160,7 +160,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5454,
+        id: 5474,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -173,7 +173,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5455,
+        id: 5475,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -186,7 +186,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5456,
+        id: 5476,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -199,7 +199,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5457,
+        id: 5477,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -212,7 +212,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5458,
+        id: 5478,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -225,7 +225,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5459,
+        id: 5479,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -238,7 +238,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5460,
+        id: 5480,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -251,7 +251,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5461,
+        id: 5481,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -264,7 +264,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5462,
+        id: 5482,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -277,7 +277,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5463,
+        id: 5483,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -290,7 +290,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5464,
+        id: 5484,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -303,7 +303,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5465,
+        id: 5485,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -316,7 +316,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5466,
+        id: 5486,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -329,7 +329,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5467,
+        id: 5487,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -342,7 +342,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5468,
+        id: 5488,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -355,7 +355,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5469,
+        id: 5489,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -368,7 +368,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5470,
+        id: 5490,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -381,7 +381,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5471,
+        id: 5491,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -394,7 +394,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5472,
+        id: 5492,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -407,7 +407,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5473,
+        id: 5493,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -420,7 +420,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5474,
+        id: 5494,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -433,7 +433,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5475,
+        id: 5495,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -446,7 +446,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5476,
+        id: 5496,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -459,7 +459,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5477,
+        id: 5497,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -472,7 +472,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5478,
+        id: 5498,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -485,7 +485,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5479,
+        id: 5499,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -498,7 +498,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5480,
+        id: 5500,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -511,7 +511,7 @@ export const hangisiFarkliKolayYeni: ConceptRound[] = [
         ]
     },
     { // kolay
-        id: 5481,
+        id: 5501,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3230,8 +3230,138 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
             { id: 4319, word: "tavşan", imageUrl: "/images/4319.webp", isCorrect: true, audioKey: "tavşan", spokenText: "tavşan" }
         ]
     },
-    { // ince fark: inFrontOfBehindDataYeni
+    { // ince fark: ilkSonDataYeni
         id: 5209,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 7001, word: "yeşil araba", imageUrl: "/images/7001.webp", isCorrect: false, audioKey: "yeşil araba", spokenText: "yeşil araba" },
+            { id: 7001, word: "yeşil araba", imageUrl: "/images/7001.webp", isCorrect: false, audioKey: "yeşil araba", spokenText: "yeşil araba" },
+            { id: 7001, word: "yeşil araba", imageUrl: "/images/7001.webp", isCorrect: false, audioKey: "yeşil araba", spokenText: "yeşil araba" },
+            { id: 7002, word: "yeşil araba", imageUrl: "/images/7002.webp", isCorrect: true, audioKey: "yeşil araba", spokenText: "yeşil araba" }
+        ]
+    },
+    { // ince fark: ilkSonDataYeni
+        id: 5210,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 7004, word: "kırmızı araba", imageUrl: "/images/7004.webp", isCorrect: false, audioKey: "kırmızı araba", spokenText: "kırmızı araba" },
+            { id: 7004, word: "kırmızı araba", imageUrl: "/images/7004.webp", isCorrect: false, audioKey: "kırmızı araba", spokenText: "kırmızı araba" },
+            { id: 7004, word: "kırmızı araba", imageUrl: "/images/7004.webp", isCorrect: false, audioKey: "kırmızı araba", spokenText: "kırmızı araba" },
+            { id: 7003, word: "kırmızı araba", imageUrl: "/images/7003.webp", isCorrect: true, audioKey: "kırmızı araba", spokenText: "kırmızı araba" }
+        ]
+    },
+    { // ince fark: ilkSonDataYeni
+        id: 5211,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 7005, word: "mavi araba", imageUrl: "/images/7005.webp", isCorrect: false, audioKey: "mavi araba", spokenText: "mavi araba" },
+            { id: 7005, word: "mavi araba", imageUrl: "/images/7005.webp", isCorrect: false, audioKey: "mavi araba", spokenText: "mavi araba" },
+            { id: 7005, word: "mavi araba", imageUrl: "/images/7005.webp", isCorrect: false, audioKey: "mavi araba", spokenText: "mavi araba" },
+            { id: 7006, word: "mavi araba", imageUrl: "/images/7006.webp", isCorrect: true, audioKey: "mavi araba", spokenText: "mavi araba" }
+        ]
+    },
+    { // ince fark: ilkSonDataYeni
+        id: 5212,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 7008, word: "sarı araba", imageUrl: "/images/7008.webp", isCorrect: false, audioKey: "sarı araba", spokenText: "sarı araba" },
+            { id: 7008, word: "sarı araba", imageUrl: "/images/7008.webp", isCorrect: false, audioKey: "sarı araba", spokenText: "sarı araba" },
+            { id: 7008, word: "sarı araba", imageUrl: "/images/7008.webp", isCorrect: false, audioKey: "sarı araba", spokenText: "sarı araba" },
+            { id: 7007, word: "sarı araba", imageUrl: "/images/7007.webp", isCorrect: true, audioKey: "sarı araba", spokenText: "sarı araba" }
+        ]
+    },
+    { // ince fark: ilkSonDataYeni
+        id: 5213,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 7009, word: "gri ayı", imageUrl: "/images/7009.webp", isCorrect: false, audioKey: "gri ayı", spokenText: "gri ayı" },
+            { id: 7009, word: "gri ayı", imageUrl: "/images/7009.webp", isCorrect: false, audioKey: "gri ayı", spokenText: "gri ayı" },
+            { id: 7009, word: "gri ayı", imageUrl: "/images/7009.webp", isCorrect: false, audioKey: "gri ayı", spokenText: "gri ayı" },
+            { id: 7010, word: "gri ayı", imageUrl: "/images/7010.webp", isCorrect: true, audioKey: "gri ayı", spokenText: "gri ayı" }
+        ]
+    },
+    { // ince fark: ilkSonDataYeni
+        id: 5214,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 7012, word: "kahverengi ayı", imageUrl: "/images/7012.webp", isCorrect: false, audioKey: "kahverengi ayı", spokenText: "kahverengi ayı" },
+            { id: 7012, word: "kahverengi ayı", imageUrl: "/images/7012.webp", isCorrect: false, audioKey: "kahverengi ayı", spokenText: "kahverengi ayı" },
+            { id: 7012, word: "kahverengi ayı", imageUrl: "/images/7012.webp", isCorrect: false, audioKey: "kahverengi ayı", spokenText: "kahverengi ayı" },
+            { id: 7011, word: "kahverengi ayı", imageUrl: "/images/7011.webp", isCorrect: true, audioKey: "kahverengi ayı", spokenText: "kahverengi ayı" }
+        ]
+    },
+    { // ince fark: ilkSonDataYeni
+        id: 5215,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 7013, word: "mavi ördek", imageUrl: "/images/7013.webp", isCorrect: false, audioKey: "mavi ördek", spokenText: "mavi ördek" },
+            { id: 7013, word: "mavi ördek", imageUrl: "/images/7013.webp", isCorrect: false, audioKey: "mavi ördek", spokenText: "mavi ördek" },
+            { id: 7013, word: "mavi ördek", imageUrl: "/images/7013.webp", isCorrect: false, audioKey: "mavi ördek", spokenText: "mavi ördek" },
+            { id: 7014, word: "mavi ördek", imageUrl: "/images/7014.webp", isCorrect: true, audioKey: "mavi ördek", spokenText: "mavi ördek" }
+        ]
+    },
+    { // ince fark: ilkSonDataYeni
+        id: 5216,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 7016, word: "pembe ördek", imageUrl: "/images/7016.webp", isCorrect: false, audioKey: "pembe ördek", spokenText: "pembe ördek" },
+            { id: 7016, word: "pembe ördek", imageUrl: "/images/7016.webp", isCorrect: false, audioKey: "pembe ördek", spokenText: "pembe ördek" },
+            { id: 7016, word: "pembe ördek", imageUrl: "/images/7016.webp", isCorrect: false, audioKey: "pembe ördek", spokenText: "pembe ördek" },
+            { id: 7015, word: "pembe ördek", imageUrl: "/images/7015.webp", isCorrect: true, audioKey: "pembe ördek", spokenText: "pembe ördek" }
+        ]
+    },
+    { // ince fark: ilkSonDataYeni
+        id: 5217,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 7017, word: "sarı ördek", imageUrl: "/images/7017.webp", isCorrect: false, audioKey: "sarı ördek", spokenText: "sarı ördek" },
+            { id: 7017, word: "sarı ördek", imageUrl: "/images/7017.webp", isCorrect: false, audioKey: "sarı ördek", spokenText: "sarı ördek" },
+            { id: 7017, word: "sarı ördek", imageUrl: "/images/7017.webp", isCorrect: false, audioKey: "sarı ördek", spokenText: "sarı ördek" },
+            { id: 7018, word: "sarı ördek", imageUrl: "/images/7018.webp", isCorrect: true, audioKey: "sarı ördek", spokenText: "sarı ördek" }
+        ]
+    },
+    { // ince fark: ilkSonDataYeni
+        id: 5218,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 7020, word: "turuncu ördek", imageUrl: "/images/7020.webp", isCorrect: false, audioKey: "turuncu ördek", spokenText: "turuncu ördek" },
+            { id: 7020, word: "turuncu ördek", imageUrl: "/images/7020.webp", isCorrect: false, audioKey: "turuncu ördek", spokenText: "turuncu ördek" },
+            { id: 7020, word: "turuncu ördek", imageUrl: "/images/7020.webp", isCorrect: false, audioKey: "turuncu ördek", spokenText: "turuncu ördek" },
+            { id: 7019, word: "turuncu ördek", imageUrl: "/images/7019.webp", isCorrect: true, audioKey: "turuncu ördek", spokenText: "turuncu ördek" }
+        ]
+    },
+    { // ince fark: inFrontOfBehindDataYeni
+        id: 5219,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3244,7 +3374,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: inFrontOfBehindDataYeni
-        id: 5210,
+        id: 5220,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3257,7 +3387,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: inFrontOfBehindDataYeni
-        id: 5211,
+        id: 5221,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3270,7 +3400,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: inFrontOfBehindDataYeni
-        id: 5212,
+        id: 5222,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3283,7 +3413,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: inFrontOfBehindDataYeni
-        id: 5213,
+        id: 5223,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3296,7 +3426,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: inFrontOfBehindDataYeni
-        id: 5214,
+        id: 5224,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3309,7 +3439,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: inFrontOfBehindDataYeni
-        id: 5215,
+        id: 5225,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3322,7 +3452,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: inFrontOfBehindDataYeni
-        id: 5216,
+        id: 5226,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3335,7 +3465,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: inFrontOfBehindDataYeni
-        id: 5217,
+        id: 5227,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3348,7 +3478,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: inFrontOfBehindDataYeni
-        id: 5218,
+        id: 5228,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3361,7 +3491,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5219,
+        id: 5229,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3374,7 +3504,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5220,
+        id: 5230,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3387,7 +3517,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5221,
+        id: 5231,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3400,7 +3530,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5222,
+        id: 5232,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3413,7 +3543,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5223,
+        id: 5233,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3426,7 +3556,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5224,
+        id: 5234,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3439,7 +3569,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5225,
+        id: 5235,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3452,7 +3582,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5226,
+        id: 5236,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3465,7 +3595,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5227,
+        id: 5237,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3478,7 +3608,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: insideOutsideDataYeni
-        id: 5228,
+        id: 5238,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3491,7 +3621,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5229,
+        id: 5239,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3504,7 +3634,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5230,
+        id: 5240,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3517,7 +3647,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5231,
+        id: 5241,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3530,7 +3660,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5232,
+        id: 5242,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3543,7 +3673,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5233,
+        id: 5243,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3556,7 +3686,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5234,
+        id: 5244,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3569,7 +3699,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5235,
+        id: 5245,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3582,7 +3712,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5236,
+        id: 5246,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3595,7 +3725,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5237,
+        id: 5247,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3608,7 +3738,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kalabalikTenhaDataYeni
-        id: 5238,
+        id: 5248,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3621,7 +3751,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5239,
+        id: 5249,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3634,7 +3764,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5240,
+        id: 5250,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3647,7 +3777,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5241,
+        id: 5251,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3660,7 +3790,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5242,
+        id: 5252,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3673,7 +3803,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5243,
+        id: 5253,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3686,7 +3816,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5244,
+        id: 5254,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3699,7 +3829,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5245,
+        id: 5255,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3712,7 +3842,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5246,
+        id: 5256,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3725,7 +3855,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5247,
+        id: 5257,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3738,7 +3868,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: kirisikDuzgunDataYeni
-        id: 5248,
+        id: 5258,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3751,7 +3881,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5249,
+        id: 5259,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3764,7 +3894,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5250,
+        id: 5260,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3777,7 +3907,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5251,
+        id: 5261,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3790,7 +3920,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5252,
+        id: 5262,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3803,7 +3933,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5253,
+        id: 5263,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3816,7 +3946,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5254,
+        id: 5264,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3829,7 +3959,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5255,
+        id: 5265,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3842,7 +3972,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5256,
+        id: 5266,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3855,7 +3985,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5257,
+        id: 5267,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3868,7 +3998,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: leftRightDataYeni
-        id: 5258,
+        id: 5268,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3881,7 +4011,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5259,
+        id: 5269,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3894,7 +4024,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5260,
+        id: 5270,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3907,7 +4037,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5261,
+        id: 5271,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3920,7 +4050,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5262,
+        id: 5272,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3933,7 +4063,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5263,
+        id: 5273,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3946,7 +4076,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5264,
+        id: 5274,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3959,7 +4089,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5265,
+        id: 5275,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3972,7 +4102,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5266,
+        id: 5276,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3985,7 +4115,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5267,
+        id: 5277,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -3998,7 +4128,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: longShortDataYeni
-        id: 5268,
+        id: 5278,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4011,7 +4141,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5269,
+        id: 5279,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4024,7 +4154,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5270,
+        id: 5280,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4037,7 +4167,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5271,
+        id: 5281,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4050,7 +4180,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5272,
+        id: 5282,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4063,7 +4193,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5273,
+        id: 5283,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4076,7 +4206,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5274,
+        id: 5284,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4089,7 +4219,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5275,
+        id: 5285,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4102,7 +4232,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5276,
+        id: 5286,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4115,7 +4245,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5277,
+        id: 5287,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4128,7 +4258,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: messyCleanDataYeni
-        id: 5278,
+        id: 5288,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4141,7 +4271,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5279,
+        id: 5289,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4154,7 +4284,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5280,
+        id: 5290,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4167,7 +4297,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5281,
+        id: 5291,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4180,7 +4310,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5282,
+        id: 5292,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4193,7 +4323,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5283,
+        id: 5293,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4206,7 +4336,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5284,
+        id: 5294,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4219,7 +4349,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5285,
+        id: 5295,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4232,7 +4362,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5286,
+        id: 5296,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4245,7 +4375,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5287,
+        id: 5297,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4258,7 +4388,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: nearFarDataYeni
-        id: 5288,
+        id: 5298,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4271,7 +4401,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5289,
+        id: 5299,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4284,7 +4414,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5290,
+        id: 5300,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4297,7 +4427,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5291,
+        id: 5301,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4310,7 +4440,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5292,
+        id: 5302,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4323,7 +4453,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5293,
+        id: 5303,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4336,7 +4466,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5294,
+        id: 5304,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4349,7 +4479,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5295,
+        id: 5305,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4362,7 +4492,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5296,
+        id: 5306,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4375,7 +4505,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5297,
+        id: 5307,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4388,7 +4518,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: noisyQuietDataYeni
-        id: 5298,
+        id: 5308,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4400,8 +4530,138 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
             { id: 4219, word: "sınıf", imageUrl: "/images/4219.webp", isCorrect: true, audioKey: "sınıf", spokenText: "sınıf" }
         ]
     },
+    { // ince fark: oddEvenDataYeni
+        id: 5309,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 6952, word: "spor ayakkabı", imageUrl: "/images/6952.webp", isCorrect: false, audioKey: "spor ayakkabı", spokenText: "spor ayakkabı" },
+            { id: 6952, word: "spor ayakkabı", imageUrl: "/images/6952.webp", isCorrect: false, audioKey: "spor ayakkabı", spokenText: "spor ayakkabı" },
+            { id: 6952, word: "spor ayakkabı", imageUrl: "/images/6952.webp", isCorrect: false, audioKey: "spor ayakkabı", spokenText: "spor ayakkabı" },
+            { id: 6951, word: "spor ayakkabı", imageUrl: "/images/6951.webp", isCorrect: true, audioKey: "spor ayakkabı", spokenText: "spor ayakkabı" }
+        ]
+    },
+    { // ince fark: oddEvenDataYeni
+        id: 5310,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 6953, word: "davul çubuğu", imageUrl: "/images/6953.webp", isCorrect: false, audioKey: "davul çubuğu", spokenText: "davul çubuğu" },
+            { id: 6953, word: "davul çubuğu", imageUrl: "/images/6953.webp", isCorrect: false, audioKey: "davul çubuğu", spokenText: "davul çubuğu" },
+            { id: 6953, word: "davul çubuğu", imageUrl: "/images/6953.webp", isCorrect: false, audioKey: "davul çubuğu", spokenText: "davul çubuğu" },
+            { id: 6954, word: "davul çubuğu", imageUrl: "/images/6954.webp", isCorrect: true, audioKey: "davul çubuğu", spokenText: "davul çubuğu" }
+        ]
+    },
+    { // ince fark: oddEvenDataYeni
+        id: 5311,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 6956, word: "çizme", imageUrl: "/images/6956.webp", isCorrect: false, audioKey: "çizme", spokenText: "çizme" },
+            { id: 6956, word: "çizme", imageUrl: "/images/6956.webp", isCorrect: false, audioKey: "çizme", spokenText: "çizme" },
+            { id: 6956, word: "çizme", imageUrl: "/images/6956.webp", isCorrect: false, audioKey: "çizme", spokenText: "çizme" },
+            { id: 6955, word: "çizme", imageUrl: "/images/6955.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" }
+        ]
+    },
+    { // ince fark: oddEvenDataYeni
+        id: 5312,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 6957, word: "çorap", imageUrl: "/images/6957.webp", isCorrect: false, audioKey: "çorap", spokenText: "çorap" },
+            { id: 6957, word: "çorap", imageUrl: "/images/6957.webp", isCorrect: false, audioKey: "çorap", spokenText: "çorap" },
+            { id: 6957, word: "çorap", imageUrl: "/images/6957.webp", isCorrect: false, audioKey: "çorap", spokenText: "çorap" },
+            { id: 6958, word: "çorap", imageUrl: "/images/6958.webp", isCorrect: true, audioKey: "çorap", spokenText: "çorap" }
+        ]
+    },
+    { // ince fark: oddEvenDataYeni
+        id: 5313,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 6960, word: "eldiven", imageUrl: "/images/6960.webp", isCorrect: false, audioKey: "eldiven", spokenText: "eldiven" },
+            { id: 6960, word: "eldiven", imageUrl: "/images/6960.webp", isCorrect: false, audioKey: "eldiven", spokenText: "eldiven" },
+            { id: 6960, word: "eldiven", imageUrl: "/images/6960.webp", isCorrect: false, audioKey: "eldiven", spokenText: "eldiven" },
+            { id: 6959, word: "eldiven", imageUrl: "/images/6959.webp", isCorrect: true, audioKey: "eldiven", spokenText: "eldiven" }
+        ]
+    },
+    { // ince fark: oddEvenDataYeni
+        id: 5314,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 6961, word: "ayakkabı", imageUrl: "/images/6961.webp", isCorrect: false, audioKey: "ayakkabı", spokenText: "ayakkabı" },
+            { id: 6961, word: "ayakkabı", imageUrl: "/images/6961.webp", isCorrect: false, audioKey: "ayakkabı", spokenText: "ayakkabı" },
+            { id: 6961, word: "ayakkabı", imageUrl: "/images/6961.webp", isCorrect: false, audioKey: "ayakkabı", spokenText: "ayakkabı" },
+            { id: 6962, word: "ayakkabı", imageUrl: "/images/6962.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" }
+        ]
+    },
+    { // ince fark: oddEvenDataYeni
+        id: 5315,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 6964, word: "küpe", imageUrl: "/images/6964.webp", isCorrect: false, audioKey: "küpe", spokenText: "küpe" },
+            { id: 6964, word: "küpe", imageUrl: "/images/6964.webp", isCorrect: false, audioKey: "küpe", spokenText: "küpe" },
+            { id: 6964, word: "küpe", imageUrl: "/images/6964.webp", isCorrect: false, audioKey: "küpe", spokenText: "küpe" },
+            { id: 6963, word: "küpe", imageUrl: "/images/6963.webp", isCorrect: true, audioKey: "küpe", spokenText: "küpe" }
+        ]
+    },
+    { // ince fark: oddEvenDataYeni
+        id: 5316,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 6965, word: "paten", imageUrl: "/images/6965.webp", isCorrect: false, audioKey: "paten", spokenText: "paten" },
+            { id: 6965, word: "paten", imageUrl: "/images/6965.webp", isCorrect: false, audioKey: "paten", spokenText: "paten" },
+            { id: 6965, word: "paten", imageUrl: "/images/6965.webp", isCorrect: false, audioKey: "paten", spokenText: "paten" },
+            { id: 6966, word: "paten", imageUrl: "/images/6966.webp", isCorrect: true, audioKey: "paten", spokenText: "paten" }
+        ]
+    },
+    { // ince fark: oddEvenDataYeni
+        id: 5317,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 6968, word: "sandalet", imageUrl: "/images/6968.webp", isCorrect: false, audioKey: "sandalet", spokenText: "sandalet" },
+            { id: 6968, word: "sandalet", imageUrl: "/images/6968.webp", isCorrect: false, audioKey: "sandalet", spokenText: "sandalet" },
+            { id: 6968, word: "sandalet", imageUrl: "/images/6968.webp", isCorrect: false, audioKey: "sandalet", spokenText: "sandalet" },
+            { id: 6967, word: "sandalet", imageUrl: "/images/6967.webp", isCorrect: true, audioKey: "sandalet", spokenText: "sandalet" }
+        ]
+    },
+    { // ince fark: oddEvenDataYeni
+        id: 5318,
+        question: "Hangisi farklı?",
+        questionAudioKey: "",
+        activityType: ActivityType.WhatDoesntBelong,
+        speech: { tr: { question: 'Hangisi farklı?', correct: 'Evet! Bu farklı.', wrong: 'Hayır, bu aynı. Farklı olanı bul.' } },
+        options: [
+            { id: 6969, word: "terlik", imageUrl: "/images/6969.webp", isCorrect: false, audioKey: "terlik", spokenText: "terlik" },
+            { id: 6969, word: "terlik", imageUrl: "/images/6969.webp", isCorrect: false, audioKey: "terlik", spokenText: "terlik" },
+            { id: 6969, word: "terlik", imageUrl: "/images/6969.webp", isCorrect: false, audioKey: "terlik", spokenText: "terlik" },
+            { id: 6970, word: "terlik", imageUrl: "/images/6970.webp", isCorrect: true, audioKey: "terlik", spokenText: "terlik" }
+        ]
+    },
     { // ince fark: oldNewDataYeni
-        id: 5299,
+        id: 5319,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4414,7 +4674,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5300,
+        id: 5320,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4427,7 +4687,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5301,
+        id: 5321,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4440,7 +4700,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5302,
+        id: 5322,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4453,7 +4713,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5303,
+        id: 5323,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4466,7 +4726,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5304,
+        id: 5324,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4479,7 +4739,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5305,
+        id: 5325,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4492,7 +4752,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5306,
+        id: 5326,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4505,7 +4765,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5307,
+        id: 5327,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4518,7 +4778,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: oldNewDataYeni
-        id: 5308,
+        id: 5328,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4531,7 +4791,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5309,
+        id: 5329,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4544,7 +4804,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5310,
+        id: 5330,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4557,7 +4817,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5311,
+        id: 5331,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4570,7 +4830,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5312,
+        id: 5332,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4583,7 +4843,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5313,
+        id: 5333,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4596,7 +4856,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5314,
+        id: 5334,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4609,7 +4869,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5315,
+        id: 5335,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4622,7 +4882,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5316,
+        id: 5336,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4635,7 +4895,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5317,
+        id: 5337,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4648,7 +4908,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: onUnderDataYeni
-        id: 5318,
+        id: 5338,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4661,7 +4921,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5319,
+        id: 5339,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4674,7 +4934,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5320,
+        id: 5340,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4687,7 +4947,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5321,
+        id: 5341,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4700,7 +4960,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5322,
+        id: 5342,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4713,7 +4973,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5323,
+        id: 5343,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4726,7 +4986,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5324,
+        id: 5344,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4739,7 +4999,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5325,
+        id: 5345,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4752,7 +5012,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5326,
+        id: 5346,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4765,7 +5025,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5327,
+        id: 5347,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4778,7 +5038,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: openClosedDataYeni
-        id: 5328,
+        id: 5348,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4791,7 +5051,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5329,
+        id: 5349,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4804,7 +5064,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5330,
+        id: 5350,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4817,7 +5077,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5331,
+        id: 5351,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4830,7 +5090,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5332,
+        id: 5352,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4843,7 +5103,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5333,
+        id: 5353,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4856,7 +5116,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5334,
+        id: 5354,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4869,7 +5129,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5335,
+        id: 5355,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4882,7 +5142,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5336,
+        id: 5356,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4895,7 +5155,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5337,
+        id: 5357,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4908,7 +5168,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: parlakMatDataYeni
-        id: 5338,
+        id: 5358,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4921,7 +5181,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: roughSmoothDataYeni
-        id: 5339,
+        id: 5359,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4934,7 +5194,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5340,
+        id: 5360,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4947,7 +5207,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5341,
+        id: 5361,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4960,7 +5220,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5342,
+        id: 5362,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4973,7 +5233,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5343,
+        id: 5363,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4986,7 +5246,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5344,
+        id: 5364,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -4999,7 +5259,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5345,
+        id: 5365,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5012,7 +5272,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5346,
+        id: 5366,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5025,7 +5285,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: seffafOpakDataYeni
-        id: 5347,
+        id: 5367,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5038,7 +5298,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5348,
+        id: 5368,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5051,7 +5311,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5349,
+        id: 5369,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5064,7 +5324,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5350,
+        id: 5370,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5077,7 +5337,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5351,
+        id: 5371,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5090,7 +5350,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5352,
+        id: 5372,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5103,7 +5363,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5353,
+        id: 5373,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5116,7 +5376,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5354,
+        id: 5374,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5129,7 +5389,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5355,
+        id: 5375,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5142,7 +5402,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5356,
+        id: 5376,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5155,7 +5415,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: sivriKutDataYeni
-        id: 5357,
+        id: 5377,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5168,7 +5428,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5358,
+        id: 5378,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5181,7 +5441,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5359,
+        id: 5379,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5194,7 +5454,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5360,
+        id: 5380,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5207,7 +5467,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5361,
+        id: 5381,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5220,7 +5480,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5362,
+        id: 5382,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5233,7 +5493,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5363,
+        id: 5383,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5246,7 +5506,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5364,
+        id: 5384,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5259,7 +5519,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5365,
+        id: 5385,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5272,7 +5532,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5366,
+        id: 5386,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5285,7 +5545,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: straightCurvedDataYeni
-        id: 5367,
+        id: 5387,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5298,7 +5558,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5368,
+        id: 5388,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5311,7 +5571,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5369,
+        id: 5389,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5324,7 +5584,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5370,
+        id: 5390,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5337,7 +5597,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5371,
+        id: 5391,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5350,7 +5610,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5372,
+        id: 5392,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5363,7 +5623,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5373,
+        id: 5393,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5376,7 +5636,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5374,
+        id: 5394,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5389,7 +5649,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5375,
+        id: 5395,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5402,7 +5662,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5376,
+        id: 5396,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5415,7 +5675,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tazeBayatDataYeni
-        id: 5377,
+        id: 5397,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5428,7 +5688,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5378,
+        id: 5398,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5441,7 +5701,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5379,
+        id: 5399,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5454,7 +5714,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5380,
+        id: 5400,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5467,7 +5727,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5381,
+        id: 5401,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5480,7 +5740,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5382,
+        id: 5402,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5493,7 +5753,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5383,
+        id: 5403,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5506,7 +5766,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5384,
+        id: 5404,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5519,7 +5779,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5385,
+        id: 5405,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5532,7 +5792,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tembelCaliskanDataYeni
-        id: 5386,
+        id: 5406,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5545,7 +5805,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5387,
+        id: 5407,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5558,7 +5818,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5388,
+        id: 5408,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5571,7 +5831,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5389,
+        id: 5409,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5584,7 +5844,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5390,
+        id: 5410,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5597,7 +5857,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5391,
+        id: 5411,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5610,7 +5870,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5392,
+        id: 5412,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5623,7 +5883,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5393,
+        id: 5413,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5636,7 +5896,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5394,
+        id: 5414,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5649,7 +5909,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5395,
+        id: 5415,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5662,7 +5922,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5396,
+        id: 5416,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5675,7 +5935,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5397,
+        id: 5417,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5688,7 +5948,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5398,
+        id: 5418,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5701,7 +5961,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5399,
+        id: 5419,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5714,7 +5974,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5400,
+        id: 5420,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5727,7 +5987,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: tersDuzDataYeni
-        id: 5401,
+        id: 5421,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5740,7 +6000,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5402,
+        id: 5422,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5753,7 +6013,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5403,
+        id: 5423,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5766,7 +6026,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5404,
+        id: 5424,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5779,7 +6039,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5405,
+        id: 5425,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5792,7 +6052,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5406,
+        id: 5426,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5805,7 +6065,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5407,
+        id: 5427,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5818,7 +6078,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5408,
+        id: 5428,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5831,7 +6091,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5409,
+        id: 5429,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5844,7 +6104,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5410,
+        id: 5430,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5857,7 +6117,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: thinThickDataYeni
-        id: 5411,
+        id: 5431,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5870,7 +6130,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5412,
+        id: 5432,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5883,7 +6143,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5413,
+        id: 5433,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5896,7 +6156,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5414,
+        id: 5434,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5909,7 +6169,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5415,
+        id: 5435,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5922,7 +6182,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5416,
+        id: 5436,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5935,7 +6195,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5417,
+        id: 5437,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5948,7 +6208,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5418,
+        id: 5438,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5961,7 +6221,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5419,
+        id: 5439,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5974,7 +6234,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5420,
+        id: 5440,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -5987,7 +6247,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wetDryDataYeni
-        id: 5421,
+        id: 5441,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6000,7 +6260,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5422,
+        id: 5442,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6013,7 +6273,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5423,
+        id: 5443,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6026,7 +6286,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5424,
+        id: 5444,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6039,7 +6299,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5425,
+        id: 5445,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6052,7 +6312,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5426,
+        id: 5446,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6065,7 +6325,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5427,
+        id: 5447,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6078,7 +6338,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5428,
+        id: 5448,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6091,7 +6351,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5429,
+        id: 5449,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6104,7 +6364,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5430,
+        id: 5450,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6117,7 +6377,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: wideNarrowDataYeni
-        id: 5431,
+        id: 5451,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6130,7 +6390,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5432,
+        id: 5452,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6143,7 +6403,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5433,
+        id: 5453,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6156,7 +6416,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5434,
+        id: 5454,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6169,7 +6429,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5435,
+        id: 5455,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6182,7 +6442,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5436,
+        id: 5456,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6195,7 +6455,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5437,
+        id: 5457,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6208,7 +6468,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5438,
+        id: 5458,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6221,7 +6481,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5439,
+        id: 5459,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6234,7 +6494,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5440,
+        id: 5460,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,
@@ -6247,7 +6507,7 @@ export const hangisiFarkliZorYeni: ConceptRound[] = [
         ]
     },
     { // ince fark: youngOldDataYeni
-        id: 5441,
+        id: 5461,
         question: "Hangisi farklı?",
         questionAudioKey: "",
         activityType: ActivityType.WhatDoesntBelong,

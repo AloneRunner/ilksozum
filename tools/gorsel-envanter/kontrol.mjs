@@ -38,7 +38,7 @@ const ADLAR = {
   tersDuzDataYeni: 'Ters / Düz', sivriKutDataYeni: 'Sivri / Küt',
   dayNightDataYeni: 'Gündüz / Gece', fastSlowDataYeni: 'Hızlı / Yavaş',
   beforeAfterDataYeni: 'Önce / Sonra', heavyLightDataYeni: 'Ağır / Hafif',
-  emotionsDataYeni: 'Duygular', acikKoyuDataYeni: 'Açık / Koyu', yenirYenmezDataYeni: 'Yenir / Yenmez', tehlikeliGuvenliDataYeni: 'Tehlikeli / Güvenli', havaDurumuDataYeni: 'Hava Durumu',
+  emotionsDataYeni: 'Duygular', acikKoyuDataYeni: 'Açık / Koyu', yenirYenmezDataYeni: 'Yenir / Yenmez', tehlikeliGuvenliDataYeni: 'Tehlikeli / Güvenli', havaDurumuDataYeni: 'Hava Durumu', oddEvenDataYeni: 'Tek / Çift', ilkSonDataYeni: 'İlk / Son',
 };
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const img = o => `<img loading="lazy" src="../../public/images/${o.id}.webp" alt="">`;

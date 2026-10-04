@@ -59,6 +59,8 @@ export { acikKoyuDataYeni } from './acikKoyuData';
 export { yenirYenmezDataYeni } from './yenirYenmezData';
 export { tehlikeliGuvenliDataYeni } from './tehlikeliGuvenliData';
 export { havaDurumuDataYeni } from './havaDurumuData';
+export { oddEvenDataYeni } from './tekCiftData';
+export { ilkSonDataYeni } from './ilkSonData';
 export { countMatchDataYeni } from './countMatchData';
 export { sensesDataYeni } from './sensesData';
 export { ownershipDataYeni } from './ownershipData';

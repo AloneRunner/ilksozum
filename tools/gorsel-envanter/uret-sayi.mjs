@@ -31,8 +31,9 @@ const DUZEN = {
   4: [[0.28, 0.28], [0.72, 0.28], [0.28, 0.72], [0.72, 0.72]],
   5: [[0.25, 0.25], [0.75, 0.25], [0.5, 0.5], [0.25, 0.75], [0.75, 0.75]],
 };
-// Mevcut el görselleri (1-5 parmak) — soru resmi
-const ELLER = { 1: 1002, 2: 1003, 3: 1004, 4: 1005, 5: 1006 };
+// Soru resmi: aynı çocuğun 1-5 parmak gösteren eli (gorsel-ham/sayi/el-N.jpg, Flow turu 39). Yoksa eski çizim.
+const ELLER_ESKI = { 1: 1002, 2: 1003, 3: 1004, 4: 1005, 5: 1006 };
+const ELLER = {};
 const EL_KELIME = { 1: 'bir parmak gösteren el', 2: 'iki parmak gösteren el', 3: 'üç parmak gösteren el', 4: 'dört parmak gösteren el', 5: 'beş parmak gösteren el' };
 
 const magick = (...a) => execFileSync('magick', a, { stdio: ['ignore', 'pipe', 'inherit'] });
@@ -67,6 +68,13 @@ for (const n of NESNELER) {
   }
 }
 fs.rmSync(tmp, { recursive: true, force: true });
+for (let k = 1; k <= 5; k++) {
+  const dosya = `sayi/el-${k}.jpg`;
+  if (!fs.existsSync(path.join(RAW, dosya))) continue;
+  const buId = id++;
+  ELLER[k] = buId;
+  yeni.push({ id: buId, kaynak: dosya, word: EL_KELIME[k], category: 'none', sahne: true, tags: { count: k } });
+}
 
 const list = JSON.parse(fs.readFileSync(LIST, 'utf8'));
 list.gorseller = [...list.gorseller.filter(g => !g.kaynak.startsWith('sayi/')), ...yeni].sort((a, b) => a.id - b.id);
@@ -91,7 +99,7 @@ for (let k = 1; k <= 5; k++) {
     activityType: ActivityType.CountMatch,
     question: 'Hangisinde bu kadar var?',
     questionAudioKey: '',
-    questionItem: { id: ${ELLER[k]}, word: '${EL_KELIME[k]}', imageUrl: '/images/${ELLER[k]}.png', audioKeys: { default: '${EL_KELIME[k]}' }, tags: { category: 'eller', count: ${k} } },
+    questionItem: { id: ${ELLER[k] ?? ELLER_ESKI[k]}, word: '${EL_KELIME[k]}', imageUrl: '${ELLER[k] ? `/images/${ELLER[k]}.webp` : `/images/${ELLER_ESKI[k]}.png`}', audioKeys: { default: '${EL_KELIME[k]}' }, tags: { category: 'eller', count: ${k} } },
     speech: { tr: { question: 'Hangisinde bu kadar var?', correct: 'Evet! Burada ${SAYI[k]} ${n.tekil} var.', wrong: 'Hayır, bu sayı farklı. Parmakları say.' } },
     options: [
 ${secenek.join(',\n')}
