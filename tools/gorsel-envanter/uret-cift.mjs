@@ -557,14 +557,42 @@ const KAVRAMLAR = [
     a: { ek: 'hizli', deger: 'hızlı', soru: 'Hızlı olan hangisi?', sifat: 'hızlıdır' },
     b: { ek: 'yavas', deger: 'yavaş', soru: 'Yavaş olan hangisi?', sifat: 'yavaştır' },
     soruOzel: { cocuk: { hizli: 'Hangi çocuk hızlı koşuyor?', yavas: 'Hangi çocuk yavaş yürüyor?' } },
-    // Yarış arabası çizgi film gibi geldi (tur 33): traktörün eşi şimdilik tren (tren_traktor-hizli.jpg = aynı tren fotoğrafı)
     kelime: {
       tavsan_kaplumbaga: { hizli: 'tavşan', yavas: 'kaplumbağa' }, cita_salyangoz: { hizli: 'çita', yavas: 'salyangoz' },
       ucak_balon: { hizli: 'uçak', yavas: 'balon' }, tren_atarabasi: { hizli: 'tren', yavas: 'at arabası' },
-      tren_traktor: { hizli: 'tren', yavas: 'traktör' }, tekne_sandal: { hizli: 'sürat teknesi', yavas: 'sandal' },
+      araba_traktor: { hizli: 'yarış arabası', yavas: 'traktör' }, tekne_sandal: { hizli: 'sürat teknesi', yavas: 'sandal' },
       at_inek: { hizli: 'at', yavas: 'inek' }, kopek_tembelhayvan: { hizli: 'köpek', yavas: 'tembel hayvan' },
       sahin_tirtil: { hizli: 'şahin', yavas: 'tırtıl' }, cocuk: 'çocuk',
     },
+  },
+  {
+    klasor: 'once-sonra', dosya: 'onceSonraData.ts', exportAdi: 'beforeAfterDataYeni',
+    activityType: 'BeforeAfter', idBaslangic: 6101, etiket: 'time',
+    sahne: true,
+    a: { ek: 'once', deger: 'önce', soru: 'Önce hangisi olur?', sifat: 'önce olur' },
+    b: { ek: 'sonra', deger: 'sonra', soru: 'Sonra hangisi olur?', sifat: 'sonra olur' },
+    // Aynı nesnenin iki anı: "Önce hangisi olur?" → "Evet! Bu önce olur." / "Hayır, bu sonra olur."
+    soruKalip: (w, d) => d === 'önce' ? 'Önce hangisi olur?' : 'Sonra hangisi olur?',
+    buYok: true,
+    ozne: Object.fromEntries(['elma', 'balon', 'mum', 'buz', 'cicek', 'yumurta', 'kagit', 'meyvesuyu', 'cizme', 'cizme2', 'ekmek'].map(n => [n, 'bu'])),
+    kelime: { elma: 'elma', balon: 'balon', mum: 'mum', buz: 'buz', cicek: 'çiçek', yumurta: 'yumurta', kagit: 'kâğıt',
+      meyvesuyu: 'meyve suyu', cizme: 'çizme', cizme2: 'çizme', ekmek: 'ekmek' },
+  },
+  {
+    klasor: 'agir-hafif', dosya: 'agirHafifData.ts', exportAdi: 'heavyLightDataYeni',
+    activityType: 'HeavyLight', idBaslangic: 6201, etiket: 'weight',
+    sahneNesneler: ['fil_kelebek'],
+    a: { ek: 'agir', deger: 'ağır', soru: 'Ağır olan hangisi?', sifat: 'ağırdır' },
+    b: { ek: 'hafif', deger: 'hafif', soru: 'Hafif olan hangisi?', sifat: 'hafiftir' },
+    kelime: {
+      karpuz_cilek: { agir: 'karpuz', hafif: 'çilek' }, kaya_tuy: { agir: 'taş', hafif: 'tüy' },
+      dambil_balon: { agir: 'dambıl', hafif: 'balon' }, kitap_kagit: { agir: 'kitaplar', hafif: 'kâğıt' },
+      valiz_canta: { agir: 'valiz', hafif: 'çanta' }, balkabagi_mandalina: { agir: 'balkabağı', hafif: 'mandalina' },
+      bowling_plajtopu: { agir: 'bowling topu', hafif: 'plaj topu' }, fil_kelebek: { agir: 'fil', hafif: 'kelebek' },
+      tugla_sunger: { agir: 'tuğla', hafif: 'sünger' },
+      kova: { agir: 'su dolu kova', hafif: 'boş kova' }, // Kaan: "su dolu kova bir çocuk için ağırdır"
+    },
+    soruOzel: { kova: { agir: 'Hangi kova ağır?', hafif: 'Hangi kova hafif?' } },
   },
   {
     klasor: 'kirisik-duzgun', dosya: 'kirisikDuzgunData.ts', exportAdi: 'kirisikDuzgunDataYeni',
@@ -691,8 +719,10 @@ ${opt(fNo, wNo, false)}
       if (farkliNesne(n)) {
         // İki farklı nesne: "Evet! Taş serttir." / "Hayır, yastık yumuşaktır." (seçilen yanlış nesne anlatılır)
         const wa = word(n, ea), wb = word(n, eb);
-        rounds.push(round(A.soru, `Evet! ${cap(wa)} ${A.sifat}.`, `Hayır, ${wb} ${B.sifat}.`, fa, fb, wa, wb) + ',');
-        rounds.push(round(B.soru, `Evet! ${cap(wb)} ${B.sifat}.`, `Hayır, ${wa} ${A.sifat}.`, fb, fa, wb, wa) + ',');
+        // soruOzel burada da geçerli (ör. su dolu kova / boş kova: "Hangi kova ağır?")
+        const sA = k.soruOzel?.[n]?.[ea] || A.soru, sB = k.soruOzel?.[n]?.[eb] || B.soru;
+        rounds.push(round(sA, `Evet! ${cap(wa)} ${A.sifat}.`, `Hayır, ${wb} ${B.sifat}.`, fa, fb, wa, wb) + ',');
+        rounds.push(round(sB, `Evet! ${cap(wb)} ${B.sifat}.`, `Hayır, ${wa} ${A.sifat}.`, fb, fa, wb, wa) + ',');
         continue;
       }
       // Soru nesneye göre özelleştirilebilir (Kaan: "Kolu kısa olan hangisi?", "Saçı kısa olan hangisi?")

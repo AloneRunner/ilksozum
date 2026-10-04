@@ -52,3 +52,5 @@ export { tersDuzDataYeni } from './tersDuzData';
 export { sivriKutDataYeni } from './sivriKutData';
 export { dayNightDataYeni } from './gunduzGeceData';
 export { fastSlowDataYeni } from './hizliYavasData';
+export { beforeAfterDataYeni } from './onceSonraData';
+export { heavyLightDataYeni } from './agirHafifData';

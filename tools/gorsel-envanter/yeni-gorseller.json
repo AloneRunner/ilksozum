@@ -7887,6 +7887,26 @@
     },
     {
       "id": 6001,
+      "kaynak": "hizli-yavas/araba_traktor-hizli.jpg",
+      "word": "yarış arabası",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "hızlı"
+      }
+    },
+    {
+      "id": 6002,
+      "kaynak": "hizli-yavas/araba_traktor-yavas.jpg",
+      "word": "traktör",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "speed": "yavaş"
+      }
+    },
+    {
+      "id": 6003,
       "kaynak": "hizli-yavas/at_inek-hizli.jpg",
       "word": "at",
       "category": "none",
@@ -7896,7 +7916,7 @@
       }
     },
     {
-      "id": 6002,
+      "id": 6004,
       "kaynak": "hizli-yavas/at_inek-yavas.jpg",
       "word": "inek",
       "category": "none",
@@ -7906,7 +7926,7 @@
       }
     },
     {
-      "id": 6003,
+      "id": 6005,
       "kaynak": "hizli-yavas/cita_salyangoz-hizli.jpg",
       "word": "çita",
       "category": "none",
@@ -7916,7 +7936,7 @@
       }
     },
     {
-      "id": 6004,
+      "id": 6006,
       "kaynak": "hizli-yavas/cita_salyangoz-yavas.jpg",
       "word": "salyangoz",
       "category": "none",
@@ -7926,7 +7946,7 @@
       }
     },
     {
-      "id": 6005,
+      "id": 6007,
       "kaynak": "hizli-yavas/cocuk-hizli.jpg",
       "word": "çocuk",
       "category": "none",
@@ -7936,7 +7956,7 @@
       }
     },
     {
-      "id": 6006,
+      "id": 6008,
       "kaynak": "hizli-yavas/cocuk-yavas.jpg",
       "word": "çocuk",
       "category": "none",
@@ -7946,7 +7966,7 @@
       }
     },
     {
-      "id": 6007,
+      "id": 6009,
       "kaynak": "hizli-yavas/kopek_tembelhayvan-hizli.jpg",
       "word": "köpek",
       "category": "none",
@@ -7956,7 +7976,7 @@
       }
     },
     {
-      "id": 6008,
+      "id": 6010,
       "kaynak": "hizli-yavas/kopek_tembelhayvan-yavas.jpg",
       "word": "tembel hayvan",
       "category": "none",
@@ -7966,7 +7986,7 @@
       }
     },
     {
-      "id": 6009,
+      "id": 6011,
       "kaynak": "hizli-yavas/sahin_tirtil-hizli.jpg",
       "word": "şahin",
       "category": "none",
@@ -7976,7 +7996,7 @@
       }
     },
     {
-      "id": 6010,
+      "id": 6012,
       "kaynak": "hizli-yavas/sahin_tirtil-yavas.jpg",
       "word": "tırtıl",
       "category": "none",
@@ -7986,7 +8006,7 @@
       }
     },
     {
-      "id": 6011,
+      "id": 6013,
       "kaynak": "hizli-yavas/tavsan_kaplumbaga-hizli.jpg",
       "word": "tavşan",
       "category": "none",
@@ -7996,7 +8016,7 @@
       }
     },
     {
-      "id": 6012,
+      "id": 6014,
       "kaynak": "hizli-yavas/tavsan_kaplumbaga-yavas.jpg",
       "word": "kaplumbağa",
       "category": "none",
@@ -8006,7 +8026,7 @@
       }
     },
     {
-      "id": 6013,
+      "id": 6015,
       "kaynak": "hizli-yavas/tekne_sandal-hizli.jpg",
       "word": "sürat teknesi",
       "category": "none",
@@ -8016,7 +8036,7 @@
       }
     },
     {
-      "id": 6014,
+      "id": 6016,
       "kaynak": "hizli-yavas/tekne_sandal-yavas.jpg",
       "word": "sandal",
       "category": "none",
@@ -8026,7 +8046,7 @@
       }
     },
     {
-      "id": 6015,
+      "id": 6017,
       "kaynak": "hizli-yavas/tren_atarabasi-hizli.jpg",
       "word": "tren",
       "category": "none",
@@ -8036,29 +8056,9 @@
       }
     },
     {
-      "id": 6016,
+      "id": 6018,
       "kaynak": "hizli-yavas/tren_atarabasi-yavas.jpg",
       "word": "at arabası",
-      "category": "none",
-      "sahne": true,
-      "tags": {
-        "speed": "yavaş"
-      }
-    },
-    {
-      "id": 6017,
-      "kaynak": "hizli-yavas/tren_traktor-hizli.jpg",
-      "word": "tren",
-      "category": "none",
-      "sahne": true,
-      "tags": {
-        "speed": "hızlı"
-      }
-    },
-    {
-      "id": 6018,
-      "kaynak": "hizli-yavas/tren_traktor-yavas.jpg",
-      "word": "traktör",
       "category": "none",
       "sahne": true,
       "tags": {
@@ -8083,6 +8083,408 @@
       "sahne": true,
       "tags": {
         "speed": "yavaş"
+      }
+    },
+    {
+      "id": 6101,
+      "kaynak": "once-sonra/balon-once.jpg",
+      "word": "balon",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "önce"
+      }
+    },
+    {
+      "id": 6102,
+      "kaynak": "once-sonra/balon-sonra.jpg",
+      "word": "balon",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "sonra"
+      }
+    },
+    {
+      "id": 6103,
+      "kaynak": "once-sonra/buz-once.jpg",
+      "word": "buz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "önce"
+      }
+    },
+    {
+      "id": 6104,
+      "kaynak": "once-sonra/buz-sonra.jpg",
+      "word": "buz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "sonra"
+      }
+    },
+    {
+      "id": 6105,
+      "kaynak": "once-sonra/cicek-once.jpg",
+      "word": "çiçek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "önce"
+      }
+    },
+    {
+      "id": 6106,
+      "kaynak": "once-sonra/cicek-sonra.jpg",
+      "word": "çiçek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "sonra"
+      }
+    },
+    {
+      "id": 6107,
+      "kaynak": "once-sonra/cizme-once.jpg",
+      "word": "çizme",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "önce"
+      }
+    },
+    {
+      "id": 6108,
+      "kaynak": "once-sonra/cizme-sonra.jpg",
+      "word": "çizme",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "sonra"
+      }
+    },
+    {
+      "id": 6109,
+      "kaynak": "once-sonra/cizme2-once.jpg",
+      "word": "çizme",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "önce"
+      }
+    },
+    {
+      "id": 6110,
+      "kaynak": "once-sonra/cizme2-sonra.jpg",
+      "word": "çizme",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "sonra"
+      }
+    },
+    {
+      "id": 6111,
+      "kaynak": "once-sonra/ekmek-once.jpg",
+      "word": "ekmek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "önce"
+      }
+    },
+    {
+      "id": 6112,
+      "kaynak": "once-sonra/ekmek-sonra.jpg",
+      "word": "ekmek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "sonra"
+      }
+    },
+    {
+      "id": 6113,
+      "kaynak": "once-sonra/elma-once.jpg",
+      "word": "elma",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "önce"
+      }
+    },
+    {
+      "id": 6114,
+      "kaynak": "once-sonra/elma-sonra.jpg",
+      "word": "elma",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "sonra"
+      }
+    },
+    {
+      "id": 6115,
+      "kaynak": "once-sonra/kagit-once.jpg",
+      "word": "kâğıt",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "önce"
+      }
+    },
+    {
+      "id": 6116,
+      "kaynak": "once-sonra/kagit-sonra.jpg",
+      "word": "kâğıt",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "sonra"
+      }
+    },
+    {
+      "id": 6117,
+      "kaynak": "once-sonra/meyvesuyu-once.jpg",
+      "word": "meyve suyu",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "önce"
+      }
+    },
+    {
+      "id": 6118,
+      "kaynak": "once-sonra/meyvesuyu-sonra.jpg",
+      "word": "meyve suyu",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "sonra"
+      }
+    },
+    {
+      "id": 6119,
+      "kaynak": "once-sonra/mum-once.jpg",
+      "word": "mum",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "önce"
+      }
+    },
+    {
+      "id": 6120,
+      "kaynak": "once-sonra/mum-sonra.jpg",
+      "word": "mum",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "sonra"
+      }
+    },
+    {
+      "id": 6121,
+      "kaynak": "once-sonra/yumurta-once.jpg",
+      "word": "yumurta",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "önce"
+      }
+    },
+    {
+      "id": 6122,
+      "kaynak": "once-sonra/yumurta-sonra.jpg",
+      "word": "yumurta",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "time": "sonra"
+      }
+    },
+    {
+      "id": 6201,
+      "kaynak": "agir-hafif/balkabagi_mandalina-agir.jpg",
+      "word": "balkabağı",
+      "category": "none",
+      "tags": {
+        "weight": "ağır"
+      }
+    },
+    {
+      "id": 6202,
+      "kaynak": "agir-hafif/balkabagi_mandalina-hafif.jpg",
+      "word": "mandalina",
+      "category": "none",
+      "tags": {
+        "weight": "hafif"
+      }
+    },
+    {
+      "id": 6203,
+      "kaynak": "agir-hafif/bowling_plajtopu-agir.jpg",
+      "word": "bowling topu",
+      "category": "none",
+      "tags": {
+        "weight": "ağır"
+      }
+    },
+    {
+      "id": 6204,
+      "kaynak": "agir-hafif/bowling_plajtopu-hafif.jpg",
+      "word": "plaj topu",
+      "category": "none",
+      "tags": {
+        "weight": "hafif"
+      }
+    },
+    {
+      "id": 6205,
+      "kaynak": "agir-hafif/dambil_balon-agir.jpg",
+      "word": "dambıl",
+      "category": "none",
+      "tags": {
+        "weight": "ağır"
+      }
+    },
+    {
+      "id": 6206,
+      "kaynak": "agir-hafif/dambil_balon-hafif.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "weight": "hafif"
+      }
+    },
+    {
+      "id": 6207,
+      "kaynak": "agir-hafif/fil_kelebek-agir.jpg",
+      "word": "fil",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "weight": "ağır"
+      }
+    },
+    {
+      "id": 6208,
+      "kaynak": "agir-hafif/fil_kelebek-hafif.jpg",
+      "word": "kelebek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "weight": "hafif"
+      }
+    },
+    {
+      "id": 6209,
+      "kaynak": "agir-hafif/karpuz_cilek-agir.jpg",
+      "word": "karpuz",
+      "category": "none",
+      "tags": {
+        "weight": "ağır"
+      }
+    },
+    {
+      "id": 6210,
+      "kaynak": "agir-hafif/karpuz_cilek-hafif.jpg",
+      "word": "çilek",
+      "category": "none",
+      "tags": {
+        "weight": "hafif"
+      }
+    },
+    {
+      "id": 6211,
+      "kaynak": "agir-hafif/kaya_tuy-agir.jpg",
+      "word": "taş",
+      "category": "none",
+      "tags": {
+        "weight": "ağır"
+      }
+    },
+    {
+      "id": 6212,
+      "kaynak": "agir-hafif/kaya_tuy-hafif.jpg",
+      "word": "tüy",
+      "category": "none",
+      "tags": {
+        "weight": "hafif"
+      }
+    },
+    {
+      "id": 6213,
+      "kaynak": "agir-hafif/kitap_kagit-agir.jpg",
+      "word": "kitaplar",
+      "category": "none",
+      "tags": {
+        "weight": "ağır"
+      }
+    },
+    {
+      "id": 6214,
+      "kaynak": "agir-hafif/kitap_kagit-hafif.jpg",
+      "word": "kâğıt",
+      "category": "none",
+      "tags": {
+        "weight": "hafif"
+      }
+    },
+    {
+      "id": 6215,
+      "kaynak": "agir-hafif/kova-agir.jpg",
+      "word": "su dolu kova",
+      "category": "none",
+      "tags": {
+        "weight": "ağır"
+      }
+    },
+    {
+      "id": 6216,
+      "kaynak": "agir-hafif/kova-hafif.jpg",
+      "word": "boş kova",
+      "category": "none",
+      "tags": {
+        "weight": "hafif"
+      }
+    },
+    {
+      "id": 6217,
+      "kaynak": "agir-hafif/tugla_sunger-agir.jpg",
+      "word": "tuğla",
+      "category": "none",
+      "tags": {
+        "weight": "ağır"
+      }
+    },
+    {
+      "id": 6218,
+      "kaynak": "agir-hafif/tugla_sunger-hafif.jpg",
+      "word": "sünger",
+      "category": "none",
+      "tags": {
+        "weight": "hafif"
+      }
+    },
+    {
+      "id": 6219,
+      "kaynak": "agir-hafif/valiz_canta-agir.jpg",
+      "word": "valiz",
+      "category": "none",
+      "tags": {
+        "weight": "ağır"
+      }
+    },
+    {
+      "id": 6220,
+      "kaynak": "agir-hafif/valiz_canta-hafif.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "weight": "hafif"
       }
     }
   ]

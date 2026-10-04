@@ -2,7 +2,7 @@
 import { ActivityType, ActivityCategory, ImageMetadata, ConceptRound, Word, Story, ScreenState, ConceptOption, ActivityStats, MemoryGameRound, SudokuRound, SudokuItem } from '../types.ts';
 import { storyData } from './staticData.ts';
 import { imageData } from './database/imageData.ts';
-import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni, fewMuchDataYeni, halfQuarterWholeDataYeni, derinSigDataYeni, openClosedDataYeni, brokenIntactDataYeni, cleanDirtyDataYeni, wetDryDataYeni, oldNewDataYeni, hardSoftDataYeni, hotColdDataYeni, roughSmoothDataYeni, dikenliPuruzsuzDataYeni, parlakMatDataYeni, seffafOpakDataYeni, bitterSweetDataYeni, noisyQuietDataYeni, hungryFullDataYeni, youngOldDataYeni, tembelCaliskanDataYeni, kalabalikTenhaDataYeni, kirisikDuzgunDataYeni, dugumCozukDataYeni, straightCurvedDataYeni, tazeBayatDataYeni, messyCleanDataYeni, hangisiFarkliKolayYeni, hangisiFarkliZorYeni, leftRightDataYeni, aliveLifelessDataYeni, saatDataYeni, nearFarDataYeni, besideOppositeDataYeni, tersDuzDataYeni, sivriKutDataYeni, dayNightDataYeni, fastSlowDataYeni } from './database/activities/yeni/index.ts';
+import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni, fewMuchDataYeni, halfQuarterWholeDataYeni, derinSigDataYeni, openClosedDataYeni, brokenIntactDataYeni, cleanDirtyDataYeni, wetDryDataYeni, oldNewDataYeni, hardSoftDataYeni, hotColdDataYeni, roughSmoothDataYeni, dikenliPuruzsuzDataYeni, parlakMatDataYeni, seffafOpakDataYeni, bitterSweetDataYeni, noisyQuietDataYeni, hungryFullDataYeni, youngOldDataYeni, tembelCaliskanDataYeni, kalabalikTenhaDataYeni, kirisikDuzgunDataYeni, dugumCozukDataYeni, straightCurvedDataYeni, tazeBayatDataYeni, messyCleanDataYeni, hangisiFarkliKolayYeni, hangisiFarkliZorYeni, leftRightDataYeni, aliveLifelessDataYeni, saatDataYeni, nearFarDataYeni, besideOppositeDataYeni, tersDuzDataYeni, sivriKutDataYeni, dayNightDataYeni, fastSlowDataYeni, beforeAfterDataYeni, heavyLightDataYeni } from './database/activities/yeni/index.ts';
 import { 
     sensesData,
     bigSmallData, longShortData, thinThickData, wideNarrowData, oldNewData, youngOldData, hardSoftData, cleanDirtyData, wetDryData, openClosedData, straightCurvedData, aliveLifelessData, bitterSweetData, heavyLightData, hotColdData, roughSmoothData, brokenIntactData, messyCleanData, tazeBayatData, kirisikDuzgunData, sivriKutData, parlakMatData, tembelCaliskanData, seffafOpakData, dikenliPuruzsuzData, dugumCozukData, hungryFullData, derinSigData, kalabalikTenhaData, tersDuzData,
@@ -1417,7 +1417,7 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.StraightCurved]: YENI_SORULAR_AKTIF ? straightCurvedDataYeni : straightCurvedData,
     [ActivityType.AliveLifeless]: YENI_SORULAR_AKTIF ? aliveLifelessDataYeni : aliveLifelessData,
     [ActivityType.BitterSweet]: YENI_SORULAR_AKTIF ? bitterSweetDataYeni : bitterSweetData,
-    [ActivityType.HeavyLight]: heavyLightData,
+    [ActivityType.HeavyLight]: YENI_SORULAR_AKTIF ? heavyLightDataYeni : heavyLightData,
     [ActivityType.HotCold]: YENI_SORULAR_AKTIF ? hotColdDataYeni : hotColdData,
     [ActivityType.RoughSmooth]: YENI_SORULAR_AKTIF ? roughSmoothDataYeni : roughSmoothData,
     [ActivityType.BrokenIntact]: YENI_SORULAR_AKTIF ? brokenIntactDataYeni : brokenIntactData,
@@ -1448,7 +1448,7 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.LeftRight]: YENI_SORULAR_AKTIF ? leftRightDataYeni : leftRightData,
     [ActivityType.NearFar]: YENI_SORULAR_AKTIF ? nearFarDataYeni : nearFarData,
     [ActivityType.HighLow]: YENI_SORULAR_AKTIF ? highLowDataYeni : highLowData,
-    [ActivityType.BeforeAfter]: beforeAfterData,
+    [ActivityType.BeforeAfter]: YENI_SORULAR_AKTIF ? beforeAfterDataYeni : beforeAfterData,
     [ActivityType.DayNight]: YENI_SORULAR_AKTIF ? dayNightDataYeni : dayNightData,
     [ActivityType.FastSlow]: YENI_SORULAR_AKTIF ? fastSlowDataYeni : fastSlowData,
     [ActivityType.NoisyQuiet]: YENI_SORULAR_AKTIF ? noisyQuietDataYeni : noisyQuietData,
