@@ -63,26 +63,16 @@ const ProgramModeIntroScreen = lazy(() => import('../ProgramModeIntroScreen.tsx'
 const FiveWOneHMenuScreen = lazy(() => import('../FiveWOneHMenuScreen.tsx'));
 const MiniGamesMenuScreen = lazy(() => import('../MiniGamesMenuScreen.tsx'));
 const ClockLearningGameScreen = lazy(() => import('../activities/games/ClockLearningGameScreen.tsx'));
-const ButterflyGardenScreen = lazy(() => import('../MiniGamesScreen.tsx'));
 const ShapeMatchingGameScreen = lazy(() => import('../ShapeMatchingGameScreen.tsx'));
 const MusicTouchGameScreen = lazy(() => import('../MusicTouchGameScreen.tsx'));
-const EmotionPuppetGameScreen = lazy(() => import('../EmotionPuppetGameScreen.tsx'));
-const PatternGameScreen = lazy(() => import('../PatternGameScreen.tsx'));
-const ColorMixGameScreen = lazy(() => import('../ColorMixGameScreen.tsx'));
-const SevenDifferencesScreen = lazy(() => import('../SevenDifferencesScreen.tsx'));
 const SheepGameScreen = lazy(() => import('../games/SheepGameScreen.tsx'));
 const BubblePopGameScreen = lazy(() => import('../games/BubblePopGameScreen.tsx'));
 const BusJamGameScreen = lazy(() => import('../games/BusJamGameScreen.tsx'));
 const PuzzleGameScreen = lazy(() => import('../games/PuzzleGameScreen.tsx'));
-const FishingGameScreen = lazy(() => import('../games/FishingGameScreen.tsx'));
 const RoomCleaningGameScreen = lazy(() => import('../games/RoomCleaningGameScreen.tsx'));
-const TargetShootingGameScreen = lazy(() => import('../games/TargetShootingGameScreen.tsx'));
 const TrainTrackGameScreen = lazy(() => import('../games/TrainTrackGameScreen.tsx'));
-const MergeDropGameScreen = lazy(() => import('../games/MergeDropGameScreen.tsx'));
-const BalanceScaleGameScreen = lazy(() => import('../games/BalanceScaleGameScreen.tsx'));
 const MazeGameScreen = lazy(() => import('../games/MazeGameScreen.tsx'));
 const MemoryMatchGameScreen = lazy(() => import('../games/MemoryMatchGameScreen.tsx'));
-const OddOneOutGameScreen = lazy(() => import('../games/OddOneOutGameScreen.tsx'));
 const LetterBubblesGameScreen = lazy(() => import('../games/LetterBubblesGameScreen.tsx'));
 const DailyRoutineGameScreen = lazy(() => import('../games/DailyRoutineGameScreen.tsx'));
 const ConnectDotsGameScreen = lazy(() => import('../games/ConnectDotsGameScreen.tsx'));
@@ -95,19 +85,15 @@ const ColorSequenceGameScreen = lazy(() => import('../games/ColorSequenceGameScr
 const WhereBelongsGameScreen = lazy(() => import('../games/WhereBelongsGameScreen.tsx'));
 const SyllableTrainGameScreen = lazy(() => import('../games/SyllableTrainGameScreen.tsx'));
 const WordBoxGameScreen = lazy(() => import('../games/WordBoxGameScreen.tsx'));
-const WhoseIsThisGameScreen = lazy(() => import('../games/WhoseIsThisGameScreen.tsx'));
 
 // Mini oyun kimliği -> ekran durumu
 const MINI_GAME_SCREENS: Record<string, ScreenState> = {
-    butterflyGarden: ScreenState.ButterflyGardenGame,
     bubblePop: ScreenState.BubblePopGame,
     counting: ScreenState.CountingGame,
     sizeOrdering: ScreenState.SizeOrderingGame,
     shapeMatching: ScreenState.ShapeMatchingGame,
     shadowMatch: ScreenState.ShadowMatchGame,
-    colorMix: ScreenState.ColorMixGame,
     numberSequence: ScreenState.NumberSequenceGame,
-    balanceScale: ScreenState.BalanceScaleGame,
     letterBubbles: ScreenState.LetterBubblesGame,
     syllableTrain: ScreenState.SyllableTrainGame,
     wordBox: ScreenState.WordBoxGame,
@@ -115,23 +101,15 @@ const MINI_GAME_SCREENS: Record<string, ScreenState> = {
     plantGrowing: ScreenState.PlantGrowingGame,
     colorSequence: ScreenState.ColorSequenceGame,
     trainTrack: ScreenState.TrainTrackGame,
-    pattern: ScreenState.PatternGame,
     sheepShearing: ScreenState.SheepShearingGame,
     musicTouch: ScreenState.MusicTouchGame,
     memoryMatch: ScreenState.MemoryMatchGame,
-    oddOneOut: ScreenState.OddOneOutGame,
     whereBelongs: ScreenState.WhereBelongsGame,
-    whoseIsThis: ScreenState.WhoseIsThisGame,
     dailyRoutine: ScreenState.DailyRoutineGame,
     maze: ScreenState.MazeGame,
-    sevenDifferences: ScreenState.SevenDifferencesGame,
     puzzle: ScreenState.PuzzleGame,
     busJam: ScreenState.BusJamGame,
-    targetShooting: ScreenState.TargetShootingGame,
-    fishing: ScreenState.FishingGame,
-    emotionPuppet: ScreenState.EmotionPuppetGame,
     roomCleaning: ScreenState.RoomCleaningGame,
-    mergeDrop: ScreenState.MergeDropGame,
 };
 const ColorRecognitionScreen = lazy(() => import('../ColorRecognitionScreen.tsx'));
 const WhatsMissingScreen = lazy(() => import('../WhatsMissingScreen.tsx'));
@@ -951,26 +929,16 @@ export const AppRouter = () => {
             }}
         />;
         case ScreenState.ClockLearningGame: return <ClockLearningGameScreen onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} />;
-        case ScreenState.ButterflyGardenGame: return <ButterflyGardenScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.ShapeMatchingGame: return <ShapeMatchingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.MusicTouchGame: return <MusicTouchGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.EmotionPuppetGame: return <EmotionPuppetGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.PatternGame: return <PatternGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.ColorMixGame: return <ColorMixGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.SevenDifferencesGame: return <SevenDifferencesScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.SheepShearingGame: return <SheepGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.BubblePopGame: return <BubblePopGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.BusJamGame: return <BusJamGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.PuzzleGame: return <PuzzleGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.FishingGame: return <FishingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.RoomCleaningGame: return <RoomCleaningGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.TargetShootingGame: return <TargetShootingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.TrainTrackGame: return <TrainTrackGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.MergeDropGame: return <MergeDropGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.BalanceScaleGame: return <BalanceScaleGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.MazeGame: return <MazeGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.MemoryMatchGame: return <MemoryMatchGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.OddOneOutGame: return <OddOneOutGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.LetterBubblesGame: return <LetterBubblesGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.DailyRoutineGame: return <DailyRoutineGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.ConnectDotsGame: return <ConnectDotsGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
@@ -981,7 +949,6 @@ export const AppRouter = () => {
         case ScreenState.PlantGrowingGame: return <PlantGrowingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.ColorSequenceGame: return <ColorSequenceGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.WhereBelongsGame: return <WhereBelongsGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.WhoseIsThisGame: return <WhoseIsThisGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.SyllableTrainGame: return <SyllableTrainGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.WordBoxGame: return <WordBoxGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
 
