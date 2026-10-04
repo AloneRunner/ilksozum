@@ -1,11 +1,11 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
-import { sayInstruction, sayCorrect, sayFinished } from '../../utils/gameVoice.ts';
-import { getMutedState } from '../../services/speechService.ts';
+import { getMutedState, speak, cancelSpeech } from '../../services/speechService.ts';
 
 // Renk Sırası (Kaan'ın önerisi): 4 renkli oyuncaktaki gibi önce 1 renk yanar, çocuk aynısına basar;
 // sonra 2 renk, 3 renk... Otizmli çocuklar için uyarlandı:
 // - Süre baskısı yok; gösterim yavaş, istenirse renk adları söylenir.
+// - Konuşma ile renk gösterimi üst üste binmez: önce konuşma biter, sonra renkler yanar (Kaan).
 // - Yanlışta oyun bitmez: doğru düğme gösterilir ve aynı sıra tekrar oynatılır.
 // - 3 kez üst üste olmazsa sıra bir kısalır. Hedef uzunluğa ulaşınca oyun biter (sonsuz değil).
 
@@ -46,12 +46,15 @@ const SAYILAR = ['', 'bir', 'iki', 'üç', 'dört', 'beş', 'altı', 'yedi', 'se
 type Faz = 'menu' | 'izle' | 'oyna' | 'bitti';
 
 const wait = (ms: number) => new Promise(r => setTimeout(r, ms));
+const OVGU = ['Aferin!', 'Harika!', 'Süper!', 'Bravo!'];
+// Konuşmanın bitmesini bekle (TTS takılırsa en fazla 4 sn)
+const konus = (metin: string) => Promise.race([speak(metin).catch(() => { /* yoksay */ }), wait(4000)]);
 
 const ColorSequenceGameScreen: React.FC<ColorSequenceGameScreenProps> = ({ onBack }) => {
     const [faz, setFaz] = useState<Faz>('menu');
     const [hedef, setHedef] = useState(3);
     const [hiz, setHiz] = useState<Hiz>('yavas');
-    const [renkSoyle, setRenkSoyle] = useState(true);
+    const [renkSoyle, setRenkSoyle] = useState(false);
     const [sira, setSira] = useState<number[]>([]);
     const [adim, setAdim] = useState(0);            // çocuğun kaçıncı basışı
     const [yanan, setYanan] = useState<number | null>(null);
@@ -65,6 +68,7 @@ const ColorSequenceGameScreen: React.FC<ColorSequenceGameScreenProps> = ({ onBac
 
     useEffect(() => () => {
         runRef.current++;
+        cancelSpeech().catch(() => { /* yoksay */ });
         ctxRef.current?.close().catch(() => { /* yoksay */ });
     }, []);
 
@@ -91,29 +95,34 @@ const ColorSequenceGameScreen: React.FC<ColorSequenceGameScreenProps> = ({ onBac
         [523.25, 659.25, 783.99, 1046.5].forEach((f, i) => setTimeout(() => ton(f, 0.25), i * 110));
     }, [ton]);
 
-    // Sırayı göster: her renk yanar, ton çalar, istenirse adı söylenir
-    const goster = useCallback(async (dizi: number[]) => {
+    // Sırayı göster. Önce kısa "Bak." biter, sonra renkler yanar.
+    // Renk adı açıksa: renk yanar, adı söylenir (ton çalmaz, üst üste binmesin), bitince söner.
+    const goster = useCallback(async (dizi: number[], onSoz = 'Bak.') => {
         const run = ++runRef.current;
         const h = HIZLAR[hiz];
         setFaz('izle');
         setAdim(0);
         setIpucu(null);
-        setMesaj('Bak ve dinle');
-        sayInstruction(dizi.length === 1 ? 'Bak.' : `Bak. ${SAYILAR[dizi.length] ?? dizi.length} renk.`);
-        await wait(1200);
+        setMesaj('Bak');
+        if (onSoz) await konus(onSoz);
+        await wait(400);
         for (const id of dizi) {
             if (run !== runRef.current) return;
             setYanan(id);
-            ton(PADS[id].freq, h.yanma / 1000);
-            if (renkSoyle) sayInstruction(PADS[id].name);
-            await wait(h.yanma);
+            if (renkSoyle) {
+                await konus(PADS[id].name);
+            } else {
+                ton(PADS[id].freq, h.yanma / 1000);
+                await wait(h.yanma);
+            }
+            if (run !== runRef.current) return;
             setYanan(null);
             await wait(h.ara);
         }
         if (run !== runRef.current) return;
+        // "Sıra sende" yazıyla gösterilir; konuşma yok, çocuk hemen basabilir
         setFaz('oyna');
         setMesaj('Sıra sende');
-        sayInstruction('Şimdi sen bas.');
     }, [hiz, renkSoyle, ton]);
 
     const yeniRenk = (dizi: number[]) => {
@@ -148,7 +157,6 @@ const ColorSequenceGameScreen: React.FC<ColorSequenceGameScreenProps> = ({ onBac
             setFaz('izle');
             setIpucu(dogru);
             setMesaj('Bak, bu renkti');
-            sayInstruction(`Bak, ${PADS[dogru].name}.`);
             let dizi = sira;
             if (hataRef.current >= 3 && sira.length > 1) {
                 // Üç kez olmadı: bir kısalt, başarı yaşasın
@@ -156,7 +164,15 @@ const ColorSequenceGameScreen: React.FC<ColorSequenceGameScreenProps> = ({ onBac
                 hataRef.current = 0;
                 setSira(dizi);
             }
-            setTimeout(() => { setIpucu(null); goster(dizi); }, h.yanma * 2 + 900);
+            const run = ++runRef.current;
+            (async () => {
+                await wait(400); // basılan tonun bitmesini bekle
+                await konus(`Bu renkti: ${PADS[dogru].name}.`);
+                await wait(h.ara);
+                if (run !== runRef.current) return;
+                setIpucu(null);
+                goster(dizi, 'Bir daha bak.');
+            })();
             return;
         }
 
@@ -169,22 +185,37 @@ const ColorSequenceGameScreen: React.FC<ColorSequenceGameScreenProps> = ({ onBac
         hataRef.current = 0;
         setEnUzun(e => Math.max(e, sira.length));
         setFaz('izle');
+        const run = ++runRef.current;
         if (sira.length >= hedef) {
-            kutlamaSesi();
-            sayFinished(`Harika! ${SAYILAR[sira.length] ?? sira.length} rengi sırayla bastın!`);
-            setTimeout(() => setFaz('bitti'), 1200);
+            setFaz('bitti');
+            (async () => {
+                await wait(400);
+                kutlamaSesi();
+                await wait(700);
+                if (run !== runRef.current) return;
+                await konus(`Harika! ${SAYILAR[sira.length] ?? sira.length} rengi sırayla bastın!`);
+            })();
             return;
         }
-        kutlamaSesi();
-        sayCorrect();
         setMesaj('Aferin!');
         const yeni = [...sira, yeniRenk(sira)];
         setSira(yeni);
-        setTimeout(() => goster(yeni), 1700);
+        (async () => {
+            // Kutlama tonu → övgü → (bitince) yeni sıra. Hiçbiri üst üste binmez.
+            await wait(400);
+            kutlamaSesi();
+            await wait(700);
+            if (run !== runRef.current) return;
+            await konus(OVGU[Math.floor(Math.random() * OVGU.length)]);
+            await wait(300);
+            if (run !== runRef.current) return;
+            goster(yeni, '');
+        })();
     }, [faz, hiz, sira, adim, hedef, goster, ton, kutlamaSesi]);
 
     const menuyeDon = () => {
         runRef.current++;
+        cancelSpeech().catch(() => { /* yoksay */ });
         setFaz('menu');
         setSira([]);
         setYanan(null);

@@ -66,12 +66,12 @@ export const setMutedState = (muted: boolean) => {
     }
 };
 
-/**
- * Stops any currently playing or pending speech.
- */
 /** Oyunların kendi ürettiği sesler (Web Audio) de sessiz ayarına uysun diye. */
 export const getMutedState = (): boolean => isMuted;
 
+/**
+ * Stops any currently playing or pending speech.
+ */
 export const cancelSpeech = async () => {
     if (Capacitor.isNativePlatform()) {
         try {
