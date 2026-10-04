@@ -35,7 +35,7 @@ if (fs.existsSync(klasor)) {
 }
 // 2) Kavram turlarından yeniden kullanılanlar (kaynak dosyası zaten yeni-gorseller.json'da kayıtlı olmalı)
 const esleme = fs.existsSync(ESLEME) ? JSON.parse(fs.readFileSync(ESLEME, 'utf8')) : {};
-const kaynaktanId = Object.fromEntries(liste.gorseller.map(g => [g.kaynak, g.id]));
+const kaynaktanId = Object.fromEntries([...liste.gorseller, ...yeni].map(g => [g.kaynak, g.id]));
 for (const [eskiId, deger] of Object.entries(esleme)) {
   if (harita[eskiId]) continue; // kendi yeni görseli varsa o öncelikli
   const kaynak = typeof deger === 'string' ? deger : deger.kaynak;
