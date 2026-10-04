@@ -58,7 +58,7 @@ const LetterSelectionForTracingScreen: React.FC<LetterSelectionForTracingScreenP
 
         <div className="grid grid-cols-5 sm:grid-cols-7 gap-3 max-w-4xl mx-auto">
           {letters.map((letter) => {
-            const displayLetter = isUpperCase ? letter : letter.toLowerCase();
+            const displayLetter = isUpperCase ? letter : letter.toLocaleLowerCase('tr-TR');
             return (
               <button
                 key={letter}
