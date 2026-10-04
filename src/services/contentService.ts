@@ -1608,7 +1608,7 @@ export const fetchConceptActivityData = async (
     ) {
         const rounds: any[] = [];
         // LineTracing: 6 çizgi tipi var, ShapeColoring: 6 şekil var
-        const numRounds = count || (activity === ActivityType.LineTracing ? 6 : 4);
+        const numRounds = count || ((activity === ActivityType.LineTracing || activity === ActivityType.ShapeColoring) ? 6 : 4);
         for (let i = 0; i < numRounds; i++) rounds.push({ id: i, activityType: activity });
         return rounds;
     }

@@ -43,7 +43,6 @@ const ShapeColoringScreen: React.FC<ShapeColoringScreenProps> = ({ currentCard, 
   // Eğer totalCards < 6 ise, sadece ilk totalCards şekli gösterilsin
   // Örneğin totalCards=2 ise, sadece circle ve square
   // currentCard > totalCards ise, ilerleme durmalı
-  if (currentCard > totalCards) return null;
 
   const drawScene = () => {
     const canvas = canvasRef.current;
@@ -161,7 +160,6 @@ const ShapeColoringScreen: React.FC<ShapeColoringScreenProps> = ({ currentCard, 
 
   useEffect(() => {
     // Her şekil değiştiğinde progress ve painted cells'i sıfırla
-    console.log('ShapeColoringScreen: currentCard =', currentCard, 'totalCards =', totalCards, 'shape =', shape);
     setProgress(0);
     setIsAdvancing(false); // Yeni tur başladığında bayrağı sıfırla
     paintedCellsRef.current.clear();
@@ -253,18 +251,19 @@ const ShapeColoringScreen: React.FC<ShapeColoringScreenProps> = ({ currentCard, 
       const pct = covered / total;
       const minCells = Math.max(10, Math.floor(total * 0.05)); // en az %5 ya da 10 hücre
       if (pct >= 0.65 && covered >= minCells && !isAdvancing) {
-        console.log('ShapeColoringScreen: Boyama tamamlandı! currentCard =', currentCard, 'totalCards =', totalCards);
         setIsAdvancing(true); // Bayrak set et, tekrar çağrılmasını engelle
         // Her turda (son tur dahil) onAdvance çağrılmalı
         // Başarı efekti ve delay ekleyelim
         playEffect('correct');
         setTimeout(() => { 
-          console.log('ShapeColoringScreen: onAdvance çağrılıyor...');
           void onAdvance(true); 
         }, 800);
       }
     }
   };
+
+  // Hook kuralı: erken dönüş tüm hook'lardan sonra olmalı
+  if (currentCard > totalCards) return null;
 
   return (
     <div className="flex flex-col h-full w-full overflow-hidden bg-gradient-to-br from-pink-500 via-rose-500 to-orange-400 landscape:flex-row">

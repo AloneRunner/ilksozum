@@ -47,7 +47,6 @@ const ConstrainedColoringScreen: React.FC<ConstrainedColoringScreenProps> = ({ c
   const isCompletedRef = useRef(false);
 
   const regions: RegionKey[] = useMemo(() => ['sun', 'cloud1', 'cloud2', 'grass', 'house', 'roof', 'door', 'window'], []);
-  if (currentCard > totalCards) return null;
 
   // Reset completion state when card changes
   useEffect(() => {
@@ -249,6 +248,9 @@ const ConstrainedColoringScreen: React.FC<ConstrainedColoringScreenProps> = ({ c
       }, 600);
     }
   };
+
+  // Hook kuralı: erken dönüş tüm hook'lardan sonra olmalı
+  if (currentCard > totalCards) return null;
 
   return (
     <div className="flex flex-col h-full w-full bg-gradient-to-br from-sky-500 via-blue-500 to-indigo-600">
