@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { nesneUrl } from '../services/nesneGorsel.ts';
 import { DragAndDropCountingRound } from '../types.ts';
 import Card from './ui/Card.tsx';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
@@ -119,7 +120,7 @@ const DragAndDropCountingScreen: React.FC<DragAndDropCountingScreenProps> = ({
                        <BasketIcon className="w-20 h-20 landscape:w-16 landscape:h-16 text-amber-600 opacity-50"/>
                        <div className="absolute inset-0 flex flex-wrap items-start justify-center p-3 landscape:p-2 gap-1.5 landscape:gap-1 overflow-hidden">
                            {[...Array(count)].map((_, i) => (
-                               <img key={i} src={roundData.itemToDrag.imageUrl} alt="" className="w-9 h-9 landscape:w-7 landscape:h-7 animate-pop-in"/>
+                               <img key={i} src={nesneUrl(roundData.itemToDrag.imageUrl)} alt="" className="w-9 h-9 landscape:w-7 landscape:h-7 animate-pop-in"/>
                            ))}
                        </div>
                        <div className="absolute bottom-2 right-3 w-14 h-14 landscape:w-12 landscape:h-12 bg-white rounded-full flex items-center justify-center text-3xl landscape:text-2xl font-bold text-lime-800 shadow-lg">

@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { nesneUrl } from '../../services/nesneGorsel.ts';
 import { ConceptRound } from '../../types.ts';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
 import PrintIcon from '../icons/PrintIcon.tsx';
@@ -121,7 +122,7 @@ const WhoseIsThisWorksheetPreview: React.FC<Props> = ({ rounds, onBack }) => {
                   {/* Question item (the object) */}
                   {round.questionItem && (
                     <div className="flex items-center justify-center rounded-lg bg-indigo-50 border border-indigo-200" style={{ width: itemH, height: itemH }}>
-                      <img src={round.questionItem.imageUrl} alt={round.questionItem.word}
+                      <img src={nesneUrl(round.questionItem.imageUrl)} alt={round.questionItem.word}
                         className="object-contain p-1"
                         style={{ maxHeight: itemH - 8, maxWidth: itemH - 8 }} />
                     </div>
@@ -134,7 +135,7 @@ const WhoseIsThisWorksheetPreview: React.FC<Props> = ({ rounds, onBack }) => {
                     {[left, right].map((opt, side) => (
                       <div key={`${opt.id}-${side}`} className="flex flex-col items-center gap-1.5 flex-1">
                         <div className="flex items-center justify-center rounded-lg bg-slate-50 border border-slate-200" style={{ height: optH, width: '100%' }}>
-                          <img src={opt.imageUrl} alt={opt.word} className="object-contain p-1"
+                          <img src={nesneUrl(opt.imageUrl)} alt={opt.word} className="object-contain p-1"
                             style={{ maxHeight: optH - 8, maxWidth: '90%' }} />
                         </div>
                         <div className={`rounded-full border-[1.5px] border-slate-400 ${cols === 2 ? 'w-5 h-5' : 'w-4 h-4'}`} />

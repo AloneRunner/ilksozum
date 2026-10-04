@@ -1,0 +1,4949 @@
+{
+  "kategoriler": {
+    "Taşıtlar": [
+      {
+        "id": 1,
+        "word": "araba",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/1.png",
+        "color": "kırmızı",
+        "aday": [
+          {
+            "id": 3102,
+            "kaynak": "kirik-saglam/araba-saglam.jpg"
+          },
+          {
+            "id": 3202,
+            "kaynak": "temiz-kirli/araba-temiz.jpg"
+          },
+          {
+            "id": 3402,
+            "kaynak": "eski-yeni/araba-yeni.jpg"
+          },
+          {
+            "id": 3901,
+            "kaynak": "parlak-mat/araba-mat.jpg"
+          },
+          {
+            "id": 6601,
+            "kaynak": "acik-koyu/araba-acik.jpg"
+          },
+          {
+            "id": 6602,
+            "kaynak": "acik-koyu/araba-koyu.jpg"
+          }
+        ]
+      },
+      {
+        "id": 105,
+        "word": "okul otobüsü",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/105.png",
+        "color": "sarı",
+        "aday": []
+      },
+      {
+        "id": 106,
+        "word": "tren",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/106.png",
+        "aday": []
+      },
+      {
+        "id": 107,
+        "word": "uçak",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/107.png",
+        "color": "beyaz",
+        "aday": []
+      },
+      {
+        "id": 110,
+        "word": "bisiklet",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/110.png",
+        "aday": [
+          {
+            "id": 3408,
+            "kaynak": "eski-yeni/bisiklet-yeni.jpg"
+          }
+        ]
+      },
+      {
+        "id": 162,
+        "word": "helikopter",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/162.png",
+        "color": "yeşil",
+        "aday": []
+      },
+      {
+        "id": 204,
+        "word": "roket",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/204.png",
+        "color": "beyaz",
+        "aday": []
+      },
+      {
+        "id": 256,
+        "word": "itfaiye aracı",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/256.png",
+        "aday": []
+      },
+      {
+        "id": 257,
+        "word": "ambulans",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/257.png",
+        "aday": []
+      },
+      {
+        "id": 258,
+        "word": "polis arabası",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/258.png",
+        "aday": []
+      },
+      {
+        "id": 259,
+        "word": "motosiklet",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/259.png",
+        "color": "siyah",
+        "aday": []
+      },
+      {
+        "id": 288,
+        "word": "kamyon",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/288.png",
+        "aday": []
+      },
+      {
+        "id": 289,
+        "word": "traktör",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/289.png",
+        "aday": []
+      },
+      {
+        "id": 337,
+        "word": "denizaltı",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/337.png",
+        "color": "sarı",
+        "aday": []
+      },
+      {
+        "id": 338,
+        "word": "vinç",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/338.png",
+        "color": "sarı",
+        "aday": []
+      },
+      {
+        "id": 375,
+        "word": "yelkenli",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/375.png",
+        "aday": []
+      },
+      {
+        "id": 381,
+        "word": "uzay mekiği",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/381.png",
+        "aday": []
+      },
+      {
+        "id": 493,
+        "word": "sandal",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/493.png",
+        "aday": []
+      },
+      {
+        "id": 538,
+        "word": "sıcak hava balonu",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/538.png",
+        "color": "çok renkli",
+        "aday": []
+      },
+      {
+        "id": 615,
+        "word": "uçak",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/615.png",
+        "aday": []
+      },
+      {
+        "id": 621,
+        "word": "gemi",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/621.png",
+        "aday": []
+      },
+      {
+        "id": 670,
+        "word": "araba lastiği",
+        "category": "Taşıtlar",
+        "imageUrl": "/images/670.png",
+        "aday": []
+      }
+    ],
+    "Ev Eşyaları": [
+      {
+        "id": 5,
+        "word": "kutu",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/5.png",
+        "aday": [
+          {
+            "id": 2313,
+            "kaynak": "buyuk-kucuk/kutu-buyuk.jpg"
+          },
+          {
+            "id": 3013,
+            "kaynak": "acik-kapali/kutu-acik.jpg"
+          },
+          {
+            "id": 3014,
+            "kaynak": "acik-kapali/kutu-kapali.jpg"
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "word": "valiz",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/31.png",
+        "color": "mavi",
+        "aday": []
+      },
+      {
+        "id": 34,
+        "word": "vazo",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/34.png",
+        "color": "mavi",
+        "aday": [
+          {
+            "id": 3917,
+            "kaynak": "parlak-mat/vazo-mat.jpg"
+          },
+          {
+            "id": 4015,
+            "kaynak": "seffaf-opak/vazo-opak.jpg"
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "word": "kapı",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/39.png",
+        "color": "kahverengi",
+        "aday": [
+          {
+            "id": 3007,
+            "kaynak": "acik-kapali/kapi-acik.jpg"
+          },
+          {
+            "id": 3008,
+            "kaynak": "acik-kapali/kapi-kapali.jpg"
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "word": "çöp kutusu",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/45.png",
+        "aday": []
+      },
+      {
+        "id": 74,
+        "word": "el feneri",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/74.png",
+        "color": "sarı",
+        "aday": []
+      },
+      {
+        "id": 81,
+        "word": "pencere",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/81.png",
+        "aday": [
+          {
+            "id": 3017,
+            "kaynak": "acik-kapali/pencere-acik.jpg"
+          },
+          {
+            "id": 3018,
+            "kaynak": "acik-kapali/pencere-kapali.jpg"
+          }
+        ]
+      },
+      {
+        "id": 89,
+        "word": "vantilatör",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/89.png",
+        "aday": []
+      },
+      {
+        "id": 95,
+        "word": "jakuzi",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/95.png",
+        "aday": []
+      },
+      {
+        "id": 96,
+        "word": "sandalye",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/96.png",
+        "aday": [
+          {
+            "id": 3116,
+            "kaynak": "kirik-saglam/sandalye-saglam.jpg"
+          },
+          {
+            "id": 5717,
+            "kaynak": "ters-duz/sandalye-duz.jpg"
+          }
+        ]
+      },
+      {
+        "id": 118,
+        "word": "saat",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/118.png",
+        "aday": []
+      },
+      {
+        "id": 124,
+        "word": "bardak",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/124.png",
+        "aday": [
+          {
+            "id": 2604,
+            "kaynak": "dolu-bos/bardak-dolu.jpg"
+          },
+          {
+            "id": 3208,
+            "kaynak": "temiz-kirli/bardak-temiz.jpg"
+          },
+          {
+            "id": 4002,
+            "kaynak": "seffaf-opak/bardak-opak.jpg"
+          }
+        ]
+      },
+      {
+        "id": 134,
+        "word": "masa",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/134.png",
+        "aday": []
+      },
+      {
+        "id": 137,
+        "word": "yastık",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/137.png",
+        "aday": [
+          {
+            "id": 2320,
+            "kaynak": "buyuk-kucuk/yastik-buyuk.jpg"
+          },
+          {
+            "id": 6869,
+            "kaynak": "tehlikeli-guvenli/utu_yastik-guvenli.jpg"
+          }
+        ]
+      },
+      {
+        "id": 142,
+        "word": "anahtar",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/142.png",
+        "aday": []
+      },
+      {
+        "id": 148,
+        "word": "ayna",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/148.png",
+        "color": "pembe",
+        "aday": []
+      },
+      {
+        "id": 161,
+        "word": "televizyon",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/161.png",
+        "aday": []
+      },
+      {
+        "id": 166,
+        "word": "sünger",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/166.webp",
+        "aday": [
+          {
+            "id": 3311,
+            "kaynak": "islak-kuru/sunger-kuru.jpg"
+          }
+        ]
+      },
+      {
+        "id": 169,
+        "word": "çamaşır makinesi",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/169.png",
+        "aday": []
+      },
+      {
+        "id": 201,
+        "word": "hazine sandığı",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/201.png",
+        "aday": []
+      },
+      {
+        "id": 209,
+        "word": "sabun",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/209.png",
+        "color": "pembe",
+        "aday": []
+      },
+      {
+        "id": 210,
+        "word": "oyun halısı",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/210.png",
+        "color": "çok renkli",
+        "aday": []
+      },
+      {
+        "id": 211,
+        "word": "krem",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/211.png",
+        "aday": []
+      },
+      {
+        "id": 246,
+        "word": "gazete",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/246.png",
+        "aday": []
+      },
+      {
+        "id": 250,
+        "word": "soba",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/250.png",
+        "aday": []
+      },
+      {
+        "id": 251,
+        "word": "buzdolabı",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/251.png",
+        "color": "gri",
+        "aday": []
+      },
+      {
+        "id": 282,
+        "word": "gece lambası",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/282.png",
+        "aday": []
+      },
+      {
+        "id": 283,
+        "word": "perde",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/283.png",
+        "aday": []
+      },
+      {
+        "id": 301,
+        "word": "bulaşık makinesi",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/301.png",
+        "color": "gri",
+        "aday": []
+      },
+      {
+        "id": 302,
+        "word": "fırın",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/302.png",
+        "aday": []
+      },
+      {
+        "id": 303,
+        "word": "musluk",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/303.png",
+        "aday": [
+          {
+            "id": 3015,
+            "kaynak": "acik-kapali/musluk-acik.jpg"
+          },
+          {
+            "id": 3016,
+            "kaynak": "acik-kapali/musluk-kapali.jpg"
+          }
+        ]
+      },
+      {
+        "id": 305,
+        "word": "ütü",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/305.png",
+        "aday": []
+      },
+      {
+        "id": 310,
+        "word": "akvaryum",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/310.png",
+        "aday": [
+          {
+            "id": 2602,
+            "kaynak": "dolu-bos/akvaryum-dolu.jpg"
+          }
+        ]
+      },
+      {
+        "id": 315,
+        "word": "mikroskop",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/315.png",
+        "color": "çok renkli",
+        "aday": []
+      },
+      {
+        "id": 339,
+        "word": "elbise dolabı",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/339.png",
+        "color": "kahverengi",
+        "aday": []
+      },
+      {
+        "id": 340,
+        "word": "priz",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/340.png",
+        "color": "beyaz",
+        "aday": []
+      },
+      {
+        "id": 341,
+        "word": "paspas",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/341.png",
+        "color": "gri",
+        "aday": []
+      },
+      {
+        "id": 352,
+        "word": "masa",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/352.png",
+        "aday": []
+      },
+      {
+        "id": 353,
+        "word": "bilgisayar faresi",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/353.png",
+        "aday": []
+      },
+      {
+        "id": 354,
+        "word": "klavye",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/354.png",
+        "aday": []
+      },
+      {
+        "id": 355,
+        "word": "kulaklık",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/355.png",
+        "aday": []
+      },
+      {
+        "id": 361,
+        "word": "vantilatör",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/361.png",
+        "aday": []
+      },
+      {
+        "id": 371,
+        "word": "biberon",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/371.png",
+        "aday": []
+      },
+      {
+        "id": 384,
+        "word": "şömine",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/384.png",
+        "aday": []
+      },
+      {
+        "id": 398,
+        "word": "mandal",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/398.png",
+        "aday": []
+      },
+      {
+        "id": 399,
+        "word": "fıskiye",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/399.png",
+        "aday": []
+      },
+      {
+        "id": 422,
+        "word": "tuvalet",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/422.png",
+        "aday": []
+      },
+      {
+        "id": 423,
+        "word": "lavabo",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/423.png",
+        "aday": []
+      },
+      {
+        "id": 424,
+        "word": "küvet",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/424.png",
+        "aday": []
+      },
+      {
+        "id": 425,
+        "word": "diş macunu",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/425.png",
+        "aday": []
+      },
+      {
+        "id": 426,
+        "word": "şampuan",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/426.png",
+        "aday": []
+      },
+      {
+        "id": 431,
+        "word": "posta kutusu",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/431.png",
+        "color": "kırmızı",
+        "aday": []
+      },
+      {
+        "id": 432,
+        "word": "saksı",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/432.png",
+        "aday": [
+          {
+            "id": 3114,
+            "kaynak": "kirik-saglam/saksi-saglam.jpg"
+          },
+          {
+            "id": 5715,
+            "kaynak": "ters-duz/saksi-duz.jpg"
+          }
+        ]
+      },
+      {
+        "id": 437,
+        "word": "baston",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/437.png",
+        "aday": []
+      },
+      {
+        "id": 438,
+        "word": "halı",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/438.png",
+        "aday": []
+      },
+      {
+        "id": 441,
+        "word": "diş fırçası",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/441.png",
+        "aday": []
+      },
+      {
+        "id": 447,
+        "word": "kavanoz",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/447.png",
+        "aday": [
+          {
+            "id": 2608,
+            "kaynak": "dolu-bos/kavanoz-dolu.jpg"
+          },
+          {
+            "id": 3009,
+            "kaynak": "acik-kapali/kavanoz-acik.jpg"
+          },
+          {
+            "id": 3010,
+            "kaynak": "acik-kapali/kavanoz-kapali.jpg"
+          },
+          {
+            "id": 4005,
+            "kaynak": "seffaf-opak/kavanoz-opak.jpg"
+          }
+        ]
+      },
+      {
+        "id": 449,
+        "word": "sepet",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/449.png",
+        "aday": [
+          {
+            "id": 2618,
+            "kaynak": "dolu-bos/sepet-dolu.jpg"
+          }
+        ]
+      },
+      {
+        "id": 548,
+        "word": "koltuk",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/548.png",
+        "color": "gri",
+        "aday": []
+      },
+      {
+        "id": 593,
+        "word": "pencere",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/593.png",
+        "aday": [
+          {
+            "id": 3017,
+            "kaynak": "acik-kapali/pencere-acik.jpg"
+          },
+          {
+            "id": 3018,
+            "kaynak": "acik-kapali/pencere-kapali.jpg"
+          }
+        ]
+      },
+      {
+        "id": 595,
+        "word": "kapı",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/595.png",
+        "aday": [
+          {
+            "id": 3007,
+            "kaynak": "acik-kapali/kapi-acik.jpg"
+          },
+          {
+            "id": 3008,
+            "kaynak": "acik-kapali/kapi-kapali.jpg"
+          }
+        ]
+      },
+      {
+        "id": 606,
+        "word": "yatak",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/606.png",
+        "aday": []
+      },
+      {
+        "id": 610,
+        "word": "raf",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/610.png",
+        "aday": []
+      },
+      {
+        "id": 669,
+        "word": "tahta",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/669.png",
+        "aday": []
+      },
+      {
+        "id": 685,
+        "word": "konserve kutusu",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/685.png",
+        "aday": []
+      },
+      {
+        "id": 688,
+        "word": "dosya",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/688.png",
+        "aday": []
+      },
+      {
+        "id": 693,
+        "word": "dikenli tel",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/693.png",
+        "aday": []
+      },
+      {
+        "id": 705,
+        "word": "monitör",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/705.png",
+        "aday": []
+      },
+      {
+        "id": 708,
+        "word": "klima",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/708.png",
+        "aday": []
+      },
+      {
+        "id": 710,
+        "word": "anten",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/710.png",
+        "aday": []
+      },
+      {
+        "id": 794,
+        "word": "sıvı sabun",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/794.png",
+        "aday": []
+      },
+      {
+        "id": 797,
+        "word": "temizlik kovası",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/797.png",
+        "aday": []
+      },
+      {
+        "id": 798,
+        "word": "lazımlık",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/798.png",
+        "aday": []
+      },
+      {
+        "id": 799,
+        "word": "sifon",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/799.png",
+        "aday": []
+      },
+      {
+        "id": 814,
+        "word": "su şişesi",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/814.png",
+        "aday": [
+          {
+            "id": 6865,
+            "kaynak": "tehlikeli-guvenli/sprey_subisesi-guvenli.jpg"
+          }
+        ]
+      },
+      {
+        "id": 815,
+        "word": "tuvalet kağıdı",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/815.png",
+        "aday": []
+      },
+      {
+        "id": 816,
+        "word": "havlu",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/816.png",
+        "aday": [
+          {
+            "id": 3304,
+            "kaynak": "islak-kuru/havlu-kuru.jpg"
+          }
+        ]
+      },
+      {
+        "id": 842,
+        "word": "fincan",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/842.png",
+        "aday": [
+          {
+            "id": 3106,
+            "kaynak": "kirik-saglam/fincan-saglam.jpg"
+          },
+          {
+            "id": 5707,
+            "kaynak": "ters-duz/fincan-duz.jpg"
+          }
+        ]
+      },
+      {
+        "id": 843,
+        "word": "saat",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/843.png",
+        "aday": []
+      },
+      {
+        "id": 844,
+        "word": "saat",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/844.png",
+        "aday": []
+      },
+      {
+        "id": 855,
+        "word": "ıslak mendil",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/855.png",
+        "aday": []
+      },
+      {
+        "id": 856,
+        "word": "tarak",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/856.png",
+        "aday": []
+      },
+      {
+        "id": 859,
+        "word": "tartı",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/859.png",
+        "aday": []
+      },
+      {
+        "id": 871,
+        "word": "yara bandı",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/871.png",
+        "aday": []
+      },
+      {
+        "id": 874,
+        "word": "lif",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/874.png",
+        "aday": []
+      },
+      {
+        "id": 884,
+        "word": "bilgisayar",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/884.png",
+        "aday": []
+      },
+      {
+        "id": 887,
+        "word": "led ampul",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/887.png",
+        "aday": []
+      },
+      {
+        "id": 892,
+        "word": "akıllı televizyon",
+        "category": "Ev Eşyaları",
+        "imageUrl": "/images/892.png",
+        "aday": []
+      }
+    ],
+    "Bitkiler": [
+      {
+        "id": 10,
+        "word": "ağaç",
+        "category": "Bitkiler",
+        "imageUrl": "/images/10.png",
+        "color": "yeşil",
+        "aday": []
+      },
+      {
+        "id": 27,
+        "word": "pamuk",
+        "category": "Bitkiler",
+        "imageUrl": "/images/27.png",
+        "color": "beyaz",
+        "aday": [
+          {
+            "id": 6853,
+            "kaynak": "tehlikeli-guvenli/igne_pamuk-guvenli.jpg"
+          }
+        ]
+      },
+      {
+        "id": 57,
+        "word": "lale",
+        "category": "Bitkiler",
+        "imageUrl": "/images/57.png",
+        "color": "pembe",
+        "aday": []
+      },
+      {
+        "id": 76,
+        "word": "papatya",
+        "category": "Bitkiler",
+        "imageUrl": "/images/76.png",
+        "color": "beyaz",
+        "aday": []
+      },
+      {
+        "id": 163,
+        "word": "bitki",
+        "category": "Bitkiler",
+        "imageUrl": "/images/163.png",
+        "aday": []
+      },
+      {
+        "id": 281,
+        "word": "kaktüs",
+        "category": "Bitkiler",
+        "imageUrl": "/images/281.png",
+        "aday": []
+      },
+      {
+        "id": 309,
+        "word": "gül",
+        "category": "Bitkiler",
+        "imageUrl": "/images/309.png",
+        "color": "kırmızı",
+        "aday": []
+      },
+      {
+        "id": 316,
+        "word": "tohum",
+        "category": "Bitkiler",
+        "imageUrl": "/images/316.png",
+        "aday": []
+      },
+      {
+        "id": 317,
+        "word": "filiz",
+        "category": "Bitkiler",
+        "imageUrl": "/images/317.png",
+        "aday": []
+      },
+      {
+        "id": 346,
+        "word": "gül dalı",
+        "category": "Bitkiler",
+        "imageUrl": "/images/346.png",
+        "aday": []
+      },
+      {
+        "id": 374,
+        "word": "menekşe",
+        "category": "Bitkiler",
+        "imageUrl": "/images/374.png",
+        "color": "mor",
+        "aday": []
+      },
+      {
+        "id": 434,
+        "word": "çim",
+        "category": "Bitkiler",
+        "imageUrl": "/images/434.png",
+        "color": "yeşil",
+        "aday": []
+      },
+      {
+        "id": 443,
+        "word": "çiçek",
+        "category": "Bitkiler",
+        "imageUrl": "/images/443.png",
+        "aday": [
+          {
+            "id": 3003,
+            "kaynak": "acik-kapali/cicek-acik.jpg"
+          },
+          {
+            "id": 3004,
+            "kaynak": "acik-kapali/cicek-kapali.jpg"
+          }
+        ]
+      },
+      {
+        "id": 444,
+        "word": "palmiye ağacı",
+        "category": "Bitkiler",
+        "imageUrl": "/images/444.png",
+        "aday": []
+      },
+      {
+        "id": 536,
+        "word": "dal",
+        "category": "Bitkiler",
+        "imageUrl": "/images/536.png",
+        "aday": []
+      },
+      {
+        "id": 585,
+        "word": "tomurcuk",
+        "category": "Bitkiler",
+        "imageUrl": "/images/585.png",
+        "aday": []
+      },
+      {
+        "id": 609,
+        "word": "ağaç",
+        "category": "Bitkiler",
+        "imageUrl": "/images/609.png",
+        "aday": []
+      },
+      {
+        "id": 647,
+        "word": "yaprak",
+        "category": "Bitkiler",
+        "imageUrl": "/images/647.png",
+        "aday": [
+          {
+            "id": 3317,
+            "kaynak": "islak-kuru/yaprak-kuru.jpg"
+          }
+        ]
+      },
+      {
+        "id": 885,
+        "word": "dal",
+        "category": "Bitkiler",
+        "imageUrl": "/images/885.png",
+        "aday": []
+      },
+      {
+        "id": 886,
+        "word": "kütük",
+        "category": "Bitkiler",
+        "imageUrl": "/images/886.png",
+        "aday": []
+      }
+    ],
+    "Doğal Yapılar & Uzay": [
+      {
+        "id": 11,
+        "word": "manzara",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/11.webp",
+        "color": "yeşil",
+        "aday": []
+      },
+      {
+        "id": 52,
+        "word": "yağmur",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/52.png",
+        "aday": []
+      },
+      {
+        "id": 61,
+        "word": "yol",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/61.png",
+        "color": "gri",
+        "aday": []
+      },
+      {
+        "id": 69,
+        "word": "yıldız",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/69.png",
+        "color": "turuncu",
+        "aday": []
+      },
+      {
+        "id": 141,
+        "word": "buz",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/141.png",
+        "aday": []
+      },
+      {
+        "id": 159,
+        "word": "gökkuşağı",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/159.png",
+        "color": "çok renkli",
+        "aday": []
+      },
+      {
+        "id": 195,
+        "word": "dağ",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/195.png",
+        "aday": []
+      },
+      {
+        "id": 196,
+        "word": "tepe",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/196.png",
+        "aday": []
+      },
+      {
+        "id": 205,
+        "word": "gezegen",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/205.png",
+        "aday": []
+      },
+      {
+        "id": 216,
+        "word": "şelale",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/216.png",
+        "aday": []
+      },
+      {
+        "id": 225,
+        "word": "deniz",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/225.png",
+        "aday": []
+      },
+      {
+        "id": 233,
+        "word": "volkan",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/233.png",
+        "aday": []
+      },
+      {
+        "id": 236,
+        "word": "bulut",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/236.png",
+        "color": "beyaz",
+        "aday": []
+      },
+      {
+        "id": 237,
+        "word": "güneş",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/237.png",
+        "color": "sarı",
+        "aday": []
+      },
+      {
+        "id": 239,
+        "word": "yıldız",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/239.png",
+        "color": "sarı",
+        "aday": []
+      },
+      {
+        "id": 243,
+        "word": "çöl",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/243.png",
+        "aday": []
+      },
+      {
+        "id": 342,
+        "word": "göl",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/342.png",
+        "aday": []
+      },
+      {
+        "id": 343,
+        "word": "nehir",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/343.png",
+        "aday": []
+      },
+      {
+        "id": 347,
+        "word": "taş",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/347.png",
+        "aday": []
+      },
+      {
+        "id": 379,
+        "word": "teleskop",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/379.png",
+        "aday": []
+      },
+      {
+        "id": 405,
+        "word": "kar",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/405.png",
+        "color": "beyaz",
+        "aday": []
+      },
+      {
+        "id": 406,
+        "word": "rüzgar",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/406.png",
+        "aday": []
+      },
+      {
+        "id": 407,
+        "word": "şimşek",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/407.png",
+        "aday": []
+      },
+      {
+        "id": 408,
+        "word": "göktaşı",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/408.png",
+        "aday": []
+      },
+      {
+        "id": 599,
+        "word": "yol",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/599.png",
+        "aday": []
+      },
+      {
+        "id": 603,
+        "word": "gökyüzü",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/603.png",
+        "aday": []
+      },
+      {
+        "id": 619,
+        "word": "ay",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/619.png",
+        "aday": []
+      },
+      {
+        "id": 643,
+        "word": "buzdağı",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/643.png",
+        "aday": []
+      },
+      {
+        "id": 696,
+        "word": "su",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/696.png",
+        "aday": []
+      },
+      {
+        "id": 698,
+        "word": "kuyu",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/698.png",
+        "aday": []
+      },
+      {
+        "id": 699,
+        "word": "su birikintisi",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/699.png",
+        "aday": []
+      },
+      {
+        "id": 707,
+        "word": "ateş",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/707.png",
+        "aday": []
+      },
+      {
+        "id": 728,
+        "word": "çukur",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/728.png",
+        "aday": []
+      },
+      {
+        "id": 729,
+        "word": "tümsek",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/729.png",
+        "aday": []
+      },
+      {
+        "id": 890,
+        "word": "yol",
+        "category": "Doğal Yapılar & Uzay",
+        "imageUrl": "/images/890.png",
+        "aday": []
+      }
+    ],
+    "Giysiler & Aksesuarlar": [
+      {
+        "id": 13,
+        "word": "tişört",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/13.png",
+        "color": "mavi",
+        "aday": [
+          {
+            "id": 3218,
+            "kaynak": "temiz-kirli/tisort-temiz.jpg"
+          },
+          {
+            "id": 3313,
+            "kaynak": "islak-kuru/tisort-kuru.jpg"
+          },
+          {
+            "id": 3420,
+            "kaynak": "eski-yeni/tisort-yeni.jpg"
+          },
+          {
+            "id": 4719,
+            "kaynak": "kirisik-duzgun/tisort-duzgun.jpg"
+          },
+          {
+            "id": 5729,
+            "kaynak": "ters-duz/tisort-duz.jpg"
+          },
+          {
+            "id": 6619,
+            "kaynak": "acik-koyu/tisort-acik.jpg"
+          },
+          {
+            "id": 6620,
+            "kaynak": "acik-koyu/tisort-koyu.jpg"
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "word": "düğme",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/30.png",
+        "color": "kırmızı",
+        "aday": []
+      },
+      {
+        "id": 54,
+        "word": "pijama",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/54.png",
+        "color": "mavi",
+        "aday": []
+      },
+      {
+        "id": 58,
+        "word": "çorap",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/58.png",
+        "aday": [
+          {
+            "id": 3210,
+            "kaynak": "temiz-kirli/corap-temiz.jpg"
+          },
+          {
+            "id": 3302,
+            "kaynak": "islak-kuru/corap-kuru.jpg"
+          },
+          {
+            "id": 6958,
+            "kaynak": "tek-cift/corap-tek.jpg"
+          }
+        ]
+      },
+      {
+        "id": 59,
+        "word": "ayakkabı",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/59.png",
+        "aday": [
+          {
+            "id": 2301,
+            "kaynak": "buyuk-kucuk/ayakkabi-buyuk.jpg"
+          },
+          {
+            "id": 3204,
+            "kaynak": "temiz-kirli/ayakkabi-temiz.jpg"
+          },
+          {
+            "id": 3404,
+            "kaynak": "eski-yeni/ayakkabi-yeni.jpg"
+          },
+          {
+            "id": 3903,
+            "kaynak": "parlak-mat/ayakkabi-mat.jpg"
+          },
+          {
+            "id": 6962,
+            "kaynak": "tek-cift/kahveayakkabi-tek.jpg"
+          }
+        ]
+      },
+      {
+        "id": 79,
+        "word": "pantolon",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/79.png",
+        "color": "mavi",
+        "aday": [
+          {
+            "id": 4713,
+            "kaynak": "kirisik-duzgun/pantolon-duzgun.jpg"
+          },
+          {
+            "id": 5713,
+            "kaynak": "ters-duz/pantolon-duz.jpg"
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "word": "şort",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/80.png",
+        "color": "mavi",
+        "aday": []
+      },
+      {
+        "id": 93,
+        "word": "gözlük",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/93.png",
+        "color": "kırmızı",
+        "aday": [
+          {
+            "id": 3108,
+            "kaynak": "kirik-saglam/gozluk-saglam.jpg"
+          }
+        ]
+      },
+      {
+        "id": 111,
+        "word": "şapka",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/111.png",
+        "aday": []
+      },
+      {
+        "id": 157,
+        "word": "şemsiye",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/157.png",
+        "color": "çok renkli",
+        "aday": [
+          {
+            "id": 3019,
+            "kaynak": "acik-kapali/semsiye-acik.jpg"
+          },
+          {
+            "id": 3020,
+            "kaynak": "acik-kapali/semsiye-kapali.jpg"
+          },
+          {
+            "id": 5721,
+            "kaynak": "ters-duz/semsiye-duz.jpg"
+          },
+          {
+            "id": 6615,
+            "kaynak": "acik-koyu/semsiye-acik.jpg"
+          },
+          {
+            "id": 6616,
+            "kaynak": "acik-koyu/semsiye-koyu.jpg"
+          }
+        ]
+      },
+      {
+        "id": 206,
+        "word": "kask",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/206.png",
+        "aday": []
+      },
+      {
+        "id": 207,
+        "word": "çanta",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/207.png",
+        "color": "mor",
+        "aday": [
+          {
+            "id": 3001,
+            "kaynak": "acik-kapali/canta-acik.jpg"
+          },
+          {
+            "id": 3002,
+            "kaynak": "acik-kapali/canta-kapali.jpg"
+          },
+          {
+            "id": 3410,
+            "kaynak": "eski-yeni/canta-yeni.jpg"
+          },
+          {
+            "id": 6605,
+            "kaynak": "acik-koyu/canta-acik.jpg"
+          },
+          {
+            "id": 6606,
+            "kaynak": "acik-koyu/canta-koyu.jpg"
+          }
+        ]
+      },
+      {
+        "id": 255,
+        "word": "gömlek",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/255.png",
+        "color": "beyaz",
+        "aday": [
+          {
+            "id": 4705,
+            "kaynak": "kirisik-duzgun/gomlek-duzgun.jpg"
+          }
+        ]
+      },
+      {
+        "id": 268,
+        "word": "elbise",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/268.png",
+        "color": "pembe",
+        "aday": [
+          {
+            "id": 4701,
+            "kaynak": "kirisik-duzgun/elbise-duzgun.jpg"
+          },
+          {
+            "id": 6609,
+            "kaynak": "acik-koyu/elbise-acik.jpg"
+          },
+          {
+            "id": 6610,
+            "kaynak": "acik-koyu/elbise-koyu.jpg"
+          }
+        ]
+      },
+      {
+        "id": 269,
+        "word": "etek",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/269.png",
+        "color": "mor",
+        "aday": [
+          {
+            "id": 4703,
+            "kaynak": "kirisik-duzgun/etek-duzgun.jpg"
+          }
+        ]
+      },
+      {
+        "id": 270,
+        "word": "ceket",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/270.png",
+        "color": "kahverengi",
+        "aday": []
+      },
+      {
+        "id": 271,
+        "word": "atkı",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/271.png",
+        "aday": []
+      },
+      {
+        "id": 272,
+        "word": "eldivenler",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/272.png",
+        "aday": []
+      },
+      {
+        "id": 307,
+        "word": "bot",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/307.png",
+        "color": "kahverengi",
+        "aday": []
+      },
+      {
+        "id": 308,
+        "word": "terlik",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/308.png",
+        "aday": [
+          {
+            "id": 6970,
+            "kaynak": "tek-cift/terlik-tek.jpg"
+          }
+        ]
+      },
+      {
+        "id": 335,
+        "word": "kazak",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/335.png",
+        "color": "kırmızı",
+        "aday": []
+      },
+      {
+        "id": 336,
+        "word": "bere",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/336.png",
+        "color": "mavi",
+        "aday": []
+      },
+      {
+        "id": 345,
+        "word": "yüzük",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/345.png",
+        "aday": []
+      },
+      {
+        "id": 576,
+        "word": "kravat",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/576.png",
+        "aday": []
+      },
+      {
+        "id": 577,
+        "word": "papyon",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/577.png",
+        "aday": []
+      },
+      {
+        "id": 686,
+        "word": "güneş gözlüğü",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/686.png",
+        "aday": []
+      },
+      {
+        "id": 690,
+        "word": "şapka",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/690.png",
+        "aday": []
+      },
+      {
+        "id": 759,
+        "word": "küpeler",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/759.png",
+        "aday": []
+      },
+      {
+        "id": 845,
+        "word": "ayakkabı",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/845.png",
+        "aday": [
+          {
+            "id": 2301,
+            "kaynak": "buyuk-kucuk/ayakkabi-buyuk.jpg"
+          },
+          {
+            "id": 3204,
+            "kaynak": "temiz-kirli/ayakkabi-temiz.jpg"
+          },
+          {
+            "id": 3404,
+            "kaynak": "eski-yeni/ayakkabi-yeni.jpg"
+          },
+          {
+            "id": 3903,
+            "kaynak": "parlak-mat/ayakkabi-mat.jpg"
+          },
+          {
+            "id": 6962,
+            "kaynak": "tek-cift/kahveayakkabi-tek.jpg"
+          }
+        ]
+      },
+      {
+        "id": 846,
+        "word": "ayakkabı",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/846.png",
+        "aday": [
+          {
+            "id": 2301,
+            "kaynak": "buyuk-kucuk/ayakkabi-buyuk.jpg"
+          },
+          {
+            "id": 3204,
+            "kaynak": "temiz-kirli/ayakkabi-temiz.jpg"
+          },
+          {
+            "id": 3404,
+            "kaynak": "eski-yeni/ayakkabi-yeni.jpg"
+          },
+          {
+            "id": 3903,
+            "kaynak": "parlak-mat/ayakkabi-mat.jpg"
+          },
+          {
+            "id": 6962,
+            "kaynak": "tek-cift/kahveayakkabi-tek.jpg"
+          }
+        ]
+      },
+      {
+        "id": 847,
+        "word": "sandalet",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/847.png",
+        "aday": [
+          {
+            "id": 6968,
+            "kaynak": "tek-cift/sandalet-tek.jpg"
+          }
+        ]
+      },
+      {
+        "id": 848,
+        "word": "sandalet",
+        "category": "Giysiler & Aksesuarlar",
+        "imageUrl": "/images/848.png",
+        "aday": [
+          {
+            "id": 6968,
+            "kaynak": "tek-cift/sandalet-tek.jpg"
+          }
+        ]
+      }
+    ],
+    "Diğer Yiyecekler": [
+      {
+        "id": 23,
+        "word": "pizza",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/23.png",
+        "aday": [
+          {
+            "id": 2819,
+            "kaynak": "butun-yarim-ceyrek/pizza-butun.jpg"
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "word": "peynir",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/50.png",
+        "color": "sarı",
+        "aday": [
+          {
+            "id": 6815,
+            "kaynak": "yenir-yenmez/peynir_sunger-yenir.jpg"
+          }
+        ]
+      },
+      {
+        "id": 56,
+        "word": "dondurma",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/56.png",
+        "aday": []
+      },
+      {
+        "id": 77,
+        "word": "yumurta",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/77.png",
+        "aday": [
+          {
+            "id": 3120,
+            "kaynak": "kirik-saglam/yumurta-saglam.jpg"
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "word": "pasta",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/78.png",
+        "color": "pembe",
+        "aday": [
+          {
+            "id": 2816,
+            "kaynak": "butun-yarim-ceyrek/pasta-butun.jpg"
+          }
+        ]
+      },
+      {
+        "id": 112,
+        "word": "ekmek",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/112.png",
+        "aday": [
+          {
+            "id": 2804,
+            "kaynak": "butun-yarim-ceyrek/ekmek-butun.jpg"
+          },
+          {
+            "id": 5006,
+            "kaynak": "taze-bayat/ekmek-taze.jpg"
+          }
+        ]
+      },
+      {
+        "id": 176,
+        "word": "yoğurt",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/176.png",
+        "aday": []
+      },
+      {
+        "id": 218,
+        "word": "pirinç",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/218.png",
+        "aday": []
+      },
+      {
+        "id": 228,
+        "word": "bal",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/228.png",
+        "aday": []
+      },
+      {
+        "id": 240,
+        "word": "lolipop",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/240.png",
+        "color": "pembe",
+        "aday": []
+      },
+      {
+        "id": 241,
+        "word": "şurup",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/241.png",
+        "aday": []
+      },
+      {
+        "id": 249,
+        "word": "patlamış mısır",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/249.png",
+        "aday": []
+      },
+      {
+        "id": 266,
+        "word": "çorba",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/266.png",
+        "aday": []
+      },
+      {
+        "id": 267,
+        "word": "makarna",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/267.png",
+        "aday": []
+      },
+      {
+        "id": 296,
+        "word": "simit",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/296.png",
+        "aday": [
+          {
+            "id": 5020,
+            "kaynak": "taze-bayat/simit-taze.jpg"
+          }
+        ]
+      },
+      {
+        "id": 297,
+        "word": "çikolata",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/297.png",
+        "aday": [
+          {
+            "id": 6801,
+            "kaynak": "yenir-yenmez/cikolata_sabun-yenir.jpg"
+          }
+        ]
+      },
+      {
+        "id": 312,
+        "word": "sosis",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/312.png",
+        "aday": []
+      },
+      {
+        "id": 330,
+        "word": "bisküvi",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/330.png",
+        "aday": [
+          {
+            "id": 3104,
+            "kaynak": "kirik-saglam/biskuvi-saglam.jpg"
+          }
+        ]
+      },
+      {
+        "id": 332,
+        "word": "salata",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/332.png",
+        "aday": []
+      },
+      {
+        "id": 360,
+        "word": "jöle",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/360.png",
+        "color": "kırmızı",
+        "aday": []
+      },
+      {
+        "id": 366,
+        "word": "sosisli sandviç",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/366.png",
+        "aday": []
+      },
+      {
+        "id": 486,
+        "word": "pasta dilimi",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/486.png",
+        "aday": []
+      },
+      {
+        "id": 623,
+        "word": "sandviç",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/623.png",
+        "aday": []
+      },
+      {
+        "id": 638,
+        "word": "sirke",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/638.png",
+        "aday": []
+      },
+      {
+        "id": 639,
+        "word": "reçel",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/639.png",
+        "aday": []
+      },
+      {
+        "id": 788,
+        "word": "tavuk",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/788.png",
+        "aday": []
+      },
+      {
+        "id": 789,
+        "word": "sulu yemek",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/789.png",
+        "aday": []
+      },
+      {
+        "id": 790,
+        "word": "ekmek",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/790.png",
+        "aday": [
+          {
+            "id": 2804,
+            "kaynak": "butun-yarim-ceyrek/ekmek-butun.jpg"
+          },
+          {
+            "id": 5006,
+            "kaynak": "taze-bayat/ekmek-taze.jpg"
+          }
+        ]
+      },
+      {
+        "id": 792,
+        "word": "yoğurt",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/792.png",
+        "aday": []
+      },
+      {
+        "id": 804,
+        "word": "cips",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/804.png",
+        "aday": []
+      },
+      {
+        "id": 805,
+        "word": "kraker",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/805.png",
+        "aday": []
+      },
+      {
+        "id": 806,
+        "word": "jelibon",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/806.png",
+        "aday": []
+      },
+      {
+        "id": 807,
+        "word": "kuruyemiş",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/807.png",
+        "aday": []
+      },
+      {
+        "id": 808,
+        "word": "köfte",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/808.png",
+        "aday": []
+      },
+      {
+        "id": 809,
+        "word": "hamburger",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/809.png",
+        "aday": []
+      },
+      {
+        "id": 810,
+        "word": "tereyağı",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/810.png",
+        "aday": []
+      },
+      {
+        "id": 812,
+        "word": "mantı",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/812.png",
+        "aday": []
+      },
+      {
+        "id": 854,
+        "word": "dolma biber",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/854.png",
+        "aday": []
+      },
+      {
+        "id": 860,
+        "word": "salam",
+        "category": "Diğer Yiyecekler",
+        "imageUrl": "/images/860.png",
+        "aday": []
+      }
+    ],
+    "Hayvanlar": [
+      {
+        "id": 26,
+        "word": "ördek",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/26.png",
+        "color": "sarı",
+        "aday": []
+      },
+      {
+        "id": 28,
+        "word": "fil",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/28.png",
+        "color": "gri",
+        "aday": []
+      },
+      {
+        "id": 29,
+        "word": "fare",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/29.png",
+        "color": "gri",
+        "aday": []
+      },
+      {
+        "id": 32,
+        "word": "papağan",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/32.png",
+        "color": [
+          "çok renkli",
+          "kırmızı",
+          "mavi",
+          "sarı"
+        ],
+        "aday": []
+      },
+      {
+        "id": 41,
+        "word": "tavşan",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/41.webp",
+        "color": "beyaz",
+        "aday": []
+      },
+      {
+        "id": 42,
+        "word": "kaplumbağa",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/42.webp",
+        "aday": []
+      },
+      {
+        "id": 46,
+        "word": "köpek",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/46.png",
+        "aday": [
+          {
+            "id": 3214,
+            "kaynak": "temiz-kirli/kopek-temiz.jpg"
+          }
+        ]
+      },
+      {
+        "id": 73,
+        "word": "kuş",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/73.png",
+        "aday": []
+      },
+      {
+        "id": 92,
+        "word": "uğur böceği",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/92.png",
+        "color": "kırmızı",
+        "aday": []
+      },
+      {
+        "id": 100,
+        "word": "aslan",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/100.png",
+        "color": "kahverengi",
+        "aday": []
+      },
+      {
+        "id": 101,
+        "word": "zürafa",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/101.png",
+        "aday": []
+      },
+      {
+        "id": 102,
+        "word": "horoz",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/102.png",
+        "color": "çok renkli",
+        "aday": []
+      },
+      {
+        "id": 103,
+        "word": "baykuş",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/103.png",
+        "aday": []
+      },
+      {
+        "id": 145,
+        "word": "çita",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/145.webp",
+        "aday": []
+      },
+      {
+        "id": 150,
+        "word": "solucan",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/150.png",
+        "aday": []
+      },
+      {
+        "id": 178,
+        "word": "dinozor",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/178.png",
+        "aday": []
+      },
+      {
+        "id": 222,
+        "word": "salyangoz",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/222.webp",
+        "aday": []
+      },
+      {
+        "id": 232,
+        "word": "penguen",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/232.png",
+        "aday": []
+      },
+      {
+        "id": 273,
+        "word": "arı",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/273.png",
+        "aday": []
+      },
+      {
+        "id": 274,
+        "word": "kelebek",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/274.png",
+        "aday": []
+      },
+      {
+        "id": 275,
+        "word": "kurbağa",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/275.png",
+        "color": "yeşil",
+        "aday": []
+      },
+      {
+        "id": 277,
+        "word": "maymun",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/277.png",
+        "aday": []
+      },
+      {
+        "id": 290,
+        "word": "at",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/290.png",
+        "aday": []
+      },
+      {
+        "id": 291,
+        "word": "inek",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/291.png",
+        "aday": []
+      },
+      {
+        "id": 293,
+        "word": "fok balığı",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/293.png",
+        "aday": []
+      },
+      {
+        "id": 320,
+        "word": "panda",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/320.png",
+        "color": "siyah",
+        "aday": []
+      },
+      {
+        "id": 321,
+        "word": "tavuk",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/321.png",
+        "color": "beyaz",
+        "aday": []
+      },
+      {
+        "id": 357,
+        "word": "ıstakoz",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/357.png",
+        "color": "kırmızı",
+        "aday": []
+      },
+      {
+        "id": 358,
+        "word": "ahtapot",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/358.png",
+        "color": "mor",
+        "aday": []
+      },
+      {
+        "id": 359,
+        "word": "deniz yıldızı",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/359.png",
+        "color": "turuncu",
+        "aday": []
+      },
+      {
+        "id": 376,
+        "word": "civciv",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/376.png",
+        "aday": []
+      },
+      {
+        "id": 415,
+        "word": "tilki",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/415.png",
+        "color": "turuncu",
+        "aday": []
+      },
+      {
+        "id": 416,
+        "word": "geyik",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/416.png",
+        "aday": []
+      },
+      {
+        "id": 417,
+        "word": "sincap",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/417.png",
+        "aday": []
+      },
+      {
+        "id": 418,
+        "word": "kirpi",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/418.png",
+        "aday": []
+      },
+      {
+        "id": 460,
+        "word": "koyun",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/460.png",
+        "aday": []
+      },
+      {
+        "id": 461,
+        "word": "keçi",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/461.png",
+        "aday": []
+      },
+      {
+        "id": 462,
+        "word": "kuzu",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/462.png",
+        "aday": []
+      },
+      {
+        "id": 491,
+        "word": "balina",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/491.png",
+        "aday": []
+      },
+      {
+        "id": 580,
+        "word": "kedi",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/580.png",
+        "aday": []
+      },
+      {
+        "id": 617,
+        "word": "kuşlar",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/617.png",
+        "aday": []
+      },
+      {
+        "id": 627,
+        "word": "kediler",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/627.png",
+        "aday": []
+      },
+      {
+        "id": 680,
+        "word": "kunduz",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/680.png",
+        "aday": []
+      },
+      {
+        "id": 681,
+        "word": "koala",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/681.png",
+        "aday": []
+      },
+      {
+        "id": 682,
+        "word": "köpek",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/682.png",
+        "aday": [
+          {
+            "id": 3214,
+            "kaynak": "temiz-kirli/kopek-temiz.jpg"
+          }
+        ]
+      },
+      {
+        "id": 684,
+        "word": "tembel hayvan",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/684.png",
+        "aday": []
+      },
+      {
+        "id": 692,
+        "word": "deniz kestanesi",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/692.png",
+        "aday": []
+      },
+      {
+        "id": 694,
+        "word": "kirpi balığı",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/694.png",
+        "aday": []
+      },
+      {
+        "id": 763,
+        "word": "yunus",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/763.png",
+        "aday": []
+      },
+      {
+        "id": 861,
+        "word": "hamster",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/861.png",
+        "aday": []
+      },
+      {
+        "id": 862,
+        "word": "kaplan",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/862.png",
+        "aday": []
+      },
+      {
+        "id": 865,
+        "word": "eşek",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/865.png",
+        "aday": []
+      },
+      {
+        "id": 866,
+        "word": "zebra",
+        "category": "Hayvanlar",
+        "imageUrl": "/images/866.png",
+        "aday": []
+      }
+    ],
+    "Oyuncaklar": [
+      {
+        "id": 33,
+        "word": "jeton",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/33.png",
+        "aday": []
+      },
+      {
+        "id": 109,
+        "word": "oyuncak bebek",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/109.png",
+        "aday": []
+      },
+      {
+        "id": 130,
+        "word": "balon",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/130.png",
+        "color": "kırmızı",
+        "aday": [
+          {
+            "id": 2305,
+            "kaynak": "buyuk-kucuk/balon-buyuk.jpg"
+          },
+          {
+            "id": 6603,
+            "kaynak": "acik-koyu/balon-acik.jpg"
+          },
+          {
+            "id": 6604,
+            "kaynak": "acik-koyu/balon-koyu.jpg"
+          }
+        ]
+      },
+      {
+        "id": 135,
+        "word": "uçurtma",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/135.png",
+        "color": "çok renkli",
+        "aday": []
+      },
+      {
+        "id": 156,
+        "word": "top",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/156.png",
+        "color": "kırmızı",
+        "aday": [
+          {
+            "id": 2317,
+            "kaynak": "buyuk-kucuk/top-buyuk.jpg"
+          },
+          {
+            "id": 3915,
+            "kaynak": "parlak-mat/top-mat.jpg"
+          },
+          {
+            "id": 6621,
+            "kaynak": "acik-koyu/top-acik.jpg"
+          },
+          {
+            "id": 6622,
+            "kaynak": "acik-koyu/top-koyu.jpg"
+          }
+        ]
+      },
+      {
+        "id": 177,
+        "word": "robot",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/177.png",
+        "aday": [
+          {
+            "id": 3112,
+            "kaynak": "kirik-saglam/robot-saglam.jpg"
+          }
+        ]
+      },
+      {
+        "id": 184,
+        "word": "kumbara",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/184.png",
+        "color": "pembe",
+        "aday": [
+          {
+            "id": 2614,
+            "kaynak": "dolu-bos/kumbara-dolu.jpg"
+          }
+        ]
+      },
+      {
+        "id": 213,
+        "word": "hazine haritası",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/213.png",
+        "aday": []
+      },
+      {
+        "id": 276,
+        "word": "oyuncak ayı",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/276.png",
+        "color": "kahverengi",
+        "aday": [
+          {
+            "id": 5703,
+            "kaynak": "ters-duz/ayi-duz.jpg"
+          },
+          {
+            "id": 6861,
+            "kaynak": "tehlikeli-guvenli/makas_ayi-guvenli.jpg"
+          }
+        ]
+      },
+      {
+        "id": 362,
+        "word": "pilates topu",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/362.png",
+        "color": "pembe",
+        "aday": []
+      },
+      {
+        "id": 363,
+        "word": "misketler",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/363.png",
+        "color": "çok renkli",
+        "aday": []
+      },
+      {
+        "id": 369,
+        "word": "kürek",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/369.png",
+        "color": "kırmızı",
+        "aday": []
+      },
+      {
+        "id": 383,
+        "word": "kaykay",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/383.png",
+        "aday": []
+      },
+      {
+        "id": 393,
+        "word": "salıncak",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/393.png",
+        "aday": []
+      },
+      {
+        "id": 427,
+        "word": "düdük",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/427.png",
+        "aday": []
+      },
+      {
+        "id": 480,
+        "word": "yapboz",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/480.png",
+        "aday": []
+      },
+      {
+        "id": 510,
+        "word": "satranç taşları",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/510.png",
+        "aday": []
+      },
+      {
+        "id": 657,
+        "word": "oyuncaklar",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/657.png",
+        "aday": []
+      },
+      {
+        "id": 673,
+        "word": "disko topu",
+        "category": "Oyuncaklar",
+        "imageUrl": "/images/673.png",
+        "aday": []
+      }
+    ],
+    "Okul & Ofis Gereçleri": [
+      {
+        "id": 36,
+        "word": "kitap",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/36.png",
+        "color": "kırmızı",
+        "aday": [
+          {
+            "id": 3011,
+            "kaynak": "acik-kapali/kitap-acik.jpg"
+          },
+          {
+            "id": 3012,
+            "kaynak": "acik-kapali/kitap-kapali.jpg"
+          },
+          {
+            "id": 3416,
+            "kaynak": "eski-yeni/kitap-yeni.jpg"
+          }
+        ]
+      },
+      {
+        "id": 121,
+        "word": "kalem",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/121.png",
+        "color": "sarı",
+        "aday": [
+          {
+            "id": 3110,
+            "kaynak": "kirik-saglam/kalem-saglam.jpg"
+          }
+        ]
+      },
+      {
+        "id": 149,
+        "word": "cetvel",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/149.png",
+        "aday": []
+      },
+      {
+        "id": 220,
+        "word": "pergel",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/220.png",
+        "aday": []
+      },
+      {
+        "id": 245,
+        "word": "toplu iğne",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/245.png",
+        "aday": []
+      },
+      {
+        "id": 248,
+        "word": "para",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/248.png",
+        "aday": []
+      },
+      {
+        "id": 287,
+        "word": "kitaplık",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/287.png",
+        "aday": []
+      },
+      {
+        "id": 397,
+        "word": "pul",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/397.png",
+        "aday": []
+      },
+      {
+        "id": 535,
+        "word": "silgi",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/535.png",
+        "aday": []
+      },
+      {
+        "id": 542,
+        "word": "kitap ayracı",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/542.png",
+        "aday": []
+      },
+      {
+        "id": 568,
+        "word": "koli bandı",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/568.png",
+        "aday": []
+      },
+      {
+        "id": 569,
+        "word": "bant",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/569.png",
+        "aday": []
+      },
+      {
+        "id": 600,
+        "word": "zarf",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/600.png",
+        "aday": []
+      },
+      {
+        "id": 642,
+        "word": "kağıt",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/642.png",
+        "aday": []
+      },
+      {
+        "id": 654,
+        "word": "cetvel",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/654.png",
+        "aday": []
+      },
+      {
+        "id": 668,
+        "word": "kağıt",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/668.png",
+        "aday": []
+      },
+      {
+        "id": 849,
+        "word": "yapıştırıcı",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/849.png",
+        "aday": []
+      },
+      {
+        "id": 870,
+        "word": "kalemtıraş",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/870.png",
+        "aday": []
+      },
+      {
+        "id": 882,
+        "word": "defter",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/882.png",
+        "aday": []
+      },
+      {
+        "id": 883,
+        "word": "kara tahta",
+        "category": "Okul & Ofis Gereçleri",
+        "imageUrl": "/images/883.png",
+        "aday": []
+      }
+    ],
+    "Meyveler": [
+      {
+        "id": 43,
+        "word": "elma",
+        "category": "Meyveler",
+        "imageUrl": "/images/43.png",
+        "color": "kırmızı",
+        "aday": [
+          {
+            "id": 2307,
+            "kaynak": "buyuk-kucuk/elma-buyuk.jpg"
+          },
+          {
+            "id": 2807,
+            "kaynak": "butun-yarim-ceyrek/elma-butun.jpg"
+          },
+          {
+            "id": 3906,
+            "kaynak": "parlak-mat/elma-mat.jpg"
+          },
+          {
+            "id": 5008,
+            "kaynak": "taze-bayat/elma-taze.jpg"
+          },
+          {
+            "id": 6805,
+            "kaynak": "yenir-yenmez/elma_top-yenir.jpg"
+          }
+        ]
+      },
+      {
+        "id": 55,
+        "word": "limon",
+        "category": "Meyveler",
+        "imageUrl": "/images/55.png",
+        "color": "sarı",
+        "aday": [
+          {
+            "id": 2813,
+            "kaynak": "butun-yarim-ceyrek/limon-butun.jpg"
+          }
+        ]
+      },
+      {
+        "id": 88,
+        "word": "üzüm",
+        "category": "Meyveler",
+        "imageUrl": "/images/88.png",
+        "color": "mor",
+        "aday": [
+          {
+            "id": 6819,
+            "kaynak": "yenir-yenmez/uzum_bilye-yenir.jpg"
+          }
+        ]
+      },
+      {
+        "id": 94,
+        "word": "fındık",
+        "category": "Meyveler",
+        "imageUrl": "/images/94.png",
+        "color": "kahverengi",
+        "aday": []
+      },
+      {
+        "id": 114,
+        "word": "muz",
+        "category": "Meyveler",
+        "imageUrl": "/images/114.png",
+        "color": "sarı",
+        "aday": [
+          {
+            "id": 5014,
+            "kaynak": "taze-bayat/muz-taze.jpg"
+          },
+          {
+            "id": 6813,
+            "kaynak": "yenir-yenmez/muz_oyuncakmuz-yenir.jpg"
+          }
+        ]
+      },
+      {
+        "id": 115,
+        "word": "portakal",
+        "category": "Meyveler",
+        "imageUrl": "/images/115.png",
+        "color": "turuncu",
+        "aday": [
+          {
+            "id": 2822,
+            "kaynak": "butun-yarim-ceyrek/portakal-butun.jpg"
+          },
+          {
+            "id": 5016,
+            "kaynak": "taze-bayat/portakal-taze.jpg"
+          }
+        ]
+      },
+      {
+        "id": 119,
+        "word": "zeytin",
+        "category": "Meyveler",
+        "imageUrl": "/images/119.png",
+        "color": "yeşil",
+        "aday": []
+      },
+      {
+        "id": 170,
+        "word": "karpuz",
+        "category": "Meyveler",
+        "imageUrl": "/images/170.png",
+        "color": "yeşil",
+        "aday": [
+          {
+            "id": 2309,
+            "kaynak": "buyuk-kucuk/karpuz-buyuk.jpg"
+          },
+          {
+            "id": 2810,
+            "kaynak": "butun-yarim-ceyrek/karpuz-butun.jpg"
+          }
+        ]
+      },
+      {
+        "id": 171,
+        "word": "çilek",
+        "category": "Meyveler",
+        "imageUrl": "/images/171.png",
+        "aday": [
+          {
+            "id": 5002,
+            "kaynak": "taze-bayat/cilek-taze.jpg"
+          },
+          {
+            "id": 6803,
+            "kaynak": "yenir-yenmez/cilek_silgi-yenir.jpg"
+          }
+        ]
+      },
+      {
+        "id": 278,
+        "word": "kiraz",
+        "category": "Meyveler",
+        "imageUrl": "/images/278.png",
+        "color": "kırmızı",
+        "aday": []
+      },
+      {
+        "id": 279,
+        "word": "ananas",
+        "category": "Meyveler",
+        "imageUrl": "/images/279.png",
+        "aday": []
+      },
+      {
+        "id": 294,
+        "word": "vişne",
+        "category": "Meyveler",
+        "imageUrl": "/images/294.png",
+        "aday": []
+      },
+      {
+        "id": 295,
+        "word": "kavun",
+        "category": "Meyveler",
+        "imageUrl": "/images/295.png",
+        "aday": []
+      },
+      {
+        "id": 333,
+        "word": "şeftali",
+        "category": "Meyveler",
+        "imageUrl": "/images/333.png",
+        "aday": []
+      },
+      {
+        "id": 365,
+        "word": "armut",
+        "category": "Meyveler",
+        "imageUrl": "/images/365.png",
+        "color": "yeşil",
+        "aday": []
+      },
+      {
+        "id": 419,
+        "word": "mandalina",
+        "category": "Meyveler",
+        "imageUrl": "/images/419.png",
+        "color": "turuncu",
+        "aday": []
+      },
+      {
+        "id": 498,
+        "word": "nar",
+        "category": "Meyveler",
+        "imageUrl": "/images/498.png",
+        "color": "kırmızı",
+        "aday": []
+      },
+      {
+        "id": 637,
+        "word": "greyfurt",
+        "category": "Meyveler",
+        "imageUrl": "/images/637.png",
+        "aday": []
+      },
+      {
+        "id": 641,
+        "word": "erik",
+        "category": "Meyveler",
+        "imageUrl": "/images/641.png",
+        "aday": []
+      },
+      {
+        "id": 649,
+        "word": "kivi",
+        "category": "Meyveler",
+        "imageUrl": "/images/649.png",
+        "aday": []
+      },
+      {
+        "id": 650,
+        "word": "ceviz",
+        "category": "Meyveler",
+        "imageUrl": "/images/650.png",
+        "aday": []
+      }
+    ],
+    "Aletler": [
+      {
+        "id": 51,
+        "word": "fırça",
+        "category": "Aletler",
+        "imageUrl": "/images/51.png",
+        "aday": []
+      },
+      {
+        "id": 53,
+        "word": "vida",
+        "category": "Aletler",
+        "imageUrl": "/images/53.png",
+        "aday": []
+      },
+      {
+        "id": 120,
+        "word": "jilet",
+        "category": "Aletler",
+        "imageUrl": "/images/120.png",
+        "color": "mavi",
+        "aday": []
+      },
+      {
+        "id": 138,
+        "word": "halter",
+        "category": "Aletler",
+        "imageUrl": "/images/138.png",
+        "aday": []
+      },
+      {
+        "id": 143,
+        "word": "merdiven",
+        "category": "Aletler",
+        "imageUrl": "/images/143.png",
+        "aday": []
+      },
+      {
+        "id": 144,
+        "word": "makas",
+        "category": "Aletler",
+        "imageUrl": "/images/144.png",
+        "aday": []
+      },
+      {
+        "id": 181,
+        "word": "kamera",
+        "category": "Aletler",
+        "imageUrl": "/images/181.png",
+        "aday": []
+      },
+      {
+        "id": 182,
+        "word": "mikrofon",
+        "category": "Aletler",
+        "imageUrl": "/images/182.png",
+        "aday": []
+      },
+      {
+        "id": 186,
+        "word": "pil",
+        "category": "Aletler",
+        "imageUrl": "/images/186.png",
+        "aday": []
+      },
+      {
+        "id": 214,
+        "word": "dürbün",
+        "category": "Aletler",
+        "imageUrl": "/images/214.png",
+        "aday": []
+      },
+      {
+        "id": 217,
+        "word": "tornavida",
+        "category": "Aletler",
+        "imageUrl": "/images/217.png",
+        "aday": []
+      },
+      {
+        "id": 219,
+        "word": "yangın söndürme tüpü",
+        "category": "Aletler",
+        "imageUrl": "/images/219.png",
+        "color": "kırmızı",
+        "aday": []
+      },
+      {
+        "id": 223,
+        "word": "halat",
+        "category": "Aletler",
+        "imageUrl": "/images/223.png",
+        "aday": []
+      },
+      {
+        "id": 224,
+        "word": "ip",
+        "category": "Aletler",
+        "imageUrl": "/images/224.png",
+        "aday": [
+          {
+            "id": 4909,
+            "kaynak": "duz-egri/ip-duz.jpg"
+          }
+        ]
+      },
+      {
+        "id": 260,
+        "word": "termometre",
+        "category": "Aletler",
+        "imageUrl": "/images/260.png",
+        "aday": []
+      },
+      {
+        "id": 306,
+        "word": "çivi",
+        "category": "Aletler",
+        "imageUrl": "/images/306.png",
+        "aday": [
+          {
+            "id": 4905,
+            "kaynak": "duz-egri/civi-duz.jpg"
+          }
+        ]
+      },
+      {
+        "id": 344,
+        "word": "pense",
+        "category": "Aletler",
+        "imageUrl": "/images/344.png",
+        "aday": []
+      },
+      {
+        "id": 368,
+        "word": "pusula",
+        "category": "Aletler",
+        "imageUrl": "/images/368.png",
+        "aday": []
+      },
+      {
+        "id": 400,
+        "word": "olta",
+        "category": "Aletler",
+        "imageUrl": "/images/400.png",
+        "aday": []
+      },
+      {
+        "id": 496,
+        "word": "çekiç",
+        "category": "Aletler",
+        "imageUrl": "/images/496.png",
+        "aday": []
+      },
+      {
+        "id": 527,
+        "word": "tığ",
+        "category": "Aletler",
+        "imageUrl": "/images/527.png",
+        "aday": []
+      },
+      {
+        "id": 634,
+        "word": "ok",
+        "category": "Aletler",
+        "imageUrl": "/images/634.png",
+        "aday": []
+      },
+      {
+        "id": 691,
+        "word": "büyüteç",
+        "category": "Aletler",
+        "imageUrl": "/images/691.png",
+        "aday": []
+      },
+      {
+        "id": 712,
+        "word": "tamir aletleri",
+        "category": "Aletler",
+        "imageUrl": "/images/712.png",
+        "aday": []
+      },
+      {
+        "id": 713,
+        "word": "at nalı",
+        "category": "Aletler",
+        "imageUrl": "/images/713.png",
+        "aday": []
+      }
+    ],
+    "Müzik Aletleri": [
+      {
+        "id": 72,
+        "word": "davul",
+        "category": "Müzik Aletleri",
+        "imageUrl": "/images/72.png",
+        "aday": []
+      },
+      {
+        "id": 180,
+        "word": "gitar",
+        "category": "Müzik Aletleri",
+        "imageUrl": "/images/180.png",
+        "aday": []
+      },
+      {
+        "id": 208,
+        "word": "keman",
+        "category": "Müzik Aletleri",
+        "imageUrl": "/images/208.png",
+        "aday": []
+      },
+      {
+        "id": 328,
+        "word": "flüt",
+        "category": "Müzik Aletleri",
+        "imageUrl": "/images/328.png",
+        "aday": []
+      },
+      {
+        "id": 329,
+        "word": "marakas",
+        "category": "Müzik Aletleri",
+        "imageUrl": "/images/329.png",
+        "color": "çok renkli",
+        "aday": []
+      },
+      {
+        "id": 364,
+        "word": "saksafon",
+        "category": "Müzik Aletleri",
+        "imageUrl": "/images/364.png",
+        "aday": []
+      },
+      {
+        "id": 428,
+        "word": "zil",
+        "category": "Müzik Aletleri",
+        "imageUrl": "/images/428.png",
+        "aday": []
+      },
+      {
+        "id": 429,
+        "word": "tef",
+        "category": "Müzik Aletleri",
+        "imageUrl": "/images/429.png",
+        "aday": []
+      },
+      {
+        "id": 592,
+        "word": "davul çubuğu",
+        "category": "Müzik Aletleri",
+        "imageUrl": "/images/592.png",
+        "aday": [
+          {
+            "id": 6954,
+            "kaynak": "tek-cift/baget-tek.jpg"
+          }
+        ]
+      }
+    ],
+    "Sebzeler": [
+      {
+        "id": 75,
+        "word": "soğan",
+        "category": "Sebzeler",
+        "imageUrl": "/images/75.png",
+        "color": "kahverengi",
+        "aday": []
+      },
+      {
+        "id": 98,
+        "word": "havuç",
+        "category": "Sebzeler",
+        "imageUrl": "/images/98.png",
+        "color": "turuncu",
+        "aday": [
+          {
+            "id": 5010,
+            "kaynak": "taze-bayat/havuc-taze.jpg"
+          },
+          {
+            "id": 6807,
+            "kaynak": "yenir-yenmez/havuc_boya-yenir.jpg"
+          }
+        ]
+      },
+      {
+        "id": 116,
+        "word": "salatalık",
+        "category": "Sebzeler",
+        "imageUrl": "/images/116.png",
+        "color": "yeşil",
+        "aday": [
+          {
+            "id": 5018,
+            "kaynak": "taze-bayat/salatalik-taze.jpg"
+          }
+        ]
+      },
+      {
+        "id": 128,
+        "word": "domates",
+        "category": "Sebzeler",
+        "imageUrl": "/images/128.png",
+        "color": "kırmızı",
+        "aday": [
+          {
+            "id": 2801,
+            "kaynak": "butun-yarim-ceyrek/domates-butun.jpg"
+          },
+          {
+            "id": 5004,
+            "kaynak": "taze-bayat/domates-taze.jpg"
+          }
+        ]
+      },
+      {
+        "id": 129,
+        "word": "marul",
+        "category": "Sebzeler",
+        "imageUrl": "/images/129.png",
+        "color": "yeşil",
+        "aday": [
+          {
+            "id": 5012,
+            "kaynak": "taze-bayat/marul-taze.jpg"
+          }
+        ]
+      },
+      {
+        "id": 227,
+        "word": "biber",
+        "category": "Sebzeler",
+        "imageUrl": "/images/227.png",
+        "aday": []
+      },
+      {
+        "id": 280,
+        "word": "patlıcan",
+        "category": "Sebzeler",
+        "imageUrl": "/images/280.png",
+        "aday": []
+      },
+      {
+        "id": 311,
+        "word": "brokoli",
+        "category": "Sebzeler",
+        "imageUrl": "/images/311.png",
+        "color": "yeşil",
+        "aday": []
+      },
+      {
+        "id": 334,
+        "word": "lahana",
+        "category": "Sebzeler",
+        "imageUrl": "/images/334.png",
+        "color": "yeşil",
+        "aday": []
+      },
+      {
+        "id": 420,
+        "word": "ıspanak",
+        "category": "Sebzeler",
+        "imageUrl": "/images/420.png",
+        "aday": []
+      },
+      {
+        "id": 421,
+        "word": "pırasa",
+        "category": "Sebzeler",
+        "imageUrl": "/images/421.png",
+        "aday": []
+      },
+      {
+        "id": 636,
+        "word": "turp",
+        "category": "Sebzeler",
+        "imageUrl": "/images/636.png",
+        "aday": []
+      },
+      {
+        "id": 640,
+        "word": "zencefil",
+        "category": "Sebzeler",
+        "imageUrl": "/images/640.png",
+        "aday": []
+      },
+      {
+        "id": 648,
+        "word": "karnabahar",
+        "category": "Sebzeler",
+        "imageUrl": "/images/648.png",
+        "aday": []
+      },
+      {
+        "id": 695,
+        "word": "enginar",
+        "category": "Sebzeler",
+        "imageUrl": "/images/695.png",
+        "aday": []
+      },
+      {
+        "id": 704,
+        "word": "roka",
+        "category": "Sebzeler",
+        "imageUrl": "/images/704.png",
+        "aday": []
+      },
+      {
+        "id": 787,
+        "word": "yeşil biber",
+        "category": "Sebzeler",
+        "imageUrl": "/images/787.png",
+        "aday": []
+      },
+      {
+        "id": 802,
+        "word": "patates",
+        "category": "Sebzeler",
+        "imageUrl": "/images/802.png",
+        "aday": []
+      },
+      {
+        "id": 803,
+        "word": "bal kabağı",
+        "category": "Sebzeler",
+        "imageUrl": "/images/803.png",
+        "aday": []
+      },
+      {
+        "id": 853,
+        "word": "mısır",
+        "category": "Sebzeler",
+        "imageUrl": "/images/853.png",
+        "aday": []
+      }
+    ],
+    "Meslekler": [
+      {
+        "id": 84,
+        "word": "öğretmen",
+        "category": "Meslekler",
+        "imageUrl": "/images/84.png",
+        "aday": []
+      },
+      {
+        "id": 231,
+        "word": "jandarma",
+        "category": "Meslekler",
+        "imageUrl": "/images/231.png",
+        "aday": []
+      },
+      {
+        "id": 313,
+        "word": "kraliçe",
+        "category": "Meslekler",
+        "imageUrl": "/images/313.png",
+        "aday": []
+      },
+      {
+        "id": 314,
+        "word": "kral",
+        "category": "Meslekler",
+        "imageUrl": "/images/314.png",
+        "aday": []
+      },
+      {
+        "id": 324,
+        "word": "doktor",
+        "category": "Meslekler",
+        "imageUrl": "/images/324.png",
+        "aday": []
+      },
+      {
+        "id": 325,
+        "word": "polis",
+        "category": "Meslekler",
+        "imageUrl": "/images/325.png",
+        "aday": []
+      },
+      {
+        "id": 326,
+        "word": "aşçı",
+        "category": "Meslekler",
+        "imageUrl": "/images/326.png",
+        "aday": []
+      },
+      {
+        "id": 327,
+        "word": "itfaiyeci",
+        "category": "Meslekler",
+        "imageUrl": "/images/327.png",
+        "aday": []
+      },
+      {
+        "id": 380,
+        "word": "astronot",
+        "category": "Meslekler",
+        "imageUrl": "/images/380.png",
+        "aday": []
+      },
+      {
+        "id": 386,
+        "word": "hemşire",
+        "category": "Meslekler",
+        "imageUrl": "/images/386.png",
+        "aday": []
+      },
+      {
+        "id": 387,
+        "word": "pilot",
+        "category": "Meslekler",
+        "imageUrl": "/images/387.png",
+        "aday": []
+      },
+      {
+        "id": 677,
+        "word": "öğrenci",
+        "category": "Meslekler",
+        "imageUrl": "/images/677.png",
+        "aday": []
+      },
+      {
+        "id": 678,
+        "word": "işçi",
+        "category": "Meslekler",
+        "imageUrl": "/images/678.png",
+        "aday": []
+      },
+      {
+        "id": 683,
+        "word": "adam",
+        "category": "Meslekler",
+        "imageUrl": "/images/683.png",
+        "aday": []
+      },
+      {
+        "id": 709,
+        "word": "atlet",
+        "category": "Meslekler",
+        "imageUrl": "/images/709.png",
+        "aday": []
+      },
+      {
+        "id": 716,
+        "word": "asker",
+        "category": "Meslekler",
+        "imageUrl": "/images/716.png",
+        "aday": []
+      },
+      {
+        "id": 831,
+        "word": "öğrenci",
+        "category": "Meslekler",
+        "imageUrl": "/images/831.png",
+        "aday": []
+      },
+      {
+        "id": 832,
+        "word": "müdür",
+        "category": "Meslekler",
+        "imageUrl": "/images/832.png",
+        "aday": []
+      },
+      {
+        "id": 833,
+        "word": "temizlik görevlisi",
+        "category": "Meslekler",
+        "imageUrl": "/images/833.png",
+        "aday": []
+      },
+      {
+        "id": 834,
+        "word": "postacı",
+        "category": "Meslekler",
+        "imageUrl": "/images/834.png",
+        "aday": []
+      },
+      {
+        "id": 835,
+        "word": "berber",
+        "category": "Meslekler",
+        "imageUrl": "/images/835.png",
+        "aday": []
+      },
+      {
+        "id": 836,
+        "word": "hademe",
+        "category": "Meslekler",
+        "imageUrl": "/images/836.png",
+        "aday": []
+      },
+      {
+        "id": 837,
+        "word": "çiftçi",
+        "category": "Meslekler",
+        "imageUrl": "/images/837.png",
+        "aday": []
+      },
+      {
+        "id": 839,
+        "word": "polis",
+        "category": "Meslekler",
+        "imageUrl": "/images/839.png",
+        "aday": []
+      },
+      {
+        "id": 840,
+        "word": "itfaiyeci",
+        "category": "Meslekler",
+        "imageUrl": "/images/840.png",
+        "aday": []
+      },
+      {
+        "id": 869,
+        "word": "manav",
+        "category": "Meslekler",
+        "imageUrl": "/images/869.png",
+        "aday": []
+      },
+      {
+        "id": 877,
+        "word": "kasiyer",
+        "category": "Meslekler",
+        "imageUrl": "/images/877.png",
+        "aday": []
+      },
+      {
+        "id": 878,
+        "word": "garson",
+        "category": "Meslekler",
+        "imageUrl": "/images/878.png",
+        "aday": []
+      }
+    ],
+    "Mutfak Gereçleri": [
+      {
+        "id": 125,
+        "word": "kaşık",
+        "category": "Mutfak Gereçleri",
+        "imageUrl": "/images/125.png",
+        "aday": [
+          {
+            "id": 3908,
+            "kaynak": "parlak-mat/kasik-mat.jpg"
+          },
+          {
+            "id": 4911,
+            "kaynak": "duz-egri/kasik-duz.jpg"
+          },
+          {
+            "id": 6851,
+            "kaynak": "tehlikeli-guvenli/bicak_kasik-guvenli.jpg"
+          }
+        ]
+      },
+      {
+        "id": 126,
+        "word": "çatal",
+        "category": "Mutfak Gereçleri",
+        "imageUrl": "/images/126.png",
+        "aday": []
+      },
+      {
+        "id": 153,
+        "word": "tabak",
+        "category": "Mutfak Gereçleri",
+        "imageUrl": "/images/153.png",
+        "aday": [
+          {
+            "id": 2620,
+            "kaynak": "dolu-bos/tabak-dolu.jpg"
+          },
+          {
+            "id": 3118,
+            "kaynak": "kirik-saglam/tabak-saglam.jpg"
+          },
+          {
+            "id": 3216,
+            "kaynak": "temiz-kirli/tabak-temiz.jpg"
+          }
+        ]
+      },
+      {
+        "id": 262,
+        "word": "bıçak",
+        "category": "Mutfak Gereçleri",
+        "imageUrl": "/images/262.png",
+        "aday": []
+      },
+      {
+        "id": 264,
+        "word": "tava",
+        "category": "Mutfak Gereçleri",
+        "imageUrl": "/images/264.png",
+        "aday": []
+      },
+      {
+        "id": 356,
+        "word": "çaydanlık",
+        "category": "Mutfak Gereçleri",
+        "imageUrl": "/images/356.png",
+        "aday": [
+          {
+            "id": 3412,
+            "kaynak": "eski-yeni/caydanlik-yeni.jpg"
+          }
+        ]
+      },
+      {
+        "id": 367,
+        "word": "mikser",
+        "category": "Mutfak Gereçleri",
+        "imageUrl": "/images/367.png",
+        "aday": []
+      },
+      {
+        "id": 625,
+        "word": "tuzluk ve biberlik",
+        "category": "Mutfak Gereçleri",
+        "imageUrl": "/images/625.png",
+        "aday": []
+      },
+      {
+        "id": 671,
+        "word": "tencere",
+        "category": "Mutfak Gereçleri",
+        "imageUrl": "/images/671.png",
+        "aday": [
+          {
+            "id": 2315,
+            "kaynak": "buyuk-kucuk/tencere-buyuk.jpg"
+          },
+          {
+            "id": 3913,
+            "kaynak": "parlak-mat/tencere2-mat.jpg"
+          }
+        ]
+      },
+      {
+        "id": 687,
+        "word": "streç film",
+        "category": "Mutfak Gereçleri",
+        "imageUrl": "/images/687.png",
+        "aday": []
+      },
+      {
+        "id": 700,
+        "word": "kase",
+        "category": "Mutfak Gereçleri",
+        "imageUrl": "/images/700.png",
+        "aday": []
+      }
+    ],
+    "duygular": [
+      {
+        "id": 127,
+        "word": "çocuk",
+        "category": "duygular",
+        "imageUrl": "/images/127.png",
+        "aday": []
+      },
+      {
+        "id": 988,
+        "word": "kahkaha atan çocuk",
+        "category": "duygular",
+        "imageUrl": "/images/988.png",
+        "aday": []
+      },
+      {
+        "id": 989,
+        "word": "şaşırmış çocuk",
+        "category": "duygular",
+        "imageUrl": "/images/989.png",
+        "aday": []
+      },
+      {
+        "id": 991,
+        "word": "kötü koku yapan çocuk",
+        "category": "duygular",
+        "imageUrl": "/images/991.png",
+        "aday": []
+      }
+    ],
+    "İçecekler": [
+      {
+        "id": 140,
+        "word": "kahve",
+        "category": "İçecekler",
+        "imageUrl": "/images/140.png",
+        "aday": []
+      },
+      {
+        "id": 331,
+        "word": "limonata",
+        "category": "İçecekler",
+        "imageUrl": "/images/331.png",
+        "aday": []
+      },
+      {
+        "id": 635,
+        "word": "kahve",
+        "category": "İçecekler",
+        "imageUrl": "/images/635.png",
+        "aday": []
+      },
+      {
+        "id": 644,
+        "word": "çay",
+        "category": "İçecekler",
+        "imageUrl": "/images/644.png",
+        "aday": []
+      },
+      {
+        "id": 645,
+        "word": "milkshake",
+        "category": "İçecekler",
+        "imageUrl": "/images/645.png",
+        "aday": []
+      },
+      {
+        "id": 791,
+        "word": "çay",
+        "category": "İçecekler",
+        "imageUrl": "/images/791.png",
+        "aday": []
+      },
+      {
+        "id": 793,
+        "word": "gazoz",
+        "category": "İçecekler",
+        "imageUrl": "/images/793.png",
+        "aday": []
+      },
+      {
+        "id": 801,
+        "word": "süt",
+        "category": "İçecekler",
+        "imageUrl": "/images/801.png",
+        "aday": [
+          {
+            "id": 4013,
+            "kaynak": "seffaf-opak/su_sut-opak.jpg"
+          }
+        ]
+      },
+      {
+        "id": 811,
+        "word": "meyve suyu",
+        "category": "İçecekler",
+        "imageUrl": "/images/811.png",
+        "aday": [
+          {
+            "id": 6811,
+            "kaynak": "yenir-yenmez/meyvesuyu_sabun-yenir.jpg"
+          }
+        ]
+      },
+      {
+        "id": 813,
+        "word": "ayran",
+        "category": "İçecekler",
+        "imageUrl": "/images/813.png",
+        "aday": []
+      }
+    ],
+    "Mekanlar & Odalar": [
+      {
+        "id": 179,
+        "word": "çadır",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/179.png",
+        "aday": []
+      },
+      {
+        "id": 185,
+        "word": "kaydırak",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/185.png",
+        "aday": []
+      },
+      {
+        "id": 197,
+        "word": "durak",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/197.png",
+        "color": "siyah",
+        "aday": []
+      },
+      {
+        "id": 212,
+        "word": "kale",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/212.png",
+        "color": "gri",
+        "aday": []
+      },
+      {
+        "id": 226,
+        "word": "havuz",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/226.png",
+        "aday": []
+      },
+      {
+        "id": 229,
+        "word": "oda",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/229.png",
+        "aday": []
+      },
+      {
+        "id": 430,
+        "word": "bank",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/430.png",
+        "aday": []
+      },
+      {
+        "id": 456,
+        "word": "binalar",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/456.png",
+        "aday": []
+      },
+      {
+        "id": 497,
+        "word": "okul",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/497.png",
+        "aday": []
+      },
+      {
+        "id": 505,
+        "word": "çocuk parkı",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/505.png",
+        "aday": []
+      },
+      {
+        "id": 529,
+        "word": "patika",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/529.png",
+        "aday": []
+      },
+      {
+        "id": 607,
+        "word": "sokak lambası",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/607.png",
+        "aday": []
+      },
+      {
+        "id": 612,
+        "word": "gökdelen",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/612.png",
+        "aday": []
+      },
+      {
+        "id": 646,
+        "word": "iglo",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/646.png",
+        "aday": []
+      },
+      {
+        "id": 737,
+        "word": "sınıf",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/737.png",
+        "aday": []
+      },
+      {
+        "id": 841,
+        "word": "cami",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/841.png",
+        "aday": []
+      },
+      {
+        "id": 850,
+        "word": "okul bahçesi",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/850.png",
+        "aday": []
+      },
+      {
+        "id": 851,
+        "word": "okul kantini",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/851.png",
+        "aday": []
+      },
+      {
+        "id": 852,
+        "word": "hastane",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/852.png",
+        "aday": []
+      },
+      {
+        "id": 857,
+        "word": "alışveriş merkezi",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/857.png",
+        "aday": []
+      },
+      {
+        "id": 858,
+        "word": "plaj",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/858.png",
+        "aday": []
+      },
+      {
+        "id": 867,
+        "word": "oturma odası",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/867.png",
+        "aday": []
+      },
+      {
+        "id": 868,
+        "word": "balkon",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/868.png",
+        "aday": []
+      },
+      {
+        "id": 879,
+        "word": "market",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/879.png",
+        "aday": []
+      },
+      {
+        "id": 880,
+        "word": "restoran",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/880.png",
+        "aday": []
+      },
+      {
+        "id": 881,
+        "word": "sinema salonu",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/881.png",
+        "aday": []
+      },
+      {
+        "id": 889,
+        "word": "ev",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/889.png",
+        "aday": []
+      },
+      {
+        "id": 891,
+        "word": "kaldırım",
+        "category": "Mekanlar & Odalar",
+        "imageUrl": "/images/891.png",
+        "aday": []
+      }
+    ],
+    "Vücudun Bölümleri": [
+      {
+        "id": 285,
+        "word": "el",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/285.png",
+        "aday": []
+      },
+      {
+        "id": 479,
+        "word": "gözler",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/479.png",
+        "aday": []
+      },
+      {
+        "id": 490,
+        "word": "kulak",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/490.png",
+        "aday": []
+      },
+      {
+        "id": 555,
+        "word": "kaş",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/555.png",
+        "aday": []
+      },
+      {
+        "id": 556,
+        "word": "burun",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/556.png",
+        "aday": []
+      },
+      {
+        "id": 557,
+        "word": "dudak",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/557.png",
+        "aday": []
+      },
+      {
+        "id": 558,
+        "word": "dil",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/558.png",
+        "aday": []
+      },
+      {
+        "id": 559,
+        "word": "omuz",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/559.png",
+        "aday": []
+      },
+      {
+        "id": 560,
+        "word": "kol",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/560.png",
+        "aday": []
+      },
+      {
+        "id": 561,
+        "word": "ayak",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/561.png",
+        "aday": []
+      },
+      {
+        "id": 562,
+        "word": "bacak",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/562.png",
+        "aday": []
+      },
+      {
+        "id": 563,
+        "word": "parmak",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/563.png",
+        "aday": []
+      },
+      {
+        "id": 597,
+        "word": "göz",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/597.png",
+        "aday": []
+      },
+      {
+        "id": 662,
+        "word": "saç",
+        "category": "Vücudun Bölümleri",
+        "imageUrl": "/images/662.png",
+        "aday": []
+      }
+    ],
+    "aile üyeleri": [
+      {
+        "id": 578,
+        "word": "dede",
+        "category": "aile üyeleri",
+        "imageUrl": "/images/578.png",
+        "aday": []
+      },
+      {
+        "id": 701,
+        "word": "nine",
+        "category": "aile üyeleri",
+        "imageUrl": "/images/701.png",
+        "aday": []
+      },
+      {
+        "id": 711,
+        "word": "anne",
+        "category": "aile üyeleri",
+        "imageUrl": "/images/711.png",
+        "aday": []
+      },
+      {
+        "id": 752,
+        "word": "bebek",
+        "category": "aile üyeleri",
+        "imageUrl": "/images/752.png",
+        "aday": []
+      },
+      {
+        "id": 828,
+        "word": "baba",
+        "category": "aile üyeleri",
+        "imageUrl": "/images/828.png",
+        "aday": []
+      },
+      {
+        "id": 829,
+        "word": "kız kardeş",
+        "category": "aile üyeleri",
+        "imageUrl": "/images/829.png",
+        "aday": []
+      },
+      {
+        "id": 830,
+        "word": "erkek kardeş",
+        "category": "aile üyeleri",
+        "imageUrl": "/images/830.png",
+        "aday": []
+      },
+      {
+        "id": 838,
+        "word": "arkadaş",
+        "category": "aile üyeleri",
+        "imageUrl": "/images/838.png",
+        "aday": []
+      }
+    ],
+    "Diğer Gıdalar": [
+      {
+        "id": 588,
+        "word": "hamur",
+        "category": "Diğer Gıdalar",
+        "imageUrl": "/images/588.png",
+        "aday": []
+      }
+    ],
+    "hayvanlar": [
+      {
+        "id": 740,
+        "word": "balık",
+        "category": "hayvanlar",
+        "imageUrl": "/images/740.png",
+        "aday": []
+      },
+      {
+        "id": 908,
+        "word": "gergedan",
+        "category": "hayvanlar",
+        "imageUrl": "/images/908.webp",
+        "aday": []
+      },
+      {
+        "id": 909,
+        "word": "deve",
+        "category": "hayvanlar",
+        "imageUrl": "/images/909.webp",
+        "aday": []
+      },
+      {
+        "id": 915,
+        "word": "balık",
+        "category": "hayvanlar",
+        "imageUrl": "/images/915.png",
+        "aday": []
+      },
+      {
+        "id": 916,
+        "word": "ayı",
+        "category": "hayvanlar",
+        "imageUrl": "/images/916.png",
+        "aday": [
+          {
+            "id": 2303,
+            "kaynak": "buyuk-kucuk/ayi-buyuk.jpg"
+          },
+          {
+            "id": 3206,
+            "kaynak": "temiz-kirli/ayi-temiz.jpg"
+          },
+          {
+            "id": 3406,
+            "kaynak": "eski-yeni/ayi-yeni.jpg"
+          }
+        ]
+      },
+      {
+        "id": 917,
+        "word": "örümcek",
+        "category": "hayvanlar",
+        "imageUrl": "/images/917.png",
+        "aday": []
+      },
+      {
+        "id": 918,
+        "word": "hindi",
+        "category": "hayvanlar",
+        "imageUrl": "/images/918.png",
+        "aday": []
+      },
+      {
+        "id": 919,
+        "word": "koç",
+        "category": "hayvanlar",
+        "imageUrl": "/images/919.png",
+        "aday": []
+      },
+      {
+        "id": 920,
+        "word": "tavus kuşu",
+        "category": "hayvanlar",
+        "imageUrl": "/images/920.png",
+        "aday": []
+      },
+      {
+        "id": 921,
+        "word": "kuğu",
+        "category": "hayvanlar",
+        "imageUrl": "/images/921.png",
+        "aday": []
+      },
+      {
+        "id": 922,
+        "word": "kurt",
+        "category": "hayvanlar",
+        "imageUrl": "/images/922.png",
+        "aday": []
+      },
+      {
+        "id": 923,
+        "word": "domuz",
+        "category": "hayvanlar",
+        "imageUrl": "/images/923.png",
+        "aday": []
+      },
+      {
+        "id": 924,
+        "word": "karides",
+        "category": "hayvanlar",
+        "imageUrl": "/images/924.png",
+        "aday": []
+      },
+      {
+        "id": 925,
+        "word": "yengeç",
+        "category": "hayvanlar",
+        "imageUrl": "/images/925.png",
+        "aday": []
+      },
+      {
+        "id": 926,
+        "word": "timsah",
+        "category": "hayvanlar",
+        "imageUrl": "/images/926.png",
+        "aday": []
+      },
+      {
+        "id": 927,
+        "word": "deniz atı",
+        "category": "hayvanlar",
+        "imageUrl": "/images/927.png",
+        "aday": []
+      },
+      {
+        "id": 942,
+        "word": "sivrisinek",
+        "category": "hayvanlar",
+        "imageUrl": "/images/942.png",
+        "aday": []
+      },
+      {
+        "id": 947,
+        "word": "kanguru",
+        "category": "hayvanlar",
+        "imageUrl": "/images/947.png",
+        "aday": []
+      },
+      {
+        "id": 948,
+        "word": "köpek balığı",
+        "category": "hayvanlar",
+        "imageUrl": "/images/948.png",
+        "aday": []
+      },
+      {
+        "id": 994,
+        "word": "bağıran maymun",
+        "category": "hayvanlar",
+        "imageUrl": "/images/994.png",
+        "aday": []
+      }
+    ],
+    "Soyut Kavramlar / Duygular": [
+      {
+        "id": 863,
+        "word": "seni seviyorum",
+        "category": "Soyut Kavramlar / Duygular",
+        "imageUrl": "/images/863.png",
+        "aday": []
+      },
+      {
+        "id": 864,
+        "word": "hoşça kal",
+        "category": "Soyut Kavramlar / Duygular",
+        "imageUrl": "/images/864.png",
+        "aday": []
+      },
+      {
+        "id": 872,
+        "word": "ateşli çocuk",
+        "category": "Soyut Kavramlar / Duygular",
+        "imageUrl": "/images/872.png",
+        "aday": []
+      },
+      {
+        "id": 873,
+        "word": "canı acıyan çocuk",
+        "category": "Soyut Kavramlar / Duygular",
+        "imageUrl": "/images/873.png",
+        "aday": []
+      },
+      {
+        "id": 894,
+        "word": "ateşi olan çocuk",
+        "category": "Soyut Kavramlar / Duygular",
+        "imageUrl": "/images/894.png",
+        "aday": []
+      },
+      {
+        "id": 895,
+        "word": "başı ağrıyan çocuk",
+        "category": "Soyut Kavramlar / Duygular",
+        "imageUrl": "/images/895.png",
+        "aday": []
+      },
+      {
+        "id": 896,
+        "word": "boğazı ağrıyan çocuk",
+        "category": "Soyut Kavramlar / Duygular",
+        "imageUrl": "/images/896.png",
+        "aday": []
+      },
+      {
+        "id": 897,
+        "word": "karnı ağrıyan çocuk",
+        "category": "Soyut Kavramlar / Duygular",
+        "imageUrl": "/images/897.png",
+        "aday": []
+      },
+      {
+        "id": 898,
+        "word": "kulağı ağrıyan çocuk",
+        "category": "Soyut Kavramlar / Duygular",
+        "imageUrl": "/images/898.png",
+        "aday": []
+      },
+      {
+        "id": 899,
+        "word": "üşüyen çocuk",
+        "category": "Soyut Kavramlar / Duygular",
+        "imageUrl": "/images/899.png",
+        "aday": []
+      },
+      {
+        "id": 900,
+        "word": "terleyen çocuk",
+        "category": "Soyut Kavramlar / Duygular",
+        "imageUrl": "/images/900.png",
+        "aday": []
+      }
+    ],
+    "Soyut Kavramlar / Eylemler (Fiiller)": [
+      {
+        "id": 875,
+        "word": "banyo yapan çocuk",
+        "category": "Soyut Kavramlar / Eylemler (Fiiller)",
+        "imageUrl": "/images/875.png",
+        "aday": []
+      },
+      {
+        "id": 876,
+        "word": "şarkı söyleyen çocuk",
+        "category": "Soyut Kavramlar / Eylemler (Fiiller)",
+        "imageUrl": "/images/876.png",
+        "aday": []
+      }
+    ],
+    "sebzeler": [
+      {
+        "id": 928,
+        "word": "bezelye",
+        "category": "sebzeler",
+        "imageUrl": "/images/928.png",
+        "aday": []
+      },
+      {
+        "id": 931,
+        "word": "kereviz",
+        "category": "sebzeler",
+        "imageUrl": "/images/931.png",
+        "aday": []
+      }
+    ],
+    "ev_esyalari": [
+      {
+        "id": 929,
+        "word": "bebek bezi",
+        "category": "ev_esyalari",
+        "imageUrl": "/images/929.png",
+        "aday": []
+      },
+      {
+        "id": 930,
+        "word": "saç kurutma makinesi",
+        "category": "ev_esyalari",
+        "imageUrl": "/images/930.png",
+        "aday": []
+      },
+      {
+        "id": 932,
+        "word": "elektrikli süpürge",
+        "category": "ev_esyalari",
+        "imageUrl": "/images/932.png",
+        "aday": []
+      },
+      {
+        "id": 933,
+        "word": "kağıt havlu",
+        "category": "ev_esyalari",
+        "imageUrl": "/images/933.png",
+        "aday": []
+      },
+      {
+        "id": 938,
+        "word": "tırnak makası",
+        "category": "ev_esyalari",
+        "imageUrl": "/images/938.png",
+        "aday": []
+      },
+      {
+        "id": 941,
+        "word": "mikro dalga fırın",
+        "category": "ev_esyalari",
+        "imageUrl": "/images/941.png",
+        "aday": []
+      },
+      {
+        "id": 945,
+        "word": "tablet",
+        "category": "ev_esyalari",
+        "imageUrl": "/images/945.png",
+        "aday": []
+      },
+      {
+        "id": 946,
+        "word": "kumanda",
+        "category": "ev_esyalari",
+        "imageUrl": "/images/946.png",
+        "aday": []
+      },
+      {
+        "id": 980,
+        "word": "tuvalet kağıdı",
+        "category": "ev_esyalari",
+        "imageUrl": "/images/980.png",
+        "aday": []
+      }
+    ],
+    "giysiler_aksesuarlar": [
+      {
+        "id": 934,
+        "word": "mutfak önlüğü",
+        "category": "giysiler_aksesuarlar",
+        "imageUrl": "/images/934.png",
+        "aday": []
+      },
+      {
+        "id": 978,
+        "word": "kemer",
+        "category": "giysiler_aksesuarlar",
+        "imageUrl": "/images/978.png",
+        "aday": []
+      },
+      {
+        "id": 979,
+        "word": "toka",
+        "category": "giysiler_aksesuarlar",
+        "imageUrl": "/images/979.png",
+        "aday": []
+      }
+    ],
+    "mutfak_gerecleri": [
+      {
+        "id": 935,
+        "word": "rende",
+        "category": "mutfak_gerecleri",
+        "imageUrl": "/images/935.png",
+        "aday": []
+      },
+      {
+        "id": 939,
+        "word": "ocak",
+        "category": "mutfak_gerecleri",
+        "imageUrl": "/images/939.png",
+        "aday": []
+      }
+    ],
+    "okul_ofis_gerecleri": [
+      {
+        "id": 936,
+        "word": "tel zımba",
+        "category": "okul_ofis_gerecleri",
+        "imageUrl": "/images/936.png",
+        "aday": []
+      }
+    ],
+    "oyuncaklar": [
+      {
+        "id": 937,
+        "word": "tenis raketi",
+        "category": "oyuncaklar",
+        "imageUrl": "/images/937.png",
+        "aday": []
+      },
+      {
+        "id": 940,
+        "word": "kukla",
+        "category": "oyuncaklar",
+        "imageUrl": "/images/940.png",
+        "aday": []
+      },
+      {
+        "id": 995,
+        "word": "patlayan balon",
+        "category": "oyuncaklar",
+        "imageUrl": "/images/995.png",
+        "aday": []
+      }
+    ],
+    "diger_yiyecekler": [
+      {
+        "id": 943,
+        "word": "sarımsak",
+        "category": "diger_yiyecekler",
+        "imageUrl": "/images/943.png",
+        "aday": []
+      }
+    ],
+    "meyveler": [
+      {
+        "id": 944,
+        "word": "incir",
+        "category": "meyveler",
+        "imageUrl": "/images/944.png",
+        "aday": []
+      }
+    ],
+    "vucudun_bolumleri": [
+      {
+        "id": 949,
+        "word": "ağız",
+        "category": "vucudun_bolumleri",
+        "imageUrl": "/images/949.png",
+        "aday": []
+      },
+      {
+        "id": 981,
+        "word": "diş",
+        "category": "vucudun_bolumleri",
+        "imageUrl": "/images/981.png",
+        "aday": []
+      }
+    ],
+    "içecekler": [
+      {
+        "id": 982,
+        "word": "su",
+        "category": "içecekler",
+        "imageUrl": "/images/982.png",
+        "aday": []
+      }
+    ],
+    "eylemler": [
+      {
+        "id": 983,
+        "word": "öpücük atan çocuk",
+        "category": "eylemler",
+        "imageUrl": "/images/983.png",
+        "aday": []
+      },
+      {
+        "id": 984,
+        "word": "sus işareti yapan çocuk",
+        "category": "eylemler",
+        "imageUrl": "/images/984.png",
+        "aday": []
+      },
+      {
+        "id": 986,
+        "word": "alo diyen çocuk",
+        "category": "eylemler",
+        "imageUrl": "/images/986.png",
+        "aday": []
+      },
+      {
+        "id": 990,
+        "word": "hapşıran çocuk",
+        "category": "eylemler",
+        "imageUrl": "/images/990.png",
+        "aday": []
+      },
+      {
+        "id": 993,
+        "word": "alkışlayan eller",
+        "category": "eylemler",
+        "imageUrl": "/images/993.png",
+        "aday": []
+      },
+      {
+        "id": 996,
+        "word": "gıdıklanan çocuk",
+        "category": "eylemler",
+        "imageUrl": "/images/996.png",
+        "aday": []
+      },
+      {
+        "id": 1000,
+        "word": "üfleyen çocuk",
+        "category": "eylemler",
+        "imageUrl": "/images/1000.png",
+        "aday": []
+      }
+    ],
+    "oyunlar": [
+      {
+        "id": 985,
+        "word": "saklambaç oynayan çocuk",
+        "category": "oyunlar",
+        "imageUrl": "/images/985.png",
+        "aday": []
+      },
+      {
+        "id": 997,
+        "word": "ip atlayan çocuk",
+        "category": "oyunlar",
+        "imageUrl": "/images/997.png",
+        "aday": []
+      }
+    ],
+    "bebekler": [
+      {
+        "id": 987,
+        "word": "uyuyan bebek",
+        "category": "bebekler",
+        "imageUrl": "/images/987.png",
+        "aday": []
+      }
+    ],
+    "aletler": [
+      {
+        "id": 992,
+        "word": "testere",
+        "category": "aletler",
+        "imageUrl": "/images/992.png",
+        "aday": []
+      },
+      {
+        "id": 998,
+        "word": "matkap",
+        "category": "aletler",
+        "imageUrl": "/images/998.png",
+        "aday": []
+      }
+    ],
+    "kişiler": [
+      {
+        "id": 999,
+        "word": "gülen noel baba",
+        "category": "kişiler",
+        "imageUrl": "/images/999.png",
+        "aday": []
+      }
+    ]
+  }
+}

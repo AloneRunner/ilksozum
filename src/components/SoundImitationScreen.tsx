@@ -1,4 +1,5 @@
 import React from 'react';
+import { nesneUrl } from '../services/nesneGorsel.ts';
 import soundImitationImages from '../services/database/soundImitationImages.ts';
 import SoundImitationLightbox from './SoundImitationLightbox.tsx';
 import { playNamedAudio, speak } from '../services/speechService.ts';
@@ -38,7 +39,7 @@ export default function SoundImitationScreen({ onBack }: Props) {
           <div key={it.id} className={`relative w-full`}>
             <button key={it.id} onClick={() => openAt(i)} className={`flex flex-col items-center gap-3 rounded-2xl p-2 transition-transform hover:scale-105 focus:outline-none shadow-lg border-2 ${isUnderwater ? 'bg-white/5 border-cyan-300/10' : 'bg-white/90 border-slate-200'}`}>
             <div className="relative w-full">
-              <img src={it.imageUrl} alt={it.word} className="w-full h-28 sm:h-32 object-cover rounded-lg" />
+              <img src={nesneUrl(it.imageUrl)} alt={it.word} className="w-full h-28 sm:h-32 object-cover rounded-lg" />
               {/* subtle border / accent */}
               <div className={`absolute inset-0 rounded-lg ring-1 ${isUnderwater ? 'ring-cyan-300/20' : 'ring-transparent'}`} />
             </div>

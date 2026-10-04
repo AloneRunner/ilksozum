@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { nesneUrl } from '../services/nesneGorsel.ts';
 import { CommunicationCard } from '../types.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import SpeakerIcon from './icons/SpeakerIcon.tsx';
@@ -36,7 +37,7 @@ const DetailCard: React.FC<{ card: CommunicationCard; onClick: () => void; isInP
                 onClick={onClick}
                 className="relative w-full h-full aspect-square flex flex-col items-center justify-end text-center bg-white p-2 sm:p-2 rounded-2xl shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-sky-300 overflow-hidden group"
             >
-                <img src={image?.imageUrl || '/images/placeholder.png'} alt={displayText} className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"/>
+                <img src={nesneUrl(image?.imageUrl) || '/images/placeholder.png'} alt={displayText} className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"/>
                 <h2 className="relative text-sm sm:text-base font-bold text-slate-700 z-10">{displayText}</h2>
                  {isPrintMode && isInPrintPool && (
                     <div className="absolute inset-0 bg-sky-500/70 flex items-center justify-center rounded-2xl animate-pop-in">
@@ -125,7 +126,7 @@ const CommunicationCardDetailScreen: React.FC<CommunicationCardDetailScreenProps
                             return (
                                 <div key={`${card.id}-${index}`} className="flex-shrink-0 flex flex-col items-center text-center w-20 h-full bg-sky-100 p-1 rounded-lg">
                                     {image ? 
-                                        <img src={image.imageUrl} alt={text} className="w-12 h-12 object-cover rounded-md"/>
+                                        <img src={nesneUrl(image.imageUrl)} alt={text} className="w-12 h-12 object-cover rounded-md"/>
                                         : Icon && <Icon className="w-8 h-8 text-sky-700" />
                                     }
                                     <span className="text-xs font-semibold text-slate-600 truncate w-full mt-1">{text}</span>

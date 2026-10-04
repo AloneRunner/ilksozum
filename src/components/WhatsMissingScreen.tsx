@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef as _useRef, useCallback } from 'react';
+import { nesneUrl } from '../services/nesneGorsel.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { speak } from '../services/speechService.ts';
 import { WhatsMissingRound, WhatsMissingItem } from '../services/database/activities/reasoning/whatsMissingData.ts';
@@ -134,7 +135,7 @@ const WhatsMissingScreen: React.FC<WhatsMissingScreenProps> = ({
                   <span className="text-4xl opacity-30">❓</span>
                 ) : (
                   <>
-                    <img src={item.imageUrl} alt={item.word} className="w-full h-full object-contain p-3" />
+                    <img src={nesneUrl(item.imageUrl)} alt={item.word} className="w-full h-full object-contain p-3" />
                     {isWordLabelVisible && (
                       <p className="text-xs font-bold text-slate-500 pb-1">{item.word}</p>
                     )}
@@ -163,7 +164,7 @@ const WhatsMissingScreen: React.FC<WhatsMissingScreenProps> = ({
                       ${!isThisCorrect && !isThisWrong ? 'border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50' : ''}
                     `}
                   >
-                    <img src={opt.imageUrl} alt={opt.word} className="w-full h-full object-contain p-2" />
+                    <img src={nesneUrl(opt.imageUrl)} alt={opt.word} className="w-full h-full object-contain p-2" />
                     {isWordLabelVisible && (
                       <p className="text-xs font-bold text-slate-500 pb-1 truncate w-full text-center px-1">{opt.word}</p>
                     )}

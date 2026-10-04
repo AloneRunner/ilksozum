@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { nesneUrl } from '../../services/nesneGorsel.ts';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
 import { IMAGE_SETS, imgUrl } from '../../data/gameImageSets.ts';
 import { sayInstruction, sayCorrect, sayFinished } from '../../utils/gameVoice.ts';
@@ -332,7 +333,7 @@ const MemoryMatchGameScreen: React.FC<MemoryMatchGameScreenProps> = ({ onBack })
                                 }}
                             >
                                 {(card.isFlipped || card.isMatched) ? (
-                                    <img src={imgUrl(card.imageId)} alt={card.name} draggable={false} className="w-full h-full object-contain p-1" />
+                                    <img src={nesneUrl(imgUrl(card.imageId))} alt={card.name} draggable={false} className="w-full h-full object-contain p-1" />
                                 ) : (
                                     <span className="text-2xl sm:text-3xl text-white/80">❓</span>
                                 )}

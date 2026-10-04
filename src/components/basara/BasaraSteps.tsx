@@ -8,6 +8,7 @@
  * yapılır (React StrictMode'un çift effect çağrısına karşı `spokenRef`).
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { nesneUrl } from '../../services/nesneGorsel.ts';
 import { BasaraLesson, BASARA_VOWELS } from '../../data/basaraLessons.ts';
 import { speak, playEffect } from '../../services/speechService.ts';
 import { imageData } from '../../services/database/imageData.ts';
@@ -184,7 +185,7 @@ export const WordStage: React.FC<StageProps> = ({ lesson, onDone, isHighlightEna
               className="px-5 py-3 bg-white rounded-2xl shadow-md border-2 border-sky-100 flex flex-col items-center justify-center gap-2 hover:bg-sky-50 active:scale-95 transition-all"
             >
               {matchingImage && (
-                <img src={matchingImage.imageUrl} alt={w} className="w-16 h-16 object-contain" />
+                <img src={nesneUrl(matchingImage.imageUrl)} alt={w} className="w-16 h-16 object-contain" />
               )}
               <span className="text-2xl sm:text-3xl font-bold text-sky-800">
                 <HighlightedText text={w} highlights={lesson.family} enabled={isHighlightEnabled} />

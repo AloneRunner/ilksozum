@@ -1,4 +1,5 @@
 import React from "react";
+import { nesneUrl } from '../services/nesneGorsel.ts';
 import { OBJECT_CATEGORIES } from "../constants.ts";
 import ArrowLeftIcon from "./icons/ArrowLeftIcon.tsx";
 import { t, getCurrentLanguage } from "../i18n/index.ts";
@@ -112,7 +113,7 @@ const ObjectCategoriesMenuScreen: React.FC<ObjectCategoriesMenuScreenProps> = ({
                     {/* Image Container */}
                     <div className="relative w-20 h-20 landscape:w-16 landscape:h-16 flex items-center justify-center rounded-lg bg-slate-900/50 border border-white/10 group-hover/card:scale-110 transition-transform duration-300">
                       <div className="absolute inset-0 bg-cyan-400/5 blur-xl rounded-full" />
-                      <img src={imageUrl} alt={String(category.title)} className="w-14 h-14 landscape:w-12 landscape:h-12 object-contain drop-shadow-lg z-10" />
+                      <img src={nesneUrl(imageUrl)} alt={String(category.title)} className="w-14 h-14 landscape:w-12 landscape:h-12 object-contain drop-shadow-lg z-10" />
                     </div>
 
                     {/* Text */}
@@ -210,7 +211,7 @@ const ObjectCategoriesMenuScreen: React.FC<ObjectCategoriesMenuScreenProps> = ({
                     <div className={`relative flex items-center justify-center w-24 h-24 landscape:w-20 landscape:h-20 rounded-full bg-gradient-to-br ${ring} shadow-[0_12px_28px_rgba(6,182,212,0.16)]`}>
                       <div className="absolute inset-0 rounded-full border border-white/10 opacity-60" />
                       <div className="relative flex items-center justify-center w-[76%] h-[76%] rounded-full bg-black/20 border border-white/20 overflow-hidden">
-                        <img src={imageUrl} alt={String(category.title)} className="w-14 h-14 landscape:w-12 landscape:h-12 object-contain drop-shadow" />
+                        <img src={nesneUrl(imageUrl)} alt={String(category.title)} className="w-14 h-14 landscape:w-12 landscape:h-12 object-contain drop-shadow" />
                       </div>
                     </div>
                     <div className="mt-2 landscape:mt-1 text-center text-base landscape:text-sm font-bold leading-tight text-cyan-100 drop-shadow-sm">{String(category.title)}</div>
@@ -267,7 +268,7 @@ const ObjectCategoriesMenuScreen: React.FC<ObjectCategoriesMenuScreenProps> = ({
                     className={`w-full min-h-[180px] landscape:min-h-[160px] flex flex-col items-center justify-start gap-2 rounded-xl p-4 landscape:p-3 pt-4 landscape:pt-3 pb-12 landscape:pb-10 transition-all duration-150 ${isDisabled ? 'opacity-60' : 'hover:shadow-xl hover:-translate-y-1'} bg-white border-2 border-purple-200`}
                   >
                     <div className="flex h-24 w-24 landscape:h-20 landscape:w-20 items-center justify-center rounded-xl bg-gradient-to-br from-purple-50 to-pink-100">
-                      <img src={imageUrl} alt={String(category.title)} className="h-20 w-20 landscape:h-16 landscape:w-16 object-contain" />
+                      <img src={nesneUrl(imageUrl)} alt={String(category.title)} className="h-20 w-20 landscape:h-16 landscape:w-16 object-contain" />
                     </div>
                     <div className="mt-2 landscape:mt-1 text-center text-base landscape:text-sm font-bold leading-tight text-purple-900">{String(category.title)}</div>
                     {stats.attempts > 0 && (
@@ -329,7 +330,7 @@ const ObjectCategoriesMenuScreen: React.FC<ObjectCategoriesMenuScreenProps> = ({
                     className={`w-full min-h-[180px] landscape:min-h-[160px] flex flex-col items-center justify-start gap-2 rounded-xl p-4 landscape:p-3 pt-4 landscape:pt-3 pb-12 landscape:pb-10 transition-all duration-150 ${isDisabled ? 'opacity-60' : 'hover:shadow-xl hover:-translate-y-1'} bg-white/80 backdrop-blur-md border-2 border-purple-200/50`}
                   >
                     <div className="flex h-24 w-24 landscape:h-20 landscape:w-20 items-center justify-center rounded-xl bg-gradient-to-br from-purple-50 to-pink-100">
-                      <img src={imageUrl} alt={String(category.title)} className="h-20 w-20 landscape:h-16 landscape:w-16 object-contain" />
+                      <img src={nesneUrl(imageUrl)} alt={String(category.title)} className="h-20 w-20 landscape:h-16 landscape:w-16 object-contain" />
                     </div>
                     <div className="mt-2 landscape:mt-1 text-center text-base landscape:text-sm font-bold leading-tight text-purple-900">{String(category.title)}</div>
                     {stats.attempts > 0 && (
@@ -433,7 +434,7 @@ const ObjectCategoriesMenuScreen: React.FC<ObjectCategoriesMenuScreenProps> = ({
                   className={`w-full min-h-[180px] landscape:min-h-[160px] flex flex-col items-center justify-start gap-2 rounded-xl p-4 landscape:p-3 pt-4 landscape:pt-3 pb-12 landscape:pb-10 transition-all duration-150 ${isDisabled ? 'opacity-60' : 'hover:shadow-xl hover:-translate-y-1'} bg-white/80 backdrop-blur-md border-2 ${colors.border}`}
                 >
                   <div className={`flex h-24 w-24 landscape:h-20 landscape:w-20 items-center justify-center rounded-xl bg-gradient-to-br ${colors.gradient} shadow-md`}>
-                    <img src={imageUrl} alt={String(category.title)} className="h-20 w-20 landscape:h-16 landscape:w-16 object-contain drop-shadow-sm" />
+                    <img src={nesneUrl(imageUrl)} alt={String(category.title)} className="h-20 w-20 landscape:h-16 landscape:w-16 object-contain drop-shadow-sm" />
                   </div>
                   <div className={`mt-2 landscape:mt-1 text-center text-base landscape:text-sm font-bold leading-tight ${colors.text}`}>{String(category.title)}</div>
                   {stats.attempts > 0 && (

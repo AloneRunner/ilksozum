@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { nesneUrl } from '../../services/nesneGorsel.ts';
 import { ColorRecognitionRound, COLOR_OPTIONS } from '../../services/database/activities/reasoning/colorRecognitionData.ts';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
 import PrintIcon from '../icons/PrintIcon.tsx';
@@ -124,7 +125,7 @@ const ColorRecognitionWorksheetPreview: React.FC<Props> = ({ rounds, onBack }) =
 
                   {/* Object image */}
                   <div className="flex items-center justify-center rounded-lg bg-slate-50 border border-slate-200" style={{ height: imgH, width: imgH }}>
-                    <img src={`/images/${round.imageId}.png`} alt={round.word}
+                    <img src={nesneUrl(`/images/${round.imageId}.png`)} alt={round.word}
                       className="object-contain p-1"
                       style={{ maxHeight: imgH - 8, maxWidth: imgH - 8 }} />
                   </div>

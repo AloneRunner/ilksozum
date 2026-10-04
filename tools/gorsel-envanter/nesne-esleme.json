@@ -1,0 +1,101 @@
+{
+  "1": "kirik-saglam/araba-saglam.jpg",
+  "5": "buyuk-kucuk/kutu-buyuk.jpg",
+  "13": "eski-yeni/tisort-yeni.jpg",
+  "23": "butun-yarim-ceyrek/pizza-butun.jpg",
+  "27": "tehlikeli-guvenli/igne_pamuk-guvenli.jpg",
+  "34": "parlak-mat/vazo-mat.jpg",
+  "36": "eski-yeni/kitap-yeni.jpg",
+  "39": "acik-kapali/kapi-kapali.jpg",
+  "43": "buyuk-kucuk/elma-buyuk.jpg",
+  "46": "temiz-kirli/kopek-temiz.jpg",
+  "50": "yenir-yenmez/peynir_sunger-yenir.jpg",
+  "55": "butun-yarim-ceyrek/limon-butun.jpg",
+  "58": "tek-cift/corap-tek.jpg",
+  "59": "buyuk-kucuk/ayakkabi-buyuk.jpg",
+  "77": "kirik-saglam/yumurta-saglam.jpg",
+  "78": {
+    "kaynak": "butun-yarim-ceyrek/pasta-butun.jpg",
+    "renk": "kahverengi"
+  },
+  "79": "kirisik-duzgun/pantolon-duzgun.jpg",
+  "81": "acik-kapali/pencere-kapali.jpg",
+  "88": {
+    "kaynak": "yenir-yenmez/uzum_bilye-yenir.jpg",
+    "renk": "yeşil"
+  },
+  "93": {
+    "kaynak": "kirik-saglam/gozluk-saglam.jpg",
+    "renk": "siyah"
+  },
+  "96": "ters-duz/sandalye-duz.jpg",
+  "98": "yenir-yenmez/havuc_boya-yenir.jpg",
+  "110": "eski-yeni/bisiklet-yeni.jpg",
+  "112": "taze-bayat/ekmek-taze.jpg",
+  "114": "taze-bayat/muz-taze.jpg",
+  "115": "taze-bayat/portakal-taze.jpg",
+  "116": "taze-bayat/salatalik-taze.jpg",
+  "124": "temiz-kirli/bardak-temiz.jpg",
+  "125": "parlak-mat/kasik-mat.jpg",
+  "128": "taze-bayat/domates-taze.jpg",
+  "129": "taze-bayat/marul-taze.jpg",
+  "130": "buyuk-kucuk/balon-buyuk.jpg",
+  "137": "buyuk-kucuk/yastik-buyuk.jpg",
+  "153": "kirik-saglam/tabak-saglam.jpg",
+  "156": "buyuk-kucuk/top-buyuk.jpg",
+  "157": {
+    "kaynak": "acik-kapali/semsiye-acik.jpg",
+    "renk": "kırmızı"
+  },
+  "166": "islak-kuru/sunger-kuru.jpg",
+  "170": "buyuk-kucuk/karpuz-buyuk.jpg",
+  "171": "yenir-yenmez/cilek_silgi-yenir.jpg",
+  "177": "kirik-saglam/robot-saglam.jpg",
+  "207": {
+    "kaynak": "eski-yeni/canta-yeni.jpg",
+    "renk": "mavi"
+  },
+  "255": {
+    "kaynak": "kirisik-duzgun/gomlek-duzgun.jpg",
+    "renk": "mavi"
+  },
+  "268": {
+    "kaynak": "kirisik-duzgun/elbise-duzgun.jpg",
+    "renk": "mor"
+  },
+  "269": {
+    "kaynak": "kirisik-duzgun/etek-duzgun.jpg",
+    "renk": "pembe"
+  },
+  "276": "ters-duz/ayi-duz.jpg",
+  "296": "taze-bayat/simit-taze.jpg",
+  "297": "yenir-yenmez/cikolata_sabun-yenir.jpg",
+  "303": "acik-kapali/musluk-kapali.jpg",
+  "306": "duz-egri/civi-duz.jpg",
+  "308": "tek-cift/terlik-tek.jpg",
+  "310": "dolu-bos/akvaryum-dolu.jpg",
+  "330": "kirik-saglam/biskuvi-saglam.jpg",
+  "356": "eski-yeni/caydanlik-yeni.jpg",
+  "419": "agir-hafif/balkabagi_mandalina-hafif.jpg",
+  "432": "kirik-saglam/saksi-saglam.jpg",
+  "443": "acik-kapali/cicek-acik.jpg",
+  "447": "acik-kapali/kavanoz-kapali.jpg",
+  "449": "dolu-bos/sepet-dolu.jpg",
+  "592": "tek-cift/baget-tek.jpg",
+  "593": "acik-kapali/pencere-kapali.jpg",
+  "595": "acik-kapali/kapi-kapali.jpg",
+  "647": "islak-kuru/yaprak-kuru.jpg",
+  "671": "buyuk-kucuk/tencere-buyuk.jpg",
+  "682": "temiz-kirli/kopek-temiz.jpg",
+  "790": "butun-yarim-ceyrek/ekmek-butun.jpg",
+  "801": "seffaf-opak/su_sut-opak.jpg",
+  "803": "agir-hafif/balkabagi_mandalina-agir.jpg",
+  "811": "yenir-yenmez/meyvesuyu_sabun-yenir.jpg",
+  "814": "tehlikeli-guvenli/sprey_subisesi-guvenli.jpg",
+  "816": "islak-kuru/havlu-kuru.jpg",
+  "842": "ters-duz/fincan-duz.jpg",
+  "845": "tek-cift/kahveayakkabi-tek.jpg",
+  "846": "buyuk-kucuk/ayakkabi-buyuk.jpg",
+  "847": "tek-cift/sandalet-tek.jpg",
+  "848": "tek-cift/sandalet-tek.jpg"
+}

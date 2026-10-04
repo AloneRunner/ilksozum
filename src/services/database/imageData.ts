@@ -11,6 +11,16 @@ import { imageData_801_900 } from './imageData-801-900.ts';
 import { imageData_901_1000 } from './imageData-901-1000.ts';
 import { imageDataYeni } from './imageData-yeni.ts';
 import { YENI_SORULAR_AKTIF } from './activities/yeni/index.ts';
+import { NESNE_YENI, NESNE_RENK } from './nesneYeni.ts';
+
+// Nesne turu: eski nesnenin yeni gerçekçi görseli varsa adresi (ve gerekirse renk etiketi) değişir;
+// kelime, kategori, harf/hece bilgileri aynı kalır.
+const nesneYenile = (e: ImageMetadata): ImageMetadata => {
+    const url = YENI_SORULAR_AKTIF ? NESNE_YENI[e.id] : undefined;
+    if (!url) return e;
+    const renk = NESNE_RENK[e.id];
+    return { ...e, imageUrl: url, tags: renk ? { ...e.tags, color: renk } : e.tags };
+};
 
 
 // This is the new single source of truth for all image metadata,
@@ -26,6 +36,7 @@ export const imageData: ImageMetadata[] = [
     ...imageData_701_800,
     ...imageData_801_900,
     ...imageData_901_1000,
+].map(nesneYenile).concat([
     // Yeni gerçekçi görseller: yalnızca YENI_SORULAR_AKTIF iken (şimdilik geliştirme sunucusu)
     ...(YENI_SORULAR_AKTIF ? imageDataYeni : []),
-].sort((a, b) => a.id - b.id);
+]).sort((a, b) => a.id - b.id);

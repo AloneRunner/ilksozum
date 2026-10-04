@@ -1,0 +1,62 @@
+// Nesne turu: eski nesne görsellerinin yeni karşılıklarını bağlar.
+// Çalıştır: node tools/gorsel-envanter/uret-nesne.mjs && node tools/gorsel-envanter/gorsel-isle.mjs
+// Kaynaklar:
+//  1) gorsel-ham/nesne/<eskiId>-<ad>.jpg  → yeni görsel, id = 8000 + eskiId (sabit, takibi kolay)
+//  2) nesne-esleme.json { "<eskiId>": "<kavram klasörü>/<dosya>.jpg" } → kavram turundan hazır görsel yeniden kullanılır
+// Çıktı: yeni-gorseller.json ('nesne/' kayıtları), src/services/database/nesneYeni.ts (eskiId → yeni adres)
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const HERE = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(HERE, '../..');
+const RAW = path.join(ROOT, 'gorsel-ham');
+const LIST = path.join(HERE, 'yeni-gorseller.json');
+const OUT = path.join(ROOT, 'src/services/database/nesneYeni.ts');
+const ESLEME = path.join(HERE, 'nesne-esleme.json');
+
+const liste = JSON.parse(fs.readFileSync(LIST, 'utf8'));
+const nesneler = JSON.parse(fs.readFileSync(path.join(HERE, 'nesne-liste.json'), 'utf8')).kategoriler;
+const eskiKayit = Object.fromEntries(Object.values(nesneler).flat().map(e => [e.id, e]));
+
+const harita = {};
+const renkler = {}; // eşlemede renk verilirse (Kaan: eski renge uymak gerekmez) kayıttaki renk etiketi yenisiyle değişir
+const yeni = [];
+// 1) Yeni nesne görselleri
+const klasor = path.join(RAW, 'nesne');
+if (fs.existsSync(klasor)) {
+  for (const f of fs.readdirSync(klasor).filter(f => f.endsWith('.jpg')).sort()) {
+    const eskiId = Number(f.split('-')[0]);
+    if (!eskiId || !eskiKayit[eskiId]) { console.log('tanınmayan dosya:', f); continue; }
+    const id = 8000 + eskiId;
+    yeni.push({ id, kaynak: `nesne/${f}`, word: eskiKayit[eskiId].word, category: 'none', tags: { nesneEskiId: eskiId } });
+    harita[eskiId] = `/images/${id}.webp`;
+  }
+}
+// 2) Kavram turlarından yeniden kullanılanlar (kaynak dosyası zaten yeni-gorseller.json'da kayıtlı olmalı)
+const esleme = fs.existsSync(ESLEME) ? JSON.parse(fs.readFileSync(ESLEME, 'utf8')) : {};
+const kaynaktanId = Object.fromEntries(liste.gorseller.map(g => [g.kaynak, g.id]));
+for (const [eskiId, deger] of Object.entries(esleme)) {
+  if (harita[eskiId]) continue; // kendi yeni görseli varsa o öncelikli
+  const kaynak = typeof deger === 'string' ? deger : deger.kaynak;
+  if (typeof deger === 'object' && deger.renk) renkler[eskiId] = deger.renk;
+  const id = kaynaktanId[kaynak];
+  if (!id) { console.log('eşleme kaynağı kayıtlı değil:', eskiId, kaynak); continue; }
+  harita[eskiId] = `/images/${id}.webp`;
+}
+
+liste.gorseller = [...liste.gorseller.filter(g => !g.kaynak.startsWith('nesne/')), ...yeni].sort((a, b) => a.id - b.id);
+fs.writeFileSync(LIST, JSON.stringify(liste, null, 2) + '\n');
+
+const satirlar = Object.entries(harita).sort((a, b) => a[0] - b[0]).map(([k, v]) => `  ${k}: '${v}', // ${eskiKayit[k]?.word ?? ''}`);
+fs.writeFileSync(OUT, `// OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-nesne.mjs. Elle düzenleme.
+// Eski nesne görseli id → yeni gerçekçi görsel adresi (services/nesneGorsel.ts kullanır).
+export const NESNE_YENI: Record<number, string> = {
+${satirlar.join('\n')}
+};
+
+// Yeni görselin rengi eskisinden farklıysa (renk soruları doğru kalsın)
+export const NESNE_RENK: Record<number, string> = ${JSON.stringify(renkler)};
+`);
+const toplam = Object.keys(eskiKayit).length;
+console.log(`nesne: ${yeni.length} yeni görsel, ${Object.keys(harita).length - yeni.length} yeniden kullanım; ${Object.keys(harita).length}/${toplam} nesne yeni`);

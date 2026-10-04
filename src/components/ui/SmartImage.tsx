@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAppContext } from '../../contexts/AppContext.ts';
+import { nesneUrl } from '../../services/nesneGorsel.ts';
 
 interface SmartImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   disableRealistic?: boolean;
@@ -25,7 +26,9 @@ const getMirroredRealisticPath = (src: string): string => {
     return src.replace('/images/', '/realistic/');
 };
 
-const SmartImage: React.FC<SmartImageProps> = ({ src, disableRealistic, ...props }) => {
+const SmartImage: React.FC<SmartImageProps> = ({ src: hamSrc, disableRealistic, ...props }) => {
+    // Eski nesne görselinin yeni gerçekçi karşılığı varsa onu göster (nesne turu)
+    const src = typeof hamSrc === 'string' ? nesneUrl(hamSrc) : hamSrc;
     const { settings } = useAppContext();
     const [imageError, setImageError] = useState(false);
     const [realisticVariant, setRealisticVariant] = useState<'png' | 'mirrored'>('png');

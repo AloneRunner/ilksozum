@@ -1,4 +1,5 @@
 import React from 'react';
+import { nesneUrl } from '../services/nesneGorsel.ts';
 import { CommunicationCard } from '../types.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import PrintIcon from './icons/PrintIcon.tsx';
@@ -27,7 +28,7 @@ const PoolCard: React.FC<{ card: CommunicationCard; onRemove: () => void; }> = (
         <div className="relative w-full aspect-square bg-white p-2 flex flex-col items-center justify-end rounded-2xl shadow-md group">
              <div className="flex-grow w-full flex items-center justify-center overflow-hidden">
         {image ? (
-          <img src={image.imageUrl} alt={display} className="max-w-full max-h-full object-contain" />
+          <img src={nesneUrl(image.imageUrl)} alt={display} className="max-w-full max-h-full object-contain" />
                 ) : Icon ? (
                     <Icon className="w-2/3 h-2/3 text-slate-700" />
                 ) : null}

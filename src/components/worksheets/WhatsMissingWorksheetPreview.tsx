@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { nesneUrl } from '../../services/nesneGorsel.ts';
 import { WhatsMissingRound, WhatsMissingItem } from '../../services/database/activities/reasoning/whatsMissingData.ts';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
 import PrintIcon from '../icons/PrintIcon.tsx';
@@ -131,7 +132,7 @@ const WhatsMissingWorksheetPreview: React.FC<Props> = ({ rounds, onBack }) => {
                           style={{ width: cellSize, height: cellSize }}>
                           {isMissing
                             ? <span className="text-slate-300 font-black" style={{ fontSize: cellSize * 0.45 }}>?</span>
-                            : <img src={item.imageUrl} alt={item.word} className="object-contain p-1"
+                            : <img src={nesneUrl(item.imageUrl)} alt={item.word} className="object-contain p-1"
                                 style={{ maxWidth: cellSize - 6, maxHeight: cellSize - 6 }} />
                           }
                         </div>
@@ -150,7 +151,7 @@ const WhatsMissingWorksheetPreview: React.FC<Props> = ({ rounds, onBack }) => {
                       <div key={`${opt.id}-${si}`} className="flex flex-col items-center gap-1">
                         <div className="flex items-center justify-center rounded-lg border border-slate-200 bg-slate-50"
                           style={{ width: optSize, height: optSize }}>
-                          <img src={opt.imageUrl} alt={opt.word} className="object-contain p-1"
+                          <img src={nesneUrl(opt.imageUrl)} alt={opt.word} className="object-contain p-1"
                             style={{ maxWidth: optSize - 6, maxHeight: optSize - 6 }} />
                         </div>
                         <div className={`rounded-full border border-slate-400 ${cols === 2 ? 'w-4 h-4' : 'w-3.5 h-3.5'}`} />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { nesneUrl } from '../services/nesneGorsel.ts';
 import { CommunicationCategory, CommunicationSubCategory } from '../types.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { imageData } from '../services/database/imageData.ts';
@@ -28,7 +29,7 @@ const SubCategoryButton: React.FC<{
       onClick={onClick}
       className={`w-full h-full aspect-[4/3] relative text-white rounded-2xl shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-offset-2 overflow-hidden group bg-gradient-to-br ${bgClass}`}
     >
-      {image && <img src={image.imageUrl} alt={subCategory.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 opacity-50 group-hover:opacity-70" />}
+      {image && <img src={nesneUrl(image.imageUrl)} alt={subCategory.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 opacity-50 group-hover:opacity-70" />}
       <div className="absolute inset-0 bg-black/30"></div>
       <h2 className="relative z-10 text-lg font-bold text-center p-2">{(() => { const lang = getCurrentLanguage(); return lang === 'tr' ? subCategory.title : t(`communication.subcategories.${(subCategory as any).id}`, subCategory.title); })()}</h2>
     </button>

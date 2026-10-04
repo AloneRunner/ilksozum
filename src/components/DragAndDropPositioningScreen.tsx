@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { nesneUrl } from '../services/nesneGorsel.ts';
 import { DragAndDropPositioningRound } from '../types.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { speak, playEffect } from '../services/speechService.ts';
@@ -120,7 +121,7 @@ const DragAndDropPositioningScreen: React.FC<DragAndDropPositioningScreenProps> 
         >
             {isCorrect && roundData.correctZone === position && (
                 <div className="w-14 h-14 sm:w-16 sm:h-16 landscape:w-12 landscape:h-12 animate-pop-in">
-                    <img src={roundData.itemToDrag.imageUrl} alt="" className="w-full h-full pointer-events-none"/>
+                    <img src={nesneUrl(roundData.itemToDrag.imageUrl)} alt="" className="w-full h-full pointer-events-none"/>
                 </div>
             )}
         </div>
@@ -165,7 +166,7 @@ const DragAndDropPositioningScreen: React.FC<DragAndDropPositioningScreenProps> 
                             style={{ touchAction: 'none' }}
                             className={`w-16 h-16 sm:w-20 sm:h-20 landscape:w-20 landscape:h-20 cursor-grab ${isDragging ? 'cursor-grabbing' : ''} ${isWrong ? 'animate-shake' : ''} ${isCorrect ? 'hidden' : ''} absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
                         >
-                            <img src={roundData.itemToDrag.imageUrl} alt={roundData.itemToDrag.word} className="w-full h-full pointer-events-none"/>
+                            <img src={nesneUrl(roundData.itemToDrag.imageUrl)} alt={roundData.itemToDrag.word} className="w-full h-full pointer-events-none"/>
                         </div>
                 </div>
                 

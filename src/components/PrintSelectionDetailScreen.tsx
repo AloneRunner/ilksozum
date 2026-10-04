@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useCallback } from 'react';
+import { nesneUrl } from '../services/nesneGorsel.ts';
 import { CommunicationCard } from '../types.ts';
 import { imageData } from '../services/database/imageData.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
@@ -23,7 +24,7 @@ const SelectableCard: React.FC<{ card: CommunicationCard; onSelect: () => void; 
             onClick={onSelect}
             className="relative w-full aspect-square bg-white p-2 flex flex-col items-center justify-end rounded-2xl shadow-md group transition-transform transform hover:scale-105"
         >
-            <img src={image?.imageUrl || '/images/placeholder.png'} alt={display} className="absolute inset-0 w-full h-full object-cover rounded-2xl" />
+            <img src={nesneUrl(image?.imageUrl) || '/images/placeholder.png'} alt={display} className="absolute inset-0 w-full h-full object-cover rounded-2xl" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl"></div>
             <h2 className="relative text-sm font-bold text-white z-10 text-center">{display}</h2>
             {isSelected && (
