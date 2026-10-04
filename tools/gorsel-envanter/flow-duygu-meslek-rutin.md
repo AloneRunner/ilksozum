@@ -133,3 +133,17 @@ I am making picture cards for young children in special education. Photorealisti
 1. Head and shoulders of a 5-year-old boy with short brown hair in a yellow t-shirt, SAD: corners of the mouth down, sad eyes, a single tear. Same boy, same yellow t-shirt, same plain background as the happy and angry pictures.
 2. Head and shoulders of a 4-year-old boy with blond hair in a red t-shirt, SAD: mouth down, sad eyes. Same boy, same red t-shirt, same plain background as the angry and sleepy pictures.
 3. A football (soccer) player, a young man in a red sports jersey, holding a round black-and-white SOCCER ball, waist up, smiling, plain light background.
+
+Sonuç: futbolcu geldi. 1 ve 2'yi Flow'un güvenlik filtresi reddetti ("küçüklerle ilgili zararlı içerik"); büyük ihtimalle "tear" ve "sad eyes" yüzünden.
+
+### Üzgün yüzler, ikinci deneme
+
+**Yol A (önerilen): mevcut fotoğrafı düzenlet.** Flow'da sarı tişörtlü çocuğun MUTLU fotoğrafını açıp "düzenle" ile şunu yaz:
+
+Emotion flashcard for preschool learning. Keep the same child, same yellow t-shirt, same background and same camera. Change only the facial expression to a gentle, mildly unhappy face: a small pout, mouth corners slightly down, eyebrows slightly raised in the middle. Calm and soft, no tears.
+
+Aynısını kırmızı tişörtlü sarışın çocuğun KIZGIN fotoğrafı üzerinde yap ("same red t-shirt" diye değiştirerek).
+
+**Yol B: yeni görsel.**
+
+Emotion flashcard for a preschool feelings lesson, like a picture-book card. Head and shoulders of a calm 5-year-old boy with short brown hair in a yellow t-shirt, plain light background. He shows a gentle, mildly unhappy face: a small pout and mouth corners slightly down. Soft and friendly photo, no tears.

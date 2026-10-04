@@ -8668,6 +8668,16 @@
       }
     },
     {
+      "id": 6319,
+      "kaynak": "tekil/kisiler/futbolcu.jpg",
+      "word": "futbolcu",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
       "id": 6320,
       "kaynak": "tekil/odalar/mutfak.jpg",
       "word": "mutfak",
@@ -8915,6 +8925,16 @@
     },
     {
       "id": 6503,
+      "kaynak": "duygular/cocuk1-uzgun.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "duygu": "üzgün"
+      }
+    },
+    {
+      "id": 6504,
       "kaynak": "duygular/cocuk2-korkmus.jpg",
       "word": "çocuk",
       "category": "none",
@@ -8924,7 +8944,7 @@
       }
     },
     {
-      "id": 6504,
+      "id": 6505,
       "kaynak": "duygular/cocuk2-mutlu.jpg",
       "word": "çocuk",
       "category": "none",
@@ -8934,7 +8954,7 @@
       }
     },
     {
-      "id": 6505,
+      "id": 6506,
       "kaynak": "duygular/cocuk2-saskin.jpg",
       "word": "çocuk",
       "category": "none",
@@ -8944,7 +8964,7 @@
       }
     },
     {
-      "id": 6506,
+      "id": 6507,
       "kaynak": "duygular/cocuk3-kizgin.jpg",
       "word": "çocuk",
       "category": "none",
@@ -8954,7 +8974,7 @@
       }
     },
     {
-      "id": 6507,
+      "id": 6508,
       "kaynak": "duygular/cocuk3-uykulu.jpg",
       "word": "çocuk",
       "category": "none",
@@ -8964,7 +8984,17 @@
       }
     },
     {
-      "id": 6508,
+      "id": 6509,
+      "kaynak": "duygular/cocuk3-uzgun.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "duygu": "üzgün"
+      }
+    },
+    {
+      "id": 6510,
       "kaynak": "duygular/cocuk4-mutlu.jpg",
       "word": "çocuk",
       "category": "none",
@@ -8974,7 +9004,7 @@
       }
     },
     {
-      "id": 6509,
+      "id": 6511,
       "kaynak": "duygular/cocuk4-saskin.jpg",
       "word": "çocuk",
       "category": "none",
@@ -8984,7 +9014,7 @@
       }
     },
     {
-      "id": 6510,
+      "id": 6512,
       "kaynak": "duygular/cocuk4-uykulu.jpg",
       "word": "çocuk",
       "category": "none",

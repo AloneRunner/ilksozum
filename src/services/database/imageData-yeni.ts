@@ -22261,6 +22261,33 @@ export const imageDataYeni: ImageMetadata[] = [
     }
   },
   {
+    "id": 6319,
+    "word": "futbolcu",
+    "imageUrl": "/images/6319.webp",
+    "audioKeys": {
+      "default": "futbolcu"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "fut",
+        "bol",
+        "cu"
+      ],
+      "letters": [
+        "F",
+        "U",
+        "T",
+        "B",
+        "O",
+        "L",
+        "C",
+        "U"
+      ]
+    }
+  },
+  {
     "id": 6320,
     "word": "mutfak",
     "imageUrl": "/images/6320.webp",
@@ -22973,7 +23000,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "duygu": "korkmuş",
+      "duygu": "üzgün",
       "syllables": [
         "ço",
         "cuk"
@@ -22996,7 +23023,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "duygu": "mutlu",
+      "duygu": "korkmuş",
       "syllables": [
         "ço",
         "cuk"
@@ -23019,7 +23046,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "duygu": "şaşkın",
+      "duygu": "mutlu",
       "syllables": [
         "ço",
         "cuk"
@@ -23042,7 +23069,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "duygu": "kızgın",
+      "duygu": "şaşkın",
       "syllables": [
         "ço",
         "cuk"
@@ -23065,7 +23092,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "duygu": "uykulu",
+      "duygu": "kızgın",
       "syllables": [
         "ço",
         "cuk"
@@ -23088,7 +23115,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "duygu": "mutlu",
+      "duygu": "uykulu",
       "syllables": [
         "ço",
         "cuk"
@@ -23111,7 +23138,7 @@ export const imageDataYeni: ImageMetadata[] = [
     },
     "tags": {
       "category": "none",
-      "duygu": "şaşkın",
+      "duygu": "üzgün",
       "syllables": [
         "ço",
         "cuk"
@@ -23129,6 +23156,52 @@ export const imageDataYeni: ImageMetadata[] = [
     "id": 6510,
     "word": "çocuk",
     "imageUrl": "/images/6510.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "duygu": "mutlu",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6511,
+    "word": "çocuk",
+    "imageUrl": "/images/6511.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "duygu": "şaşkın",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6512,
+    "word": "çocuk",
+    "imageUrl": "/images/6512.webp",
     "audioKeys": {
       "default": "çocuk"
     },
