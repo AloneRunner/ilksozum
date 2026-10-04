@@ -10,6 +10,16 @@ interface HangmanScreenProps {
 }
 
 const MAX_WRONG_GUESSES = 6;
+// Çocuğun elindeki 6 balon (yay şeklinde)
+const EL_Y = 196;
+const BALONLAR = [
+  { x: 38, y: 92, renk: '#ef4444' },
+  { x: 72, y: 58, renk: '#f97316' },
+  { x: 108, y: 40, renk: '#eab308' },
+  { x: 144, y: 58, renk: '#22c55e' },
+  { x: 168, y: 98, renk: '#3b82f6' },
+  { x: 102, y: 102, renk: '#a855f7' },
+];
 
 const HangmanScreen: React.FC<HangmanScreenProps> = ({ onBack }) => {
   const [currentWord, setCurrentWord] = useState('');
@@ -140,62 +150,28 @@ const HangmanScreen: React.FC<HangmanScreenProps> = ({ onBack }) => {
           {/* Sol taraf: Adam çizimi */}
           <div className={`flex flex-col items-center ${isLandscape ? 'w-[220px] flex-shrink-0' : ''}`}>
             <div className={`bg-white rounded-lg ${isCompact ? 'p-4' : 'p-6'} shadow-inner ${isLandscape ? 'mb-2 -mt-1' : 'mb-4'}`}>
+              {/* Kaan: asılan adam yerine balonlar. Her yanlış harfte bir balon uçup gider. */}
               <svg
                 viewBox="0 0 200 250"
-                className="w-full h-full"
+                className="w-full h-full overflow-visible"
                 style={{ maxWidth: isCompact ? '150px' : isLandscape ? '180px' : '200px', maxHeight: isCompact ? '190px' : isLandscape ? '220px' : '250px' }}
               >
-                {/* Darağacı */}
-                <line x1="10" y1="230" x2="150" y2="230" stroke="#8B4513" strokeWidth="4" />
-                <line x1="50" y1="230" x2="50" y2="20" stroke="#8B4513" strokeWidth="4" />
-                <line x1="50" y1="20" x2="130" y2="20" stroke="#8B4513" strokeWidth="4" />
-                <line x1="130" y1="20" x2="130" y2="50" stroke="#8B4513" strokeWidth="4" />
-
-                {/* Kafa */}
-                {wrongGuesses >= 1 && (
-                  <circle cx="130" cy="70" r="20" stroke="#333" strokeWidth="3" fill="none" />
-                )}
-
-                {/* Gövde */}
-                {wrongGuesses >= 2 && (
-                  <line x1="130" y1="90" x2="130" y2="150" stroke="#333" strokeWidth="3" />
-                )}
-
-                {/* Sol kol */}
-                {wrongGuesses >= 3 && (
-                  <line x1="130" y1="110" x2="100" y2="130" stroke="#333" strokeWidth="3" />
-                )}
-
-                {/* Sağ kol */}
-                {wrongGuesses >= 4 && (
-                  <line x1="130" y1="110" x2="160" y2="130" stroke="#333" strokeWidth="3" />
-                )}
-
-                {/* Sol bacak */}
-                {wrongGuesses >= 5 && (
-                  <line x1="130" y1="150" x2="110" y2="190" stroke="#333" strokeWidth="3" />
-                )}
-
-                {/* Sağ bacak */}
-                {wrongGuesses >= 6 && (
-                  <line x1="130" y1="150" x2="150" y2="190" stroke="#333" strokeWidth="3" />
-                )}
+                {BALONLAR.map((b, i) => {
+                  const uctu = i < wrongGuesses;
+                  return (
+                    <g key={i} style={{ transform: uctu ? 'translate(0px, -170px)' : 'none', opacity: uctu ? 0 : 1, transition: 'transform 1.4s ease-in, opacity 1.4s ease-in' }}>
+                      <path d={`M ${b.x} ${b.y + 26} Q ${(b.x + 100) / 2 + 6} ${(b.y + 200) / 2} 100 ${EL_Y}`} stroke="#94a3b8" strokeWidth="1.5" fill="none" />
+                      <ellipse cx={b.x} cy={b.y} rx="19" ry="24" fill={b.renk} />
+                      <ellipse cx={b.x - 6} cy={b.y - 9} rx="5" ry="7" fill="white" opacity="0.45" />
+                      <path d={`M ${b.x - 4} ${b.y + 26} L ${b.x} ${b.y + 22} L ${b.x + 4} ${b.y + 26} Z`} fill={b.renk} />
+                    </g>
+                  );
+                })}
+                <text x="100" y="242" fontSize="54" textAnchor="middle">{gameStatus === 'lost' ? '😮' : gameStatus === 'won' ? '😄' : '🧒'}</text>
               </svg>
             </div>
             <div className={`text-center ${isLandscape ? 'mt-1' : ''}`}>
-              <p className={`${isCompact ? 'text-[11px]' : 'text-sm'} text-gray-600 mb-1`}>{t('games.hangman.remainingLives', 'Kalan Hak')}: {MAX_WRONG_GUESSES - wrongGuesses}</p>
-              <div className="flex gap-1 justify-center">
-                {Array.from({ length: MAX_WRONG_GUESSES }).map((_, i) => (
-                  <span
-                    key={i}
-                    className={`${isCompact ? 'text-lg' : 'text-2xl'} ${
-                      i < MAX_WRONG_GUESSES - wrongGuesses ? '❤️' : '🖤'
-                    }`}
-                  >
-                    {i < MAX_WRONG_GUESSES - wrongGuesses ? '❤️' : '🖤'}
-                  </span>
-                ))}
-              </div>
+              <p className={`${isCompact ? 'text-[11px]' : 'text-sm'} text-gray-600 mb-1`}>Kalan balon: {MAX_WRONG_GUESSES - wrongGuesses}</p>
             </div>
           </div>
 
@@ -248,9 +224,9 @@ const HangmanScreen: React.FC<HangmanScreenProps> = ({ onBack }) => {
             )}
 
             {gameStatus === 'lost' && (
-              <div className="bg-red-100 border-2 border-red-500 rounded-lg p-4 mb-4 text-center">
-                <p className="text-2xl font-bold text-red-700">😔 {t('games.hangman.youLoseTitle', 'Kaybettin')}</p>
-                <p className="text-red-600">
+              <div className="bg-orange-50 border-2 border-orange-300 rounded-lg p-4 mb-4 text-center">
+                <p className="text-2xl font-bold text-orange-600">🎈 Balonlar uçtu!</p>
+                <p className="text-orange-700">
                   {t('games.hangman.wordLabel', 'Kelime')}: <span className="font-bold">{currentWord}</span>
                 </p>
               </div>
