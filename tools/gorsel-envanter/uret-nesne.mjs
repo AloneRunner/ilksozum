@@ -54,7 +54,7 @@ let yeniKelimeSay = 0;
 yeniKelimeler.forEach((k, i) => {
   const dosya = `nesne-yeni/${k.ad}.jpg`;
   if (!fs.existsSync(path.join(RAW, dosya))) return;
-  yeni.push({ id: 9001 + i, kaynak: dosya, word: k.word, category: k.category, tags: k.color ? { color: k.color } : {} });
+  yeni.push({ id: 9001 + i, kaynak: dosya, word: k.word, category: k.category, ...(k.sahne ? { sahne: true } : {}), tags: k.color ? { color: k.color } : {} });
   yeniKelimeSay++;
 });
 

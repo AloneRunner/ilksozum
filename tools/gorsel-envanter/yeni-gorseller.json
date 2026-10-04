@@ -11160,6 +11160,76 @@
       "tags": {
         "color": "çok renkli"
       }
+    },
+    {
+      "id": 9019,
+      "kaynak": "nesne-yeni/kopek-yavrusu.jpg",
+      "word": "köpek yavrusu",
+      "category": "Hayvanlar",
+      "sahne": true,
+      "tags": {
+        "color": "sarı"
+      }
+    },
+    {
+      "id": 9020,
+      "kaynak": "nesne-yeni/kedi-yavrusu.jpg",
+      "word": "kedi yavrusu",
+      "category": "Hayvanlar",
+      "sahne": true,
+      "tags": {
+        "color": "gri"
+      }
+    },
+    {
+      "id": 9021,
+      "kaynak": "nesne-yeni/buzagi.jpg",
+      "word": "buzağı",
+      "category": "Hayvanlar",
+      "sahne": true,
+      "tags": {
+        "color": "kahverengi"
+      }
+    },
+    {
+      "id": 9022,
+      "kaynak": "nesne-yeni/tay.jpg",
+      "word": "tay",
+      "category": "Hayvanlar",
+      "sahne": true,
+      "tags": {
+        "color": "kahverengi"
+      }
+    },
+    {
+      "id": 9023,
+      "kaynak": "nesne-yeni/aslan-yavrusu.jpg",
+      "word": "aslan yavrusu",
+      "category": "Hayvanlar",
+      "sahne": true,
+      "tags": {
+        "color": "sarı"
+      }
+    },
+    {
+      "id": 9024,
+      "kaynak": "nesne-yeni/tirtil.jpg",
+      "word": "tırtıl",
+      "category": "Hayvanlar",
+      "sahne": true,
+      "tags": {
+        "color": "yeşil"
+      }
+    },
+    {
+      "id": 9025,
+      "kaynak": "nesne-yeni/sahin.jpg",
+      "word": "şahin",
+      "category": "Hayvanlar",
+      "sahne": true,
+      "tags": {
+        "color": "kahverengi"
+      }
     }
   ]
 }

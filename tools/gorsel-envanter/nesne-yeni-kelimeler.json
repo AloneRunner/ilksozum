@@ -106,5 +106,102 @@
     "word": "şeker",
     "category": "Diğer Yiyecekler",
     "color": "çok renkli"
+  },
+  {
+    "ad": "kopek-yavrusu",
+    "word": "köpek yavrusu",
+    "category": "Hayvanlar",
+    "color": "sarı",
+    "sahne": true
+  },
+  {
+    "ad": "kedi-yavrusu",
+    "word": "kedi yavrusu",
+    "category": "Hayvanlar",
+    "color": "gri",
+    "sahne": true
+  },
+  {
+    "ad": "buzagi",
+    "word": "buzağı",
+    "category": "Hayvanlar",
+    "color": "kahverengi",
+    "sahne": true
+  },
+  {
+    "ad": "tay",
+    "word": "tay",
+    "category": "Hayvanlar",
+    "color": "kahverengi",
+    "sahne": true
+  },
+  {
+    "ad": "aslan-yavrusu",
+    "word": "aslan yavrusu",
+    "category": "Hayvanlar",
+    "color": "sarı",
+    "sahne": true
+  },
+  {
+    "ad": "tirtil",
+    "word": "tırtıl",
+    "category": "Hayvanlar",
+    "color": "yeşil",
+    "sahne": true
+  },
+  {
+    "ad": "sahin",
+    "word": "şahin",
+    "category": "Hayvanlar",
+    "color": "kahverengi",
+    "sahne": true
+  },
+  {
+    "ad": "kartal",
+    "word": "kartal",
+    "category": "Hayvanlar",
+    "color": "kahverengi"
+  },
+  {
+    "ad": "karinca",
+    "word": "karınca",
+    "category": "Hayvanlar",
+    "color": "siyah"
+  },
+  {
+    "ad": "yarasa",
+    "word": "yarasa",
+    "category": "Hayvanlar",
+    "color": "siyah"
+  },
+  {
+    "ad": "leylek",
+    "word": "leylek",
+    "category": "Hayvanlar",
+    "color": "beyaz"
+  },
+  {
+    "ad": "guvercin",
+    "word": "güvercin",
+    "category": "Hayvanlar",
+    "color": "gri"
+  },
+  {
+    "ad": "kaz",
+    "word": "kaz",
+    "category": "Hayvanlar",
+    "color": "beyaz"
+  },
+  {
+    "ad": "oglak",
+    "word": "oğlak",
+    "category": "Hayvanlar",
+    "color": "beyaz"
+  },
+  {
+    "ad": "ayi-yavrusu",
+    "word": "ayı yavrusu",
+    "category": "Hayvanlar",
+    "color": "kahverengi"
   }
 ]

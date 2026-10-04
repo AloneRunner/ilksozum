@@ -6,9 +6,12 @@ export const NESNE_YENI: Record<number, string> = {
   13: '/images/3420.webp', // tişört
   23: '/images/2819.webp', // pizza
   27: '/images/6853.webp', // pamuk
+  28: '/images/6207.webp', // fil
   34: '/images/3917.webp', // vazo
   36: '/images/3416.webp', // kitap
   39: '/images/3008.webp', // kapı
+  41: '/images/6013.webp', // tavşan
+  42: '/images/3503.webp', // kaplumbağa
   43: '/images/2307.webp', // elma
   46: '/images/3214.webp', // köpek
   50: '/images/6815.webp', // peynir
@@ -26,6 +29,8 @@ export const NESNE_YENI: Record<number, string> = {
   94: '/images/8094.webp', // fındık
   96: '/images/5717.webp', // sandalye
   98: '/images/6807.webp', // havuç
+  100: '/images/4201.webp', // aslan
+  102: '/images/4209.webp', // horoz
   110: '/images/3408.webp', // bisiklet
   112: '/images/5006.webp', // ekmek
   114: '/images/5014.webp', // muz
@@ -39,6 +44,7 @@ export const NESNE_YENI: Record<number, string> = {
   130: '/images/2305.webp', // balon
   137: '/images/2320.webp', // yastık
   140: '/images/8140.webp', // kahve
+  145: '/images/6005.webp', // çita
   153: '/images/3118.webp', // tabak
   156: '/images/2317.webp', // top
   157: '/images/3019.webp', // şemsiye
@@ -49,6 +55,7 @@ export const NESNE_YENI: Record<number, string> = {
   177: '/images/3112.webp', // robot
   207: '/images/3410.webp', // çanta
   218: '/images/8218.webp', // pirinç
+  222: '/images/6006.webp', // salyangoz
   227: '/images/8227.webp', // biber
   228: '/images/8228.webp', // bal
   240: '/images/8240.webp', // lolipop
@@ -59,10 +66,13 @@ export const NESNE_YENI: Record<number, string> = {
   267: '/images/8267.webp', // makarna
   268: '/images/4701.webp', // elbise
   269: '/images/4703.webp', // etek
+  274: '/images/6208.webp', // kelebek
   276: '/images/5703.webp', // oyuncak ayı
   278: '/images/8278.webp', // kiraz
   279: '/images/8279.webp', // ananas
   280: '/images/8280.webp', // patlıcan
+  290: '/images/5201.webp', // at
+  291: '/images/4212.webp', // inek
   294: '/images/8294.webp', // vişne
   295: '/images/8295.webp', // kavun
   296: '/images/5020.webp', // simit
@@ -82,6 +92,7 @@ export const NESNE_YENI: Record<number, string> = {
   360: '/images/8360.webp', // jöle
   365: '/images/8365.webp', // armut
   366: '/images/8366.webp', // sosisli sandviç
+  418: '/images/3813.webp', // kirpi
   419: '/images/6202.webp', // mandalina
   420: '/images/8420.webp', // ıspanak
   421: '/images/8421.webp', // pırasa
@@ -89,13 +100,17 @@ export const NESNE_YENI: Record<number, string> = {
   443: '/images/3003.webp', // çiçek
   447: '/images/3010.webp', // kavanoz
   449: '/images/2618.webp', // sepet
+  462: '/images/4417.webp', // kuzu
   486: '/images/8486.webp', // pasta dilimi
   498: '/images/8498.webp', // nar
+  580: '/images/3504.webp', // kedi
   588: '/images/8588.webp', // hamur
   592: '/images/6954.webp', // davul çubuğu
   593: '/images/3018.webp', // pencere
   595: '/images/3008.webp', // kapı
+  617: '/images/5615.webp', // kuşlar
   623: '/images/8623.webp', // sandviç
+  627: '/images/5612.webp', // kediler
   635: '/images/8140.webp', // kahve
   636: '/images/8636.webp', // turp
   637: '/images/8637.webp', // greyfurt
@@ -111,8 +126,12 @@ export const NESNE_YENI: Record<number, string> = {
   650: '/images/8650.webp', // ceviz
   671: '/images/2315.webp', // tencere
   682: '/images/3214.webp', // köpek
+  684: '/images/6010.webp', // tembel hayvan
+  692: '/images/3805.webp', // deniz kestanesi
   695: '/images/8695.webp', // enginar
   704: '/images/8704.webp', // roka
+  740: '/images/5205.webp', // balık
+  763: '/images/3814.webp', // yunus
   787: '/images/8787.webp', // yeşil biber
   788: '/images/8788.webp', // tavuk
   789: '/images/8789.webp', // sulu yemek
@@ -143,6 +162,8 @@ export const NESNE_YENI: Record<number, string> = {
   853: '/images/8853.webp', // mısır
   854: '/images/8854.webp', // dolma biber
   860: '/images/8860.webp', // salam
+  865: '/images/4208.webp', // eşek
+  915: '/images/5205.webp', // balık
   928: '/images/8928.webp', // bezelye
   931: '/images/8931.webp', // kereviz
   943: '/images/8943.webp', // sarımsak
