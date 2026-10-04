@@ -9445,6 +9445,420 @@
       "tags": {
         "count": 5
       }
+    },
+    {
+      "id": 6801,
+      "kaynak": "yenir-yenmez/cikolata_sabun-yenir.jpg",
+      "word": "çikolata",
+      "category": "none",
+      "tags": {
+        "yenir": "yenir"
+      }
+    },
+    {
+      "id": 6802,
+      "kaynak": "yenir-yenmez/cikolata_sabun-yenmez.jpg",
+      "word": "sabun",
+      "category": "none",
+      "tags": {
+        "yenir": "yenmez"
+      }
+    },
+    {
+      "id": 6803,
+      "kaynak": "yenir-yenmez/elma_top-yenir.jpg",
+      "word": "elma",
+      "category": "none",
+      "tags": {
+        "yenir": "yenir"
+      }
+    },
+    {
+      "id": 6804,
+      "kaynak": "yenir-yenmez/elma_top-yenmez.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "yenir": "yenmez"
+      }
+    },
+    {
+      "id": 6805,
+      "kaynak": "yenir-yenmez/havuc_boya-yenir.jpg",
+      "word": "havuç",
+      "category": "none",
+      "tags": {
+        "yenir": "yenir"
+      }
+    },
+    {
+      "id": 6806,
+      "kaynak": "yenir-yenmez/havuc_boya-yenmez.jpg",
+      "word": "pastel boya",
+      "category": "none",
+      "tags": {
+        "yenir": "yenmez"
+      }
+    },
+    {
+      "id": 6807,
+      "kaynak": "yenir-yenmez/kurabiye_altlik-yenir.jpg",
+      "word": "kurabiye",
+      "category": "none",
+      "tags": {
+        "yenir": "yenir"
+      }
+    },
+    {
+      "id": 6808,
+      "kaynak": "yenir-yenmez/kurabiye_altlik-yenmez.jpg",
+      "word": "bardak altlığı",
+      "category": "none",
+      "tags": {
+        "yenir": "yenmez"
+      }
+    },
+    {
+      "id": 6809,
+      "kaynak": "yenir-yenmez/peynir_sunger-yenir.jpg",
+      "word": "peynir",
+      "category": "none",
+      "tags": {
+        "yenir": "yenir"
+      }
+    },
+    {
+      "id": 6810,
+      "kaynak": "yenir-yenmez/peynir_sunger-yenmez.jpg",
+      "word": "sünger",
+      "category": "none",
+      "tags": {
+        "yenir": "yenmez"
+      }
+    },
+    {
+      "id": 6811,
+      "kaynak": "yenir-yenmez/seker_dugme-yenir.jpg",
+      "word": "şeker",
+      "category": "none",
+      "tags": {
+        "yenir": "yenir"
+      }
+    },
+    {
+      "id": 6812,
+      "kaynak": "yenir-yenmez/seker_dugme-yenmez.jpg",
+      "word": "düğme",
+      "category": "none",
+      "tags": {
+        "yenir": "yenmez"
+      }
+    },
+    {
+      "id": 6813,
+      "kaynak": "yenir-yenmez/uzum_bilye-yenir.jpg",
+      "word": "üzüm",
+      "category": "none",
+      "tags": {
+        "yenir": "yenir"
+      }
+    },
+    {
+      "id": 6814,
+      "kaynak": "yenir-yenmez/uzum_bilye-yenmez.jpg",
+      "word": "bilye",
+      "category": "none",
+      "tags": {
+        "yenir": "yenmez"
+      }
+    },
+    {
+      "id": 6851,
+      "kaynak": "tehlikeli-guvenli/bicak_kasik-guvenli.jpg",
+      "word": "kaşık",
+      "category": "none",
+      "tags": {
+        "guvenlik": "güvenli"
+      }
+    },
+    {
+      "id": 6852,
+      "kaynak": "tehlikeli-guvenli/bicak_kasik-tehlikeli.jpg",
+      "word": "bıçak",
+      "category": "none",
+      "tags": {
+        "guvenlik": "tehlikeli"
+      }
+    },
+    {
+      "id": 6853,
+      "kaynak": "tehlikeli-guvenli/kibrit_boya-guvenli.jpg",
+      "word": "pastel boya",
+      "category": "none",
+      "tags": {
+        "guvenlik": "güvenli"
+      }
+    },
+    {
+      "id": 6854,
+      "kaynak": "tehlikeli-guvenli/kibrit_boya-tehlikeli.jpg",
+      "word": "yanan kibrit",
+      "category": "none",
+      "tags": {
+        "guvenlik": "tehlikeli"
+      }
+    },
+    {
+      "id": 6855,
+      "kaynak": "tehlikeli-guvenli/kirikbardak_bardak-guvenli.jpg",
+      "word": "plastik bardak",
+      "category": "none",
+      "tags": {
+        "guvenlik": "güvenli"
+      }
+    },
+    {
+      "id": 6856,
+      "kaynak": "tehlikeli-guvenli/kirikbardak_bardak-tehlikeli.jpg",
+      "word": "kırık bardak",
+      "category": "none",
+      "tags": {
+        "guvenlik": "tehlikeli"
+      }
+    },
+    {
+      "id": 6857,
+      "kaynak": "tehlikeli-guvenli/makas_ayi-guvenli.jpg",
+      "word": "oyuncak ayı",
+      "category": "none",
+      "tags": {
+        "guvenlik": "güvenli"
+      }
+    },
+    {
+      "id": 6858,
+      "kaynak": "tehlikeli-guvenli/makas_ayi-tehlikeli.jpg",
+      "word": "makas",
+      "category": "none",
+      "tags": {
+        "guvenlik": "tehlikeli"
+      }
+    },
+    {
+      "id": 6859,
+      "kaynak": "tehlikeli-guvenli/priz_blok-guvenli.jpg",
+      "word": "oyuncak blok",
+      "category": "none",
+      "tags": {
+        "guvenlik": "güvenli"
+      }
+    },
+    {
+      "id": 6860,
+      "kaynak": "tehlikeli-guvenli/priz_blok-tehlikeli.jpg",
+      "word": "priz",
+      "category": "none",
+      "tags": {
+        "guvenlik": "tehlikeli"
+      }
+    },
+    {
+      "id": 6861,
+      "kaynak": "tehlikeli-guvenli/tencere_oyuncak-guvenli.jpg",
+      "word": "oyuncak tencere",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "guvenlik": "güvenli"
+      }
+    },
+    {
+      "id": 6862,
+      "kaynak": "tehlikeli-guvenli/tencere_oyuncak-tehlikeli.jpg",
+      "word": "kaynayan tencere",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "guvenlik": "tehlikeli"
+      }
+    },
+    {
+      "id": 6863,
+      "kaynak": "tehlikeli-guvenli/utu_yastik-guvenli.jpg",
+      "word": "yastık",
+      "category": "none",
+      "tags": {
+        "guvenlik": "güvenli"
+      }
+    },
+    {
+      "id": 6864,
+      "kaynak": "tehlikeli-guvenli/utu_yastik-tehlikeli.jpg",
+      "word": "sıcak ütü",
+      "category": "none",
+      "tags": {
+        "guvenlik": "tehlikeli"
+      }
+    },
+    {
+      "id": 6901,
+      "kaynak": "hava/cocuk-gunesli.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "güneşli"
+      }
+    },
+    {
+      "id": 6902,
+      "kaynak": "hava/cocuk-karli.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "karlı"
+      }
+    },
+    {
+      "id": 6903,
+      "kaynak": "hava/cocuk-ruzgarli.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "rüzgârlı"
+      }
+    },
+    {
+      "id": 6904,
+      "kaynak": "hava/cocuk-yagmurlu.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "yağmurlu"
+      }
+    },
+    {
+      "id": 6905,
+      "kaynak": "hava/ev-gunesli.jpg",
+      "word": "ev",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "güneşli"
+      }
+    },
+    {
+      "id": 6906,
+      "kaynak": "hava/ev-karli.jpg",
+      "word": "ev",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "karlı"
+      }
+    },
+    {
+      "id": 6907,
+      "kaynak": "hava/ev-ruzgarli.jpg",
+      "word": "ev",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "rüzgârlı"
+      }
+    },
+    {
+      "id": 6908,
+      "kaynak": "hava/ev-yagmurlu.jpg",
+      "word": "ev",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "yağmurlu"
+      }
+    },
+    {
+      "id": 6909,
+      "kaynak": "hava/park-gunesli.jpg",
+      "word": "oyun parkı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "güneşli"
+      }
+    },
+    {
+      "id": 6910,
+      "kaynak": "hava/park-karli.jpg",
+      "word": "oyun parkı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "karlı"
+      }
+    },
+    {
+      "id": 6911,
+      "kaynak": "hava/park-ruzgarli.jpg",
+      "word": "oyun parkı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "rüzgârlı"
+      }
+    },
+    {
+      "id": 6912,
+      "kaynak": "hava/park-yagmurlu.jpg",
+      "word": "oyun parkı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "yağmurlu"
+      }
+    },
+    {
+      "id": 6913,
+      "kaynak": "hava/yol-gunesli.jpg",
+      "word": "park yolu",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "güneşli"
+      }
+    },
+    {
+      "id": 6914,
+      "kaynak": "hava/yol-karli.jpg",
+      "word": "park yolu",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "karlı"
+      }
+    },
+    {
+      "id": 6915,
+      "kaynak": "hava/yol-ruzgarli.jpg",
+      "word": "park yolu",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "rüzgârlı"
+      }
+    },
+    {
+      "id": 6916,
+      "kaynak": "hava/yol-yagmurlu.jpg",
+      "word": "park yolu",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "hava": "yağmurlu"
+      }
     }
   ]
 }

@@ -60,6 +60,9 @@ const getActivityName = (activityType: ActivityType | string): string => {
     if (activityType === ActivityType.SivriKut) return t('concepts.activities.pointedBlunt', 'Sivri / Küt');
     if (activityType === ActivityType.ParlakMat) return t('concepts.activities.shinyMatte', 'Parlak / Mat');
     if (activityType === ActivityType.AcikKoyu) return t('concepts.activities.acikKoyu', 'Açık / Koyu');
+    if (activityType === ActivityType.HavaDurumu) return t('concepts.activities.havaDurumu', 'Hava Durumu');
+    if (activityType === ActivityType.TehlikeliGuvenli) return t('concepts.activities.tehlikeliGuvenli', 'Tehlikeli / Güvenli');
+    if (activityType === ActivityType.YenirYenmez) return t('concepts.activities.yenirYenmez', 'Yenir / Yenmez');
     if (activityType === ActivityType.TembelCaliskan) return t('concepts.activities.lazyHardworking', 'Tembel / Çalışkan');
     if (activityType === ActivityType.SeffafOpak) return t('concepts.activities.transparentOpaque', 'Şeffaf / Opak');
     if (activityType === ActivityType.DikenliPuruzsuz) return t('concepts.activities.thornySmooth', 'Dikenli / Pürüzsüz');

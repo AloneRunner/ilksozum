@@ -517,6 +517,27 @@ export const ACTIVITY_METADATA_MAP: Record<string, ActivityMetadata> = {
     prerequisite: 'oyuncaklar',
     masteryRule: { poolType: MasteryPoolType.NARROW, perfectSessionsRequired: 2 }
   },
+  [ActivityType.YenirYenmez]: {
+    activityId: ActivityType.YenirYenmez,
+    activityName: 'Yenir / Yenmez',
+    unitNumber: 7,
+    prerequisite: 'oyuncaklar',
+    masteryRule: { poolType: MasteryPoolType.NARROW, perfectSessionsRequired: 2 }
+  },
+  [ActivityType.TehlikeliGuvenli]: {
+    activityId: ActivityType.TehlikeliGuvenli,
+    activityName: 'Tehlikeli / Güvenli',
+    unitNumber: 7,
+    prerequisite: 'oyuncaklar',
+    masteryRule: { poolType: MasteryPoolType.NARROW, perfectSessionsRequired: 2 }
+  },
+  [ActivityType.HavaDurumu]: {
+    activityId: ActivityType.HavaDurumu,
+    activityName: 'Hava Durumu',
+    unitNumber: 7,
+    prerequisite: 'oyuncaklar',
+    masteryRule: { poolType: MasteryPoolType.NARROW, perfectSessionsRequired: 2 }
+  },
   [ActivityType.OldNew]: {
     activityId: ActivityType.OldNew,
     activityName: 'Eski / Yeni',

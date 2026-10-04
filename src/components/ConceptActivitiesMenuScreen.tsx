@@ -95,6 +95,21 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
           title: isTr ? "Açık / Koyu" : t("concepts.activities.acikKoyu", "Light / Dark"),
           subtitle: isTr ? "Renk tonlarını ayırt et" : t("concepts.subtitles.lightDark", "Tell light and dark colors apart"),
         },
+        {
+          type: ActivityType.HavaDurumu,
+          title: isTr ? "Hava Durumu" : t("concepts.activities.havaDurumu", "Weather"),
+          subtitle: isTr ? "Güneş, yağmur, kar, rüzgâr" : t("concepts.subtitles.havaDurumu", "Sun, rain, snow, wind"),
+        },
+        {
+          type: ActivityType.TehlikeliGuvenli,
+          title: isTr ? "Tehlikeli / Güvenli" : t("concepts.activities.tehlikeliGuvenli", "Dangerous / Safe"),
+          subtitle: isTr ? "Tehlikeleri tanı" : t("concepts.subtitles.tehlikeliGuvenli", "Recognize dangers"),
+        },
+        {
+          type: ActivityType.YenirYenmez,
+          title: isTr ? "Yenir / Yenmez" : t("concepts.activities.yenirYenmez", "Edible / Not edible"),
+          subtitle: isTr ? "Ağza ne alınır, ne alınmaz?" : t("concepts.subtitles.yenirYenmez", "Tell what we can eat"),
+        },
       ],
     },
     {

@@ -624,6 +624,49 @@ const KAVRAMLAR = [
       tisort: 'tişört', elbise: 'elbise', cizme: 'çizme', sise: 'şişe', kova: 'çöp kovası' },
   },
   {
+    klasor: 'yenir-yenmez', dosya: 'yenirYenmezData.ts', exportAdi: 'yenirYenmezDataYeni',
+    activityType: 'YenirYenmez', idBaslangic: 6801, etiket: 'yenir',
+    // Birbirine benzeyen ikililer (üzüm / bilye): çocuk ağza alınacak şeyi ayırt etmeyi öğrensin
+    a: { ek: 'yenir', deger: 'yenir', soru: 'Hangisi yenir?', sifat: 'yenir' },
+    b: { ek: 'yenmez', deger: 'yenmez', soru: 'Hangisi yenmez?', sifat: 'yenmez' },
+    kelime: {
+      uzum_bilye: { yenir: 'üzüm', yenmez: 'bilye' }, seker_dugme: { yenir: 'şeker', yenmez: 'düğme' },
+      peynir_sunger: { yenir: 'peynir', yenmez: 'sünger' }, havuc_boya: { yenir: 'havuç', yenmez: 'pastel boya' },
+      cikolata_sabun: { yenir: 'çikolata', yenmez: 'sabun' }, elma_top: { yenir: 'elma', yenmez: 'top' },
+      kurabiye_altlik: { yenir: 'kurabiye', yenmez: 'bardak altlığı' },
+    },
+  },
+  {
+    klasor: 'tehlikeli-guvenli', dosya: 'tehlikeliGuvenliData.ts', exportAdi: 'tehlikeliGuvenliDataYeni',
+    activityType: 'TehlikeliGuvenli', idBaslangic: 6851, etiket: 'guvenlik',
+    a: { ek: 'tehlikeli', deger: 'tehlikeli', soru: 'Hangisi tehlikeli?', sifat: 'tehlikelidir' },
+    b: { ek: 'guvenli', deger: 'güvenli', soru: 'Hangisi güvenli?', sifat: 'güvenlidir' },
+    sahneNesneler: ['tencere_oyuncak'],
+    kelime: {
+      bicak_kasik: { tehlikeli: 'bıçak', guvenli: 'kaşık' }, makas_ayi: { tehlikeli: 'makas', guvenli: 'oyuncak ayı' },
+      priz_blok: { tehlikeli: 'priz', guvenli: 'oyuncak blok' }, utu_yastik: { tehlikeli: 'sıcak ütü', guvenli: 'yastık' },
+      kibrit_boya: { tehlikeli: 'yanan kibrit', guvenli: 'pastel boya' }, kirikbardak_bardak: { tehlikeli: 'kırık bardak', guvenli: 'plastik bardak' },
+      tencere_oyuncak: { tehlikeli: 'kaynayan tencere', guvenli: 'oyuncak tencere' },
+    },
+  },
+  {
+    klasor: 'hava', dosya: 'havaDurumuData.ts', exportAdi: 'havaDurumuDataYeni',
+    activityType: 'HavaDurumu', idBaslangic: 6901, etiket: 'hava',
+    sahne: true,
+    haller: {
+      gunesli: { deger: 'güneşli', soru: 'Hangi resimde hava güneşli?', sifat: 'hava güneşli' },
+      yagmurlu: { deger: 'yağmurlu', soru: 'Hangi resimde yağmur yağıyor?', sifat: 'yağmur yağıyor' },
+      karli: { deger: 'karlı', soru: 'Hangi resimde kar yağıyor?', sifat: 'kar yağıyor' },
+      ruzgarli: { deger: 'rüzgârlı', soru: 'Hangi resimde rüzgâr esiyor?', sifat: 'rüzgâr esiyor' },
+    },
+    // Yağmurlu ile rüzgârlı yan yana yok (ikisi de gri, karışabilir)
+    ciftler: [['gunesli', 'yagmurlu'], ['gunesli', 'karli'], ['gunesli', 'ruzgarli'], ['yagmurlu', 'karli']],
+    soruKalip: (w, d) => ({ 'güneşli': 'Hangi resimde hava güneşli?', 'yağmurlu': 'Hangi resimde yağmur yağıyor?', 'karlı': 'Hangi resimde kar yağıyor?', 'rüzgârlı': 'Hangi resimde rüzgâr esiyor?' })[d],
+    buYok: true,
+    ozne: { ev: 'burada', park: 'burada', yol: 'burada', cocuk: 'burada' },
+    kelime: { ev: 'ev', park: 'oyun parkı', yol: 'park yolu', cocuk: 'çocuk' },
+  },
+  {
     klasor: 'kirisik-duzgun', dosya: 'kirisikDuzgunData.ts', exportAdi: 'kirisikDuzgunDataYeni',
     activityType: 'KirisikDuzgun', idBaslangic: 4701, etiket: 'condition', sahneNesneler: ['masaortusu', 'ortu', 'perde'],
     a: { ek: 'kirisik', deger: 'kırışık', soru: 'Kırışık olan hangisi?', sifat: 'kırışıktır' },

@@ -79,7 +79,8 @@ const ts = `// OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/gorsel-isle.mjs
 // Elle düzenleme; tools/gorsel-envanter/yeni-gorseller.json dosyasını değiştirip betiği yeniden çalıştır.
 import { ImageMetadata } from '../../types.ts';
 
-export const imageDataYeni: ImageMetadata[] = ${JSON.stringify(entries, null, 2)} as ImageMetadata[];
+// JSON metni olarak: 1000+ kayıtlık dizi literalinde TypeScript tip çıkaramıyor (TS2590)
+export const imageDataYeni: ImageMetadata[] = JSON.parse(${JSON.stringify(JSON.stringify(entries))});
 `;
 fs.writeFileSync(OUT_TS, ts);
 // Listede artık olmayan yeni görsel dosyalarını (2001-9999) sil. 5401-5499 saat (uret-saat.mjs kodla çizer), dokunma.

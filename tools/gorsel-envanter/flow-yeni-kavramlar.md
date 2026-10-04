@@ -95,5 +95,57 @@ PART F: COUNTING HANDS (the SAME child's hand, palm toward the camera, plain lig
 
 Start with IMAGE 1.
 
-## Sonuç
-(Görseller geldikten sonra doldurulacak)
+## Sonuç (ilk deneme, 51 görsel geldi; Flow D bölümünden önce hata verdi)
+- **Yenir/Yenmez: 7 çift.** Alınmayanlar:
+  - Meyve suyu/deterjan: deterjan görselinde yanında meyve suyu bardağı vardı; kırpınca etiketsiz şişe meyve suyuna benzedi.
+  - Şekerleme/ilaç: ikisi de renkli şeker gibi görünüyordu.
+  - Muz: gerçek muz gelmedi; oyuncak muz da gerçeğinden ayırt edilemiyor.
+- **Tehlikeli/Güvenli: 7 çift.** İlaç kutusu düz mavi bir kutuydu, ilaç olduğu anlaşılmıyordu.
+- **Hava durumu: 16 görselin hepsi alındı, 16 çift.**
+- **Gelmeyenler:** D (sıra nesneleri), E (çift eşyalar), F (parmaklı eller).
+
+## Eksikler turu (ajana yapıştırılacak metin)
+
+I am making picture cards for young children in special education (ages 3-6). Photorealistic photos, NOT cartoon. No text, no logos, no letters, no brand names. Plain pure white background, the object in the middle, about 65% of the picture. Create every image as a SEPARATE NEW image. Stop after every 5 images and wait for my approval.
+
+EDIBLE vs NOT EDIBLE (pairs that look alike; the first is food, the second is clearly NOT food):
+1. A yellow banana.
+2. A yellow plastic toy banana with a visible seam and a small plastic loop, clearly a shiny toy.
+3. A round chocolate cookie.
+4. A round brown wooden coaster with wood grain.
+5. A red strawberry.
+6. A red strawberry-shaped eraser, clearly rubber.
+7. A glass of orange juice.
+8. An orange plastic dish soap bottle with a pump on top, no label text.
+
+DANGEROUS vs SAFE (one object each):
+9. A medicine bottle with a child-safety cap and some pills spilled next to it (clearly medicine).
+10. A box of crayons, open, crayons visible.
+11. A cleaning spray bottle (bleach type, no text).
+12. A plastic water bottle with water.
+13. A sewing needle with thread.
+14. A soft cotton ball.
+
+SINGLE OBJECTS, side view, all FACING LEFT:
+15. A red toy car, side view, facing left.
+16. A yellow rubber duck, side view, facing left.
+17. A brown teddy bear walking, side view, facing left.
+18. A green toy train wagon, side view, facing left.
+
+PAIRS (a PAIR side by side, top view, small gap between the two):
+19. A pair of red knitted mittens.
+20. A pair of striped children's socks.
+21. A pair of small gold earrings with a red stone.
+22. A pair of colorful roller skates.
+23. A pair of wooden drumsticks.
+24. A pair of blue children's sandals.
+25. A pair of brown leather children's shoes.
+
+COUNTING HANDS (the SAME child's hand, palm toward the camera, plain light background, other fingers folded):
+26. Hand showing ONE finger (index finger up).
+27. Hand showing TWO fingers.
+28. Hand showing THREE fingers.
+29. Hand showing FOUR fingers (thumb folded).
+30. Hand showing FIVE fingers (open hand).
+
+Start with IMAGE 1.
