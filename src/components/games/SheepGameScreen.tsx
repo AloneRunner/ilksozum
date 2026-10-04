@@ -13,6 +13,8 @@ interface SheepGameScreenProps {
 // - İlerleme gerçek yüne göre ölçülür (başta kalan yün piksel sayısı = %0).
 // - Sırayla 4 koyun: beyaz, gri, kahverengi, kara koyun. Her biri sepete kendi renginde yumak bırakır.
 // - Kafasına dokununca "meee". Konuşma az, ses ile üst üste binmez.
+// - Elektrikli tıraş makinesi (Kaan: "bizim kırpmamız elektrikliydi, zzz zzz"): basılıyken motor
+//   döner, yünün üstünde sesi güçlenir, telefon kesik kesik titrer.
 
 interface WoolParticle {
   id: number;
@@ -48,8 +50,8 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
   const merkezRef = useRef({ x: 0, y: 0, s: 1 });
   const lastCutPosRef = useRef({ x: 0, y: 0 });
   const bittiRef = useRef(false);
-  const gurultuRef = useRef<AudioBuffer | null>(null);
-  const sonCitRef = useRef(0);
+  const motorRef = useRef<{ gain: GainNode; durdur: () => void } | null>(null);
+  const sonYunRef = useRef(0);
 
   const [koyunNo, setKoyunNo] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -59,13 +61,13 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
   const [woolParticles, setWoolParticles] = useState<WoolParticle[]>([]);
   const [yumaklar, setYumaklar] = useState<string[]>([]);
   const [meee, setMeee] = useState(false);
-  const [scissorAngle, setScissorAngle] = useState(0);
+
   const [olcek, setOlcek] = useState(1);
 
   const koyun = KOYUNLAR[koyunNo % KOYUNLAR.length];
 
   // --- Ses ---
-  const playSound = useCallback((type: 'snip' | 'bleat' | 'success') => {
+  const playSound = useCallback((type: 'bleat' | 'success') => {
     if (getMutedState()) return;
     try {
       if (!audioContextRef.current) {
@@ -73,34 +75,7 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
       }
       const ctx = audioContextRef.current;
       const now = ctx.currentTime;
-      if (type === 'snip') {
-        // Makas "çıt": süzülmüş kısa gürültü (bıçakların sürtünmesi) + metalik tık
-        if (!gurultuRef.current) {
-          const buf = ctx.createBuffer(1, Math.floor(ctx.sampleRate * 0.08), ctx.sampleRate);
-          const d = buf.getChannelData(0);
-          for (let i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * (1 - i / d.length);
-          gurultuRef.current = buf;
-        }
-        const kay = ctx.createBufferSource();
-        kay.buffer = gurultuRef.current;
-        kay.playbackRate.value = 0.9 + Math.random() * 0.25;
-        const bant = ctx.createBiquadFilter();
-        bant.type = 'bandpass'; bant.frequency.value = 3200 + Math.random() * 800; bant.Q.value = 1.2;
-        const g1 = ctx.createGain();
-        g1.gain.setValueAtTime(0.35, now);
-        g1.gain.exponentialRampToValueAtTime(0.001, now + 0.07);
-        kay.connect(bant); bant.connect(g1); g1.connect(ctx.destination);
-        kay.start(now); kay.stop(now + 0.08);
-        const tik = ctx.createOscillator();
-        const g2 = ctx.createGain();
-        tik.type = 'square';
-        tik.frequency.setValueAtTime(2600, now + 0.045);
-        g2.gain.setValueAtTime(0.0001, now);
-        g2.gain.setValueAtTime(0.06, now + 0.045);
-        g2.gain.exponentialRampToValueAtTime(0.001, now + 0.075);
-        tik.connect(g2); g2.connect(ctx.destination);
-        tik.start(now); tik.stop(now + 0.08);
-      } else if (type === 'bleat') {
+      if (type === 'bleat') {
         // "Meee": titreşimli (vibrato) koyun sesi
         const osc = ctx.createOscillator();
         const lfo = ctx.createOscillator();
@@ -136,7 +111,60 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
     } catch { /* yoksay */ }
   }, []);
 
-  useEffect(() => () => { audioContextRef.current?.close().catch(() => { /* yoksay */ }); }, []);
+  // --- Tıraş makinesi motoru: "zzzz" ---
+  const motorBaslat = useCallback(() => {
+    if (getMutedState() || motorRef.current) return;
+    try {
+      if (!audioContextRef.current) {
+        audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
+      }
+      const ctx = audioContextRef.current;
+      if (ctx.state === 'suspended') void ctx.resume();
+      const now = ctx.currentTime;
+      // Motor uğultusu: iki testere dalga (temel + oktav) + hızlı titreşim (genlik modülasyonu)
+      const o1 = ctx.createOscillator(); o1.type = 'sawtooth'; o1.frequency.value = 118;
+      const o2 = ctx.createOscillator(); o2.type = 'square'; o2.frequency.value = 236;
+      const o2g = ctx.createGain(); o2g.gain.value = 0.35;
+      const titre = ctx.createGain(); titre.gain.value = 0.7;
+      const lfo = ctx.createOscillator(); lfo.frequency.value = 55;
+      const lfoG = ctx.createGain(); lfoG.gain.value = 0.3;
+      lfo.connect(lfoG); lfoG.connect(titre.gain);
+      const filtre = ctx.createBiquadFilter(); filtre.type = 'lowpass'; filtre.frequency.value = 1500; filtre.Q.value = 2;
+      const gain = ctx.createGain();
+      gain.gain.setValueAtTime(0.0001, now);
+      gain.gain.exponentialRampToValueAtTime(0.05, now + 0.08); // rölanti
+      o1.connect(titre); o2.connect(o2g); o2g.connect(titre);
+      titre.connect(filtre); filtre.connect(gain); gain.connect(ctx.destination);
+      o1.start(now); o2.start(now); lfo.start(now);
+      motorRef.current = {
+        gain,
+        durdur: () => {
+          const t = ctx.currentTime;
+          gain.gain.cancelScheduledValues(t);
+          gain.gain.setValueAtTime(Math.max(0.0001, gain.gain.value), t);
+          gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.12);
+          [o1, o2, lfo].forEach(o => { try { o.stop(t + 0.15); } catch { /* yoksay */ } });
+        },
+      };
+    } catch { /* yoksay */ }
+  }, []);
+
+  // Yünün üstündeyken motor yüklenir (ses güçlenir ve biraz kalınlaşır), boşlukta rölantiye döner
+  const motorYuk = useCallback((yunde: boolean) => {
+    const m = motorRef.current, ctx = audioContextRef.current;
+    if (!m || !ctx) return;
+    m.gain.gain.setTargetAtTime(yunde ? 0.16 : 0.05, ctx.currentTime, 0.04);
+  }, []);
+
+  const motorDurdur = useCallback(() => {
+    motorRef.current?.durdur();
+    motorRef.current = null;
+  }, []);
+
+  useEffect(() => () => {
+    motorRef.current?.durdur();
+    audioContextRef.current?.close().catch(() => { /* yoksay */ });
+  }, []);
 
   const meele = useCallback(() => {
     playSound('bleat');
@@ -254,15 +282,17 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
     return () => cancelAnimationFrame(animationRef.current);
   }, []);
 
-  // Makas açılıp kapanır
+  // Yünden çıkınca motor rölantiye döner
   useEffect(() => {
-    if (!isCutting) { setScissorAngle(0); return; }
-    const interval = setInterval(() => setScissorAngle(a => (a === 0 ? 18 : 0)), 90);
-    return () => clearInterval(interval);
-  }, [isCutting]);
+    if (!isCutting) return;
+    const iv = setInterval(() => { if (Date.now() - sonYunRef.current > 160) motorYuk(false); }, 100);
+    return () => clearInterval(iv);
+  }, [isCutting, motorYuk]);
 
   const bitir = useCallback((ctx: CanvasRenderingContext2D, w: number, h: number) => {
     bittiRef.current = true;
+    motorDurdur();
+    setIsCutting(false);
     ctx.clearRect(0, 0, w, h);
     setProgress(100);
     setIsWon(true);
@@ -272,7 +302,7 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
     titret('orta', 0);
     setTimeout(() => meele(), 700);
     setTimeout(() => { speak('Koyun tertemiz oldu!').catch(() => { /* yoksay */ }); }, 1600);
-  }, [koyunNo, playSound, meele]);
+  }, [koyunNo, playSound, meele, motorDurdur]);
 
   const performCut = useCallback((clientX: number, clientY: number) => {
     const canvas = canvasRef.current;
@@ -320,13 +350,10 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
         });
       }
       setWoolParticles(prev => [...prev, ...yeni].slice(-60));
-      // Kesim sürerken makasın açılıp kapanma ritminde "çıt çıt" + telefonda hafif titreşim (Kaan)
-      const simdi = Date.now();
-      if (simdi - sonCitRef.current > 150) {
-        sonCitRef.current = simdi;
-        playSound('snip');
-        titret('hafif', 120);
-      }
+      // Yün kesiliyor: motor yüklenir, telefon kesik kesik titrer (Kaan)
+      sonYunRef.current = Date.now();
+      motorYuk(true);
+      titret('hafif', 110);
     }
 
     // İlerleme: her 4 kesimde bir ölç (getImageData pahalı)
@@ -336,12 +363,13 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
       setProgress(p);
       if (p >= BITIS) bitir(ctx, canvas.width, canvas.height);
     }
-  }, [playSound, bitir]);
+  }, [motorYuk, bitir]);
 
   const handlePointerDown = useCallback((e: React.PointerEvent) => {
     if (isWon) return;
     e.preventDefault();
     setIsCutting(true);
+    motorBaslat();
     const rect = containerRef.current?.getBoundingClientRect();
     if (rect) {
       setCursorPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -349,7 +377,7 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
     }
     performCut(e.clientX, e.clientY);
     (e.target as HTMLElement).setPointerCapture(e.pointerId);
-  }, [isWon, performCut]);
+  }, [isWon, performCut, motorBaslat]);
 
   const handlePointerMove = useCallback((e: React.PointerEvent) => {
     const rect = containerRef.current?.getBoundingClientRect();
@@ -361,6 +389,7 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
 
   const handlePointerUp = useCallback(() => {
     setIsCutting(false);
+    motorDurdur();
     // Bırakınca bir kez daha ölç (son kesim sayılmamış olabilir)
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext('2d', { willReadFrequently: true });
@@ -369,7 +398,7 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
     const p = Math.min(100, Math.max(0, (1 - kalan / ilkYunRef.current) * 100));
     setProgress(p);
     if (p >= BITIS) bitir(ctx, canvas.width, canvas.height);
-  }, [bitir]);
+  }, [bitir, motorDurdur]);
 
   const sonrakiKoyun = () => setKoyunNo(n => n + 1);
 
@@ -510,17 +539,20 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
         }}
       />
 
-      {/* Makas imleci */}
+      {/* Tıraş makinesi imleci (çalışırken titrer) */}
       {!isWon && (
-        <div className="absolute pointer-events-none z-30" style={{ left: cursorPos.x - 24, top: cursorPos.y - 24, transform: 'rotate(-45deg)' }}>
-          <div className="relative w-12 h-12">
-            <div className="absolute w-6 h-3 bg-gray-300 rounded-full origin-right" style={{ right: '50%', top: '40%', transform: `rotate(${-scissorAngle}deg)` }}>
-              <div className="absolute right-0 top-0 w-4 h-3 bg-red-500 rounded-full" />
-            </div>
-            <div className="absolute w-6 h-3 bg-gray-300 rounded-full origin-right" style={{ right: '50%', top: '50%', transform: `rotate(${scissorAngle}deg)` }}>
-              <div className="absolute right-0 bottom-0 w-4 h-3 bg-red-500 rounded-full" />
-            </div>
-            <div className="absolute w-3 h-3 bg-gray-600 rounded-full" style={{ left: '45%', top: '42%' }} />
+        <div className="absolute pointer-events-none z-30" style={{ left: cursorPos.x - 22, top: cursorPos.y - 8 }}>
+          <div className={isCutting ? 'animate-[titre_0.05s_linear_infinite]' : ''}>
+            <svg width="44" height="80" viewBox="0 0 44 80">
+              {/* bıçak dişleri (üstte, yüne değen kısım) */}
+              <rect x="4" y="0" width="36" height="10" rx="2" fill="#cbd5e1" />
+              {[0, 1, 2, 3, 4, 5, 6, 7].map(i => <rect key={i} x={6 + i * 4.2} y="-4" width="2.4" height="7" fill="#94a3b8" />)}
+              {/* gövde */}
+              <rect x="6" y="9" width="32" height="66" rx="14" fill="#3b82f6" />
+              <rect x="10" y="14" width="8" height="52" rx="4" fill="#ffffff" opacity="0.3" />
+              {/* düğme */}
+              <circle cx="22" cy="44" r="6" fill={isCutting ? '#22c55e' : '#1e3a8a'} />
+            </svg>
           </div>
         </div>
       )}
@@ -568,6 +600,7 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
         @keyframes bounce-in { 0% { transform: scale(0.5); opacity: 0; } 70% { transform: scale(1.1); } 100% { transform: scale(1); opacity: 1; } }
         @keyframes zipla { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-28px); } }
         @keyframes sallan { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-12deg); } }
+        @keyframes titre { 0% { transform: translate(0,0); } 25% { transform: translate(1px,-1px); } 50% { transform: translate(-1px,1px); } 75% { transform: translate(1px,1px); } 100% { transform: translate(0,0); } }
         @keyframes dus { 0% { transform: translateY(-120px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
         .animate-bounce-in { animation: bounce-in 0.5s ease-out; }
       `}</style>
