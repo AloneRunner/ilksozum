@@ -91,6 +91,7 @@ const ShadowMatchGameScreen = lazy(() => import('../games/ShadowMatchGameScreen.
 const SizeOrderingGameScreen = lazy(() => import('../games/SizeOrderingGameScreen.tsx'));
 const NumberSequenceGameScreen = lazy(() => import('../games/NumberSequenceGameScreen.tsx'));
 const PlantGrowingGameScreen = lazy(() => import('../games/PlantGrowingGameScreen.tsx'));
+const ColorSequenceGameScreen = lazy(() => import('../games/ColorSequenceGameScreen.tsx'));
 const WhereBelongsGameScreen = lazy(() => import('../games/WhereBelongsGameScreen.tsx'));
 const SyllableTrainGameScreen = lazy(() => import('../games/SyllableTrainGameScreen.tsx'));
 const WordBoxGameScreen = lazy(() => import('../games/WordBoxGameScreen.tsx'));
@@ -112,6 +113,7 @@ const MINI_GAME_SCREENS: Record<string, ScreenState> = {
     wordBox: ScreenState.WordBoxGame,
     connectDots: ScreenState.ConnectDotsGame,
     plantGrowing: ScreenState.PlantGrowingGame,
+    colorSequence: ScreenState.ColorSequenceGame,
     trainTrack: ScreenState.TrainTrackGame,
     pattern: ScreenState.PatternGame,
     sheepShearing: ScreenState.SheepShearingGame,
@@ -977,6 +979,7 @@ export const AppRouter = () => {
         case ScreenState.SizeOrderingGame: return <SizeOrderingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.NumberSequenceGame: return <NumberSequenceGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.PlantGrowingGame: return <PlantGrowingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
+        case ScreenState.ColorSequenceGame: return <ColorSequenceGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.WhereBelongsGame: return <WhereBelongsGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.WhoseIsThisGame: return <WhoseIsThisGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.SyllableTrainGame: return <SyllableTrainGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;

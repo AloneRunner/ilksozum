@@ -7,7 +7,7 @@ interface MusicTouchGameScreenProps {
   onBack: () => void;
 }
 
-type SubMode = 'free' | 'song' | 'memory';
+type SubMode = 'free' | 'song' | 'memory' | 'count';
 type PianoSound = 'classic' | 'soft' | 'sharp';
 
 interface Note {
@@ -41,10 +41,15 @@ const PIANO_NOTES: Note[] = [
 const SONGS: Song[] = [
   { id: 'twinkle', title: '⭐ Işılda Işılda', notes: ['C', 'C', 'G', 'G', 'A', 'A', 'G', 'F', 'F', 'E', 'E', 'D', 'D', 'C'] },
   { id: 'mary', title: '🐑 Meee Kuzum', notes: ['E', 'D', 'C', 'D', 'E', 'E', 'E', 'D', 'D', 'D', 'E', 'G', 'G'] },
-  { id: 'jingle', title: '🔔 Jingle Bells', notes: ['E', 'E', 'E', 'E', 'E', 'E', 'E', 'G', 'C', 'D', 'E'] },
+  { id: 'jingle', title: '🔔 Çan Çalıyor', notes: ['E', 'E', 'E', 'E', 'E', 'E', 'E', 'G', 'C', 'D', 'E'] },
   { id: 'odeToJoy', title: '🎶 Neşeye Övgü', notes: ['E', 'E', 'F', 'G', 'G', 'F', 'E', 'D', 'C', 'C', 'D', 'E', 'E', 'D', 'D'] },
   { id: 'scale', title: '🎵 Gam', notes: ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'B', 'A', 'G', 'F', 'E', 'D', 'C'] },
 ];
+
+// Kaç Kere? modu (Kaan: "3 kere basıyorum, o da basıyor; kaç kere basmasını öğretiyorum")
+const SAYILAR = ['', 'bir', 'iki', 'üç', 'dört', 'beş', 'altı', 'yedi', 'sekiz', 'dokuz', 'on'];
+const SAYMA_ARALIKLARI = [3, 5, 10];
+const SAYMA_TUSU = 'G'; // vurgulanan tuş (mavi Sol); başka tuşa basmak da sayılır
 
 const SOUND_CONFIGS: Record<PianoSound, { type: OscillatorType; attack: number; label: string; emoji: string }> = {
   classic: { type: 'sine', attack: 0.02, label: 'Klasik', emoji: '🎹' },
@@ -68,6 +73,15 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
   const [memoryRound, setMemoryRound] = useState(0);
   const [activeNoteOverride, setActiveNoteOverride] = useState<string | null>(null);
   
+  // Count Mode State
+  const [countMax, setCountMax] = useState(3);
+  const [countTarget, setCountTarget] = useState(0); // 0 = başlamadı
+  const [countPressed, setCountPressed] = useState(0);
+  const [countDemo, setCountDemo] = useState(false); // uygulama gösteriyor
+  const [countDone, setCountDone] = useState(false);
+  const countTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const countRunRef = useRef(0); // eski gösterimleri iptal etmek için
+
   // General State
   const [pressedNotes, setPressedNotes] = useState<Set<string>>(new Set());
   
@@ -207,6 +221,74 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
     };
   }, [stopAllNotes]);
 
+  useEffect(() => () => {
+    countRunRef.current++;
+    if (countTimerRef.current) clearTimeout(countTimerRef.current);
+    audioContextRef.current?.close().catch(() => {});
+  }, []);
+
+  // --- COUNT MODE LOGIC ---
+  const countNote = PIANO_NOTES.find(n => n.id === SAYMA_TUSU)!;
+
+  // Önce uygulama gösterir ("Bak: bir, iki, üç"), sonra "Şimdi sen üç kere bas."
+  const demonstrateCount = useCallback(async (n: number) => {
+    const wait = (ms: number) => new Promise(r => setTimeout(r, ms));
+    const run = ++countRunRef.current;
+    if (countTimerRef.current) clearTimeout(countTimerRef.current);
+    setCountTarget(n);
+    setCountPressed(0);
+    setCountDone(false);
+    setCountDemo(true);
+    sayInstruction('Bak.');
+    await wait(900);
+    for (let i = 1; i <= n; i++) {
+      if (run !== countRunRef.current) return;
+      setActiveNoteOverride(SAYMA_TUSU);
+      playNote(countNote.frequency, 0.35);
+      setCountPressed(i);
+      sayInstruction(SAYILAR[i]);
+      await wait(350);
+      setActiveNoteOverride(null);
+      await wait(550);
+    }
+    if (run !== countRunRef.current) return;
+    await wait(400);
+    setCountPressed(0);
+    setCountDemo(false);
+    sayInstruction(`Şimdi sen ${SAYILAR[n]} kere bas.`);
+  }, [playNote, countNote.frequency]);
+
+  const nextCountRound = useCallback((max: number, prev: number) => {
+    // Aynı sayı art arda gelmesin
+    let n = 1 + Math.floor(Math.random() * max);
+    if (max > 1) while (n === prev) n = 1 + Math.floor(Math.random() * max);
+    demonstrateCount(n);
+  }, [demonstrateCount]);
+
+  const handleCountPress = useCallback(() => {
+    if (countDemo || countDone || countTarget === 0) return;
+    const next = countPressed + 1;
+    setCountPressed(next);
+    if (countTimerRef.current) clearTimeout(countTimerRef.current);
+    if (next > countTarget) {
+      // Fazla bastı: kızmadan tekrar göster
+      setCountDone(true);
+      sayInstruction(`${SAYILAR[countTarget]} kere basacaktık. Bir daha bakalım.`);
+      countTimerRef.current = setTimeout(() => demonstrateCount(countTarget), 2600);
+      return;
+    }
+    sayInstruction(SAYILAR[next]);
+    if (next === countTarget) {
+      // Biraz bekle: fazladan basmazsa doğru
+      countTimerRef.current = setTimeout(() => {
+        setCountDone(true);
+        playWinSound();
+        sayCorrect(`${SAYILAR[countTarget]} kere bastın.`);
+        countTimerRef.current = setTimeout(() => nextCountRound(countMax, countTarget), 2800);
+      }, 1200);
+    }
+  }, [countDemo, countDone, countTarget, countPressed, countMax, demonstrateCount, nextCountRound, playWinSound]);
+
   // --- MEMORY GAME LOGIC ---
   const startMemoryGame = useCallback(() => {
     const startNote = PIANO_NOTES[Math.floor(Math.random() * PIANO_NOTES.length)].id;
@@ -243,10 +325,18 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
   // --- MODE CHANGE HANDLER ---
   const handleModeChange = (newMode: SubMode) => {
     stopAllNotes();
+    countRunRef.current++;
+    if (countTimerRef.current) clearTimeout(countTimerRef.current);
+    setCountTarget(0);
+    setCountPressed(0);
+    setCountDemo(false);
+    setCountDone(false);
+    setActiveNoteOverride(null);
     setSubMode(newMode);
     sayInstruction(
       newMode === 'free' ? 'Tuşlara dokun, istediğin gibi çal.'
         : newMode === 'song' ? 'Yanan tuşa dokun, şarkıyı birlikte çalalım.'
+          : newMode === 'count' ? 'Önce ben basacağım, sen say. Sonra sen bas.'
           : 'Önce dinle, sonra aynı tuşlara sırayla dokun.',
       200
     );
@@ -262,6 +352,7 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
   const handleNotePress = useCallback((noteId: string, frequency: number) => {
     // Memory modunda bilgisayar sırasıysa input alma
     if (subMode === 'memory' && isComputerTurn) return;
+    if (subMode === 'count' && countDemo) return;
 
     // Serbest modda sustain ile çal (startNote/stopNote)
     if (subMode === 'free') {
@@ -279,6 +370,12 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
         return next;
       });
     }, 150);
+
+    // 0. COUNT MODE
+    if (subMode === 'count') {
+      handleCountPress();
+      return;
+    }
 
     // 1. SONG MODE
     if (subMode === 'song' && activeSong) {
@@ -327,7 +424,7 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
         }, 500);
       }
     }
-  }, [subMode, activeSong, currentSongNoteIndex, memorySequence, userSequenceIndex, isComputerTurn, playNote, startNote, playWinSound, playErrorSound]);
+  }, [subMode, activeSong, currentSongNoteIndex, memorySequence, userSequenceIndex, isComputerTurn, countDemo, handleCountPress, playNote, startNote, playWinSound, playErrorSound]);
 
   // --- NOTE RELEASE HANDLER ---
   const handleNoteRelease = useCallback((noteId: string) => {
@@ -403,6 +500,9 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
   const getHighlightNote = () => {
     if (subMode === 'memory' && isComputerTurn) {
       return activeNoteOverride;
+    }
+    if (subMode === 'count' && countTarget > 0) {
+      return SAYMA_TUSU;
     }
     if (subMode === 'song' && activeSong) {
       const song = SONGS.find(s => s.id === activeSong);
@@ -486,6 +586,17 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
           >
             🧠 Hafıza
           </button>
+          <button
+            onClick={() => handleModeChange('count')}
+            className={`px-3 py-1.5 rounded-xl font-bold text-sm flex items-center gap-1.5 transition-all ${
+              subMode === 'count'
+                ? 'bg-purple-500 text-white shadow-md'
+                : 'bg-white text-gray-500 hover:bg-gray-100'
+            }`}
+            style={{ touchAction: 'manipulation' }}
+          >
+            🔢 Kaç Kere?
+          </button>
         </div>
 
         {/* Sub-Mode Controls */}
@@ -526,6 +637,67 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
                   {song.title}
                 </button>
               ))}
+            </div>
+          )}
+
+          {subMode === 'count' && (
+            <div className="flex flex-col items-center gap-2">
+              {countTarget === 0 ? (
+                <div className="flex items-center gap-2 flex-wrap justify-center">
+                  <span className="text-gray-500 text-xs">Sayılar:</span>
+                  {SAYMA_ARALIKLARI.map(m => (
+                    <button
+                      key={m}
+                      onClick={() => setCountMax(m)}
+                      className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all ${
+                        countMax === m ? 'bg-purple-500 text-white shadow-md' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+                      }`}
+                      style={{ touchAction: 'manipulation' }}
+                    >
+                      1-{m}
+                    </button>
+                  ))}
+                  <button
+                    onClick={() => nextCountRound(countMax, 0)}
+                    className="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full font-bold shadow-lg animate-pulse"
+                    style={{ touchAction: 'manipulation' }}
+                  >
+                    ▶️ Başla
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <div className="flex items-center gap-2 flex-wrap justify-center">
+                    {Array.from({ length: countTarget }, (_, i) => (
+                      <div
+                        key={i}
+                        className={`w-9 h-9 rounded-full border-4 transition-all duration-150 ${
+                          i < Math.min(countPressed, countTarget)
+                            ? 'bg-blue-500 border-blue-600 scale-110'
+                            : 'bg-white border-blue-300'
+                        }`}
+                      />
+                    ))}
+                    {countPressed > countTarget && (
+                      <div className="w-9 h-9 rounded-full border-4 bg-orange-300 border-orange-400" />
+                    )}
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-3xl font-black text-purple-700 w-10 text-center">{countTarget}</span>
+                    <span className="text-xs font-bold text-gray-600">
+                      {countDemo ? 'Bak ve say...' : countDone && countPressed === countTarget ? 'Aferin!' : 'Sıra sende!'}
+                    </span>
+                    <button
+                      onClick={() => demonstrateCount(countTarget)}
+                      disabled={countDemo}
+                      className="bg-white border-2 border-purple-300 text-purple-600 px-2 py-1 rounded-lg text-xs font-bold disabled:opacity-40"
+                      style={{ touchAction: 'manipulation' }}
+                    >
+                      🔁 Tekrar göster
+                    </button>
+                  </div>
+                </>
+              )}
             </div>
           )}
 
@@ -608,7 +780,7 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
           {PIANO_NOTES.map((note) => {
             const isTarget = highlightNote === note.id;
             const isPressed = pressedNotes.has(note.id) || activeNoteOverride === note.id;
-            const isDisabled = subMode === 'memory' && isComputerTurn;
+            const isDisabled = (subMode === 'memory' && isComputerTurn) || (subMode === 'count' && countDemo);
 
             return (
               <div

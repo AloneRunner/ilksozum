@@ -59,6 +59,7 @@ const MiniGamesMenuScreen: React.FC<MiniGamesMenuScreenProps> = ({ onBack, onSel
     { id: 'musicTouch', category: 'creative', icon: GameIcon, title: '🎹 Müzik Dokun', subtitle: 'Piyano çal!', color: 'indigo' as const },
 
     // === MANTIK / ZEKA ===
+    { id: 'colorSequence', category: 'logic', icon: GameIcon, title: '🔴🔵 Renk Sırası', subtitle: 'Yanan renklere sırayla bas!', color: 'sky' as const },
     { id: 'memoryMatch', category: 'logic', icon: GameIcon, title: '🃏 Hafıza Çiftleri', subtitle: 'Eşleşen kartları bul!', color: 'purple' as const },
     { id: 'oddOneOut', category: 'logic', icon: GameIcon, title: '🎪 Kim Farklı?', subtitle: 'Farklı olanı bul!', color: 'cyan' as const },
     { id: 'whereBelongs', category: 'logic', icon: GameIcon, title: '🏠 Nereye Ait?', subtitle: 'Doğru odaya koy!', color: 'amber' as const },
