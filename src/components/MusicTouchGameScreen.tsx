@@ -1,4 +1,5 @@
 import { sayInstruction, sayCorrect } from '../utils/gameVoice.ts';
+import { speak } from '../services/speechService.ts';
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { t } from '../i18n/index.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
@@ -239,23 +240,27 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
     setCountPressed(0);
     setCountDone(false);
     setCountDemo(true);
-    sayInstruction('Bak.');
-    await wait(900);
+    // Konuşma ile nota üst üste binmesin (Kaan): önce nota, sonra sayı; her söz bitince devam
+    const konus = (metin: string) => Promise.race([speak(metin).catch(() => {}), wait(4000)]);
+    await konus('Bak.');
+    await wait(300);
     for (let i = 1; i <= n; i++) {
       if (run !== countRunRef.current) return;
       setActiveNoteOverride(SAYMA_TUSU);
-      playNote(countNote.frequency, 0.35);
+      playNote(countNote.frequency, 0.3);
       setCountPressed(i);
-      sayInstruction(SAYILAR[i]);
-      await wait(350);
+      await wait(320);
       setActiveNoteOverride(null);
-      await wait(550);
+      if (run !== countRunRef.current) return;
+      await konus(SAYILAR[i]);
+      await wait(250);
     }
     if (run !== countRunRef.current) return;
-    await wait(400);
+    await wait(300);
     setCountPressed(0);
+    await konus(`Şimdi sen ${SAYILAR[n]} kere bas.`);
+    if (run !== countRunRef.current) return;
     setCountDemo(false);
-    sayInstruction(`Şimdi sen ${SAYILAR[n]} kere bas.`);
   }, [playNote, countNote.frequency]);
 
   const nextCountRound = useCallback((max: number, prev: number) => {
@@ -277,13 +282,14 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
       countTimerRef.current = setTimeout(() => demonstrateCount(countTarget), 2600);
       return;
     }
-    sayInstruction(SAYILAR[next]);
+    // Notanın hemen ardından sayı (üst üste binmesin)
+    sayInstruction(SAYILAR[next], 280);
     if (next === countTarget) {
       // Biraz bekle: fazladan basmazsa doğru
       countTimerRef.current = setTimeout(() => {
         setCountDone(true);
         playWinSound();
-        sayCorrect(`${SAYILAR[countTarget]} kere bastın.`);
+        setTimeout(() => sayCorrect(`${SAYILAR[countTarget]} kere bastın.`), 600); // ton bitince
         countTimerRef.current = setTimeout(() => nextCountRound(countMax, countTarget), 2800);
       }, 1200);
     }
@@ -386,7 +392,7 @@ const MusicTouchGameScreen: React.FC<MusicTouchGameScreenProps> = ({ onBack }) =
           if (currentSongNoteIndex === song.notes.length - 1) {
             // Şarkı tamamlandı - küçük kutlama
             playWinSound();
-            sayCorrect('Şarkıyı tamamladın!');
+            setTimeout(() => sayCorrect('Şarkıyı tamamladın!'), 600); // ton bitince
             setCurrentSongNoteIndex(0);
             setActiveSong(null);
           } else {
