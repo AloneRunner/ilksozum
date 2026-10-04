@@ -116,4 +116,20 @@ IMAGES:
 Start with IMAGE 1.
 
 ## Sonuç
-(Görseller geldikten sonra doldurulacak)
+- Tur 35 ve 36 birlikte geldi (52 görsel).
+- **Duygular:** 10 görsel, 7 çift.
+  - Eksik: 1. ve 3. çocuğun ÜZGÜN hali hiç gelmedi.
+  - 2. çocuğun korkmuş ve şaşkın hali birbirine çok benziyor; bu ikisi çift yapılmadı.
+- **Duyular:** 5 görsel. Burun yakından kırpıldı.
+- **Kişiler:** 13 görsel. Futbolcunun elindeki top Amerikan futbolu topuydu, alınmadı.
+- **Odalar:** 5 görsel. Sınıf görselinin beyaz bantları kırpıldı.
+- **Kaplar:** 4 görsel.
+- **Rutin:** 14 görselin hepsi aynı çocukla geldi.
+
+## Eksikler için kısa tur (ajana yapıştırılacak metin)
+
+I am making picture cards for young children in special education. Photorealistic, plain light background, no text. Create every image as a SEPARATE NEW image.
+
+1. Head and shoulders of a 5-year-old boy with short brown hair in a yellow t-shirt, SAD: corners of the mouth down, sad eyes, a single tear. Same boy, same yellow t-shirt, same plain background as the happy and angry pictures.
+2. Head and shoulders of a 4-year-old boy with blond hair in a red t-shirt, SAD: mouth down, sad eyes. Same boy, same red t-shirt, same plain background as the angry and sleepy pictures.
+3. A football (soccer) player, a young man in a red sports jersey, holding a round black-and-white SOCCER ball, waist up, smiling, plain light background.

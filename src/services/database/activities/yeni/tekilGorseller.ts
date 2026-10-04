@@ -1,0 +1,5 @@
+// OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-tekil.mjs. Elle düzenleme.
+// Mini oyunların gerçek resimleri (yoksa oyun emojiyi kullanır).
+export const ODA_GORSEL: Record<string, string> = {"mutfak":"/images/6320.webp","banyo":"/images/6321.webp","yatak-odasi":"/images/6322.webp","sinif":"/images/6323.webp","bahce":"/images/6324.webp"};
+export const KAP_GORSEL: Record<string, string> = {"oyuncak-kutusu":"/images/6325.webp","cop-kovasi":"/images/6326.webp","kitaplik":"/images/6327.webp","camasir-sepeti":"/images/6328.webp"};
+export const RUTIN_GORSEL: Record<string, string> = {"01-uyan":"/images/6329.webp","02-yatak-topla":"/images/6330.webp","03-yuz-yika":"/images/6331.webp","04-giyin":"/images/6332.webp","05-kahvalti":"/images/6333.webp","06-dis-fircala":"/images/6334.webp","07-ayakkabi-giy":"/images/6335.webp","08-okula-git":"/images/6336.webp","09-el-yika":"/images/6337.webp","10-ogle-yemegi":"/images/6338.webp","11-banyo":"/images/6339.webp","12-pijama":"/images/6340.webp","13-kitap-oku":"/images/6341.webp","14-uyu":"/images/6342.webp"};

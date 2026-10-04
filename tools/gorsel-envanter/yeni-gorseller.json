@@ -8486,6 +8486,512 @@
       "tags": {
         "weight": "hafif"
       }
+    },
+    {
+      "id": 6301,
+      "kaynak": "tekil/duyular/goz.jpg",
+      "word": "göz",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "duyular"
+      }
+    },
+    {
+      "id": 6302,
+      "kaynak": "tekil/duyular/kulak.jpg",
+      "word": "kulak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "duyular"
+      }
+    },
+    {
+      "id": 6303,
+      "kaynak": "tekil/duyular/burun.jpg",
+      "word": "burun",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "duyular"
+      }
+    },
+    {
+      "id": 6304,
+      "kaynak": "tekil/duyular/dil.jpg",
+      "word": "dil",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "duyular"
+      }
+    },
+    {
+      "id": 6305,
+      "kaynak": "tekil/duyular/el.jpg",
+      "word": "el",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "duyular"
+      }
+    },
+    {
+      "id": 6306,
+      "kaynak": "tekil/kisiler/polis.jpg",
+      "word": "polis",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
+      "id": 6307,
+      "kaynak": "tekil/kisiler/ogretmen.jpg",
+      "word": "öğretmen",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
+      "id": 6308,
+      "kaynak": "tekil/kisiler/itfaiyeci.jpg",
+      "word": "itfaiyeci",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
+      "id": 6309,
+      "kaynak": "tekil/kisiler/doktor.jpg",
+      "word": "doktor",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
+      "id": 6310,
+      "kaynak": "tekil/kisiler/asci.jpg",
+      "word": "aşçı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
+      "id": 6311,
+      "kaynak": "tekil/kisiler/astronot.jpg",
+      "word": "astronot",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
+      "id": 6312,
+      "kaynak": "tekil/kisiler/kral.jpg",
+      "word": "kral",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
+      "id": 6313,
+      "kaynak": "tekil/kisiler/nine.jpg",
+      "word": "nine",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
+      "id": 6314,
+      "kaynak": "tekil/kisiler/dede.jpg",
+      "word": "dede",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
+      "id": 6315,
+      "kaynak": "tekil/kisiler/baba.jpg",
+      "word": "baba",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
+      "id": 6316,
+      "kaynak": "tekil/kisiler/bebek.jpg",
+      "word": "bebek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
+      "id": 6317,
+      "kaynak": "tekil/kisiler/ogrenci.jpg",
+      "word": "öğrenci",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
+      "id": 6318,
+      "kaynak": "tekil/kisiler/kiz-cocugu.jpg",
+      "word": "kız çocuğu",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "kisiler"
+      }
+    },
+    {
+      "id": 6320,
+      "kaynak": "tekil/odalar/mutfak.jpg",
+      "word": "mutfak",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "odalar"
+      }
+    },
+    {
+      "id": 6321,
+      "kaynak": "tekil/odalar/banyo.jpg",
+      "word": "banyo",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "odalar"
+      }
+    },
+    {
+      "id": 6322,
+      "kaynak": "tekil/odalar/yatak-odasi.jpg",
+      "word": "yatak odası",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "odalar"
+      }
+    },
+    {
+      "id": 6323,
+      "kaynak": "tekil/odalar/sinif.jpg",
+      "word": "sınıf",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "odalar"
+      }
+    },
+    {
+      "id": 6324,
+      "kaynak": "tekil/odalar/bahce.jpg",
+      "word": "bahçe",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "odalar"
+      }
+    },
+    {
+      "id": 6325,
+      "kaynak": "tekil/kaplar/oyuncak-kutusu.jpg",
+      "word": "oyuncak kutusu",
+      "category": "none",
+      "tags": {
+        "tekil": "kaplar"
+      }
+    },
+    {
+      "id": 6326,
+      "kaynak": "tekil/kaplar/cop-kovasi.jpg",
+      "word": "çöp kovası",
+      "category": "none",
+      "tags": {
+        "tekil": "kaplar"
+      }
+    },
+    {
+      "id": 6327,
+      "kaynak": "tekil/kaplar/kitaplik.jpg",
+      "word": "kitaplık",
+      "category": "none",
+      "tags": {
+        "tekil": "kaplar"
+      }
+    },
+    {
+      "id": 6328,
+      "kaynak": "tekil/kaplar/camasir-sepeti.jpg",
+      "word": "çamaşır sepeti",
+      "category": "none",
+      "tags": {
+        "tekil": "kaplar"
+      }
+    },
+    {
+      "id": 6329,
+      "kaynak": "tekil/rutin/01-uyan.jpg",
+      "word": "uyan",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6330,
+      "kaynak": "tekil/rutin/02-yatak-topla.jpg",
+      "word": "yatağı topla",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6331,
+      "kaynak": "tekil/rutin/03-yuz-yika.jpg",
+      "word": "yüzünü yıka",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6332,
+      "kaynak": "tekil/rutin/04-giyin.jpg",
+      "word": "giyin",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6333,
+      "kaynak": "tekil/rutin/05-kahvalti.jpg",
+      "word": "kahvaltı yap",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6334,
+      "kaynak": "tekil/rutin/06-dis-fircala.jpg",
+      "word": "dişlerini fırçala",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6335,
+      "kaynak": "tekil/rutin/07-ayakkabi-giy.jpg",
+      "word": "ayakkabı giy",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6336,
+      "kaynak": "tekil/rutin/08-okula-git.jpg",
+      "word": "okula git",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6337,
+      "kaynak": "tekil/rutin/09-el-yika.jpg",
+      "word": "ellerini yıka",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6338,
+      "kaynak": "tekil/rutin/10-ogle-yemegi.jpg",
+      "word": "yemeğini ye",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6339,
+      "kaynak": "tekil/rutin/11-banyo.jpg",
+      "word": "banyo yap",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6340,
+      "kaynak": "tekil/rutin/12-pijama.jpg",
+      "word": "pijama giy",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6341,
+      "kaynak": "tekil/rutin/13-kitap-oku.jpg",
+      "word": "kitap oku",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6342,
+      "kaynak": "tekil/rutin/14-uyu.jpg",
+      "word": "uyu",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "tekil": "rutin"
+      }
+    },
+    {
+      "id": 6501,
+      "kaynak": "duygular/cocuk1-kizgin.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "duygu": "kızgın"
+      }
+    },
+    {
+      "id": 6502,
+      "kaynak": "duygular/cocuk1-mutlu.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "duygu": "mutlu"
+      }
+    },
+    {
+      "id": 6503,
+      "kaynak": "duygular/cocuk2-korkmus.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "duygu": "korkmuş"
+      }
+    },
+    {
+      "id": 6504,
+      "kaynak": "duygular/cocuk2-mutlu.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "duygu": "mutlu"
+      }
+    },
+    {
+      "id": 6505,
+      "kaynak": "duygular/cocuk2-saskin.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "duygu": "şaşkın"
+      }
+    },
+    {
+      "id": 6506,
+      "kaynak": "duygular/cocuk3-kizgin.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "duygu": "kızgın"
+      }
+    },
+    {
+      "id": 6507,
+      "kaynak": "duygular/cocuk3-uykulu.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "duygu": "uykulu"
+      }
+    },
+    {
+      "id": 6508,
+      "kaynak": "duygular/cocuk4-mutlu.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "duygu": "mutlu"
+      }
+    },
+    {
+      "id": 6509,
+      "kaynak": "duygular/cocuk4-saskin.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "duygu": "şaşkın"
+      }
+    },
+    {
+      "id": 6510,
+      "kaynak": "duygular/cocuk4-uykulu.jpg",
+      "word": "çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "duygu": "uykulu"
+      }
     }
   ]
 }

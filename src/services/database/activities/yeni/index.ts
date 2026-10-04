@@ -54,3 +54,7 @@ export { dayNightDataYeni } from './gunduzGeceData';
 export { fastSlowDataYeni } from './hizliYavasData';
 export { beforeAfterDataYeni } from './onceSonraData';
 export { heavyLightDataYeni } from './agirHafifData';
+export { emotionsDataYeni } from './duygularData';
+export { sensesDataYeni } from './sensesData';
+export { ownershipDataYeni } from './ownershipData';
+export { ODA_GORSEL, KAP_GORSEL, RUTIN_GORSEL } from './tekilGorseller';

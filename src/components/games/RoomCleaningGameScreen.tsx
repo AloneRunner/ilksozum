@@ -1,6 +1,7 @@
 import { sayInstruction, sayFinished } from '../../utils/gameVoice.ts';
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon';
+import { KAP_GORSEL } from '../../services/database/activities/yeni/tekilGorseller.ts';
 
 interface RoomCleaningGameScreenProps {
     onBack: () => void;
@@ -41,11 +42,20 @@ interface Particle {
     size: number;
 }
 
+// Kapların gerçek resimleri (Kaan: gerçek görseller). Yüklenmeden önce emoji çizilir.
+const kapResmi: Record<string, HTMLImageElement> = {};
+const kapResmiAl = (ad: string): HTMLImageElement | null => {
+    const url = KAP_GORSEL[ad];
+    if (!url) return null;
+    if (!kapResmi[ad]) { const img = new Image(); img.src = url; kapResmi[ad] = img; }
+    return kapResmi[ad].complete && kapResmi[ad].naturalWidth > 0 ? kapResmi[ad] : null;
+};
+
 const ITEM_TYPES = {
-    toy: { emojis: ['🧸', '🎮', '🚗', '⚽', '🎀'], container: '📦', name: 'Oyuncak', color: '#EC4899', xPerc: 0.15 },
-    trash: { emojis: ['🗑️', '📄', '🥤', '🍬'], container: '🗑️', name: 'Çöp', color: '#6B7280', xPerc: 0.38 },
-    book: { emojis: ['📚', '📖', '📕', '📗'], container: '📚', name: 'Kitap', color: '#3B82F6', xPerc: 0.62 },
-    clothes: { emojis: ['👕', '👖', '🧦', '🧢'], container: '🧺', name: 'Kıyafet', color: '#8B5CF6', xPerc: 0.85 },
+    toy: { emojis: ['🧸', '🎮', '🚗', '⚽', '🎀'], container: '📦', gorsel: 'oyuncak-kutusu', name: 'Oyuncak', color: '#EC4899', xPerc: 0.15 },
+    trash: { emojis: ['🗑️', '📄', '🥤', '🍬'], container: '🗑️', gorsel: 'cop-kovasi', name: 'Çöp', color: '#6B7280', xPerc: 0.38 },
+    book: { emojis: ['📚', '📖', '📕', '📗'], container: '📚', gorsel: 'kitaplik', name: 'Kitap', color: '#3B82F6', xPerc: 0.62 },
+    clothes: { emojis: ['👕', '👖', '🧦', '🧢'], container: '🧺', gorsel: 'camasir-sepeti', name: 'Kıyafet', color: '#8B5CF6', xPerc: 0.85 },
 };
 
 const RoomCleaningGameScreen: React.FC<RoomCleaningGameScreenProps> = ({ onBack }) => {
@@ -233,20 +243,35 @@ const RoomCleaningGameScreen: React.FC<RoomCleaningGameScreenProps> = ({ onBack 
                 ctx.ellipse(0, 40, 40, 10, 0, 0, Math.PI * 2);
                 ctx.fill();
 
-                // Box Body
-                ctx.fillStyle = val.color; // Box color based on type
-                ctx.beginPath();
-                ctx.roundRect(-35, -30, 70, 70, 10);
-                ctx.fill();
-                ctx.lineWidth = 3;
-                ctx.strokeStyle = 'white';
-                ctx.stroke();
+                const resim = kapResmiAl(val.gorsel);
+                if (resim) {
+                    // Gerçek kap resmi: beyaz kart, türün renginde kenar
+                    ctx.fillStyle = 'white';
+                    ctx.beginPath();
+                    ctx.roundRect(-38, -33, 76, 76, 12);
+                    ctx.fill();
+                    ctx.lineWidth = 4;
+                    ctx.strokeStyle = val.color;
+                    ctx.stroke();
+                    ctx.drawImage(resim, -33, -28, 66, 66);
+                } else {
+                    // Box Body
+                    ctx.fillStyle = val.color; // Box color based on type
+                    ctx.beginPath();
+                    ctx.roundRect(-35, -30, 70, 70, 10);
+                    ctx.fill();
+                    ctx.lineWidth = 3;
+                    ctx.strokeStyle = 'white';
+                    ctx.stroke();
 
-                // Emoji Label
-                ctx.font = '30px serif';
+                    // Emoji Label
+                    ctx.font = '30px serif';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(val.container, 0, 5);
+                }
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
-                ctx.fillText(val.container, 0, 5);
 
                 // Text Name
                 ctx.font = 'bold 12px sans-serif';

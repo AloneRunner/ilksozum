@@ -595,6 +595,26 @@ const KAVRAMLAR = [
     soruOzel: { kova: { agir: 'Hangi kova ağır?', hafif: 'Hangi kova hafif?' } },
   },
   {
+    klasor: 'duygular', dosya: 'duygularData.ts', exportAdi: 'emotionsDataYeni',
+    activityType: 'Emotions', idBaslangic: 6501, etiket: 'duygu',
+    sahne: true,
+    // Aynı çocuk, iki duygu: "Hangi çocuk mutlu?" → "Evet! Bu çocuk mutlu." / "Hayır, bu çocuk kızgın."
+    haller: {
+      mutlu: { deger: 'mutlu', soru: 'Mutlu olan hangisi?', sifat: 'mutlu' },
+      uzgun: { deger: 'üzgün', soru: 'Üzgün olan hangisi?', sifat: 'üzgün' },
+      kizgin: { deger: 'kızgın', soru: 'Kızgın olan hangisi?', sifat: 'kızgın' },
+      korkmus: { deger: 'korkmuş', soru: 'Korkmuş olan hangisi?', sifat: 'korkmuş' },
+      saskin: { deger: 'şaşkın', soru: 'Şaşkın olan hangisi?', sifat: 'şaşkın' },
+      uykulu: { deger: 'uykulu', soru: 'Uykulu olan hangisi?', sifat: 'uykulu' },
+    },
+    // Korkmuş ile şaşkın yan yana yok (yüz ifadeleri çok benzer)
+    ciftler: [['mutlu', 'uzgun'], ['mutlu', 'kizgin'], ['mutlu', 'korkmus'], ['mutlu', 'saskin'], ['mutlu', 'uykulu'],
+      ['uzgun', 'kizgin'], ['uzgun', 'uykulu'], ['kizgin', 'uykulu'], ['saskin', 'uykulu']],
+    buYok: true,
+    ozne: Object.fromEntries(['cocuk1', 'cocuk2', 'cocuk3', 'cocuk4'].map(n => [n, 'bu çocuk'])),
+    kelime: Object.fromEntries(['cocuk1', 'cocuk2', 'cocuk3', 'cocuk4'].map(n => [n, 'çocuk'])),
+  },
+  {
     klasor: 'kirisik-duzgun', dosya: 'kirisikDuzgunData.ts', exportAdi: 'kirisikDuzgunDataYeni',
     activityType: 'KirisikDuzgun', idBaslangic: 4701, etiket: 'condition', sahneNesneler: ['masaortusu', 'ortu', 'perde'],
     a: { ek: 'kirisik', deger: 'kırışık', soru: 'Kırışık olan hangisi?', sifat: 'kırışıktır' },

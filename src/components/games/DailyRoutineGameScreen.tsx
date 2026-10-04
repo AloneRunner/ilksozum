@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
-import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
+import { sayInstruction, sayCorrect, sayFinished } from '../../utils/gameVoice.ts';
+import { RUTIN_GORSEL } from '../../services/database/activities/yeni/tekilGorseller.ts';
 
 // --- Sound Effects ---
 const createRoutineSound = () => {
@@ -71,79 +72,27 @@ const createRoutineSound = () => {
     return { playDrop, playCorrect, playWrong, playWin };
 };
 
-// --- Routine Sequences ---
-const ROUTINE_SEQUENCES = [
-    {
-        title: 'Sabah Rutini',
-        icon: '🌅',
-        items: [
-            { emoji: '😴', text: 'Uyan' },
-            { emoji: '🛏️', text: 'Yatağı topla' },
-            { emoji: '🚿', text: 'Duş al' },
-            { emoji: '👕', text: 'Giyin' },
-            { emoji: '🍳', text: 'Kahvaltı yap' },
-        ]
-    },
-    {
-        title: 'Okula Hazırlık',
-        icon: '🎒',
-        items: [
-            { emoji: '📚', text: 'Çantayı hazırla' },
-            { emoji: '👟', text: 'Ayakkabı giy' },
-            { emoji: '🧥', text: 'Mont giy' },
-            { emoji: '👋', text: 'Ailene veda et' },
-            { emoji: '🚌', text: 'Okula git' },
-        ]
-    },
-    {
-        title: 'Yemek Zamanı',
-        icon: '🍽️',
-        items: [
-            { emoji: '🧼', text: 'Ellerini yıka' },
-            { emoji: '🪑', text: 'Sofraya otur' },
-            { emoji: '🍝', text: 'Yemeğini ye' },
-            { emoji: '💧', text: 'Su iç' },
-            { emoji: '🧹', text: 'Masayı temizle' },
-        ]
-    },
-    {
-        title: 'Akşam Rutini',
-        icon: '🌙',
-        items: [
-            { emoji: '📺', text: 'Biraz dinlen' },
-            { emoji: '🛁', text: 'Banyo yap' },
-            { emoji: '👔', text: 'Pijama giy' },
-            { emoji: '🦷', text: 'Dişlerini fırçala' },
-            { emoji: '📖', text: 'Kitap oku' },
-        ]
-    },
-    {
-        title: 'Oyun Parkı',
-        icon: '🎡',
-        items: [
-            { emoji: '🚶', text: 'Parka yürü' },
-            { emoji: '🎠', text: 'Oyun alanına git' },
-            { emoji: '⛹️', text: 'Oyna' },
-            { emoji: '🧃', text: 'Mola ver' },
-            { emoji: '🏠', text: 'Eve dön' },
-        ]
-    },
-    {
-        title: 'Doğum Günü Partisi',
-        icon: '🎂',
-        items: [
-            { emoji: '🎁', text: 'Hediye al' },
-            { emoji: '🏠', text: 'Partiye git' },
-            { emoji: '🎈', text: 'Oyna eğlen' },
-            { emoji: '🎂', text: 'Pasta ye' },
-            { emoji: '👋', text: 'Teşekkür et' },
-        ]
-    },
-];
+// --- Rutinler ---
+// Kaan onayı (2026-10-04): gerçek fotoğraflar (aynı çocuk), mantıklı ve tartışmasız sıralar.
+// Kolay: 3 adım. Zor: 4-5 adım. Fotoğraf yoksa emoji gösterilir.
+interface Adim { gorsel: string; emoji: string; text: string }
+const A = (gorsel: string, emoji: string, text: string): Adim => ({ gorsel, emoji, text });
+type Seviye = 'kolay' | 'zor';
+const ROUTINES: Record<Seviye, { title: string; icon: string; items: Adim[] }[]> = {
+    kolay: [
+        { title: 'Yemek Zamanı', icon: '🍽️', items: [A('09-el-yika', '🧼', 'Ellerini yıka'), A('10-ogle-yemegi', '🍝', 'Yemeğini ye'), A('06-dis-fircala', '🦷', 'Dişlerini fırçala')] },
+        { title: 'Sabah', icon: '🌅', items: [A('01-uyan', '😴', 'Uyan'), A('04-giyin', '👕', 'Giyin'), A('05-kahvalti', '🍳', 'Kahvaltı yap')] },
+        { title: 'Okula Gidiyorum', icon: '🎒', items: [A('04-giyin', '👕', 'Giyin'), A('07-ayakkabi-giy', '👟', 'Ayakkabı giy'), A('08-okula-git', '🚪', 'Okula git')] },
+        { title: 'Uyku Zamanı', icon: '🌙', items: [A('12-pijama', '🩳', 'Pijama giy'), A('13-kitap-oku', '📖', 'Kitap oku'), A('14-uyu', '💤', 'Uyu')] },
+    ],
+    zor: [
+        { title: 'Sabah Rutini', icon: '🌅', items: [A('01-uyan', '😴', 'Uyan'), A('02-yatak-topla', '🛏️', 'Yatağı topla'), A('03-yuz-yika', '💦', 'Yüzünü yıka'), A('04-giyin', '👕', 'Giyin'), A('05-kahvalti', '🍳', 'Kahvaltı yap')] },
+        { title: 'Okula Hazırlık', icon: '🎒', items: [A('05-kahvalti', '🍳', 'Kahvaltı yap'), A('06-dis-fircala', '🦷', 'Dişlerini fırçala'), A('07-ayakkabi-giy', '👟', 'Ayakkabı giy'), A('08-okula-git', '🚪', 'Okula git')] },
+        { title: 'Akşam Rutini', icon: '🌙', items: [A('11-banyo', '🛁', 'Banyo yap'), A('12-pijama', '🩳', 'Pijama giy'), A('13-kitap-oku', '📖', 'Kitap oku'), A('14-uyu', '💤', 'Uyu')] },
+    ],
+};
 
-interface RoutineItem {
-    emoji: string;
-    text: string;
+interface RoutineItem extends Adim {
     originalIndex: number;
 }
 
@@ -151,114 +100,94 @@ interface DailyRoutineGameScreenProps {
     onBack: () => void;
 }
 
+const Resim: React.FC<{ item: Adim; boyut: string }> = ({ item, boyut }) => {
+    const url = RUTIN_GORSEL[item.gorsel];
+    return url
+        ? <img src={url} alt={item.text} className={`${boyut} object-cover rounded-xl`} draggable={false} />
+        : <div className={`${boyut} rounded-xl bg-violet-50 flex items-center justify-center text-4xl`}>{item.emoji}</div>;
+};
+
 const DailyRoutineGameScreen: React.FC<DailyRoutineGameScreenProps> = ({ onBack }) => {
     const [gameState, setGameState] = useState<'menu' | 'playing' | 'result'>('menu');
+    const [seviye, setSeviye] = useState<Seviye>('kolay');
     const [currentSequence, setCurrentSequence] = useState(0);
     const [shuffledItems, setShuffledItems] = useState<RoutineItem[]>([]);
     const [placedItems, setPlacedItems] = useState<(RoutineItem | null)[]>([]);
     const [selectedItem, setSelectedItem] = useState<RoutineItem | null>(null);
-    const [score, setScore] = useState(0);
-    const [totalRounds, setTotalRounds] = useState(0);
     const [showFeedback, setShowFeedback] = useState<'correct' | 'wrong' | null>(null);
     const soundRef = useRef<ReturnType<typeof createRoutineSound> | null>(null);
+    const rutinler = ROUTINES[seviye];
 
     useEffect(() => {
         soundRef.current = createRoutineSound();
     }, []);
 
-    const shuffleArray = <T,>(array: T[]): T[] => {
+    const shuffleArray = (array: RoutineItem[]): RoutineItem[] => {
         const newArray = [...array];
         for (let i = newArray.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
         }
+        // Karıştırma doğru sırayı vermesin
+        if (newArray.length > 1 && newArray.every((x, i) => x.originalIndex === i)) newArray.reverse();
         return newArray;
     };
 
-    const startRound = useCallback((seqIndex: number) => {
-        const sequence = ROUTINE_SEQUENCES[seqIndex];
-        const itemsWithIndex = sequence.items.map((item, idx) => ({
-            ...item,
-            originalIndex: idx,
-        }));
-
+    const startRound = useCallback((sev: Seviye, seqIndex: number) => {
+        const sequence = ROUTINES[sev][seqIndex];
         setCurrentSequence(seqIndex);
-        setShuffledItems(shuffleArray(itemsWithIndex));
+        setShuffledItems(shuffleArray(sequence.items.map((item, idx) => ({ ...item, originalIndex: idx }))));
         setPlacedItems(Array(sequence.items.length).fill(null));
         setSelectedItem(null);
         setShowFeedback(null);
         setGameState('playing');
     }, []);
 
-    const startGame = useCallback(() => {
-        setScore(0);
-        setTotalRounds(ROUTINE_SEQUENCES.length);
-        startRound(0);
+    const startGame = useCallback((sev: Seviye) => {
+        setSeviye(sev);
+        startRound(sev, 0);
     }, [startRound]);
 
     useEffect(() => {
         if (gameState !== 'playing') return;
-        sayInstruction(`${ROUTINE_SEQUENCES[currentSequence].title}. Kartları doğru sıraya koy. İlk önce ne yapılır?`, 300);
-    }, [gameState, currentSequence]);
+        sayInstruction(`${rutinler[currentSequence].title}. Önce ne yapılır?`, 300);
+    }, [gameState, currentSequence, rutinler]);
 
     useEffect(() => {
-        if (gameState === 'result') sayFinished();
+        if (gameState === 'result') setTimeout(() => sayFinished(), 700); // kutlama sesi bitince
     }, [gameState]);
 
-    const handleItemClick = useCallback((item: RoutineItem) => {
-        if (showFeedback) return;
-        soundRef.current?.playDrop();
-        setSelectedItem(item);
-    }, [showFeedback]);
+    // Sıradaki boş yer: çocuk kartı seçince doğrudan oraya denenir (yer seçmek gerekmez)
+    const siradaki = placedItems.findIndex(p => p === null);
 
-    const handleSlotClick = useCallback((slotIndex: number) => {
-        if (!selectedItem || showFeedback) return;
-        if (placedItems[slotIndex]) return; // Slot occupied
-
-        // Check if correct placement
-        const isCorrect = selectedItem.originalIndex === slotIndex;
-
-        if (isCorrect) {
+    const yerlestir = useCallback((item: RoutineItem) => {
+        if (showFeedback || siradaki < 0) return;
+        if (item.originalIndex === siradaki) {
             soundRef.current?.playCorrect();
-            sayCorrect(`${selectedItem.text}.`);
+            setTimeout(() => sayCorrect(`${item.text}.`), 350);
             setShowFeedback('correct');
-
-            // Place item
             const newPlaced = [...placedItems];
-            newPlaced[slotIndex] = selectedItem;
+            newPlaced[siradaki] = item;
             setPlacedItems(newPlaced);
-
-            // Remove from shuffled
-            setShuffledItems(prev => prev.filter(i => i.originalIndex !== selectedItem.originalIndex));
+            setShuffledItems(prev => prev.filter(i => i.originalIndex !== item.originalIndex));
             setSelectedItem(null);
-
             setTimeout(() => {
                 setShowFeedback(null);
-
-                // Check if round complete
                 if (newPlaced.every(p => p !== null)) {
-                    setScore(s => s + 1);
-
-                    // Next round or end
-                    if (currentSequence < ROUTINE_SEQUENCES.length - 1) {
-                        startRound(currentSequence + 1);
-                    } else {
-                        soundRef.current?.playWin();
-                        setGameState('result');
-                    }
+                    setTimeout(() => {
+                        if (currentSequence < rutinler.length - 1) startRound(seviye, currentSequence + 1);
+                        else { soundRef.current?.playWin(); setGameState('result'); }
+                    }, 1200);
                 }
-            }, 800);
+            }, 700);
         } else {
+            // Yanlış: kızmadan kartı hafifçe salla
             soundRef.current?.playWrong();
-            sayWrong();
+            setSelectedItem(item);
             setShowFeedback('wrong');
-            setSelectedItem(null);
-
-            setTimeout(() => {
-                setShowFeedback(null);
-            }, 500);
+            setTimeout(() => { setShowFeedback(null); setSelectedItem(null); }, 900);
         }
-    }, [selectedItem, placedItems, showFeedback, currentSequence, startRound]);
+    }, [showFeedback, siradaki, placedItems, currentSequence, rutinler, seviye, startRound]);
 
     const renderMenu = () => (
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-violet-400 via-purple-400 to-fuchsia-400 p-4">
@@ -267,164 +196,93 @@ const DailyRoutineGameScreen: React.FC<DailyRoutineGameScreenProps> = ({ onBack 
                 <h1 className="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-fuchsia-600 mb-2">
                     Sıralı Ol!
                 </h1>
-                <p className="text-gray-600 mb-2">Günlük aktiviteleri doğru sıraya koy!</p>
-                <p className="text-sm text-gray-500 mb-6">
-                    Önce aktiviteye tıkla, sonra doğru sıraya yerleştir.
-                </p>
-
-                <button
-                    onClick={startGame}
-                    className="w-full bg-gradient-to-r from-violet-400 to-fuchsia-500 text-white font-bold text-xl px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-transform"
-                >
-                    Başla! 🎯
-                </button>
-
-                <div className="mt-4 text-sm text-gray-500">
-                    {ROUTINE_SEQUENCES.length} farklı rutin
+                <p className="text-gray-600 mb-6">Önce ne yapılır, sonra ne yapılır? Resimleri sırayla seç.</p>
+                <div className="flex flex-col gap-3">
+                    <button onClick={() => startGame('kolay')}
+                        className="w-full bg-gradient-to-r from-green-400 to-emerald-500 text-white font-bold text-xl px-8 py-4 rounded-full shadow-lg">
+                        Kolay · 3 adım
+                    </button>
+                    <button onClick={() => startGame('zor')}
+                        className="w-full bg-gradient-to-r from-violet-400 to-fuchsia-500 text-white font-bold text-xl px-8 py-4 rounded-full shadow-lg">
+                        Zor · 4-5 adım
+                    </button>
                 </div>
             </div>
         </div>
     );
 
     const renderPlaying = () => {
-        const sequence = ROUTINE_SEQUENCES[currentSequence];
-
+        const sequence = rutinler[currentSequence];
+        const yanlisSecili = showFeedback === 'wrong';
+        const sutun = placedItems.length <= 3 ? 'grid-cols-3' : placedItems.length === 4 ? 'grid-cols-4' : 'grid-cols-5';
         return (
             <div className="absolute inset-0 flex flex-col bg-gradient-to-b from-violet-200 via-purple-100 to-fuchsia-100">
-                {/* Header */}
                 <div className="flex items-center justify-between p-3 bg-white/80 shadow-md">
-                    <button onClick={onBack} className="bg-white rounded-full p-2 shadow">
+                    <button onClick={() => setGameState('menu')} className="bg-white rounded-full p-2 shadow">
                         <ArrowLeftIcon className="w-5 h-5 text-violet-600" />
                     </button>
-
-                    <div className="text-center">
-                        <div className="text-xl">{sequence.icon}</div>
-                        <div className="font-bold text-violet-700 text-sm">{sequence.title}</div>
-                    </div>
-
+                    <div className="font-bold text-violet-700">{sequence.icon} {sequence.title}</div>
                     <div className="bg-fuchsia-500 text-white rounded-full px-3 py-1 font-bold">
-                        {currentSequence + 1}/{ROUTINE_SEQUENCES.length}
+                        {currentSequence + 1}/{rutinler.length}
                     </div>
                 </div>
 
-                {/* Instruction */}
-                <div className="text-center py-2 px-4">
-                    <p className="text-violet-800 font-semibold">
-                        {selectedItem
-                            ? `"${selectedItem.text}" için doğru sırayı seç!`
-                            : 'Aşağıdan bir aktivite seç 👇'
-                        }
-                    </p>
+                {/* Sıra: 1, 2, 3... (dolanlar fotoğrafla) */}
+                <div className="px-3 pt-4">
+                    <div className={`grid gap-2 ${sutun}`}>
+                        {placedItems.map((item, idx) => (
+                            <div key={idx} className={`relative rounded-2xl p-1 border-2 ${item ? 'bg-green-200 border-green-400' : idx === siradaki ? 'bg-violet-200 border-dashed border-violet-500 animate-pulse' : 'bg-white/60 border-dashed border-violet-300'}`}>
+                                <div className="absolute -top-2 -left-2 w-7 h-7 rounded-full bg-violet-600 text-white text-sm font-black flex items-center justify-center z-10">{idx + 1}</div>
+                                {item ? <Resim item={item} boyut="w-full aspect-square" /> : <div className="w-full aspect-square flex items-center justify-center text-3xl text-violet-300">?</div>}
+                                <div className="text-[11px] text-center font-semibold text-gray-700 h-4 mt-0.5 truncate">{item?.text}</div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
-                {/* Slots (Target) */}
-                <div className="flex-1 flex flex-col justify-center px-4">
-                    <div className="bg-white/70 rounded-2xl p-3 shadow-lg mb-4">
-                        <p className="text-center text-sm text-gray-600 mb-2">Doğru sıra:</p>
-                        <div className="space-y-2">
-                            {placedItems.map((item, idx) => (
+                <div className="text-center py-2 px-4 text-violet-800 font-bold">
+                    {siradaki === 0 ? 'Önce ne yapılır?' : siradaki > 0 ? 'Sonra ne yapılır?' : 'Aferin! 🎉'}
+                </div>
+
+                {/* Kartlar */}
+                <div className="flex-1 overflow-y-auto px-3 pb-4">
+                    <div className="grid grid-cols-2 gap-3 max-w-md mx-auto">
+                        {shuffledItems.map((item) => {
+                            const yanlis = yanlisSecili && selectedItem?.originalIndex === item.originalIndex;
+                            return (
                                 <button
-                                    key={idx}
-                                    onClick={() => handleSlotClick(idx)}
-                                    disabled={!!item}
-                                    className={`w-full p-3 rounded-xl flex items-center gap-3 transition-all ${item
-                                            ? 'bg-green-100 border-2 border-green-400'
-                                            : selectedItem
-                                                ? 'bg-violet-100 border-2 border-violet-400 border-dashed hover:bg-violet-200'
-                                                : 'bg-gray-100 border-2 border-gray-300 border-dashed'
-                                        }`}
+                                    key={item.originalIndex}
+                                    onClick={() => yerlestir(item)}
+                                    className={`bg-white rounded-2xl p-2 shadow-md transition-all active:scale-95 ${yanlis ? 'ring-4 ring-orange-300 animate-[sarsil_0.3s_ease-in-out_2]' : ''}`}
                                 >
-                                    <div className="w-8 h-8 rounded-full bg-violet-500 text-white flex items-center justify-center font-bold">
-                                        {idx + 1}
-                                    </div>
-                                    {item ? (
-                                        <>
-                                            <span className="text-2xl">{item.emoji}</span>
-                                            <span className="font-medium text-gray-800">{item.text}</span>
-                                        </>
-                                    ) : (
-                                        <span className="text-gray-400 text-sm">Buraya yerleştir...</span>
-                                    )}
+                                    <Resim item={item} boyut="w-full aspect-square" />
+                                    <div className="mt-1 font-bold text-sm text-gray-800">{item.text}</div>
                                 </button>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-
-                {/* Items (Source) */}
-                <div className="bg-white/80 rounded-t-3xl shadow-lg p-4">
-                    <p className="text-center text-sm text-gray-600 mb-2">Aktiviteler:</p>
-                    <div className="flex flex-wrap justify-center gap-2">
-                        {shuffledItems.map((item) => (
-                            <button
-                                key={item.originalIndex}
-                                onClick={() => handleItemClick(item)}
-                                className={`px-4 py-3 rounded-xl shadow-md flex items-center gap-2 transition-all ${selectedItem?.originalIndex === item.originalIndex
-                                        ? 'bg-violet-500 text-white scale-105 ring-4 ring-violet-300'
-                                        : 'bg-white hover:bg-violet-50 text-gray-800'
-                                    }`}
-                            >
-                                <span className="text-2xl">{item.emoji}</span>
-                                <span className="font-medium text-sm">{item.text}</span>
-                            </button>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Feedback overlay */}
-                {showFeedback && (
-                    <div className={`absolute inset-0 flex items-center justify-center pointer-events-none ${showFeedback === 'correct' ? 'bg-green-500/20' : 'bg-red-500/20'
-                        }`}>
-                        <div className="text-8xl animate-bounce">
-                            {showFeedback === 'correct' ? '✅' : '❌'}
-                        </div>
-                    </div>
-                )}
-            </div>
-        );
-    };
-
-    const renderResult = () => {
-        const percent = Math.round((score / totalRounds) * 100);
-        const stars = percent >= 90 ? 3 : percent >= 60 ? 2 : 1;
-
-        return (
-            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-violet-400 via-purple-400 to-fuchsia-400 p-4">
-                <div className="bg-white/95 rounded-3xl p-6 sm:p-8 shadow-2xl max-w-sm w-full text-center animate-scale-in">
-                    <div className="text-6xl mb-4">🏆</div>
-                    <h2 className="text-2xl font-black text-violet-600 mb-2">
-                        Tebrikler!
-                    </h2>
-
-                    <div className="flex justify-center gap-1 my-3">
-                        {[1, 2, 3].map(i => (
-                            <span key={i} className="text-3xl">{i <= stars ? '⭐' : '☆'}</span>
-                        ))}
-                    </div>
-
-                    <div className="bg-gradient-to-r from-violet-400 to-fuchsia-500 rounded-xl p-4 mb-4 text-white">
-                        <div className="text-sm opacity-80">Skor</div>
-                        <div className="text-3xl font-black">{score} / {totalRounds}</div>
-                    </div>
-
-                    <div className="flex flex-col gap-3">
-                        <button
-                            onClick={startGame}
-                            className="bg-gradient-to-r from-green-400 to-emerald-500 text-white font-bold text-lg px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-transform"
-                        >
-                            Tekrar Oyna 🔄
-                        </button>
-                        <button
-                            onClick={onBack}
-                            className="text-gray-500 font-medium hover:text-gray-700"
-                        >
-                            Menüye Dön
-                        </button>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
         );
     };
+
+    const renderResult = () => (
+        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-violet-400 via-purple-400 to-fuchsia-400 p-4">
+            <div className="bg-white/95 rounded-3xl p-6 sm:p-8 shadow-2xl max-w-sm w-full text-center animate-scale-in">
+                <div className="text-6xl mb-4">🏆</div>
+                <h2 className="text-2xl font-black text-violet-600 mb-4">Tebrikler!</h2>
+                <div className="flex flex-col gap-3">
+                    <button onClick={() => startGame(seviye)}
+                        className="bg-gradient-to-r from-green-400 to-emerald-500 text-white font-bold text-lg px-6 py-3 rounded-full shadow-lg">
+                        Tekrar Oyna 🔄
+                    </button>
+                    <button onClick={() => setGameState('menu')} className="text-gray-500 font-medium hover:text-gray-700">
+                        Seviye Seç
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
 
     return (
         <div className="relative w-full h-full overflow-hidden">
@@ -442,13 +300,9 @@ const DailyRoutineGameScreen: React.FC<DailyRoutineGameScreenProps> = ({ onBack 
             {gameState === 'result' && renderResult()}
 
             <style>{`
-                .animate-scale-in {
-                    animation: scaleIn 0.3s ease-out;
-                }
-                @keyframes scaleIn {
-                    from { transform: scale(0.8); opacity: 0; }
-                    to { transform: scale(1); opacity: 1; }
-                }
+                .animate-scale-in { animation: scaleIn 0.3s ease-out; }
+                @keyframes scaleIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+                @keyframes sarsil { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
             `}</style>
         </div>
     );

@@ -2,7 +2,7 @@
 import { ActivityType, ActivityCategory, ImageMetadata, ConceptRound, Word, Story, ScreenState, ConceptOption, ActivityStats, MemoryGameRound, SudokuRound, SudokuItem } from '../types.ts';
 import { storyData } from './staticData.ts';
 import { imageData } from './database/imageData.ts';
-import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni, fewMuchDataYeni, halfQuarterWholeDataYeni, derinSigDataYeni, openClosedDataYeni, brokenIntactDataYeni, cleanDirtyDataYeni, wetDryDataYeni, oldNewDataYeni, hardSoftDataYeni, hotColdDataYeni, roughSmoothDataYeni, dikenliPuruzsuzDataYeni, parlakMatDataYeni, seffafOpakDataYeni, bitterSweetDataYeni, noisyQuietDataYeni, hungryFullDataYeni, youngOldDataYeni, tembelCaliskanDataYeni, kalabalikTenhaDataYeni, kirisikDuzgunDataYeni, dugumCozukDataYeni, straightCurvedDataYeni, tazeBayatDataYeni, messyCleanDataYeni, hangisiFarkliKolayYeni, hangisiFarkliZorYeni, leftRightDataYeni, aliveLifelessDataYeni, saatDataYeni, nearFarDataYeni, besideOppositeDataYeni, tersDuzDataYeni, sivriKutDataYeni, dayNightDataYeni, fastSlowDataYeni, beforeAfterDataYeni, heavyLightDataYeni } from './database/activities/yeni/index.ts';
+import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni, fewMuchDataYeni, halfQuarterWholeDataYeni, derinSigDataYeni, openClosedDataYeni, brokenIntactDataYeni, cleanDirtyDataYeni, wetDryDataYeni, oldNewDataYeni, hardSoftDataYeni, hotColdDataYeni, roughSmoothDataYeni, dikenliPuruzsuzDataYeni, parlakMatDataYeni, seffafOpakDataYeni, bitterSweetDataYeni, noisyQuietDataYeni, hungryFullDataYeni, youngOldDataYeni, tembelCaliskanDataYeni, kalabalikTenhaDataYeni, kirisikDuzgunDataYeni, dugumCozukDataYeni, straightCurvedDataYeni, tazeBayatDataYeni, messyCleanDataYeni, hangisiFarkliKolayYeni, hangisiFarkliZorYeni, leftRightDataYeni, aliveLifelessDataYeni, saatDataYeni, nearFarDataYeni, besideOppositeDataYeni, tersDuzDataYeni, sivriKutDataYeni, dayNightDataYeni, fastSlowDataYeni, beforeAfterDataYeni, heavyLightDataYeni, emotionsDataYeni, sensesDataYeni, ownershipDataYeni } from './database/activities/yeni/index.ts';
 import { 
     sensesData,
     bigSmallData, longShortData, thinThickData, wideNarrowData, oldNewData, youngOldData, hardSoftData, cleanDirtyData, wetDryData, openClosedData, straightCurvedData, aliveLifelessData, bitterSweetData, heavyLightData, hotColdData, roughSmoothData, brokenIntactData, messyCleanData, tazeBayatData, kirisikDuzgunData, sivriKutData, parlakMatData, tembelCaliskanData, seffafOpakData, dikenliPuruzsuzData, dugumCozukData, hungryFullData, derinSigData, kalabalikTenhaData, tersDuzData,
@@ -1403,7 +1403,7 @@ const createEmotionsRounds = (count: number = 8): ConceptRound[] => {
 
 // --- NEW, SIMPLIFIED MAIN DATA FETCHER ---
 const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
-    [ActivityType.Senses]: sensesData,
+    [ActivityType.Senses]: YENI_SORULAR_AKTIF ? sensesDataYeni : sensesData,
     [ActivityType.BigSmall]: YENI_SORULAR_AKTIF ? bigSmallDataYeni : bigSmallData,
     [ActivityType.LongShort]: YENI_SORULAR_AKTIF ? longShortDataYeni : longShortData,
     [ActivityType.ThinThick]: YENI_SORULAR_AKTIF ? thinThickDataYeni : thinThickData,
@@ -1452,7 +1452,7 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.DayNight]: YENI_SORULAR_AKTIF ? dayNightDataYeni : dayNightData,
     [ActivityType.FastSlow]: YENI_SORULAR_AKTIF ? fastSlowDataYeni : fastSlowData,
     [ActivityType.NoisyQuiet]: YENI_SORULAR_AKTIF ? noisyQuietDataYeni : noisyQuietData,
-    ...(YENI_SORULAR_AKTIF ? { [ActivityType.ClockLearning]: saatDataYeni } : {}),
+    ...(YENI_SORULAR_AKTIF ? { [ActivityType.ClockLearning]: saatDataYeni, [ActivityType.Emotions]: emotionsDataYeni } : {}),
     // WhatDoesntBelong is now handled dynamically
     // FunctionalMatching removed - now integrated into 5N1K "What?" category
     [ActivityType.FiveWOneH]: fiveWOneHData,
@@ -1460,7 +1460,7 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.PatternCompletion]: patternCompletionData,
     [ActivityType.DragAndDropCounting]: dragAndDropCountingData,
     [ActivityType.DragAndDropPositioning]: dragAndDropPositioningData,
-    [ActivityType.WhoseIsThis]: ownershipData,
+    [ActivityType.WhoseIsThis]: YENI_SORULAR_AKTIF ? ownershipDataYeni : ownershipData,
     [ActivityType.ColorRecognition]: colorRecognitionData,
     [ActivityType.WhatsMissing]: whatsMissingData,
 };
@@ -1478,7 +1478,8 @@ export const fetchConceptActivityData = async (
     if (activity === ActivityType.YesNo) return createYesNoRounds(MAX_QUESTIONS_STATIC);
     if (activity === ActivityType.Colors) return createColorsRounds(MAX_QUESTIONS_STATIC);
     if (activity === ActivityType.Shapes) return createShapesRounds(MAX_QUESTIONS_STATIC);
-    if (activity === ActivityType.Emotions) return createEmotionsRounds(MAX_QUESTIONS_STATIC);
+    // Yeni: aynı çocuğun iki duygusu (çift kavram verisi, aşağıdaki sabit tablodan)
+    if (activity === ActivityType.Emotions && !YENI_SORULAR_AKTIF) return createEmotionsRounds(MAX_QUESTIONS_STATIC);
     
     if (activity === ActivityType.WhatDoesntBelong) {
         // Erken ünitelerde sadece basit 3 aynı + 1 farklı (ID <=4), ileri (unit >=9) kategori bazlı.

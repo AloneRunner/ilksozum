@@ -21836,5 +21836,1316 @@ export const imageDataYeni: ImageMetadata[] = [
         "A"
       ]
     }
+  },
+  {
+    "id": 6301,
+    "word": "göz",
+    "imageUrl": "/images/6301.webp",
+    "audioKeys": {
+      "default": "göz"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "duyular",
+      "syllables": [
+        "göz"
+      ],
+      "letters": [
+        "G",
+        "Ö",
+        "Z"
+      ]
+    }
+  },
+  {
+    "id": 6302,
+    "word": "kulak",
+    "imageUrl": "/images/6302.webp",
+    "audioKeys": {
+      "default": "kulak"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "duyular",
+      "syllables": [
+        "ku",
+        "lak"
+      ],
+      "letters": [
+        "K",
+        "U",
+        "L",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6303,
+    "word": "burun",
+    "imageUrl": "/images/6303.webp",
+    "audioKeys": {
+      "default": "burun"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "duyular",
+      "syllables": [
+        "bu",
+        "run"
+      ],
+      "letters": [
+        "B",
+        "U",
+        "R",
+        "U",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": 6304,
+    "word": "dil",
+    "imageUrl": "/images/6304.webp",
+    "audioKeys": {
+      "default": "dil"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "duyular",
+      "syllables": [
+        "dil"
+      ],
+      "letters": [
+        "D",
+        "İ",
+        "L"
+      ]
+    }
+  },
+  {
+    "id": 6305,
+    "word": "el",
+    "imageUrl": "/images/6305.webp",
+    "audioKeys": {
+      "default": "el"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "duyular",
+      "syllables": [
+        "el"
+      ],
+      "letters": [
+        "E",
+        "L"
+      ]
+    }
+  },
+  {
+    "id": 6306,
+    "word": "polis",
+    "imageUrl": "/images/6306.webp",
+    "audioKeys": {
+      "default": "polis"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "po",
+        "lis"
+      ],
+      "letters": [
+        "P",
+        "O",
+        "L",
+        "İ",
+        "S"
+      ]
+    }
+  },
+  {
+    "id": 6307,
+    "word": "öğretmen",
+    "imageUrl": "/images/6307.webp",
+    "audioKeys": {
+      "default": "öğretmen"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "öğ",
+        "ret",
+        "men"
+      ],
+      "letters": [
+        "Ö",
+        "Ğ",
+        "R",
+        "E",
+        "T",
+        "M",
+        "E",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": 6308,
+    "word": "itfaiyeci",
+    "imageUrl": "/images/6308.webp",
+    "audioKeys": {
+      "default": "itfaiyeci"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "it",
+        "fa",
+        "i",
+        "ye",
+        "ci"
+      ],
+      "letters": [
+        "İ",
+        "T",
+        "F",
+        "A",
+        "İ",
+        "Y",
+        "E",
+        "C",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 6309,
+    "word": "doktor",
+    "imageUrl": "/images/6309.webp",
+    "audioKeys": {
+      "default": "doktor"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "dok",
+        "tor"
+      ],
+      "letters": [
+        "D",
+        "O",
+        "K",
+        "T",
+        "O",
+        "R"
+      ]
+    }
+  },
+  {
+    "id": 6310,
+    "word": "aşçı",
+    "imageUrl": "/images/6310.webp",
+    "audioKeys": {
+      "default": "aşçı"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "aş",
+        "çı"
+      ],
+      "letters": [
+        "A",
+        "Ş",
+        "Ç",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 6311,
+    "word": "astronot",
+    "imageUrl": "/images/6311.webp",
+    "audioKeys": {
+      "default": "astronot"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "ast",
+        "ro",
+        "not"
+      ],
+      "letters": [
+        "A",
+        "S",
+        "T",
+        "R",
+        "O",
+        "N",
+        "O",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 6312,
+    "word": "kral",
+    "imageUrl": "/images/6312.webp",
+    "audioKeys": {
+      "default": "kral"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "kral"
+      ],
+      "letters": [
+        "K",
+        "R",
+        "A",
+        "L"
+      ]
+    }
+  },
+  {
+    "id": 6313,
+    "word": "nine",
+    "imageUrl": "/images/6313.webp",
+    "audioKeys": {
+      "default": "nine"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "ni",
+        "ne"
+      ],
+      "letters": [
+        "N",
+        "İ",
+        "N",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 6314,
+    "word": "dede",
+    "imageUrl": "/images/6314.webp",
+    "audioKeys": {
+      "default": "dede"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "de",
+        "de"
+      ],
+      "letters": [
+        "D",
+        "E",
+        "D",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 6315,
+    "word": "baba",
+    "imageUrl": "/images/6315.webp",
+    "audioKeys": {
+      "default": "baba"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "ba",
+        "ba"
+      ],
+      "letters": [
+        "B",
+        "A",
+        "B",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 6316,
+    "word": "bebek",
+    "imageUrl": "/images/6316.webp",
+    "audioKeys": {
+      "default": "bebek"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "be",
+        "bek"
+      ],
+      "letters": [
+        "B",
+        "E",
+        "B",
+        "E",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6317,
+    "word": "öğrenci",
+    "imageUrl": "/images/6317.webp",
+    "audioKeys": {
+      "default": "öğrenci"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "öğ",
+        "ren",
+        "ci"
+      ],
+      "letters": [
+        "Ö",
+        "Ğ",
+        "R",
+        "E",
+        "N",
+        "C",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 6318,
+    "word": "kız çocuğu",
+    "imageUrl": "/images/6318.webp",
+    "audioKeys": {
+      "default": "kız çocuğu"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kisiler",
+      "syllables": [
+        "kız",
+        "ço",
+        "cu",
+        "ğu"
+      ],
+      "letters": [
+        "K",
+        "I",
+        "Z",
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "Ğ",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 6320,
+    "word": "mutfak",
+    "imageUrl": "/images/6320.webp",
+    "audioKeys": {
+      "default": "mutfak"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "odalar",
+      "syllables": [
+        "mut",
+        "fak"
+      ],
+      "letters": [
+        "M",
+        "U",
+        "T",
+        "F",
+        "A",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6321,
+    "word": "banyo",
+    "imageUrl": "/images/6321.webp",
+    "audioKeys": {
+      "default": "banyo"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "odalar",
+      "syllables": [
+        "ban",
+        "yo"
+      ],
+      "letters": [
+        "B",
+        "A",
+        "N",
+        "Y",
+        "O"
+      ]
+    }
+  },
+  {
+    "id": 6322,
+    "word": "yatak odası",
+    "imageUrl": "/images/6322.webp",
+    "audioKeys": {
+      "default": "yatak odası"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "odalar",
+      "syllables": [
+        "ya",
+        "tak",
+        "o",
+        "da",
+        "sı"
+      ],
+      "letters": [
+        "Y",
+        "A",
+        "T",
+        "A",
+        "K",
+        "O",
+        "D",
+        "A",
+        "S",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 6323,
+    "word": "sınıf",
+    "imageUrl": "/images/6323.webp",
+    "audioKeys": {
+      "default": "sınıf"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "odalar",
+      "syllables": [
+        "sı",
+        "nıf"
+      ],
+      "letters": [
+        "S",
+        "I",
+        "N",
+        "I",
+        "F"
+      ]
+    }
+  },
+  {
+    "id": 6324,
+    "word": "bahçe",
+    "imageUrl": "/images/6324.webp",
+    "audioKeys": {
+      "default": "bahçe"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "odalar",
+      "syllables": [
+        "bah",
+        "çe"
+      ],
+      "letters": [
+        "B",
+        "A",
+        "H",
+        "Ç",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 6325,
+    "word": "oyuncak kutusu",
+    "imageUrl": "/images/6325.webp",
+    "audioKeys": {
+      "default": "oyuncak kutusu"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kaplar",
+      "syllables": [
+        "o",
+        "yun",
+        "cak",
+        "ku",
+        "tu",
+        "su"
+      ],
+      "letters": [
+        "O",
+        "Y",
+        "U",
+        "N",
+        "C",
+        "A",
+        "K",
+        "K",
+        "U",
+        "T",
+        "U",
+        "S",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 6326,
+    "word": "çöp kovası",
+    "imageUrl": "/images/6326.webp",
+    "audioKeys": {
+      "default": "çöp kovası"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kaplar",
+      "syllables": [
+        "çöp",
+        "ko",
+        "va",
+        "sı"
+      ],
+      "letters": [
+        "Ç",
+        "Ö",
+        "P",
+        "K",
+        "O",
+        "V",
+        "A",
+        "S",
+        "I"
+      ]
+    }
+  },
+  {
+    "id": 6327,
+    "word": "kitaplık",
+    "imageUrl": "/images/6327.webp",
+    "audioKeys": {
+      "default": "kitaplık"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kaplar",
+      "syllables": [
+        "ki",
+        "tap",
+        "lık"
+      ],
+      "letters": [
+        "K",
+        "İ",
+        "T",
+        "A",
+        "P",
+        "L",
+        "I",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6328,
+    "word": "çamaşır sepeti",
+    "imageUrl": "/images/6328.webp",
+    "audioKeys": {
+      "default": "çamaşır sepeti"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "kaplar",
+      "syllables": [
+        "ça",
+        "ma",
+        "şır",
+        "se",
+        "pe",
+        "ti"
+      ],
+      "letters": [
+        "Ç",
+        "A",
+        "M",
+        "A",
+        "Ş",
+        "I",
+        "R",
+        "S",
+        "E",
+        "P",
+        "E",
+        "T",
+        "İ"
+      ]
+    }
+  },
+  {
+    "id": 6329,
+    "word": "uyan",
+    "imageUrl": "/images/6329.webp",
+    "audioKeys": {
+      "default": "uyan"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "u",
+        "yan"
+      ],
+      "letters": [
+        "U",
+        "Y",
+        "A",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": 6330,
+    "word": "yatağı topla",
+    "imageUrl": "/images/6330.webp",
+    "audioKeys": {
+      "default": "yatağı topla"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "ya",
+        "ta",
+        "ğı",
+        "top",
+        "la"
+      ],
+      "letters": [
+        "Y",
+        "A",
+        "T",
+        "A",
+        "Ğ",
+        "I",
+        "T",
+        "O",
+        "P",
+        "L",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 6331,
+    "word": "yüzünü yıka",
+    "imageUrl": "/images/6331.webp",
+    "audioKeys": {
+      "default": "yüzünü yıka"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "yü",
+        "zü",
+        "nü",
+        "yı",
+        "ka"
+      ],
+      "letters": [
+        "Y",
+        "Ü",
+        "Z",
+        "Ü",
+        "N",
+        "Ü",
+        "Y",
+        "I",
+        "K",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 6332,
+    "word": "giyin",
+    "imageUrl": "/images/6332.webp",
+    "audioKeys": {
+      "default": "giyin"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "gi",
+        "yin"
+      ],
+      "letters": [
+        "G",
+        "İ",
+        "Y",
+        "İ",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": 6333,
+    "word": "kahvaltı yap",
+    "imageUrl": "/images/6333.webp",
+    "audioKeys": {
+      "default": "kahvaltı yap"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "kah",
+        "val",
+        "tı",
+        "yap"
+      ],
+      "letters": [
+        "K",
+        "A",
+        "H",
+        "V",
+        "A",
+        "L",
+        "T",
+        "I",
+        "Y",
+        "A",
+        "P"
+      ]
+    }
+  },
+  {
+    "id": 6334,
+    "word": "dişlerini fırçala",
+    "imageUrl": "/images/6334.webp",
+    "audioKeys": {
+      "default": "dişlerini fırçala"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "diş",
+        "le",
+        "ri",
+        "ni",
+        "fır",
+        "ça",
+        "la"
+      ],
+      "letters": [
+        "D",
+        "İ",
+        "Ş",
+        "L",
+        "E",
+        "R",
+        "İ",
+        "N",
+        "İ",
+        "F",
+        "I",
+        "R",
+        "Ç",
+        "A",
+        "L",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 6335,
+    "word": "ayakkabı giy",
+    "imageUrl": "/images/6335.webp",
+    "audioKeys": {
+      "default": "ayakkabı giy"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "a",
+        "yak",
+        "ka",
+        "bı",
+        "giy"
+      ],
+      "letters": [
+        "A",
+        "Y",
+        "A",
+        "K",
+        "K",
+        "A",
+        "B",
+        "I",
+        "G",
+        "İ",
+        "Y"
+      ]
+    }
+  },
+  {
+    "id": 6336,
+    "word": "okula git",
+    "imageUrl": "/images/6336.webp",
+    "audioKeys": {
+      "default": "okula git"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "o",
+        "ku",
+        "la",
+        "git"
+      ],
+      "letters": [
+        "O",
+        "K",
+        "U",
+        "L",
+        "A",
+        "G",
+        "İ",
+        "T"
+      ]
+    }
+  },
+  {
+    "id": 6337,
+    "word": "ellerini yıka",
+    "imageUrl": "/images/6337.webp",
+    "audioKeys": {
+      "default": "ellerini yıka"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "el",
+        "le",
+        "ri",
+        "ni",
+        "yı",
+        "ka"
+      ],
+      "letters": [
+        "E",
+        "L",
+        "L",
+        "E",
+        "R",
+        "İ",
+        "N",
+        "İ",
+        "Y",
+        "I",
+        "K",
+        "A"
+      ]
+    }
+  },
+  {
+    "id": 6338,
+    "word": "yemeğini ye",
+    "imageUrl": "/images/6338.webp",
+    "audioKeys": {
+      "default": "yemeğini ye"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "ye",
+        "me",
+        "ği",
+        "ni",
+        "ye"
+      ],
+      "letters": [
+        "Y",
+        "E",
+        "M",
+        "E",
+        "Ğ",
+        "İ",
+        "N",
+        "İ",
+        "Y",
+        "E"
+      ]
+    }
+  },
+  {
+    "id": 6339,
+    "word": "banyo yap",
+    "imageUrl": "/images/6339.webp",
+    "audioKeys": {
+      "default": "banyo yap"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "ban",
+        "yo",
+        "yap"
+      ],
+      "letters": [
+        "B",
+        "A",
+        "N",
+        "Y",
+        "O",
+        "Y",
+        "A",
+        "P"
+      ]
+    }
+  },
+  {
+    "id": 6340,
+    "word": "pijama giy",
+    "imageUrl": "/images/6340.webp",
+    "audioKeys": {
+      "default": "pijama giy"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "pi",
+        "ja",
+        "ma",
+        "giy"
+      ],
+      "letters": [
+        "P",
+        "İ",
+        "J",
+        "A",
+        "M",
+        "A",
+        "G",
+        "İ",
+        "Y"
+      ]
+    }
+  },
+  {
+    "id": 6341,
+    "word": "kitap oku",
+    "imageUrl": "/images/6341.webp",
+    "audioKeys": {
+      "default": "kitap oku"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "ki",
+        "tap",
+        "o",
+        "ku"
+      ],
+      "letters": [
+        "K",
+        "İ",
+        "T",
+        "A",
+        "P",
+        "O",
+        "K",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 6342,
+    "word": "uyu",
+    "imageUrl": "/images/6342.webp",
+    "audioKeys": {
+      "default": "uyu"
+    },
+    "tags": {
+      "category": "none",
+      "tekil": "rutin",
+      "syllables": [
+        "u",
+        "yu"
+      ],
+      "letters": [
+        "U",
+        "Y",
+        "U"
+      ]
+    }
+  },
+  {
+    "id": 6501,
+    "word": "çocuk",
+    "imageUrl": "/images/6501.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "duygu": "kızgın",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6502,
+    "word": "çocuk",
+    "imageUrl": "/images/6502.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "duygu": "mutlu",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6503,
+    "word": "çocuk",
+    "imageUrl": "/images/6503.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "duygu": "korkmuş",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6504,
+    "word": "çocuk",
+    "imageUrl": "/images/6504.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "duygu": "mutlu",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6505,
+    "word": "çocuk",
+    "imageUrl": "/images/6505.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "duygu": "şaşkın",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6506,
+    "word": "çocuk",
+    "imageUrl": "/images/6506.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "duygu": "kızgın",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6507,
+    "word": "çocuk",
+    "imageUrl": "/images/6507.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "duygu": "uykulu",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6508,
+    "word": "çocuk",
+    "imageUrl": "/images/6508.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "duygu": "mutlu",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6509,
+    "word": "çocuk",
+    "imageUrl": "/images/6509.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "duygu": "şaşkın",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": 6510,
+    "word": "çocuk",
+    "imageUrl": "/images/6510.webp",
+    "audioKeys": {
+      "default": "çocuk"
+    },
+    "tags": {
+      "category": "none",
+      "duygu": "uykulu",
+      "syllables": [
+        "ço",
+        "cuk"
+      ],
+      "letters": [
+        "Ç",
+        "O",
+        "C",
+        "U",
+        "K"
+      ]
+    }
   }
 ] as ImageMetadata[];

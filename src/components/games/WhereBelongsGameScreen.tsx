@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
 import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
+import { ODA_GORSEL } from '../../services/database/activities/yeni/tekilGorseller.ts';
 
 // --- Sound Effects ---
 const createBelongSound = () => {
@@ -57,32 +58,37 @@ const CATEGORIES = [
     {
         emoji: '🍳',
         name: 'Mutfak',
+        gorsel: 'mutfak',
         color: 'from-orange-400 to-red-500',
-        items: ['🍴', '🥄', '🍳', '🫖', '🧂', '🍶']
+        items: ['🍴', '🥄', '🍳', '🫖', '🧂']
     },
     {
         emoji: '🛁',
         name: 'Banyo',
+        gorsel: 'banyo',
         color: 'from-blue-400 to-cyan-500',
-        items: ['🪥', '🧴', '🧼', '🛁', '🚿', '🧽']
+        items: ['🪥', '🧴', '🧼', '🛁', '🚿']
     },
     {
         emoji: '🛏️',
         name: 'Yatak Odası',
+        gorsel: 'yatak-odasi',
         color: 'from-purple-400 to-pink-500',
-        items: ['🛏️', '💤', '🧸', '🛋️', '🪞', '👗']
+        items: ['🛏️', '🧸', '👗', '🛌']
     },
     {
         emoji: '📚',
         name: 'Okul',
+        gorsel: 'sinif',
         color: 'from-green-400 to-emerald-500',
         items: ['📚', '✏️', '📐', '🎒', '📓', '🖍️']
     },
     {
         emoji: '🏡',
         name: 'Bahçe',
+        gorsel: 'bahce',
         color: 'from-lime-400 to-green-500',
-        items: ['🌻', '🌷', '🪴', '🪨', '🦋', '🐦']
+        items: ['🌻', '🌷', '🌳', '🦋', '🐦']
     },
 ];
 
@@ -136,7 +142,10 @@ const WhereBelongsGameScreen: React.FC<WhereBelongsGameScreenProps> = ({ onBack 
             });
         });
 
-        setItems(shuffleArray(allItems).slice(0, ITEMS_PER_ROUND));
+        // Her odadan en az bir eşya kalsın (yoksa oda ekrandan kayboluyordu)
+        const ilkler = selectedCategories.map(cat => allItems.find(i => i.categoryIndex === CATEGORIES.indexOf(cat))!).filter(Boolean);
+        const kalan = shuffleArray(allItems.filter(i => !ilkler.includes(i)));
+        setItems(shuffleArray([...ilkler, ...kalan].slice(0, Math.max(ITEMS_PER_ROUND, ilkler.length))));
         setScore(0);
         setMistakes(0);
         setPlacedCount(0);
@@ -279,7 +288,10 @@ const WhereBelongsGameScreen: React.FC<WhereBelongsGameScreenProps> = ({ onBack 
                                     : ''
                                 }`}
                         >
-                            <span className="text-3xl">{cat.emoji}</span>
+                            {/* Gerçek oda fotoğrafı varsa onu göster (Kaan: gerçek görseller) */}
+                            {ODA_GORSEL[cat.gorsel]
+                                ? <img src={ODA_GORSEL[cat.gorsel]} alt={cat.name} className="w-full aspect-[4/3] object-cover rounded-lg" draggable={false} />
+                                : <span className="text-3xl">{cat.emoji}</span>}
                             <span className="text-white font-bold text-xs mt-1">{cat.name}</span>
                         </button>
                     ))}
