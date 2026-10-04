@@ -4,6 +4,7 @@ import { t } from '../i18n/index.ts';
 import { playEffect } from '../services/speechService.ts';
 import { sayInstruction, sayCorrect } from '../utils/gameVoice.ts';
 import { useAppContext } from '../contexts/AppContext.ts';
+import { titret } from '../utils/titresim.ts';
 
 interface SimpleLetterTracingScreenProps {
   letter: string;
@@ -12,13 +13,8 @@ interface SimpleLetterTracingScreenProps {
   onBack: () => void;
 }
 
-const VIBRATE = (ms: number) => {
-  if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
-    try {
-      (navigator as any).vibrate(ms);
-    } catch { }
-  }
-};
+// Telefonda Capacitor Haptics ile (navigator.vibrate Android'de izinsiz çalışmıyordu)
+const VIBRATE = (ms: number) => titret(ms >= 25 ? 'orta' : 'hafif', 80);
 
 // Kontrol: harfin üstünde bir nokta ağı var. Çocuk harfin çoğunu boyamalı (KAPLAMA)
 // ve çizdiğinin çoğu harfin üstünde kalmalı (UZERINDE). Her yeri karalamak kabul edilmez.

@@ -56,6 +56,7 @@ export enum ScreenState {
   NumberSequenceGame,
   PlantGrowingGame,
   ColorSequenceGame,
+  WaitAndPressGame,
   WhereBelongsGame,
   SyllableTrainGame,
   WordBoxGame,

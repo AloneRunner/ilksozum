@@ -36,6 +36,7 @@ const MiniGamesMenuScreen: React.FC<MiniGamesMenuScreenProps> = ({ onBack, onSel
     { id: 'numberSequence', category: 'sayma', icon: GameIcon, title: '🪜 Sayı Sırala', subtitle: '1, 2, 3... sırala!', color: 'indigo' as const },
 
     // === DİKKAT VE HAFIZA ===
+    { id: 'waitAndPress', category: 'dikkat', icon: GameIcon, title: '🚦 Bekle ve Bas', subtitle: 'Kırmızıda bekle, yeşilde bas!', color: 'emerald' as const },
     { id: 'colorSequence', category: 'dikkat', icon: GameIcon, title: '🔴🔵 Renk Sırası', subtitle: 'Yanan renklere sırayla bas!', color: 'sky' as const },
     { id: 'memoryMatch', category: 'dikkat', icon: GameIcon, title: '🃏 Hafıza Çiftleri', subtitle: 'Eşleşen kartları bul!', color: 'purple' as const },
     { id: 'shadowMatch', category: 'dikkat', icon: GameIcon, title: '🔦 Gölge Eşleştirme', subtitle: 'Gölge kime ait?', color: 'sky' as const },

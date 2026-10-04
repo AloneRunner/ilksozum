@@ -105,6 +105,8 @@ const TrainTrackGameScreen: React.FC<TrainTrackGameScreenProps> = ({ onBack }) =
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const requestRef = useRef<number>();
     const crashPointRef = useRef<Point | null>(null);
+    // Eve ulaşmayan çizim için ipucu her denemede bir kez söylensin
+    const missHintGivenRef = useRef(false);
 
     const currentLevel = LEVELS[levelIndex % LEVELS.length];
 
@@ -352,6 +354,7 @@ const TrainTrackGameScreen: React.FC<TrainTrackGameScreenProps> = ({ onBack }) =
             setPath([start]);
             setTrainPos(start);
             crashPointRef.current = null;
+            missHintGivenRef.current = false;
         }
     };
 
@@ -406,6 +409,10 @@ const TrainTrackGameScreen: React.FC<TrainTrackGameScreenProps> = ({ onBack }) =
             // Failed to reach
             setGameState('idle');
             setPath([]); // Clear path
+            if (!missHintGivenRef.current) {
+                missHintGivenRef.current = true;
+                sayInstruction('Yolu eve kadar çiz.');
+            }
         }
     };
 

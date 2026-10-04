@@ -111,23 +111,11 @@ const MemoryMatchGameScreen: React.FC<MemoryMatchGameScreenProps> = ({ onBack })
     const [cardSet, setCardSet] = useState<CardSetType>('animals');
     const [isChecking, setIsChecking] = useState(false);
     const soundRef = useRef<ReturnType<typeof createMemorySound> | null>(null);
-    const [startTime, setStartTime] = useState(0);
-    const [elapsedTime, setElapsedTime] = useState(0);
+    // Süre sayacı kaldırıldı: çocukta zaman baskısı oluşturmasın
 
     useEffect(() => {
         soundRef.current = createMemorySound();
     }, []);
-
-    // Timer
-    useEffect(() => {
-        if (gameState !== 'playing') return;
-
-        const timer = setInterval(() => {
-            setElapsedTime(Math.floor((Date.now() - startTime) / 1000));
-        }, 1000);
-
-        return () => clearInterval(timer);
-    }, [gameState, startTime]);
 
     const shuffleArray = <T,>(array: T[]): T[] => {
         const newArray = [...array];
@@ -174,8 +162,6 @@ const MemoryMatchGameScreen: React.FC<MemoryMatchGameScreenProps> = ({ onBack })
         setDifficulty(diffIndex);
         setCardSet(set);
         setIsChecking(false);
-        setStartTime(Date.now());
-        setElapsedTime(0);
         setGameState('playing');
         sayInstruction('Kartları çevir. Aynı olan iki kartı bul.', 300);
     }, []);
@@ -241,12 +227,6 @@ const MemoryMatchGameScreen: React.FC<MemoryMatchGameScreenProps> = ({ onBack })
             }
         }
     }, [cards, flippedCards, isChecking, totalPairs]);
-
-    const formatTime = (seconds: number) => {
-        const mins = Math.floor(seconds / 60);
-        const secs = seconds % 60;
-        return `${mins}:${secs.toString().padStart(2, '0')}`;
-    };
 
     const renderMenu = () => (
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-purple-400 via-pink-400 to-rose-400 p-4">
@@ -317,9 +297,6 @@ const MemoryMatchGameScreen: React.FC<MemoryMatchGameScreenProps> = ({ onBack })
                     </button>
 
                     <div className="flex gap-3">
-                        <div className="bg-purple-500 text-white rounded-full px-3 py-1 text-sm font-bold">
-                            ⏱️ {formatTime(elapsedTime)}
-                        </div>
                         <div className="bg-pink-500 text-white rounded-full px-3 py-1 text-sm font-bold">
                             🔄 {moves}
                         </div>
@@ -388,10 +365,6 @@ const MemoryMatchGameScreen: React.FC<MemoryMatchGameScreenProps> = ({ onBack })
 
                     <div className="bg-gradient-to-r from-purple-400 to-pink-500 rounded-xl p-4 mb-4 text-white">
                         <div className="flex justify-around">
-                            <div>
-                                <div className="text-sm opacity-80">Süre</div>
-                                <div className="text-xl font-bold">{formatTime(elapsedTime)}</div>
-                            </div>
                             <div>
                                 <div className="text-sm opacity-80">Hamle</div>
                                 <div className="text-xl font-bold">{moves}</div>

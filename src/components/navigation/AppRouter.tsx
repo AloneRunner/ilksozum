@@ -82,6 +82,7 @@ const SizeOrderingGameScreen = lazy(() => import('../games/SizeOrderingGameScree
 const NumberSequenceGameScreen = lazy(() => import('../games/NumberSequenceGameScreen.tsx'));
 const PlantGrowingGameScreen = lazy(() => import('../games/PlantGrowingGameScreen.tsx'));
 const ColorSequenceGameScreen = lazy(() => import('../games/ColorSequenceGameScreen.tsx'));
+const WaitAndPressGameScreen = lazy(() => import('../games/WaitAndPressGameScreen.tsx'));
 const WhereBelongsGameScreen = lazy(() => import('../games/WhereBelongsGameScreen.tsx'));
 const SyllableTrainGameScreen = lazy(() => import('../games/SyllableTrainGameScreen.tsx'));
 const WordBoxGameScreen = lazy(() => import('../games/WordBoxGameScreen.tsx'));
@@ -100,6 +101,7 @@ const MINI_GAME_SCREENS: Record<string, ScreenState> = {
     connectDots: ScreenState.ConnectDotsGame,
     plantGrowing: ScreenState.PlantGrowingGame,
     colorSequence: ScreenState.ColorSequenceGame,
+    waitAndPress: ScreenState.WaitAndPressGame,
     trainTrack: ScreenState.TrainTrackGame,
     sheepShearing: ScreenState.SheepShearingGame,
     musicTouch: ScreenState.MusicTouchGame,
@@ -948,6 +950,7 @@ export const AppRouter = () => {
         case ScreenState.NumberSequenceGame: return <NumberSequenceGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.PlantGrowingGame: return <PlantGrowingGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.ColorSequenceGame: return <ColorSequenceGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
+        case ScreenState.WaitAndPressGame: return <WaitAndPressGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.WhereBelongsGame: return <WhereBelongsGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.SyllableTrainGame: return <SyllableTrainGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;
         case ScreenState.WordBoxGame: return <WordBoxGameScreen onBack={() => setScreenState(ScreenState.MiniGamesMenu)} />;

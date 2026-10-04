@@ -4,6 +4,7 @@ import { t } from '../i18n/index.ts';
 import { playEffect } from '../services/speechService.ts';
 import { sayInstruction, sayCorrect } from '../utils/gameVoice.ts';
 import { useAppContext } from '../contexts/AppContext.ts';
+import { titret } from '../utils/titresim.ts';
 
 export type LineTracingLevel = 'straight' | 'wave' | 'spiral' | 'zigzag' | 'curve' | 'loop';
 
@@ -26,11 +27,8 @@ const SAHNE: Record<LineTracingLevel, { ad: string; kim: string; hedef: string; 
   loop: { ad: 'İlmek', kim: '🐶', hedef: '🦴', cumle: 'Köpeği kemiğe götür.' },
 };
 
-const VIBRATE = (ms: number) => {
-  if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
-    try { (navigator as any).vibrate(ms); } catch { }
-  }
-};
+// Telefonda Capacitor Haptics ile (navigator.vibrate Android'de izinsiz çalışmıyordu)
+const VIBRATE = (ms: number) => titret(ms >= 25 ? 'orta' : 'hafif', 80);
 
 // Küçük çocuk parmağı için bağışlayıcı mesafeler (CSS px)
 const CIZGI_GENISLIK = 40;   // gri yol bandı

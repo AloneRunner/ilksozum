@@ -678,12 +678,11 @@ const PuzzleGameScreen: React.FC<PuzzleGameScreenProps> = ({ onBack }) => {
     const boardRef = useRef<HTMLDivElement>(null);
     const audioContextRef = useRef<AudioContext | null>(null);
 
-    // Seviyeye göre grid boyutu - 4x4'e kadar
+    // Seviyeye göre grid boyutu - en fazla 3x3 (4x4 çok zor, kaldırıldı)
     const gridConfig = useMemo(() => {
         if (level <= 2) return { rows: 2, cols: 2 }; // 4 parça
-        if (level <= 4) return { rows: 2, cols: 3 }; // 6 parça  
-        if (level <= 6) return { rows: 3, cols: 3 }; // 9 parça
-        return { rows: 4, cols: 4 }; // 16 parça
+        if (level <= 4) return { rows: 2, cols: 3 }; // 6 parça
+        return { rows: 3, cols: 3 }; // 9 parça
     }, [level]);
 
     const { rows, cols } = gridConfig;
@@ -895,8 +894,7 @@ const PuzzleGameScreen: React.FC<PuzzleGameScreenProps> = ({ onBack }) => {
     }, [pieces, playSound]);
 
     const unplacedPieces = pieces.filter(p => !p.isPlaced);
-    // 4x4 için daha küçük parçalar
-    const pieceSize = rows >= 4 ? Math.min(55, 220 / cols) : Math.min(70, 280 / cols);
+    const pieceSize = Math.min(70, 280 / cols);
     const boardSize = pieceSize * Math.max(cols, rows) + 16;
 
     return (

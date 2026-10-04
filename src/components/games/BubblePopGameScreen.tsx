@@ -41,9 +41,8 @@ const BubblePopGameScreen: React.FC<BubblePopGameScreenProps> = ({ onBack }) => 
 
   const [bubbles, setBubbles] = useState<Bubble[]>([]);
   const [particles, setParticles] = useState<PopParticle[]>([]);
-  const [score, setScore] = useState(0);
-  const [combo, setCombo] = useState(0);
-  const [showCombo, setShowCombo] = useState(false);
+  // Rahatlama oyunu: skor ve seri göstergesi yok (performans baskısı olmasın)
+  const [, setCombo] = useState(0);
 
   // Pop sesi
   const playPopSound = useCallback((pitch: number = 1) => {
@@ -234,16 +233,11 @@ const BubblePopGameScreen: React.FC<BubblePopGameScreenProps> = ({ onBack }) => 
       }
       setParticles((prev) => [...prev, ...newParticles].slice(-100));
 
-      // Skor ve combo
-      const points = Math.floor(size / 5);
-      setScore((prev) => prev + points * (combo + 1));
-
+      // Seri sesi (görsel gösterge yok)
       setCombo((prev) => {
         const newCombo = prev + 1;
         if (newCombo >= 3) {
-          setShowCombo(true);
           playComboSound();
-          setTimeout(() => setShowCombo(false), 800);
         }
         return newCombo;
       });
@@ -256,7 +250,7 @@ const BubblePopGameScreen: React.FC<BubblePopGameScreenProps> = ({ onBack }) => 
       // Pop sesi (pitch boyuta göre)
       playPopSound(1.5 - size / 150);
     },
-    [combo, playPopSound, playComboSound]
+    [playPopSound, playComboSound]
   );
 
   // Dokunma/tıklama
@@ -369,25 +363,9 @@ const BubblePopGameScreen: React.FC<BubblePopGameScreenProps> = ({ onBack }) => 
           🫧 {t('miniGames.bubblePop.title', 'Baloncuk Patlatma')}
         </h1>
 
-        <div className="px-4 py-2 rounded-full bg-white/20 backdrop-blur shadow-lg">
-          <span className="text-white font-bold">⭐ {score}</span>
-        </div>
+        {/* Başlık ortada kalsın diye boş yer tutucu */}
+        <div className="w-12" />
       </div>
-
-      {/* Combo göstergesi */}
-      {showCombo && combo >= 3 && (
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 z-40 animate-bounce">
-          <div
-            className="px-6 py-3 rounded-2xl text-white font-black text-3xl"
-            style={{
-              background: `linear-gradient(135deg, hsl(${combo * 30}, 80%, 50%), hsl(${combo * 30 + 60}, 80%, 50%))`,
-              textShadow: '0 2px 10px rgba(0,0,0,0.3)'
-            }}
-          >
-            {combo}x SERİ! 🎉
-          </div>
-        </div>
-      )}
 
       {/* Oyun alanı */}
       <div

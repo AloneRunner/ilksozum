@@ -2,6 +2,7 @@ import { sayInstruction } from '../../utils/gameVoice.ts';
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { t } from '../../i18n/index.ts';
 import { getMutedState, speak } from '../../services/speechService.ts';
+import { titret } from '../../utils/titresim.ts';
 
 interface SheepGameScreenProps {
   onBack: () => void;
@@ -47,6 +48,8 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
   const merkezRef = useRef({ x: 0, y: 0, s: 1 });
   const lastCutPosRef = useRef({ x: 0, y: 0 });
   const bittiRef = useRef(false);
+  const gurultuRef = useRef<AudioBuffer | null>(null);
+  const sonCitRef = useRef(0);
 
   const [koyunNo, setKoyunNo] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -71,16 +74,32 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
       const ctx = audioContextRef.current;
       const now = ctx.currentTime;
       if (type === 'snip') {
-        // Yumuşak "şık" (eskisi tiz kare dalgaydı)
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(1400, now);
-        osc.frequency.exponentialRampToValueAtTime(700, now + 0.04);
-        gain.gain.setValueAtTime(0.05, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.06);
-        osc.connect(gain); gain.connect(ctx.destination);
-        osc.start(now); osc.stop(now + 0.06);
+        // Makas "çıt": süzülmüş kısa gürültü (bıçakların sürtünmesi) + metalik tık
+        if (!gurultuRef.current) {
+          const buf = ctx.createBuffer(1, Math.floor(ctx.sampleRate * 0.08), ctx.sampleRate);
+          const d = buf.getChannelData(0);
+          for (let i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * (1 - i / d.length);
+          gurultuRef.current = buf;
+        }
+        const kay = ctx.createBufferSource();
+        kay.buffer = gurultuRef.current;
+        kay.playbackRate.value = 0.9 + Math.random() * 0.25;
+        const bant = ctx.createBiquadFilter();
+        bant.type = 'bandpass'; bant.frequency.value = 3200 + Math.random() * 800; bant.Q.value = 1.2;
+        const g1 = ctx.createGain();
+        g1.gain.setValueAtTime(0.35, now);
+        g1.gain.exponentialRampToValueAtTime(0.001, now + 0.07);
+        kay.connect(bant); bant.connect(g1); g1.connect(ctx.destination);
+        kay.start(now); kay.stop(now + 0.08);
+        const tik = ctx.createOscillator();
+        const g2 = ctx.createGain();
+        tik.type = 'square';
+        tik.frequency.setValueAtTime(2600, now + 0.045);
+        g2.gain.setValueAtTime(0.0001, now);
+        g2.gain.setValueAtTime(0.06, now + 0.045);
+        g2.gain.exponentialRampToValueAtTime(0.001, now + 0.075);
+        tik.connect(g2); g2.connect(ctx.destination);
+        tik.start(now); tik.stop(now + 0.08);
       } else if (type === 'bleat') {
         // "Meee": titreşimli (vibrato) koyun sesi
         const osc = ctx.createOscillator();
@@ -250,6 +269,7 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
     setYumaklar(y => [...y, KOYUNLAR[koyunNo % KOYUNLAR.length].yumak]);
     // Ses sırası: kutlama → meee → söz (üst üste binmesin)
     playSound('success');
+    titret('orta', 0);
     setTimeout(() => meele(), 700);
     setTimeout(() => { speak('Koyun tertemiz oldu!').catch(() => { /* yoksay */ }); }, 1600);
   }, [koyunNo, playSound, meele]);
@@ -300,7 +320,13 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
         });
       }
       setWoolParticles(prev => [...prev, ...yeni].slice(-60));
-      if (Math.random() > 0.6) playSound('snip');
+      // Kesim sürerken makasın açılıp kapanma ritminde "çıt çıt" + telefonda hafif titreşim (Kaan)
+      const simdi = Date.now();
+      if (simdi - sonCitRef.current > 150) {
+        sonCitRef.current = simdi;
+        playSound('snip');
+        titret('hafif', 120);
+      }
     }
 
     // İlerleme: her 4 kesimde bir ölç (getImageData pahalı)

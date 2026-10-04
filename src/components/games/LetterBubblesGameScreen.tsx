@@ -133,7 +133,7 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
             x: Math.random() * (canvasWidth - bubbleSize * 2) + bubbleSize,
             y: window.innerHeight + Math.random() * 50, // Start just below visible area
             size: bubbleSize,
-            speedY: isMobile ? -(1.2 + Math.random() * 0.4) : -(0.8 + Math.random() * 0.4), // Faster on mobile
+            speedY: isMobile ? -(0.9 + Math.random() * 0.3) : -(0.6 + Math.random() * 0.3), // Yavaş yükselsin (zaman baskısı olmasın); mobilde biraz daha hızlı
             speedX: (Math.random() - 0.5) * 0.3,
             color: BUBBLE_COLORS[Math.floor(Math.random() * BUBBLE_COLORS.length)],
             popped: false,
@@ -203,6 +203,7 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
 
                 let newY = bubble.y + bubble.speedY;
                 let newX = bubble.x + bubble.speedX;
+                let newSpeedY = bubble.speedY;
 
                 // Bounce off walls
                 if (newX < bubble.size / 2 || newX > canvas.width - bubble.size / 2) {
@@ -210,7 +211,17 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
                     newX = Math.max(bubble.size / 2, Math.min(canvas.width - bubble.size / 2, newX));
                 }
 
-                return { ...bubble, x: newX, y: newY };
+                if (bubble.letter === targetLetter) {
+                    // Hedef harf hiç kaçmaz: üstteki harf kartının altına gelince geri süzülür, altta tekrar yükselir
+                    const topLimit = Math.min(200, canvas.height * 0.35);
+                    if (newY < topLimit && newSpeedY < 0) newSpeedY = -newSpeedY;
+                    else if (newY > canvas.height - bubble.size / 2 && newSpeedY > 0) newSpeedY = -newSpeedY;
+                } else if (newY < -bubble.size) {
+                    // Diğer baloncuklar alttan yeniden girer
+                    newY = canvas.height + bubble.size;
+                }
+
+                return { ...bubble, x: newX, y: newY, speedY: newSpeedY };
             });
 
             // Check if bubbles escaped

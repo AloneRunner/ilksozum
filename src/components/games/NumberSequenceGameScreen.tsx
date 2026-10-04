@@ -92,8 +92,8 @@ const NumberSequenceGameScreen: React.FC<NumberSequenceGameScreenProps> = ({ onB
     const startRound = useCallback((roundNum: number, countOverride?: number) => {
         // count state'i async güncellenir; ilk turda seçilen sayı doğrudan verilir
         const roundCount = countOverride ?? count;
-        // Generate random starting point
-        const maxStart = roundCount <= 5 ? 10 : roundCount <= 7 ? 7 : 5;
+        // Generate random starting point (3 sayıda tek haneli kalsın: en fazla 9)
+        const maxStart = roundCount <= 3 ? 7 : roundCount <= 5 ? 10 : roundCount <= 7 ? 7 : 5;
         const start = Math.floor(Math.random() * maxStart) + 1;
 
         const nums: NumberItem[] = [];
@@ -192,22 +192,22 @@ const NumberSequenceGameScreen: React.FC<NumberSequenceGameScreenProps> = ({ onB
                     <p className="text-sm font-semibold text-gray-700 mb-2">Küçükten Büyüğe (1,2,3...):</p>
                     <div className="flex justify-center gap-2">
                         <button
-                            onClick={() => startGame(5, 'ascending')}
+                            onClick={() => startGame(3, 'ascending')}
                             className="px-4 py-3 rounded-xl bg-gradient-to-r from-green-400 to-emerald-500 text-white font-bold shadow-lg hover:scale-105 transition-transform"
+                        >
+                            3 sayı
+                        </button>
+                        <button
+                            onClick={() => startGame(5, 'ascending')}
+                            className="px-4 py-3 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-white font-bold shadow-lg hover:scale-105 transition-transform"
                         >
                             5 sayı
                         </button>
                         <button
                             onClick={() => startGame(7, 'ascending')}
-                            className="px-4 py-3 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-white font-bold shadow-lg hover:scale-105 transition-transform"
-                        >
-                            7 sayı
-                        </button>
-                        <button
-                            onClick={() => startGame(10, 'ascending')}
                             className="px-4 py-3 rounded-xl bg-gradient-to-r from-red-400 to-rose-500 text-white font-bold shadow-lg hover:scale-105 transition-transform"
                         >
-                            10 sayı
+                            7 sayı
                         </button>
                     </div>
                 </div>
@@ -216,22 +216,22 @@ const NumberSequenceGameScreen: React.FC<NumberSequenceGameScreenProps> = ({ onB
                     <p className="text-sm font-semibold text-gray-700 mb-2">Büyükten Küçüğe (10,9,8...):</p>
                     <div className="flex justify-center gap-2">
                         <button
-                            onClick={() => startGame(5, 'descending')}
+                            onClick={() => startGame(3, 'descending')}
                             className="px-4 py-3 rounded-xl bg-gradient-to-r from-purple-400 to-fuchsia-500 text-white font-bold shadow-lg hover:scale-105 transition-transform"
+                        >
+                            3 sayı
+                        </button>
+                        <button
+                            onClick={() => startGame(5, 'descending')}
+                            className="px-4 py-3 rounded-xl bg-gradient-to-r from-pink-400 to-rose-500 text-white font-bold shadow-lg hover:scale-105 transition-transform"
                         >
                             5 sayı
                         </button>
                         <button
                             onClick={() => startGame(7, 'descending')}
-                            className="px-4 py-3 rounded-xl bg-gradient-to-r from-pink-400 to-rose-500 text-white font-bold shadow-lg hover:scale-105 transition-transform"
-                        >
-                            7 sayı
-                        </button>
-                        <button
-                            onClick={() => startGame(10, 'descending')}
                             className="px-4 py-3 rounded-xl bg-gradient-to-r from-indigo-400 to-violet-500 text-white font-bold shadow-lg hover:scale-105 transition-transform"
                         >
-                            10 sayı
+                            7 sayı
                         </button>
                     </div>
                 </div>
