@@ -42,7 +42,7 @@ interface Particle {
 }
 
 const ITEM_TYPES = {
-    toy: { emojis: ['🧸', '🎮', '🚗', '⚽', '🎀'], container: '🧺', name: 'Oyuncak', color: '#EC4899', xPerc: 0.15 },
+    toy: { emojis: ['🧸', '🎮', '🚗', '⚽', '🎀'], container: '📦', name: 'Oyuncak', color: '#EC4899', xPerc: 0.15 },
     trash: { emojis: ['🗑️', '📄', '🥤', '🍬'], container: '🗑️', name: 'Çöp', color: '#6B7280', xPerc: 0.38 },
     book: { emojis: ['📚', '📖', '📕', '📗'], container: '📚', name: 'Kitap', color: '#3B82F6', xPerc: 0.62 },
     clothes: { emojis: ['👕', '👖', '🧦', '🧢'], container: '🧺', name: 'Kıyafet', color: '#8B5CF6', xPerc: 0.85 },

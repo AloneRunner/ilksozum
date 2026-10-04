@@ -104,7 +104,8 @@ const OddOneOutGameScreen: React.FC<OddOneOutGameScreenProps> = ({ onBack }) => 
         return newArray;
     };
 
-    const generateQuestion = useCallback((): Question => {
+    // diffOverride: ilk soruda seçilen zorluk (state henüz güncellenmemiş olur)
+    const generateQuestion = useCallback((diffOverride?: number): Question => {
         const categoryKeys = Object.keys(CATEGORIES) as CategoryKey[];
         const shuffledCategories = shuffleArray(categoryKeys);
 
@@ -116,7 +117,7 @@ const OddOneOutGameScreen: React.FC<OddOneOutGameScreenProps> = ({ onBack }) => 
         const oddItems = shuffleArray([...CATEGORIES[oddCategory].items]);
 
         // Create items array with one odd item
-        const count = difficulty;
+        const count = diffOverride ?? difficulty;
         const items: GameImage[] = mainItems.slice(0, count - 1);
         const oddItem = oddItems[0];
 
@@ -138,7 +139,7 @@ const OddOneOutGameScreen: React.FC<OddOneOutGameScreenProps> = ({ onBack }) => 
         setScore(0);
         setSelectedIndex(null);
         setShowResult(null);
-        setCurrentQuestion(generateQuestion());
+        setCurrentQuestion(generateQuestion(diff));
         setGameState('playing');
     }, [generateQuestion]);
 

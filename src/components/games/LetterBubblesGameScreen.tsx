@@ -100,6 +100,8 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
     
     const [round, setRound] = useState(0);
     const [totalRounds] = useState(10);
+    // Her yeni baloncuk dizisinde artar; aynı harf tekrar gelse de animasyon yeniden başlar
+    const [spawnId, setSpawnId] = useState(0);
     const soundRef = useRef<ReturnType<typeof createBubbleSound> | null>(null);
     const animationRef = useRef<number>(0);
     const bubblesRef = useRef<Bubble[]>([]);
@@ -165,6 +167,7 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
 
         bubblesRef.current = newBubbles;
         setBubbles(newBubbles);
+        setSpawnId(s => s + 1);
     }, []);
 
     useEffect(() => {
@@ -213,9 +216,9 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
             // Check if bubbles escaped
             const escaped = bubblesRef.current.filter(b => !b.popped && b.y < -b.size);
             if (escaped.some(b => b.letter === targetLetter)) {
-                // Hedef harf kaçtı: can kaybı yok, aynı turu yeniden başlat
+                // Hedef harf kaçtı: can kaybı yok, tur sayısı artmadan baloncukları yeniden diz
                 sayInstruction('Harf uçup gitti. Tekrar deneyelim.');
-                setTimeout(() => setRound(r => r + 1), 800);
+                setTimeout(() => startRound(), 800);
                 return;
             }
 
@@ -234,7 +237,7 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
                 cancelAnimationFrame(animationRef.current);
             }
         };
-    }, [gameState, targetLetter]);
+    }, [gameState, targetLetter, spawnId, startRound]);
 
     // Draw bubbles
     useEffect(() => {

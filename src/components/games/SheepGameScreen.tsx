@@ -393,7 +393,7 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
     const totalSampled = data.length / 60;
     const initialEstimate = totalSampled * 0.4;
     const remaining = visiblePixels / initialEstimate;
-    // Daha sıkı kontrol: %99.8 üzeri
+    // %92 temizlenince bitir (son pikselleri aramak çocukları yoruyor)
     const p = Math.min(100, Math.max(0, (1 - remaining) * 100));
 
     setProgress(p);
@@ -403,8 +403,8 @@ const SheepGameScreen: React.FC<SheepGameScreenProps> = ({ onBack }) => {
 
     if (p > 35 && p < 40) playSound('bleat');
 
-    // KESİNLİKLE %100 OLMADAN BİTMEZ
-    if (p >= 99.8 && !isWon) {
+    // %92 ve üzeri: kalanı biz temizleriz
+    if (p >= 92 && !isWon) {
       // SON DOKUNUŞ: Kalan o minik parçayı da biz temizleyelim ki görsel kusursuz olsun
       ctx.clearRect(0, 0, w, h);
 

@@ -98,10 +98,11 @@ const ShadowMatchGameScreen: React.FC<ShadowMatchGameScreenProps> = ({ onBack })
         return newArray;
     };
 
-    const generateQuestion = useCallback((): Question => {
+    // optionCountOverride: ilk soruda seçilen zorluk (state henüz güncellenmemiş olur)
+    const generateQuestion = useCallback((optionCountOverride?: number): Question => {
         const shuffled = shuffleArray([...SHADOW_ITEMS]);
         const target = shuffled[0];
-        const distractors = shuffled.slice(1, difficulty);
+        const distractors = shuffled.slice(1, optionCountOverride ?? difficulty);
 
         const options = shuffleArray([target, ...distractors]);
         const correctIndex = options.findIndex(o => o.id === target.id);
@@ -120,7 +121,7 @@ const ShadowMatchGameScreen: React.FC<ShadowMatchGameScreenProps> = ({ onBack })
         setScore(0);
         setSelectedIndex(null);
         setShowResult(false);
-        setQuestion(generateQuestion());
+        setQuestion(generateQuestion(optionCount));
         setGameState('playing');
     }, [generateQuestion]);
 

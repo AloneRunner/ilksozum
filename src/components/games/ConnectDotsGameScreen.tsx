@@ -244,8 +244,8 @@ const ConnectDotsGameScreen: React.FC<ConnectDotsGameScreenProps> = ({ onBack })
             ctx.stroke();
         }
 
-        // Draw dots
-        dots.forEach(dot => {
+        // Draw dots (sıradaki nokta en son: üst üste binen noktalarda üstte görünsün)
+        [...dots].sort((a, b) => (a.number === nextDot ? 1 : 0) - (b.number === nextDot ? 1 : 0)).forEach(dot => {
             const x = padding + (dot.x / 100) * usableW;
             const y = padding + (dot.y / 100) * usableH;
             const radius = dot.number === nextDot ? 24 : 20;
@@ -293,8 +293,8 @@ const ConnectDotsGameScreen: React.FC<ConnectDotsGameScreenProps> = ({ onBack })
         const usableW = w - padding * 2;
         const usableH = h - padding * 2;
 
-        // Find clicked dot
-        for (const dot of dots) {
+        // Find clicked dot (sadece sıradaki nokta; üst üste binen noktalar için)
+        for (const dot of dots.filter(d => d.number === nextDot)) {
             const x = padding + (dot.x / 100) * usableW;
             const y = padding + (dot.y / 100) * usableH;
             const dist = Math.sqrt((clickX - x) ** 2 + (clickY - y) ** 2);
@@ -304,7 +304,7 @@ const ConnectDotsGameScreen: React.FC<ConnectDotsGameScreenProps> = ({ onBack })
                 break;
             }
         }
-    }, [dots, handleDotClick]);
+    }, [dots, nextDot, handleDotClick]);
 
     const handleCanvasTouch = useCallback((e: React.TouchEvent<HTMLCanvasElement>) => {
         e.preventDefault();
@@ -322,7 +322,8 @@ const ConnectDotsGameScreen: React.FC<ConnectDotsGameScreenProps> = ({ onBack })
         const usableW = w - padding * 2;
         const usableH = h - padding * 2;
 
-        for (const dot of dots) {
+        // Sadece sıradaki nokta (üst üste binen noktalar için)
+        for (const dot of dots.filter(d => d.number === nextDot)) {
             const x = padding + (dot.x / 100) * usableW;
             const y = padding + (dot.y / 100) * usableH;
             const dist = Math.sqrt((touchX - x) ** 2 + (touchY - y) ** 2);
@@ -332,7 +333,7 @@ const ConnectDotsGameScreen: React.FC<ConnectDotsGameScreenProps> = ({ onBack })
                 break;
             }
         }
-    }, [dots, handleDotClick]);
+    }, [dots, nextDot, handleDotClick]);
 
     const renderMenu = () => (
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 p-4">

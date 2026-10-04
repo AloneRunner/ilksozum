@@ -89,13 +89,15 @@ const NumberSequenceGameScreen: React.FC<NumberSequenceGameScreenProps> = ({ onB
         return newArray;
     };
 
-    const startRound = useCallback((roundNum: number) => {
+    const startRound = useCallback((roundNum: number, countOverride?: number) => {
+        // count state'i async güncellenir; ilk turda seçilen sayı doğrudan verilir
+        const roundCount = countOverride ?? count;
         // Generate random starting point
-        const maxStart = count <= 5 ? 10 : count <= 7 ? 7 : 5;
+        const maxStart = roundCount <= 5 ? 10 : roundCount <= 7 ? 7 : 5;
         const start = Math.floor(Math.random() * maxStart) + 1;
 
         const nums: NumberItem[] = [];
-        for (let i = 0; i < count; i++) {
+        for (let i = 0; i < roundCount; i++) {
             nums.push({ value: start + i, placed: false });
         }
 
@@ -111,7 +113,7 @@ const NumberSequenceGameScreen: React.FC<NumberSequenceGameScreenProps> = ({ onB
         setMode(orderMode);
         setScore(0);
         setGameState('playing');
-        startRound(1);
+        startRound(1, numCount);
     }, [startRound]);
 
     useEffect(() => {

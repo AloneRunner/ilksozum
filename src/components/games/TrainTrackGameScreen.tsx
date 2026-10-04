@@ -83,7 +83,8 @@ const LEVELS: Level[] = [
             // 1. Vertical wall x=30, gap at top
             { x: 30, y: 20, width: 2, height: 80, type: 'rock' }, // Block bottom
 
-            // 2. Horizontal barrier - gaps on both sides!\n            { x: 35, y: 50, width: 30, height: 2, type: 'rock' },
+            // 2. Horizontal barrier - gaps on both sides!
+            { x: 35, y: 50, width: 30, height: 2, type: 'rock' },
 
             // 3. Vertical wall x=70, gap at bottom
             { x: 70, y: 0, width: 2, height: 80, type: 'rock' }, // Block top

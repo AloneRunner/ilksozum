@@ -384,7 +384,7 @@ const BubblePopGameScreen: React.FC<BubblePopGameScreenProps> = ({ onBack }) => 
               textShadow: '0 2px 10px rgba(0,0,0,0.3)'
             }}
           >
-            {combo}x COMBO! 🎉
+            {combo}x SERİ! 🎉
           </div>
         </div>
       )}

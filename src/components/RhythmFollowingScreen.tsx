@@ -16,9 +16,15 @@ const COLORS = ['#f59e0b', '#3b82f6', '#10b981'];
 const DEMO_SPEED = 800; // Daha yavaş ve odaklanılabilir tempo
 
 // Basit beep sesleri için Web Audio API
+// Tek bir AudioContext paylaşılır (her ses için yenisini açmak tarayıcı limitine takılır)
+let sharedAudioContext: AudioContext | null = null;
 const playTone = (frequency: number, duration: number = 150) => {
   try {
-    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+    if (!sharedAudioContext || sharedAudioContext.state === 'closed') {
+      sharedAudioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+    }
+    const audioContext = sharedAudioContext;
+    if (audioContext.state === 'suspended') void audioContext.resume();
     const oscillator = audioContext.createOscillator();
     const gainNode = audioContext.createGain();
     

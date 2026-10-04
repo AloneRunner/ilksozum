@@ -90,16 +90,17 @@ const CountingGameScreen: React.FC<CountingGameScreenProps> = ({ onBack }) => {
         soundRef.current = createCountingSound();
     }, []);
 
-    const getMaxCount = () => {
-        switch (difficulty) {
+    const getMaxCount = (diff: 'easy' | 'medium' | 'hard') => {
+        switch (diff) {
             case 'easy': return 5;
             case 'medium': return 10;
             case 'hard': return 15;
         }
     };
 
-    const generateQuestion = useCallback((): Question => {
-        const maxCount = getMaxCount();
+    // diffOverride: ilk soruda seçilen zorluk (state henüz güncellenmemiş olur)
+    const generateQuestion = useCallback((diffOverride?: 'easy' | 'medium' | 'hard'): Question => {
+        const maxCount = getMaxCount(diffOverride ?? difficulty);
         const count = Math.floor(Math.random() * maxCount) + 1;
 
         // Pick random emoji
@@ -183,7 +184,7 @@ const CountingGameScreen: React.FC<CountingGameScreenProps> = ({ onBack }) => {
         setSelectedAnswer(null);
         setShowResult(false);
         setCountedItems([]);
-        setQuestion(generateQuestion());
+        setQuestion(generateQuestion(diff));
         setGameState('playing');
     }, [generateQuestion]);
 
