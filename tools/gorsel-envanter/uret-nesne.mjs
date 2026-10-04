@@ -19,6 +19,8 @@ const liste = JSON.parse(fs.readFileSync(LIST, 'utf8'));
 const nesneler = JSON.parse(fs.readFileSync(path.join(HERE, 'nesne-liste.json'), 'utf8')).kategoriler;
 const eskiKayit = Object.fromEntries(Object.values(nesneler).flat().map(e => [e.id, e]));
 
+// Renkli/gri zeminli nesneler (beyaz hayvan gri zeminde, deniz hayvanı mavi zeminde): zemin beyazlatılmaz
+const SAHNE = new Set([26, 460, 491, 921, 948]);
 const harita = {};
 const renkler = {}; // eşlemede renk verilirse (Kaan: eski renge uymak gerekmez) kayıttaki renk etiketi yenisiyle değişir
 const yeni = [];
@@ -29,7 +31,7 @@ if (fs.existsSync(klasor)) {
     const eskiId = Number(f.split('-')[0]);
     if (!eskiId || !eskiKayit[eskiId]) { console.log('tanınmayan dosya:', f); continue; }
     const id = 8000 + eskiId;
-    yeni.push({ id, kaynak: `nesne/${f}`, word: eskiKayit[eskiId].word, category: 'none', tags: { nesneEskiId: eskiId } });
+    yeni.push({ id, kaynak: `nesne/${f}`, word: eskiKayit[eskiId].word, category: 'none', ...(SAHNE.has(eskiId) ? { sahne: true } : {}), tags: { nesneEskiId: eskiId } });
     harita[eskiId] = `/images/${id}.webp`;
   }
 }

@@ -10379,12 +10379,49 @@
       }
     },
     {
+      "id": 8026,
+      "kaynak": "nesne/26-ordek.jpg",
+      "word": "ördek",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 26
+      }
+    },
+    {
+      "id": 8029,
+      "kaynak": "nesne/29-fare.jpg",
+      "word": "fare",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 29
+      }
+    },
+    {
+      "id": 8032,
+      "kaynak": "nesne/32-papagan.jpg",
+      "word": "papağan",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 32
+      }
+    },
+    {
       "id": 8056,
       "kaynak": "nesne/56-dondurma.jpg",
       "word": "dondurma",
       "category": "none",
       "tags": {
         "nesneEskiId": 56
+      }
+    },
+    {
+      "id": 8073,
+      "kaynak": "nesne/73-kus.jpg",
+      "word": "kuş",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 73
       }
     },
     {
@@ -10397,12 +10434,39 @@
       }
     },
     {
+      "id": 8092,
+      "kaynak": "nesne/92-ugur-bocegi.jpg",
+      "word": "uğur böceği",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 92
+      }
+    },
+    {
       "id": 8094,
       "kaynak": "nesne/94-findik.jpg",
       "word": "fındık",
       "category": "none",
       "tags": {
         "nesneEskiId": 94
+      }
+    },
+    {
+      "id": 8101,
+      "kaynak": "nesne/101-zurafa.jpg",
+      "word": "zürafa",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 101
+      }
+    },
+    {
+      "id": 8103,
+      "kaynak": "nesne/103-baykus.jpg",
+      "word": "baykuş",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 103
       }
     },
     {
@@ -10424,12 +10488,30 @@
       }
     },
     {
+      "id": 8150,
+      "kaynak": "nesne/150-solucan.jpg",
+      "word": "solucan",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 150
+      }
+    },
+    {
       "id": 8176,
       "kaynak": "nesne/176-yogurt.jpg",
       "word": "yoğurt",
       "category": "none",
       "tags": {
         "nesneEskiId": 176
+      }
+    },
+    {
+      "id": 8178,
+      "kaynak": "nesne/178-dinozor.jpg",
+      "word": "dinozor",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 178
       }
     },
     {
@@ -10457,6 +10539,15 @@
       "category": "none",
       "tags": {
         "nesneEskiId": 228
+      }
+    },
+    {
+      "id": 8232,
+      "kaynak": "nesne/232-penguen.jpg",
+      "word": "penguen",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 232
       }
     },
     {
@@ -10505,6 +10596,33 @@
       }
     },
     {
+      "id": 8273,
+      "kaynak": "nesne/273-ari.jpg",
+      "word": "arı",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 273
+      }
+    },
+    {
+      "id": 8275,
+      "kaynak": "nesne/275-kurbaga.jpg",
+      "word": "kurbağa",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 275
+      }
+    },
+    {
+      "id": 8277,
+      "kaynak": "nesne/277-maymun.jpg",
+      "word": "maymun",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 277
+      }
+    },
+    {
       "id": 8278,
       "kaynak": "nesne/278-kiraz.jpg",
       "word": "kiraz",
@@ -10529,6 +10647,15 @@
       "category": "none",
       "tags": {
         "nesneEskiId": 280
+      }
+    },
+    {
+      "id": 8293,
+      "kaynak": "nesne/293-fok.jpg",
+      "word": "fok balığı",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 293
       }
     },
     {
@@ -10568,6 +10695,24 @@
       }
     },
     {
+      "id": 8320,
+      "kaynak": "nesne/320-panda.jpg",
+      "word": "panda",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 320
+      }
+    },
+    {
+      "id": 8321,
+      "kaynak": "nesne/321-tavuk.jpg",
+      "word": "tavuk",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 321
+      }
+    },
+    {
       "id": 8331,
       "kaynak": "nesne/331-limonata.jpg",
       "word": "limonata",
@@ -10604,6 +10749,33 @@
       }
     },
     {
+      "id": 8357,
+      "kaynak": "nesne/357-istakoz.jpg",
+      "word": "ıstakoz",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 357
+      }
+    },
+    {
+      "id": 8358,
+      "kaynak": "nesne/358-ahtapot.jpg",
+      "word": "ahtapot",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 358
+      }
+    },
+    {
+      "id": 8359,
+      "kaynak": "nesne/359-deniz-yildizi.jpg",
+      "word": "deniz yıldızı",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 359
+      }
+    },
+    {
       "id": 8360,
       "kaynak": "nesne/360-jole.jpg",
       "word": "jöle",
@@ -10631,6 +10803,42 @@
       }
     },
     {
+      "id": 8376,
+      "kaynak": "nesne/376-civciv.jpg",
+      "word": "civciv",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 376
+      }
+    },
+    {
+      "id": 8415,
+      "kaynak": "nesne/415-tilki.jpg",
+      "word": "tilki",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 415
+      }
+    },
+    {
+      "id": 8416,
+      "kaynak": "nesne/416-geyik.jpg",
+      "word": "geyik",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 416
+      }
+    },
+    {
+      "id": 8417,
+      "kaynak": "nesne/417-sincap.jpg",
+      "word": "sincap",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 417
+      }
+    },
+    {
       "id": 8420,
       "kaynak": "nesne/420-ispanak.jpg",
       "word": "ıspanak",
@@ -10649,12 +10857,41 @@
       }
     },
     {
+      "id": 8460,
+      "kaynak": "nesne/460-koyun.jpg",
+      "word": "koyun",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 460
+      }
+    },
+    {
+      "id": 8461,
+      "kaynak": "nesne/461-keci.jpg",
+      "word": "keçi",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 461
+      }
+    },
+    {
       "id": 8486,
       "kaynak": "nesne/486-pasta-dilimi.jpg",
       "word": "pasta dilimi",
       "category": "none",
       "tags": {
         "nesneEskiId": 486
+      }
+    },
+    {
+      "id": 8491,
+      "kaynak": "nesne/491-balina.jpg",
+      "word": "balina",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 491
       }
     },
     {
@@ -10781,6 +11018,33 @@
       "category": "none",
       "tags": {
         "nesneEskiId": 650
+      }
+    },
+    {
+      "id": 8680,
+      "kaynak": "nesne/680-kunduz.jpg",
+      "word": "kunduz",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 680
+      }
+    },
+    {
+      "id": 8681,
+      "kaynak": "nesne/681-koala.jpg",
+      "word": "koala",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 681
+      }
+    },
+    {
+      "id": 8694,
+      "kaynak": "nesne/694-kirpi-baligi.jpg",
+      "word": "kirpi balığı",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 694
       }
     },
     {
@@ -10955,6 +11219,160 @@
       }
     },
     {
+      "id": 8861,
+      "kaynak": "nesne/861-hamster.jpg",
+      "word": "hamster",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 861
+      }
+    },
+    {
+      "id": 8862,
+      "kaynak": "nesne/862-kaplan.jpg",
+      "word": "kaplan",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 862
+      }
+    },
+    {
+      "id": 8866,
+      "kaynak": "nesne/866-zebra.jpg",
+      "word": "zebra",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 866
+      }
+    },
+    {
+      "id": 8908,
+      "kaynak": "nesne/908-gergedan.jpg",
+      "word": "gergedan",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 908
+      }
+    },
+    {
+      "id": 8909,
+      "kaynak": "nesne/909-deve.jpg",
+      "word": "deve",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 909
+      }
+    },
+    {
+      "id": 8916,
+      "kaynak": "nesne/916-ayi.jpg",
+      "word": "ayı",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 916
+      }
+    },
+    {
+      "id": 8917,
+      "kaynak": "nesne/917-orumcek.jpg",
+      "word": "örümcek",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 917
+      }
+    },
+    {
+      "id": 8918,
+      "kaynak": "nesne/918-hindi.jpg",
+      "word": "hindi",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 918
+      }
+    },
+    {
+      "id": 8919,
+      "kaynak": "nesne/919-koc.jpg",
+      "word": "koç",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 919
+      }
+    },
+    {
+      "id": 8920,
+      "kaynak": "nesne/920-tavus-kusu.jpg",
+      "word": "tavus kuşu",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 920
+      }
+    },
+    {
+      "id": 8921,
+      "kaynak": "nesne/921-kugu.jpg",
+      "word": "kuğu",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 921
+      }
+    },
+    {
+      "id": 8922,
+      "kaynak": "nesne/922-kurt.jpg",
+      "word": "kurt",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 922
+      }
+    },
+    {
+      "id": 8923,
+      "kaynak": "nesne/923-domuz.jpg",
+      "word": "domuz",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 923
+      }
+    },
+    {
+      "id": 8924,
+      "kaynak": "nesne/924-karides.jpg",
+      "word": "karides",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 924
+      }
+    },
+    {
+      "id": 8925,
+      "kaynak": "nesne/925-yengec.jpg",
+      "word": "yengeç",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 925
+      }
+    },
+    {
+      "id": 8926,
+      "kaynak": "nesne/926-timsah.jpg",
+      "word": "timsah",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 926
+      }
+    },
+    {
+      "id": 8927,
+      "kaynak": "nesne/927-deniz-ati.jpg",
+      "word": "deniz atı",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 927
+      }
+    },
+    {
       "id": 8928,
       "kaynak": "nesne/928-bezelye.jpg",
       "word": "bezelye",
@@ -10970,6 +11388,15 @@
       "category": "none",
       "tags": {
         "nesneEskiId": 931
+      }
+    },
+    {
+      "id": 8942,
+      "kaynak": "nesne/942-sivrisinek.jpg",
+      "word": "sivrisinek",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 942
       }
     },
     {
@@ -10991,12 +11418,40 @@
       }
     },
     {
+      "id": 8947,
+      "kaynak": "nesne/947-kanguru.jpg",
+      "word": "kanguru",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 947
+      }
+    },
+    {
+      "id": 8948,
+      "kaynak": "nesne/948-kopek-baligi.jpg",
+      "word": "köpek balığı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 948
+      }
+    },
+    {
       "id": 8982,
       "kaynak": "nesne/982-su.jpg",
       "word": "su",
       "category": "none",
       "tags": {
         "nesneEskiId": 982
+      }
+    },
+    {
+      "id": 8994,
+      "kaynak": "nesne/994-bagiran-maymun.jpg",
+      "word": "bağıran maymun",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 994
       }
     },
     {
@@ -11227,6 +11682,80 @@
       "word": "şahin",
       "category": "Hayvanlar",
       "sahne": true,
+      "tags": {
+        "color": "kahverengi"
+      }
+    },
+    {
+      "id": 9026,
+      "kaynak": "nesne-yeni/kartal.jpg",
+      "word": "kartal",
+      "category": "Hayvanlar",
+      "tags": {
+        "color": "kahverengi"
+      }
+    },
+    {
+      "id": 9027,
+      "kaynak": "nesne-yeni/karinca.jpg",
+      "word": "karınca",
+      "category": "Hayvanlar",
+      "tags": {
+        "color": "siyah"
+      }
+    },
+    {
+      "id": 9028,
+      "kaynak": "nesne-yeni/yarasa.jpg",
+      "word": "yarasa",
+      "category": "Hayvanlar",
+      "tags": {
+        "color": "siyah"
+      }
+    },
+    {
+      "id": 9029,
+      "kaynak": "nesne-yeni/leylek.jpg",
+      "word": "leylek",
+      "category": "Hayvanlar",
+      "sahne": true,
+      "tags": {
+        "color": "beyaz"
+      }
+    },
+    {
+      "id": 9030,
+      "kaynak": "nesne-yeni/guvercin.jpg",
+      "word": "güvercin",
+      "category": "Hayvanlar",
+      "tags": {
+        "color": "gri"
+      }
+    },
+    {
+      "id": 9031,
+      "kaynak": "nesne-yeni/kaz.jpg",
+      "word": "kaz",
+      "category": "Hayvanlar",
+      "sahne": true,
+      "tags": {
+        "color": "beyaz"
+      }
+    },
+    {
+      "id": 9032,
+      "kaynak": "nesne-yeni/oglak.jpg",
+      "word": "oğlak",
+      "category": "Hayvanlar",
+      "tags": {
+        "color": "beyaz"
+      }
+    },
+    {
+      "id": 9033,
+      "kaynak": "nesne-yeni/ayi-yavrusu.jpg",
+      "word": "ayı yavrusu",
+      "category": "Hayvanlar",
       "tags": {
         "color": "kahverengi"
       }

@@ -178,7 +178,8 @@
     "ad": "leylek",
     "word": "leylek",
     "category": "Hayvanlar",
-    "color": "beyaz"
+    "color": "beyaz",
+    "sahne": true
   },
   {
     "ad": "guvercin",
@@ -190,7 +191,8 @@
     "ad": "kaz",
     "word": "kaz",
     "category": "Hayvanlar",
-    "color": "beyaz"
+    "color": "beyaz",
+    "sahne": true
   },
   {
     "ad": "oglak",
