@@ -510,6 +510,13 @@ export const ACTIVITY_METADATA_MAP: Record<string, ActivityMetadata> = {
     prerequisite: 'oyuncaklar', // Simplified
     masteryRule: { poolType: MasteryPoolType.NARROW, perfectSessionsRequired: 2 }
   },
+  [ActivityType.AcikKoyu]: {
+    activityId: ActivityType.AcikKoyu,
+    activityName: 'Açık / Koyu',
+    unitNumber: 7,
+    prerequisite: 'oyuncaklar',
+    masteryRule: { poolType: MasteryPoolType.NARROW, perfectSessionsRequired: 2 }
+  },
   [ActivityType.OldNew]: {
     activityId: ActivityType.OldNew,
     activityName: 'Eski / Yeni',

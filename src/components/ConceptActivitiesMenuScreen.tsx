@@ -90,6 +90,11 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
           title: isTr ? "Parlak / Mat" : t("concepts.activities.parlakMat", "Shiny / Matte"),
           subtitle: isTr ? "Yansımaları öğren" : t("concepts.subtitles.learnReflections", "Learn reflections"),
         },
+        {
+          type: ActivityType.AcikKoyu,
+          title: isTr ? "Açık / Koyu" : t("concepts.activities.acikKoyu", "Light / Dark"),
+          subtitle: isTr ? "Renk tonlarını ayırt et" : t("concepts.subtitles.lightDark", "Tell light and dark colors apart"),
+        },
       ],
     },
     {

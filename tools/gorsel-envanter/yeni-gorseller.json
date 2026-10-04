@@ -9022,6 +9022,429 @@
       "tags": {
         "duygu": "uykulu"
       }
+    },
+    {
+      "id": 6601,
+      "kaynak": "acik-koyu/araba-acik.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "ton": "açık renk"
+      }
+    },
+    {
+      "id": 6602,
+      "kaynak": "acik-koyu/araba-koyu.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "ton": "koyu renk"
+      }
+    },
+    {
+      "id": 6603,
+      "kaynak": "acik-koyu/balon-acik.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "ton": "açık renk"
+      }
+    },
+    {
+      "id": 6604,
+      "kaynak": "acik-koyu/balon-koyu.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "ton": "koyu renk"
+      }
+    },
+    {
+      "id": 6605,
+      "kaynak": "acik-koyu/canta-acik.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "ton": "açık renk"
+      }
+    },
+    {
+      "id": 6606,
+      "kaynak": "acik-koyu/canta-koyu.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "ton": "koyu renk"
+      }
+    },
+    {
+      "id": 6607,
+      "kaynak": "acik-koyu/cizme-acik.jpg",
+      "word": "çizme",
+      "category": "none",
+      "tags": {
+        "ton": "açık renk"
+      }
+    },
+    {
+      "id": 6608,
+      "kaynak": "acik-koyu/cizme-koyu.jpg",
+      "word": "çizme",
+      "category": "none",
+      "tags": {
+        "ton": "koyu renk"
+      }
+    },
+    {
+      "id": 6609,
+      "kaynak": "acik-koyu/elbise-acik.jpg",
+      "word": "elbise",
+      "category": "none",
+      "tags": {
+        "ton": "açık renk"
+      }
+    },
+    {
+      "id": 6610,
+      "kaynak": "acik-koyu/elbise-koyu.jpg",
+      "word": "elbise",
+      "category": "none",
+      "tags": {
+        "ton": "koyu renk"
+      }
+    },
+    {
+      "id": 6611,
+      "kaynak": "acik-koyu/kova-acik.jpg",
+      "word": "çöp kovası",
+      "category": "none",
+      "tags": {
+        "ton": "açık renk"
+      }
+    },
+    {
+      "id": 6612,
+      "kaynak": "acik-koyu/kova-koyu.jpg",
+      "word": "çöp kovası",
+      "category": "none",
+      "tags": {
+        "ton": "koyu renk"
+      }
+    },
+    {
+      "id": 6613,
+      "kaynak": "acik-koyu/kupa-acik.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "ton": "açık renk"
+      }
+    },
+    {
+      "id": 6614,
+      "kaynak": "acik-koyu/kupa-koyu.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "ton": "koyu renk"
+      }
+    },
+    {
+      "id": 6615,
+      "kaynak": "acik-koyu/semsiye-acik.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "ton": "açık renk"
+      }
+    },
+    {
+      "id": 6616,
+      "kaynak": "acik-koyu/semsiye-koyu.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "ton": "koyu renk"
+      }
+    },
+    {
+      "id": 6617,
+      "kaynak": "acik-koyu/sise-acik.jpg",
+      "word": "şişe",
+      "category": "none",
+      "tags": {
+        "ton": "açık renk"
+      }
+    },
+    {
+      "id": 6618,
+      "kaynak": "acik-koyu/sise-koyu.jpg",
+      "word": "şişe",
+      "category": "none",
+      "tags": {
+        "ton": "koyu renk"
+      }
+    },
+    {
+      "id": 6619,
+      "kaynak": "acik-koyu/tisort-acik.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "ton": "açık renk"
+      }
+    },
+    {
+      "id": 6620,
+      "kaynak": "acik-koyu/tisort-koyu.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "ton": "koyu renk"
+      }
+    },
+    {
+      "id": 6621,
+      "kaynak": "acik-koyu/top-acik.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "ton": "açık renk"
+      }
+    },
+    {
+      "id": 6622,
+      "kaynak": "acik-koyu/top-koyu.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "ton": "koyu renk"
+      }
+    },
+    {
+      "id": 6701,
+      "kaynak": "sayi/elma-1.jpg",
+      "word": "bir elma",
+      "category": "none",
+      "tags": {
+        "count": 1
+      }
+    },
+    {
+      "id": 6702,
+      "kaynak": "sayi/elma-2.jpg",
+      "word": "iki elma",
+      "category": "none",
+      "tags": {
+        "count": 2
+      }
+    },
+    {
+      "id": 6703,
+      "kaynak": "sayi/elma-3.jpg",
+      "word": "üç elma",
+      "category": "none",
+      "tags": {
+        "count": 3
+      }
+    },
+    {
+      "id": 6704,
+      "kaynak": "sayi/elma-4.jpg",
+      "word": "dört elma",
+      "category": "none",
+      "tags": {
+        "count": 4
+      }
+    },
+    {
+      "id": 6705,
+      "kaynak": "sayi/elma-5.jpg",
+      "word": "beş elma",
+      "category": "none",
+      "tags": {
+        "count": 5
+      }
+    },
+    {
+      "id": 6706,
+      "kaynak": "sayi/top-1.jpg",
+      "word": "bir top",
+      "category": "none",
+      "tags": {
+        "count": 1
+      }
+    },
+    {
+      "id": 6707,
+      "kaynak": "sayi/top-2.jpg",
+      "word": "iki top",
+      "category": "none",
+      "tags": {
+        "count": 2
+      }
+    },
+    {
+      "id": 6708,
+      "kaynak": "sayi/top-3.jpg",
+      "word": "üç top",
+      "category": "none",
+      "tags": {
+        "count": 3
+      }
+    },
+    {
+      "id": 6709,
+      "kaynak": "sayi/top-4.jpg",
+      "word": "dört top",
+      "category": "none",
+      "tags": {
+        "count": 4
+      }
+    },
+    {
+      "id": 6710,
+      "kaynak": "sayi/top-5.jpg",
+      "word": "beş top",
+      "category": "none",
+      "tags": {
+        "count": 5
+      }
+    },
+    {
+      "id": 6711,
+      "kaynak": "sayi/balon-1.jpg",
+      "word": "bir balon",
+      "category": "none",
+      "tags": {
+        "count": 1
+      }
+    },
+    {
+      "id": 6712,
+      "kaynak": "sayi/balon-2.jpg",
+      "word": "iki balon",
+      "category": "none",
+      "tags": {
+        "count": 2
+      }
+    },
+    {
+      "id": 6713,
+      "kaynak": "sayi/balon-3.jpg",
+      "word": "üç balon",
+      "category": "none",
+      "tags": {
+        "count": 3
+      }
+    },
+    {
+      "id": 6714,
+      "kaynak": "sayi/balon-4.jpg",
+      "word": "dört balon",
+      "category": "none",
+      "tags": {
+        "count": 4
+      }
+    },
+    {
+      "id": 6715,
+      "kaynak": "sayi/balon-5.jpg",
+      "word": "beş balon",
+      "category": "none",
+      "tags": {
+        "count": 5
+      }
+    },
+    {
+      "id": 6716,
+      "kaynak": "sayi/araba-1.jpg",
+      "word": "bir araba",
+      "category": "none",
+      "tags": {
+        "count": 1
+      }
+    },
+    {
+      "id": 6717,
+      "kaynak": "sayi/araba-2.jpg",
+      "word": "iki araba",
+      "category": "none",
+      "tags": {
+        "count": 2
+      }
+    },
+    {
+      "id": 6718,
+      "kaynak": "sayi/araba-3.jpg",
+      "word": "üç araba",
+      "category": "none",
+      "tags": {
+        "count": 3
+      }
+    },
+    {
+      "id": 6719,
+      "kaynak": "sayi/araba-4.jpg",
+      "word": "dört araba",
+      "category": "none",
+      "tags": {
+        "count": 4
+      }
+    },
+    {
+      "id": 6720,
+      "kaynak": "sayi/araba-5.jpg",
+      "word": "beş araba",
+      "category": "none",
+      "tags": {
+        "count": 5
+      }
+    },
+    {
+      "id": 6721,
+      "kaynak": "sayi/kupa-1.jpg",
+      "word": "bir kupa",
+      "category": "none",
+      "tags": {
+        "count": 1
+      }
+    },
+    {
+      "id": 6722,
+      "kaynak": "sayi/kupa-2.jpg",
+      "word": "iki kupa",
+      "category": "none",
+      "tags": {
+        "count": 2
+      }
+    },
+    {
+      "id": 6723,
+      "kaynak": "sayi/kupa-3.jpg",
+      "word": "üç kupa",
+      "category": "none",
+      "tags": {
+        "count": 3
+      }
+    },
+    {
+      "id": 6724,
+      "kaynak": "sayi/kupa-4.jpg",
+      "word": "dört kupa",
+      "category": "none",
+      "tags": {
+        "count": 4
+      }
+    },
+    {
+      "id": 6725,
+      "kaynak": "sayi/kupa-5.jpg",
+      "word": "beş kupa",
+      "category": "none",
+      "tags": {
+        "count": 5
+      }
     }
   ]
 }

@@ -55,6 +55,8 @@ export { fastSlowDataYeni } from './hizliYavasData';
 export { beforeAfterDataYeni } from './onceSonraData';
 export { heavyLightDataYeni } from './agirHafifData';
 export { emotionsDataYeni } from './duygularData';
+export { acikKoyuDataYeni } from './acikKoyuData';
+export { countMatchDataYeni } from './countMatchData';
 export { sensesDataYeni } from './sensesData';
 export { ownershipDataYeni } from './ownershipData';
 export { ODA_GORSEL, KAP_GORSEL, RUTIN_GORSEL } from './tekilGorseller';

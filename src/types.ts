@@ -191,6 +191,12 @@ export enum ActivityType {
   WhatsMissing,         // Hangisi Kayıp? (Göster-gizle hafıza etkinliği)
   Basara,               // BASARA Yöntemi — TR'ye özel rehberli okuma kulvarı (en sonda: enum değerlerini kaydırmamak için)
   Basara2,              // BASARA 2 (Klasik) — yaygın/eski a-serisi sürümü (ayrı kulvar)
+  // Yeni kavramlar (2026-10-04, Kaan: "hepsini isterim"). En sonda: enum değerlerini kaydırmamak için.
+  AcikKoyu,             // Açık / Koyu renk
+  YenirYenmez,          // Yenir / Yenmez
+  TehlikeliGuvenli,     // Tehlikeli / Güvenli
+  HavaDurumu,           // Güneşli / Yağmurlu / Karlı / Rüzgârlı
+  IlkSon,               // İlk / Son (sırada)
 }
 
 export enum ActivityCategory {

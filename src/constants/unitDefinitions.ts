@@ -128,6 +128,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       ActivityType.KirisikDuzgun,
       ActivityType.SivriKut,
       ActivityType.ParlakMat,
+      ActivityType.AcikKoyu,
       ActivityType.OldNew,
     ],
     completionThreshold: UNIT_COMPLETION_THRESHOLD,

@@ -615,6 +615,15 @@ const KAVRAMLAR = [
     kelime: Object.fromEntries(['cocuk1', 'cocuk2', 'cocuk3', 'cocuk4'].map(n => [n, 'çocuk'])),
   },
   {
+    klasor: 'acik-koyu', dosya: 'acikKoyuData.ts', exportAdi: 'acikKoyuDataYeni',
+    activityType: 'AcikKoyu', idBaslangic: 6601, etiket: 'ton',
+    // Görseller acik-koyu.py ile aynı fotoğraftan üretildi. "açık" tek başına "kapalı değil" demek: hep "açık renk".
+    a: { ek: 'acik', deger: 'açık renk', soru: 'Açık renk olan hangisi?', sifat: 'açık renk' },
+    b: { ek: 'koyu', deger: 'koyu renk', soru: 'Koyu renk olan hangisi?', sifat: 'koyu renk' },
+    kelime: { canta: 'çanta', semsiye: 'şemsiye', balon: 'balon', kupa: 'kupa', top: 'top', araba: 'araba',
+      tisort: 'tişört', elbise: 'elbise', cizme: 'çizme', sise: 'şişe', kova: 'çöp kovası' },
+  },
+  {
     klasor: 'kirisik-duzgun', dosya: 'kirisikDuzgunData.ts', exportAdi: 'kirisikDuzgunDataYeni',
     activityType: 'KirisikDuzgun', idBaslangic: 4701, etiket: 'condition', sahneNesneler: ['masaortusu', 'ortu', 'perde'],
     a: { ek: 'kirisik', deger: 'kırışık', soru: 'Kırışık olan hangisi?', sifat: 'kırışıktır' },
