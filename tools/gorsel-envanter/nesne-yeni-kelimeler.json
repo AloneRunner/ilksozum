@@ -235,5 +235,89 @@
     "word": "şifonyer",
     "category": "Ev Eşyaları",
     "color": "kahverengi"
+  },
+  {
+    "ad": "otobus",
+    "word": "otobüs",
+    "category": "Taşıtlar",
+    "color": "mavi"
+  },
+  {
+    "ad": "taksi",
+    "word": "taksi",
+    "category": "Taşıtlar",
+    "color": "sarı"
+  },
+  {
+    "ad": "metro",
+    "word": "metro",
+    "category": "Taşıtlar",
+    "color": "gri"
+  },
+  {
+    "ad": "scooter",
+    "word": "scooter",
+    "category": "Taşıtlar",
+    "color": "kırmızı"
+  },
+  {
+    "ad": "bebek-arabasi",
+    "word": "bebek arabası",
+    "category": "Taşıtlar",
+    "color": "gri"
+  },
+  {
+    "ad": "cop-kamyonu",
+    "word": "çöp kamyonu",
+    "category": "Taşıtlar",
+    "color": "yeşil"
+  },
+  {
+    "ad": "yapi-bloklari",
+    "word": "yapı blokları",
+    "category": "Oyuncaklar",
+    "color": "çok renkli"
+  },
+  {
+    "ad": "oyun-hamuru",
+    "word": "oyun hamuru",
+    "category": "Oyuncaklar",
+    "color": "çok renkli"
+  },
+  {
+    "ad": "oyuncak-araba",
+    "word": "oyuncak araba",
+    "category": "Oyuncaklar",
+    "color": "kırmızı"
+  },
+  {
+    "ad": "piyano",
+    "word": "piyano",
+    "category": "Müzik Aletleri",
+    "color": "siyah"
+  },
+  {
+    "ad": "ksilofon",
+    "word": "ksilofon",
+    "category": "Müzik Aletleri",
+    "color": "çok renkli"
+  },
+  {
+    "ad": "mizika",
+    "word": "mızıka",
+    "category": "Müzik Aletleri",
+    "color": "gri"
+  },
+  {
+    "ad": "aski",
+    "word": "askı",
+    "category": "Ev Eşyaları",
+    "color": "kahverengi"
+  },
+  {
+    "ad": "yorgan",
+    "word": "yorgan",
+    "category": "Ev Eşyaları",
+    "color": "mavi"
   }
 ]

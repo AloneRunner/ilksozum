@@ -43,6 +43,8 @@ export const NESNE_YENI: Record<number, string> = {
   101: '/images/8101.webp', // zürafa
   102: '/images/4209.webp', // horoz
   103: '/images/8103.webp', // baykuş
+  106: '/images/6017.webp', // tren
+  107: '/images/6019.webp', // uçak
   110: '/images/3408.webp', // bisiklet
   112: '/images/5006.webp', // ekmek
   114: '/images/5014.webp', // muz
@@ -104,6 +106,7 @@ export const NESNE_YENI: Record<number, string> = {
   280: '/images/8280.webp', // patlıcan
   282: '/images/8282.webp', // gece lambası
   283: '/images/4717.webp', // perde
+  289: '/images/6002.webp', // traktör
   290: '/images/5201.webp', // at
   291: '/images/4212.webp', // inek
   293: '/images/8293.webp', // fok balığı
@@ -170,7 +173,9 @@ export const NESNE_YENI: Record<number, string> = {
   462: '/images/4417.webp', // kuzu
   486: '/images/8486.webp', // pasta dilimi
   491: '/images/8491.webp', // balina
+  493: '/images/6016.webp', // sandal
   498: '/images/8498.webp', // nar
+  538: '/images/6020.webp', // sıcak hava balonu
   548: '/images/8548.webp', // koltuk
   580: '/images/3504.webp', // kedi
   588: '/images/8588.webp', // hamur
@@ -179,6 +184,7 @@ export const NESNE_YENI: Record<number, string> = {
   595: '/images/3008.webp', // kapı
   606: '/images/5120.webp', // yatak
   610: '/images/8610.webp', // raf
+  615: '/images/6019.webp', // uçak
   617: '/images/5615.webp', // kuşlar
   623: '/images/8623.webp', // sandviç
   627: '/images/5612.webp', // kediler
