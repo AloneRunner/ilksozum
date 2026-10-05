@@ -10416,6 +10416,15 @@
       }
     },
     {
+      "id": 8053,
+      "kaynak": "nesne/53-vida.jpg",
+      "word": "vida",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 53
+      }
+    },
+    {
       "id": 8056,
       "kaynak": "nesne/56-dondurma.jpg",
       "word": "dondurma",
@@ -10552,12 +10561,39 @@
       }
     },
     {
+      "id": 8120,
+      "kaynak": "nesne/120-jilet.jpg",
+      "word": "jilet",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 120
+      }
+    },
+    {
+      "id": 8126,
+      "kaynak": "nesne/126-catal.jpg",
+      "word": "çatal",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 126
+      }
+    },
+    {
       "id": 8135,
       "kaynak": "nesne/135-ucurtma.jpg",
       "word": "uçurtma",
       "category": "none",
       "tags": {
         "nesneEskiId": 135
+      }
+    },
+    {
+      "id": 8138,
+      "kaynak": "nesne/138-halter.jpg",
+      "word": "halter",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 138
       }
     },
     {
@@ -10579,12 +10615,30 @@
       }
     },
     {
+      "id": 8143,
+      "kaynak": "nesne/143-merdiven.jpg",
+      "word": "merdiven",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 143
+      }
+    },
+    {
       "id": 8148,
       "kaynak": "nesne/148-ayna.jpg",
       "word": "ayna",
       "category": "none",
       "tags": {
         "nesneEskiId": 148
+      }
+    },
+    {
+      "id": 8149,
+      "kaynak": "nesne/149-cetvel.jpg",
+      "word": "cetvel",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 149
       }
     },
     {
@@ -10652,12 +10706,39 @@
       }
     },
     {
+      "id": 8181,
+      "kaynak": "nesne/181-kamera.jpg",
+      "word": "kamera",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 181
+      }
+    },
+    {
+      "id": 8182,
+      "kaynak": "nesne/182-mikrofon.jpg",
+      "word": "mikrofon",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 182
+      }
+    },
+    {
       "id": 8184,
       "kaynak": "nesne/184-kumbara.jpg",
       "word": "kumbara",
       "category": "none",
       "tags": {
         "nesneEskiId": 184
+      }
+    },
+    {
+      "id": 8186,
+      "kaynak": "nesne/186-pil.jpg",
+      "word": "pil",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 186
       }
     },
     {
@@ -10716,12 +10797,48 @@
       }
     },
     {
+      "id": 8214,
+      "kaynak": "nesne/214-durbun.jpg",
+      "word": "dürbün",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 214
+      }
+    },
+    {
+      "id": 8217,
+      "kaynak": "nesne/217-tornavida.jpg",
+      "word": "tornavida",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 217
+      }
+    },
+    {
       "id": 8218,
       "kaynak": "nesne/218-pirinc.jpg",
       "word": "pirinç",
       "category": "none",
       "tags": {
         "nesneEskiId": 218
+      }
+    },
+    {
+      "id": 8219,
+      "kaynak": "nesne/219-yangin-tupu.jpg",
+      "word": "yangın söndürme tüpü",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 219
+      }
+    },
+    {
+      "id": 8220,
+      "kaynak": "nesne/220-pergel.jpg",
+      "word": "pergel",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 220
       }
     },
     {
@@ -10740,6 +10857,16 @@
       "category": "none",
       "tags": {
         "nesneEskiId": 228
+      }
+    },
+    {
+      "id": 8231,
+      "kaynak": "nesne/231-jandarma.jpg",
+      "word": "jandarma",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 231
       }
     },
     {
@@ -10770,12 +10897,30 @@
       }
     },
     {
+      "id": 8245,
+      "kaynak": "nesne/245-toplu-igne.jpg",
+      "word": "toplu iğne",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 245
+      }
+    },
+    {
       "id": 8246,
       "kaynak": "nesne/246-gazete.jpg",
       "word": "gazete",
       "category": "none",
       "tags": {
         "nesneEskiId": 246
+      }
+    },
+    {
+      "id": 8248,
+      "kaynak": "nesne/248-para.jpg",
+      "word": "para",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 248
       }
     },
     {
@@ -10833,6 +10978,25 @@
       "category": "none",
       "tags": {
         "nesneEskiId": 259
+      }
+    },
+    {
+      "id": 8260,
+      "kaynak": "nesne/260-termometre.jpg",
+      "word": "termometre",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 260
+      }
+    },
+    {
+      "id": 8264,
+      "kaynak": "nesne/264-tava.jpg",
+      "word": "tava",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 264
       }
     },
     {
@@ -10991,6 +11155,16 @@
       }
     },
     {
+      "id": 8313,
+      "kaynak": "nesne/313-kralice.jpg",
+      "word": "kraliçe",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 313
+      }
+    },
+    {
       "id": 8315,
       "kaynak": "nesne/315-mikroskop.jpg",
       "word": "mikroskop",
@@ -11108,6 +11282,15 @@
       }
     },
     {
+      "id": 8344,
+      "kaynak": "nesne/344-pense.jpg",
+      "word": "pense",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 344
+      }
+    },
+    {
       "id": 8353,
       "kaynak": "nesne/353-fare.jpg",
       "word": "bilgisayar faresi",
@@ -11216,6 +11399,25 @@
       }
     },
     {
+      "id": 8367,
+      "kaynak": "nesne/367-mikser.jpg",
+      "word": "mikser",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 367
+      }
+    },
+    {
+      "id": 8368,
+      "kaynak": "nesne/368-pusula.jpg",
+      "word": "pusula",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 368
+      }
+    },
+    {
       "id": 8369,
       "kaynak": "nesne/369-kurek.jpg",
       "word": "kürek",
@@ -11280,12 +11482,41 @@
       }
     },
     {
+      "id": 8386,
+      "kaynak": "nesne/386-hemsire.jpg",
+      "word": "hemşire",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 386
+      }
+    },
+    {
+      "id": 8387,
+      "kaynak": "nesne/387-pilot.jpg",
+      "word": "pilot",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 387
+      }
+    },
+    {
       "id": 8393,
       "kaynak": "nesne/393-salincak.jpg",
       "word": "salıncak",
       "category": "none",
       "tags": {
         "nesneEskiId": 393
+      }
+    },
+    {
+      "id": 8397,
+      "kaynak": "nesne/397-pul.jpg",
+      "word": "pul",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 397
       }
     },
     {
@@ -11304,6 +11535,15 @@
       "category": "none",
       "tags": {
         "nesneEskiId": 399
+      }
+    },
+    {
+      "id": 8400,
+      "kaynak": "nesne/400-olta.jpg",
+      "word": "olta",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 400
       }
     },
     {
@@ -11511,6 +11751,15 @@
       }
     },
     {
+      "id": 8496,
+      "kaynak": "nesne/496-cekic.jpg",
+      "word": "çekiç",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 496
+      }
+    },
+    {
       "id": 8498,
       "kaynak": "nesne/498-nar.jpg",
       "word": "nar",
@@ -11529,6 +11778,33 @@
       }
     },
     {
+      "id": 8527,
+      "kaynak": "nesne/527-tig.jpg",
+      "word": "tığ",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 527
+      }
+    },
+    {
+      "id": 8535,
+      "kaynak": "nesne/535-silgi.jpg",
+      "word": "silgi",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 535
+      }
+    },
+    {
+      "id": 8542,
+      "kaynak": "nesne/542-kitap-ayraci.jpg",
+      "word": "kitap ayracı",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 542
+      }
+    },
+    {
       "id": 8548,
       "kaynak": "nesne/548-koltuk.jpg",
       "word": "koltuk",
@@ -11538,12 +11814,40 @@
       }
     },
     {
+      "id": 8568,
+      "kaynak": "nesne/568-koli-bandi.jpg",
+      "word": "koli bandı",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 568
+      }
+    },
+    {
+      "id": 8569,
+      "kaynak": "nesne/569-bant.jpg",
+      "word": "bant",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 569
+      }
+    },
+    {
       "id": 8588,
       "kaynak": "nesne/588-hamur.jpg",
       "word": "hamur",
       "category": "none",
       "tags": {
         "nesneEskiId": 588
+      }
+    },
+    {
+      "id": 8600,
+      "kaynak": "nesne/600-zarf.jpg",
+      "word": "zarf",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 600
       }
     },
     {
@@ -11571,6 +11875,24 @@
       "category": "none",
       "tags": {
         "nesneEskiId": 623
+      }
+    },
+    {
+      "id": 8625,
+      "kaynak": "nesne/625-tuzluk.jpg",
+      "word": "tuzluk ve biberlik",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 625
+      }
+    },
+    {
+      "id": 8634,
+      "kaynak": "nesne/634-ok.jpg",
+      "word": "ok",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 634
       }
     },
     {
@@ -11625,6 +11947,15 @@
       "category": "none",
       "tags": {
         "nesneEskiId": 641
+      }
+    },
+    {
+      "id": 8642,
+      "kaynak": "nesne/642-kagit.jpg",
+      "word": "kağıt",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 642
       }
     },
     {
@@ -11700,6 +12031,16 @@
       }
     },
     {
+      "id": 8678,
+      "kaynak": "nesne/678-isci.jpg",
+      "word": "işçi",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 678
+      }
+    },
+    {
       "id": 8680,
       "kaynak": "nesne/680-kunduz.jpg",
       "word": "kunduz",
@@ -11718,6 +12059,16 @@
       }
     },
     {
+      "id": 8683,
+      "kaynak": "nesne/683-adam.jpg",
+      "word": "adam",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 683
+      }
+    },
+    {
       "id": 8685,
       "kaynak": "nesne/685-konserve.jpg",
       "word": "konserve kutusu",
@@ -11727,12 +12078,31 @@
       }
     },
     {
+      "id": 8687,
+      "kaynak": "nesne/687-strec-film.jpg",
+      "word": "streç film",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 687
+      }
+    },
+    {
       "id": 8688,
       "kaynak": "nesne/688-dosya.jpg",
       "word": "dosya",
       "category": "none",
       "tags": {
         "nesneEskiId": 688
+      }
+    },
+    {
+      "id": 8691,
+      "kaynak": "nesne/691-buyutec.jpg",
+      "word": "büyüteç",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 691
       }
     },
     {
@@ -11797,6 +12167,44 @@
       "category": "none",
       "tags": {
         "nesneEskiId": 710
+      }
+    },
+    {
+      "id": 8711,
+      "kaynak": "nesne/711-anne.jpg",
+      "word": "anne",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 711
+      }
+    },
+    {
+      "id": 8712,
+      "kaynak": "nesne/712-tamir-aletleri.jpg",
+      "word": "tamir aletleri",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 712
+      }
+    },
+    {
+      "id": 8713,
+      "kaynak": "nesne/713-at-nali.jpg",
+      "word": "at nalı",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 713
+      }
+    },
+    {
+      "id": 8716,
+      "kaynak": "nesne/716-asker.jpg",
+      "word": "asker",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 716
       }
     },
     {
@@ -11965,12 +12373,102 @@
       }
     },
     {
+      "id": 8830,
+      "kaynak": "nesne/830-erkek-kardes.jpg",
+      "word": "erkek kardeş",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 830
+      }
+    },
+    {
+      "id": 8832,
+      "kaynak": "nesne/832-mudur.jpg",
+      "word": "müdür",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 832
+      }
+    },
+    {
+      "id": 8833,
+      "kaynak": "nesne/833-temizlik-gorevlisi.jpg",
+      "word": "temizlik görevlisi",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 833
+      }
+    },
+    {
+      "id": 8834,
+      "kaynak": "nesne/834-postaci.jpg",
+      "word": "postacı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 834
+      }
+    },
+    {
+      "id": 8835,
+      "kaynak": "nesne/835-berber.jpg",
+      "word": "berber",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 835
+      }
+    },
+    {
+      "id": 8836,
+      "kaynak": "nesne/836-hademe.jpg",
+      "word": "hademe",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 836
+      }
+    },
+    {
+      "id": 8837,
+      "kaynak": "nesne/837-ciftci.jpg",
+      "word": "çiftçi",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 837
+      }
+    },
+    {
+      "id": 8838,
+      "kaynak": "nesne/838-arkadas.jpg",
+      "word": "arkadaş",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 838
+      }
+    },
+    {
       "id": 8843,
       "kaynak": "nesne/843-calar-saat.jpg",
       "word": "saat",
       "category": "none",
       "tags": {
         "nesneEskiId": 843
+      }
+    },
+    {
+      "id": 8849,
+      "kaynak": "nesne/849-yapistirici.jpg",
+      "word": "yapıştırıcı",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 849
       }
     },
     {
@@ -12056,6 +12554,25 @@
       }
     },
     {
+      "id": 8869,
+      "kaynak": "nesne/869-manav.jpg",
+      "word": "manav",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 869
+      }
+    },
+    {
+      "id": 8870,
+      "kaynak": "nesne/870-kalemtiras.jpg",
+      "word": "kalemtıraş",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 870
+      }
+    },
+    {
       "id": 8871,
       "kaynak": "nesne/871-yara-bandi.jpg",
       "word": "yara bandı",
@@ -12071,6 +12588,44 @@
       "category": "none",
       "tags": {
         "nesneEskiId": 874
+      }
+    },
+    {
+      "id": 8877,
+      "kaynak": "nesne/877-kasiyer.jpg",
+      "word": "kasiyer",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 877
+      }
+    },
+    {
+      "id": 8878,
+      "kaynak": "nesne/878-garson.jpg",
+      "word": "garson",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 878
+      }
+    },
+    {
+      "id": 8882,
+      "kaynak": "nesne/882-defter.jpg",
+      "word": "defter",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 882
+      }
+    },
+    {
+      "id": 8883,
+      "kaynak": "nesne/883-kara-tahta.jpg",
+      "word": "kara tahta",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 883
       }
     },
     {
@@ -12275,6 +12830,24 @@
       }
     },
     {
+      "id": 8935,
+      "kaynak": "nesne/935-rende.jpg",
+      "word": "rende",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 935
+      }
+    },
+    {
+      "id": 8936,
+      "kaynak": "nesne/936-tel-zimba.jpg",
+      "word": "tel zımba",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 936
+      }
+    },
+    {
       "id": 8937,
       "kaynak": "nesne/937-tenis-raketi.jpg",
       "word": "tenis raketi",
@@ -12290,6 +12863,15 @@
       "category": "none",
       "tags": {
         "nesneEskiId": 938
+      }
+    },
+    {
+      "id": 8939,
+      "kaynak": "nesne/939-ocak.jpg",
+      "word": "ocak",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 939
       }
     },
     {
@@ -12405,6 +12987,15 @@
       }
     },
     {
+      "id": 8992,
+      "kaynak": "nesne/992-testere.jpg",
+      "word": "testere",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 992
+      }
+    },
+    {
       "id": 8994,
       "kaynak": "nesne/994-bagiran-maymun.jpg",
       "word": "bağıran maymun",
@@ -12430,6 +13021,25 @@
       "sahne": true,
       "tags": {
         "nesneEskiId": 997
+      }
+    },
+    {
+      "id": 8998,
+      "kaynak": "nesne/998-matkap.jpg",
+      "word": "matkap",
+      "category": "none",
+      "tags": {
+        "nesneEskiId": 998
+      }
+    },
+    {
+      "id": 8999,
+      "kaynak": "nesne/999-noel-baba.jpg",
+      "word": "gülen noel baba",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 999
       }
     },
     {
@@ -12909,6 +13519,51 @@
       "sahne": true,
       "tags": {
         "color": "mavi"
+      }
+    },
+    {
+      "id": 9053,
+      "kaynak": "nesne-yeni/suluboya.jpg",
+      "word": "suluboya",
+      "category": "Okul & Ofis Gereçleri",
+      "tags": {
+        "color": "çok renkli"
+      }
+    },
+    {
+      "id": 9054,
+      "kaynak": "nesne-yeni/boya-kalemleri.jpg",
+      "word": "boya kalemleri",
+      "category": "Okul & Ofis Gereçleri",
+      "tags": {
+        "color": "çok renkli"
+      }
+    },
+    {
+      "id": 9055,
+      "kaynak": "nesne-yeni/oklava.jpg",
+      "word": "oklava",
+      "category": "Mutfak Gereçleri",
+      "tags": {
+        "color": "kahverengi"
+      }
+    },
+    {
+      "id": 9056,
+      "kaynak": "nesne-yeni/suzgec.jpg",
+      "word": "süzgeç",
+      "category": "Mutfak Gereçleri",
+      "tags": {
+        "color": "gri"
+      }
+    },
+    {
+      "id": 9057,
+      "kaynak": "nesne-yeni/metre.jpg",
+      "word": "şerit metre",
+      "category": "Aletler",
+      "tags": {
+        "color": "sarı"
       }
     }
   ]
