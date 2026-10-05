@@ -205,5 +205,35 @@
     "word": "ayı yavrusu",
     "category": "Hayvanlar",
     "color": "kahverengi"
+  },
+  {
+    "ad": "telefon",
+    "word": "telefon",
+    "category": "Ev Eşyaları",
+    "color": "siyah"
+  },
+  {
+    "ad": "masa-lambasi",
+    "word": "masa lambası",
+    "category": "Ev Eşyaları",
+    "color": "sarı"
+  },
+  {
+    "ad": "battaniye",
+    "word": "battaniye",
+    "category": "Ev Eşyaları",
+    "color": "mavi"
+  },
+  {
+    "ad": "cerceve",
+    "word": "fotoğraf çerçevesi",
+    "category": "Ev Eşyaları",
+    "color": "kahverengi"
+  },
+  {
+    "ad": "sifonyer",
+    "word": "şifonyer",
+    "category": "Ev Eşyaları",
+    "color": "kahverengi"
   }
 ]
