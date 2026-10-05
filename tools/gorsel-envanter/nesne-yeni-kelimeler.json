@@ -321,5 +321,35 @@
     "category": "Ev Eşyaları",
     "color": "mavi",
     "sahne": true
+  },
+  {
+    "ad": "suluboya",
+    "word": "suluboya",
+    "category": "Okul & Ofis Gereçleri",
+    "color": "çok renkli"
+  },
+  {
+    "ad": "boya-kalemleri",
+    "word": "boya kalemleri",
+    "category": "Okul & Ofis Gereçleri",
+    "color": "çok renkli"
+  },
+  {
+    "ad": "oklava",
+    "word": "oklava",
+    "category": "Mutfak Gereçleri",
+    "color": "kahverengi"
+  },
+  {
+    "ad": "suzgec",
+    "word": "süzgeç",
+    "category": "Mutfak Gereçleri",
+    "color": "gri"
+  },
+  {
+    "ad": "metre",
+    "word": "şerit metre",
+    "category": "Aletler",
+    "color": "sarı"
   }
 ]
