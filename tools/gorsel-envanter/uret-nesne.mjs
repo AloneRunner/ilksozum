@@ -20,7 +20,7 @@ const nesneler = JSON.parse(fs.readFileSync(path.join(HERE, 'nesne-liste.json'),
 const eskiKayit = Object.fromEntries(Object.values(nesneler).flat().map(e => [e.id, e]));
 
 // Renkli/gri zeminli nesneler (beyaz hayvan gri zeminde, deniz hayvanı mavi zeminde): zemin beyazlatılmaz
-const SAHNE = new Set([26, 460, 491, 921, 948, 95, 169, 251, 301, 422, 423, 424, 708, 798, 799, 815, 855, 933, 929, 211, 302, 941]);
+const SAHNE = new Set([26, 460, 491, 921, 948, 257, 258, 381, 480, 985, 987, 997, 95, 169, 251, 301, 422, 423, 424, 708, 798, 799, 815, 855, 933, 929, 211, 302, 941]);
 const harita = {};
 const renkler = {}; // eşlemede renk verilirse (Kaan: eski renge uymak gerekmez) kayıttaki renk etiketi yenisiyle değişir
 const yeni = [];

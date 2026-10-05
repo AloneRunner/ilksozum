@@ -252,7 +252,8 @@
     "ad": "metro",
     "word": "metro",
     "category": "Taşıtlar",
-    "color": "gri"
+    "color": "gri",
+    "sahne": true
   },
   {
     "ad": "scooter",
@@ -318,6 +319,7 @@
     "ad": "yorgan",
     "word": "yorgan",
     "category": "Ev Eşyaları",
-    "color": "mavi"
+    "color": "mavi",
+    "sahne": true
   }
 ]
