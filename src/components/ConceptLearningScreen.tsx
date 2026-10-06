@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import BasHareketi from './ui/BasHareketi.tsx';
 import { Word, ActivityType } from '../types.ts';
 import Card from './ui/Card.tsx';
 import SpeakerIcon from './icons/SpeakerIcon.tsx';
@@ -284,7 +285,7 @@ const ConceptLearningScreen: React.FC<ConceptLearningScreenProps> = ({
                             `}
                             aria-label="Evet"
                         >
-                            <span className="flex flex-col items-center gap-1"><img src="/images/yes.gif" alt="Doğru Cevap" className="w-24 h-24 sm:w-32 sm:h-32 sm-landscape:w-20 sm-landscape:h-20" /><span className="text-xl font-black text-green-700">✓ Evet</span></span>
+                            <span className="flex flex-col items-center gap-1"><BasHareketi tur="evet" className="w-28 h-28 sm:w-36 sm:h-36 sm-landscape:w-20 sm-landscape:h-20" /><span className="text-xl font-black text-green-700">✓ Evet</span></span>
                         </button>
                         <button
                             onClick={() => handleAnswer('no')}
@@ -299,7 +300,7 @@ const ConceptLearningScreen: React.FC<ConceptLearningScreenProps> = ({
                             `}
                             aria-label="Hayır"
                         >
-                            <span className="flex flex-col items-center gap-1"><img src="/images/no.gif" alt="Yanlış Cevap" className="w-24 h-24 sm:w-32 sm:h-32 sm-landscape:w-20 sm-landscape:h-20" /><span className="text-xl font-black text-red-700">✗ Hayır</span></span>
+                            <span className="flex flex-col items-center gap-1"><BasHareketi tur="hayir" className="w-28 h-28 sm:w-36 sm:h-36 sm-landscape:w-20 sm-landscape:h-20" /><span className="text-xl font-black text-red-700">✗ Hayır</span></span>
                         </button>
                     </div>
                 </div>
