@@ -75,7 +75,9 @@ if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(new URL(im
   for (const d of process.argv.slice(2)) {
     fs.mkdirSync(hamKlasor, { recursive: true });
     const yedek = path.join(hamKlasor, path.basename(d));
-    if (!fs.existsSync(yedek)) fs.copyFileSync(d, yedek);
+    // ham kopya yalnız uygulamanın kayıtları için (deneme dosyaları proje klasörünü kirletmesin)
+    const uygulamaKaydi = path.resolve(d).split(path.sep).join('/').includes('/public/audio/ses/');
+    if (uygulamaKaydi && !fs.existsSync(yedek)) fs.copyFileSync(d, yedek);
     const [bas, son, eski] = temizle(d);
     console.log(`${path.basename(d)}: ${eski.toFixed(2)} sn → ${(son - bas).toFixed(2)} sn (${bas.toFixed(2)}–${son.toFixed(2)})`);
   }
