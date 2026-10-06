@@ -17,7 +17,7 @@ export const useAppCore = () => {
     const [screenState, setScreenState] = useState<ScreenState>(ScreenState.Loading);
     const [previousScreen, setPreviousScreen] = useState<ScreenState>(ScreenState.MainMenu);
     const [activeTab, _setActiveTab] = useState<Tab>(Tab.Activities);
-    const [activeConceptTab, setActiveConceptTab] = useState('Temel');
+    const [activeConceptTab, setActiveConceptTab] = useState('Renk ve Şekil');
     const [toast, setToast] = useState<{ message: string; type: 'error' | 'info' } | null>(null);
     const [categoryToManage, setCategoryToManage] = useState<ActivityCategory | null>(null);
 

@@ -63,6 +63,7 @@ export enum ScreenState {
   ClockLearningGame,
   BasaraLessonMap,    // BASARA Yöntemi — ders haritası
   BasaraLesson,       // BASARA Yöntemi — tek ders akışı
+  SkillMenu,          // Beceri menüsü (Harfler, Sayılar, Düşünme...)
 }
 
 export enum Tab {

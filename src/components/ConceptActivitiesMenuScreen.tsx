@@ -12,6 +12,8 @@ import TextureIcon from "./icons/TextureIcon.tsx";
 import ArrowsRightLeftIcon from "./icons/ArrowsRightLeftIcon.tsx";
 import OppositesIcon from "./icons/OppositesIcon.tsx";
 import SensesIcon from "./icons/SensesIcon.tsx";
+import ColorsIcon from "./icons/ColorsIcon.tsx";
+import PersonIcon from "./icons/PersonIcon.tsx";
 import { getCurrentLanguage, t } from "../i18n/index.ts";
 import CosmicBackdrop from './ui/CosmicBackdrop.tsx';
 import PanelStars from './ui/PanelStars.tsx';
@@ -38,7 +40,7 @@ interface ConceptActivitiesMenuScreenProps {
   enabledActivities: Set<string>;
 }
 
-const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] => {
+const buildEskiTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] => {
   const isTr = lang === "tr";
   return [
     {
@@ -399,6 +401,72 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
           subtitle: isTr ? "Eşyayı sahibiyle eşleştir" : "Match the object to its owner",
         },
       ],
+    },
+  ];
+};
+
+// Kavram sekmeleri (2026-10): ne öğrettiğine göre 8 sekme + zor seviye kıyaslama.
+// Etkinlik tanımları eski listeden alınır; sadece gruplama değişir.
+const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] => {
+  const isTr = lang === "tr";
+  const tanim = new Map<ActivityType, ConceptActivity>();
+  for (const tab of buildEskiTabs(lang)) for (const a of tab.activities) tanim.set(a.type, a);
+  const kiyasSub = isTr ? "İki kartı karşılaştır" : t("experimental.relativeComparison.instruction", "Compare the two cards");
+  const kiyas: ConceptActivity[] = [
+    { type: ActivityType.RelativeBigSmall, title: isTr ? "Hangisi Daha Büyük?" : t("concepts.activities.bigSmall", "Big / Small"), subtitle: kiyasSub },
+    { type: ActivityType.RelativeLongShort, title: isTr ? "Hangisi Daha Uzun?" : t("concepts.activities.longShort", "Long / Short"), subtitle: kiyasSub },
+    { type: ActivityType.RelativeThinThick, title: isTr ? "Hangisi Daha Kalın?" : t("concepts.activities.thinThick", "Thin / Thick"), subtitle: kiyasSub },
+    { type: ActivityType.RelativeWideNarrow, title: isTr ? "Hangisi Daha Geniş?" : t("concepts.activities.wideNarrow", "Wide / Narrow"), subtitle: kiyasSub },
+    { type: ActivityType.RelativeFewMuch, title: isTr ? "Hangisinde Daha Çok?" : t("concepts.activities.fewMuch", "Few / Many"), subtitle: kiyasSub },
+    { type: ActivityType.RelativeNearFar, title: isTr ? "Hangisi Daha Yakın?" : t("concepts.activities.nearFar", "Near / Far"), subtitle: kiyasSub },
+    { type: ActivityType.RelativeHighLow, title: isTr ? "Hangisi Daha Yüksek?" : t("concepts.activities.highLow", "High / Low"), subtitle: kiyasSub },
+  ];
+  const sec = (tipler: ActivityType[]) => tipler.map((tip) => tanim.get(tip)).filter((a): a is ConceptActivity => !!a);
+  return [
+    {
+      name: isTr ? "Renk ve Şekil" : t("concepts.colorShape", "Color & Shape"),
+      icon: ColorsIcon,
+      activities: sec([ActivityType.Colors, ActivityType.ColorRecognition, ActivityType.Shapes, ActivityType.AcikKoyu, ActivityType.ParlakMat, ActivityType.SeffafOpak]),
+    },
+    {
+      name: isTr ? "Boyut" : t("concepts.dimensional", "Size"),
+      icon: WideNarrowIcon,
+      activities: sec([ActivityType.BigSmall, ActivityType.LongShort, ActivityType.ThinThick, ActivityType.WideNarrow, ActivityType.DerinSig, ActivityType.HeavyLight]),
+    },
+    {
+      name: isTr ? "Konum" : t("concepts.position", "Spatial"),
+      icon: LocationIcon,
+      activities: sec([ActivityType.OnUnder, ActivityType.BelowAbove, ActivityType.InFrontOfBehind, ActivityType.InsideOutside, ActivityType.BesideOpposite, ActivityType.Between, ActivityType.LeftRight, ActivityType.NearFar, ActivityType.HighLow, ActivityType.TersDuz, ActivityType.IlkSon]),
+    },
+    {
+      name: isTr ? "Miktar" : t("concepts.quantity", "Quantity"),
+      icon: QuantityIcon,
+      activities: sec([ActivityType.CountMatch, ActivityType.FewMuch, ActivityType.KalabalikTenha, ActivityType.FullEmpty, ActivityType.HalfQuarterWhole, ActivityType.OddEven]),
+    },
+    {
+      name: isTr ? "Duyular" : t("concepts.sensory", "Senses"),
+      icon: TextureIcon,
+      activities: sec([ActivityType.Senses, ActivityType.HardSoft, ActivityType.RoughSmooth, ActivityType.DikenliPuruzsuz, ActivityType.SivriKut, ActivityType.WetDry, ActivityType.HotCold, ActivityType.BitterSweet, ActivityType.NoisyQuiet, ActivityType.KirisikDuzgun]),
+    },
+    {
+      name: isTr ? "Zaman" : t("concepts.time", "Time"),
+      icon: TimeIcon,
+      activities: sec([ActivityType.BeforeAfter, ActivityType.DayNight, ActivityType.FastSlow, ActivityType.ClockLearning, ActivityType.HavaDurumu]),
+    },
+    {
+      name: isTr ? "Nesnenin Hali" : t("concepts.state", "State"),
+      icon: OppositesIcon,
+      activities: sec([ActivityType.OpenClosed, ActivityType.BrokenIntact, ActivityType.TazeBayat, ActivityType.DugumCozuk, ActivityType.OldNew, ActivityType.CleanDirty, ActivityType.MessyClean, ActivityType.StraightCurved, ActivityType.AliveLifeless]),
+    },
+    {
+      name: isTr ? "Ben ve Çevrem" : t("concepts.meWorld", "Me & My World"),
+      icon: PersonIcon,
+      activities: sec([ActivityType.Emotions, ActivityType.HungryFull, ActivityType.YoungOld, ActivityType.TembelCaliskan, ActivityType.WhoseIsThis, ActivityType.YenirYenmez, ActivityType.TehlikeliGuvenli, ActivityType.YesNo]),
+    },
+    {
+      name: isTr ? "Kıyasla (Zor)" : t("concepts.relative", "Compare (Hard)"),
+      icon: ArrowsRightLeftIcon,
+      activities: kiyas,
     },
   ];
 };

@@ -545,6 +545,28 @@ export const ACTIVITY_METADATA_MAP: Record<string, ActivityMetadata> = {
     prerequisite: 'oyuncaklar',
     masteryRule: { poolType: MasteryPoolType.NARROW, perfectSessionsRequired: 2 }
   },
+  // 2026-10: yeni fotoğraflı sorularla oturum havuzuna eklendi (ünite yüzdelerini değiştirmemek için UNIT_DEFINITIONS'a eklenmedi)
+  [ActivityType.TersDuz]: {
+    activityId: ActivityType.TersDuz,
+    activityName: 'Ters / Düz',
+    unitNumber: 7,
+    prerequisite: 'oyuncaklar',
+    masteryRule: { poolType: MasteryPoolType.NARROW, perfectSessionsRequired: 2 }
+  },
+  [ActivityType.NoisyQuiet]: {
+    activityId: ActivityType.NoisyQuiet,
+    activityName: 'Gürültülü / Sessiz',
+    unitNumber: 7,
+    prerequisite: 'muzik_aletleri',
+    masteryRule: { poolType: MasteryPoolType.NARROW, perfectSessionsRequired: 2 }
+  },
+  [ActivityType.ClockLearning]: {
+    activityId: ActivityType.ClockLearning,
+    activityName: 'Saat',
+    unitNumber: 9,
+    prerequisite: ActivityType.DayNight,
+    masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
+  },
   [ActivityType.OldNew]: {
     activityId: ActivityType.OldNew,
     activityName: 'Eski / Yeni',

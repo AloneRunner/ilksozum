@@ -2,7 +2,6 @@ import React from "react";
 import { Capacitor } from "@capacitor/core";
 import { getCurrentLanguage } from "../i18n/index.ts";
 import { t } from "../i18n/index.ts";
-import MenuButton from "./ui/MenuButton.tsx";
 // import MenuOrb from "./ui/MenuOrb.tsx";
 // import CosmicOrb from "./ui/CosmicOrb.tsx";
 // GalacticPlanet removed - deneme2 theme simplified
@@ -17,14 +16,13 @@ import StoryIcon from "./icons/StoryIcon.tsx";
 import BasketIcon from "./icons/BasketIcon.tsx";
 import SparklesIcon from "./icons/SparklesIcon.tsx";
 import SpeakerIcon from "./icons/SpeakerIcon.tsx";
-import SudokuIcon from "./icons/SudokuIcon.tsx";
-import EyeIcon from "./icons/EyeIcon.tsx";
+import BrainIcon from "./icons/BrainIcon.tsx";
+import HandIcon from "./icons/HandIcon.tsx";
+import NumberIcon from "./icons/NumberIcon.tsx";
 import StarIcon from "./icons/StarIcon.tsx";
 import PersonIcon from "./icons/PersonIcon.tsx";
 import AcademicCapIcon from "./icons/AcademicCapIcon.tsx";
-import FiveWOneHIcon from "./icons/FiveWOneHIcon.tsx";
 import GameIcon from "./icons/GameIcon.tsx";
-import PrintIcon from "./icons/PrintIcon.tsx";
 type MainMenuCategory =
   | "letterSound"
   | "objectCategories"
@@ -36,7 +34,15 @@ type MainMenuCategory =
   | "relativeComparison"
   | "programMode"
   | "soundImitation"
-  | "miniGames";
+  | "miniGames"
+  // Beceri kartları (2026-10): Harfler, Sayılar, Düşünme, El, Konuşma, Oyun Odası
+  | "harfler"
+  | "sayilar"
+  | "dusunme"
+  | "el"
+  | "konusma"
+  | "oyunOdasi"
+  | "reports";
 
 interface MainMenuScreenProps {
   onSelectCategory: (category: MainMenuCategory) => void;
@@ -365,113 +371,22 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
               : null;
   const isSpecialTheme = Boolean(specialPalette);
 
-  const menuItems = [
-    // Program Mode (experimental beta)
-    {
-      id: "programMode" as const,
-      icon: AcademicCapIcon,
-      title: t('programMode.menuTitle', 'Program Modu (Deneme)'),
-      subtitle: t('programMode.menuSubtitle', 'Uzman planıyla günlük oturum başlat'),
-      color: 'emerald' as const,
-    },
-    {
-      id: "letterSound" as const,
-      icon: StoryIcon,
-      title: t("menu.letterSound.title", "Harf ve Sesler"),
-      subtitle: t(
-        "menu.letterSound.subtitle",
-        "Harfleri ve sesleri \u00f6\u011fren, hecele ve oku."
-      ),
-      color: "sky" as const,
-    },
-    ...(lang === "tr"
-      ? [
-        {
-          id: "objectCategories" as const,
-          icon: BasketIcon,
-          title: t("menu.objects.title", "Nesneleri Tan\u0131yal\u0131m"),
-          subtitle: t(
-            "menu.objects.subtitle",
-            "Hayvanlar\u0131, meyveleri ve daha fazlas\u0131n\u0131 \u00f6\u011fren."
-          ),
-          color: "amber" as const,
-        },
-      ]
-      : []),
-    ...(!showObjectsIntl
-      ? []
-      : [
-        {
-          id: "objectCategoriesIntl" as const,
-          icon: BasketIcon,
-          title: t("categories.objectsIntl.title") || "Objects",
-          subtitle:
-            t("categories.objectsIntl.subtitle") ||
-            "Curated objects for non-TR languages",
-          color: "amber" as const,
-        },
-      ]),
-    {
-      id: "fiveWOneH" as const,
-      icon: FiveWOneHIcon,
-      title: t('menu.fiveWOneH.title', '5N1K'),
-      subtitle: `${t('menu.fiveWOneH.subtitle', 'Kim • Ne • Nerede • Ne Zaman • Neden • Nasıl')} — ${t('menu.fiveWOneH.developingNote', 'Geliştiriliyor')}`,
-      color: 'emerald' as const,
-    },
-    {
-      id: "conceptActivities" as const,
-      icon: SparklesIcon,
-      title: t("menu.concepts.title", "Kavram Etkinlikleri"),
-      subtitle: t(
-        "menu.concepts.subtitle",
-        "Renkleri, \u015fekilleri ve z\u0131t kavramlar\u0131 \u00f6\u011fren."
-      ),
-      color: "teal" as const,
-    },
-    {
-      id: "reasoningActivities" as const,
-      icon: SudokuIcon,
-      title: t("menu.reasoning.title", "Ak\u0131l Oyunlar\u0131"),
-      subtitle: t(
-        "menu.reasoning.subtitle",
-        "Haf\u0131za, sudoku ve mant\u0131k oyunlar\u0131 oyna."
-      ),
-      color: "indigo" as const,
-    },
-    {
-      id: "fineMotor" as const,
-      icon: EyeIcon,
-      title: t("menu.fineMotor.title", lang === "tr" ? "\u0130nce Motor" : "Fine Motor"),
-      subtitle: t(
-        "menu.fineMotor.subtitle",
-        lang === "tr" ? "\u00c7izgi Takip, Boyama ve daha fazlas\u0131" : "Line Tracing, Coloring, and more"
-      ),
-      badge: t('menu.fineMotor.badge', 'Geliştirme Aşamasında'),
-      color: "rose" as const,
-    },
-    // Relative comparison activity
-    {
-      id: "relativeComparison" as const,
-      icon: SparklesIcon,
-      title: t('experimental.relativeComparison.title', 'Göreceli Karşılaştırma'),
-      subtitle: t('experimental.relativeComparison.instruction', 'Açılan iki kartı karşılaştır ve soruyu cevapla.'),
-      color: 'teal' as const,
-    },
-    {
-      id: 'soundImitation' as const,
-      icon: SpeakerIcon,
-      title: t('menu.soundImitation.title', 'Ses Taklit Kartları'),
-      subtitle: t('menu.soundImitation.subtitle', 'Konuşamayan çocuklar için ses taklit kartları'),
-      color: 'sky' as const,
-    },
-    {
-      id: 'miniGames' as const,
-      icon: GameIcon,
-      title: t('menu.miniGames.title', '🎮 Mini Oyunlar'),
-      subtitle: t('menu.miniGames.subtitle', 'Eğlenceli mini oyunlar oyna ve rahatlayarak öğren!'),
-      color: 'fuchsia' as const,
-    },
+  // Ana menü kartları (2026-10, Kaan onayı): "ne öğretiyor"a göre 8 kart. Tüm temalar bu listeyi kullanır.
+  type KartId = Exclude<MainMenuCategory, "programMode">;
+  const anaKartlar: Array<{ id: KartId; emoji: string; label: string; icon: React.FC<{ className?: string }>; title: string; subtitle: string; color: 'amber' | 'teal' | 'sky' | 'lime' | 'indigo' | 'rose' | 'cyan' | 'fuchsia'; grad: string; hex: string }> = [
+    showObjectsIntl
+      ? { id: "objectCategoriesIntl", emoji: "🍎", label: t("categories.objectsIntl.title") || "Objects", icon: BasketIcon, title: t("categories.objectsIntl.title") || "Objects", subtitle: t("categories.objectsIntl.subtitle") || "Animals, fruits and more", color: "amber", grad: "from-amber-300 to-orange-400", hex: "#f59e0b" }
+      : { id: "objectCategories", emoji: "🍎", label: "Kelimeler", icon: BasketIcon, title: "Kelimeler", subtitle: "Hayvanlar, meyveler, eşyalar: nesneleri tanı", color: "amber", grad: "from-amber-300 to-orange-400", hex: "#f59e0b" },
+    { id: "conceptActivities", emoji: "💡", label: "Kavramlar", icon: SparklesIcon, title: "Kavramlar", subtitle: "Renk, boyut, konum, miktar, zaman ve daha fazlası", color: "teal", grad: "from-teal-300 to-emerald-400", hex: "#14b8a6" },
+    { id: "harfler", emoji: "🔤", label: "Harfler ve Okuma", icon: StoryIcon, title: "Harfler ve Okuma", subtitle: "Harf, ses, hece, BASARA", color: "sky", grad: "from-sky-300 to-blue-400", hex: "#3b82f6" },
+    { id: "sayilar", emoji: "🔢", label: "Sayılar", icon: NumberIcon, title: "Sayılar", subtitle: "Say, eşle, sırala", color: "lime", grad: "from-lime-300 to-green-400", hex: "#22c55e" },
+    { id: "dusunme", emoji: "🧠", label: "Düşünme ve Hafıza", icon: BrainIcon, title: "Düşünme ve Hafıza", subtitle: "Hangisi farklı, hafıza, sıralama, örüntü", color: "indigo", grad: "from-indigo-300 to-violet-400", hex: "#6366f1" },
+    { id: "el", emoji: "✋", label: "El Becerisi", icon: HandIcon, title: "El Becerisi", subtitle: "Çizgi, boyama, labirent, yapboz", color: "rose", grad: "from-rose-300 to-pink-400", hex: "#f43f5e" },
+    { id: "konusma", emoji: "🗣️", label: "Konuşma ve Anlama", icon: SpeakerIcon, title: "Konuşma ve Anlama", subtitle: "Ses taklidi, 5N1K, günlük işler", color: "cyan", grad: "from-cyan-300 to-teal-400", hex: "#06b6d4" },
+    { id: "oyunOdasi", emoji: "🎈", label: "Oyun Odası", icon: GameIcon, title: "Oyun Odası", subtitle: "Ödül ve rahatlama oyunları", color: "fuchsia", grad: "from-fuchsia-300 to-purple-400", hex: "#a855f7" },
   ];
+  const menuItems = anaKartlar;
+  const kartSec = (id: KartId) => onSelectCategory(id);
 
   const textColorClass = specialPalette
     ? specialPalette.titleColor
@@ -492,17 +407,11 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
   const isSimple2Theme = theme === "simple2" || theme === "sade2";
   if (isSimple2Theme) {
     const categories = [
-      { id: 'programMode' as const, emoji: '🎓', label: 'Program Modu', color: 'from-violet-400 to-purple-500', onClick: () => onSelectCategory('programMode') },
-      { id: 'random' as const, emoji: '🎲', label: 'Rastgele', color: 'from-amber-300 to-orange-400', onClick: onStartRandomMode },
-      { id: 'letterSound' as const, emoji: '🔤', label: 'Harfler', color: 'from-sky-300 to-cyan-400', onClick: () => onSelectCategory('letterSound') },
-      { id: 'objectCategories' as const, emoji: '📦', label: 'Nesneler', color: 'from-lime-300 to-green-400', onClick: () => onSelectCategory('objectCategories') },
-      { id: 'conceptActivities' as const, emoji: '💡', label: 'Kavramlar', color: 'from-pink-300 to-rose-400', onClick: () => onSelectCategory('conceptActivities') },
-      { id: 'reasoningActivities' as const, emoji: '🧩', label: 'Akıl Oyunları', color: 'from-teal-300 to-cyan-400', onClick: () => onSelectCategory('reasoningActivities') },
-      { id: 'fiveWOneH' as const, emoji: '❓', label: '5N1K', color: 'from-fuchsia-300 to-purple-400', onClick: () => onSelectCategory('fiveWOneH') },
-      { id: 'miniGames' as const, emoji: '🎮', label: 'Mini Oyunlar', color: 'from-emerald-300 to-teal-400', onClick: () => onSelectCategory('miniGames') },
-      { id: 'fineMotor' as const, emoji: '✋', label: 'İnce Motor', color: 'from-red-300 to-rose-400', onClick: () => onSelectCategory('fineMotor') },
-      { id: 'soundImitation' as const, emoji: '🔊', label: 'Ses Taklidi', color: 'from-indigo-300 to-blue-400', onClick: () => onSelectCategory('soundImitation') },
-      { id: 'parentTips' as const, emoji: '👨‍👩‍👧', label: 'Ebeveyn', color: 'from-slate-300 to-gray-400', onClick: onSelectParentTips },
+      { id: 'programMode', emoji: '🎓', label: 'Program Modu', color: 'from-violet-400 to-purple-500', onClick: () => onSelectCategory('programMode') },
+      { id: 'random', emoji: '🎲', label: 'Rastgele', color: 'from-amber-300 to-orange-400', onClick: onStartRandomMode },
+      ...anaKartlar.map((k) => ({ id: k.id, emoji: k.emoji, label: k.label, color: k.grad, onClick: () => kartSec(k.id) })),
+      { id: 'parentTips', emoji: '👨‍👩‍👧', label: 'Ebeveyn', color: 'from-slate-300 to-gray-400', onClick: onSelectParentTips },
+      { id: 'reports', emoji: '📊', label: 'Raporlar', color: 'from-slate-300 to-gray-400', onClick: () => onSelectCategory('reports') },
     ];
 
     return (
@@ -575,14 +484,11 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
   const isKoyuTheme = theme === "koyu" || theme === "dark";
   if (isKoyuTheme) {
     const categories = [
-      { id: 'programMode' as const, emoji: '🎓', label: 'Program Modu', onClick: () => onSelectCategory('programMode') },
-      { id: 'random' as const, emoji: '🎲', label: 'Rastgele', onClick: onStartRandomMode },
-      { id: 'letterSound' as const, emoji: '🔤', label: 'Harfler', onClick: () => onSelectCategory('letterSound') },
-      { id: 'objectCategories' as const, emoji: '📦', label: 'Nesneler', onClick: () => onSelectCategory('objectCategories') },
-      { id: 'conceptActivities' as const, emoji: '💡', label: 'Kavramlar', onClick: () => onSelectCategory('conceptActivities') },
-      { id: 'reasoningActivities' as const, emoji: '🧩', label: 'Akıl Oyunları', onClick: () => onSelectCategory('reasoningActivities') },
-      { id: 'miniGames' as const, emoji: '🎮', label: 'Mini Oyunlar', onClick: () => onSelectCategory('miniGames') },
-      { id: 'parentTips' as const, emoji: '👨‍👩‍👧', label: 'Ebeveyn', onClick: onSelectParentTips },
+      { id: 'programMode', emoji: '🎓', label: 'Program Modu', onClick: () => onSelectCategory('programMode') },
+      { id: 'random', emoji: '🎲', label: 'Rastgele', onClick: onStartRandomMode },
+      ...anaKartlar.map((k) => ({ id: k.id, emoji: k.emoji, label: k.label, onClick: () => kartSec(k.id) })),
+      { id: 'parentTips', emoji: '👨‍👩‍👧', label: 'Ebeveyn', onClick: onSelectParentTips },
+      { id: 'reports', emoji: '📊', label: 'Raporlar', onClick: () => onSelectCategory('reports') },
     ];
 
     return (
@@ -620,14 +526,11 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
   const isYumusakTheme = theme === "yumusak" || theme === "soft" || theme === "neo";
   if (isYumusakTheme) {
     const categories = [
-      { id: 'programMode' as const, emoji: '🎓', label: 'Program Modu', onClick: () => onSelectCategory('programMode') },
-      { id: 'random' as const, emoji: '🎲', label: 'Rastgele', onClick: onStartRandomMode },
-      { id: 'letterSound' as const, emoji: '🔤', label: 'Harfler', onClick: () => onSelectCategory('letterSound') },
-      { id: 'objectCategories' as const, emoji: '📦', label: 'Nesneler', onClick: () => onSelectCategory('objectCategories') },
-      { id: 'conceptActivities' as const, emoji: '💡', label: 'Kavramlar', onClick: () => onSelectCategory('conceptActivities') },
-      { id: 'reasoningActivities' as const, emoji: '🧩', label: 'Akıl Oyunları', onClick: () => onSelectCategory('reasoningActivities') },
-      { id: 'miniGames' as const, emoji: '🎮', label: 'Mini Oyunlar', onClick: () => onSelectCategory('miniGames') },
-      { id: 'parentTips' as const, emoji: '👨‍👩‍👧', label: 'Ebeveyn', onClick: onSelectParentTips },
+      { id: 'programMode', emoji: '🎓', label: 'Program Modu', onClick: () => onSelectCategory('programMode') },
+      { id: 'random', emoji: '🎲', label: 'Rastgele', onClick: onStartRandomMode },
+      ...anaKartlar.map((k) => ({ id: k.id, emoji: k.emoji, label: k.label, onClick: () => kartSec(k.id) })),
+      { id: 'parentTips', emoji: '👨‍👩‍👧', label: 'Ebeveyn', onClick: onSelectParentTips },
+      { id: 'reports', emoji: '📊', label: 'Raporlar', onClick: () => onSelectCategory('reports') },
     ];
 
     return (
@@ -670,22 +573,11 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
       { id: 'random' as const, icon: '🎲', label: 'Rastgele Mod', desc: 'Sürpriz etkinlik', color: '#f59e0b', onClick: onStartRandomMode },
     ];
 
-    // Kategoriler - Mantıklı sırada
+    // Kategoriler: ortak ana kart listesi
     const categories = [
-      // Öğrenme
-      { id: 'letterSound' as const, icon: '🔤', label: 'Harfler', color: '#3b82f6', onClick: () => onSelectCategory('letterSound') },
-      { id: 'objectCategories' as const, icon: '📦', label: 'Nesneler', color: '#22c55e', onClick: () => onSelectCategory('objectCategories') },
-      { id: 'conceptActivities' as const, icon: '💡', label: 'Kavramlar', color: '#ec4899', onClick: () => onSelectCategory('conceptActivities') },
-      { id: 'relativeComparison' as const, icon: '⚖️', label: 'Göreceli', color: '#6366f1', onClick: () => onSelectCategory('relativeComparison') },
-      // Düşünme
-      { id: 'reasoningActivities' as const, icon: '🧩', label: 'Akıl', color: '#06b6d4', onClick: () => onSelectCategory('reasoningActivities') },
-      { id: 'fiveWOneH' as const, icon: '❓', label: '5N1K', color: '#a855f7', onClick: () => onSelectCategory('fiveWOneH') },
-      // Yaratıcı
-      { id: 'soundImitation' as const, icon: '🔊', label: 'Ses', color: '#14b8a6', onClick: () => onSelectCategory('soundImitation') },
-      { id: 'fineMotor' as const, icon: '✋', label: 'Motor', color: '#f43f5e', onClick: () => onSelectCategory('fineMotor') },
-      // Eğlence & Ebeveyn
-      { id: 'miniGames' as const, icon: '🎮', label: 'Oyunlar', color: '#8b5cf6', onClick: () => onSelectCategory('miniGames') },
-      { id: 'parentTips' as const, icon: '👨‍👩‍👧', label: 'Ebeveyn', color: '#64748b', onClick: onSelectParentTips },
+      ...anaKartlar.map((k) => ({ id: k.id, icon: k.emoji, label: k.label, color: k.hex, onClick: () => kartSec(k.id) })),
+      { id: 'parentTips', icon: '👨‍👩‍👧', label: 'Ebeveyn', color: '#64748b', onClick: onSelectParentTips },
+      { id: 'reports', icon: '📊', label: 'Raporlar', color: '#64748b', onClick: () => onSelectCategory('reports') },
     ];
 
     return (
@@ -988,9 +880,9 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
                 </div>
               </div>
 
-              {menuItems.filter(i => i.id !== 'programMode').map((item, idx) => (
+              {menuItems.map((item, idx) => (
                 <div key={item.id} className="flex flex-col items-center">
-                  <div className="relative cursor-pointer" onClick={() => onSelectCategory(item.id)}>
+                  <div className="relative cursor-pointer" onClick={() => kartSec(item.id)}>
                     {/* Jellyfish body - bell shape */}
                     <div className="relative w-32 h-24 sm:w-36 sm:h-28">
                       <div className={`absolute inset-x-0 top-0 h-16 sm:h-20 rounded-t-full blur-sm animate-pulse ${idx === 0 ? 'bg-gradient-to-br from-cyan-400/80 via-blue-500/80 to-teal-600/80' :
@@ -1040,12 +932,9 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
                     </div>
                     {/* Invisible overlay for better click area */}
                     <div className="absolute inset-0 -m-4 rounded-2xl hover:bg-cyan-400/10 transition-colors duration-200" />
-                    {item.id === 'fineMotor' && item.badge && (
-                      <span className="absolute -top-2 -right-2 inline-flex items-center px-2 py-0.5 text-xs bg-amber-500 text-white rounded-full shadow">{item.badge}</span>
-                    )}
                   </div>
                   <div className="mt-2 px-3 py-1 bg-cyan-500/20 rounded-full text-xs text-cyan-200">
-                    {item.title.split(' ')[0]}
+                    {item.label}
                   </div>
                 </div>
               ))}
@@ -1152,93 +1041,75 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
             </span>
           </>
         )}
-        <div
-          className={`relative grid ${theme === 'simple2' ? 'grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 landscape:grid-cols-3 sm-landscape:grid-cols-3'} gap-4 sm-landscape:gap-3 ${gridPadding
-            }`}
-        >
-          <MenuButton
-            icon={StarIcon}
-            title={t("menu.random.title", "Rastgele Mod")}
-            subtitle={t(
-              "menu.random.subtitle",
-              "Se\u00e7ili etkinliklerden kar\u0131\u015f\u0131k oyna"
-            )}
-            onClick={onStartRandomMode}
-            color="rose"
-            theme={theme}
-          />
-          {/* Explicit Program Mode button placed directly under Random Mode */}
-          <MenuButton
-            icon={AcademicCapIcon}
-            title={t('programMode.menuTitle', 'Program Modu (Deneme)')}
-            subtitle={t('programMode.menuSubtitle', 'Uzman planıyla günlük oturum başlat')}
-            onClick={() => onSelectCategory('programMode')}
-            color="emerald"
-            theme={theme}
-          >
-            <span
-              className="absolute bottom-2 left-2 inline-flex items-center gap-1 rounded-full bg-white/85 border border-emerald-200 px-2 py-0.5 text-xs font-semibold text-emerald-700 shadow-sm"
-              aria-label={t('programMode.units', 'Üniteler')}
+        <div className={`relative space-y-4 ${gridPadding}`}>
+          {/* Üstte iki büyük düğme: Program Modu ve Rastgele */}
+          <div className="grid grid-cols-2 gap-3">
+            <button
+              onClick={() => onSelectCategory('programMode')}
+              className="relative flex flex-col items-center justify-center gap-1 rounded-3xl bg-gradient-to-br from-emerald-400 to-teal-500 p-4 text-white shadow-[0_10px_24px_rgba(16,185,129,0.35)] hover:-translate-y-0.5 active:scale-95 transition"
             >
-              📚 {t('programMode.unitsCount', '{count} Ünite').replace('{count}', '10')}
-            </span>
-          </MenuButton>
-
-          {menuItems.filter(i => i.id !== 'programMode').map((item) => (
-            <div key={item.id} className="relative">
-              <MenuButton
-                icon={item.icon}
-                title={item.title}
-                subtitle={item.subtitle}
-                onClick={() => onSelectCategory(item.id)}
-                color={item.color}
-                theme={theme}
-              />
-              {item.id === 'fineMotor' && item.badge && (
-                <span className="absolute top-2 right-2 inline-flex items-center px-2 py-0.5 text-xs bg-amber-500 text-white rounded-full shadow">{item.badge}</span>
-              )}
-            </div>
-          ))}
-          {lang !== "tr" && (
-            <div className="col-span-1 sm:col-span-2 landscape:col-span-3 text-center text-xs text-slate-500 mt-1">
-              {t(
-                "settings.languageNote",
-                "Letter activities are currently Turkish-only."
-              )}
-            </div>
-          )}
-          <div className={`${theme === 'simple2' ? 'col-span-2' : ''}`}>
-            <MenuButton
-              icon={PersonIcon}
-              title={t("menu.parentTips.title", "Ebeveynler \u0130\u00e7in \u0130pu\u00e7lar\u0131")}
-              subtitle={t(
-                "menu.parentTips.subtitle",
-                "Uygulamay\u0131 daha verimli kullan\u0131n"
-              )}
-              onClick={onSelectParentTips}
-              color="purple"
-              theme={theme}
-            />
+              <span className="text-4xl drop-shadow" aria-hidden="true">🎓</span>
+              <span className="text-base font-black leading-tight drop-shadow-sm">{t('programMode.menuTitleShort', 'Program Modu')}</span>
+              <span className="text-[11px] font-semibold text-white/90">📚 {t('programMode.unitsCount', '{count} Ünite').replace('{count}', '10')} · {t('programMode.daily', 'günlük plan')}</span>
+            </button>
+            <button
+              onClick={onStartRandomMode}
+              className="relative flex flex-col items-center justify-center gap-1 rounded-3xl bg-gradient-to-br from-amber-400 to-rose-500 p-4 text-white shadow-[0_10px_24px_rgba(244,63,94,0.3)] hover:-translate-y-0.5 active:scale-95 transition"
+            >
+              <span className="text-4xl drop-shadow" aria-hidden="true">🎲</span>
+              <span className="text-base font-black leading-tight drop-shadow-sm">{t('menu.random.titleShort', 'Rastgele Oyna')}</span>
+              <span className="text-[11px] font-semibold text-white/90">{t('menu.random.subtitleShort', 'Karışık etkinlikler')}</span>
+            </button>
           </div>
-          {onSelectWorksheets && (
-            <div className={`${theme === 'simple2' ? 'col-span-2' : ''} relative`}>
-              <MenuButton
-                icon={PrintIcon}
-                title="Çıktı & Çalışma Kağıtları"
-                subtitle="Özel kağıt etkinlikleri oluştur"
-                onClick={onSelectWorksheets}
-                color="indigo"
-                theme={theme}
-              />
-              <span className="absolute bottom-1.5 right-2 inline-flex items-center px-2 py-0.5 text-[10px] bg-amber-500 text-white rounded-full shadow pointer-events-none opacity-90">Geliştirme Aşamasında</span>
+
+          {/* Öğrenme alanları: 8 kart */}
+          <div className="grid grid-cols-2 landscape:grid-cols-4 gap-3">
+            {menuItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => kartSec(item.id)}
+                className="flex flex-col items-center text-center rounded-3xl bg-white/90 border border-white p-3 pt-4 min-h-[140px] shadow-[0_6px_16px_rgba(15,23,42,0.10)] hover:shadow-[0_10px_24px_rgba(15,23,42,0.16)] hover:-translate-y-0.5 active:scale-95 transition"
+              >
+                <span className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.grad} flex items-center justify-center text-4xl shadow-inner mb-2`} aria-hidden="true">{item.emoji}</span>
+                <span className="text-sm font-black leading-tight text-slate-800">{item.title}</span>
+                <span className="mt-1 text-[11px] leading-snug text-slate-500 line-clamp-2">{item.subtitle}</span>
+              </button>
+            ))}
+          </div>
+          {lang !== "tr" && (
+            <div className="text-center text-xs text-slate-500">
+              {t("settings.languageNote", "Letter activities are currently Turkish-only.")}
             </div>
           )}
 
-          {/* Development Notes Card - full width */}
-          <div className={`${theme === 'simple2' ? 'col-span-2' : 'col-span-1 sm:col-span-2 landscape:col-span-3'}`}>
-            <SystemAnnouncementsCard theme={theme} />
-              <AudioIssueNote theme={theme} />
+          {/* Ebeveyn köşesi */}
+          <div>
+            <div className="flex items-center gap-2 mb-2">
+              <span className={`text-sm font-black ${subtitleColorClass}`}>👨‍👩‍👧 {t('menu.parentCorner', 'Ebeveyn Köşesi')}</span>
+              <span className="flex-1 h-px bg-current opacity-20" />
+            </div>
+            <div className="grid grid-cols-3 gap-2">
+              {[
+                { id: 'tips', emoji: '💡', label: t('menu.parentTips.short', 'İpuçları'), onClick: onSelectParentTips },
+                ...(onSelectWorksheets ? [{ id: 'sheets', emoji: '🖨️', label: t('menu.worksheets.short', 'Çalışma Kâğıtları'), onClick: onSelectWorksheets }] : []),
+                { id: 'reports', emoji: '📊', label: t('menu.reports.title', 'Raporlar'), onClick: () => onSelectCategory('reports') },
+              ].map((k) => (
+                <button
+                  key={k.id}
+                  onClick={k.onClick}
+                  className="flex flex-col items-center justify-center gap-1 rounded-2xl bg-white/80 border border-slate-200 py-3 px-1 shadow-sm hover:bg-white active:scale-95 transition"
+                >
+                  <span className="text-2xl" aria-hidden="true">{k.emoji}</span>
+                  <span className="text-[11px] font-bold text-slate-700 leading-tight text-center">{k.label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
 
+          {/* Duyurular ve notlar */}
+          <div>
+            <SystemAnnouncementsCard theme={theme} />
+            <AudioIssueNote theme={theme} />
             <OtherAppsSection theme={theme} />
           </div>
         </div>

@@ -322,6 +322,7 @@ export const ALL_SUB_ACHIEVEMENTS: SubAchievement[] = [
   { id: ActivityType.BeforeAfter, name: "Önce / Sonra", category: ActivityCategory.Concept },
   { id: ActivityType.DayNight, name: "Gündüz / Gece", category: ActivityCategory.Concept },
   { id: ActivityType.FastSlow, name: "Hızlı / Yavaş", category: ActivityCategory.Concept },
+  { id: ActivityType.ClockLearning, name: "Saat", category: ActivityCategory.Concept },
   { id: ActivityType.Senses, name: "Duyularımız", category: ActivityCategory.Concept },
 
   // Reasoning Activities
