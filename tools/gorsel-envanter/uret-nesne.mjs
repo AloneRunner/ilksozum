@@ -20,7 +20,11 @@ const nesneler = JSON.parse(fs.readFileSync(path.join(HERE, 'nesne-liste.json'),
 const eskiKayit = Object.fromEntries(Object.values(nesneler).flat().map(e => [e.id, e]));
 
 // Renkli/gri zeminli nesneler (beyaz hayvan gri zeminde, deniz hayvanı mavi zeminde): zemin beyazlatılmaz
-const SAHNE = new Set([678, 387, 313, 231, 386, 716, 683, 833, 834, 832, 837, 877, 836, 835, 869, 711, 878, 830, 838, 999, 260, 687, 367, 849, 569, 26, 460, 491, 921, 948, 257, 258, 381, 480, 985, 987, 997, 95, 169, 251, 301, 422, 423, 424, 708, 798, 799, 815, 855, 933, 929, 211, 302, 941]);
+const SAHNE = new Set([76, 11, 61, 69, 159, 196, 205, 216, 225, 233, 236, 237, 243, 342, 407, 408, 603, 619, 643, 555, 557, 559, 560, 561, 562, 563, 981, 185, 197, 212, 226, 430, 456, 497, 529, 607, 612, 646, 841, 850, 851, 852, 857, 867, 868, 879, 880, 881, 891, 127, 988, 989, 991, 863, 864, 872, 894, 873, 895, 896, 897, 899, 900, 875, 876, 984, 996, 1000, 678, 387, 313, 231, 386, 716, 683, 833, 834, 832, 837, 877, 836, 835, 869, 711, 878, 830, 838, 999, 260, 687, 367, 849, 569, 26, 460, 491, 921, 948, 257, 258, 381, 480, 985, 987, 997, 95, 169, 251, 301, 422, 423, 424, 708, 798, 799, 815, 855, 933, 929, 211, 302, 941]);
+// Kaan (2026-10-06): vücut yakın çekimlerinde "neresi olduğu tam belli olmuyor, eskiler daha iyi".
+// Oğlunda denenecek; olmazsa id'yi buraya yaz → o nesne eski çizimine döner (eski dosyalar hiç silinmiyor).
+// Aday: 555 kaş, 557 dudak, 559 omuz, 560 kol, 561 ayak, 562 bacak, 563 parmak, 949 ağız, 981 diş, 479 gözler, 597 göz
+const ESKI_KALSIN = new Set([]);
 const harita = {};
 const renkler = {}; // eşlemede renk verilirse (Kaan: eski renge uymak gerekmez) kayıttaki renk etiketi yenisiyle değişir
 const yeni = [];
@@ -63,6 +67,7 @@ yeniKelimeler.forEach((k, i) => {
 liste.gorseller = [...liste.gorseller.filter(g => !g.kaynak.startsWith('nesne/') && !g.kaynak.startsWith('nesne-yeni/')), ...yeni].sort((a, b) => a.id - b.id);
 fs.writeFileSync(LIST, JSON.stringify(liste, null, 2) + '\n');
 
+for (const id of ESKI_KALSIN) delete harita[id];
 const satirlar = Object.entries(harita).sort((a, b) => a[0] - b[0]).map(([k, v]) => `  ${k}: '${v}', // ${eskiKayit[k]?.word ?? ''}`);
 fs.writeFileSync(OUT, `// OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-nesne.mjs. Elle düzenleme.
 // Eski nesne görseli id → yeni gerçekçi görsel adresi (services/nesneGorsel.ts kullanır).

@@ -76,3 +76,15 @@ Start with IMAGE 1.
 
 ## Sonuç
 (Görseller geldikten sonra doldurulacak)
+
+## Eksikler (7 görsel; Flow bu tur bunları üretmedi)
+
+I am making feelings and everyday-situation flashcards for preschool children. Photorealistic, warm and friendly, plain light background, one child about 5-6 years old, waist up, calm and soft (no tears, no injury). No text. Create every image as a SEPARATE NEW image.
+
+1. A child holding one ear with a hand, mildly unhappy face (earache).
+2. A child blowing a kiss.
+3. A child talking on a phone, saying hello, smiling.
+4. A child sneezing into a tissue.
+5. Two small hands clapping (close-up, plain background).
+6. A bakery with bread and pastries on wooden shelves (no text).
+7. A zoo entrance with a giraffe and trees behind a fence (no text).
