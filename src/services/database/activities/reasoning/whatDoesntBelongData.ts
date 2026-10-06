@@ -575,7 +575,7 @@ export const whatDoesntBelongData: ConceptRound[] = [
         questionAudioKey: "q_which_is_different", 
         activityType: ActivityType.WhatDoesntBelong,
         speech: {
-            tr: { correct: "Evet, {item} bir spor aleti; diğerleri kırtasiye.", wrong: "Hayır, {item} bir kırtasiye." },
+            tr: { correct: "Evet, {item} bir spor aleti; diğerleri kırtasiye malzemesi.", wrong: "Hayır, {item} bir kırtasiye malzemesi." },
             en: { correct: "Yes, {item} is sports equipment; the others are stationery.", wrong: "No, {item} is stationery." }
         },
         options: [
@@ -623,7 +623,7 @@ export const whatDoesntBelongData: ConceptRound[] = [
         questionAudioKey: "q_which_is_different", 
         activityType: ActivityType.WhatDoesntBelong,
         speech: {
-            tr: { correct: "Evet, {item} bir araç gereci; diğerleri hayvan.", wrong: "Hayır, {item} bir hayvan." },
+            tr: { correct: "Evet, {item} bir araç; diğerleri hayvan.", wrong: "Hayır, {item} bir hayvan." },
             en: { correct: "Yes, {item} is a tool; the others are animals.", wrong: "No, {item} is an animal." }
         },
         options: [
@@ -639,7 +639,7 @@ export const whatDoesntBelongData: ConceptRound[] = [
         questionAudioKey: "q_which_is_different", 
         activityType: ActivityType.WhatDoesntBelong,
         speech: {
-            tr: { correct: "Evet, {item} bir doğa nesnesi; diğerleri kavram.", wrong: "Hayır, bu da özel." },
+            tr: { correct: "Evet, {item} bir doğa nesnesi; diğerleri kavram.", wrong: "Hayır, bu da aynı." },
             en: { correct: "Yes, {item} is a natural object; the others are concepts.", wrong: "No, that's also special." }
         },
         options: [

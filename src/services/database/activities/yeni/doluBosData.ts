@@ -10,7 +10,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi akvaryum dolu?', correct: 'Evet! Akvaryum doludur.', wrong: 'Hayır, bu akvaryum boştur.' }
+            tr: { question: 'Hangi akvaryum dolu?', correct: 'Evet! Bu akvaryum dolu.', wrong: 'Hayır, bu akvaryum boş.' }
         },
         options: [
             { id: 2602, word: "akvaryum", imageUrl: "/images/2602.webp", isCorrect: true, audioKey: "akvaryum", spokenText: "akvaryum" },
@@ -23,7 +23,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi akvaryum boş?', correct: 'Evet! Akvaryum boştur.', wrong: 'Hayır, bu akvaryum doludur.' }
+            tr: { question: 'Hangi akvaryum boş?', correct: 'Evet! Bu akvaryum boş.', wrong: 'Hayır, bu akvaryum dolu.' }
         },
         options: [
             { id: 2601, word: "akvaryum", imageUrl: "/images/2601.webp", isCorrect: true, audioKey: "akvaryum", spokenText: "akvaryum" },
@@ -37,7 +37,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi bardak dolu?', correct: 'Evet! Bardak doludur.', wrong: 'Hayır, bu bardak boştur.' }
+            tr: { question: 'Hangi bardak dolu?', correct: 'Evet! Bu bardak dolu.', wrong: 'Hayır, bu bardak boş.' }
         },
         options: [
             { id: 2604, word: "bardak", imageUrl: "/images/2604.webp", isCorrect: true, audioKey: "bardak", spokenText: "bardak" },
@@ -50,7 +50,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi bardak boş?', correct: 'Evet! Bardak boştur.', wrong: 'Hayır, bu bardak doludur.' }
+            tr: { question: 'Hangi bardak boş?', correct: 'Evet! Bu bardak boş.', wrong: 'Hayır, bu bardak dolu.' }
         },
         options: [
             { id: 2603, word: "bardak", imageUrl: "/images/2603.webp", isCorrect: true, audioKey: "bardak", spokenText: "bardak" },
@@ -64,7 +64,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi kalemlik dolu?', correct: 'Evet! Kalemlik doludur.', wrong: 'Hayır, bu kalemlik boştur.' }
+            tr: { question: 'Hangi kalemlik dolu?', correct: 'Evet! Bu kalemlik dolu.', wrong: 'Hayır, bu kalemlik boş.' }
         },
         options: [
             { id: 2606, word: "kalemlik", imageUrl: "/images/2606.webp", isCorrect: true, audioKey: "kalemlik", spokenText: "kalemlik" },
@@ -77,7 +77,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi kalemlik boş?', correct: 'Evet! Kalemlik boştur.', wrong: 'Hayır, bu kalemlik doludur.' }
+            tr: { question: 'Hangi kalemlik boş?', correct: 'Evet! Bu kalemlik boş.', wrong: 'Hayır, bu kalemlik dolu.' }
         },
         options: [
             { id: 2605, word: "kalemlik", imageUrl: "/images/2605.webp", isCorrect: true, audioKey: "kalemlik", spokenText: "kalemlik" },
@@ -91,7 +91,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi kavanoz dolu?', correct: 'Evet! Kavanoz doludur.', wrong: 'Hayır, bu kavanoz boştur.' }
+            tr: { question: 'Hangi kavanoz dolu?', correct: 'Evet! Bu kavanoz dolu.', wrong: 'Hayır, bu kavanoz boş.' }
         },
         options: [
             { id: 2608, word: "kavanoz", imageUrl: "/images/2608.webp", isCorrect: true, audioKey: "kavanoz", spokenText: "kavanoz" },
@@ -104,7 +104,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi kavanoz boş?', correct: 'Evet! Kavanoz boştur.', wrong: 'Hayır, bu kavanoz doludur.' }
+            tr: { question: 'Hangi kavanoz boş?', correct: 'Evet! Bu kavanoz boş.', wrong: 'Hayır, bu kavanoz dolu.' }
         },
         options: [
             { id: 2607, word: "kavanoz", imageUrl: "/images/2607.webp", isCorrect: true, audioKey: "kavanoz", spokenText: "kavanoz" },
@@ -118,7 +118,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi yumurta kolisi dolu?', correct: 'Evet! Yumurta kolisi doludur.', wrong: 'Hayır, bu yumurta kolisi boştur.' }
+            tr: { question: 'Hangi yumurta kolisi dolu?', correct: 'Evet! Bu yumurta kolisi dolu.', wrong: 'Hayır, bu yumurta kolisi boş.' }
         },
         options: [
             { id: 2610, word: "yumurta kolisi", imageUrl: "/images/2610.webp", isCorrect: true, audioKey: "yumurta kolisi", spokenText: "yumurta kolisi" },
@@ -131,7 +131,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi yumurta kolisi boş?', correct: 'Evet! Yumurta kolisi boştur.', wrong: 'Hayır, bu yumurta kolisi doludur.' }
+            tr: { question: 'Hangi yumurta kolisi boş?', correct: 'Evet! Bu yumurta kolisi boş.', wrong: 'Hayır, bu yumurta kolisi dolu.' }
         },
         options: [
             { id: 2609, word: "yumurta kolisi", imageUrl: "/images/2609.webp", isCorrect: true, audioKey: "yumurta kolisi", spokenText: "yumurta kolisi" },
@@ -145,7 +145,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi kova dolu?', correct: 'Evet! Kova doludur.', wrong: 'Hayır, bu kova boştur.' }
+            tr: { question: 'Hangi kova dolu?', correct: 'Evet! Bu kova dolu.', wrong: 'Hayır, bu kova boş.' }
         },
         options: [
             { id: 2612, word: "kova", imageUrl: "/images/2612.webp", isCorrect: true, audioKey: "kova", spokenText: "kova" },
@@ -158,7 +158,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi kova boş?', correct: 'Evet! Kova boştur.', wrong: 'Hayır, bu kova doludur.' }
+            tr: { question: 'Hangi kova boş?', correct: 'Evet! Bu kova boş.', wrong: 'Hayır, bu kova dolu.' }
         },
         options: [
             { id: 2611, word: "kova", imageUrl: "/images/2611.webp", isCorrect: true, audioKey: "kova", spokenText: "kova" },
@@ -172,7 +172,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi kumbara dolu?', correct: 'Evet! Kumbara doludur.', wrong: 'Hayır, bu kumbara boştur.' }
+            tr: { question: 'Hangi kumbara dolu?', correct: 'Evet! Bu kumbara dolu.', wrong: 'Hayır, bu kumbara boş.' }
         },
         options: [
             { id: 2614, word: "kumbara", imageUrl: "/images/2614.webp", isCorrect: true, audioKey: "kumbara", spokenText: "kumbara" },
@@ -185,7 +185,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi kumbara boş?', correct: 'Evet! Kumbara boştur.', wrong: 'Hayır, bu kumbara doludur.' }
+            tr: { question: 'Hangi kumbara boş?', correct: 'Evet! Bu kumbara boş.', wrong: 'Hayır, bu kumbara dolu.' }
         },
         options: [
             { id: 2613, word: "kumbara", imageUrl: "/images/2613.webp", isCorrect: true, audioKey: "kumbara", spokenText: "kumbara" },
@@ -199,7 +199,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi oyuncak kutusu dolu?', correct: 'Evet! Oyuncak kutusu doludur.', wrong: 'Hayır, bu oyuncak kutusu boştur.' }
+            tr: { question: 'Hangi oyuncak kutusu dolu?', correct: 'Evet! Bu oyuncak kutusu dolu.', wrong: 'Hayır, bu oyuncak kutusu boş.' }
         },
         options: [
             { id: 2616, word: "oyuncak kutusu", imageUrl: "/images/2616.webp", isCorrect: true, audioKey: "oyuncak kutusu", spokenText: "oyuncak kutusu" },
@@ -212,7 +212,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi oyuncak kutusu boş?', correct: 'Evet! Oyuncak kutusu boştur.', wrong: 'Hayır, bu oyuncak kutusu doludur.' }
+            tr: { question: 'Hangi oyuncak kutusu boş?', correct: 'Evet! Bu oyuncak kutusu boş.', wrong: 'Hayır, bu oyuncak kutusu dolu.' }
         },
         options: [
             { id: 2615, word: "oyuncak kutusu", imageUrl: "/images/2615.webp", isCorrect: true, audioKey: "oyuncak kutusu", spokenText: "oyuncak kutusu" },
@@ -226,7 +226,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi sepet dolu?', correct: 'Evet! Sepet doludur.', wrong: 'Hayır, bu sepet boştur.' }
+            tr: { question: 'Hangi sepet dolu?', correct: 'Evet! Bu sepet dolu.', wrong: 'Hayır, bu sepet boş.' }
         },
         options: [
             { id: 2618, word: "sepet", imageUrl: "/images/2618.webp", isCorrect: true, audioKey: "sepet", spokenText: "sepet" },
@@ -239,7 +239,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi sepet boş?', correct: 'Evet! Sepet boştur.', wrong: 'Hayır, bu sepet doludur.' }
+            tr: { question: 'Hangi sepet boş?', correct: 'Evet! Bu sepet boş.', wrong: 'Hayır, bu sepet dolu.' }
         },
         options: [
             { id: 2617, word: "sepet", imageUrl: "/images/2617.webp", isCorrect: true, audioKey: "sepet", spokenText: "sepet" },
@@ -253,7 +253,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi tabak dolu?', correct: 'Evet! Tabak doludur.', wrong: 'Hayır, bu tabak boştur.' }
+            tr: { question: 'Hangi tabak dolu?', correct: 'Evet! Bu tabak dolu.', wrong: 'Hayır, bu tabak boş.' }
         },
         options: [
             { id: 2620, word: "tabak", imageUrl: "/images/2620.webp", isCorrect: true, audioKey: "tabak", spokenText: "tabak" },
@@ -266,7 +266,7 @@ export const fullEmptyDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FullEmpty,
         speech: {
-            tr: { question: 'Hangi tabak boş?', correct: 'Evet! Tabak boştur.', wrong: 'Hayır, bu tabak doludur.' }
+            tr: { question: 'Hangi tabak boş?', correct: 'Evet! Bu tabak boş.', wrong: 'Hayır, bu tabak dolu.' }
         },
         options: [
             { id: 2619, word: "tabak", imageUrl: "/images/2619.webp", isCorrect: true, audioKey: "tabak", spokenText: "tabak" },

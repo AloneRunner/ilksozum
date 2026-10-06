@@ -75,7 +75,7 @@ const round = (dogru, yanlis, seviye) => {
         question: "${q}",
         questionAudioKey: "",
         activityType: ActivityType.ClockLearning,
-        speech: { tr: { question: '${q}', correct: 'Evet! Saat ${ad(dogru.h, dogru.m)}.', wrong: 'Hayır, bu saat ${ad(yanlis.h, yanlis.m)}.' } },
+        speech: { tr: { question: '${q}', correct: 'Evet! Saat ${ad(dogru.h, dogru.m)}.', wrong: 'Hayır, bu saat ${adBelirtme(yanlis.h, yanlis.m)} gösteriyor.' } },
         options: [
 ${opt(dogru, true)},
 ${opt(yanlis, false)}

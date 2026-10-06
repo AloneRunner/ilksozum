@@ -10,7 +10,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi atkı düğümlü?', correct: 'Evet! Atkı düğümlüdür.', wrong: 'Hayır, bu atkı çözüktür.' }
+            tr: { question: 'Hangi atkı düğümlü?', correct: 'Evet! Bu atkı düğümlü.', wrong: 'Hayır, bu atkı çözük.' }
         },
         options: [
             { id: 4802, word: "atkı", imageUrl: "/images/4802.webp", isCorrect: true, audioKey: "atkı", spokenText: "atkı" },
@@ -23,7 +23,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi atkı çözük?', correct: 'Evet! Atkı çözüktür.', wrong: 'Hayır, bu atkı düğümlüdür.' }
+            tr: { question: 'Hangi atkı çözük?', correct: 'Evet! Bu atkı çözük.', wrong: 'Hayır, bu atkı düğümlü.' }
         },
         options: [
             { id: 4801, word: "atkı", imageUrl: "/images/4801.webp", isCorrect: true, audioKey: "atkı", spokenText: "atkı" },
@@ -37,7 +37,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi ayakkabının bağcığı düğümlü?', correct: 'Evet! Ayakkabının bağcığı düğümlüdür.', wrong: 'Hayır, bu ayakkabının bağcığı çözüktür.' }
+            tr: { question: 'Hangi ayakkabının bağcığı düğümlü?', correct: 'Evet! Bu ayakkabının bağcığı düğümlü.', wrong: 'Hayır, bu ayakkabının bağcığı çözük.' }
         },
         options: [
             { id: 4804, word: "ayakkabı", imageUrl: "/images/4804.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" },
@@ -50,7 +50,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi ayakkabının bağcığı çözük?', correct: 'Evet! Ayakkabının bağcığı çözüktür.', wrong: 'Hayır, bu ayakkabının bağcığı düğümlüdür.' }
+            tr: { question: 'Hangi ayakkabının bağcığı çözük?', correct: 'Evet! Bu ayakkabının bağcığı çözük.', wrong: 'Hayır, bu ayakkabının bağcığı düğümlü.' }
         },
         options: [
             { id: 4803, word: "ayakkabı", imageUrl: "/images/4803.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" },
@@ -64,7 +64,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi balonun ipi düğümlü?', correct: 'Evet! Balonun ipi düğümlüdür.', wrong: 'Hayır, bu balonun ipi çözüktür.' }
+            tr: { question: 'Hangi balonun ipi düğümlü?', correct: 'Evet! Bu balonun ipi düğümlü.', wrong: 'Hayır, bu balonun ipi çözük.' }
         },
         options: [
             { id: 4806, word: "balon", imageUrl: "/images/4806.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -77,7 +77,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi balonun ipi çözük?', correct: 'Evet! Balonun ipi çözüktür.', wrong: 'Hayır, bu balonun ipi düğümlüdür.' }
+            tr: { question: 'Hangi balonun ipi çözük?', correct: 'Evet! Bu balonun ipi çözük.', wrong: 'Hayır, bu balonun ipi düğümlü.' }
         },
         options: [
             { id: 4805, word: "balon", imageUrl: "/images/4805.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -91,7 +91,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi bez çanta düğümlü?', correct: 'Evet! Bez çanta düğümlüdür.', wrong: 'Hayır, bu bez çanta çözüktür.' }
+            tr: { question: 'Hangi bez çanta düğümlü?', correct: 'Evet! Bu bez çanta düğümlü.', wrong: 'Hayır, bu bez çanta çözük.' }
         },
         options: [
             { id: 4808, word: "bez çanta", imageUrl: "/images/4808.webp", isCorrect: true, audioKey: "bez çanta", spokenText: "bez çanta" },
@@ -104,7 +104,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi bez çanta çözük?', correct: 'Evet! Bez çanta çözüktür.', wrong: 'Hayır, bu bez çanta düğümlüdür.' }
+            tr: { question: 'Hangi bez çanta çözük?', correct: 'Evet! Bu bez çanta çözük.', wrong: 'Hayır, bu bez çanta düğümlü.' }
         },
         options: [
             { id: 4807, word: "bez çanta", imageUrl: "/images/4807.webp", isCorrect: true, audioKey: "bez çanta", spokenText: "bez çanta" },
@@ -118,7 +118,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi çöp poşeti düğümlü?', correct: 'Evet! Çöp poşeti düğümlüdür.', wrong: 'Hayır, bu çöp poşeti çözüktür.' }
+            tr: { question: 'Hangi çöp poşeti düğümlü?', correct: 'Evet! Bu çöp poşeti düğümlü.', wrong: 'Hayır, bu çöp poşeti çözük.' }
         },
         options: [
             { id: 4810, word: "çöp poşeti", imageUrl: "/images/4810.webp", isCorrect: true, audioKey: "çöp poşeti", spokenText: "çöp poşeti" },
@@ -131,7 +131,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi çöp poşeti çözük?', correct: 'Evet! Çöp poşeti çözüktür.', wrong: 'Hayır, bu çöp poşeti düğümlüdür.' }
+            tr: { question: 'Hangi çöp poşeti çözük?', correct: 'Evet! Bu çöp poşeti çözük.', wrong: 'Hayır, bu çöp poşeti düğümlü.' }
         },
         options: [
             { id: 4809, word: "çöp poşeti", imageUrl: "/images/4809.webp", isCorrect: true, audioKey: "çöp poşeti", spokenText: "çöp poşeti" },
@@ -145,7 +145,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi halat düğümlü?', correct: 'Evet! Halat düğümlüdür.', wrong: 'Hayır, bu halat çözüktür.' }
+            tr: { question: 'Hangi halat düğümlü?', correct: 'Evet! Bu halat düğümlü.', wrong: 'Hayır, bu halat çözük.' }
         },
         options: [
             { id: 4812, word: "halat", imageUrl: "/images/4812.webp", isCorrect: true, audioKey: "halat", spokenText: "halat" },
@@ -158,7 +158,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi halat çözük?', correct: 'Evet! Halat çözüktür.', wrong: 'Hayır, bu halat düğümlüdür.' }
+            tr: { question: 'Hangi halat çözük?', correct: 'Evet! Bu halat çözük.', wrong: 'Hayır, bu halat düğümlü.' }
         },
         options: [
             { id: 4811, word: "halat", imageUrl: "/images/4811.webp", isCorrect: true, audioKey: "halat", spokenText: "halat" },
@@ -172,7 +172,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi hediye paketi düğümlü?', correct: 'Evet! Hediye paketi düğümlüdür.', wrong: 'Hayır, bu hediye paketi çözüktür.' }
+            tr: { question: 'Hangi hediye paketi düğümlü?', correct: 'Evet! Bu hediye paketi düğümlü.', wrong: 'Hayır, bu hediye paketi çözük.' }
         },
         options: [
             { id: 4814, word: "hediye paketi", imageUrl: "/images/4814.webp", isCorrect: true, audioKey: "hediye paketi", spokenText: "hediye paketi" },
@@ -185,7 +185,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi hediye paketi çözük?', correct: 'Evet! Hediye paketi çözüktür.', wrong: 'Hayır, bu hediye paketi düğümlüdür.' }
+            tr: { question: 'Hangi hediye paketi çözük?', correct: 'Evet! Bu hediye paketi çözük.', wrong: 'Hayır, bu hediye paketi düğümlü.' }
         },
         options: [
             { id: 4813, word: "hediye paketi", imageUrl: "/images/4813.webp", isCorrect: true, audioKey: "hediye paketi", spokenText: "hediye paketi" },
@@ -199,7 +199,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi ip düğümlü?', correct: 'Evet! İp düğümlüdür.', wrong: 'Hayır, bu ip çözüktür.' }
+            tr: { question: 'Hangi ip düğümlü?', correct: 'Evet! Bu ip düğümlü.', wrong: 'Hayır, bu ip çözük.' }
         },
         options: [
             { id: 4816, word: "ip", imageUrl: "/images/4816.webp", isCorrect: true, audioKey: "ip", spokenText: "ip" },
@@ -212,7 +212,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi ip çözük?', correct: 'Evet! İp çözüktür.', wrong: 'Hayır, bu ip düğümlüdür.' }
+            tr: { question: 'Hangi ip çözük?', correct: 'Evet! Bu ip çözük.', wrong: 'Hayır, bu ip düğümlü.' }
         },
         options: [
             { id: 4815, word: "ip", imageUrl: "/images/4815.webp", isCorrect: true, audioKey: "ip", spokenText: "ip" },
@@ -226,7 +226,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi kurdele düğümlü?', correct: 'Evet! Kurdele düğümlüdür.', wrong: 'Hayır, bu kurdele çözüktür.' }
+            tr: { question: 'Hangi kurdele düğümlü?', correct: 'Evet! Bu kurdele düğümlü.', wrong: 'Hayır, bu kurdele çözük.' }
         },
         options: [
             { id: 4818, word: "kurdele", imageUrl: "/images/4818.webp", isCorrect: true, audioKey: "kurdele", spokenText: "kurdele" },
@@ -239,7 +239,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi kurdele çözük?', correct: 'Evet! Kurdele çözüktür.', wrong: 'Hayır, bu kurdele düğümlüdür.' }
+            tr: { question: 'Hangi kurdele çözük?', correct: 'Evet! Bu kurdele çözük.', wrong: 'Hayır, bu kurdele düğümlü.' }
         },
         options: [
             { id: 4817, word: "kurdele", imageUrl: "/images/4817.webp", isCorrect: true, audioKey: "kurdele", spokenText: "kurdele" },
@@ -253,7 +253,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi poşetin ağzı düğümlü?', correct: 'Evet! Poşetin ağzı düğümlüdür.', wrong: 'Hayır, bu poşetin ağzı çözüktür.' }
+            tr: { question: 'Hangi poşetin ağzı düğümlü?', correct: 'Evet! Bu poşetin ağzı düğümlü.', wrong: 'Hayır, bu poşetin ağzı çözük.' }
         },
         options: [
             { id: 4820, word: "poşet", imageUrl: "/images/4820.webp", isCorrect: true, audioKey: "poşet", spokenText: "poşet" },
@@ -266,7 +266,7 @@ export const dugumCozukDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DugumCozuk,
         speech: {
-            tr: { question: 'Hangi poşetin ağzı çözük?', correct: 'Evet! Poşetin ağzı çözüktür.', wrong: 'Hayır, bu poşetin ağzı düğümlüdür.' }
+            tr: { question: 'Hangi poşetin ağzı çözük?', correct: 'Evet! Bu poşetin ağzı çözük.', wrong: 'Hayır, bu poşetin ağzı düğümlü.' }
         },
         options: [
             { id: 4819, word: "poşet", imageUrl: "/images/4819.webp", isCorrect: true, audioKey: "poşet", spokenText: "poşet" },

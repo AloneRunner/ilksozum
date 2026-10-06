@@ -10,7 +10,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi atkı uzun?', correct: 'Evet! Atkı uzundur.', wrong: 'Hayır, bu atkı kısadır.' }
+            tr: { question: 'Hangi atkı uzun?', correct: 'Evet! Bu atkı uzun.', wrong: 'Hayır, bu atkı kısa.' }
         },
         options: [
             { id: 2402, word: "atkı", imageUrl: "/images/2402.webp", isCorrect: true, audioKey: "atkı", spokenText: "atkı" },
@@ -23,7 +23,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi atkı kısa?', correct: 'Evet! Atkı kısadır.', wrong: 'Hayır, bu atkı uzundur.' }
+            tr: { question: 'Hangi atkı kısa?', correct: 'Evet! Bu atkı kısa.', wrong: 'Hayır, bu atkı uzun.' }
         },
         options: [
             { id: 2401, word: "atkı", imageUrl: "/images/2401.webp", isCorrect: true, audioKey: "atkı", spokenText: "atkı" },
@@ -37,7 +37,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi bank uzun?', correct: 'Evet! Bank uzundur.', wrong: 'Hayır, bu bank kısadır.' }
+            tr: { question: 'Hangi bank uzun?', correct: 'Evet! Bu bank uzun.', wrong: 'Hayır, bu bank kısa.' }
         },
         options: [
             { id: 2404, word: "bank", imageUrl: "/images/2404.webp", isCorrect: true, audioKey: "bank", spokenText: "bank" },
@@ -50,7 +50,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi bank kısa?', correct: 'Evet! Bank kısadır.', wrong: 'Hayır, bu bank uzundur.' }
+            tr: { question: 'Hangi bank kısa?', correct: 'Evet! Bu bank kısa.', wrong: 'Hayır, bu bank uzun.' }
         },
         options: [
             { id: 2403, word: "bank", imageUrl: "/images/2403.webp", isCorrect: true, audioKey: "bank", spokenText: "bank" },
@@ -64,7 +64,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi çorap uzun?', correct: 'Evet! Çorap uzundur.', wrong: 'Hayır, bu çorap kısadır.' }
+            tr: { question: 'Hangi çorap uzun?', correct: 'Evet! Bu çorap uzun.', wrong: 'Hayır, bu çorap kısa.' }
         },
         options: [
             { id: 2406, word: "çorap", imageUrl: "/images/2406.webp", isCorrect: true, audioKey: "çorap", spokenText: "çorap" },
@@ -77,7 +77,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi çorap kısa?', correct: 'Evet! Çorap kısadır.', wrong: 'Hayır, bu çorap uzundur.' }
+            tr: { question: 'Hangi çorap kısa?', correct: 'Evet! Bu çorap kısa.', wrong: 'Hayır, bu çorap uzun.' }
         },
         options: [
             { id: 2405, word: "çorap", imageUrl: "/images/2405.webp", isCorrect: true, audioKey: "çorap", spokenText: "çorap" },
@@ -91,7 +91,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi kalem uzun?', correct: 'Evet! Kalem uzundur.', wrong: 'Hayır, bu kalem kısadır.' }
+            tr: { question: 'Hangi kalem uzun?', correct: 'Evet! Bu kalem uzun.', wrong: 'Hayır, bu kalem kısa.' }
         },
         options: [
             { id: 2408, word: "kalem", imageUrl: "/images/2408.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -104,7 +104,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi kalem kısa?', correct: 'Evet! Kalem kısadır.', wrong: 'Hayır, bu kalem uzundur.' }
+            tr: { question: 'Hangi kalem kısa?', correct: 'Evet! Bu kalem kısa.', wrong: 'Hayır, bu kalem uzun.' }
         },
         options: [
             { id: 2407, word: "kalem", imageUrl: "/images/2407.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -118,7 +118,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi kurdele uzun?', correct: 'Evet! Kurdele uzundur.', wrong: 'Hayır, bu kurdele kısadır.' }
+            tr: { question: 'Hangi kurdele uzun?', correct: 'Evet! Bu kurdele uzun.', wrong: 'Hayır, bu kurdele kısa.' }
         },
         options: [
             { id: 2410, word: "kurdele", imageUrl: "/images/2410.webp", isCorrect: true, audioKey: "kurdele", spokenText: "kurdele" },
@@ -131,7 +131,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi kurdele kısa?', correct: 'Evet! Kurdele kısadır.', wrong: 'Hayır, bu kurdele uzundur.' }
+            tr: { question: 'Hangi kurdele kısa?', correct: 'Evet! Bu kurdele kısa.', wrong: 'Hayır, bu kurdele uzun.' }
         },
         options: [
             { id: 2409, word: "kurdele", imageUrl: "/images/2409.webp", isCorrect: true, audioKey: "kurdele", spokenText: "kurdele" },
@@ -145,7 +145,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi pantolon uzun?', correct: 'Evet! Pantolon uzundur.', wrong: 'Hayır, bu pantolon kısadır.' }
+            tr: { question: 'Hangi pantolon uzun?', correct: 'Evet! Bu pantolon uzun.', wrong: 'Hayır, bu pantolon kısa.' }
         },
         options: [
             { id: 2412, word: "pantolon", imageUrl: "/images/2412.webp", isCorrect: true, audioKey: "pantolon", spokenText: "pantolon" },
@@ -158,7 +158,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi pantolon kısa?', correct: 'Evet! Pantolon kısadır.', wrong: 'Hayır, bu pantolon uzundur.' }
+            tr: { question: 'Hangi pantolon kısa?', correct: 'Evet! Bu pantolon kısa.', wrong: 'Hayır, bu pantolon uzun.' }
         },
         options: [
             { id: 2411, word: "pantolon", imageUrl: "/images/2411.webp", isCorrect: true, audioKey: "pantolon", spokenText: "pantolon" },
@@ -172,7 +172,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi kızın saçı uzun?', correct: 'Evet! Saç uzundur.', wrong: 'Hayır, bu saç kısadır.' }
+            tr: { question: 'Hangi kızın saçı uzun?', correct: 'Evet! Bu saç uzun.', wrong: 'Hayır, bu saç kısa.' }
         },
         options: [
             { id: 2414, word: "saç", imageUrl: "/images/2414.webp", isCorrect: true, audioKey: "saç", spokenText: "saç" },
@@ -185,7 +185,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi kızın saçı kısa?', correct: 'Evet! Saç kısadır.', wrong: 'Hayır, bu saç uzundur.' }
+            tr: { question: 'Hangi kızın saçı kısa?', correct: 'Evet! Bu saç kısa.', wrong: 'Hayır, bu saç uzun.' }
         },
         options: [
             { id: 2413, word: "saç", imageUrl: "/images/2413.webp", isCorrect: true, audioKey: "saç", spokenText: "saç" },
@@ -199,7 +199,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi tişörtün kolu uzun?', correct: 'Evet! Tişört kolu uzundur.', wrong: 'Hayır, bu tişört kolu kısadır.' }
+            tr: { question: 'Hangi tişörtün kolu uzun?', correct: 'Evet! Bu tişört kolu uzun.', wrong: 'Hayır, bu tişört kolu kısa.' }
         },
         options: [
             { id: 2416, word: "tişört kolu", imageUrl: "/images/2416.webp", isCorrect: true, audioKey: "tişört kolu", spokenText: "tişört kolu" },
@@ -212,7 +212,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi tişörtün kolu kısa?', correct: 'Evet! Tişört kolu kısadır.', wrong: 'Hayır, bu tişört kolu uzundur.' }
+            tr: { question: 'Hangi tişörtün kolu kısa?', correct: 'Evet! Bu tişört kolu kısa.', wrong: 'Hayır, bu tişört kolu uzun.' }
         },
         options: [
             { id: 2415, word: "tişört kolu", imageUrl: "/images/2415.webp", isCorrect: true, audioKey: "tişört kolu", spokenText: "tişört kolu" },
@@ -226,7 +226,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi tren uzun?', correct: 'Evet! Tren uzundur.', wrong: 'Hayır, bu tren kısadır.' }
+            tr: { question: 'Hangi tren uzun?', correct: 'Evet! Bu tren uzun.', wrong: 'Hayır, bu tren kısa.' }
         },
         options: [
             { id: 2418, word: "tren", imageUrl: "/images/2418.webp", isCorrect: true, audioKey: "tren", spokenText: "tren" },
@@ -239,7 +239,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi tren kısa?', correct: 'Evet! Tren kısadır.', wrong: 'Hayır, bu tren uzundur.' }
+            tr: { question: 'Hangi tren kısa?', correct: 'Evet! Bu tren kısa.', wrong: 'Hayır, bu tren uzun.' }
         },
         options: [
             { id: 2417, word: "tren", imageUrl: "/images/2417.webp", isCorrect: true, audioKey: "tren", spokenText: "tren" },
@@ -253,7 +253,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi yılan uzun?', correct: 'Evet! Yılan uzundur.', wrong: 'Hayır, bu yılan kısadır.' }
+            tr: { question: 'Hangi yılan uzun?', correct: 'Evet! Bu yılan uzun.', wrong: 'Hayır, bu yılan kısa.' }
         },
         options: [
             { id: 2420, word: "yılan", imageUrl: "/images/2420.webp", isCorrect: true, audioKey: "yılan", spokenText: "yılan" },
@@ -266,7 +266,7 @@ export const longShortDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.LongShort,
         speech: {
-            tr: { question: 'Hangi yılan kısa?', correct: 'Evet! Yılan kısadır.', wrong: 'Hayır, bu yılan uzundur.' }
+            tr: { question: 'Hangi yılan kısa?', correct: 'Evet! Bu yılan kısa.', wrong: 'Hayır, bu yılan uzun.' }
         },
         options: [
             { id: 2419, word: "yılan", imageUrl: "/images/2419.webp", isCorrect: true, audioKey: "yılan", spokenText: "yılan" },

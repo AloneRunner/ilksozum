@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { trIlgi } from '../utils/trDil.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import RestoreIcon from './icons/RestoreIcon.tsx';
 import CrownIcon from './icons/CrownIcon.tsx';
@@ -1205,7 +1206,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
             <div>
          <h2 className={`text-xl font-bold pt-4 pb-2 border-b ${sectionBorderClass} ${sectionTitleColor} ${isCosmicTheme ? 'drop-shadow-[0_4px_12px_rgba(14,165,233,0.35)]' : ''}`}>{t('settingsEx.data.title', 'Veri Yönetimi')}</h2>
                 <div className="space-y-3 mt-2">
-          <SettingsRow title={t('settingsEx.reset.title', 'İlerlemeyi Sıfırla')} subtitle={t('settingsEx.reset.subtitle', `${activeProfile.name}'in tüm verilerini siler`).replace('{name}', activeProfile.name)} isThemed={isThemed} themeVariant={themeVariant}>
+          <SettingsRow title={t('settingsEx.reset.title', 'İlerlemeyi Sıfırla')} subtitle={`${trIlgi(activeProfile.name)} tüm verilerini siler`} isThemed={isThemed} themeVariant={themeVariant}>
             <button onClick={handleResetClick} className={`p-2 rounded-full transition-colors ${isThemed ? 'bg-red-500/20 hover:bg-red-500/40' : 'bg-red-100 hover:bg-red-200'}`} aria-label={t('settingsEx.reset.title', 'Reset Progress')}>
                             <XCircleIcon className={`w-6 h-6 ${isThemed ? 'text-red-300' : 'text-red-600'}`}/>
                         </button>

@@ -10,7 +10,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi adam yaşlı?', correct: 'Evet! Adam yaşlıdır.', wrong: 'Hayır, bu adam gençtir.' }
+            tr: { question: 'Hangi adam yaşlı?', correct: 'Evet! Bu adam yaşlı.', wrong: 'Hayır, bu adam genç.' }
         },
         options: [
             { id: 4402, word: "adam", imageUrl: "/images/4402.webp", isCorrect: true, audioKey: "adam", spokenText: "adam" },
@@ -23,7 +23,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi adam genç?', correct: 'Evet! Adam gençtir.', wrong: 'Hayır, bu adam yaşlıdır.' }
+            tr: { question: 'Hangi adam genç?', correct: 'Evet! Bu adam genç.', wrong: 'Hayır, bu adam yaşlı.' }
         },
         options: [
             { id: 4401, word: "adam", imageUrl: "/images/4401.webp", isCorrect: true, audioKey: "adam", spokenText: "adam" },
@@ -37,7 +37,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi aslan yaşlı?', correct: 'Evet! Aslan yaşlıdır.', wrong: 'Hayır, bu aslan gençtir.' }
+            tr: { question: 'Hangi aslan yaşlı?', correct: 'Evet! Bu aslan yaşlı.', wrong: 'Hayır, bu aslan genç.' }
         },
         options: [
             { id: 4404, word: "aslan", imageUrl: "/images/4404.webp", isCorrect: true, audioKey: "aslan", spokenText: "aslan" },
@@ -50,7 +50,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi aslan genç?', correct: 'Evet! Aslan gençtir.', wrong: 'Hayır, bu aslan yaşlıdır.' }
+            tr: { question: 'Hangi aslan genç?', correct: 'Evet! Bu aslan genç.', wrong: 'Hayır, bu aslan yaşlı.' }
         },
         options: [
             { id: 4403, word: "aslan", imageUrl: "/images/4403.webp", isCorrect: true, audioKey: "aslan", spokenText: "aslan" },
@@ -64,7 +64,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi at yaşlı?', correct: 'Evet! At yaşlıdır.', wrong: 'Hayır, bu at gençtir.' }
+            tr: { question: 'Hangi at yaşlı?', correct: 'Evet! Bu at yaşlı.', wrong: 'Hayır, bu at genç.' }
         },
         options: [
             { id: 4406, word: "at", imageUrl: "/images/4406.webp", isCorrect: true, audioKey: "at", spokenText: "at" },
@@ -77,7 +77,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi at genç?', correct: 'Evet! At gençtir.', wrong: 'Hayır, bu at yaşlıdır.' }
+            tr: { question: 'Hangi at genç?', correct: 'Evet! Bu at genç.', wrong: 'Hayır, bu at yaşlı.' }
         },
         options: [
             { id: 4405, word: "at", imageUrl: "/images/4405.webp", isCorrect: true, audioKey: "at", spokenText: "at" },
@@ -91,7 +91,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi adam yaşlı?', correct: 'Evet! Adam yaşlıdır.', wrong: 'Hayır, bu adam gençtir.' }
+            tr: { question: 'Hangi adam yaşlı?', correct: 'Evet! Bu adam yaşlı.', wrong: 'Hayır, bu adam genç.' }
         },
         options: [
             { id: 4408, word: "adam", imageUrl: "/images/4408.webp", isCorrect: true, audioKey: "adam", spokenText: "adam" },
@@ -104,7 +104,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi adam genç?', correct: 'Evet! Adam gençtir.', wrong: 'Hayır, bu adam yaşlıdır.' }
+            tr: { question: 'Hangi adam genç?', correct: 'Evet! Bu adam genç.', wrong: 'Hayır, bu adam yaşlı.' }
         },
         options: [
             { id: 4407, word: "adam", imageUrl: "/images/4407.webp", isCorrect: true, audioKey: "adam", spokenText: "adam" },
@@ -118,7 +118,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi inek yaşlı?', correct: 'Evet! İnek yaşlıdır.', wrong: 'Hayır, bu inek gençtir.' }
+            tr: { question: 'Hangi inek yaşlı?', correct: 'Evet! Bu inek yaşlı.', wrong: 'Hayır, bu inek genç.' }
         },
         options: [
             { id: 4410, word: "inek", imageUrl: "/images/4410.webp", isCorrect: true, audioKey: "inek", spokenText: "inek" },
@@ -131,7 +131,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi inek genç?', correct: 'Evet! İnek gençtir.', wrong: 'Hayır, bu inek yaşlıdır.' }
+            tr: { question: 'Hangi inek genç?', correct: 'Evet! Bu inek genç.', wrong: 'Hayır, bu inek yaşlı.' }
         },
         options: [
             { id: 4409, word: "inek", imageUrl: "/images/4409.webp", isCorrect: true, audioKey: "inek", spokenText: "inek" },
@@ -145,7 +145,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi kadın yaşlı?', correct: 'Evet! Kadın yaşlıdır.', wrong: 'Hayır, bu kadın gençtir.' }
+            tr: { question: 'Hangi kadın yaşlı?', correct: 'Evet! Bu kadın yaşlı.', wrong: 'Hayır, bu kadın genç.' }
         },
         options: [
             { id: 4412, word: "kadın", imageUrl: "/images/4412.webp", isCorrect: true, audioKey: "kadın", spokenText: "kadın" },
@@ -158,7 +158,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi kadın genç?', correct: 'Evet! Kadın gençtir.', wrong: 'Hayır, bu kadın yaşlıdır.' }
+            tr: { question: 'Hangi kadın genç?', correct: 'Evet! Bu kadın genç.', wrong: 'Hayır, bu kadın yaşlı.' }
         },
         options: [
             { id: 4411, word: "kadın", imageUrl: "/images/4411.webp", isCorrect: true, audioKey: "kadın", spokenText: "kadın" },
@@ -172,7 +172,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi kedi yaşlı?', correct: 'Evet! Kedi yaşlıdır.', wrong: 'Hayır, bu kedi gençtir.' }
+            tr: { question: 'Hangi kedi yaşlı?', correct: 'Evet! Bu kedi yaşlı.', wrong: 'Hayır, bu kedi genç.' }
         },
         options: [
             { id: 4414, word: "kedi", imageUrl: "/images/4414.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -185,7 +185,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi kedi genç?', correct: 'Evet! Kedi gençtir.', wrong: 'Hayır, bu kedi yaşlıdır.' }
+            tr: { question: 'Hangi kedi genç?', correct: 'Evet! Bu kedi genç.', wrong: 'Hayır, bu kedi yaşlı.' }
         },
         options: [
             { id: 4413, word: "kedi", imageUrl: "/images/4413.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -199,7 +199,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi köpek yaşlı?', correct: 'Evet! Köpek yaşlıdır.', wrong: 'Hayır, bu köpek gençtir.' }
+            tr: { question: 'Hangi köpek yaşlı?', correct: 'Evet! Bu köpek yaşlı.', wrong: 'Hayır, bu köpek genç.' }
         },
         options: [
             { id: 4416, word: "köpek", imageUrl: "/images/4416.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
@@ -212,7 +212,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi köpek genç?', correct: 'Evet! Köpek gençtir.', wrong: 'Hayır, bu köpek yaşlıdır.' }
+            tr: { question: 'Hangi köpek genç?', correct: 'Evet! Bu köpek genç.', wrong: 'Hayır, bu köpek yaşlı.' }
         },
         options: [
             { id: 4415, word: "köpek", imageUrl: "/images/4415.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
@@ -226,7 +226,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi koyun yaşlı?', correct: 'Evet! Koyun yaşlıdır.', wrong: 'Hayır, bu koyun gençtir.' }
+            tr: { question: 'Hangi koyun yaşlı?', correct: 'Evet! Bu koyun yaşlı.', wrong: 'Hayır, bu koyun genç.' }
         },
         options: [
             { id: 4418, word: "koyun", imageUrl: "/images/4418.webp", isCorrect: true, audioKey: "koyun", spokenText: "koyun" },
@@ -239,7 +239,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi koyun genç?', correct: 'Evet! Koyun gençtir.', wrong: 'Hayır, bu koyun yaşlıdır.' }
+            tr: { question: 'Hangi koyun genç?', correct: 'Evet! Bu koyun genç.', wrong: 'Hayır, bu koyun yaşlı.' }
         },
         options: [
             { id: 4417, word: "koyun", imageUrl: "/images/4417.webp", isCorrect: true, audioKey: "koyun", spokenText: "koyun" },
@@ -253,7 +253,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi kadın yaşlı?', correct: 'Evet! Kadın yaşlıdır.', wrong: 'Hayır, bu kadın gençtir.' }
+            tr: { question: 'Hangi kadın yaşlı?', correct: 'Evet! Bu kadın yaşlı.', wrong: 'Hayır, bu kadın genç.' }
         },
         options: [
             { id: 4420, word: "kadın", imageUrl: "/images/4420.webp", isCorrect: true, audioKey: "kadın", spokenText: "kadın" },
@@ -266,7 +266,7 @@ export const youngOldDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.YoungOld,
         speech: {
-            tr: { question: 'Hangi kadın genç?', correct: 'Evet! Kadın gençtir.', wrong: 'Hayır, bu kadın yaşlıdır.' }
+            tr: { question: 'Hangi kadın genç?', correct: 'Evet! Bu kadın genç.', wrong: 'Hayır, bu kadın yaşlı.' }
         },
         options: [
             { id: 4419, word: "kadın", imageUrl: "/images/4419.webp", isCorrect: true, audioKey: "kadın", spokenText: "kadın" },

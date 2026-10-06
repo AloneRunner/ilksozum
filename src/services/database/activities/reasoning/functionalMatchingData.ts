@@ -47,7 +47,7 @@ export const functionalMatchingData: ConceptRound[] = [
             { id: 549, word: "koltuk", imageUrl: "/images/549.png", isCorrect: false, audioKey: "koltuk", spokenText: "koltuk" }
         ]
     },
-    { id: 5, question: "Çorbayı ne ile içeriz?", questionAudioKey: "q_what_eat_soup_with", activityType: ActivityType.FunctionalMatching,
+    { id: 5, question: "Çorbayı neyle içeriz?", questionAudioKey: "q_what_eat_soup_with", activityType: ActivityType.FunctionalMatching,
         speech: {
             tr: { correct: "Çorbayı kaşık ile içeriz." },
             en: { correct: "We eat soup with a spoon." }
@@ -58,7 +58,7 @@ export const functionalMatchingData: ConceptRound[] = [
             { id: 296, word: "simit", imageUrl: "/images/296.png", isCorrect: false, audioKey: "simit", spokenText: "simit" }
         ]
     },
-    { id: 6, question: "Resmi ne ile boyarız?", questionAudioKey: "q_what_color_picture_with", activityType: ActivityType.FunctionalMatching,
+    { id: 6, question: "Resmi neyle boyarız?", questionAudioKey: "q_what_color_picture_with", activityType: ActivityType.FunctionalMatching,
         speech: {
             tr: { correct: "Resmi fırça ile boyarız." },
             en: { correct: "We paint the picture with a brush." }
@@ -69,7 +69,7 @@ export const functionalMatchingData: ConceptRound[] = [
             { id: 37, word: "kitap", imageUrl: "/images/37.png", isCorrect: false, audioKey: "kitap", spokenText: "kitap" }
         ]
     },
-    { id: 7, question: "Kağıda ne ile yazarız?", questionAudioKey: "q_what_write_paper_with", activityType: ActivityType.FunctionalMatching,
+    { id: 7, question: "Kağıda neyle yazarız?", questionAudioKey: "q_what_write_paper_with", activityType: ActivityType.FunctionalMatching,
         speech: {
             tr: { correct: "Kağıda kalem ile yazarız." },
             en: { correct: "We write on paper with a pen." }
@@ -80,7 +80,7 @@ export const functionalMatchingData: ConceptRound[] = [
             { id: 121, word: "kalem", imageUrl: "/images/121.png", isCorrect: true, audioKey: "kalem", spokenText: "kalem" }
         ]
     },
-    { id: 8, question: "Kapıyı ne ile açarız?", questionAudioKey: "q_what_open_door_with", activityType: ActivityType.FunctionalMatching,
+    { id: 8, question: "Kapıyı neyle açarız?", questionAudioKey: "q_what_open_door_with", activityType: ActivityType.FunctionalMatching,
         speech: {
             tr: { correct: "Kapıyı anahtar ile açarız." },
             en: { correct: "We open the door with a key." }
@@ -91,7 +91,7 @@ export const functionalMatchingData: ConceptRound[] = [
             { id: 144, word: "makas", imageUrl: "/images/144.png", isCorrect: false, audioKey: "makas", spokenText: "makas" }
         ]
     },
-    { id: 9, question: "Makarnayı ne ile yeriz?", questionAudioKey: "q_what_eat_pasta_with", activityType: ActivityType.FunctionalMatching,
+    { id: 9, question: "Makarnayı neyle yeriz?", questionAudioKey: "q_what_eat_pasta_with", activityType: ActivityType.FunctionalMatching,
         speech: {
             tr: { correct: "Makarnayı çatal ile yeriz." },
             en: { correct: "We eat pasta with a fork." }
@@ -115,7 +115,7 @@ export const functionalMatchingData: ConceptRound[] = [
     },
     
     // === YENİ TURLAR: 11-15 (Düzeltilmiş ve doğrulanmış) ===
-    { id: 11, question: "Saçımızı ne ile tararız?", questionAudioKey: "q_what_comb_hair_with", activityType: ActivityType.FunctionalMatching,
+    { id: 11, question: "Saçımızı neyle tararız?", questionAudioKey: "q_what_comb_hair_with", activityType: ActivityType.FunctionalMatching,
         speech: {
             tr: { correct: "Saçımızı tarak ile tararız." },
             en: { correct: "We comb our hair with a comb." }
@@ -137,7 +137,7 @@ export const functionalMatchingData: ConceptRound[] = [
             { id: 134, word: "masa", imageUrl: "/images/134.png", isCorrect: true, audioKey: "masa", spokenText: "masa" }
         ]
     },
-    { id: 13, question: "Kağıdı ne ile keseriz?", questionAudioKey: "q_what_cut_paper_with", activityType: ActivityType.FunctionalMatching,
+    { id: 13, question: "Kağıdı neyle keseriz?", questionAudioKey: "q_what_cut_paper_with", activityType: ActivityType.FunctionalMatching,
         speech: {
             tr: { correct: "Kağıdı makas ile keseriz." },
             en: { correct: "We cut paper with scissors." }
@@ -148,7 +148,7 @@ export const functionalMatchingData: ConceptRound[] = [
             { id: 121, word: "kalem", imageUrl: "/images/121.png", isCorrect: false, audioKey: "kalem", spokenText: "kalem" }
         ]
     },
-    { id: 14, question: "Ekmeği ne ile keseriz?", questionAudioKey: "q_what_cut_bread_with", activityType: ActivityType.FunctionalMatching,
+    { id: 14, question: "Ekmeği neyle keseriz?", questionAudioKey: "q_what_cut_bread_with", activityType: ActivityType.FunctionalMatching,
         speech: {
             tr: { correct: "Ekmeği bıçak ile keseriz." },
             en: { correct: "We cut bread with a knife." }
@@ -159,7 +159,7 @@ export const functionalMatchingData: ConceptRound[] = [
             { id: 262, word: "bıçak", imageUrl: "/images/262.png", isCorrect: true, audioKey: "bıçak", spokenText: "bıçak" }
         ]
     },
-    { id: 15, question: "Ellerimizi ne ile yıkarız?", questionAudioKey: "q_what_wash_hands_with", activityType: ActivityType.FunctionalMatching,
+    { id: 15, question: "Ellerimizi neyle yıkarız?", questionAudioKey: "q_what_wash_hands_with", activityType: ActivityType.FunctionalMatching,
         speech: {
             tr: { correct: "Ellerimizi sabun ile yıkarız." },
             en: { correct: "We wash our hands with soap." }

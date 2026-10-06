@@ -10,7 +10,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi çukur derin?', correct: 'Evet! Çukur derindir.', wrong: 'Hayır, bu çukur sığdır.' }
+            tr: { question: 'Hangi çukur derin?', correct: 'Evet! Bu çukur derin.', wrong: 'Hayır, bu çukur sığ.' }
         },
         options: [
             { id: 2901, word: "çukur", imageUrl: "/images/2901.webp", isCorrect: true, audioKey: "çukur", spokenText: "çukur" },
@@ -23,7 +23,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi çukur sığ?', correct: 'Evet! Çukur sığdır.', wrong: 'Hayır, bu çukur derindir.' }
+            tr: { question: 'Hangi çukur sığ?', correct: 'Evet! Bu çukur sığ.', wrong: 'Hayır, bu çukur derin.' }
         },
         options: [
             { id: 2902, word: "çukur", imageUrl: "/images/2902.webp", isCorrect: true, audioKey: "çukur", spokenText: "çukur" },
@@ -37,7 +37,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi fırın kabı derin?', correct: 'Evet! Fırın kabı derindir.', wrong: 'Hayır, bu fırın kabı sığdır.' }
+            tr: { question: 'Hangi fırın kabı derin?', correct: 'Evet! Bu fırın kabı derin.', wrong: 'Hayır, bu fırın kabı sığ.' }
         },
         options: [
             { id: 2903, word: "fırın kabı", imageUrl: "/images/2903.webp", isCorrect: true, audioKey: "fırın kabı", spokenText: "fırın kabı" },
@@ -50,7 +50,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi fırın kabı sığ?', correct: 'Evet! Fırın kabı sığdır.', wrong: 'Hayır, bu fırın kabı derindir.' }
+            tr: { question: 'Hangi fırın kabı sığ?', correct: 'Evet! Bu fırın kabı sığ.', wrong: 'Hayır, bu fırın kabı derin.' }
         },
         options: [
             { id: 2904, word: "fırın kabı", imageUrl: "/images/2904.webp", isCorrect: true, audioKey: "fırın kabı", spokenText: "fırın kabı" },
@@ -64,7 +64,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi havuzun suyu derin?', correct: 'Evet! Havuzun suyu derindir.', wrong: 'Hayır, bu havuzun suyu sığdır.' }
+            tr: { question: 'Hangi havuzun suyu derin?', correct: 'Evet! Bu havuzun suyu derin.', wrong: 'Hayır, bu havuzun suyu sığ.' }
         },
         options: [
             { id: 2905, word: "havuz", imageUrl: "/images/2905.webp", isCorrect: true, audioKey: "havuz", spokenText: "havuz" },
@@ -77,7 +77,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi havuzun suyu sığ?', correct: 'Evet! Havuzun suyu sığdır.', wrong: 'Hayır, bu havuzun suyu derindir.' }
+            tr: { question: 'Hangi havuzun suyu sığ?', correct: 'Evet! Bu havuzun suyu sığ.', wrong: 'Hayır, bu havuzun suyu derin.' }
         },
         options: [
             { id: 2906, word: "havuz", imageUrl: "/images/2906.webp", isCorrect: true, audioKey: "havuz", spokenText: "havuz" },
@@ -91,7 +91,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi kase derin?', correct: 'Evet! Kase derindir.', wrong: 'Hayır, bu kase sığdır.' }
+            tr: { question: 'Hangi kase derin?', correct: 'Evet! Bu kase derin.', wrong: 'Hayır, bu kase sığ.' }
         },
         options: [
             { id: 2907, word: "kase", imageUrl: "/images/2907.webp", isCorrect: true, audioKey: "kase", spokenText: "kase" },
@@ -104,7 +104,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi kase sığ?', correct: 'Evet! Kase sığdır.', wrong: 'Hayır, bu kase derindir.' }
+            tr: { question: 'Hangi kase sığ?', correct: 'Evet! Bu kase sığ.', wrong: 'Hayır, bu kase derin.' }
         },
         options: [
             { id: 2908, word: "kase", imageUrl: "/images/2908.webp", isCorrect: true, audioKey: "kase", spokenText: "kase" },
@@ -118,7 +118,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi kova derin?', correct: 'Evet! Kova derindir.', wrong: 'Hayır, bu kova sığdır.' }
+            tr: { question: 'Hangi kova derin?', correct: 'Evet! Bu kova derin.', wrong: 'Hayır, bu kova sığ.' }
         },
         options: [
             { id: 2909, word: "kova", imageUrl: "/images/2909.webp", isCorrect: true, audioKey: "kova", spokenText: "kova" },
@@ -131,7 +131,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi kova sığ?', correct: 'Evet! Kova sığdır.', wrong: 'Hayır, bu kova derindir.' }
+            tr: { question: 'Hangi kova sığ?', correct: 'Evet! Bu kova sığ.', wrong: 'Hayır, bu kova derin.' }
         },
         options: [
             { id: 2910, word: "kova", imageUrl: "/images/2910.webp", isCorrect: true, audioKey: "kova", spokenText: "kova" },
@@ -145,7 +145,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi kutu derin?', correct: 'Evet! Kutu derindir.', wrong: 'Hayır, bu kutu sığdır.' }
+            tr: { question: 'Hangi kutu derin?', correct: 'Evet! Bu kutu derin.', wrong: 'Hayır, bu kutu sığ.' }
         },
         options: [
             { id: 2911, word: "kutu", imageUrl: "/images/2911.webp", isCorrect: true, audioKey: "kutu", spokenText: "kutu" },
@@ -158,7 +158,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi kutu sığ?', correct: 'Evet! Kutu sığdır.', wrong: 'Hayır, bu kutu derindir.' }
+            tr: { question: 'Hangi kutu sığ?', correct: 'Evet! Bu kutu sığ.', wrong: 'Hayır, bu kutu derin.' }
         },
         options: [
             { id: 2912, word: "kutu", imageUrl: "/images/2912.webp", isCorrect: true, audioKey: "kutu", spokenText: "kutu" },
@@ -172,7 +172,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi leğen derin?', correct: 'Evet! Leğen derindir.', wrong: 'Hayır, bu leğen sığdır.' }
+            tr: { question: 'Hangi leğen derin?', correct: 'Evet! Bu leğen derin.', wrong: 'Hayır, bu leğen sığ.' }
         },
         options: [
             { id: 2913, word: "leğen", imageUrl: "/images/2913.webp", isCorrect: true, audioKey: "leğen", spokenText: "leğen" },
@@ -185,7 +185,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi leğen sığ?', correct: 'Evet! Leğen sığdır.', wrong: 'Hayır, bu leğen derindir.' }
+            tr: { question: 'Hangi leğen sığ?', correct: 'Evet! Bu leğen sığ.', wrong: 'Hayır, bu leğen derin.' }
         },
         options: [
             { id: 2914, word: "leğen", imageUrl: "/images/2914.webp", isCorrect: true, audioKey: "leğen", spokenText: "leğen" },
@@ -199,7 +199,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi sepet derin?', correct: 'Evet! Sepet derindir.', wrong: 'Hayır, bu sepet sığdır.' }
+            tr: { question: 'Hangi sepet derin?', correct: 'Evet! Bu sepet derin.', wrong: 'Hayır, bu sepet sığ.' }
         },
         options: [
             { id: 2915, word: "sepet", imageUrl: "/images/2915.webp", isCorrect: true, audioKey: "sepet", spokenText: "sepet" },
@@ -212,7 +212,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi sepet sığ?', correct: 'Evet! Sepet sığdır.', wrong: 'Hayır, bu sepet derindir.' }
+            tr: { question: 'Hangi sepet sığ?', correct: 'Evet! Bu sepet sığ.', wrong: 'Hayır, bu sepet derin.' }
         },
         options: [
             { id: 2916, word: "sepet", imageUrl: "/images/2916.webp", isCorrect: true, audioKey: "sepet", spokenText: "sepet" },
@@ -226,7 +226,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi tabak derin?', correct: 'Evet! Tabak derindir.', wrong: 'Hayır, bu tabak sığdır.' }
+            tr: { question: 'Hangi tabak derin?', correct: 'Evet! Bu tabak derin.', wrong: 'Hayır, bu tabak sığ.' }
         },
         options: [
             { id: 2917, word: "tabak", imageUrl: "/images/2917.webp", isCorrect: true, audioKey: "tabak", spokenText: "tabak" },
@@ -239,7 +239,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi tabak sığ?', correct: 'Evet! Tabak sığdır.', wrong: 'Hayır, bu tabak derindir.' }
+            tr: { question: 'Hangi tabak sığ?', correct: 'Evet! Bu tabak sığ.', wrong: 'Hayır, bu tabak derin.' }
         },
         options: [
             { id: 2918, word: "tabak", imageUrl: "/images/2918.webp", isCorrect: true, audioKey: "tabak", spokenText: "tabak" },
@@ -253,7 +253,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi tencere derin?', correct: 'Evet! Tencere derindir.', wrong: 'Hayır, bu tencere sığdır.' }
+            tr: { question: 'Hangi tencere derin?', correct: 'Evet! Bu tencere derin.', wrong: 'Hayır, bu tencere sığ.' }
         },
         options: [
             { id: 2919, word: "tencere", imageUrl: "/images/2919.webp", isCorrect: true, audioKey: "tencere", spokenText: "tencere" },
@@ -266,7 +266,7 @@ export const derinSigDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DerinSig,
         speech: {
-            tr: { question: 'Hangi tencere sığ?', correct: 'Evet! Tencere sığdır.', wrong: 'Hayır, bu tencere derindir.' }
+            tr: { question: 'Hangi tencere sığ?', correct: 'Evet! Bu tencere sığ.', wrong: 'Hayır, bu tencere derin.' }
         },
         options: [
             { id: 2920, word: "tencere", imageUrl: "/images/2920.webp", isCorrect: true, audioKey: "tencere", spokenText: "tencere" },

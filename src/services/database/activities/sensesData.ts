@@ -12,7 +12,7 @@ export const sensesData: ConceptRound[] = [
         questionAudioKey: "q_which_sense_see_person", 
         activityType: ActivityType.Senses,
         speech: {
-            tr: { correct: 'Evet! Göz ile görürüz.', wrong: 'Hayır, kulak ile duyarız.' },
+            tr: { correct: 'Evet! Gözle görürüz.', wrong: 'Hayır, kulakla duyarız.' },
             en: { correct: 'Yes! We see with the eye.', wrong: 'No, we hear with the ear.' },
             de: { correct: 'Ja! Wir sehen mit dem Auge.', wrong: 'Nein, wir hören mit dem Ohr.' },
             fr: { correct: 'Oui ! Nous voyons avec l\'œil.', wrong: 'Non, nous entendons avec l\'oreille.' },
@@ -30,7 +30,7 @@ export const sensesData: ConceptRound[] = [
         questionAudioKey: "q_which_sense_hear", 
         activityType: ActivityType.Senses,
         speech: {
-            tr: { correct: 'Evet! Kulak ile duyarız.', wrong: 'Hayır, burun ile koku alırız.' },
+            tr: { correct: 'Evet! Kulakla duyarız.', wrong: 'Hayır, burunla koku alırız.' },
             en: { correct: 'Yes! We hear with the ear.', wrong: 'No, we smell with the nose.' },
             de: { correct: 'Ja! Wir hören mit dem Ohr.', wrong: 'Nein, wir riechen mit der Nase.' },
             fr: { correct: 'Oui ! Nous entendons avec l\'oreille.', wrong: 'Non, nous sentons l\'odeur avec le nez.' },
@@ -48,7 +48,7 @@ export const sensesData: ConceptRound[] = [
         questionAudioKey: "q_which_sense_smell", 
         activityType: ActivityType.Senses,
         speech: {
-            tr: { correct: 'Evet! Burun ile koku alırız.', wrong: 'Hayır, dil ile tat alırız.' },
+            tr: { correct: 'Evet! Burunla koku alırız.', wrong: 'Hayır, dille tat alırız.' },
             en: { correct: 'Yes! We smell with the nose.', wrong: 'No, we taste with the tongue.' },
             de: { correct: 'Ja! Wir riechen mit der Nase.', wrong: 'Nein, wir schmecken mit der Zunge.' },
             fr: { correct: 'Oui ! Nous sentons l\'odeur avec le nez.', wrong: 'Non, nous goûtons avec la langue.' },
@@ -66,7 +66,7 @@ export const sensesData: ConceptRound[] = [
         questionAudioKey: "q_which_sense_taste", 
         activityType: ActivityType.Senses,
         speech: {
-            tr: { correct: 'Evet! Dil ile tat alırız.', wrong: 'Hayır, el ile dokunuruz.' },
+            tr: { correct: 'Evet! Dille tat alırız.', wrong: 'Hayır, elle dokunuruz.' },
             en: { correct: 'Yes! We taste with the tongue.', wrong: 'No, we touch with the hand.' },
             de: { correct: 'Ja! Wir schmecken mit der Zunge.', wrong: 'Nein, wir fühlen mit der Hand.' },
             fr: { correct: 'Oui ! Nous goûtons avec la langue.', wrong: 'Non, nous touchons avec la main.' },
@@ -84,7 +84,7 @@ export const sensesData: ConceptRound[] = [
         questionAudioKey: "q_which_sense_touch", 
         activityType: ActivityType.Senses,
         speech: {
-            tr: { correct: 'Evet! El ile dokunuruz.', wrong: 'Hayır, göz ile görürüz.' },
+            tr: { correct: 'Evet! Elle dokunuruz.', wrong: 'Hayır, gözle görürüz.' },
             en: { correct: 'Yes! We touch with the hand.', wrong: 'No, we see with the eye.' },
             de: { correct: 'Ja! Wir fühlen mit der Hand.', wrong: 'Nein, wir sehen mit dem Auge.' },
             fr: { correct: 'Oui ! Nous touchons avec la main.', wrong: 'Non, nous voyons avec l\'œil.' },
@@ -104,7 +104,7 @@ export const sensesData: ConceptRound[] = [
         questionAudioKey: "q_which_organ_smell_this", 
         activityType: ActivityType.Senses,
         speech: {
-            tr: { correct: 'Evet! Çiçeği burun ile koklarız.', wrong: 'Hayır, çiçeği kulak ile duyarız.' },
+            tr: { correct: 'Evet! Çiçeği burunla koklarız.', wrong: 'Hayır, çiçeği kulakla duyarız.' },
             en: { correct: 'Yes! We smell the flower with the nose.', wrong: 'No, we hear the flower with the ear.' },
             de: { correct: 'Ja! Wir riechen die Blume mit der Nase.', wrong: 'Nein, wir hören die Blume mit dem Ohr.' },
             fr: { correct: 'Oui ! Nous sentons l\'odeur de la fleur avec le nez.', wrong: 'Non, nous entendons la fleur avec l\'oreille.' },
@@ -123,7 +123,7 @@ export const sensesData: ConceptRound[] = [
         questionAudioKey: "q_which_organ_hear_this", 
         activityType: ActivityType.Senses,
         speech: {
-            tr: { correct: 'Evet! Davulu kulak ile duyarız.', wrong: 'Hayır, davulu göz ile görürüz.' },
+            tr: { correct: 'Evet! Davulu kulakla duyarız.', wrong: 'Hayır, davulu gözle görürüz.' },
             en: { correct: 'Yes! We hear the drum with the ear.', wrong: 'No, we see the drum with the eye.' },
             de: { correct: 'Ja! Wir hören die Trommel mit dem Ohr.', wrong: 'Nein, wir sehen die Trommel mit dem Auge.' },
             fr: { correct: 'Oui ! Nous entendons le tambour avec l\'oreille.', wrong: 'Non, nous voyons le tambour avec l\'œil.' },
@@ -142,7 +142,7 @@ export const sensesData: ConceptRound[] = [
         questionAudioKey: "q_which_organ_taste_this", 
         activityType: ActivityType.Senses,
         speech: {
-            tr: { correct: 'Evet! Elmayı dil ile tadarız.', wrong: 'Hayır, elmayı burun ile koklarız.' },
+            tr: { correct: 'Evet! Elmayı dille tadarız.', wrong: 'Hayır, elmayı burunla koklarız.' },
             en: { correct: 'Yes! We taste the apple with the tongue.', wrong: 'No, we smell the apple with the nose.' },
             de: { correct: 'Ja! Wir schmecken den Apfel mit der Zunge.', wrong: 'Nein, wir riechen den Apfel mit der Nase.' },
             fr: { correct: 'Oui ! Nous goûtons la pomme avec la langue.', wrong: 'Non, nous sentons l\'odeur de la pomme avec le nez.' },
@@ -161,7 +161,7 @@ export const sensesData: ConceptRound[] = [
         questionAudioKey: "q_which_organ_touch_this", 
         activityType: ActivityType.Senses,
         speech: {
-            tr: { correct: 'Evet! Gül dalını el ile hissederiz.', wrong: 'Hayır, gül dalını göz ile görürüz.' },
+            tr: { correct: 'Evet! Gül dalını elle hissederiz.', wrong: 'Hayır, gül dalını gözle görürüz.' },
             en: { correct: 'Yes! We feel the rose thorn with the hand.', wrong: 'No, we see the rose thorn with the eye.' },
             de: { correct: 'Ja! Wir fühlen den Rosendorn mit der Hand.', wrong: 'Nein, wir sehen den Rosendorn mit dem Auge.' },
             fr: { correct: 'Oui ! Nous sentons l\'épine de rose avec la main.', wrong: 'Non, nous voyons l\'épine de rose avec l\'œil.' },
@@ -180,7 +180,7 @@ export const sensesData: ConceptRound[] = [
         questionAudioKey: "q_which_organ_see_this", 
         activityType: ActivityType.Senses,
         speech: {
-            tr: { correct: 'Evet! El fenerini göz ile görürüz.', wrong: 'Hayır, el fenerini kulak ile duyarız.' },
+            tr: { correct: 'Evet! El fenerini gözle görürüz.', wrong: 'Hayır, el fenerini kulakla duyarız.' },
             en: { correct: 'Yes! We see the flashlight with the eye.', wrong: 'No, we hear the flashlight with the ear.' },
             de: { correct: 'Ja! Wir sehen die Taschenlampe mit dem Auge.', wrong: 'Nein, wir hören die Taschenlampe mit dem Ohr.' },
             fr: { correct: 'Oui ! Nous voyons la lampe de poche avec l\'œil.', wrong: 'Non, nous entendons la lampe de poche avec l\'oreille.' },

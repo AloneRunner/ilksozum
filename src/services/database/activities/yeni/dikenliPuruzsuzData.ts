@@ -172,7 +172,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Hangi kestane dikenli?', correct: 'Evet! Kestane dikenlidir.', wrong: 'Hayır, bu kestane pürüzsüzdür.' }
+            tr: { question: 'Hangi kestane dikenli?', correct: 'Evet! Bu kestane dikenli.', wrong: 'Hayır, bu kestane pürüzsüz.' }
         },
         options: [
             { id: 3811, word: "kestane", imageUrl: "/images/3811.webp", isCorrect: true, audioKey: "kestane", spokenText: "kestane" },
@@ -185,7 +185,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Hangi kestane pürüzsüz?', correct: 'Evet! Kestane pürüzsüzdür.', wrong: 'Hayır, bu kestane dikenlidir.' }
+            tr: { question: 'Hangi kestane pürüzsüz?', correct: 'Evet! Bu kestane pürüzsüz.', wrong: 'Hayır, bu kestane dikenli.' }
         },
         options: [
             { id: 3812, word: "kestane", imageUrl: "/images/3812.webp", isCorrect: true, audioKey: "kestane", spokenText: "kestane" },

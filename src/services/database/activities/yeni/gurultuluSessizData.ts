@@ -10,7 +10,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi aslan gürültülü?', correct: 'Evet! Aslan gürültülüdür.', wrong: 'Hayır, bu aslan sessizdir.' }
+            tr: { question: 'Hangi aslan gürültülü?', correct: 'Evet! Bu aslan gürültülü.', wrong: 'Hayır, bu aslan sessiz.' }
         },
         options: [
             { id: 4201, word: "aslan", imageUrl: "/images/4201.webp", isCorrect: true, audioKey: "aslan", spokenText: "aslan" },
@@ -23,7 +23,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi aslan sessiz?', correct: 'Evet! Aslan sessizdir.', wrong: 'Hayır, bu aslan gürültülüdür.' }
+            tr: { question: 'Hangi aslan sessiz?', correct: 'Evet! Bu aslan sessiz.', wrong: 'Hayır, bu aslan gürültülü.' }
         },
         options: [
             { id: 4202, word: "aslan", imageUrl: "/images/4202.webp", isCorrect: true, audioKey: "aslan", spokenText: "aslan" },
@@ -37,7 +37,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi bebek gürültülü?', correct: 'Evet! Bebek gürültülüdür.', wrong: 'Hayır, bu bebek sessizdir.' }
+            tr: { question: 'Hangi bebek gürültülü?', correct: 'Evet! Bu bebek gürültülü.', wrong: 'Hayır, bu bebek sessiz.' }
         },
         options: [
             { id: 4203, word: "bebek", imageUrl: "/images/4203.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
@@ -50,7 +50,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi bebek sessiz?', correct: 'Evet! Bebek sessizdir.', wrong: 'Hayır, bu bebek gürültülüdür.' }
+            tr: { question: 'Hangi bebek sessiz?', correct: 'Evet! Bu bebek sessiz.', wrong: 'Hayır, bu bebek gürültülü.' }
         },
         options: [
             { id: 4204, word: "bebek", imageUrl: "/images/4204.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
@@ -64,7 +64,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi çocuk gürültülü?', correct: 'Evet! Çocuk gürültülüdür.', wrong: 'Hayır, bu çocuk sessizdir.' }
+            tr: { question: 'Hangi çocuk gürültülü?', correct: 'Evet! Bu çocuk gürültülü.', wrong: 'Hayır, bu çocuk sessiz.' }
         },
         options: [
             { id: 4205, word: "çocuk", imageUrl: "/images/4205.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -77,7 +77,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi çocuk sessiz?', correct: 'Evet! Çocuk sessizdir.', wrong: 'Hayır, bu çocuk gürültülüdür.' }
+            tr: { question: 'Hangi çocuk sessiz?', correct: 'Evet! Bu çocuk sessiz.', wrong: 'Hayır, bu çocuk gürültülü.' }
         },
         options: [
             { id: 4206, word: "çocuk", imageUrl: "/images/4206.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -91,7 +91,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi eşek gürültülü?', correct: 'Evet! Eşek gürültülüdür.', wrong: 'Hayır, bu eşek sessizdir.' }
+            tr: { question: 'Hangi eşek gürültülü?', correct: 'Evet! Bu eşek gürültülü.', wrong: 'Hayır, bu eşek sessiz.' }
         },
         options: [
             { id: 4207, word: "eşek", imageUrl: "/images/4207.webp", isCorrect: true, audioKey: "eşek", spokenText: "eşek" },
@@ -104,7 +104,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi eşek sessiz?', correct: 'Evet! Eşek sessizdir.', wrong: 'Hayır, bu eşek gürültülüdür.' }
+            tr: { question: 'Hangi eşek sessiz?', correct: 'Evet! Bu eşek sessiz.', wrong: 'Hayır, bu eşek gürültülü.' }
         },
         options: [
             { id: 4208, word: "eşek", imageUrl: "/images/4208.webp", isCorrect: true, audioKey: "eşek", spokenText: "eşek" },
@@ -118,7 +118,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi horoz gürültülü?', correct: 'Evet! Horoz gürültülüdür.', wrong: 'Hayır, bu horoz sessizdir.' }
+            tr: { question: 'Hangi horoz gürültülü?', correct: 'Evet! Bu horoz gürültülü.', wrong: 'Hayır, bu horoz sessiz.' }
         },
         options: [
             { id: 4209, word: "horoz", imageUrl: "/images/4209.webp", isCorrect: true, audioKey: "horoz", spokenText: "horoz" },
@@ -131,7 +131,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi horoz sessiz?', correct: 'Evet! Horoz sessizdir.', wrong: 'Hayır, bu horoz gürültülüdür.' }
+            tr: { question: 'Hangi horoz sessiz?', correct: 'Evet! Bu horoz sessiz.', wrong: 'Hayır, bu horoz gürültülü.' }
         },
         options: [
             { id: 4210, word: "horoz", imageUrl: "/images/4210.webp", isCorrect: true, audioKey: "horoz", spokenText: "horoz" },
@@ -145,7 +145,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi inek gürültülü?', correct: 'Evet! İnek gürültülüdür.', wrong: 'Hayır, bu inek sessizdir.' }
+            tr: { question: 'Hangi inek gürültülü?', correct: 'Evet! Bu inek gürültülü.', wrong: 'Hayır, bu inek sessiz.' }
         },
         options: [
             { id: 4211, word: "inek", imageUrl: "/images/4211.webp", isCorrect: true, audioKey: "inek", spokenText: "inek" },
@@ -158,7 +158,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi inek sessiz?', correct: 'Evet! İnek sessizdir.', wrong: 'Hayır, bu inek gürültülüdür.' }
+            tr: { question: 'Hangi inek sessiz?', correct: 'Evet! Bu inek sessiz.', wrong: 'Hayır, bu inek gürültülü.' }
         },
         options: [
             { id: 4212, word: "inek", imageUrl: "/images/4212.webp", isCorrect: true, audioKey: "inek", spokenText: "inek" },
@@ -172,7 +172,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi kedi gürültülü?', correct: 'Evet! Kedi gürültülüdür.', wrong: 'Hayır, bu kedi sessizdir.' }
+            tr: { question: 'Hangi kedi gürültülü?', correct: 'Evet! Bu kedi gürültülü.', wrong: 'Hayır, bu kedi sessiz.' }
         },
         options: [
             { id: 4213, word: "kedi", imageUrl: "/images/4213.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -185,7 +185,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi kedi sessiz?', correct: 'Evet! Kedi sessizdir.', wrong: 'Hayır, bu kedi gürültülüdür.' }
+            tr: { question: 'Hangi kedi sessiz?', correct: 'Evet! Bu kedi sessiz.', wrong: 'Hayır, bu kedi gürültülü.' }
         },
         options: [
             { id: 4214, word: "kedi", imageUrl: "/images/4214.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -199,7 +199,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi köpek gürültülü?', correct: 'Evet! Köpek gürültülüdür.', wrong: 'Hayır, bu köpek sessizdir.' }
+            tr: { question: 'Hangi köpek gürültülü?', correct: 'Evet! Bu köpek gürültülü.', wrong: 'Hayır, bu köpek sessiz.' }
         },
         options: [
             { id: 4215, word: "köpek", imageUrl: "/images/4215.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
@@ -212,7 +212,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi köpek sessiz?', correct: 'Evet! Köpek sessizdir.', wrong: 'Hayır, bu köpek gürültülüdür.' }
+            tr: { question: 'Hangi köpek sessiz?', correct: 'Evet! Bu köpek sessiz.', wrong: 'Hayır, bu köpek gürültülü.' }
         },
         options: [
             { id: 4216, word: "köpek", imageUrl: "/images/4216.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
@@ -226,7 +226,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi çocuk gürültülü?', correct: 'Evet! Çocuk gürültülüdür.', wrong: 'Hayır, bu çocuk sessizdir.' }
+            tr: { question: 'Hangi çocuk gürültülü?', correct: 'Evet! Bu çocuk gürültülü.', wrong: 'Hayır, bu çocuk sessiz.' }
         },
         options: [
             { id: 4217, word: "çocuk", imageUrl: "/images/4217.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -239,7 +239,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi çocuk sessiz?', correct: 'Evet! Çocuk sessizdir.', wrong: 'Hayır, bu çocuk gürültülüdür.' }
+            tr: { question: 'Hangi çocuk sessiz?', correct: 'Evet! Bu çocuk sessiz.', wrong: 'Hayır, bu çocuk gürültülü.' }
         },
         options: [
             { id: 4218, word: "çocuk", imageUrl: "/images/4218.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -253,7 +253,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi sınıf gürültülü?', correct: 'Evet! Sınıf gürültülüdür.', wrong: 'Hayır, bu sınıf sessizdir.' }
+            tr: { question: 'Hangi sınıf gürültülü?', correct: 'Evet! Bu sınıf gürültülü.', wrong: 'Hayır, bu sınıf sessiz.' }
         },
         options: [
             { id: 4219, word: "sınıf", imageUrl: "/images/4219.webp", isCorrect: true, audioKey: "sınıf", spokenText: "sınıf" },
@@ -266,7 +266,7 @@ export const noisyQuietDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NoisyQuiet,
         speech: {
-            tr: { question: 'Hangi sınıf sessiz?', correct: 'Evet! Sınıf sessizdir.', wrong: 'Hayır, bu sınıf gürültülüdür.' }
+            tr: { question: 'Hangi sınıf sessiz?', correct: 'Evet! Bu sınıf sessiz.', wrong: 'Hayır, bu sınıf gürültülü.' }
         },
         options: [
             { id: 4220, word: "sınıf", imageUrl: "/images/4220.webp", isCorrect: true, audioKey: "sınıf", spokenText: "sınıf" },

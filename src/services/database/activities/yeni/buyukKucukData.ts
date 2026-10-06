@@ -10,7 +10,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi ayakkabı büyük?', correct: 'Evet! Ayakkabı büyüktür.', wrong: 'Hayır, bu ayakkabı küçüktür.' }
+            tr: { question: 'Hangi ayakkabı büyük?', correct: 'Evet! Bu ayakkabı büyük.', wrong: 'Hayır, bu ayakkabı küçük.' }
         },
         options: [
             { id: 2301, word: "ayakkabı", imageUrl: "/images/2301.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" },
@@ -23,7 +23,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi ayakkabı küçük?', correct: 'Evet! Ayakkabı küçüktür.', wrong: 'Hayır, bu ayakkabı büyüktür.' }
+            tr: { question: 'Hangi ayakkabı küçük?', correct: 'Evet! Bu ayakkabı küçük.', wrong: 'Hayır, bu ayakkabı büyük.' }
         },
         options: [
             { id: 2302, word: "ayakkabı", imageUrl: "/images/2302.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" },
@@ -37,7 +37,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi ayı büyük?', correct: 'Evet! Ayı büyüktür.', wrong: 'Hayır, bu ayı küçüktür.' }
+            tr: { question: 'Hangi ayı büyük?', correct: 'Evet! Bu ayı büyük.', wrong: 'Hayır, bu ayı küçük.' }
         },
         options: [
             { id: 2303, word: "ayı", imageUrl: "/images/2303.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -50,7 +50,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi ayı küçük?', correct: 'Evet! Ayı küçüktür.', wrong: 'Hayır, bu ayı büyüktür.' }
+            tr: { question: 'Hangi ayı küçük?', correct: 'Evet! Bu ayı küçük.', wrong: 'Hayır, bu ayı büyük.' }
         },
         options: [
             { id: 2304, word: "ayı", imageUrl: "/images/2304.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -64,7 +64,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi balon büyük?', correct: 'Evet! Balon büyüktür.', wrong: 'Hayır, bu balon küçüktür.' }
+            tr: { question: 'Hangi balon büyük?', correct: 'Evet! Bu balon büyük.', wrong: 'Hayır, bu balon küçük.' }
         },
         options: [
             { id: 2305, word: "balon", imageUrl: "/images/2305.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -77,7 +77,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi balon küçük?', correct: 'Evet! Balon küçüktür.', wrong: 'Hayır, bu balon büyüktür.' }
+            tr: { question: 'Hangi balon küçük?', correct: 'Evet! Bu balon küçük.', wrong: 'Hayır, bu balon büyük.' }
         },
         options: [
             { id: 2306, word: "balon", imageUrl: "/images/2306.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -91,7 +91,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi elma büyük?', correct: 'Evet! Elma büyüktür.', wrong: 'Hayır, bu elma küçüktür.' }
+            tr: { question: 'Hangi elma büyük?', correct: 'Evet! Bu elma büyük.', wrong: 'Hayır, bu elma küçük.' }
         },
         options: [
             { id: 2307, word: "elma", imageUrl: "/images/2307.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -104,7 +104,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi elma küçük?', correct: 'Evet! Elma küçüktür.', wrong: 'Hayır, bu elma büyüktür.' }
+            tr: { question: 'Hangi elma küçük?', correct: 'Evet! Bu elma küçük.', wrong: 'Hayır, bu elma büyük.' }
         },
         options: [
             { id: 2308, word: "elma", imageUrl: "/images/2308.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -118,7 +118,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi karpuz büyük?', correct: 'Evet! Karpuz büyüktür.', wrong: 'Hayır, bu karpuz küçüktür.' }
+            tr: { question: 'Hangi karpuz büyük?', correct: 'Evet! Bu karpuz büyük.', wrong: 'Hayır, bu karpuz küçük.' }
         },
         options: [
             { id: 2309, word: "karpuz", imageUrl: "/images/2309.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" },
@@ -131,7 +131,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi karpuz küçük?', correct: 'Evet! Karpuz küçüktür.', wrong: 'Hayır, bu karpuz büyüktür.' }
+            tr: { question: 'Hangi karpuz küçük?', correct: 'Evet! Bu karpuz küçük.', wrong: 'Hayır, bu karpuz büyük.' }
         },
         options: [
             { id: 2310, word: "karpuz", imageUrl: "/images/2310.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" },
@@ -145,7 +145,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi kupa büyük?', correct: 'Evet! Kupa büyüktür.', wrong: 'Hayır, bu kupa küçüktür.' }
+            tr: { question: 'Hangi kupa büyük?', correct: 'Evet! Bu kupa büyük.', wrong: 'Hayır, bu kupa küçük.' }
         },
         options: [
             { id: 2311, word: "kupa", imageUrl: "/images/2311.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -158,7 +158,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi kupa küçük?', correct: 'Evet! Kupa küçüktür.', wrong: 'Hayır, bu kupa büyüktür.' }
+            tr: { question: 'Hangi kupa küçük?', correct: 'Evet! Bu kupa küçük.', wrong: 'Hayır, bu kupa büyük.' }
         },
         options: [
             { id: 2312, word: "kupa", imageUrl: "/images/2312.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -172,7 +172,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi kutu büyük?', correct: 'Evet! Kutu büyüktür.', wrong: 'Hayır, bu kutu küçüktür.' }
+            tr: { question: 'Hangi kutu büyük?', correct: 'Evet! Bu kutu büyük.', wrong: 'Hayır, bu kutu küçük.' }
         },
         options: [
             { id: 2313, word: "kutu", imageUrl: "/images/2313.webp", isCorrect: true, audioKey: "kutu", spokenText: "kutu" },
@@ -185,7 +185,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi kutu küçük?', correct: 'Evet! Kutu küçüktür.', wrong: 'Hayır, bu kutu büyüktür.' }
+            tr: { question: 'Hangi kutu küçük?', correct: 'Evet! Bu kutu küçük.', wrong: 'Hayır, bu kutu büyük.' }
         },
         options: [
             { id: 2314, word: "kutu", imageUrl: "/images/2314.webp", isCorrect: true, audioKey: "kutu", spokenText: "kutu" },
@@ -199,7 +199,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi tencere büyük?', correct: 'Evet! Tencere büyüktür.', wrong: 'Hayır, bu tencere küçüktür.' }
+            tr: { question: 'Hangi tencere büyük?', correct: 'Evet! Bu tencere büyük.', wrong: 'Hayır, bu tencere küçük.' }
         },
         options: [
             { id: 2315, word: "tencere", imageUrl: "/images/2315.webp", isCorrect: true, audioKey: "tencere", spokenText: "tencere" },
@@ -212,7 +212,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi tencere küçük?', correct: 'Evet! Tencere küçüktür.', wrong: 'Hayır, bu tencere büyüktür.' }
+            tr: { question: 'Hangi tencere küçük?', correct: 'Evet! Bu tencere küçük.', wrong: 'Hayır, bu tencere büyük.' }
         },
         options: [
             { id: 2316, word: "tencere", imageUrl: "/images/2316.webp", isCorrect: true, audioKey: "tencere", spokenText: "tencere" },
@@ -226,7 +226,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi top büyük?', correct: 'Evet! Top büyüktür.', wrong: 'Hayır, bu top küçüktür.' }
+            tr: { question: 'Hangi top büyük?', correct: 'Evet! Bu top büyük.', wrong: 'Hayır, bu top küçük.' }
         },
         options: [
             { id: 2317, word: "top", imageUrl: "/images/2317.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -239,7 +239,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi top küçük?', correct: 'Evet! Top küçüktür.', wrong: 'Hayır, bu top büyüktür.' }
+            tr: { question: 'Hangi top küçük?', correct: 'Evet! Bu top küçük.', wrong: 'Hayır, bu top büyük.' }
         },
         options: [
             { id: 2318, word: "top", imageUrl: "/images/2318.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -253,7 +253,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi yastık büyük?', correct: 'Evet! Yastık büyüktür.', wrong: 'Hayır, bu yastık küçüktür.' }
+            tr: { question: 'Hangi yastık büyük?', correct: 'Evet! Bu yastık büyük.', wrong: 'Hayır, bu yastık küçük.' }
         },
         options: [
             { id: 2320, word: "yastık", imageUrl: "/images/2320.webp", isCorrect: true, audioKey: "yastık", spokenText: "yastık" },
@@ -266,7 +266,7 @@ export const bigSmallDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BigSmall,
         speech: {
-            tr: { question: 'Hangi yastık küçük?', correct: 'Evet! Yastık küçüktür.', wrong: 'Hayır, bu yastık büyüktür.' }
+            tr: { question: 'Hangi yastık küçük?', correct: 'Evet! Bu yastık küçük.', wrong: 'Hayır, bu yastık büyük.' }
         },
         options: [
             { id: 2321, word: "yastık", imageUrl: "/images/2321.webp", isCorrect: true, audioKey: "yastık", spokenText: "yastık" },

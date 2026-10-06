@@ -2,7 +2,7 @@
   "fiveWOneH": {
     "q_who_to_when_sick": {
       "correct": "Evet! Hastalanınca doktora gideriz.",
-      "wrong": "Hayır, hastalanınca oraya gitmeyiz."
+      "wrong": "Hayır, hastalanınca ona gitmeyiz."
     },
     "q_who_to_when_fire": {
       "correct": "Doğru! Yangın çıkınca itfaiyeyi ararız.",
@@ -57,7 +57,7 @@
       "wrong": "Hayır, o değil."
     },
     "q_who_is_driving_car": {
-      "correct": "Evet! Babası arabayı sürüyor.",
+      "correct": "Evet! Baba arabayı sürüyor.",
       "wrong": "Hayır, o değil."
     },
     "q_who_plows_field_and_grows_vegetables": {
@@ -209,7 +209,7 @@
       "wrong": "Hayır, oraya gitmeyiz."
     },
     "q_where_is_place_with_lots_of_books": {
-      "correct": "Evet! Kütüphanedir.",
+      "correct": "Evet! Burası kütüphane.",
       "wrong": "Hayır, orası değil."
     },
     "q_where_camels_usually_live": {
@@ -237,8 +237,8 @@
       "wrong": "Hayır, orada pişirmez."
     },
     "q_where_set_up_tent_for_camping": {
-      "correct": "Evet! Ormanda kamp yaparız.",
-      "wrong": "Hayır, orada kamp yapmayız."
+      "correct": "Evet! Çadırımızı ormana kurarız.",
+      "wrong": "Hayır, oraya kurmayız."
     },
     "q_when_use_umbrella": {
       "correct": "Evet! Yağmurda şemsiye kullanırız.",
@@ -297,8 +297,8 @@
       "wrong": "Hayır, o zaman açmayız."
     },
     "q_when_wear_gloves_when_hands_cold": {
-      "correct": "Evet! Karlı havada giyeriz.",
-      "wrong": "Hayır, o zaman giymeyiz."
+      "correct": "Evet! Soğuk havada takarız.",
+      "wrong": "Hayır, o zaman takmayız."
     },
     "q_when_usually_wear_shorts": {
       "correct": "Evet! Sıcak havada giyeriz.",
@@ -381,11 +381,11 @@
       "wrong": "Hayır, onunla açmayız."
     },
     "q_how_baby_feels": {
-      "correct": "Doğru! Bebek üzgün hissediyor.",
+      "correct": "Doğru! Bebek üzgün.",
       "wrong": "Hayır, bebek öyle hissetmiyor."
     },
     "q_how_child_feels": {
-      "correct": "Doğru! Çocuk mutlu hissediyor.",
+      "correct": "Doğru! Çocuk mutlu.",
       "wrong": "Hayır, çocuk öyle hissetmiyor."
     },
     "q_how_reach_high_place": {

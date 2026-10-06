@@ -20,7 +20,7 @@ export const fiveWOneHData: ConceptRound[] = [
     question: 'Hastalanınca kime gideriz?',
     questionAudioKey: 'q_who_to_when_sick',
     speech: {
-      tr: { correct: 'Evet! Hastalanınca doktora gideriz.', wrong: 'Hayır, hastalanınca oraya gitmeyiz.' },
+      tr: { correct: 'Evet! Hastalanınca doktora gideriz.', wrong: 'Hayır, hastalanınca ona gitmeyiz.' },
       en: { correct: 'Yes! We go to the doctor when we are sick.', wrong: "No, that's not where we go when we are sick." }
     },
     questionItem: meta(784, 'hasta çocuk'),
@@ -244,7 +244,7 @@ export const fiveWOneHData: ConceptRound[] = [
     question: 'Arabayı süren kimdir?',
     questionAudioKey: 'q_who_is_driving_car',
     speech: {
-      tr: { correct: 'Evet! Babası arabayı sürüyor.', wrong: 'Hayır, o değil.' },
+      tr: { correct: 'Evet! Baba arabayı sürüyor.', wrong: 'Hayır, o değil.' },
       en: { correct: 'Yes! His father is driving the car.', wrong: 'No, not them.' }
     },
     questionItem: meta(1, 'araba'),
@@ -341,7 +341,7 @@ export const fiveWOneHData: ConceptRound[] = [
         question: 'Dişlerimizi fırçalarken fırçanın üzerine ne süreriz?',
         questionAudioKey: 'q_what_brush_teeth_with',
         speech: {
-          tr: { correct: 'Evet! Dişlerin fırçasının üzerine diş macunu süreriz.', wrong: 'Hayır, fırçanın üzerine o sürülmez.' },
+          tr: { correct: 'Evet! Diş fırçasının üzerine diş macunu süreriz.', wrong: 'Hayır, fırçanın üzerine o sürülmez.' },
           en: { correct: 'Yes! We put toothpaste on the toothbrush when we brush our teeth.', wrong: "No, we don't put that on the toothbrush." }
         },
         questionItem: meta(441, 'diş fırçası'),
@@ -370,10 +370,10 @@ export const fiveWOneHData: ConceptRound[] = [
       {
         id: 323,
         activityType: ActivityType.FiveWOneH,
-        question: 'Yanlış yazdığımızda ne ile sileriz?',
+        question: 'Yanlış yazdığımızda neyle sileriz?',
         questionAudioKey: 'q_what_erase_with',
         speech: {
-          tr: { correct: 'Evet! Yanlış yazdığımızda silgi ile sileriz.', wrong: 'Hayır, onunla silmeyiz.' },
+          tr: { correct: 'Evet! Yanlış yazdığımızda silgiyle sileriz.', wrong: 'Hayır, onunla silmeyiz.' },
           en: { correct: 'Yes! We erase with an eraser when we write wrong.', wrong: "No, we don't erase with that." }
         },
         questionItem: meta(121, 'yazı yazan kalem'),
@@ -386,7 +386,7 @@ export const fiveWOneHData: ConceptRound[] = [
       {
         id: 324,
         activityType: ActivityType.FiveWOneH,
-        question: 'Banyo yaptıktan sonra ne ile kurulanırız?',
+        question: 'Banyo yaptıktan sonra neyle kurulanırız?',
         questionAudioKey: 'q_what_dry_after_bath',
         speech: {
           tr: { correct: 'Doğru! Banyodan sonra havluyla kurulanırız.', wrong: 'Hayır, onunla kurulanmayız.' },
@@ -402,7 +402,7 @@ export const fiveWOneHData: ConceptRound[] = [
       {
         id: 325,
         activityType: ActivityType.FiveWOneH,
-        question: 'Tavuklar bize kahvaltıda yediğimiz ne verir?',
+        question: 'Tavuklar bize ne verir?',
         questionAudioKey: 'q_what_chickens_give_us_for_breakfast',
         speech: {
           tr: { correct: 'Evet! Tavuklar yumurta verir.', wrong: 'Hayır, onu vermezler.' },
@@ -453,7 +453,7 @@ export const fiveWOneHData: ConceptRound[] = [
         question: 'Saçımızı bağlamak için ne kullanırız?',
         questionAudioKey: 'q_what_use_to_tie_hair',
         speech: {
-          tr: { correct: 'Evet! Saç tokası ile saçımızı bağlarız.', wrong: 'Hayır, onu saç için kullanmayız.' },
+          tr: { correct: 'Evet! Saçımızı saç tokasıyla bağlarız.', wrong: 'Hayır, onu saç için kullanmayız.' },
           en: { correct: 'Yes! We use a hair clip to tie hair.', wrong: 'No, that is not correct.' }
         },
         questionItem: meta(662, 'toplu saç'),
@@ -594,7 +594,7 @@ export const fiveWOneHData: ConceptRound[] = [
       {
         id: 337,
         activityType: ActivityType.FiveWOneH,
-        question: 'Çok sevdiğimiz, çıtır çıtır yenen atıştırmalık, patatesten yapılan nedir?',
+        question: 'Patatesten yapılan, çıtır çıtır yenen atıştırmalık nedir?',
         questionAudioKey: 'q_what_is_crispy_snack_made_of_potatoes',
         speech: {
           tr: { correct: 'Evet! Cips patatesten yapılır.', wrong: 'Hayır, o değil.' },
@@ -610,7 +610,7 @@ export const fiveWOneHData: ConceptRound[] = [
       {
         id: 338,
         activityType: ActivityType.FiveWOneH,
-        question: 'Suyu ne ile içeriz?',
+        question: 'Suyu neyle içeriz?',
         questionAudioKey: 'q_what_drink_water_with',
         speech: {
           tr: { correct: 'Evet! Suyu bardakla içeriz.', wrong: 'Hayır, onunla içmeyiz.' },
@@ -642,7 +642,7 @@ export const fiveWOneHData: ConceptRound[] = [
       {
         id: 340,
         activityType: ActivityType.FiveWOneH,
-        question: 'Bebekler sütü ne ile içer?',
+        question: 'Bebekler sütü neyle içer?',
         questionAudioKey: 'q_what_babies_drink_milk_with',
         speech: {
           tr: { correct: 'Evet! Bebekler sütü biberonla içer.', wrong: 'Hayır, onunla içmezler.' },
@@ -854,7 +854,7 @@ export const fiveWOneHData: ConceptRound[] = [
             question: 'Bir sürü kitabın olduğu ve kitap okuyabildiğimiz yer neresidir?',
             questionAudioKey: 'q_where_is_place_with_lots_of_books',
             speech: {
-              tr: { correct: 'Evet! Kütüphanedir.', wrong: 'Hayır, orası değil.' },
+              tr: { correct: 'Evet! Burası kütüphane.', wrong: 'Hayır, orası değil.' },
               en: { correct: 'Yes! It’s the library.', wrong: 'No, not there.' }
             },
             questionItem: meta(36, 'kitap'),
@@ -966,7 +966,7 @@ export const fiveWOneHData: ConceptRound[] = [
             question: 'Kamp yapmak için çadırımızı nereye kurarız?',
             questionAudioKey: 'q_where_set_up_tent_for_camping',
             speech: {
-              tr: { correct: 'Evet! Ormanda kamp yaparız.', wrong: 'Hayır, orada kamp yapmayız.' },
+              tr: { correct: 'Evet! Çadırımızı ormana kurarız.', wrong: 'Hayır, oraya kurmayız.' },
               en: { correct: 'Yes! We camp in the forest.', wrong: 'No, we don’t camp there.' }
             },
             questionItem: meta(179, 'çadır'),
@@ -983,7 +983,7 @@ export const fiveWOneHData: ConceptRound[] = [
                 question: 'Şemsiyeyi ne zaman kullanırız?',
                 questionAudioKey: 'q_when_use_umbrella',
                 speech: {
-                  tr: { correct: 'Evet! Yağmurda şemsiye kullanırız.', wrong: 'Hayır, o zamanda şemsiye kullanmayız.' },
+                  tr: { correct: 'Evet! Yağmurda şemsiye kullanırız.', wrong: 'Hayır, o zaman şemsiye kullanmayız.' },
                   en: { correct: 'Yes! We use an umbrella when it rains.', wrong: "No, we don't use an umbrella then." }
                 },
                 questionItem: meta(157, 'şemsiye'),
@@ -1060,7 +1060,7 @@ export const fiveWOneHData: ConceptRound[] = [
               {
                 id: 366,
                 activityType: ActivityType.FiveWOneH,
-                question: 'Başımız üşüdüğünde, bereyi ne zaman takarız?',
+                question: 'Bereyi ne zaman takarız?',
                 questionAudioKey: 'q_when_wear_beanie_when_cold',
                 speech: {
                   tr: { correct: 'Doğru! Karlı havada bere takarız.', wrong: 'Hayır, o zaman bere takmayız.' },
@@ -1204,10 +1204,10 @@ export const fiveWOneHData: ConceptRound[] = [
               {
                 id: 375,
                 activityType: ActivityType.FiveWOneH,
-                question: 'Ellerimiz üşüdüğünde eldivenlerimizi ne zaman giyeriz?',
+                question: 'Eldivenlerimizi ne zaman takarız?',
                 questionAudioKey: 'q_when_wear_gloves_when_hands_cold',
                 speech: {
-                  tr: { correct: 'Evet! Karlı havada giyeriz.', wrong: 'Hayır, o zaman giymeyiz.' },
+                  tr: { correct: 'Evet! Soğuk havada takarız.', wrong: 'Hayır, o zaman takmayız.' },
                   en: { correct: 'Yes! We wear them when it’s snowy.', wrong: 'No, we don’t wear them then.' }
                 },
                 questionItem: meta(272, 'eldivenler'),
@@ -1333,10 +1333,10 @@ export const fiveWOneHData: ConceptRound[] = [
                   {
                     id: 383,
                     activityType: ActivityType.FiveWOneH,
-                    question: 'Kırışık elbiseler neden bu kadar düzgün hale geldi?',
+                    question: 'Kırışık elbise neden düzgün oldu?',
                     questionAudioKey: 'q_why_wrinkled_clothes_became_smooth',
                     speech: {
-                      tr: { correct: 'Evet! Ütülendiği için düzgün hale geldi.', wrong: 'Hayır, ondan değil.' },
+                      tr: { correct: 'Evet! Ütülendiği için düzgün oldu.', wrong: 'Hayır, ondan değil.' },
                       en: { correct: 'Yes! They became smooth because they were ironed.', wrong: 'No, not because of that.' }
                     },
                     questionItem: meta(255, 'düzgün gömlek'),
@@ -1480,7 +1480,7 @@ export const fiveWOneHData: ConceptRound[] = [
                     question: 'Kirli tabaklar neden temizlendi?',
                     questionAudioKey: 'q_why_dirty_dishes_are_clean',
                     speech: {
-                      tr: { correct: 'Evet! Bulaşık makinesinde yıkandığı için temizlendi.', wrong: 'Hayır, ondan temizlenmedi.' },
+                      tr: { correct: 'Evet! Bulaşık makinesinde yıkandıkları için temizlendi.', wrong: 'Hayır, ondan temizlenmedi.' },
                       en: { correct: 'Yes! They were cleaned because they were washed in the dishwasher.', wrong: 'No, they weren’t cleaned by that.' }
                     },
                     questionItem: meta(153, 'temiz tabak'),
@@ -1545,7 +1545,7 @@ export const fiveWOneHData: ConceptRound[] = [
                         question: 'Bu bebek kendini nasıl hissediyor?',
                         questionAudioKey: 'q_how_baby_feels',
                         speech: {
-                          tr: { correct: 'Doğru! Bebek üzgün hissediyor.', wrong: 'Hayır, bebek öyle hissetmiyor.' },
+                          tr: { correct: 'Doğru! Bebek üzgün.', wrong: 'Hayır, bebek öyle hissetmiyor.' },
                           en: { correct: 'Correct! The baby feels sad.', wrong: "No, the baby doesn’t feel that way." }
                         },
                         questionItem: meta(752, 'ağlayan bebek'),
@@ -1625,7 +1625,7 @@ export const fiveWOneHData: ConceptRound[] = [
                         question: 'Bu çocuk kendini nasıl hissediyor?',
                         questionAudioKey: 'q_how_child_feels',
                         speech: {
-                          tr: { correct: 'Doğru! Çocuk mutlu hissediyor.', wrong: 'Hayır, çocuk öyle hissetmiyor.' },
+                          tr: { correct: 'Doğru! Çocuk mutlu.', wrong: 'Hayır, çocuk öyle hissetmiyor.' },
                           en: { correct: 'Correct! The child feels happy.', wrong: "No, the child doesn’t feel that way." }
                         },
                         questionItem: meta(500, 'gülen çocuk'),

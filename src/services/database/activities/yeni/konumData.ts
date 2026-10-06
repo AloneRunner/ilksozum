@@ -11,7 +11,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi top kutunun içinde?', correct: 'Evet! Top kutunun içindedir.', wrong: 'Hayır, top kutunun dışındadır.' }
+            tr: { question: 'Hangi top kutunun içinde?', correct: 'Evet! Bu top kutunun içinde.', wrong: 'Hayır, bu top kutunun dışında.' }
         },
         options: [
             { id: 2027, word: "top", imageUrl: "/images/2027.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -24,7 +24,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi top kutunun dışında?', correct: 'Evet! Top kutunun dışındadır.', wrong: 'Hayır, top kutunun içindedir.' }
+            tr: { question: 'Hangi top kutunun dışında?', correct: 'Evet! Bu top kutunun dışında.', wrong: 'Hayır, bu top kutunun içinde.' }
         },
         options: [
             { id: 2026, word: "top", imageUrl: "/images/2026.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -38,7 +38,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi ayı sepetin içinde?', correct: 'Evet! Ayı sepetin içindedir.', wrong: 'Hayır, ayı sepetin dışındadır.' }
+            tr: { question: 'Hangi ayı sepetin içinde?', correct: 'Evet! Bu ayı sepetin içinde.', wrong: 'Hayır, bu ayı sepetin dışında.' }
         },
         options: [
             { id: 2039, word: "ayı", imageUrl: "/images/2039.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -51,7 +51,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi ayı sepetin dışında?', correct: 'Evet! Ayı sepetin dışındadır.', wrong: 'Hayır, ayı sepetin içindedir.' }
+            tr: { question: 'Hangi ayı sepetin dışında?', correct: 'Evet! Bu ayı sepetin dışında.', wrong: 'Hayır, bu ayı sepetin içinde.' }
         },
         options: [
             { id: 2038, word: "ayı", imageUrl: "/images/2038.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -65,7 +65,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi araba kovanın içinde?', correct: 'Evet! Araba kovanın içindedir.', wrong: 'Hayır, araba kovanın dışındadır.' }
+            tr: { question: 'Hangi araba kovanın içinde?', correct: 'Evet! Bu araba kovanın içinde.', wrong: 'Hayır, bu araba kovanın dışında.' }
         },
         options: [
             { id: 2051, word: "araba", imageUrl: "/images/2051.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -78,7 +78,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi araba kovanın dışında?', correct: 'Evet! Araba kovanın dışındadır.', wrong: 'Hayır, araba kovanın içindedir.' }
+            tr: { question: 'Hangi araba kovanın dışında?', correct: 'Evet! Bu araba kovanın dışında.', wrong: 'Hayır, bu araba kovanın içinde.' }
         },
         options: [
             { id: 2050, word: "araba", imageUrl: "/images/2050.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -92,7 +92,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi elma kasenin içinde?', correct: 'Evet! Elma kasenin içindedir.', wrong: 'Hayır, elma kasenin dışındadır.' }
+            tr: { question: 'Hangi elma kasenin içinde?', correct: 'Evet! Bu elma kasenin içinde.', wrong: 'Hayır, bu elma kasenin dışında.' }
         },
         options: [
             { id: 2063, word: "elma", imageUrl: "/images/2063.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -105,7 +105,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi elma kasenin dışında?', correct: 'Evet! Elma kasenin dışındadır.', wrong: 'Hayır, elma kasenin içindedir.' }
+            tr: { question: 'Hangi elma kasenin dışında?', correct: 'Evet! Bu elma kasenin dışında.', wrong: 'Hayır, bu elma kasenin içinde.' }
         },
         options: [
             { id: 2062, word: "elma", imageUrl: "/images/2062.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -119,7 +119,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi kalem kalemliğin içinde?', correct: 'Evet! Kalem kalemliğin içindedir.', wrong: 'Hayır, kalem kalemliğin dışındadır.' }
+            tr: { question: 'Hangi kalem kalemliğin içinde?', correct: 'Evet! Bu kalem kalemliğin içinde.', wrong: 'Hayır, bu kalem kalemliğin dışında.' }
         },
         options: [
             { id: 2075, word: "kalem", imageUrl: "/images/2075.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -132,7 +132,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi kalem kalemliğin dışında?', correct: 'Evet! Kalem kalemliğin dışındadır.', wrong: 'Hayır, kalem kalemliğin içindedir.' }
+            tr: { question: 'Hangi kalem kalemliğin dışında?', correct: 'Evet! Bu kalem kalemliğin dışında.', wrong: 'Hayır, bu kalem kalemliğin içinde.' }
         },
         options: [
             { id: 2074, word: "kalem", imageUrl: "/images/2074.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -146,7 +146,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi kedi yatağın içinde?', correct: 'Evet! Kedi yatağın içindedir.', wrong: 'Hayır, kedi yatağın dışındadır.' }
+            tr: { question: 'Hangi kedi yatağın içinde?', correct: 'Evet! Bu kedi yatağın içinde.', wrong: 'Hayır, bu kedi yatağın dışında.' }
         },
         options: [
             { id: 2087, word: "kedi", imageUrl: "/images/2087.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -159,7 +159,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi kedi yatağın dışında?', correct: 'Evet! Kedi yatağın dışındadır.', wrong: 'Hayır, kedi yatağın içindedir.' }
+            tr: { question: 'Hangi kedi yatağın dışında?', correct: 'Evet! Bu kedi yatağın dışında.', wrong: 'Hayır, bu kedi yatağın içinde.' }
         },
         options: [
             { id: 2086, word: "kedi", imageUrl: "/images/2086.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -173,7 +173,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi kuş kafesin içinde?', correct: 'Evet! Kuş kafesin içindedir.', wrong: 'Hayır, kuş kafesin dışındadır.' }
+            tr: { question: 'Hangi kuş kafesin içinde?', correct: 'Evet! Bu kuş kafesin içinde.', wrong: 'Hayır, bu kuş kafesin dışında.' }
         },
         options: [
             { id: 2099, word: "kuş", imageUrl: "/images/2099.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" },
@@ -186,7 +186,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi kuş kafesin dışında?', correct: 'Evet! Kuş kafesin dışındadır.', wrong: 'Hayır, kuş kafesin içindedir.' }
+            tr: { question: 'Hangi kuş kafesin dışında?', correct: 'Evet! Bu kuş kafesin dışında.', wrong: 'Hayır, bu kuş kafesin içinde.' }
         },
         options: [
             { id: 2098, word: "kuş", imageUrl: "/images/2098.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" },
@@ -200,7 +200,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi bebek beşiğin içinde?', correct: 'Evet! Bebek beşiğin içindedir.', wrong: 'Hayır, bebek beşiğin dışındadır.' }
+            tr: { question: 'Hangi bebek beşiğin içinde?', correct: 'Evet! Bu bebek beşiğin içinde.', wrong: 'Hayır, bu bebek beşiğin dışında.' }
         },
         options: [
             { id: 2111, word: "bebek", imageUrl: "/images/2111.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
@@ -213,7 +213,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi bebek beşiğin dışında?', correct: 'Evet! Bebek beşiğin dışındadır.', wrong: 'Hayır, bebek beşiğin içindedir.' }
+            tr: { question: 'Hangi bebek beşiğin dışında?', correct: 'Evet! Bu bebek beşiğin dışında.', wrong: 'Hayır, bu bebek beşiğin içinde.' }
         },
         options: [
             { id: 2110, word: "bebek", imageUrl: "/images/2110.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
@@ -227,7 +227,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi dinozor kutunun içinde?', correct: 'Evet! Dinozor kutunun içindedir.', wrong: 'Hayır, dinozor kutunun dışındadır.' }
+            tr: { question: 'Hangi dinozor kutunun içinde?', correct: 'Evet! Bu dinozor kutunun içinde.', wrong: 'Hayır, bu dinozor kutunun dışında.' }
         },
         options: [
             { id: 2123, word: "dinozor", imageUrl: "/images/2123.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
@@ -240,7 +240,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi dinozor kutunun dışında?', correct: 'Evet! Dinozor kutunun dışındadır.', wrong: 'Hayır, dinozor kutunun içindedir.' }
+            tr: { question: 'Hangi dinozor kutunun dışında?', correct: 'Evet! Bu dinozor kutunun dışında.', wrong: 'Hayır, bu dinozor kutunun içinde.' }
         },
         options: [
             { id: 2122, word: "dinozor", imageUrl: "/images/2122.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
@@ -254,7 +254,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi ördek sepetin içinde?', correct: 'Evet! Ördek sepetin içindedir.', wrong: 'Hayır, ördek sepetin dışındadır.' }
+            tr: { question: 'Hangi ördek sepetin içinde?', correct: 'Evet! Bu ördek sepetin içinde.', wrong: 'Hayır, bu ördek sepetin dışında.' }
         },
         options: [
             { id: 2134, word: "ördek", imageUrl: "/images/2134.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
@@ -267,7 +267,7 @@ export const insideOutsideDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InsideOutside,
         speech: {
-            tr: { question: 'Hangi ördek sepetin dışında?', correct: 'Evet! Ördek sepetin dışındadır.', wrong: 'Hayır, ördek sepetin içindedir.' }
+            tr: { question: 'Hangi ördek sepetin dışında?', correct: 'Evet! Bu ördek sepetin dışında.', wrong: 'Hayır, bu ördek sepetin içinde.' }
         },
         options: [
             { id: 2133, word: "ördek", imageUrl: "/images/2133.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
@@ -284,7 +284,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi top masanın üstünde?', correct: 'Evet! Top masanın üstündedir.', wrong: 'Hayır, top masanın altındadır.' }
+            tr: { question: 'Hangi top masanın üstünde?', correct: 'Evet! Bu top masanın üstünde.', wrong: 'Hayır, bu top masanın altında.' }
         },
         options: [
             { id: 2029, word: "top", imageUrl: "/images/2029.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -297,7 +297,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi top masanın altında?', correct: 'Evet! Top masanın altındadır.', wrong: 'Hayır, top masanın üstündedir.' }
+            tr: { question: 'Hangi top masanın altında?', correct: 'Evet! Bu top masanın altında.', wrong: 'Hayır, bu top masanın üstünde.' }
         },
         options: [
             { id: 2021, word: "top", imageUrl: "/images/2021.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -311,7 +311,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi ayı sandalyenin üstünde?', correct: 'Evet! Ayı sandalyenin üstündedir.', wrong: 'Hayır, ayı sandalyenin altındadır.' }
+            tr: { question: 'Hangi ayı sandalyenin üstünde?', correct: 'Evet! Bu ayı sandalyenin üstünde.', wrong: 'Hayır, bu ayı sandalyenin altında.' }
         },
         options: [
             { id: 2041, word: "ayı", imageUrl: "/images/2041.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -324,7 +324,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi ayı sandalyenin altında?', correct: 'Evet! Ayı sandalyenin altındadır.', wrong: 'Hayır, ayı sandalyenin üstündedir.' }
+            tr: { question: 'Hangi ayı sandalyenin altında?', correct: 'Evet! Bu ayı sandalyenin altında.', wrong: 'Hayır, bu ayı sandalyenin üstünde.' }
         },
         options: [
             { id: 2033, word: "ayı", imageUrl: "/images/2033.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -338,7 +338,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi araba sehpanın üstünde?', correct: 'Evet! Araba sehpanın üstündedir.', wrong: 'Hayır, araba sehpanın altındadır.' }
+            tr: { question: 'Hangi araba sehpanın üstünde?', correct: 'Evet! Bu araba sehpanın üstünde.', wrong: 'Hayır, bu araba sehpanın altında.' }
         },
         options: [
             { id: 2053, word: "araba", imageUrl: "/images/2053.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -351,7 +351,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi araba sehpanın altında?', correct: 'Evet! Araba sehpanın altındadır.', wrong: 'Hayır, araba sehpanın üstündedir.' }
+            tr: { question: 'Hangi araba sehpanın altında?', correct: 'Evet! Bu araba sehpanın altında.', wrong: 'Hayır, bu araba sehpanın üstünde.' }
         },
         options: [
             { id: 2045, word: "araba", imageUrl: "/images/2045.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -365,7 +365,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi elma taburenin üstünde?', correct: 'Evet! Elma taburenin üstündedir.', wrong: 'Hayır, elma taburenin altındadır.' }
+            tr: { question: 'Hangi elma taburenin üstünde?', correct: 'Evet! Bu elma taburenin üstünde.', wrong: 'Hayır, bu elma taburenin altında.' }
         },
         options: [
             { id: 2065, word: "elma", imageUrl: "/images/2065.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -378,7 +378,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi elma taburenin altında?', correct: 'Evet! Elma taburenin altındadır.', wrong: 'Hayır, elma taburenin üstündedir.' }
+            tr: { question: 'Hangi elma taburenin altında?', correct: 'Evet! Bu elma taburenin altında.', wrong: 'Hayır, bu elma taburenin üstünde.' }
         },
         options: [
             { id: 2057, word: "elma", imageUrl: "/images/2057.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -392,7 +392,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi kalem masanın üstünde?', correct: 'Evet! Kalem masanın üstündedir.', wrong: 'Hayır, kalem masanın altındadır.' }
+            tr: { question: 'Hangi kalem masanın üstünde?', correct: 'Evet! Bu kalem masanın üstünde.', wrong: 'Hayır, bu kalem masanın altında.' }
         },
         options: [
             { id: 2077, word: "kalem", imageUrl: "/images/2077.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -405,7 +405,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi kalem masanın altında?', correct: 'Evet! Kalem masanın altındadır.', wrong: 'Hayır, kalem masanın üstündedir.' }
+            tr: { question: 'Hangi kalem masanın altında?', correct: 'Evet! Bu kalem masanın altında.', wrong: 'Hayır, bu kalem masanın üstünde.' }
         },
         options: [
             { id: 2069, word: "kalem", imageUrl: "/images/2069.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -419,7 +419,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi kedi bankın üstünde?', correct: 'Evet! Kedi bankın üstündedir.', wrong: 'Hayır, kedi bankın altındadır.' }
+            tr: { question: 'Hangi kedi bankın üstünde?', correct: 'Evet! Bu kedi bankın üstünde.', wrong: 'Hayır, bu kedi bankın altında.' }
         },
         options: [
             { id: 2089, word: "kedi", imageUrl: "/images/2089.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -432,7 +432,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi kedi bankın altında?', correct: 'Evet! Kedi bankın altındadır.', wrong: 'Hayır, kedi bankın üstündedir.' }
+            tr: { question: 'Hangi kedi bankın altında?', correct: 'Evet! Bu kedi bankın altında.', wrong: 'Hayır, bu kedi bankın üstünde.' }
         },
         options: [
             { id: 2081, word: "kedi", imageUrl: "/images/2081.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -446,7 +446,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi kuş sehpanın üstünde?', correct: 'Evet! Kuş sehpanın üstündedir.', wrong: 'Hayır, kuş sehpanın altındadır.' }
+            tr: { question: 'Hangi kuş sehpanın üstünde?', correct: 'Evet! Bu kuş sehpanın üstünde.', wrong: 'Hayır, bu kuş sehpanın altında.' }
         },
         options: [
             { id: 2101, word: "kuş", imageUrl: "/images/2101.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" },
@@ -459,7 +459,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi kuş sehpanın altında?', correct: 'Evet! Kuş sehpanın altındadır.', wrong: 'Hayır, kuş sehpanın üstündedir.' }
+            tr: { question: 'Hangi kuş sehpanın altında?', correct: 'Evet! Bu kuş sehpanın altında.', wrong: 'Hayır, bu kuş sehpanın üstünde.' }
         },
         options: [
             { id: 2093, word: "kuş", imageUrl: "/images/2093.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" },
@@ -473,7 +473,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi bebek sandalyenin üstünde?', correct: 'Evet! Bebek sandalyenin üstündedir.', wrong: 'Hayır, bebek sandalyenin altındadır.' }
+            tr: { question: 'Hangi bebek sandalyenin üstünde?', correct: 'Evet! Bu bebek sandalyenin üstünde.', wrong: 'Hayır, bu bebek sandalyenin altında.' }
         },
         options: [
             { id: 2113, word: "bebek", imageUrl: "/images/2113.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
@@ -486,7 +486,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi bebek sandalyenin altında?', correct: 'Evet! Bebek sandalyenin altındadır.', wrong: 'Hayır, bebek sandalyenin üstündedir.' }
+            tr: { question: 'Hangi bebek sandalyenin altında?', correct: 'Evet! Bu bebek sandalyenin altında.', wrong: 'Hayır, bu bebek sandalyenin üstünde.' }
         },
         options: [
             { id: 2105, word: "bebek", imageUrl: "/images/2105.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
@@ -500,7 +500,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi dinozor sehpanın üstünde?', correct: 'Evet! Dinozor sehpanın üstündedir.', wrong: 'Hayır, dinozor sehpanın altındadır.' }
+            tr: { question: 'Hangi dinozor sehpanın üstünde?', correct: 'Evet! Bu dinozor sehpanın üstünde.', wrong: 'Hayır, bu dinozor sehpanın altında.' }
         },
         options: [
             { id: 2125, word: "dinozor", imageUrl: "/images/2125.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
@@ -513,7 +513,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi dinozor sehpanın altında?', correct: 'Evet! Dinozor sehpanın altındadır.', wrong: 'Hayır, dinozor sehpanın üstündedir.' }
+            tr: { question: 'Hangi dinozor sehpanın altında?', correct: 'Evet! Bu dinozor sehpanın altında.', wrong: 'Hayır, bu dinozor sehpanın üstünde.' }
         },
         options: [
             { id: 2117, word: "dinozor", imageUrl: "/images/2117.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
@@ -527,7 +527,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi ördek taburenin üstünde?', correct: 'Evet! Ördek taburenin üstündedir.', wrong: 'Hayır, ördek taburenin altındadır.' }
+            tr: { question: 'Hangi ördek taburenin üstünde?', correct: 'Evet! Bu ördek taburenin üstünde.', wrong: 'Hayır, bu ördek taburenin altında.' }
         },
         options: [
             { id: 2136, word: "ördek", imageUrl: "/images/2136.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
@@ -540,7 +540,7 @@ export const onUnderDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OnUnder,
         speech: {
-            tr: { question: 'Hangi ördek taburenin altında?', correct: 'Evet! Ördek taburenin altındadır.', wrong: 'Hayır, ördek taburenin üstündedir.' }
+            tr: { question: 'Hangi ördek taburenin altında?', correct: 'Evet! Bu ördek taburenin altında.', wrong: 'Hayır, bu ördek taburenin üstünde.' }
         },
         options: [
             { id: 2128, word: "ördek", imageUrl: "/images/2128.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
@@ -557,7 +557,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi top kutunun önünde?', correct: 'Evet! Top kutunun önündedir.', wrong: 'Hayır, top kutunun arkasındadır.' }
+            tr: { question: 'Hangi top kutunun önünde?', correct: 'Evet! Bu top kutunun önünde.', wrong: 'Hayır, bu top kutunun arkasında.' }
         },
         options: [
             { id: 2028, word: "top", imageUrl: "/images/2028.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -570,7 +570,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi top kutunun arkasında?', correct: 'Evet! Top kutunun arkasındadır.', wrong: 'Hayır, top kutunun önündedir.' }
+            tr: { question: 'Hangi top kutunun arkasında?', correct: 'Evet! Bu top kutunun arkasında.', wrong: 'Hayır, bu top kutunun önünde.' }
         },
         options: [
             { id: 2024, word: "top", imageUrl: "/images/2024.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -584,7 +584,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi ayı sepetin önünde?', correct: 'Evet! Ayı sepetin önündedir.', wrong: 'Hayır, ayı sepetin arkasındadır.' }
+            tr: { question: 'Hangi ayı sepetin önünde?', correct: 'Evet! Bu ayı sepetin önünde.', wrong: 'Hayır, bu ayı sepetin arkasında.' }
         },
         options: [
             { id: 2040, word: "ayı", imageUrl: "/images/2040.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -597,7 +597,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi ayı sepetin arkasında?', correct: 'Evet! Ayı sepetin arkasındadır.', wrong: 'Hayır, ayı sepetin önündedir.' }
+            tr: { question: 'Hangi ayı sepetin arkasında?', correct: 'Evet! Bu ayı sepetin arkasında.', wrong: 'Hayır, bu ayı sepetin önünde.' }
         },
         options: [
             { id: 2036, word: "ayı", imageUrl: "/images/2036.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -611,7 +611,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi araba kovanın önünde?', correct: 'Evet! Araba kovanın önündedir.', wrong: 'Hayır, araba kovanın arkasındadır.' }
+            tr: { question: 'Hangi araba kovanın önünde?', correct: 'Evet! Bu araba kovanın önünde.', wrong: 'Hayır, bu araba kovanın arkasında.' }
         },
         options: [
             { id: 2052, word: "araba", imageUrl: "/images/2052.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -624,7 +624,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi araba kovanın arkasında?', correct: 'Evet! Araba kovanın arkasındadır.', wrong: 'Hayır, araba kovanın önündedir.' }
+            tr: { question: 'Hangi araba kovanın arkasında?', correct: 'Evet! Bu araba kovanın arkasında.', wrong: 'Hayır, bu araba kovanın önünde.' }
         },
         options: [
             { id: 2048, word: "araba", imageUrl: "/images/2048.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -638,7 +638,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi elma kasenin önünde?', correct: 'Evet! Elma kasenin önündedir.', wrong: 'Hayır, elma kasenin arkasındadır.' }
+            tr: { question: 'Hangi elma kasenin önünde?', correct: 'Evet! Bu elma kasenin önünde.', wrong: 'Hayır, bu elma kasenin arkasında.' }
         },
         options: [
             { id: 2064, word: "elma", imageUrl: "/images/2064.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -651,7 +651,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi elma kasenin arkasında?', correct: 'Evet! Elma kasenin arkasındadır.', wrong: 'Hayır, elma kasenin önündedir.' }
+            tr: { question: 'Hangi elma kasenin arkasında?', correct: 'Evet! Bu elma kasenin arkasında.', wrong: 'Hayır, bu elma kasenin önünde.' }
         },
         options: [
             { id: 2060, word: "elma", imageUrl: "/images/2060.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -665,7 +665,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi kalem kalemliğin önünde?', correct: 'Evet! Kalem kalemliğin önündedir.', wrong: 'Hayır, kalem kalemliğin arkasındadır.' }
+            tr: { question: 'Hangi kalem kalemliğin önünde?', correct: 'Evet! Bu kalem kalemliğin önünde.', wrong: 'Hayır, bu kalem kalemliğin arkasında.' }
         },
         options: [
             { id: 2076, word: "kalem", imageUrl: "/images/2076.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -678,7 +678,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi kalem kalemliğin arkasında?', correct: 'Evet! Kalem kalemliğin arkasındadır.', wrong: 'Hayır, kalem kalemliğin önündedir.' }
+            tr: { question: 'Hangi kalem kalemliğin arkasında?', correct: 'Evet! Bu kalem kalemliğin arkasında.', wrong: 'Hayır, bu kalem kalemliğin önünde.' }
         },
         options: [
             { id: 2072, word: "kalem", imageUrl: "/images/2072.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -692,7 +692,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi kedi yatağın önünde?', correct: 'Evet! Kedi yatağın önündedir.', wrong: 'Hayır, kedi yatağın arkasındadır.' }
+            tr: { question: 'Hangi kedi yatağın önünde?', correct: 'Evet! Bu kedi yatağın önünde.', wrong: 'Hayır, bu kedi yatağın arkasında.' }
         },
         options: [
             { id: 2088, word: "kedi", imageUrl: "/images/2088.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -705,7 +705,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi kedi yatağın arkasında?', correct: 'Evet! Kedi yatağın arkasındadır.', wrong: 'Hayır, kedi yatağın önündedir.' }
+            tr: { question: 'Hangi kedi yatağın arkasında?', correct: 'Evet! Bu kedi yatağın arkasında.', wrong: 'Hayır, bu kedi yatağın önünde.' }
         },
         options: [
             { id: 2084, word: "kedi", imageUrl: "/images/2084.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -719,7 +719,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi kuş kafesin önünde?', correct: 'Evet! Kuş kafesin önündedir.', wrong: 'Hayır, kuş kafesin arkasındadır.' }
+            tr: { question: 'Hangi kuş kafesin önünde?', correct: 'Evet! Bu kuş kafesin önünde.', wrong: 'Hayır, bu kuş kafesin arkasında.' }
         },
         options: [
             { id: 2100, word: "kuş", imageUrl: "/images/2100.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" },
@@ -732,7 +732,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi kuş kafesin arkasında?', correct: 'Evet! Kuş kafesin arkasındadır.', wrong: 'Hayır, kuş kafesin önündedir.' }
+            tr: { question: 'Hangi kuş kafesin arkasında?', correct: 'Evet! Bu kuş kafesin arkasında.', wrong: 'Hayır, bu kuş kafesin önünde.' }
         },
         options: [
             { id: 2096, word: "kuş", imageUrl: "/images/2096.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" },
@@ -746,7 +746,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi bebek beşiğin önünde?', correct: 'Evet! Bebek beşiğin önündedir.', wrong: 'Hayır, bebek beşiğin arkasındadır.' }
+            tr: { question: 'Hangi bebek beşiğin önünde?', correct: 'Evet! Bu bebek beşiğin önünde.', wrong: 'Hayır, bu bebek beşiğin arkasında.' }
         },
         options: [
             { id: 2112, word: "bebek", imageUrl: "/images/2112.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
@@ -759,7 +759,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi bebek beşiğin arkasında?', correct: 'Evet! Bebek beşiğin arkasındadır.', wrong: 'Hayır, bebek beşiğin önündedir.' }
+            tr: { question: 'Hangi bebek beşiğin arkasında?', correct: 'Evet! Bu bebek beşiğin arkasında.', wrong: 'Hayır, bu bebek beşiğin önünde.' }
         },
         options: [
             { id: 2108, word: "bebek", imageUrl: "/images/2108.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
@@ -773,7 +773,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi dinozor kutunun önünde?', correct: 'Evet! Dinozor kutunun önündedir.', wrong: 'Hayır, dinozor kutunun arkasındadır.' }
+            tr: { question: 'Hangi dinozor kutunun önünde?', correct: 'Evet! Bu dinozor kutunun önünde.', wrong: 'Hayır, bu dinozor kutunun arkasında.' }
         },
         options: [
             { id: 2124, word: "dinozor", imageUrl: "/images/2124.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
@@ -786,7 +786,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi dinozor kutunun arkasında?', correct: 'Evet! Dinozor kutunun arkasındadır.', wrong: 'Hayır, dinozor kutunun önündedir.' }
+            tr: { question: 'Hangi dinozor kutunun arkasında?', correct: 'Evet! Bu dinozor kutunun arkasında.', wrong: 'Hayır, bu dinozor kutunun önünde.' }
         },
         options: [
             { id: 2120, word: "dinozor", imageUrl: "/images/2120.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
@@ -800,7 +800,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi ördek sepetin önünde?', correct: 'Evet! Ördek sepetin önündedir.', wrong: 'Hayır, ördek sepetin arkasındadır.' }
+            tr: { question: 'Hangi ördek sepetin önünde?', correct: 'Evet! Bu ördek sepetin önünde.', wrong: 'Hayır, bu ördek sepetin arkasında.' }
         },
         options: [
             { id: 2135, word: "ördek", imageUrl: "/images/2135.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
@@ -813,7 +813,7 @@ export const inFrontOfBehindDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.InFrontOfBehind,
         speech: {
-            tr: { question: 'Hangi ördek sepetin arkasında?', correct: 'Evet! Ördek sepetin arkasındadır.', wrong: 'Hayır, ördek sepetin önündedir.' }
+            tr: { question: 'Hangi ördek sepetin arkasında?', correct: 'Evet! Bu ördek sepetin arkasında.', wrong: 'Hayır, bu ördek sepetin önünde.' }
         },
         options: [
             { id: 2131, word: "ördek", imageUrl: "/images/2131.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
@@ -830,7 +830,7 @@ export const betweenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Between,
         speech: {
-            tr: { question: 'Hangi top iki kutunun arasında?', correct: 'Evet! Top kutuların arasındadır.', wrong: 'Hayır, top kutuların arasında değildir.' }
+            tr: { question: 'Hangi top iki kutunun arasında?', correct: 'Evet! Bu top kutuların arasında.', wrong: 'Hayır, bu top kutuların arasında değil.' }
         },
         options: [
             { id: 2023, word: "top", imageUrl: "/images/2023.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -844,7 +844,7 @@ export const betweenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Between,
         speech: {
-            tr: { question: 'Hangi ayı iki sepetin arasında?', correct: 'Evet! Ayı sepetlerin arasındadır.', wrong: 'Hayır, ayı sepetlerin arasında değildir.' }
+            tr: { question: 'Hangi ayı iki sepetin arasında?', correct: 'Evet! Bu ayı sepetlerin arasında.', wrong: 'Hayır, bu ayı sepetlerin arasında değil.' }
         },
         options: [
             { id: 2035, word: "ayı", imageUrl: "/images/2035.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -858,7 +858,7 @@ export const betweenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Between,
         speech: {
-            tr: { question: 'Hangi araba iki kovanın arasında?', correct: 'Evet! Araba kovaların arasındadır.', wrong: 'Hayır, araba kovaların arasında değildir.' }
+            tr: { question: 'Hangi araba iki kovanın arasında?', correct: 'Evet! Bu araba kovaların arasında.', wrong: 'Hayır, bu araba kovaların arasında değil.' }
         },
         options: [
             { id: 2047, word: "araba", imageUrl: "/images/2047.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -872,7 +872,7 @@ export const betweenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Between,
         speech: {
-            tr: { question: 'Hangi elma iki kasenin arasında?', correct: 'Evet! Elma kaselerin arasındadır.', wrong: 'Hayır, elma kaselerin arasında değildir.' }
+            tr: { question: 'Hangi elma iki kasenin arasında?', correct: 'Evet! Bu elma kaselerin arasında.', wrong: 'Hayır, bu elma kaselerin arasında değil.' }
         },
         options: [
             { id: 2059, word: "elma", imageUrl: "/images/2059.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -886,7 +886,7 @@ export const betweenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Between,
         speech: {
-            tr: { question: 'Hangi kalem iki kalemliğin arasında?', correct: 'Evet! Kalem kalemliklerin arasındadır.', wrong: 'Hayır, kalem kalemliklerin arasında değildir.' }
+            tr: { question: 'Hangi kalem iki kalemliğin arasında?', correct: 'Evet! Bu kalem kalemliklerin arasında.', wrong: 'Hayır, bu kalem kalemliklerin arasında değil.' }
         },
         options: [
             { id: 2071, word: "kalem", imageUrl: "/images/2071.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -900,7 +900,7 @@ export const betweenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Between,
         speech: {
-            tr: { question: 'Hangi kedi iki yatağın arasında?', correct: 'Evet! Kedi yatakların arasındadır.', wrong: 'Hayır, kedi yatakların arasında değildir.' }
+            tr: { question: 'Hangi kedi iki yatağın arasında?', correct: 'Evet! Bu kedi yatakların arasında.', wrong: 'Hayır, bu kedi yatakların arasında değil.' }
         },
         options: [
             { id: 2083, word: "kedi", imageUrl: "/images/2083.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -914,7 +914,7 @@ export const betweenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Between,
         speech: {
-            tr: { question: 'Hangi kuş iki kafesin arasında?', correct: 'Evet! Kuş kafeslerin arasındadır.', wrong: 'Hayır, kuş kafeslerin arasında değildir.' }
+            tr: { question: 'Hangi kuş iki kafesin arasında?', correct: 'Evet! Bu kuş kafeslerin arasında.', wrong: 'Hayır, bu kuş kafeslerin arasında değil.' }
         },
         options: [
             { id: 2095, word: "kuş", imageUrl: "/images/2095.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" },
@@ -928,7 +928,7 @@ export const betweenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Between,
         speech: {
-            tr: { question: 'Hangi bebek iki beşiğin arasında?', correct: 'Evet! Bebek beşiklerin arasındadır.', wrong: 'Hayır, bebek beşiklerin arasında değildir.' }
+            tr: { question: 'Hangi bebek iki beşiğin arasında?', correct: 'Evet! Bu bebek beşiklerin arasında.', wrong: 'Hayır, bu bebek beşiklerin arasında değil.' }
         },
         options: [
             { id: 2107, word: "bebek", imageUrl: "/images/2107.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
@@ -942,7 +942,7 @@ export const betweenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Between,
         speech: {
-            tr: { question: 'Hangi dinozor iki kutunun arasında?', correct: 'Evet! Dinozor kutuların arasındadır.', wrong: 'Hayır, dinozor kutuların arasında değildir.' }
+            tr: { question: 'Hangi dinozor iki kutunun arasında?', correct: 'Evet! Bu dinozor kutuların arasında.', wrong: 'Hayır, bu dinozor kutuların arasında değil.' }
         },
         options: [
             { id: 2119, word: "dinozor", imageUrl: "/images/2119.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
@@ -956,7 +956,7 @@ export const betweenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Between,
         speech: {
-            tr: { question: 'Hangi ördek iki sepetin arasında?', correct: 'Evet! Ördek sepetlerin arasındadır.', wrong: 'Hayır, ördek sepetlerin arasında değildir.' }
+            tr: { question: 'Hangi ördek iki sepetin arasında?', correct: 'Evet! Bu ördek sepetlerin arasında.', wrong: 'Hayır, bu ördek sepetlerin arasında değil.' }
         },
         options: [
             { id: 2130, word: "ördek", imageUrl: "/images/2130.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
@@ -973,7 +973,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi top yukarıda?', correct: 'Evet! Top yukarıdadır.', wrong: 'Hayır, top aşağıdadır.' }
+            tr: { question: 'Hangi top yukarıda?', correct: 'Evet! Bu top yukarıda.', wrong: 'Hayır, bu top aşağıda.' }
         },
         options: [
             { id: 2031, word: "top", imageUrl: "/images/2031.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -986,7 +986,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi top aşağıda?', correct: 'Evet! Top aşağıdadır.', wrong: 'Hayır, top yukarıdadır.' }
+            tr: { question: 'Hangi top aşağıda?', correct: 'Evet! Bu top aşağıda.', wrong: 'Hayır, bu top yukarıda.' }
         },
         options: [
             { id: 2025, word: "top", imageUrl: "/images/2025.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -1000,7 +1000,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi ayı yukarıda?', correct: 'Evet! Ayı yukarıdadır.', wrong: 'Hayır, ayı aşağıdadır.' }
+            tr: { question: 'Hangi ayı yukarıda?', correct: 'Evet! Bu ayı yukarıda.', wrong: 'Hayır, bu ayı aşağıda.' }
         },
         options: [
             { id: 2043, word: "ayı", imageUrl: "/images/2043.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -1013,7 +1013,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi ayı aşağıda?', correct: 'Evet! Ayı aşağıdadır.', wrong: 'Hayır, ayı yukarıdadır.' }
+            tr: { question: 'Hangi ayı aşağıda?', correct: 'Evet! Bu ayı aşağıda.', wrong: 'Hayır, bu ayı yukarıda.' }
         },
         options: [
             { id: 2037, word: "ayı", imageUrl: "/images/2037.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -1027,7 +1027,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi araba yukarıda?', correct: 'Evet! Araba yukarıdadır.', wrong: 'Hayır, araba aşağıdadır.' }
+            tr: { question: 'Hangi araba yukarıda?', correct: 'Evet! Bu araba yukarıda.', wrong: 'Hayır, bu araba aşağıda.' }
         },
         options: [
             { id: 2055, word: "araba", imageUrl: "/images/2055.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -1040,7 +1040,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi araba aşağıda?', correct: 'Evet! Araba aşağıdadır.', wrong: 'Hayır, araba yukarıdadır.' }
+            tr: { question: 'Hangi araba aşağıda?', correct: 'Evet! Bu araba aşağıda.', wrong: 'Hayır, bu araba yukarıda.' }
         },
         options: [
             { id: 2049, word: "araba", imageUrl: "/images/2049.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -1054,7 +1054,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi elma yukarıda?', correct: 'Evet! Elma yukarıdadır.', wrong: 'Hayır, elma aşağıdadır.' }
+            tr: { question: 'Hangi elma yukarıda?', correct: 'Evet! Bu elma yukarıda.', wrong: 'Hayır, bu elma aşağıda.' }
         },
         options: [
             { id: 2067, word: "elma", imageUrl: "/images/2067.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -1067,7 +1067,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi elma aşağıda?', correct: 'Evet! Elma aşağıdadır.', wrong: 'Hayır, elma yukarıdadır.' }
+            tr: { question: 'Hangi elma aşağıda?', correct: 'Evet! Bu elma aşağıda.', wrong: 'Hayır, bu elma yukarıda.' }
         },
         options: [
             { id: 2061, word: "elma", imageUrl: "/images/2061.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -1081,7 +1081,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi kalem yukarıda?', correct: 'Evet! Kalem yukarıdadır.', wrong: 'Hayır, kalem aşağıdadır.' }
+            tr: { question: 'Hangi kalem yukarıda?', correct: 'Evet! Bu kalem yukarıda.', wrong: 'Hayır, bu kalem aşağıda.' }
         },
         options: [
             { id: 2079, word: "kalem", imageUrl: "/images/2079.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -1094,7 +1094,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi kalem aşağıda?', correct: 'Evet! Kalem aşağıdadır.', wrong: 'Hayır, kalem yukarıdadır.' }
+            tr: { question: 'Hangi kalem aşağıda?', correct: 'Evet! Bu kalem aşağıda.', wrong: 'Hayır, bu kalem yukarıda.' }
         },
         options: [
             { id: 2073, word: "kalem", imageUrl: "/images/2073.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -1108,7 +1108,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi kedi yukarıda?', correct: 'Evet! Kedi yukarıdadır.', wrong: 'Hayır, kedi aşağıdadır.' }
+            tr: { question: 'Hangi kedi yukarıda?', correct: 'Evet! Bu kedi yukarıda.', wrong: 'Hayır, bu kedi aşağıda.' }
         },
         options: [
             { id: 2091, word: "kedi", imageUrl: "/images/2091.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -1121,7 +1121,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi kedi aşağıda?', correct: 'Evet! Kedi aşağıdadır.', wrong: 'Hayır, kedi yukarıdadır.' }
+            tr: { question: 'Hangi kedi aşağıda?', correct: 'Evet! Bu kedi aşağıda.', wrong: 'Hayır, bu kedi yukarıda.' }
         },
         options: [
             { id: 2085, word: "kedi", imageUrl: "/images/2085.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -1135,7 +1135,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi kuş yukarıda?', correct: 'Evet! Kuş yukarıdadır.', wrong: 'Hayır, kuş aşağıdadır.' }
+            tr: { question: 'Hangi kuş yukarıda?', correct: 'Evet! Bu kuş yukarıda.', wrong: 'Hayır, bu kuş aşağıda.' }
         },
         options: [
             { id: 2103, word: "kuş", imageUrl: "/images/2103.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" },
@@ -1148,7 +1148,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi kuş aşağıda?', correct: 'Evet! Kuş aşağıdadır.', wrong: 'Hayır, kuş yukarıdadır.' }
+            tr: { question: 'Hangi kuş aşağıda?', correct: 'Evet! Bu kuş aşağıda.', wrong: 'Hayır, bu kuş yukarıda.' }
         },
         options: [
             { id: 2097, word: "kuş", imageUrl: "/images/2097.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" },
@@ -1162,7 +1162,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi bebek yukarıda?', correct: 'Evet! Bebek yukarıdadır.', wrong: 'Hayır, bebek aşağıdadır.' }
+            tr: { question: 'Hangi bebek yukarıda?', correct: 'Evet! Bu bebek yukarıda.', wrong: 'Hayır, bu bebek aşağıda.' }
         },
         options: [
             { id: 2115, word: "bebek", imageUrl: "/images/2115.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
@@ -1175,7 +1175,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi bebek aşağıda?', correct: 'Evet! Bebek aşağıdadır.', wrong: 'Hayır, bebek yukarıdadır.' }
+            tr: { question: 'Hangi bebek aşağıda?', correct: 'Evet! Bu bebek aşağıda.', wrong: 'Hayır, bu bebek yukarıda.' }
         },
         options: [
             { id: 2109, word: "bebek", imageUrl: "/images/2109.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
@@ -1189,7 +1189,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi dinozor yukarıda?', correct: 'Evet! Dinozor yukarıdadır.', wrong: 'Hayır, dinozor aşağıdadır.' }
+            tr: { question: 'Hangi dinozor yukarıda?', correct: 'Evet! Bu dinozor yukarıda.', wrong: 'Hayır, bu dinozor aşağıda.' }
         },
         options: [
             { id: 2127, word: "dinozor", imageUrl: "/images/2127.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
@@ -1202,7 +1202,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi dinozor aşağıda?', correct: 'Evet! Dinozor aşağıdadır.', wrong: 'Hayır, dinozor yukarıdadır.' }
+            tr: { question: 'Hangi dinozor aşağıda?', correct: 'Evet! Bu dinozor aşağıda.', wrong: 'Hayır, bu dinozor yukarıda.' }
         },
         options: [
             { id: 2121, word: "dinozor", imageUrl: "/images/2121.webp", isCorrect: true, audioKey: "dinozor", spokenText: "dinozor" },
@@ -1216,7 +1216,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi ördek yukarıda?', correct: 'Evet! Ördek yukarıdadır.', wrong: 'Hayır, ördek aşağıdadır.' }
+            tr: { question: 'Hangi ördek yukarıda?', correct: 'Evet! Bu ördek yukarıda.', wrong: 'Hayır, bu ördek aşağıda.' }
         },
         options: [
             { id: 2138, word: "ördek", imageUrl: "/images/2138.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },
@@ -1229,7 +1229,7 @@ export const belowAboveDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BelowAbove,
         speech: {
-            tr: { question: 'Hangi ördek aşağıda?', correct: 'Evet! Ördek aşağıdadır.', wrong: 'Hayır, ördek yukarıdadır.' }
+            tr: { question: 'Hangi ördek aşağıda?', correct: 'Evet! Bu ördek aşağıda.', wrong: 'Hayır, bu ördek yukarıda.' }
         },
         options: [
             { id: 2132, word: "ördek", imageUrl: "/images/2132.webp", isCorrect: true, audioKey: "ördek", spokenText: "ördek" },

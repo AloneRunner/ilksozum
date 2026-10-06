@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef as _useRef, useCallback } from 'react';
+import { buyukBas } from '../utils/trDil.ts';
 import { nesneUrl } from '../services/nesneGorsel.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { speak } from '../services/speechService.ts';
@@ -75,12 +76,12 @@ const WhatsMissingScreen: React.FC<WhatsMissingScreenProps> = ({
     if (isCorrect || isWrong !== null) return;
     if (item.id === missingItem.id) {
       setIsCorrect(true);
-      const msg = `Evet! ${missingItem.word} kaybolmuştu!`;
+      const msg = `Evet! ${buyukBas(missingItem.word)} kaybolmuştu!`;
       if (!isFastTransitionEnabled) await speak(msg, 'tr-TR');
       setTimeout(() => onAdvance(true), isFastTransitionEnabled ? 300 : 1300);
     } else {
       setIsWrong(item.id);
-      const msg = `Hayır! ${missingItem.word} kaybolmuştu!`;
+      const msg = `Hayır! ${buyukBas(missingItem.word)} kaybolmuştu!`;
       if (!isFastTransitionEnabled) await speak(msg, 'tr-TR');
       setTimeout(() => { setIsWrong(null); }, 900);
     }

@@ -91,7 +91,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Hangi çocuk hızlı koşuyor?', correct: 'Evet! Çocuk hızlıdır.', wrong: 'Hayır, bu çocuk yavaştır.' }
+            tr: { question: 'Hangi çocuk hızlı koşuyor?', correct: 'Evet! Bu çocuk hızlı.', wrong: 'Hayır, bu çocuk yavaş.' }
         },
         options: [
             { id: 6007, word: "çocuk", imageUrl: "/images/6007.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -104,7 +104,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Hangi çocuk yavaş yürüyor?', correct: 'Evet! Çocuk yavaştır.', wrong: 'Hayır, bu çocuk hızlıdır.' }
+            tr: { question: 'Hangi çocuk yavaş yürüyor?', correct: 'Evet! Bu çocuk yavaş.', wrong: 'Hayır, bu çocuk hızlı.' }
         },
         options: [
             { id: 6008, word: "çocuk", imageUrl: "/images/6008.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },

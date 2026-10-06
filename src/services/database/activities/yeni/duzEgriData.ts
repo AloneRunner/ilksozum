@@ -10,7 +10,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi ağaç düz?', correct: 'Evet! Ağaç düzdür.', wrong: 'Hayır, bu ağaç eğridir.' }
+            tr: { question: 'Hangi ağaç düz?', correct: 'Evet! Bu ağaç düz.', wrong: 'Hayır, bu ağaç eğri.' }
         },
         options: [
             { id: 4901, word: "ağaç", imageUrl: "/images/4901.webp", isCorrect: true, audioKey: "ağaç", spokenText: "ağaç" },
@@ -23,7 +23,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi ağaç eğri?', correct: 'Evet! Ağaç eğridir.', wrong: 'Hayır, bu ağaç düzdür.' }
+            tr: { question: 'Hangi ağaç eğri?', correct: 'Evet! Bu ağaç eğri.', wrong: 'Hayır, bu ağaç düz.' }
         },
         options: [
             { id: 4902, word: "ağaç", imageUrl: "/images/4902.webp", isCorrect: true, audioKey: "ağaç", spokenText: "ağaç" },
@@ -37,7 +37,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi çit düz?', correct: 'Evet! Çit düzdür.', wrong: 'Hayır, bu çit eğridir.' }
+            tr: { question: 'Hangi çit düz?', correct: 'Evet! Bu çit düz.', wrong: 'Hayır, bu çit eğri.' }
         },
         options: [
             { id: 4903, word: "çit", imageUrl: "/images/4903.webp", isCorrect: true, audioKey: "çit", spokenText: "çit" },
@@ -50,7 +50,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi çit eğri?', correct: 'Evet! Çit eğridir.', wrong: 'Hayır, bu çit düzdür.' }
+            tr: { question: 'Hangi çit eğri?', correct: 'Evet! Bu çit eğri.', wrong: 'Hayır, bu çit düz.' }
         },
         options: [
             { id: 4904, word: "çit", imageUrl: "/images/4904.webp", isCorrect: true, audioKey: "çit", spokenText: "çit" },
@@ -64,7 +64,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi çivi düz?', correct: 'Evet! Çivi düzdür.', wrong: 'Hayır, bu çivi eğridir.' }
+            tr: { question: 'Hangi çivi düz?', correct: 'Evet! Bu çivi düz.', wrong: 'Hayır, bu çivi eğri.' }
         },
         options: [
             { id: 4905, word: "çivi", imageUrl: "/images/4905.webp", isCorrect: true, audioKey: "çivi", spokenText: "çivi" },
@@ -77,7 +77,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi çivi eğri?', correct: 'Evet! Çivi eğridir.', wrong: 'Hayır, bu çivi düzdür.' }
+            tr: { question: 'Hangi çivi eğri?', correct: 'Evet! Bu çivi eğri.', wrong: 'Hayır, bu çivi düz.' }
         },
         options: [
             { id: 4906, word: "çivi", imageUrl: "/images/4906.webp", isCorrect: true, audioKey: "çivi", spokenText: "çivi" },
@@ -91,7 +91,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi çubuk düz?', correct: 'Evet! Çubuk düzdür.', wrong: 'Hayır, bu çubuk eğridir.' }
+            tr: { question: 'Hangi çubuk düz?', correct: 'Evet! Bu çubuk düz.', wrong: 'Hayır, bu çubuk eğri.' }
         },
         options: [
             { id: 4907, word: "çubuk", imageUrl: "/images/4907.webp", isCorrect: true, audioKey: "çubuk", spokenText: "çubuk" },
@@ -104,7 +104,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi çubuk eğri?', correct: 'Evet! Çubuk eğridir.', wrong: 'Hayır, bu çubuk düzdür.' }
+            tr: { question: 'Hangi çubuk eğri?', correct: 'Evet! Bu çubuk eğri.', wrong: 'Hayır, bu çubuk düz.' }
         },
         options: [
             { id: 4908, word: "çubuk", imageUrl: "/images/4908.webp", isCorrect: true, audioKey: "çubuk", spokenText: "çubuk" },
@@ -118,7 +118,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi ip düz?', correct: 'Evet! İp düzdür.', wrong: 'Hayır, bu ip eğridir.' }
+            tr: { question: 'Hangi ip düz?', correct: 'Evet! Bu ip düz.', wrong: 'Hayır, bu ip eğri.' }
         },
         options: [
             { id: 4909, word: "ip", imageUrl: "/images/4909.webp", isCorrect: true, audioKey: "ip", spokenText: "ip" },
@@ -131,7 +131,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi ip eğri?', correct: 'Evet! İp eğridir.', wrong: 'Hayır, bu ip düzdür.' }
+            tr: { question: 'Hangi ip eğri?', correct: 'Evet! Bu ip eğri.', wrong: 'Hayır, bu ip düz.' }
         },
         options: [
             { id: 4910, word: "ip", imageUrl: "/images/4910.webp", isCorrect: true, audioKey: "ip", spokenText: "ip" },
@@ -145,7 +145,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi kaşık düz?', correct: 'Evet! Kaşık düzdür.', wrong: 'Hayır, bu kaşık eğridir.' }
+            tr: { question: 'Hangi kaşık düz?', correct: 'Evet! Bu kaşık düz.', wrong: 'Hayır, bu kaşık eğri.' }
         },
         options: [
             { id: 4911, word: "kaşık", imageUrl: "/images/4911.webp", isCorrect: true, audioKey: "kaşık", spokenText: "kaşık" },
@@ -158,7 +158,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi kaşık eğri?', correct: 'Evet! Kaşık eğridir.', wrong: 'Hayır, bu kaşık düzdür.' }
+            tr: { question: 'Hangi kaşık eğri?', correct: 'Evet! Bu kaşık eğri.', wrong: 'Hayır, bu kaşık düz.' }
         },
         options: [
             { id: 4912, word: "kaşık", imageUrl: "/images/4912.webp", isCorrect: true, audioKey: "kaşık", spokenText: "kaşık" },
@@ -172,7 +172,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi pipet düz?', correct: 'Evet! Pipet düzdür.', wrong: 'Hayır, bu pipet eğridir.' }
+            tr: { question: 'Hangi pipet düz?', correct: 'Evet! Bu pipet düz.', wrong: 'Hayır, bu pipet eğri.' }
         },
         options: [
             { id: 4913, word: "pipet", imageUrl: "/images/4913.webp", isCorrect: true, audioKey: "pipet", spokenText: "pipet" },
@@ -185,7 +185,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi pipet eğri?', correct: 'Evet! Pipet eğridir.', wrong: 'Hayır, bu pipet düzdür.' }
+            tr: { question: 'Hangi pipet eğri?', correct: 'Evet! Bu pipet eğri.', wrong: 'Hayır, bu pipet düz.' }
         },
         options: [
             { id: 4914, word: "pipet", imageUrl: "/images/4914.webp", isCorrect: true, audioKey: "pipet", spokenText: "pipet" },
@@ -199,7 +199,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi tren rayı düz?', correct: 'Evet! Tren rayı düzdür.', wrong: 'Hayır, bu tren rayı eğridir.' }
+            tr: { question: 'Hangi tren rayı düz?', correct: 'Evet! Bu tren rayı düz.', wrong: 'Hayır, bu tren rayı eğri.' }
         },
         options: [
             { id: 4915, word: "tren rayı", imageUrl: "/images/4915.webp", isCorrect: true, audioKey: "tren rayı", spokenText: "tren rayı" },
@@ -212,7 +212,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi tren rayı eğri?', correct: 'Evet! Tren rayı eğridir.', wrong: 'Hayır, bu tren rayı düzdür.' }
+            tr: { question: 'Hangi tren rayı eğri?', correct: 'Evet! Bu tren rayı eğri.', wrong: 'Hayır, bu tren rayı düz.' }
         },
         options: [
             { id: 4916, word: "tren rayı", imageUrl: "/images/4916.webp", isCorrect: true, audioKey: "tren rayı", spokenText: "tren rayı" },
@@ -226,7 +226,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi tel düz?', correct: 'Evet! Tel düzdür.', wrong: 'Hayır, bu tel eğridir.' }
+            tr: { question: 'Hangi tel düz?', correct: 'Evet! Bu tel düz.', wrong: 'Hayır, bu tel eğri.' }
         },
         options: [
             { id: 4917, word: "tel", imageUrl: "/images/4917.webp", isCorrect: true, audioKey: "tel", spokenText: "tel" },
@@ -239,7 +239,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi tel eğri?', correct: 'Evet! Tel eğridir.', wrong: 'Hayır, bu tel düzdür.' }
+            tr: { question: 'Hangi tel eğri?', correct: 'Evet! Bu tel eğri.', wrong: 'Hayır, bu tel düz.' }
         },
         options: [
             { id: 4918, word: "tel", imageUrl: "/images/4918.webp", isCorrect: true, audioKey: "tel", spokenText: "tel" },
@@ -253,7 +253,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi yol düz?', correct: 'Evet! Yol düzdür.', wrong: 'Hayır, bu yol eğridir.' }
+            tr: { question: 'Hangi yol düz?', correct: 'Evet! Bu yol düz.', wrong: 'Hayır, bu yol eğri.' }
         },
         options: [
             { id: 4919, word: "yol", imageUrl: "/images/4919.webp", isCorrect: true, audioKey: "yol", spokenText: "yol" },
@@ -266,7 +266,7 @@ export const straightCurvedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.StraightCurved,
         speech: {
-            tr: { question: 'Hangi yol eğri?', correct: 'Evet! Yol eğridir.', wrong: 'Hayır, bu yol düzdür.' }
+            tr: { question: 'Hangi yol eğri?', correct: 'Evet! Bu yol eğri.', wrong: 'Hayır, bu yol düz.' }
         },
         options: [
             { id: 4920, word: "yol", imageUrl: "/images/4920.webp", isCorrect: true, audioKey: "yol", spokenText: "yol" },

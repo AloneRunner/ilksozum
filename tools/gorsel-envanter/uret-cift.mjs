@@ -94,13 +94,11 @@ const KAVRAMLAR = [
     idBaslangic: 2701,
     soruKalip: (w, d) => `Hangi resimde ${w} ${d}?`,
     etiket: 'quantity',
-    a: { ek: 'cok', deger: 'çok', soru: 'Çok olan hangisi?', sifat: 'çoktur' },
-    b: { ek: 'az', deger: 'az', soru: 'Az olan hangisi?', sifat: 'azdır' },
-    // "Elma çoktur" yerine çoğul özne: "Burada elmalar çoktur"
-    buYok: true, // "Hayır, burada elmalar azdır."
-    ozne: { elma: 'burada elmalar', top: 'burada toplar', kalem: 'burada kalemler', kurabiye: 'burada kurabiyeler',
-      dugme: 'burada düğmeler', blok: 'burada bloklar', araba: 'burada arabalar', balon: 'burada balonlar',
-      yaprak: 'burada yapraklar', cilek: 'burada çilekler' },
+    a: { ek: 'cok', deger: 'çok', soru: 'Çok olan hangisi?', sifat: (w) => `çok ${w} var` },
+    b: { ek: 'az', deger: 'az', soru: 'Az olan hangisi?', sifat: (w) => `az ${w} var` },
+    // Gramer (2026-10-06): "Evet! Burada çok elma var." / "Hayır, burada az elma var."
+    buYok: true,
+    ozne: () => 'burada',
     kelime: { elma: 'elma', top: 'top', kalem: 'kalem', kurabiye: 'kurabiye', dugme: 'düğme', blok: 'blok',
       araba: 'araba', balon: 'balon', yaprak: 'yaprak', cilek: 'çilek' },
   },
@@ -303,7 +301,7 @@ const KAVRAMLAR = [
       kaktus_elma: { dikenli: 'kaktüs', puruzsuz: 'elma' }, kirpi_yunus: { dikenli: 'kirpi', puruzsuz: 'yunus' },
       gul_lale: { dikenli: 'gül', puruzsuz: 'lale' }, denizkestanesi_kabuk: { dikenli: 'deniz kestanesi', puruzsuz: 'deniz kabuğu' },
       masajtopu_top: { dikenli: 'dikenli top', puruzsuz: 'top' }, devedikeni_nergis: { dikenli: 'deve dikeni', puruzsuz: 'nergis' },
-      balonbaligi_japonbaligi: { dikenli: 'balon balığı', puruzsuz: 'japon balığı' },
+      balonbaligi_japonbaligi: { dikenli: 'balon balığı', puruzsuz: 'Japon balığı' },
     },
   },
   {
@@ -485,9 +483,12 @@ const KAVRAMLAR = [
     klasor: 'yanyana-karsi', dosya: 'yanyanaKarsiData.ts', exportAdi: 'besideOppositeDataYeni',
     activityType: 'BesideOpposite', idBaslangic: 5601, sahne: true, etiket: 'position',
     soruIdBaslangic: 1001, // BesideOpposite i18n sp_beside_<id> arıyor
-    a: { ek: 'yanyana', deger: 'yan yana', soru: 'Yan yana olanlar hangisi?', sifat: 'yan yanadır' },
-    b: { ek: 'karsi', deger: 'karşı karşıya', soru: 'Karşı karşıya olanlar hangisi?', sifat: 'karşı karşıyadır' },
+    a: { ek: 'yanyana', deger: 'yan yana', soru: 'Yan yana olanlar hangisi?', sifat: 'yan yana' },
+    b: { ek: 'karsi', deger: 'karşı karşıya', soru: 'Karşı karşıya olanlar hangisi?', sifat: 'karşı karşıya' },
+    // Gramer: "Hangi resimde arabalar yan yana?" → "Evet! Burada arabalar yan yana."
+    soruKalip: (w, d) => `Hangi resimde ${w} ${d}?`,
     buYok: true,
+    ozne: (w) => `burada ${w}`,
     kelime: { sandalye: 'sandalyeler', cocuk: 'çocuklar', kedi: 'kediler', ayi: 'ayılar', araba: 'arabalar',
       koltuk: 'koltuklar', kus: 'kuşlar', ordek: 'ördekler', at: 'atlar', fincan: 'fincanlar' },
   },
@@ -690,6 +691,7 @@ const KAVRAMLAR = [
     b: { ek: 'son', deger: 'son sırada', soru: 'Son sırada olan hangisi?', sifat: 'son sırada' },
     soruKalip: (w, d) => `Hangi resimde ${w} ${d}?`,
     buYok: true,
+    ozne: (w) => `burada ${w}`, // "Evet! Burada yeşil araba ilk sırada."
     kelime: {
       araba_kirmizi: 'kırmızı araba', araba_mavi: 'mavi araba', araba3_yesil: 'yeşil araba', araba_sari: 'sarı araba',
       ordek_sari: 'sarı ördek', ordek_pembe: 'pembe ördek', ordek3_mavi: 'mavi ördek', ordek_turuncu: 'turuncu ördek',
@@ -784,6 +786,8 @@ const KAVRAMLAR = [
 ];
 
 const cap = w => w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1);
+// "kalındır" → "kalın", "mattır" → "mat", "yan yanadır" → "yan yana" (ek-fiil -dır/-dir/-dur/-dür/-tır...)
+const dirsiz = s => s.replace(/(?<=[a-zçğıöşü])[dt][ıiuü]r$/, '');
 const list = JSON.parse(fs.readFileSync(LIST, 'utf8'));
 
 for (const k of KAVRAMLAR) {
@@ -849,7 +853,7 @@ ${opt(fNo, wNo, false)}
   for (const n of nesneler) {
     const w = farkliNesne(n) ? n : word(n);
     // Cümle öznesi kelimeden farklı olabilir (ör. "ayakkabının topuğu yüksektir")
-    const oz = (k.ozne || {})[n] || w;
+    const oz = (typeof k.ozne === 'function' ? k.ozne(w, n) : (k.ozne || {})[n]) || w;
     const bu = k.buYok ? '' : 'bu ';
     let yazildi = false;
     for (const [ea, eb] of ciftler) {
@@ -871,13 +875,15 @@ ${opt(fNo, wNo, false)}
       // Nesne adıyla sor: "Hangi kalem kalın?" (somut, tek odak). k.soruKalip ile değiştirilebilir.
       const kalip = k.soruKalip || ((w, d) => `Hangi ${w} ${d}?`);
       // sıfat nesne adına göre kurulabilir: (w) => `tek ${w} var` → "Evet! Burada tek eldiven var."
-      const sf = (H, w) => (typeof H.sifat === 'function' ? H.sifat(w) : H.sifat);
+      // Gramer (Kaan, 2026-10-06): iki resimden birini gösterirken "Kalem kalındır" genel hüküm gibi;
+      // "Evet! Bu kalem kalın." denir → aynı nesnede -dır eki atılır, özneye "bu" gelir.
+      const sf = (H, w) => dirsiz(typeof H.sifat === 'function' ? H.sifat(w) : H.sifat);
       const qA = (k.soruOzel?.[n]?.[ea]) || kalip(w, A.deger), qB = (k.soruOzel?.[n]?.[eb]) || kalip(w, B.deger);
-      rounds.push(round(qA, `Evet! ${cap(oz)} ${sf(A, w)}.`, `Hayır, ${bu}${oz} ${sf(B, w)}.`, fa, fb, w) + ',');
-      rounds.push(round(qB, `Evet! ${cap(oz)} ${sf(B, w)}.`, `Hayır, ${bu}${oz} ${sf(A, w)}.`, fb, fa, w) + ',');
+      rounds.push(round(qA, `Evet! ${cap(bu + oz)} ${sf(A, w)}.`, `Hayır, ${bu}${oz} ${sf(B, w)}.`, fa, fb, w) + ',');
+      rounds.push(round(qB, `Evet! ${cap(bu + oz)} ${sf(B, w)}.`, `Hayır, ${bu}${oz} ${sf(A, w)}.`, fb, fa, w) + ',');
       // Eş anlamlı soru (ör. bütün = tam): aynı görseller, farklı kelime; turda biri seçilir
       for (const [X, Y, fx, fy] of [[A, B, fa, fb], [B, A, fb, fa]]) {
-        if (X.esSoru) rounds.push(round(X.esDeger ? kalip(w, X.esDeger) : X.esSoru, `Evet! ${cap(oz)} ${X.esSifat}.`, `Hayır, ${bu}${oz} ${sf(Y, w)}.`, fx, fy, w) + ',');
+        if (X.esSoru) rounds.push(round(X.esDeger ? kalip(w, X.esDeger) : X.esSoru, `Evet! ${cap(bu + oz)} ${dirsiz(X.esSifat)}.`, `Hayır, ${bu}${oz} ${sf(Y, w)}.`, fx, fy, w) + ',');
       }
     }
   }

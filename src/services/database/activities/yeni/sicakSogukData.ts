@@ -145,7 +145,7 @@ export const hotColdDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HotCold,
         speech: {
-            tr: { question: 'Hangi resimde hava sıcak?', correct: 'Evet! Hava sıcaktır.', wrong: 'Hayır, bu hava soğuktur.' }
+            tr: { question: 'Hangi resimde hava sıcak?', correct: 'Evet! Bu hava sıcak.', wrong: 'Hayır, bu hava soğuk.' }
         },
         options: [
             { id: 3611, word: "hava", imageUrl: "/images/3611.webp", isCorrect: true, audioKey: "hava", spokenText: "hava" },
@@ -158,7 +158,7 @@ export const hotColdDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HotCold,
         speech: {
-            tr: { question: 'Hangi resimde hava soğuk?', correct: 'Evet! Hava soğuktur.', wrong: 'Hayır, bu hava sıcaktır.' }
+            tr: { question: 'Hangi resimde hava soğuk?', correct: 'Evet! Bu hava soğuk.', wrong: 'Hayır, bu hava sıcak.' }
         },
         options: [
             { id: 3612, word: "hava", imageUrl: "/images/3612.webp", isCorrect: true, audioKey: "hava", spokenText: "hava" },
@@ -172,7 +172,7 @@ export const hotColdDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HotCold,
         speech: {
-            tr: { question: 'Hangi kupa sıcak?', correct: 'Evet! Kupadaki içecek sıcaktır.', wrong: 'Hayır, bu kupadaki içecek soğuktur.' }
+            tr: { question: 'Hangi kupa sıcak?', correct: 'Evet! Bu kupadaki içecek sıcak.', wrong: 'Hayır, bu kupadaki içecek soğuk.' }
         },
         options: [
             { id: 3613, word: "kupa", imageUrl: "/images/3613.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -185,7 +185,7 @@ export const hotColdDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HotCold,
         speech: {
-            tr: { question: 'Hangi kupa soğuk?', correct: 'Evet! Kupadaki içecek soğuktur.', wrong: 'Hayır, bu kupadaki içecek sıcaktır.' }
+            tr: { question: 'Hangi kupa soğuk?', correct: 'Evet! Bu kupadaki içecek soğuk.', wrong: 'Hayır, bu kupadaki içecek sıcak.' }
         },
         options: [
             { id: 3614, word: "kupa", imageUrl: "/images/3614.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -226,7 +226,7 @@ export const hotColdDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HotCold,
         speech: {
-            tr: { question: 'Hangi süt sıcak?', correct: 'Evet! Süt sıcaktır.', wrong: 'Hayır, bu süt soğuktur.' }
+            tr: { question: 'Hangi süt sıcak?', correct: 'Evet! Bu süt sıcak.', wrong: 'Hayır, bu süt soğuk.' }
         },
         options: [
             { id: 3617, word: "süt", imageUrl: "/images/3617.webp", isCorrect: true, audioKey: "süt", spokenText: "süt" },
@@ -239,7 +239,7 @@ export const hotColdDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HotCold,
         speech: {
-            tr: { question: 'Hangi süt soğuk?', correct: 'Evet! Süt soğuktur.', wrong: 'Hayır, bu süt sıcaktır.' }
+            tr: { question: 'Hangi süt soğuk?', correct: 'Evet! Bu süt soğuk.', wrong: 'Hayır, bu süt sıcak.' }
         },
         options: [
             { id: 3618, word: "süt", imageUrl: "/images/3618.webp", isCorrect: true, audioKey: "süt", spokenText: "süt" },

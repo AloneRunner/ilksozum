@@ -141,7 +141,7 @@ const SizeOrderingGameScreen: React.FC<SizeOrderingGameScreenProps> = ({ onBack 
     useEffect(() => {
         if (gameState !== 'playing' || round === 0) return;
         const s2l = mode === 'small-to-large';
-        sayInstruction(`${ITEM_SETS[currentSetIndex].name} ${s2l ? 'küçükten büyüğe' : 'büyükten küçüğe'} sırala. Önce en ${s2l ? 'küçük' : 'büyük'} olana dokun.`, 300);
+        sayInstruction(`${ITEM_SETS[currentSetIndex].name}${/lar$/.test(ITEM_SETS[currentSetIndex].name) ? 'ı' : 'i'} ${s2l ? 'küçükten büyüğe' : 'büyükten küçüğe'} sırala. Önce en ${s2l ? 'küçük' : 'büyük'} olana dokun.`, 300);
     }, [gameState, round, mode, currentSetIndex]);
 
     useEffect(() => {

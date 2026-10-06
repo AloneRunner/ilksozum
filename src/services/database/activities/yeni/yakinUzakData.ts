@@ -10,7 +10,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi ağaç yakın?', correct: 'Evet! Ağaç yakındır.', wrong: 'Hayır, bu ağaç uzaktır.' }
+            tr: { question: 'Hangi ağaç yakın?', correct: 'Evet! Bu ağaç yakın.', wrong: 'Hayır, bu ağaç uzak.' }
         },
         options: [
             { id: 5502, word: "ağaç", imageUrl: "/images/5502.webp", isCorrect: true, audioKey: "ağaç", spokenText: "ağaç" },
@@ -23,7 +23,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi ağaç uzak?', correct: 'Evet! Ağaç uzaktır.', wrong: 'Hayır, bu ağaç yakındır.' }
+            tr: { question: 'Hangi ağaç uzak?', correct: 'Evet! Bu ağaç uzak.', wrong: 'Hayır, bu ağaç yakın.' }
         },
         options: [
             { id: 5501, word: "ağaç", imageUrl: "/images/5501.webp", isCorrect: true, audioKey: "ağaç", spokenText: "ağaç" },
@@ -37,7 +37,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi araba yakın?', correct: 'Evet! Araba yakındır.', wrong: 'Hayır, bu araba uzaktır.' }
+            tr: { question: 'Hangi araba yakın?', correct: 'Evet! Bu araba yakın.', wrong: 'Hayır, bu araba uzak.' }
         },
         options: [
             { id: 5504, word: "araba", imageUrl: "/images/5504.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -50,7 +50,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi araba uzak?', correct: 'Evet! Araba uzaktır.', wrong: 'Hayır, bu araba yakındır.' }
+            tr: { question: 'Hangi araba uzak?', correct: 'Evet! Bu araba uzak.', wrong: 'Hayır, bu araba yakın.' }
         },
         options: [
             { id: 5503, word: "araba", imageUrl: "/images/5503.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -64,7 +64,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi balon yakın?', correct: 'Evet! Balon yakındır.', wrong: 'Hayır, bu balon uzaktır.' }
+            tr: { question: 'Hangi balon yakın?', correct: 'Evet! Bu balon yakın.', wrong: 'Hayır, bu balon uzak.' }
         },
         options: [
             { id: 5506, word: "balon", imageUrl: "/images/5506.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -77,7 +77,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi balon uzak?', correct: 'Evet! Balon uzaktır.', wrong: 'Hayır, bu balon yakındır.' }
+            tr: { question: 'Hangi balon uzak?', correct: 'Evet! Bu balon uzak.', wrong: 'Hayır, bu balon yakın.' }
         },
         options: [
             { id: 5505, word: "balon", imageUrl: "/images/5505.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -91,7 +91,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi bisiklet yakın?', correct: 'Evet! Bisiklet yakındır.', wrong: 'Hayır, bu bisiklet uzaktır.' }
+            tr: { question: 'Hangi bisiklet yakın?', correct: 'Evet! Bu bisiklet yakın.', wrong: 'Hayır, bu bisiklet uzak.' }
         },
         options: [
             { id: 5508, word: "bisiklet", imageUrl: "/images/5508.webp", isCorrect: true, audioKey: "bisiklet", spokenText: "bisiklet" },
@@ -104,7 +104,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi bisiklet uzak?', correct: 'Evet! Bisiklet uzaktır.', wrong: 'Hayır, bu bisiklet yakındır.' }
+            tr: { question: 'Hangi bisiklet uzak?', correct: 'Evet! Bu bisiklet uzak.', wrong: 'Hayır, bu bisiklet yakın.' }
         },
         options: [
             { id: 5507, word: "bisiklet", imageUrl: "/images/5507.webp", isCorrect: true, audioKey: "bisiklet", spokenText: "bisiklet" },
@@ -118,7 +118,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi çocuk yakın?', correct: 'Evet! Çocuk yakındır.', wrong: 'Hayır, bu çocuk uzaktır.' }
+            tr: { question: 'Hangi çocuk yakın?', correct: 'Evet! Bu çocuk yakın.', wrong: 'Hayır, bu çocuk uzak.' }
         },
         options: [
             { id: 5510, word: "çocuk", imageUrl: "/images/5510.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -131,7 +131,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi çocuk uzak?', correct: 'Evet! Çocuk uzaktır.', wrong: 'Hayır, bu çocuk yakındır.' }
+            tr: { question: 'Hangi çocuk uzak?', correct: 'Evet! Bu çocuk uzak.', wrong: 'Hayır, bu çocuk yakın.' }
         },
         options: [
             { id: 5509, word: "çocuk", imageUrl: "/images/5509.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -145,7 +145,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi ev yakın?', correct: 'Evet! Ev yakındır.', wrong: 'Hayır, bu ev uzaktır.' }
+            tr: { question: 'Hangi ev yakın?', correct: 'Evet! Bu ev yakın.', wrong: 'Hayır, bu ev uzak.' }
         },
         options: [
             { id: 5512, word: "ev", imageUrl: "/images/5512.webp", isCorrect: true, audioKey: "ev", spokenText: "ev" },
@@ -158,7 +158,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi ev uzak?', correct: 'Evet! Ev uzaktır.', wrong: 'Hayır, bu ev yakındır.' }
+            tr: { question: 'Hangi ev uzak?', correct: 'Evet! Bu ev uzak.', wrong: 'Hayır, bu ev yakın.' }
         },
         options: [
             { id: 5511, word: "ev", imageUrl: "/images/5511.webp", isCorrect: true, audioKey: "ev", spokenText: "ev" },
@@ -172,7 +172,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi inek yakın?', correct: 'Evet! İnek yakındır.', wrong: 'Hayır, bu inek uzaktır.' }
+            tr: { question: 'Hangi inek yakın?', correct: 'Evet! Bu inek yakın.', wrong: 'Hayır, bu inek uzak.' }
         },
         options: [
             { id: 5514, word: "inek", imageUrl: "/images/5514.webp", isCorrect: true, audioKey: "inek", spokenText: "inek" },
@@ -185,7 +185,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi inek uzak?', correct: 'Evet! İnek uzaktır.', wrong: 'Hayır, bu inek yakındır.' }
+            tr: { question: 'Hangi inek uzak?', correct: 'Evet! Bu inek uzak.', wrong: 'Hayır, bu inek yakın.' }
         },
         options: [
             { id: 5513, word: "inek", imageUrl: "/images/5513.webp", isCorrect: true, audioKey: "inek", spokenText: "inek" },
@@ -199,7 +199,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi köpek yakın?', correct: 'Evet! Köpek yakındır.', wrong: 'Hayır, bu köpek uzaktır.' }
+            tr: { question: 'Hangi köpek yakın?', correct: 'Evet! Bu köpek yakın.', wrong: 'Hayır, bu köpek uzak.' }
         },
         options: [
             { id: 5516, word: "köpek", imageUrl: "/images/5516.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
@@ -212,7 +212,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi köpek uzak?', correct: 'Evet! Köpek uzaktır.', wrong: 'Hayır, bu köpek yakındır.' }
+            tr: { question: 'Hangi köpek uzak?', correct: 'Evet! Bu köpek uzak.', wrong: 'Hayır, bu köpek yakın.' }
         },
         options: [
             { id: 5515, word: "köpek", imageUrl: "/images/5515.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
@@ -226,7 +226,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi tekne yakın?', correct: 'Evet! Tekne yakındır.', wrong: 'Hayır, bu tekne uzaktır.' }
+            tr: { question: 'Hangi tekne yakın?', correct: 'Evet! Bu tekne yakın.', wrong: 'Hayır, bu tekne uzak.' }
         },
         options: [
             { id: 5518, word: "tekne", imageUrl: "/images/5518.webp", isCorrect: true, audioKey: "tekne", spokenText: "tekne" },
@@ -239,7 +239,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi tekne uzak?', correct: 'Evet! Tekne uzaktır.', wrong: 'Hayır, bu tekne yakındır.' }
+            tr: { question: 'Hangi tekne uzak?', correct: 'Evet! Bu tekne uzak.', wrong: 'Hayır, bu tekne yakın.' }
         },
         options: [
             { id: 5517, word: "tekne", imageUrl: "/images/5517.webp", isCorrect: true, audioKey: "tekne", spokenText: "tekne" },
@@ -253,7 +253,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi top yakın?', correct: 'Evet! Top yakındır.', wrong: 'Hayır, bu top uzaktır.' }
+            tr: { question: 'Hangi top yakın?', correct: 'Evet! Bu top yakın.', wrong: 'Hayır, bu top uzak.' }
         },
         options: [
             { id: 5520, word: "top", imageUrl: "/images/5520.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -266,7 +266,7 @@ export const nearFarDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.NearFar,
         speech: {
-            tr: { question: 'Hangi top uzak?', correct: 'Evet! Top uzaktır.', wrong: 'Hayır, bu top yakındır.' }
+            tr: { question: 'Hangi top uzak?', correct: 'Evet! Bu top uzak.', wrong: 'Hayır, bu top yakın.' }
         },
         options: [
             { id: 5519, word: "top", imageUrl: "/images/5519.webp", isCorrect: true, audioKey: "top", spokenText: "top" },

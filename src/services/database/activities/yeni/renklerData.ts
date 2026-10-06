@@ -10,7 +10,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba kırmızı?', correct: 'Evet! Araba kırmızı.', wrong: 'Hayır, bu araba mavi.' }
+            tr: { question: 'Hangi araba kırmızı?', correct: 'Evet! Bu araba kırmızı.', wrong: 'Hayır, bu araba mavi.' }
         },
         options: [
             { id: 7101, word: "araba", imageUrl: "/images/7101.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -23,7 +23,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba mavi?', correct: 'Evet! Araba mavi.', wrong: 'Hayır, bu araba kırmızı.' }
+            tr: { question: 'Hangi araba mavi?', correct: 'Evet! Bu araba mavi.', wrong: 'Hayır, bu araba kırmızı.' }
         },
         options: [
             { id: 7102, word: "araba", imageUrl: "/images/7102.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -36,7 +36,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba sarı?', correct: 'Evet! Araba sarı.', wrong: 'Hayır, bu araba mor.' }
+            tr: { question: 'Hangi araba sarı?', correct: 'Evet! Bu araba sarı.', wrong: 'Hayır, bu araba mor.' }
         },
         options: [
             { id: 7105, word: "araba", imageUrl: "/images/7105.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -49,7 +49,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba mor?', correct: 'Evet! Araba mor.', wrong: 'Hayır, bu araba sarı.' }
+            tr: { question: 'Hangi araba mor?', correct: 'Evet! Bu araba mor.', wrong: 'Hayır, bu araba sarı.' }
         },
         options: [
             { id: 7103, word: "araba", imageUrl: "/images/7103.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -62,7 +62,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba yeşil?', correct: 'Evet! Araba yeşil.', wrong: 'Hayır, bu araba turuncu.' }
+            tr: { question: 'Hangi araba yeşil?', correct: 'Evet! Bu araba yeşil.', wrong: 'Hayır, bu araba turuncu.' }
         },
         options: [
             { id: 7107, word: "araba", imageUrl: "/images/7107.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -75,7 +75,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba turuncu?', correct: 'Evet! Araba turuncu.', wrong: 'Hayır, bu araba yeşil.' }
+            tr: { question: 'Hangi araba turuncu?', correct: 'Evet! Bu araba turuncu.', wrong: 'Hayır, bu araba yeşil.' }
         },
         options: [
             { id: 7106, word: "araba", imageUrl: "/images/7106.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -88,7 +88,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba pembe?', correct: 'Evet! Araba pembe.', wrong: 'Hayır, bu araba mavi.' }
+            tr: { question: 'Hangi araba pembe?', correct: 'Evet! Bu araba pembe.', wrong: 'Hayır, bu araba mavi.' }
         },
         options: [
             { id: 7104, word: "araba", imageUrl: "/images/7104.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -101,7 +101,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba mavi?', correct: 'Evet! Araba mavi.', wrong: 'Hayır, bu araba pembe.' }
+            tr: { question: 'Hangi araba mavi?', correct: 'Evet! Bu araba mavi.', wrong: 'Hayır, bu araba pembe.' }
         },
         options: [
             { id: 7102, word: "araba", imageUrl: "/images/7102.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -114,7 +114,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba kırmızı?', correct: 'Evet! Araba kırmızı.', wrong: 'Hayır, bu araba yeşil.' }
+            tr: { question: 'Hangi araba kırmızı?', correct: 'Evet! Bu araba kırmızı.', wrong: 'Hayır, bu araba yeşil.' }
         },
         options: [
             { id: 7101, word: "araba", imageUrl: "/images/7101.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -127,7 +127,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba yeşil?', correct: 'Evet! Araba yeşil.', wrong: 'Hayır, bu araba kırmızı.' }
+            tr: { question: 'Hangi araba yeşil?', correct: 'Evet! Bu araba yeşil.', wrong: 'Hayır, bu araba kırmızı.' }
         },
         options: [
             { id: 7107, word: "araba", imageUrl: "/images/7107.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -140,7 +140,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba sarı?', correct: 'Evet! Araba sarı.', wrong: 'Hayır, bu araba mavi.' }
+            tr: { question: 'Hangi araba sarı?', correct: 'Evet! Bu araba sarı.', wrong: 'Hayır, bu araba mavi.' }
         },
         options: [
             { id: 7105, word: "araba", imageUrl: "/images/7105.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -153,7 +153,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba mavi?', correct: 'Evet! Araba mavi.', wrong: 'Hayır, bu araba sarı.' }
+            tr: { question: 'Hangi araba mavi?', correct: 'Evet! Bu araba mavi.', wrong: 'Hayır, bu araba sarı.' }
         },
         options: [
             { id: 7102, word: "araba", imageUrl: "/images/7102.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -166,7 +166,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba turuncu?', correct: 'Evet! Araba turuncu.', wrong: 'Hayır, bu araba mor.' }
+            tr: { question: 'Hangi araba turuncu?', correct: 'Evet! Bu araba turuncu.', wrong: 'Hayır, bu araba mor.' }
         },
         options: [
             { id: 7106, word: "araba", imageUrl: "/images/7106.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -179,7 +179,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba mor?', correct: 'Evet! Araba mor.', wrong: 'Hayır, bu araba turuncu.' }
+            tr: { question: 'Hangi araba mor?', correct: 'Evet! Bu araba mor.', wrong: 'Hayır, bu araba turuncu.' }
         },
         options: [
             { id: 7103, word: "araba", imageUrl: "/images/7103.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -192,7 +192,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba pembe?', correct: 'Evet! Araba pembe.', wrong: 'Hayır, bu araba yeşil.' }
+            tr: { question: 'Hangi araba pembe?', correct: 'Evet! Bu araba pembe.', wrong: 'Hayır, bu araba yeşil.' }
         },
         options: [
             { id: 7104, word: "araba", imageUrl: "/images/7104.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -205,7 +205,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi araba yeşil?', correct: 'Evet! Araba yeşil.', wrong: 'Hayır, bu araba pembe.' }
+            tr: { question: 'Hangi araba yeşil?', correct: 'Evet! Bu araba yeşil.', wrong: 'Hayır, bu araba pembe.' }
         },
         options: [
             { id: 7107, word: "araba", imageUrl: "/images/7107.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -219,7 +219,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon kırmızı?', correct: 'Evet! Balon kırmızı.', wrong: 'Hayır, bu balon mavi.' }
+            tr: { question: 'Hangi balon kırmızı?', correct: 'Evet! Bu balon kırmızı.', wrong: 'Hayır, bu balon mavi.' }
         },
         options: [
             { id: 7108, word: "balon", imageUrl: "/images/7108.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -232,7 +232,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon mavi?', correct: 'Evet! Balon mavi.', wrong: 'Hayır, bu balon kırmızı.' }
+            tr: { question: 'Hangi balon mavi?', correct: 'Evet! Bu balon mavi.', wrong: 'Hayır, bu balon kırmızı.' }
         },
         options: [
             { id: 7109, word: "balon", imageUrl: "/images/7109.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -245,7 +245,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon sarı?', correct: 'Evet! Balon sarı.', wrong: 'Hayır, bu balon mor.' }
+            tr: { question: 'Hangi balon sarı?', correct: 'Evet! Bu balon sarı.', wrong: 'Hayır, bu balon mor.' }
         },
         options: [
             { id: 7112, word: "balon", imageUrl: "/images/7112.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -258,7 +258,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon mor?', correct: 'Evet! Balon mor.', wrong: 'Hayır, bu balon sarı.' }
+            tr: { question: 'Hangi balon mor?', correct: 'Evet! Bu balon mor.', wrong: 'Hayır, bu balon sarı.' }
         },
         options: [
             { id: 7110, word: "balon", imageUrl: "/images/7110.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -271,7 +271,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon yeşil?', correct: 'Evet! Balon yeşil.', wrong: 'Hayır, bu balon turuncu.' }
+            tr: { question: 'Hangi balon yeşil?', correct: 'Evet! Bu balon yeşil.', wrong: 'Hayır, bu balon turuncu.' }
         },
         options: [
             { id: 7114, word: "balon", imageUrl: "/images/7114.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -284,7 +284,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon turuncu?', correct: 'Evet! Balon turuncu.', wrong: 'Hayır, bu balon yeşil.' }
+            tr: { question: 'Hangi balon turuncu?', correct: 'Evet! Bu balon turuncu.', wrong: 'Hayır, bu balon yeşil.' }
         },
         options: [
             { id: 7113, word: "balon", imageUrl: "/images/7113.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -297,7 +297,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon pembe?', correct: 'Evet! Balon pembe.', wrong: 'Hayır, bu balon mavi.' }
+            tr: { question: 'Hangi balon pembe?', correct: 'Evet! Bu balon pembe.', wrong: 'Hayır, bu balon mavi.' }
         },
         options: [
             { id: 7111, word: "balon", imageUrl: "/images/7111.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -310,7 +310,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon mavi?', correct: 'Evet! Balon mavi.', wrong: 'Hayır, bu balon pembe.' }
+            tr: { question: 'Hangi balon mavi?', correct: 'Evet! Bu balon mavi.', wrong: 'Hayır, bu balon pembe.' }
         },
         options: [
             { id: 7109, word: "balon", imageUrl: "/images/7109.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -323,7 +323,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon kırmızı?', correct: 'Evet! Balon kırmızı.', wrong: 'Hayır, bu balon yeşil.' }
+            tr: { question: 'Hangi balon kırmızı?', correct: 'Evet! Bu balon kırmızı.', wrong: 'Hayır, bu balon yeşil.' }
         },
         options: [
             { id: 7108, word: "balon", imageUrl: "/images/7108.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -336,7 +336,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon yeşil?', correct: 'Evet! Balon yeşil.', wrong: 'Hayır, bu balon kırmızı.' }
+            tr: { question: 'Hangi balon yeşil?', correct: 'Evet! Bu balon yeşil.', wrong: 'Hayır, bu balon kırmızı.' }
         },
         options: [
             { id: 7114, word: "balon", imageUrl: "/images/7114.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -349,7 +349,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon sarı?', correct: 'Evet! Balon sarı.', wrong: 'Hayır, bu balon mavi.' }
+            tr: { question: 'Hangi balon sarı?', correct: 'Evet! Bu balon sarı.', wrong: 'Hayır, bu balon mavi.' }
         },
         options: [
             { id: 7112, word: "balon", imageUrl: "/images/7112.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -362,7 +362,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon mavi?', correct: 'Evet! Balon mavi.', wrong: 'Hayır, bu balon sarı.' }
+            tr: { question: 'Hangi balon mavi?', correct: 'Evet! Bu balon mavi.', wrong: 'Hayır, bu balon sarı.' }
         },
         options: [
             { id: 7109, word: "balon", imageUrl: "/images/7109.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -375,7 +375,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon turuncu?', correct: 'Evet! Balon turuncu.', wrong: 'Hayır, bu balon mor.' }
+            tr: { question: 'Hangi balon turuncu?', correct: 'Evet! Bu balon turuncu.', wrong: 'Hayır, bu balon mor.' }
         },
         options: [
             { id: 7113, word: "balon", imageUrl: "/images/7113.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -388,7 +388,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon mor?', correct: 'Evet! Balon mor.', wrong: 'Hayır, bu balon turuncu.' }
+            tr: { question: 'Hangi balon mor?', correct: 'Evet! Bu balon mor.', wrong: 'Hayır, bu balon turuncu.' }
         },
         options: [
             { id: 7110, word: "balon", imageUrl: "/images/7110.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -401,7 +401,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon pembe?', correct: 'Evet! Balon pembe.', wrong: 'Hayır, bu balon yeşil.' }
+            tr: { question: 'Hangi balon pembe?', correct: 'Evet! Bu balon pembe.', wrong: 'Hayır, bu balon yeşil.' }
         },
         options: [
             { id: 7111, word: "balon", imageUrl: "/images/7111.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -414,7 +414,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi balon yeşil?', correct: 'Evet! Balon yeşil.', wrong: 'Hayır, bu balon pembe.' }
+            tr: { question: 'Hangi balon yeşil?', correct: 'Evet! Bu balon yeşil.', wrong: 'Hayır, bu balon pembe.' }
         },
         options: [
             { id: 7114, word: "balon", imageUrl: "/images/7114.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -428,7 +428,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta kırmızı?', correct: 'Evet! Çanta kırmızı.', wrong: 'Hayır, bu çanta mavi.' }
+            tr: { question: 'Hangi çanta kırmızı?', correct: 'Evet! Bu çanta kırmızı.', wrong: 'Hayır, bu çanta mavi.' }
         },
         options: [
             { id: 7115, word: "çanta", imageUrl: "/images/7115.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -441,7 +441,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta mavi?', correct: 'Evet! Çanta mavi.', wrong: 'Hayır, bu çanta kırmızı.' }
+            tr: { question: 'Hangi çanta mavi?', correct: 'Evet! Bu çanta mavi.', wrong: 'Hayır, bu çanta kırmızı.' }
         },
         options: [
             { id: 7116, word: "çanta", imageUrl: "/images/7116.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -454,7 +454,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta sarı?', correct: 'Evet! Çanta sarı.', wrong: 'Hayır, bu çanta mor.' }
+            tr: { question: 'Hangi çanta sarı?', correct: 'Evet! Bu çanta sarı.', wrong: 'Hayır, bu çanta mor.' }
         },
         options: [
             { id: 7119, word: "çanta", imageUrl: "/images/7119.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -467,7 +467,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta mor?', correct: 'Evet! Çanta mor.', wrong: 'Hayır, bu çanta sarı.' }
+            tr: { question: 'Hangi çanta mor?', correct: 'Evet! Bu çanta mor.', wrong: 'Hayır, bu çanta sarı.' }
         },
         options: [
             { id: 7117, word: "çanta", imageUrl: "/images/7117.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -480,7 +480,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta yeşil?', correct: 'Evet! Çanta yeşil.', wrong: 'Hayır, bu çanta turuncu.' }
+            tr: { question: 'Hangi çanta yeşil?', correct: 'Evet! Bu çanta yeşil.', wrong: 'Hayır, bu çanta turuncu.' }
         },
         options: [
             { id: 7121, word: "çanta", imageUrl: "/images/7121.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -493,7 +493,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta turuncu?', correct: 'Evet! Çanta turuncu.', wrong: 'Hayır, bu çanta yeşil.' }
+            tr: { question: 'Hangi çanta turuncu?', correct: 'Evet! Bu çanta turuncu.', wrong: 'Hayır, bu çanta yeşil.' }
         },
         options: [
             { id: 7120, word: "çanta", imageUrl: "/images/7120.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -506,7 +506,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta pembe?', correct: 'Evet! Çanta pembe.', wrong: 'Hayır, bu çanta mavi.' }
+            tr: { question: 'Hangi çanta pembe?', correct: 'Evet! Bu çanta pembe.', wrong: 'Hayır, bu çanta mavi.' }
         },
         options: [
             { id: 7118, word: "çanta", imageUrl: "/images/7118.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -519,7 +519,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta mavi?', correct: 'Evet! Çanta mavi.', wrong: 'Hayır, bu çanta pembe.' }
+            tr: { question: 'Hangi çanta mavi?', correct: 'Evet! Bu çanta mavi.', wrong: 'Hayır, bu çanta pembe.' }
         },
         options: [
             { id: 7116, word: "çanta", imageUrl: "/images/7116.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -532,7 +532,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta kırmızı?', correct: 'Evet! Çanta kırmızı.', wrong: 'Hayır, bu çanta yeşil.' }
+            tr: { question: 'Hangi çanta kırmızı?', correct: 'Evet! Bu çanta kırmızı.', wrong: 'Hayır, bu çanta yeşil.' }
         },
         options: [
             { id: 7115, word: "çanta", imageUrl: "/images/7115.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -545,7 +545,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta yeşil?', correct: 'Evet! Çanta yeşil.', wrong: 'Hayır, bu çanta kırmızı.' }
+            tr: { question: 'Hangi çanta yeşil?', correct: 'Evet! Bu çanta yeşil.', wrong: 'Hayır, bu çanta kırmızı.' }
         },
         options: [
             { id: 7121, word: "çanta", imageUrl: "/images/7121.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -558,7 +558,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta sarı?', correct: 'Evet! Çanta sarı.', wrong: 'Hayır, bu çanta mavi.' }
+            tr: { question: 'Hangi çanta sarı?', correct: 'Evet! Bu çanta sarı.', wrong: 'Hayır, bu çanta mavi.' }
         },
         options: [
             { id: 7119, word: "çanta", imageUrl: "/images/7119.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -571,7 +571,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta mavi?', correct: 'Evet! Çanta mavi.', wrong: 'Hayır, bu çanta sarı.' }
+            tr: { question: 'Hangi çanta mavi?', correct: 'Evet! Bu çanta mavi.', wrong: 'Hayır, bu çanta sarı.' }
         },
         options: [
             { id: 7116, word: "çanta", imageUrl: "/images/7116.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -584,7 +584,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta turuncu?', correct: 'Evet! Çanta turuncu.', wrong: 'Hayır, bu çanta mor.' }
+            tr: { question: 'Hangi çanta turuncu?', correct: 'Evet! Bu çanta turuncu.', wrong: 'Hayır, bu çanta mor.' }
         },
         options: [
             { id: 7120, word: "çanta", imageUrl: "/images/7120.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -597,7 +597,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta mor?', correct: 'Evet! Çanta mor.', wrong: 'Hayır, bu çanta turuncu.' }
+            tr: { question: 'Hangi çanta mor?', correct: 'Evet! Bu çanta mor.', wrong: 'Hayır, bu çanta turuncu.' }
         },
         options: [
             { id: 7117, word: "çanta", imageUrl: "/images/7117.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -610,7 +610,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta pembe?', correct: 'Evet! Çanta pembe.', wrong: 'Hayır, bu çanta yeşil.' }
+            tr: { question: 'Hangi çanta pembe?', correct: 'Evet! Bu çanta pembe.', wrong: 'Hayır, bu çanta yeşil.' }
         },
         options: [
             { id: 7118, word: "çanta", imageUrl: "/images/7118.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -623,7 +623,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çanta yeşil?', correct: 'Evet! Çanta yeşil.', wrong: 'Hayır, bu çanta pembe.' }
+            tr: { question: 'Hangi çanta yeşil?', correct: 'Evet! Bu çanta yeşil.', wrong: 'Hayır, bu çanta pembe.' }
         },
         options: [
             { id: 7121, word: "çanta", imageUrl: "/images/7121.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -637,7 +637,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme kırmızı?', correct: 'Evet! Çizme kırmızı.', wrong: 'Hayır, bu çizme mavi.' }
+            tr: { question: 'Hangi çizme kırmızı?', correct: 'Evet! Bu çizme kırmızı.', wrong: 'Hayır, bu çizme mavi.' }
         },
         options: [
             { id: 7122, word: "çizme", imageUrl: "/images/7122.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -650,7 +650,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme mavi?', correct: 'Evet! Çizme mavi.', wrong: 'Hayır, bu çizme kırmızı.' }
+            tr: { question: 'Hangi çizme mavi?', correct: 'Evet! Bu çizme mavi.', wrong: 'Hayır, bu çizme kırmızı.' }
         },
         options: [
             { id: 7123, word: "çizme", imageUrl: "/images/7123.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -663,7 +663,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme sarı?', correct: 'Evet! Çizme sarı.', wrong: 'Hayır, bu çizme mor.' }
+            tr: { question: 'Hangi çizme sarı?', correct: 'Evet! Bu çizme sarı.', wrong: 'Hayır, bu çizme mor.' }
         },
         options: [
             { id: 7126, word: "çizme", imageUrl: "/images/7126.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -676,7 +676,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme mor?', correct: 'Evet! Çizme mor.', wrong: 'Hayır, bu çizme sarı.' }
+            tr: { question: 'Hangi çizme mor?', correct: 'Evet! Bu çizme mor.', wrong: 'Hayır, bu çizme sarı.' }
         },
         options: [
             { id: 7124, word: "çizme", imageUrl: "/images/7124.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -689,7 +689,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme yeşil?', correct: 'Evet! Çizme yeşil.', wrong: 'Hayır, bu çizme turuncu.' }
+            tr: { question: 'Hangi çizme yeşil?', correct: 'Evet! Bu çizme yeşil.', wrong: 'Hayır, bu çizme turuncu.' }
         },
         options: [
             { id: 7128, word: "çizme", imageUrl: "/images/7128.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -702,7 +702,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme turuncu?', correct: 'Evet! Çizme turuncu.', wrong: 'Hayır, bu çizme yeşil.' }
+            tr: { question: 'Hangi çizme turuncu?', correct: 'Evet! Bu çizme turuncu.', wrong: 'Hayır, bu çizme yeşil.' }
         },
         options: [
             { id: 7127, word: "çizme", imageUrl: "/images/7127.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -715,7 +715,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme pembe?', correct: 'Evet! Çizme pembe.', wrong: 'Hayır, bu çizme mavi.' }
+            tr: { question: 'Hangi çizme pembe?', correct: 'Evet! Bu çizme pembe.', wrong: 'Hayır, bu çizme mavi.' }
         },
         options: [
             { id: 7125, word: "çizme", imageUrl: "/images/7125.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -728,7 +728,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme mavi?', correct: 'Evet! Çizme mavi.', wrong: 'Hayır, bu çizme pembe.' }
+            tr: { question: 'Hangi çizme mavi?', correct: 'Evet! Bu çizme mavi.', wrong: 'Hayır, bu çizme pembe.' }
         },
         options: [
             { id: 7123, word: "çizme", imageUrl: "/images/7123.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -741,7 +741,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme kırmızı?', correct: 'Evet! Çizme kırmızı.', wrong: 'Hayır, bu çizme yeşil.' }
+            tr: { question: 'Hangi çizme kırmızı?', correct: 'Evet! Bu çizme kırmızı.', wrong: 'Hayır, bu çizme yeşil.' }
         },
         options: [
             { id: 7122, word: "çizme", imageUrl: "/images/7122.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -754,7 +754,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme yeşil?', correct: 'Evet! Çizme yeşil.', wrong: 'Hayır, bu çizme kırmızı.' }
+            tr: { question: 'Hangi çizme yeşil?', correct: 'Evet! Bu çizme yeşil.', wrong: 'Hayır, bu çizme kırmızı.' }
         },
         options: [
             { id: 7128, word: "çizme", imageUrl: "/images/7128.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -767,7 +767,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme sarı?', correct: 'Evet! Çizme sarı.', wrong: 'Hayır, bu çizme mavi.' }
+            tr: { question: 'Hangi çizme sarı?', correct: 'Evet! Bu çizme sarı.', wrong: 'Hayır, bu çizme mavi.' }
         },
         options: [
             { id: 7126, word: "çizme", imageUrl: "/images/7126.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -780,7 +780,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme mavi?', correct: 'Evet! Çizme mavi.', wrong: 'Hayır, bu çizme sarı.' }
+            tr: { question: 'Hangi çizme mavi?', correct: 'Evet! Bu çizme mavi.', wrong: 'Hayır, bu çizme sarı.' }
         },
         options: [
             { id: 7123, word: "çizme", imageUrl: "/images/7123.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -793,7 +793,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme turuncu?', correct: 'Evet! Çizme turuncu.', wrong: 'Hayır, bu çizme mor.' }
+            tr: { question: 'Hangi çizme turuncu?', correct: 'Evet! Bu çizme turuncu.', wrong: 'Hayır, bu çizme mor.' }
         },
         options: [
             { id: 7127, word: "çizme", imageUrl: "/images/7127.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -806,7 +806,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme mor?', correct: 'Evet! Çizme mor.', wrong: 'Hayır, bu çizme turuncu.' }
+            tr: { question: 'Hangi çizme mor?', correct: 'Evet! Bu çizme mor.', wrong: 'Hayır, bu çizme turuncu.' }
         },
         options: [
             { id: 7124, word: "çizme", imageUrl: "/images/7124.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -819,7 +819,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme pembe?', correct: 'Evet! Çizme pembe.', wrong: 'Hayır, bu çizme yeşil.' }
+            tr: { question: 'Hangi çizme pembe?', correct: 'Evet! Bu çizme pembe.', wrong: 'Hayır, bu çizme yeşil.' }
         },
         options: [
             { id: 7125, word: "çizme", imageUrl: "/images/7125.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -832,7 +832,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çizme yeşil?', correct: 'Evet! Çizme yeşil.', wrong: 'Hayır, bu çizme pembe.' }
+            tr: { question: 'Hangi çizme yeşil?', correct: 'Evet! Bu çizme yeşil.', wrong: 'Hayır, bu çizme pembe.' }
         },
         options: [
             { id: 7128, word: "çizme", imageUrl: "/images/7128.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -846,7 +846,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise kırmızı?', correct: 'Evet! Elbise kırmızı.', wrong: 'Hayır, bu elbise mavi.' }
+            tr: { question: 'Hangi elbise kırmızı?', correct: 'Evet! Bu elbise kırmızı.', wrong: 'Hayır, bu elbise mavi.' }
         },
         options: [
             { id: 7129, word: "elbise", imageUrl: "/images/7129.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -859,7 +859,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise mavi?', correct: 'Evet! Elbise mavi.', wrong: 'Hayır, bu elbise kırmızı.' }
+            tr: { question: 'Hangi elbise mavi?', correct: 'Evet! Bu elbise mavi.', wrong: 'Hayır, bu elbise kırmızı.' }
         },
         options: [
             { id: 7130, word: "elbise", imageUrl: "/images/7130.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -872,7 +872,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise sarı?', correct: 'Evet! Elbise sarı.', wrong: 'Hayır, bu elbise mor.' }
+            tr: { question: 'Hangi elbise sarı?', correct: 'Evet! Bu elbise sarı.', wrong: 'Hayır, bu elbise mor.' }
         },
         options: [
             { id: 7133, word: "elbise", imageUrl: "/images/7133.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -885,7 +885,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise mor?', correct: 'Evet! Elbise mor.', wrong: 'Hayır, bu elbise sarı.' }
+            tr: { question: 'Hangi elbise mor?', correct: 'Evet! Bu elbise mor.', wrong: 'Hayır, bu elbise sarı.' }
         },
         options: [
             { id: 7131, word: "elbise", imageUrl: "/images/7131.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -898,7 +898,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise yeşil?', correct: 'Evet! Elbise yeşil.', wrong: 'Hayır, bu elbise turuncu.' }
+            tr: { question: 'Hangi elbise yeşil?', correct: 'Evet! Bu elbise yeşil.', wrong: 'Hayır, bu elbise turuncu.' }
         },
         options: [
             { id: 7135, word: "elbise", imageUrl: "/images/7135.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -911,7 +911,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise turuncu?', correct: 'Evet! Elbise turuncu.', wrong: 'Hayır, bu elbise yeşil.' }
+            tr: { question: 'Hangi elbise turuncu?', correct: 'Evet! Bu elbise turuncu.', wrong: 'Hayır, bu elbise yeşil.' }
         },
         options: [
             { id: 7134, word: "elbise", imageUrl: "/images/7134.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -924,7 +924,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise pembe?', correct: 'Evet! Elbise pembe.', wrong: 'Hayır, bu elbise mavi.' }
+            tr: { question: 'Hangi elbise pembe?', correct: 'Evet! Bu elbise pembe.', wrong: 'Hayır, bu elbise mavi.' }
         },
         options: [
             { id: 7132, word: "elbise", imageUrl: "/images/7132.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -937,7 +937,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise mavi?', correct: 'Evet! Elbise mavi.', wrong: 'Hayır, bu elbise pembe.' }
+            tr: { question: 'Hangi elbise mavi?', correct: 'Evet! Bu elbise mavi.', wrong: 'Hayır, bu elbise pembe.' }
         },
         options: [
             { id: 7130, word: "elbise", imageUrl: "/images/7130.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -950,7 +950,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise kırmızı?', correct: 'Evet! Elbise kırmızı.', wrong: 'Hayır, bu elbise yeşil.' }
+            tr: { question: 'Hangi elbise kırmızı?', correct: 'Evet! Bu elbise kırmızı.', wrong: 'Hayır, bu elbise yeşil.' }
         },
         options: [
             { id: 7129, word: "elbise", imageUrl: "/images/7129.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -963,7 +963,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise yeşil?', correct: 'Evet! Elbise yeşil.', wrong: 'Hayır, bu elbise kırmızı.' }
+            tr: { question: 'Hangi elbise yeşil?', correct: 'Evet! Bu elbise yeşil.', wrong: 'Hayır, bu elbise kırmızı.' }
         },
         options: [
             { id: 7135, word: "elbise", imageUrl: "/images/7135.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -976,7 +976,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise sarı?', correct: 'Evet! Elbise sarı.', wrong: 'Hayır, bu elbise mavi.' }
+            tr: { question: 'Hangi elbise sarı?', correct: 'Evet! Bu elbise sarı.', wrong: 'Hayır, bu elbise mavi.' }
         },
         options: [
             { id: 7133, word: "elbise", imageUrl: "/images/7133.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -989,7 +989,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise mavi?', correct: 'Evet! Elbise mavi.', wrong: 'Hayır, bu elbise sarı.' }
+            tr: { question: 'Hangi elbise mavi?', correct: 'Evet! Bu elbise mavi.', wrong: 'Hayır, bu elbise sarı.' }
         },
         options: [
             { id: 7130, word: "elbise", imageUrl: "/images/7130.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -1002,7 +1002,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise turuncu?', correct: 'Evet! Elbise turuncu.', wrong: 'Hayır, bu elbise mor.' }
+            tr: { question: 'Hangi elbise turuncu?', correct: 'Evet! Bu elbise turuncu.', wrong: 'Hayır, bu elbise mor.' }
         },
         options: [
             { id: 7134, word: "elbise", imageUrl: "/images/7134.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -1015,7 +1015,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise mor?', correct: 'Evet! Elbise mor.', wrong: 'Hayır, bu elbise turuncu.' }
+            tr: { question: 'Hangi elbise mor?', correct: 'Evet! Bu elbise mor.', wrong: 'Hayır, bu elbise turuncu.' }
         },
         options: [
             { id: 7131, word: "elbise", imageUrl: "/images/7131.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -1028,7 +1028,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise pembe?', correct: 'Evet! Elbise pembe.', wrong: 'Hayır, bu elbise yeşil.' }
+            tr: { question: 'Hangi elbise pembe?', correct: 'Evet! Bu elbise pembe.', wrong: 'Hayır, bu elbise yeşil.' }
         },
         options: [
             { id: 7132, word: "elbise", imageUrl: "/images/7132.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -1041,7 +1041,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi elbise yeşil?', correct: 'Evet! Elbise yeşil.', wrong: 'Hayır, bu elbise pembe.' }
+            tr: { question: 'Hangi elbise yeşil?', correct: 'Evet! Bu elbise yeşil.', wrong: 'Hayır, bu elbise pembe.' }
         },
         options: [
             { id: 7135, word: "elbise", imageUrl: "/images/7135.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -1055,7 +1055,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası kırmızı?', correct: 'Evet! Çöp kovası kırmızı.', wrong: 'Hayır, bu çöp kovası mavi.' }
+            tr: { question: 'Hangi çöp kovası kırmızı?', correct: 'Evet! Bu çöp kovası kırmızı.', wrong: 'Hayır, bu çöp kovası mavi.' }
         },
         options: [
             { id: 7136, word: "çöp kovası", imageUrl: "/images/7136.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1068,7 +1068,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası mavi?', correct: 'Evet! Çöp kovası mavi.', wrong: 'Hayır, bu çöp kovası kırmızı.' }
+            tr: { question: 'Hangi çöp kovası mavi?', correct: 'Evet! Bu çöp kovası mavi.', wrong: 'Hayır, bu çöp kovası kırmızı.' }
         },
         options: [
             { id: 7137, word: "çöp kovası", imageUrl: "/images/7137.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1081,7 +1081,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası sarı?', correct: 'Evet! Çöp kovası sarı.', wrong: 'Hayır, bu çöp kovası mor.' }
+            tr: { question: 'Hangi çöp kovası sarı?', correct: 'Evet! Bu çöp kovası sarı.', wrong: 'Hayır, bu çöp kovası mor.' }
         },
         options: [
             { id: 7140, word: "çöp kovası", imageUrl: "/images/7140.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1094,7 +1094,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası mor?', correct: 'Evet! Çöp kovası mor.', wrong: 'Hayır, bu çöp kovası sarı.' }
+            tr: { question: 'Hangi çöp kovası mor?', correct: 'Evet! Bu çöp kovası mor.', wrong: 'Hayır, bu çöp kovası sarı.' }
         },
         options: [
             { id: 7138, word: "çöp kovası", imageUrl: "/images/7138.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1107,7 +1107,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası yeşil?', correct: 'Evet! Çöp kovası yeşil.', wrong: 'Hayır, bu çöp kovası turuncu.' }
+            tr: { question: 'Hangi çöp kovası yeşil?', correct: 'Evet! Bu çöp kovası yeşil.', wrong: 'Hayır, bu çöp kovası turuncu.' }
         },
         options: [
             { id: 7142, word: "çöp kovası", imageUrl: "/images/7142.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1120,7 +1120,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası turuncu?', correct: 'Evet! Çöp kovası turuncu.', wrong: 'Hayır, bu çöp kovası yeşil.' }
+            tr: { question: 'Hangi çöp kovası turuncu?', correct: 'Evet! Bu çöp kovası turuncu.', wrong: 'Hayır, bu çöp kovası yeşil.' }
         },
         options: [
             { id: 7141, word: "çöp kovası", imageUrl: "/images/7141.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1133,7 +1133,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası pembe?', correct: 'Evet! Çöp kovası pembe.', wrong: 'Hayır, bu çöp kovası mavi.' }
+            tr: { question: 'Hangi çöp kovası pembe?', correct: 'Evet! Bu çöp kovası pembe.', wrong: 'Hayır, bu çöp kovası mavi.' }
         },
         options: [
             { id: 7139, word: "çöp kovası", imageUrl: "/images/7139.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1146,7 +1146,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası mavi?', correct: 'Evet! Çöp kovası mavi.', wrong: 'Hayır, bu çöp kovası pembe.' }
+            tr: { question: 'Hangi çöp kovası mavi?', correct: 'Evet! Bu çöp kovası mavi.', wrong: 'Hayır, bu çöp kovası pembe.' }
         },
         options: [
             { id: 7137, word: "çöp kovası", imageUrl: "/images/7137.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1159,7 +1159,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası kırmızı?', correct: 'Evet! Çöp kovası kırmızı.', wrong: 'Hayır, bu çöp kovası yeşil.' }
+            tr: { question: 'Hangi çöp kovası kırmızı?', correct: 'Evet! Bu çöp kovası kırmızı.', wrong: 'Hayır, bu çöp kovası yeşil.' }
         },
         options: [
             { id: 7136, word: "çöp kovası", imageUrl: "/images/7136.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1172,7 +1172,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası yeşil?', correct: 'Evet! Çöp kovası yeşil.', wrong: 'Hayır, bu çöp kovası kırmızı.' }
+            tr: { question: 'Hangi çöp kovası yeşil?', correct: 'Evet! Bu çöp kovası yeşil.', wrong: 'Hayır, bu çöp kovası kırmızı.' }
         },
         options: [
             { id: 7142, word: "çöp kovası", imageUrl: "/images/7142.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1185,7 +1185,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası sarı?', correct: 'Evet! Çöp kovası sarı.', wrong: 'Hayır, bu çöp kovası mavi.' }
+            tr: { question: 'Hangi çöp kovası sarı?', correct: 'Evet! Bu çöp kovası sarı.', wrong: 'Hayır, bu çöp kovası mavi.' }
         },
         options: [
             { id: 7140, word: "çöp kovası", imageUrl: "/images/7140.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1198,7 +1198,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası mavi?', correct: 'Evet! Çöp kovası mavi.', wrong: 'Hayır, bu çöp kovası sarı.' }
+            tr: { question: 'Hangi çöp kovası mavi?', correct: 'Evet! Bu çöp kovası mavi.', wrong: 'Hayır, bu çöp kovası sarı.' }
         },
         options: [
             { id: 7137, word: "çöp kovası", imageUrl: "/images/7137.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1211,7 +1211,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası turuncu?', correct: 'Evet! Çöp kovası turuncu.', wrong: 'Hayır, bu çöp kovası mor.' }
+            tr: { question: 'Hangi çöp kovası turuncu?', correct: 'Evet! Bu çöp kovası turuncu.', wrong: 'Hayır, bu çöp kovası mor.' }
         },
         options: [
             { id: 7141, word: "çöp kovası", imageUrl: "/images/7141.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1224,7 +1224,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası mor?', correct: 'Evet! Çöp kovası mor.', wrong: 'Hayır, bu çöp kovası turuncu.' }
+            tr: { question: 'Hangi çöp kovası mor?', correct: 'Evet! Bu çöp kovası mor.', wrong: 'Hayır, bu çöp kovası turuncu.' }
         },
         options: [
             { id: 7138, word: "çöp kovası", imageUrl: "/images/7138.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1237,7 +1237,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası pembe?', correct: 'Evet! Çöp kovası pembe.', wrong: 'Hayır, bu çöp kovası yeşil.' }
+            tr: { question: 'Hangi çöp kovası pembe?', correct: 'Evet! Bu çöp kovası pembe.', wrong: 'Hayır, bu çöp kovası yeşil.' }
         },
         options: [
             { id: 7139, word: "çöp kovası", imageUrl: "/images/7139.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1250,7 +1250,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi çöp kovası yeşil?', correct: 'Evet! Çöp kovası yeşil.', wrong: 'Hayır, bu çöp kovası pembe.' }
+            tr: { question: 'Hangi çöp kovası yeşil?', correct: 'Evet! Bu çöp kovası yeşil.', wrong: 'Hayır, bu çöp kovası pembe.' }
         },
         options: [
             { id: 7142, word: "çöp kovası", imageUrl: "/images/7142.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -1264,7 +1264,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa kırmızı?', correct: 'Evet! Kupa kırmızı.', wrong: 'Hayır, bu kupa mavi.' }
+            tr: { question: 'Hangi kupa kırmızı?', correct: 'Evet! Bu kupa kırmızı.', wrong: 'Hayır, bu kupa mavi.' }
         },
         options: [
             { id: 7143, word: "kupa", imageUrl: "/images/7143.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1277,7 +1277,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa mavi?', correct: 'Evet! Kupa mavi.', wrong: 'Hayır, bu kupa kırmızı.' }
+            tr: { question: 'Hangi kupa mavi?', correct: 'Evet! Bu kupa mavi.', wrong: 'Hayır, bu kupa kırmızı.' }
         },
         options: [
             { id: 7144, word: "kupa", imageUrl: "/images/7144.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1290,7 +1290,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa sarı?', correct: 'Evet! Kupa sarı.', wrong: 'Hayır, bu kupa mor.' }
+            tr: { question: 'Hangi kupa sarı?', correct: 'Evet! Bu kupa sarı.', wrong: 'Hayır, bu kupa mor.' }
         },
         options: [
             { id: 7147, word: "kupa", imageUrl: "/images/7147.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1303,7 +1303,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa mor?', correct: 'Evet! Kupa mor.', wrong: 'Hayır, bu kupa sarı.' }
+            tr: { question: 'Hangi kupa mor?', correct: 'Evet! Bu kupa mor.', wrong: 'Hayır, bu kupa sarı.' }
         },
         options: [
             { id: 7145, word: "kupa", imageUrl: "/images/7145.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1316,7 +1316,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa yeşil?', correct: 'Evet! Kupa yeşil.', wrong: 'Hayır, bu kupa turuncu.' }
+            tr: { question: 'Hangi kupa yeşil?', correct: 'Evet! Bu kupa yeşil.', wrong: 'Hayır, bu kupa turuncu.' }
         },
         options: [
             { id: 7149, word: "kupa", imageUrl: "/images/7149.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1329,7 +1329,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa turuncu?', correct: 'Evet! Kupa turuncu.', wrong: 'Hayır, bu kupa yeşil.' }
+            tr: { question: 'Hangi kupa turuncu?', correct: 'Evet! Bu kupa turuncu.', wrong: 'Hayır, bu kupa yeşil.' }
         },
         options: [
             { id: 7148, word: "kupa", imageUrl: "/images/7148.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1342,7 +1342,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa pembe?', correct: 'Evet! Kupa pembe.', wrong: 'Hayır, bu kupa mavi.' }
+            tr: { question: 'Hangi kupa pembe?', correct: 'Evet! Bu kupa pembe.', wrong: 'Hayır, bu kupa mavi.' }
         },
         options: [
             { id: 7146, word: "kupa", imageUrl: "/images/7146.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1355,7 +1355,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa mavi?', correct: 'Evet! Kupa mavi.', wrong: 'Hayır, bu kupa pembe.' }
+            tr: { question: 'Hangi kupa mavi?', correct: 'Evet! Bu kupa mavi.', wrong: 'Hayır, bu kupa pembe.' }
         },
         options: [
             { id: 7144, word: "kupa", imageUrl: "/images/7144.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1368,7 +1368,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa kırmızı?', correct: 'Evet! Kupa kırmızı.', wrong: 'Hayır, bu kupa yeşil.' }
+            tr: { question: 'Hangi kupa kırmızı?', correct: 'Evet! Bu kupa kırmızı.', wrong: 'Hayır, bu kupa yeşil.' }
         },
         options: [
             { id: 7143, word: "kupa", imageUrl: "/images/7143.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1381,7 +1381,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa yeşil?', correct: 'Evet! Kupa yeşil.', wrong: 'Hayır, bu kupa kırmızı.' }
+            tr: { question: 'Hangi kupa yeşil?', correct: 'Evet! Bu kupa yeşil.', wrong: 'Hayır, bu kupa kırmızı.' }
         },
         options: [
             { id: 7149, word: "kupa", imageUrl: "/images/7149.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1394,7 +1394,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa sarı?', correct: 'Evet! Kupa sarı.', wrong: 'Hayır, bu kupa mavi.' }
+            tr: { question: 'Hangi kupa sarı?', correct: 'Evet! Bu kupa sarı.', wrong: 'Hayır, bu kupa mavi.' }
         },
         options: [
             { id: 7147, word: "kupa", imageUrl: "/images/7147.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1407,7 +1407,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa mavi?', correct: 'Evet! Kupa mavi.', wrong: 'Hayır, bu kupa sarı.' }
+            tr: { question: 'Hangi kupa mavi?', correct: 'Evet! Bu kupa mavi.', wrong: 'Hayır, bu kupa sarı.' }
         },
         options: [
             { id: 7144, word: "kupa", imageUrl: "/images/7144.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1420,7 +1420,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa turuncu?', correct: 'Evet! Kupa turuncu.', wrong: 'Hayır, bu kupa mor.' }
+            tr: { question: 'Hangi kupa turuncu?', correct: 'Evet! Bu kupa turuncu.', wrong: 'Hayır, bu kupa mor.' }
         },
         options: [
             { id: 7148, word: "kupa", imageUrl: "/images/7148.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1433,7 +1433,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa mor?', correct: 'Evet! Kupa mor.', wrong: 'Hayır, bu kupa turuncu.' }
+            tr: { question: 'Hangi kupa mor?', correct: 'Evet! Bu kupa mor.', wrong: 'Hayır, bu kupa turuncu.' }
         },
         options: [
             { id: 7145, word: "kupa", imageUrl: "/images/7145.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1446,7 +1446,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa pembe?', correct: 'Evet! Kupa pembe.', wrong: 'Hayır, bu kupa yeşil.' }
+            tr: { question: 'Hangi kupa pembe?', correct: 'Evet! Bu kupa pembe.', wrong: 'Hayır, bu kupa yeşil.' }
         },
         options: [
             { id: 7146, word: "kupa", imageUrl: "/images/7146.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1459,7 +1459,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi kupa yeşil?', correct: 'Evet! Kupa yeşil.', wrong: 'Hayır, bu kupa pembe.' }
+            tr: { question: 'Hangi kupa yeşil?', correct: 'Evet! Bu kupa yeşil.', wrong: 'Hayır, bu kupa pembe.' }
         },
         options: [
             { id: 7149, word: "kupa", imageUrl: "/images/7149.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -1473,7 +1473,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye kırmızı?', correct: 'Evet! Şemsiye kırmızı.', wrong: 'Hayır, bu şemsiye mavi.' }
+            tr: { question: 'Hangi şemsiye kırmızı?', correct: 'Evet! Bu şemsiye kırmızı.', wrong: 'Hayır, bu şemsiye mavi.' }
         },
         options: [
             { id: 7150, word: "şemsiye", imageUrl: "/images/7150.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1486,7 +1486,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye mavi?', correct: 'Evet! Şemsiye mavi.', wrong: 'Hayır, bu şemsiye kırmızı.' }
+            tr: { question: 'Hangi şemsiye mavi?', correct: 'Evet! Bu şemsiye mavi.', wrong: 'Hayır, bu şemsiye kırmızı.' }
         },
         options: [
             { id: 7151, word: "şemsiye", imageUrl: "/images/7151.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1499,7 +1499,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye sarı?', correct: 'Evet! Şemsiye sarı.', wrong: 'Hayır, bu şemsiye mor.' }
+            tr: { question: 'Hangi şemsiye sarı?', correct: 'Evet! Bu şemsiye sarı.', wrong: 'Hayır, bu şemsiye mor.' }
         },
         options: [
             { id: 7154, word: "şemsiye", imageUrl: "/images/7154.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1512,7 +1512,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye mor?', correct: 'Evet! Şemsiye mor.', wrong: 'Hayır, bu şemsiye sarı.' }
+            tr: { question: 'Hangi şemsiye mor?', correct: 'Evet! Bu şemsiye mor.', wrong: 'Hayır, bu şemsiye sarı.' }
         },
         options: [
             { id: 7152, word: "şemsiye", imageUrl: "/images/7152.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1525,7 +1525,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye yeşil?', correct: 'Evet! Şemsiye yeşil.', wrong: 'Hayır, bu şemsiye turuncu.' }
+            tr: { question: 'Hangi şemsiye yeşil?', correct: 'Evet! Bu şemsiye yeşil.', wrong: 'Hayır, bu şemsiye turuncu.' }
         },
         options: [
             { id: 7156, word: "şemsiye", imageUrl: "/images/7156.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1538,7 +1538,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye turuncu?', correct: 'Evet! Şemsiye turuncu.', wrong: 'Hayır, bu şemsiye yeşil.' }
+            tr: { question: 'Hangi şemsiye turuncu?', correct: 'Evet! Bu şemsiye turuncu.', wrong: 'Hayır, bu şemsiye yeşil.' }
         },
         options: [
             { id: 7155, word: "şemsiye", imageUrl: "/images/7155.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1551,7 +1551,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye pembe?', correct: 'Evet! Şemsiye pembe.', wrong: 'Hayır, bu şemsiye mavi.' }
+            tr: { question: 'Hangi şemsiye pembe?', correct: 'Evet! Bu şemsiye pembe.', wrong: 'Hayır, bu şemsiye mavi.' }
         },
         options: [
             { id: 7153, word: "şemsiye", imageUrl: "/images/7153.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1564,7 +1564,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye mavi?', correct: 'Evet! Şemsiye mavi.', wrong: 'Hayır, bu şemsiye pembe.' }
+            tr: { question: 'Hangi şemsiye mavi?', correct: 'Evet! Bu şemsiye mavi.', wrong: 'Hayır, bu şemsiye pembe.' }
         },
         options: [
             { id: 7151, word: "şemsiye", imageUrl: "/images/7151.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1577,7 +1577,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye kırmızı?', correct: 'Evet! Şemsiye kırmızı.', wrong: 'Hayır, bu şemsiye yeşil.' }
+            tr: { question: 'Hangi şemsiye kırmızı?', correct: 'Evet! Bu şemsiye kırmızı.', wrong: 'Hayır, bu şemsiye yeşil.' }
         },
         options: [
             { id: 7150, word: "şemsiye", imageUrl: "/images/7150.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1590,7 +1590,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye yeşil?', correct: 'Evet! Şemsiye yeşil.', wrong: 'Hayır, bu şemsiye kırmızı.' }
+            tr: { question: 'Hangi şemsiye yeşil?', correct: 'Evet! Bu şemsiye yeşil.', wrong: 'Hayır, bu şemsiye kırmızı.' }
         },
         options: [
             { id: 7156, word: "şemsiye", imageUrl: "/images/7156.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1603,7 +1603,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye sarı?', correct: 'Evet! Şemsiye sarı.', wrong: 'Hayır, bu şemsiye mavi.' }
+            tr: { question: 'Hangi şemsiye sarı?', correct: 'Evet! Bu şemsiye sarı.', wrong: 'Hayır, bu şemsiye mavi.' }
         },
         options: [
             { id: 7154, word: "şemsiye", imageUrl: "/images/7154.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1616,7 +1616,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye mavi?', correct: 'Evet! Şemsiye mavi.', wrong: 'Hayır, bu şemsiye sarı.' }
+            tr: { question: 'Hangi şemsiye mavi?', correct: 'Evet! Bu şemsiye mavi.', wrong: 'Hayır, bu şemsiye sarı.' }
         },
         options: [
             { id: 7151, word: "şemsiye", imageUrl: "/images/7151.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1629,7 +1629,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye turuncu?', correct: 'Evet! Şemsiye turuncu.', wrong: 'Hayır, bu şemsiye mor.' }
+            tr: { question: 'Hangi şemsiye turuncu?', correct: 'Evet! Bu şemsiye turuncu.', wrong: 'Hayır, bu şemsiye mor.' }
         },
         options: [
             { id: 7155, word: "şemsiye", imageUrl: "/images/7155.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1642,7 +1642,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye mor?', correct: 'Evet! Şemsiye mor.', wrong: 'Hayır, bu şemsiye turuncu.' }
+            tr: { question: 'Hangi şemsiye mor?', correct: 'Evet! Bu şemsiye mor.', wrong: 'Hayır, bu şemsiye turuncu.' }
         },
         options: [
             { id: 7152, word: "şemsiye", imageUrl: "/images/7152.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1655,7 +1655,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye pembe?', correct: 'Evet! Şemsiye pembe.', wrong: 'Hayır, bu şemsiye yeşil.' }
+            tr: { question: 'Hangi şemsiye pembe?', correct: 'Evet! Bu şemsiye pembe.', wrong: 'Hayır, bu şemsiye yeşil.' }
         },
         options: [
             { id: 7153, word: "şemsiye", imageUrl: "/images/7153.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1668,7 +1668,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şemsiye yeşil?', correct: 'Evet! Şemsiye yeşil.', wrong: 'Hayır, bu şemsiye pembe.' }
+            tr: { question: 'Hangi şemsiye yeşil?', correct: 'Evet! Bu şemsiye yeşil.', wrong: 'Hayır, bu şemsiye pembe.' }
         },
         options: [
             { id: 7156, word: "şemsiye", imageUrl: "/images/7156.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -1682,7 +1682,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe kırmızı?', correct: 'Evet! Şişe kırmızı.', wrong: 'Hayır, bu şişe mavi.' }
+            tr: { question: 'Hangi şişe kırmızı?', correct: 'Evet! Bu şişe kırmızı.', wrong: 'Hayır, bu şişe mavi.' }
         },
         options: [
             { id: 7157, word: "şişe", imageUrl: "/images/7157.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1695,7 +1695,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe mavi?', correct: 'Evet! Şişe mavi.', wrong: 'Hayır, bu şişe kırmızı.' }
+            tr: { question: 'Hangi şişe mavi?', correct: 'Evet! Bu şişe mavi.', wrong: 'Hayır, bu şişe kırmızı.' }
         },
         options: [
             { id: 7158, word: "şişe", imageUrl: "/images/7158.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1708,7 +1708,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe sarı?', correct: 'Evet! Şişe sarı.', wrong: 'Hayır, bu şişe mor.' }
+            tr: { question: 'Hangi şişe sarı?', correct: 'Evet! Bu şişe sarı.', wrong: 'Hayır, bu şişe mor.' }
         },
         options: [
             { id: 7161, word: "şişe", imageUrl: "/images/7161.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1721,7 +1721,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe mor?', correct: 'Evet! Şişe mor.', wrong: 'Hayır, bu şişe sarı.' }
+            tr: { question: 'Hangi şişe mor?', correct: 'Evet! Bu şişe mor.', wrong: 'Hayır, bu şişe sarı.' }
         },
         options: [
             { id: 7159, word: "şişe", imageUrl: "/images/7159.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1734,7 +1734,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe yeşil?', correct: 'Evet! Şişe yeşil.', wrong: 'Hayır, bu şişe turuncu.' }
+            tr: { question: 'Hangi şişe yeşil?', correct: 'Evet! Bu şişe yeşil.', wrong: 'Hayır, bu şişe turuncu.' }
         },
         options: [
             { id: 7163, word: "şişe", imageUrl: "/images/7163.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1747,7 +1747,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe turuncu?', correct: 'Evet! Şişe turuncu.', wrong: 'Hayır, bu şişe yeşil.' }
+            tr: { question: 'Hangi şişe turuncu?', correct: 'Evet! Bu şişe turuncu.', wrong: 'Hayır, bu şişe yeşil.' }
         },
         options: [
             { id: 7162, word: "şişe", imageUrl: "/images/7162.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1760,7 +1760,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe pembe?', correct: 'Evet! Şişe pembe.', wrong: 'Hayır, bu şişe mavi.' }
+            tr: { question: 'Hangi şişe pembe?', correct: 'Evet! Bu şişe pembe.', wrong: 'Hayır, bu şişe mavi.' }
         },
         options: [
             { id: 7160, word: "şişe", imageUrl: "/images/7160.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1773,7 +1773,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe mavi?', correct: 'Evet! Şişe mavi.', wrong: 'Hayır, bu şişe pembe.' }
+            tr: { question: 'Hangi şişe mavi?', correct: 'Evet! Bu şişe mavi.', wrong: 'Hayır, bu şişe pembe.' }
         },
         options: [
             { id: 7158, word: "şişe", imageUrl: "/images/7158.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1786,7 +1786,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe kırmızı?', correct: 'Evet! Şişe kırmızı.', wrong: 'Hayır, bu şişe yeşil.' }
+            tr: { question: 'Hangi şişe kırmızı?', correct: 'Evet! Bu şişe kırmızı.', wrong: 'Hayır, bu şişe yeşil.' }
         },
         options: [
             { id: 7157, word: "şişe", imageUrl: "/images/7157.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1799,7 +1799,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe yeşil?', correct: 'Evet! Şişe yeşil.', wrong: 'Hayır, bu şişe kırmızı.' }
+            tr: { question: 'Hangi şişe yeşil?', correct: 'Evet! Bu şişe yeşil.', wrong: 'Hayır, bu şişe kırmızı.' }
         },
         options: [
             { id: 7163, word: "şişe", imageUrl: "/images/7163.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1812,7 +1812,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe sarı?', correct: 'Evet! Şişe sarı.', wrong: 'Hayır, bu şişe mavi.' }
+            tr: { question: 'Hangi şişe sarı?', correct: 'Evet! Bu şişe sarı.', wrong: 'Hayır, bu şişe mavi.' }
         },
         options: [
             { id: 7161, word: "şişe", imageUrl: "/images/7161.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1825,7 +1825,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe mavi?', correct: 'Evet! Şişe mavi.', wrong: 'Hayır, bu şişe sarı.' }
+            tr: { question: 'Hangi şişe mavi?', correct: 'Evet! Bu şişe mavi.', wrong: 'Hayır, bu şişe sarı.' }
         },
         options: [
             { id: 7158, word: "şişe", imageUrl: "/images/7158.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1838,7 +1838,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe turuncu?', correct: 'Evet! Şişe turuncu.', wrong: 'Hayır, bu şişe mor.' }
+            tr: { question: 'Hangi şişe turuncu?', correct: 'Evet! Bu şişe turuncu.', wrong: 'Hayır, bu şişe mor.' }
         },
         options: [
             { id: 7162, word: "şişe", imageUrl: "/images/7162.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1851,7 +1851,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe mor?', correct: 'Evet! Şişe mor.', wrong: 'Hayır, bu şişe turuncu.' }
+            tr: { question: 'Hangi şişe mor?', correct: 'Evet! Bu şişe mor.', wrong: 'Hayır, bu şişe turuncu.' }
         },
         options: [
             { id: 7159, word: "şişe", imageUrl: "/images/7159.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1864,7 +1864,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe pembe?', correct: 'Evet! Şişe pembe.', wrong: 'Hayır, bu şişe yeşil.' }
+            tr: { question: 'Hangi şişe pembe?', correct: 'Evet! Bu şişe pembe.', wrong: 'Hayır, bu şişe yeşil.' }
         },
         options: [
             { id: 7160, word: "şişe", imageUrl: "/images/7160.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1877,7 +1877,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi şişe yeşil?', correct: 'Evet! Şişe yeşil.', wrong: 'Hayır, bu şişe pembe.' }
+            tr: { question: 'Hangi şişe yeşil?', correct: 'Evet! Bu şişe yeşil.', wrong: 'Hayır, bu şişe pembe.' }
         },
         options: [
             { id: 7163, word: "şişe", imageUrl: "/images/7163.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -1891,7 +1891,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört kırmızı?', correct: 'Evet! Tişört kırmızı.', wrong: 'Hayır, bu tişört mavi.' }
+            tr: { question: 'Hangi tişört kırmızı?', correct: 'Evet! Bu tişört kırmızı.', wrong: 'Hayır, bu tişört mavi.' }
         },
         options: [
             { id: 7164, word: "tişört", imageUrl: "/images/7164.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -1904,7 +1904,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört mavi?', correct: 'Evet! Tişört mavi.', wrong: 'Hayır, bu tişört kırmızı.' }
+            tr: { question: 'Hangi tişört mavi?', correct: 'Evet! Bu tişört mavi.', wrong: 'Hayır, bu tişört kırmızı.' }
         },
         options: [
             { id: 7165, word: "tişört", imageUrl: "/images/7165.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -1917,7 +1917,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört sarı?', correct: 'Evet! Tişört sarı.', wrong: 'Hayır, bu tişört mor.' }
+            tr: { question: 'Hangi tişört sarı?', correct: 'Evet! Bu tişört sarı.', wrong: 'Hayır, bu tişört mor.' }
         },
         options: [
             { id: 7168, word: "tişört", imageUrl: "/images/7168.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -1930,7 +1930,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört mor?', correct: 'Evet! Tişört mor.', wrong: 'Hayır, bu tişört sarı.' }
+            tr: { question: 'Hangi tişört mor?', correct: 'Evet! Bu tişört mor.', wrong: 'Hayır, bu tişört sarı.' }
         },
         options: [
             { id: 7166, word: "tişört", imageUrl: "/images/7166.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -1943,7 +1943,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört yeşil?', correct: 'Evet! Tişört yeşil.', wrong: 'Hayır, bu tişört turuncu.' }
+            tr: { question: 'Hangi tişört yeşil?', correct: 'Evet! Bu tişört yeşil.', wrong: 'Hayır, bu tişört turuncu.' }
         },
         options: [
             { id: 7170, word: "tişört", imageUrl: "/images/7170.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -1956,7 +1956,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört turuncu?', correct: 'Evet! Tişört turuncu.', wrong: 'Hayır, bu tişört yeşil.' }
+            tr: { question: 'Hangi tişört turuncu?', correct: 'Evet! Bu tişört turuncu.', wrong: 'Hayır, bu tişört yeşil.' }
         },
         options: [
             { id: 7169, word: "tişört", imageUrl: "/images/7169.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -1969,7 +1969,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört pembe?', correct: 'Evet! Tişört pembe.', wrong: 'Hayır, bu tişört mavi.' }
+            tr: { question: 'Hangi tişört pembe?', correct: 'Evet! Bu tişört pembe.', wrong: 'Hayır, bu tişört mavi.' }
         },
         options: [
             { id: 7167, word: "tişört", imageUrl: "/images/7167.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -1982,7 +1982,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört mavi?', correct: 'Evet! Tişört mavi.', wrong: 'Hayır, bu tişört pembe.' }
+            tr: { question: 'Hangi tişört mavi?', correct: 'Evet! Bu tişört mavi.', wrong: 'Hayır, bu tişört pembe.' }
         },
         options: [
             { id: 7165, word: "tişört", imageUrl: "/images/7165.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -1995,7 +1995,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört kırmızı?', correct: 'Evet! Tişört kırmızı.', wrong: 'Hayır, bu tişört yeşil.' }
+            tr: { question: 'Hangi tişört kırmızı?', correct: 'Evet! Bu tişört kırmızı.', wrong: 'Hayır, bu tişört yeşil.' }
         },
         options: [
             { id: 7164, word: "tişört", imageUrl: "/images/7164.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -2008,7 +2008,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört yeşil?', correct: 'Evet! Tişört yeşil.', wrong: 'Hayır, bu tişört kırmızı.' }
+            tr: { question: 'Hangi tişört yeşil?', correct: 'Evet! Bu tişört yeşil.', wrong: 'Hayır, bu tişört kırmızı.' }
         },
         options: [
             { id: 7170, word: "tişört", imageUrl: "/images/7170.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -2021,7 +2021,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört sarı?', correct: 'Evet! Tişört sarı.', wrong: 'Hayır, bu tişört mavi.' }
+            tr: { question: 'Hangi tişört sarı?', correct: 'Evet! Bu tişört sarı.', wrong: 'Hayır, bu tişört mavi.' }
         },
         options: [
             { id: 7168, word: "tişört", imageUrl: "/images/7168.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -2034,7 +2034,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört mavi?', correct: 'Evet! Tişört mavi.', wrong: 'Hayır, bu tişört sarı.' }
+            tr: { question: 'Hangi tişört mavi?', correct: 'Evet! Bu tişört mavi.', wrong: 'Hayır, bu tişört sarı.' }
         },
         options: [
             { id: 7165, word: "tişört", imageUrl: "/images/7165.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -2047,7 +2047,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört turuncu?', correct: 'Evet! Tişört turuncu.', wrong: 'Hayır, bu tişört mor.' }
+            tr: { question: 'Hangi tişört turuncu?', correct: 'Evet! Bu tişört turuncu.', wrong: 'Hayır, bu tişört mor.' }
         },
         options: [
             { id: 7169, word: "tişört", imageUrl: "/images/7169.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -2060,7 +2060,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört mor?', correct: 'Evet! Tişört mor.', wrong: 'Hayır, bu tişört turuncu.' }
+            tr: { question: 'Hangi tişört mor?', correct: 'Evet! Bu tişört mor.', wrong: 'Hayır, bu tişört turuncu.' }
         },
         options: [
             { id: 7166, word: "tişört", imageUrl: "/images/7166.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -2073,7 +2073,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört pembe?', correct: 'Evet! Tişört pembe.', wrong: 'Hayır, bu tişört yeşil.' }
+            tr: { question: 'Hangi tişört pembe?', correct: 'Evet! Bu tişört pembe.', wrong: 'Hayır, bu tişört yeşil.' }
         },
         options: [
             { id: 7167, word: "tişört", imageUrl: "/images/7167.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -2086,7 +2086,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi tişört yeşil?', correct: 'Evet! Tişört yeşil.', wrong: 'Hayır, bu tişört pembe.' }
+            tr: { question: 'Hangi tişört yeşil?', correct: 'Evet! Bu tişört yeşil.', wrong: 'Hayır, bu tişört pembe.' }
         },
         options: [
             { id: 7170, word: "tişört", imageUrl: "/images/7170.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -2100,7 +2100,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top kırmızı?', correct: 'Evet! Top kırmızı.', wrong: 'Hayır, bu top mavi.' }
+            tr: { question: 'Hangi top kırmızı?', correct: 'Evet! Bu top kırmızı.', wrong: 'Hayır, bu top mavi.' }
         },
         options: [
             { id: 7171, word: "top", imageUrl: "/images/7171.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2113,7 +2113,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top mavi?', correct: 'Evet! Top mavi.', wrong: 'Hayır, bu top kırmızı.' }
+            tr: { question: 'Hangi top mavi?', correct: 'Evet! Bu top mavi.', wrong: 'Hayır, bu top kırmızı.' }
         },
         options: [
             { id: 7172, word: "top", imageUrl: "/images/7172.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2126,7 +2126,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top sarı?', correct: 'Evet! Top sarı.', wrong: 'Hayır, bu top mor.' }
+            tr: { question: 'Hangi top sarı?', correct: 'Evet! Bu top sarı.', wrong: 'Hayır, bu top mor.' }
         },
         options: [
             { id: 7175, word: "top", imageUrl: "/images/7175.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2139,7 +2139,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top mor?', correct: 'Evet! Top mor.', wrong: 'Hayır, bu top sarı.' }
+            tr: { question: 'Hangi top mor?', correct: 'Evet! Bu top mor.', wrong: 'Hayır, bu top sarı.' }
         },
         options: [
             { id: 7173, word: "top", imageUrl: "/images/7173.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2152,7 +2152,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top yeşil?', correct: 'Evet! Top yeşil.', wrong: 'Hayır, bu top turuncu.' }
+            tr: { question: 'Hangi top yeşil?', correct: 'Evet! Bu top yeşil.', wrong: 'Hayır, bu top turuncu.' }
         },
         options: [
             { id: 7177, word: "top", imageUrl: "/images/7177.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2165,7 +2165,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top turuncu?', correct: 'Evet! Top turuncu.', wrong: 'Hayır, bu top yeşil.' }
+            tr: { question: 'Hangi top turuncu?', correct: 'Evet! Bu top turuncu.', wrong: 'Hayır, bu top yeşil.' }
         },
         options: [
             { id: 7176, word: "top", imageUrl: "/images/7176.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2178,7 +2178,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top pembe?', correct: 'Evet! Top pembe.', wrong: 'Hayır, bu top mavi.' }
+            tr: { question: 'Hangi top pembe?', correct: 'Evet! Bu top pembe.', wrong: 'Hayır, bu top mavi.' }
         },
         options: [
             { id: 7174, word: "top", imageUrl: "/images/7174.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2191,7 +2191,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top mavi?', correct: 'Evet! Top mavi.', wrong: 'Hayır, bu top pembe.' }
+            tr: { question: 'Hangi top mavi?', correct: 'Evet! Bu top mavi.', wrong: 'Hayır, bu top pembe.' }
         },
         options: [
             { id: 7172, word: "top", imageUrl: "/images/7172.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2204,7 +2204,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top kırmızı?', correct: 'Evet! Top kırmızı.', wrong: 'Hayır, bu top yeşil.' }
+            tr: { question: 'Hangi top kırmızı?', correct: 'Evet! Bu top kırmızı.', wrong: 'Hayır, bu top yeşil.' }
         },
         options: [
             { id: 7171, word: "top", imageUrl: "/images/7171.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2217,7 +2217,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top yeşil?', correct: 'Evet! Top yeşil.', wrong: 'Hayır, bu top kırmızı.' }
+            tr: { question: 'Hangi top yeşil?', correct: 'Evet! Bu top yeşil.', wrong: 'Hayır, bu top kırmızı.' }
         },
         options: [
             { id: 7177, word: "top", imageUrl: "/images/7177.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2230,7 +2230,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top sarı?', correct: 'Evet! Top sarı.', wrong: 'Hayır, bu top mavi.' }
+            tr: { question: 'Hangi top sarı?', correct: 'Evet! Bu top sarı.', wrong: 'Hayır, bu top mavi.' }
         },
         options: [
             { id: 7175, word: "top", imageUrl: "/images/7175.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2243,7 +2243,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top mavi?', correct: 'Evet! Top mavi.', wrong: 'Hayır, bu top sarı.' }
+            tr: { question: 'Hangi top mavi?', correct: 'Evet! Bu top mavi.', wrong: 'Hayır, bu top sarı.' }
         },
         options: [
             { id: 7172, word: "top", imageUrl: "/images/7172.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2256,7 +2256,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top turuncu?', correct: 'Evet! Top turuncu.', wrong: 'Hayır, bu top mor.' }
+            tr: { question: 'Hangi top turuncu?', correct: 'Evet! Bu top turuncu.', wrong: 'Hayır, bu top mor.' }
         },
         options: [
             { id: 7176, word: "top", imageUrl: "/images/7176.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2269,7 +2269,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top mor?', correct: 'Evet! Top mor.', wrong: 'Hayır, bu top turuncu.' }
+            tr: { question: 'Hangi top mor?', correct: 'Evet! Bu top mor.', wrong: 'Hayır, bu top turuncu.' }
         },
         options: [
             { id: 7173, word: "top", imageUrl: "/images/7173.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2282,7 +2282,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top pembe?', correct: 'Evet! Top pembe.', wrong: 'Hayır, bu top yeşil.' }
+            tr: { question: 'Hangi top pembe?', correct: 'Evet! Bu top pembe.', wrong: 'Hayır, bu top yeşil.' }
         },
         options: [
             { id: 7174, word: "top", imageUrl: "/images/7174.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -2295,7 +2295,7 @@ export const colorsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Colors,
         speech: {
-            tr: { question: 'Hangi top yeşil?', correct: 'Evet! Top yeşil.', wrong: 'Hayır, bu top pembe.' }
+            tr: { question: 'Hangi top yeşil?', correct: 'Evet! Bu top yeşil.', wrong: 'Hayır, bu top pembe.' }
         },
         options: [
             { id: 7177, word: "top", imageUrl: "/images/7177.webp", isCorrect: true, audioKey: "top", spokenText: "top" },

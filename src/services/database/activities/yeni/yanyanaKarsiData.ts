@@ -6,11 +6,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     // arabalar
     {
         id: 1001,
-        question: "Hangi arabalar yan yana?",
+        question: "Hangi resimde arabalar yan yana?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi arabalar yan yana?', correct: 'Evet! Arabalar yan yanadır.', wrong: 'Hayır, arabalar karşı karşıyadır.' }
+            tr: { question: 'Hangi resimde arabalar yan yana?', correct: 'Evet! Burada arabalar yan yana.', wrong: 'Hayır, burada arabalar karşı karşıya.' }
         },
         options: [
             { id: 5602, word: "arabalar", imageUrl: "/images/5602.webp", isCorrect: true, audioKey: "arabalar", spokenText: "arabalar" },
@@ -19,11 +19,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     },
     {
         id: 1002,
-        question: "Hangi arabalar karşı karşıya?",
+        question: "Hangi resimde arabalar karşı karşıya?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi arabalar karşı karşıya?', correct: 'Evet! Arabalar karşı karşıyadır.', wrong: 'Hayır, arabalar yan yanadır.' }
+            tr: { question: 'Hangi resimde arabalar karşı karşıya?', correct: 'Evet! Burada arabalar karşı karşıya.', wrong: 'Hayır, burada arabalar yan yana.' }
         },
         options: [
             { id: 5601, word: "arabalar", imageUrl: "/images/5601.webp", isCorrect: true, audioKey: "arabalar", spokenText: "arabalar" },
@@ -33,11 +33,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     // atlar
     {
         id: 1003,
-        question: "Hangi atlar yan yana?",
+        question: "Hangi resimde atlar yan yana?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi atlar yan yana?', correct: 'Evet! Atlar yan yanadır.', wrong: 'Hayır, atlar karşı karşıyadır.' }
+            tr: { question: 'Hangi resimde atlar yan yana?', correct: 'Evet! Burada atlar yan yana.', wrong: 'Hayır, burada atlar karşı karşıya.' }
         },
         options: [
             { id: 5604, word: "atlar", imageUrl: "/images/5604.webp", isCorrect: true, audioKey: "atlar", spokenText: "atlar" },
@@ -46,11 +46,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     },
     {
         id: 1004,
-        question: "Hangi atlar karşı karşıya?",
+        question: "Hangi resimde atlar karşı karşıya?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi atlar karşı karşıya?', correct: 'Evet! Atlar karşı karşıyadır.', wrong: 'Hayır, atlar yan yanadır.' }
+            tr: { question: 'Hangi resimde atlar karşı karşıya?', correct: 'Evet! Burada atlar karşı karşıya.', wrong: 'Hayır, burada atlar yan yana.' }
         },
         options: [
             { id: 5603, word: "atlar", imageUrl: "/images/5603.webp", isCorrect: true, audioKey: "atlar", spokenText: "atlar" },
@@ -60,11 +60,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     // ayılar
     {
         id: 1005,
-        question: "Hangi ayılar yan yana?",
+        question: "Hangi resimde ayılar yan yana?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi ayılar yan yana?', correct: 'Evet! Ayılar yan yanadır.', wrong: 'Hayır, ayılar karşı karşıyadır.' }
+            tr: { question: 'Hangi resimde ayılar yan yana?', correct: 'Evet! Burada ayılar yan yana.', wrong: 'Hayır, burada ayılar karşı karşıya.' }
         },
         options: [
             { id: 5606, word: "ayılar", imageUrl: "/images/5606.webp", isCorrect: true, audioKey: "ayılar", spokenText: "ayılar" },
@@ -73,11 +73,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     },
     {
         id: 1006,
-        question: "Hangi ayılar karşı karşıya?",
+        question: "Hangi resimde ayılar karşı karşıya?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi ayılar karşı karşıya?', correct: 'Evet! Ayılar karşı karşıyadır.', wrong: 'Hayır, ayılar yan yanadır.' }
+            tr: { question: 'Hangi resimde ayılar karşı karşıya?', correct: 'Evet! Burada ayılar karşı karşıya.', wrong: 'Hayır, burada ayılar yan yana.' }
         },
         options: [
             { id: 5605, word: "ayılar", imageUrl: "/images/5605.webp", isCorrect: true, audioKey: "ayılar", spokenText: "ayılar" },
@@ -87,11 +87,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     // çocuklar
     {
         id: 1007,
-        question: "Hangi çocuklar yan yana?",
+        question: "Hangi resimde çocuklar yan yana?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi çocuklar yan yana?', correct: 'Evet! Çocuklar yan yanadır.', wrong: 'Hayır, çocuklar karşı karşıyadır.' }
+            tr: { question: 'Hangi resimde çocuklar yan yana?', correct: 'Evet! Burada çocuklar yan yana.', wrong: 'Hayır, burada çocuklar karşı karşıya.' }
         },
         options: [
             { id: 5608, word: "çocuklar", imageUrl: "/images/5608.webp", isCorrect: true, audioKey: "çocuklar", spokenText: "çocuklar" },
@@ -100,11 +100,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     },
     {
         id: 1008,
-        question: "Hangi çocuklar karşı karşıya?",
+        question: "Hangi resimde çocuklar karşı karşıya?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi çocuklar karşı karşıya?', correct: 'Evet! Çocuklar karşı karşıyadır.', wrong: 'Hayır, çocuklar yan yanadır.' }
+            tr: { question: 'Hangi resimde çocuklar karşı karşıya?', correct: 'Evet! Burada çocuklar karşı karşıya.', wrong: 'Hayır, burada çocuklar yan yana.' }
         },
         options: [
             { id: 5607, word: "çocuklar", imageUrl: "/images/5607.webp", isCorrect: true, audioKey: "çocuklar", spokenText: "çocuklar" },
@@ -114,11 +114,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     // fincanlar
     {
         id: 1009,
-        question: "Hangi fincanlar yan yana?",
+        question: "Hangi resimde fincanlar yan yana?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi fincanlar yan yana?', correct: 'Evet! Fincanlar yan yanadır.', wrong: 'Hayır, fincanlar karşı karşıyadır.' }
+            tr: { question: 'Hangi resimde fincanlar yan yana?', correct: 'Evet! Burada fincanlar yan yana.', wrong: 'Hayır, burada fincanlar karşı karşıya.' }
         },
         options: [
             { id: 5610, word: "fincanlar", imageUrl: "/images/5610.webp", isCorrect: true, audioKey: "fincanlar", spokenText: "fincanlar" },
@@ -127,11 +127,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     },
     {
         id: 1010,
-        question: "Hangi fincanlar karşı karşıya?",
+        question: "Hangi resimde fincanlar karşı karşıya?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi fincanlar karşı karşıya?', correct: 'Evet! Fincanlar karşı karşıyadır.', wrong: 'Hayır, fincanlar yan yanadır.' }
+            tr: { question: 'Hangi resimde fincanlar karşı karşıya?', correct: 'Evet! Burada fincanlar karşı karşıya.', wrong: 'Hayır, burada fincanlar yan yana.' }
         },
         options: [
             { id: 5609, word: "fincanlar", imageUrl: "/images/5609.webp", isCorrect: true, audioKey: "fincanlar", spokenText: "fincanlar" },
@@ -141,11 +141,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     // kediler
     {
         id: 1011,
-        question: "Hangi kediler yan yana?",
+        question: "Hangi resimde kediler yan yana?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi kediler yan yana?', correct: 'Evet! Kediler yan yanadır.', wrong: 'Hayır, kediler karşı karşıyadır.' }
+            tr: { question: 'Hangi resimde kediler yan yana?', correct: 'Evet! Burada kediler yan yana.', wrong: 'Hayır, burada kediler karşı karşıya.' }
         },
         options: [
             { id: 5612, word: "kediler", imageUrl: "/images/5612.webp", isCorrect: true, audioKey: "kediler", spokenText: "kediler" },
@@ -154,11 +154,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     },
     {
         id: 1012,
-        question: "Hangi kediler karşı karşıya?",
+        question: "Hangi resimde kediler karşı karşıya?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi kediler karşı karşıya?', correct: 'Evet! Kediler karşı karşıyadır.', wrong: 'Hayır, kediler yan yanadır.' }
+            tr: { question: 'Hangi resimde kediler karşı karşıya?', correct: 'Evet! Burada kediler karşı karşıya.', wrong: 'Hayır, burada kediler yan yana.' }
         },
         options: [
             { id: 5611, word: "kediler", imageUrl: "/images/5611.webp", isCorrect: true, audioKey: "kediler", spokenText: "kediler" },
@@ -168,11 +168,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     // koltuklar
     {
         id: 1013,
-        question: "Hangi koltuklar yan yana?",
+        question: "Hangi resimde koltuklar yan yana?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi koltuklar yan yana?', correct: 'Evet! Koltuklar yan yanadır.', wrong: 'Hayır, koltuklar karşı karşıyadır.' }
+            tr: { question: 'Hangi resimde koltuklar yan yana?', correct: 'Evet! Burada koltuklar yan yana.', wrong: 'Hayır, burada koltuklar karşı karşıya.' }
         },
         options: [
             { id: 5614, word: "koltuklar", imageUrl: "/images/5614.webp", isCorrect: true, audioKey: "koltuklar", spokenText: "koltuklar" },
@@ -181,11 +181,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     },
     {
         id: 1014,
-        question: "Hangi koltuklar karşı karşıya?",
+        question: "Hangi resimde koltuklar karşı karşıya?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi koltuklar karşı karşıya?', correct: 'Evet! Koltuklar karşı karşıyadır.', wrong: 'Hayır, koltuklar yan yanadır.' }
+            tr: { question: 'Hangi resimde koltuklar karşı karşıya?', correct: 'Evet! Burada koltuklar karşı karşıya.', wrong: 'Hayır, burada koltuklar yan yana.' }
         },
         options: [
             { id: 5613, word: "koltuklar", imageUrl: "/images/5613.webp", isCorrect: true, audioKey: "koltuklar", spokenText: "koltuklar" },
@@ -195,11 +195,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     // kuşlar
     {
         id: 1015,
-        question: "Hangi kuşlar yan yana?",
+        question: "Hangi resimde kuşlar yan yana?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi kuşlar yan yana?', correct: 'Evet! Kuşlar yan yanadır.', wrong: 'Hayır, kuşlar karşı karşıyadır.' }
+            tr: { question: 'Hangi resimde kuşlar yan yana?', correct: 'Evet! Burada kuşlar yan yana.', wrong: 'Hayır, burada kuşlar karşı karşıya.' }
         },
         options: [
             { id: 5616, word: "kuşlar", imageUrl: "/images/5616.webp", isCorrect: true, audioKey: "kuşlar", spokenText: "kuşlar" },
@@ -208,11 +208,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     },
     {
         id: 1016,
-        question: "Hangi kuşlar karşı karşıya?",
+        question: "Hangi resimde kuşlar karşı karşıya?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi kuşlar karşı karşıya?', correct: 'Evet! Kuşlar karşı karşıyadır.', wrong: 'Hayır, kuşlar yan yanadır.' }
+            tr: { question: 'Hangi resimde kuşlar karşı karşıya?', correct: 'Evet! Burada kuşlar karşı karşıya.', wrong: 'Hayır, burada kuşlar yan yana.' }
         },
         options: [
             { id: 5615, word: "kuşlar", imageUrl: "/images/5615.webp", isCorrect: true, audioKey: "kuşlar", spokenText: "kuşlar" },
@@ -222,11 +222,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     // ördekler
     {
         id: 1017,
-        question: "Hangi ördekler yan yana?",
+        question: "Hangi resimde ördekler yan yana?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi ördekler yan yana?', correct: 'Evet! Ördekler yan yanadır.', wrong: 'Hayır, ördekler karşı karşıyadır.' }
+            tr: { question: 'Hangi resimde ördekler yan yana?', correct: 'Evet! Burada ördekler yan yana.', wrong: 'Hayır, burada ördekler karşı karşıya.' }
         },
         options: [
             { id: 5618, word: "ördekler", imageUrl: "/images/5618.webp", isCorrect: true, audioKey: "ördekler", spokenText: "ördekler" },
@@ -235,11 +235,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     },
     {
         id: 1018,
-        question: "Hangi ördekler karşı karşıya?",
+        question: "Hangi resimde ördekler karşı karşıya?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi ördekler karşı karşıya?', correct: 'Evet! Ördekler karşı karşıyadır.', wrong: 'Hayır, ördekler yan yanadır.' }
+            tr: { question: 'Hangi resimde ördekler karşı karşıya?', correct: 'Evet! Burada ördekler karşı karşıya.', wrong: 'Hayır, burada ördekler yan yana.' }
         },
         options: [
             { id: 5617, word: "ördekler", imageUrl: "/images/5617.webp", isCorrect: true, audioKey: "ördekler", spokenText: "ördekler" },
@@ -249,11 +249,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     // sandalyeler
     {
         id: 1019,
-        question: "Hangi sandalyeler yan yana?",
+        question: "Hangi resimde sandalyeler yan yana?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi sandalyeler yan yana?', correct: 'Evet! Sandalyeler yan yanadır.', wrong: 'Hayır, sandalyeler karşı karşıyadır.' }
+            tr: { question: 'Hangi resimde sandalyeler yan yana?', correct: 'Evet! Burada sandalyeler yan yana.', wrong: 'Hayır, burada sandalyeler karşı karşıya.' }
         },
         options: [
             { id: 5620, word: "sandalyeler", imageUrl: "/images/5620.webp", isCorrect: true, audioKey: "sandalyeler", spokenText: "sandalyeler" },
@@ -262,11 +262,11 @@ export const besideOppositeDataYeni: ConceptRound[] = [
     },
     {
         id: 1020,
-        question: "Hangi sandalyeler karşı karşıya?",
+        question: "Hangi resimde sandalyeler karşı karşıya?",
         questionAudioKey: "",
         activityType: ActivityType.BesideOpposite,
         speech: {
-            tr: { question: 'Hangi sandalyeler karşı karşıya?', correct: 'Evet! Sandalyeler karşı karşıyadır.', wrong: 'Hayır, sandalyeler yan yanadır.' }
+            tr: { question: 'Hangi resimde sandalyeler karşı karşıya?', correct: 'Evet! Burada sandalyeler karşı karşıya.', wrong: 'Hayır, burada sandalyeler yan yana.' }
         },
         options: [
             { id: 5619, word: "sandalyeler", imageUrl: "/images/5619.webp", isCorrect: true, audioKey: "sandalyeler", spokenText: "sandalyeler" },

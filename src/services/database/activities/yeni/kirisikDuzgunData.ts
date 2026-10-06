@@ -10,7 +10,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi elbise kırışık?', correct: 'Evet! Elbise kırışıktır.', wrong: 'Hayır, bu elbise düzgündür.' }
+            tr: { question: 'Hangi elbise kırışık?', correct: 'Evet! Bu elbise kırışık.', wrong: 'Hayır, bu elbise düzgün.' }
         },
         options: [
             { id: 4702, word: "elbise", imageUrl: "/images/4702.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -23,7 +23,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi elbise düzgün?', correct: 'Evet! Elbise düzgündür.', wrong: 'Hayır, bu elbise kırışıktır.' }
+            tr: { question: 'Hangi elbise düzgün?', correct: 'Evet! Bu elbise düzgün.', wrong: 'Hayır, bu elbise kırışık.' }
         },
         options: [
             { id: 4701, word: "elbise", imageUrl: "/images/4701.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -37,7 +37,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi etek kırışık?', correct: 'Evet! Etek kırışıktır.', wrong: 'Hayır, bu etek düzgündür.' }
+            tr: { question: 'Hangi etek kırışık?', correct: 'Evet! Bu etek kırışık.', wrong: 'Hayır, bu etek düzgün.' }
         },
         options: [
             { id: 4704, word: "etek", imageUrl: "/images/4704.webp", isCorrect: true, audioKey: "etek", spokenText: "etek" },
@@ -50,7 +50,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi etek düzgün?', correct: 'Evet! Etek düzgündür.', wrong: 'Hayır, bu etek kırışıktır.' }
+            tr: { question: 'Hangi etek düzgün?', correct: 'Evet! Bu etek düzgün.', wrong: 'Hayır, bu etek kırışık.' }
         },
         options: [
             { id: 4703, word: "etek", imageUrl: "/images/4703.webp", isCorrect: true, audioKey: "etek", spokenText: "etek" },
@@ -64,7 +64,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi gömlek kırışık?', correct: 'Evet! Gömlek kırışıktır.', wrong: 'Hayır, bu gömlek düzgündür.' }
+            tr: { question: 'Hangi gömlek kırışık?', correct: 'Evet! Bu gömlek kırışık.', wrong: 'Hayır, bu gömlek düzgün.' }
         },
         options: [
             { id: 4706, word: "gömlek", imageUrl: "/images/4706.webp", isCorrect: true, audioKey: "gömlek", spokenText: "gömlek" },
@@ -77,7 +77,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi gömlek düzgün?', correct: 'Evet! Gömlek düzgündür.', wrong: 'Hayır, bu gömlek kırışıktır.' }
+            tr: { question: 'Hangi gömlek düzgün?', correct: 'Evet! Bu gömlek düzgün.', wrong: 'Hayır, bu gömlek kırışık.' }
         },
         options: [
             { id: 4705, word: "gömlek", imageUrl: "/images/4705.webp", isCorrect: true, audioKey: "gömlek", spokenText: "gömlek" },
@@ -91,7 +91,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi kâğıt kırışık?', correct: 'Evet! Kâğıt kırışıktır.', wrong: 'Hayır, bu kâğıt düzgündür.' }
+            tr: { question: 'Hangi kâğıt kırışık?', correct: 'Evet! Bu kâğıt kırışık.', wrong: 'Hayır, bu kâğıt düzgün.' }
         },
         options: [
             { id: 4708, word: "kâğıt", imageUrl: "/images/4708.webp", isCorrect: true, audioKey: "kâğıt", spokenText: "kâğıt" },
@@ -104,7 +104,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi kâğıt düzgün?', correct: 'Evet! Kâğıt düzgündür.', wrong: 'Hayır, bu kâğıt kırışıktır.' }
+            tr: { question: 'Hangi kâğıt düzgün?', correct: 'Evet! Bu kâğıt düzgün.', wrong: 'Hayır, bu kâğıt kırışık.' }
         },
         options: [
             { id: 4707, word: "kâğıt", imageUrl: "/images/4707.webp", isCorrect: true, audioKey: "kâğıt", spokenText: "kâğıt" },
@@ -118,7 +118,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi masa örtüsü kırışık?', correct: 'Evet! Masa örtüsü kırışıktır.', wrong: 'Hayır, bu masa örtüsü düzgündür.' }
+            tr: { question: 'Hangi masa örtüsü kırışık?', correct: 'Evet! Bu masa örtüsü kırışık.', wrong: 'Hayır, bu masa örtüsü düzgün.' }
         },
         options: [
             { id: 4710, word: "masa örtüsü", imageUrl: "/images/4710.webp", isCorrect: true, audioKey: "masa örtüsü", spokenText: "masa örtüsü" },
@@ -131,7 +131,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi masa örtüsü düzgün?', correct: 'Evet! Masa örtüsü düzgündür.', wrong: 'Hayır, bu masa örtüsü kırışıktır.' }
+            tr: { question: 'Hangi masa örtüsü düzgün?', correct: 'Evet! Bu masa örtüsü düzgün.', wrong: 'Hayır, bu masa örtüsü kırışık.' }
         },
         options: [
             { id: 4709, word: "masa örtüsü", imageUrl: "/images/4709.webp", isCorrect: true, audioKey: "masa örtüsü", spokenText: "masa örtüsü" },
@@ -145,7 +145,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi yatak örtüsü kırışık?', correct: 'Evet! Yatak örtüsü kırışıktır.', wrong: 'Hayır, bu yatak örtüsü düzgündür.' }
+            tr: { question: 'Hangi yatak örtüsü kırışık?', correct: 'Evet! Bu yatak örtüsü kırışık.', wrong: 'Hayır, bu yatak örtüsü düzgün.' }
         },
         options: [
             { id: 4712, word: "yatak örtüsü", imageUrl: "/images/4712.webp", isCorrect: true, audioKey: "yatak örtüsü", spokenText: "yatak örtüsü" },
@@ -158,7 +158,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi yatak örtüsü düzgün?', correct: 'Evet! Yatak örtüsü düzgündür.', wrong: 'Hayır, bu yatak örtüsü kırışıktır.' }
+            tr: { question: 'Hangi yatak örtüsü düzgün?', correct: 'Evet! Bu yatak örtüsü düzgün.', wrong: 'Hayır, bu yatak örtüsü kırışık.' }
         },
         options: [
             { id: 4711, word: "yatak örtüsü", imageUrl: "/images/4711.webp", isCorrect: true, audioKey: "yatak örtüsü", spokenText: "yatak örtüsü" },
@@ -172,7 +172,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi pantolon kırışık?', correct: 'Evet! Pantolon kırışıktır.', wrong: 'Hayır, bu pantolon düzgündür.' }
+            tr: { question: 'Hangi pantolon kırışık?', correct: 'Evet! Bu pantolon kırışık.', wrong: 'Hayır, bu pantolon düzgün.' }
         },
         options: [
             { id: 4714, word: "pantolon", imageUrl: "/images/4714.webp", isCorrect: true, audioKey: "pantolon", spokenText: "pantolon" },
@@ -185,7 +185,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi pantolon düzgün?', correct: 'Evet! Pantolon düzgündür.', wrong: 'Hayır, bu pantolon kırışıktır.' }
+            tr: { question: 'Hangi pantolon düzgün?', correct: 'Evet! Bu pantolon düzgün.', wrong: 'Hayır, bu pantolon kırışık.' }
         },
         options: [
             { id: 4713, word: "pantolon", imageUrl: "/images/4713.webp", isCorrect: true, audioKey: "pantolon", spokenText: "pantolon" },
@@ -199,7 +199,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi peçete kırışık?', correct: 'Evet! Peçete kırışıktır.', wrong: 'Hayır, bu peçete düzgündür.' }
+            tr: { question: 'Hangi peçete kırışık?', correct: 'Evet! Bu peçete kırışık.', wrong: 'Hayır, bu peçete düzgün.' }
         },
         options: [
             { id: 4716, word: "peçete", imageUrl: "/images/4716.webp", isCorrect: true, audioKey: "peçete", spokenText: "peçete" },
@@ -212,7 +212,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi peçete düzgün?', correct: 'Evet! Peçete düzgündür.', wrong: 'Hayır, bu peçete kırışıktır.' }
+            tr: { question: 'Hangi peçete düzgün?', correct: 'Evet! Bu peçete düzgün.', wrong: 'Hayır, bu peçete kırışık.' }
         },
         options: [
             { id: 4715, word: "peçete", imageUrl: "/images/4715.webp", isCorrect: true, audioKey: "peçete", spokenText: "peçete" },
@@ -226,7 +226,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi perde kırışık?', correct: 'Evet! Perde kırışıktır.', wrong: 'Hayır, bu perde düzgündür.' }
+            tr: { question: 'Hangi perde kırışık?', correct: 'Evet! Bu perde kırışık.', wrong: 'Hayır, bu perde düzgün.' }
         },
         options: [
             { id: 4718, word: "perde", imageUrl: "/images/4718.webp", isCorrect: true, audioKey: "perde", spokenText: "perde" },
@@ -239,7 +239,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi perde düzgün?', correct: 'Evet! Perde düzgündür.', wrong: 'Hayır, bu perde kırışıktır.' }
+            tr: { question: 'Hangi perde düzgün?', correct: 'Evet! Bu perde düzgün.', wrong: 'Hayır, bu perde kırışık.' }
         },
         options: [
             { id: 4717, word: "perde", imageUrl: "/images/4717.webp", isCorrect: true, audioKey: "perde", spokenText: "perde" },
@@ -253,7 +253,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi tişört kırışık?', correct: 'Evet! Tişört kırışıktır.', wrong: 'Hayır, bu tişört düzgündür.' }
+            tr: { question: 'Hangi tişört kırışık?', correct: 'Evet! Bu tişört kırışık.', wrong: 'Hayır, bu tişört düzgün.' }
         },
         options: [
             { id: 4720, word: "tişört", imageUrl: "/images/4720.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -266,7 +266,7 @@ export const kirisikDuzgunDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KirisikDuzgun,
         speech: {
-            tr: { question: 'Hangi tişört düzgün?', correct: 'Evet! Tişört düzgündür.', wrong: 'Hayır, bu tişört kırışıktır.' }
+            tr: { question: 'Hangi tişört düzgün?', correct: 'Evet! Bu tişört düzgün.', wrong: 'Hayır, bu tişört kırışık.' }
         },
         options: [
             { id: 4719, word: "tişört", imageUrl: "/images/4719.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
