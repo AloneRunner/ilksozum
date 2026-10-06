@@ -10,9 +10,11 @@
 // - Daha önce üretilen metin tekrar üretilmez (kredi boşa gitmez).
 // - Ses hesaba geçici eklenir, iş bitince çıkarılır (hesapta 10 ses yeri var, 9'u Kaan'ın).
 // - Çıktı: public/audio/ses/<dosya>.mp3 + src/data/sesListesi.ts (metin → dosya)
-//   + tools/ses/hizalama/<dosya>.json (harf zamanları; ağız hareketi için).
+//   + tools/ses/hizalama/<dosya>.json (harf zamanları; ağız hareketi için) + tools/ses/ham/ (temizlenmemiş hali).
+// - Her kayıt temizle.mjs ile temizlenir (baştaki/sondaki hışırtı, tık).
 import fs from 'fs';
 import path from 'path';
+import { temizle } from './temizle.mjs';
 
 const KOK = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '../..');
 const SES = { ad: 'gokce', kutuphaneId: 'oPC5I9GKjMReiaM29gjY', sahip: '991994d44c6bfe4b3978666d09e5539d22ad7a82e1ffc137334d524a61057e0f' };
@@ -23,6 +25,7 @@ const BICIM = 'mp3_44100_64';
 const LISTE = path.join(KOK, 'src/data/sesListesi.ts');
 const SES_KLASOR = path.join(KOK, 'public/audio/ses');
 const HIZA_KLASOR = path.join(KOK, 'tools/ses/hizalama');
+const HAM_KLASOR = path.join(KOK, 'tools/ses/ham');
 
 // speechService.ts'deki kayitAnahtari ile aynı olmalı
 export const anahtar = (m) => m.normalize('NFC').trim().replace(/\s+/g, ' ').toLocaleLowerCase('tr-TR');
@@ -93,8 +96,20 @@ try {
       if (!r.ok) throw new Error(`TTS → ${r.status} ${(await r.text()).slice(0, 200)}`);
       c = { audio_base64: Buffer.from(await r.arrayBuffer()).toString('base64'), alignment: null };
     }
-    fs.writeFileSync(path.join(SES_KLASOR, `${ad}.mp3`), Buffer.from(c.audio_base64, 'base64'));
-    if (c.alignment) fs.writeFileSync(path.join(HIZA_KLASOR, `${ad}.json`), JSON.stringify({ metin: m.trim(), model: AYAR.model_id, ...c.alignment }));
+    const mp3 = path.join(SES_KLASOR, `${ad}.mp3`);
+    fs.writeFileSync(mp3, Buffer.from(c.audio_base64, 'base64'));
+    fs.mkdirSync(HAM_KLASOR, { recursive: true });
+    fs.copyFileSync(mp3, path.join(HAM_KLASOR, `${ad}.mp3`)); // ham hali (temizlik ayarı değişirse yeniden işlenir)
+    const [bas, son] = temizle(mp3); // baştaki/sondaki hışırtı ve tıkları at
+    if (c.alignment) {
+      const kaydir = (t) => Math.max(0, Math.min(son - bas, t - bas));
+      const h = c.alignment;
+      fs.writeFileSync(path.join(HIZA_KLASOR, `${ad}.json`), JSON.stringify({
+        metin: m.trim(), model: AYAR.model_id, characters: h.characters,
+        character_start_times_seconds: h.character_start_times_seconds.map(kaydir),
+        character_end_times_seconds: h.character_end_times_seconds.map(kaydir),
+      }));
+    }
     liste[k] = ad;
     listeYaz(liste); // her kayıttan sonra yaz: yarıda kesilirse üretilenler kaybolmaz
     console.log(`✓ ${++n}/${eksik.length} ${m.trim()}`);
