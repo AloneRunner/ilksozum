@@ -578,18 +578,11 @@ export const ACTIVITY_METADATA_MAP: Record<string, ActivityMetadata> = {
   // ========================================
   // ÜNİTE 8: NEDEN-SONUÇ VE SIRALAMA (Mantıksal Düşünme)
   // ========================================
-  [ActivityType.CauseEffect]: {
-    activityId: ActivityType.CauseEffect,
-    activityName: 'Neden - Sonuç',
-    unitNumber: 8,
-    prerequisite: { type: 'AND', conditions: [ActivityType.BeforeAfter, 'FiveWOneH_What'] },
-    masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
-  },
   [ActivityType.SequencingStories]: {
     activityId: ActivityType.SequencingStories,
     activityName: 'Olay Sıralama',
     unitNumber: 8,
-    prerequisite: ActivityType.CauseEffect,
+    prerequisite: ActivityType.BeforeAfter, // Neden-Sonuç 5N1K'ya taşındı; önkoşul kilitli kalıyordu
     masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
   },
   [ActivityType.DragAndDropCounting]: {
@@ -617,7 +610,7 @@ export const ACTIVITY_METADATA_MAP: Record<string, ActivityMetadata> = {
     activityId: ActivityType.WhoseIsThis,
     activityName: 'Bu Kimin?',
     unitNumber: 8,
-    prerequisite: ActivityType.CauseEffect,
+    prerequisite: 'FiveWOneH_Who', // Neden-Sonuç 5N1K'ya taşındı; önkoşul kilitli kalıyordu
     masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
   },
   [ActivityType.ColorRecognition]: {
