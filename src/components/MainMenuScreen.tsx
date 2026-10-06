@@ -1,9 +1,11 @@
 import React from "react";
+import { createPortal } from "react-dom";
 import { useAppContext } from '../contexts/AppContext.ts';
 import { tasarimAl } from './ui/tasarim.ts';
 import TemaliAnaMenu from './TemaliAnaMenu.tsx';
 import { Capacitor } from "@capacitor/core";
 import { getCurrentLanguage } from "../i18n/index.ts";
+import { turkceSesVarMi } from "../services/speechService.ts";
 import { t } from "../i18n/index.ts";
 // import MenuOrb from "./ui/MenuOrb.tsx";
 // import CosmicOrb from "./ui/CosmicOrb.tsx";
@@ -180,6 +182,36 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
 
 
 
+// Duyurular ve ses yardımı ana ekranı kalabalıklaştırıyordu (Kaan, 2026-10-06): en altta iki küçük düğme,
+// içerik pencerede açılır. Cihazda Türkçe ses yoksa ses düğmesi sarı uyarıya dönüşür.
+const BilgiDugmeleri: React.FC<{ theme?: string }> = () => {
+  const [acik, setAcik] = React.useState<null | 'duyuru' | 'ses'>(null);
+  const [sesYok, setSesYok] = React.useState(false);
+  React.useEffect(() => { let iptal = false; turkceSesVarMi().then((v) => { if (!iptal) setSesYok(!v); }); return () => { iptal = true; }; }, []);
+  return (
+    <>
+      <div className="w-full flex flex-wrap justify-center gap-2">
+        {sesYok && (
+          <button onClick={() => setAcik('ses')} className="w-full rounded-2xl bg-amber-100 border-2 border-amber-300 px-4 py-2 text-sm font-black text-amber-900 shadow-sm active:scale-95">
+            🔈 Telefonunuzda Türkçe ses bulunamadı. Nasıl düzeltilir?
+          </button>
+        )}
+        <button onClick={() => setAcik('duyuru')} className="rounded-full bg-white/80 border border-slate-200 px-4 py-2 text-xs font-bold text-slate-700 shadow-sm active:scale-95">📢 Duyurular</button>
+        {!sesYok && <button onClick={() => setAcik('ses')} className="rounded-full bg-white/80 border border-slate-200 px-4 py-2 text-xs font-bold text-slate-700 shadow-sm active:scale-95">🔈 Ses gelmiyor mu?</button>}
+      </div>
+      {acik && createPortal(
+        <div className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-black/40 p-3" onClick={() => setAcik(null)}>
+          <div className="w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-3xl bg-white p-3 shadow-2xl space-y-3" onClick={(e) => e.stopPropagation()}>
+            <div className="flex justify-end"><button onClick={() => setAcik(null)} className="rounded-full bg-slate-100 px-3 py-1 text-sm font-bold text-slate-700" aria-label="Kapat">✕ Kapat</button></div>
+            {acik === 'duyuru' ? (<><SystemAnnouncementsCard theme="simple" /><OtherAppsSection theme="simple" /></>) : <AudioIssueNote theme="simple" />}
+          </div>
+        </div>,
+        document.body
+      )}
+    </>
+  );
+};
+
 const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
   onSelectCategory,
   onStartRandomMode,
@@ -267,9 +299,7 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
         selam={`${t("menu.hello", "Merhaba")} 👋`}
         baslik={t("menu.appTitle", "İlk Sözüm: Otizm & Okul Öncesi")}
       >
-        <SystemAnnouncementsCard theme={theme} />
-        <AudioIssueNote theme={theme} />
-        <OtherAppsSection theme={theme} />
+        <BilgiDugmeleri theme={theme} />
       </TemaliAnaMenu>
     );
   }
@@ -378,12 +408,8 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
             </div>
           </div>
 
-          {/* Duyurular ve notlar */}
-          <div>
-            <SystemAnnouncementsCard theme={theme} />
-            <AudioIssueNote theme={theme} />
-            <OtherAppsSection theme={theme} />
-          </div>
+          {/* Duyurular ve ses yardımı: küçük düğmeler, içerik pencerede */}
+          <BilgiDugmeleri theme={theme} />
         </div>
       </div>
     </div>

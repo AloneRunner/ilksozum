@@ -14,6 +14,25 @@ let currentEffect: HTMLAudioElement | null = null;
 let supportedLangsCache: string[] | null = null;
 let supportedLangsPromise: Promise<string[]> | null = null;
 
+/** Cihazda Türkçe ses var mı? (ana ekrandaki "Ses gelmiyor mu?" uyarısı için). Bilinemiyorsa true döner. */
+export const turkceSesVarMi = async (): Promise<boolean> => {
+    try {
+        if (Capacitor.isNativePlatform()) {
+            const diller = await getSupportedLanguagesNative();
+            return diller.length === 0 || diller.some((d) => d.toLowerCase().startsWith('tr'));
+        }
+        if (typeof speechSynthesis === 'undefined') return true;
+        let sesler = speechSynthesis.getVoices();
+        if (sesler.length === 0) {
+            await new Promise((r) => setTimeout(r, 800));
+            sesler = speechSynthesis.getVoices();
+        }
+        return sesler.length === 0 || sesler.some((v) => v.lang.toLowerCase().startsWith('tr'));
+    } catch {
+        return true;
+    }
+};
+
 const getSupportedLanguagesNative = async (): Promise<string[]> => {
     if (!Capacitor.isNativePlatform()) return [];
     if (supportedLangsCache) return supportedLangsCache;
