@@ -79,5 +79,19 @@ Create every image as a SEPARATE NEW image. Stop after every 5 images and wait f
 
 Start with IMAGE 1.
 
-## Sonuç
-(Görseller geldikten sonra doldurulacak)
+## Sonuç (2026-10-06)
+- 46 görselden 39'u geldi ve bağlandı (ccacc8f).
+- Telefon ve boya kalemleri için zaten yeni fotoğraf vardı, onlara bağlandı.
+- Eksik kalan 5 görsel aşağıdaki küçük turda.
+
+## Ek tur (5 görsel), ajana yapıştırılacak metin
+
+I am making picture cards for a communication board (AAC) for young children in special education. Photorealistic, bright, friendly, NOT cartoon. No text, no logos. ONE child about 5-6 years old, plain light background or a simple real place. Create every image as a SEPARATE NEW image.
+
+1. A child wearing a small backpack, standing at the open front door, ready to go out.
+2. A proud child holding up a drawing, chin up, big smile.
+3. A pair of colorful roller skates on a plain white background.
+4. A child holding an empty glass, looking thirsty.
+5. A child looking at another child's toy with a sulky face, mildly jealous (no tears).
+
+Start with IMAGE 1.
