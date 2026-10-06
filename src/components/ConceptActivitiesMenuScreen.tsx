@@ -12,6 +12,8 @@ import OppositesIcon from "./icons/OppositesIcon.tsx";
 import SensesIcon from "./icons/SensesIcon.tsx";
 import { getCurrentLanguage, t } from "../i18n/index.ts";
 import { KAVRAM_KAPAK } from "../data/kavramKapak.ts";
+import { useAppContext } from "../contexts/AppContext.ts";
+import { tasarimAl } from "./ui/tasarim.ts";
 import CosmicBackdrop from './ui/CosmicBackdrop.tsx';
 import PanelStars from './ui/PanelStars.tsx';
 
@@ -571,6 +573,7 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
   const iconColorClass = isCosmic ? 'text-sky-300' : isUnderwater ? 'text-cyan-300' : isSimpleTheme ? "text-purple-700" : "text-white";
 
   const koyuKart = isCosmic || isUnderwater;
+  const tas = tasarimAl(useAppContext().settings.sahne);
 
   return (
     <div className={`relative flex h-full max-w-4xl flex-col items-center p-2 sm:p-4 animate-fade-in ${isCosmic || isUnderwater ? 'overflow-hidden' : ''}`}>
@@ -613,7 +616,7 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
           ? 'bg-slate-900/50 border border-sky-400/20 backdrop-blur-lg overflow-y-auto'
           : isUnderwater
           ? 'bg-gradient-to-b from-[#001122]/60 via-[#001a2e]/50 to-[#000814]/40 border border-cyan-400/20 backdrop-blur-lg overflow-y-auto'
-          : isSimpleTheme ? "bg-white/80 backdrop-blur-md border border-purple-200/50" : "bg-black/20 backdrop-blur-md"
+          : tas ? 'shadow-none' : isSimpleTheme ? "bg-white/80 backdrop-blur-md border border-purple-200/50" : "bg-black/20 backdrop-blur-md"
       }`}>
         {isCosmic && (
           <>
@@ -639,15 +642,15 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
           </>
         )}
         
-        <div className="relative z-10 mb-4 flex-shrink-0 w-full flex justify-between items-center sm-landscape:mb-2 px-3 py-1.5">
+        <div className={`relative z-10 mb-4 flex-shrink-0 w-full flex justify-between items-center sm-landscape:mb-2 px-3 py-1.5 ${tas ? `${tas.serit('')} rounded-3xl` : ''}`}>
           <button
             onClick={onBack}
-            className={`p-2 rounded-full transition-colors ${isCosmic ? 'hover:bg-white/20' : 'hover:bg-black/10'}`}
+            className={`p-2 rounded-full transition-colors ${tas ? tas.geriDugme : isCosmic ? 'hover:bg-white/20' : 'hover:bg-black/10'}`}
             aria-label={t("app.back", "Go back")}
           >
-            <ArrowLeftIcon className={`h-8 w-8 sm-landscape:h-7 sm-landscape:w-7 ${iconColorClass}`} />
+            <ArrowLeftIcon className={`h-8 w-8 sm-landscape:h-7 sm-landscape:w-7 ${tas ? '' : iconColorClass}`} />
           </button>
-          <h1 className={`flex-1 text-center text-2xl font-black sm:text-3xl sm-landscape:text-xl ${titleColorClass}`}>
+          <h1 className={`flex-1 text-center text-2xl font-black sm:text-3xl sm-landscape:text-xl ${tas ? tas.seritYazi : titleColorClass}`}>
             {lang === "tr" ? "Kavram Etkinlikleri" : "Concept Activities"}
           </h1>
           <div className="w-12 h-12 sm-landscape:w-11 sm-landscape:h-11" />
@@ -655,11 +658,20 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
 
         <div
           className={`relative z-10 mb-4 w-full overflow-x-auto rounded-t-xl pb-1 sm-landscape:mb-2 h-16 sm-landscape:h-14 flex-shrink-0 ${
-            isCosmic ? '' : isUnderwater ? 'bg-gradient-to-r from-cyan-900/20 to-teal-900/20' : isSimpleTheme ? "bg-purple-100/50" : "bg-black/20"
+            tas || isCosmic ? '' : isUnderwater ? 'bg-gradient-to-r from-cyan-900/20 to-teal-900/20' : isSimpleTheme ? "bg-purple-100/50" : "bg-black/20"
           }`}
         >
-          <div className="flex gap-2 items-center h-full w-max min-w-full">
-            {tabs.map((tab) => (
+          <div className="flex gap-2 items-center h-full w-max min-w-full px-1">
+            {tas ? tabs.map((tab) => {
+              const Ikon = tab.icon;
+              const secili = activeCategory === tab.name || (!tabs.some(x => x.name === activeCategory) && tab === tabs[0]);
+              return (
+                <button key={tab.name} onClick={() => onSelectCategory(tab.name)}
+                  className={`flex-shrink-0 flex items-center gap-1.5 px-3 py-2 text-xs font-black whitespace-nowrap transition ${tas.sekme(secili)}`}>
+                  <Ikon className="h-5 w-5" />{tab.name}
+                </button>
+              );
+            }) : tabs.map((tab) => (
               <TabButton
                 key={tab.name}
                 name={tab.name}
@@ -676,7 +688,7 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
 
         <div key={activeTabData.name} className="relative z-10 flex-grow overflow-y-auto animate-fade-in w-full px-1 pb-4">
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 landscape:grid-cols-4">
-            {activeTabData.activities.map((activity) => {
+            {activeTabData.activities.map((activity, index) => {
               const stats = activityStats[String(activity.type)];
               const isDisabled = !enabledActivities.has(String(activity.type));
               const kapak = KAVRAM_KAPAK[ActivityType[activity.type] as string];
@@ -686,10 +698,10 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
                   key={activity.type}
                   onClick={() => !isDisabled && onSelectActivity(activity.type)}
                   disabled={isDisabled}
-                  className={`relative flex flex-col overflow-hidden rounded-3xl text-left transition-all duration-200 ${koyuKart
-                    ? 'bg-white/10 border border-white/15 hover:bg-white/15'
-                    : 'bg-white border border-slate-200 shadow-[0_6px_16px_rgba(15,23,42,0.08)] hover:shadow-[0_10px_24px_rgba(15,23,42,0.14)]'
-                    } ${isDisabled ? 'opacity-40 cursor-not-allowed' : 'hover:-translate-y-0.5 active:scale-95'}`}
+                  className={`relative flex flex-col overflow-hidden text-left transition-all duration-200 ${tas ? tas.kart(index, '')
+                    : koyuKart ? 'rounded-3xl bg-white/10 border border-white/15 hover:bg-white/15'
+                    : 'rounded-3xl bg-white border border-slate-200 shadow-[0_6px_16px_rgba(15,23,42,0.08)] hover:shadow-[0_10px_24px_rgba(15,23,42,0.14)]'
+                    } ${isDisabled ? 'opacity-40 cursor-not-allowed' : tas ? '' : 'hover:-translate-y-0.5 active:scale-95'}`}
                 >
                   <div className="grid grid-cols-2 gap-px bg-slate-100 aspect-[2/1]">
                     {kapak ? kapak.map((u) => (
@@ -699,8 +711,8 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
                     )}
                   </div>
                   <div className="px-3 py-2">
-                    <div className={`text-sm font-black leading-tight ${koyuKart ? 'text-white' : 'text-slate-800'}`}>{activity.title}</div>
-                    <div className={`mt-0.5 text-[11px] leading-snug line-clamp-1 ${koyuKart ? 'text-white/70' : 'text-slate-500'}`}>{activity.subtitle}</div>
+                    <div className={`text-sm font-black leading-tight ${tas ? tas.kartBaslik(index) : koyuKart ? 'text-white' : 'text-slate-800'}`}>{activity.title}</div>
+                    <div className={`mt-0.5 text-[11px] leading-snug line-clamp-1 ${tas ? tas.kartAlt(index) : koyuKart ? 'text-white/70' : 'text-slate-500'}`}>{activity.subtitle}</div>
                   </div>
                   {yildiz > 0 && (
                     <span className="absolute top-1.5 right-1.5 rounded-full bg-white/90 px-1.5 text-[11px] font-bold text-amber-500 shadow-sm">{'★'.repeat(yildiz)}</span>

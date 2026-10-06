@@ -1,5 +1,6 @@
 
 import React, { Suspense, useMemo, useEffect, useState } from 'react';
+import ArkaPlanSahnesi, { SAHNELER } from './components/ui/ArkaPlanSahnesi.tsx';
 import { applyDocumentLanguage, getCurrentLanguage, t } from './i18n/index.ts';
 import { setSpeechLanguage } from './services/speechService.ts';
 import { AppContext, IAppContext } from './contexts/AppContext.ts';
@@ -35,6 +36,8 @@ export default function App(): React.ReactNode {
   }, []);
 
   const background = getScreenBackground(settings.theme, isLandscape);
+  // Arka plan sahnesi (Orman, Deniz...): Sade arayüzün arkasında kendi zemin rengiyle
+  const sahneZemini = settings.sahne !== 'yok' ? SAHNELER.find(z => z.id === settings.sahne)?.zemin : undefined;
 
   // Privacy consent state
   const [showConsent, setShowConsent] = useState<boolean>(() => {
@@ -88,10 +91,11 @@ export default function App(): React.ReactNode {
 
   return (
     <AppContext.Provider value={appCore as IAppContext}>
-      <div className={`relative w-screen h-screen print:h-auto print:overflow-visible transition-colors duration-500 ${background.type === 'gradient' ? background.value : ''} flex flex-col print:block`}>
+      <div className={`relative w-screen h-screen print:h-auto print:overflow-visible transition-colors duration-500 ${sahneZemini || (background.type === 'gradient' ? background.value : '')} flex flex-col print:block`}>
+        <ArkaPlanSahnesi sahne={settings.sahne} sakin={appCore.screenState === ScreenState.Playing} />
         {background.type === 'video' && <VideoBackground key={background.value} src={background.value} />}
         <Suspense fallback={<div className="flex items-center justify-center h-full"><Spinner /></div>}>
-          <div className={`w-full flex-grow min-h-0 overflow-y-auto overflow-x-hidden print:overflow-visible print:h-auto print:block ${!settings.isPremium ? 'pt-16' : ''} ${showNavBar ? 'pb-20 landscape:pb-0 landscape:pl-20' : ''}`}>
+          <div className={`relative w-full flex-grow min-h-0 overflow-y-auto overflow-x-hidden print:overflow-visible print:h-auto print:block ${!settings.isPremium ? 'pt-16' : ''} ${showNavBar ? 'pb-20 landscape:pb-0 landscape:pl-20' : ''}`}>
              <AppRouter />
           </div>
           {showNavBar && (

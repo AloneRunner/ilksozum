@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { SAHNELER } from './ui/ArkaPlanSahnesi.tsx';
 import { trIlgi } from '../utils/trDil.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import RestoreIcon from './icons/RestoreIcon.tsx';
@@ -12,7 +13,6 @@ import { getAvatar } from './ProfileSelectionScreen.tsx';
 import { ACHIEVEMENTS } from '../constants.ts';
 import LockClosedIcon from './icons/LockClosedIcon.tsx';
 import { getColorClasses } from '../themes/colorManager.ts';
-import { THEMES, FREE_THEMES } from '../themes/themeManager.ts';
 import { useAppContext } from '../contexts/AppContext.ts';
 import { getUnlockedUnits } from '../services/masteryEngine.ts';
 import { getUnitDefinition } from '../constants/unitDefinitions.ts';
@@ -326,7 +326,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
   onBack, isMuted, onToggleMute, isAutoSpeakEnabled, onToggleAutoSpeak, isBanButtonEnabled, onToggleBanButton,
   isFastTransitionEnabled, onToggleFastTransition,
   onSelectPrivacyPolicy, onManageBannedImages, isPremium, hasPurchasedPremium,
-  onPurchaseMonthly, onPurchaseLifetime, onResetProgress, theme, onChangeTheme, activeProfile, onManageProfiles, onManageActivities, showPremiumToast,
+  onPurchaseMonthly, onPurchaseLifetime, onResetProgress, theme, activeProfile, onManageProfiles, onManageActivities, showPremiumToast,
   onSelectAchievements,
   parentOverrides,
   onAddParentOverride,
@@ -1013,28 +1013,24 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
         </div>
         
   <h2 className={`text-lg font-bold pt-3 pb-1.5 border-b ${sectionBorderClass} ${sectionTitleColor} ${isCosmicTheme ? 'drop-shadow-[0_4px_12px_rgba(14,165,233,0.35)]' : ''}`}>{t('settingsEx.theme.title', 'Uygulama Teması')}</h2>
-    <div className="grid grid-cols-4 sm:grid-cols-5 gap-1.5 mt-2">
-      {Object.entries(THEMES).map(([key, themeInfo]) => {
-        const isThemedButton = themeInfo.type === 'video';
-        const isSelected = theme === key;
-        const isFreeTheme = FREE_THEMES.has(key);
-        // Theme is locked for non-premium users when it's a video/theme and not in FREE_THEMES
-        const isLocked = isThemedButton && !isPremium && !isFreeTheme;
+    <div className="grid grid-cols-5 gap-2 mt-2">
+      {SAHNELER.map((z) => {
+        const secili = theme === 'simple' && settings.sahne === z.id;
         return (
-          <button 
-            key={key}
-            onClick={() => onChangeTheme(key)}
-      className={`relative p-1 rounded-lg border-2 transition-all duration-200 ${isSelected ? 'border-sky-500 ring-2 ring-sky-500' : 'border-transparent'}`}
+          <button
+            key={z.id}
+            onClick={() => settings.onChangeSahne(z.id)}
+            className={`relative p-1 rounded-xl border-2 transition-all duration-200 ${secili ? 'border-sky-500 ring-2 ring-sky-500' : 'border-transparent'}`}
+            aria-pressed={secili}
           >
-      <div className={`relative w-full h-8 rounded-md overflow-hidden ${themeInfo.previewClass} flex items-center justify-center`}>
-         <div className="absolute inset-0 bg-black/20 pointer-events-none"/>
-         {isLocked && <LockClosedIcon className="relative z-10 w-4 h-4 text-white/80"/>}
-      </div>
-    <p className={`text-center font-medium text-[9px] mt-0.5 leading-tight ${isThemed ? 'text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]' : 'text-slate-700'}`}>{t(`themes.${key}`, themeInfo.name)}</p>
+            <div className={`relative w-full h-12 rounded-lg overflow-hidden ${z.onizleme} flex items-end justify-center text-lg`} aria-hidden="true">
+              {{ yok: '✨', orman: '🌳', deniz: '⛵', gokkusagi: '🌈', konfeti: '🎉' }[z.id]}
+            </div>
+            <p className="text-center font-semibold text-[10px] mt-1 leading-tight text-slate-700">{z.ad}</p>
           </button>
-        )
+        );
       })}
-        </div>
+    </div>
 
         <div className="grid grid-cols-1 landscape:grid-cols-2 gap-4">
             <div>

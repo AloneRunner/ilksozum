@@ -1,4 +1,7 @@
 import React from "react";
+import { useAppContext } from '../contexts/AppContext.ts';
+import { tasarimAl } from './ui/tasarim.ts';
+import TemaliAnaMenu from './TemaliAnaMenu.tsx';
 import { Capacitor } from "@capacitor/core";
 import { getCurrentLanguage } from "../i18n/index.ts";
 import { t } from "../i18n/index.ts";
@@ -226,6 +229,8 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
   onSelectWorksheets,
   theme,
 }) => {
+  const { settings: ayarlar } = useAppContext();
+  const tas = tasarimAl(ayarlar.sahne);
   const lang = getCurrentLanguage();
   const showObjectsIntl = lang !== "tr";
   const isSimpleTheme = theme === "simple";
@@ -402,6 +407,30 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
   const greetingEmoji = specialPalette?.greetingEmoji ?? "\uD83D\uDC4B";
   const greetingAnimation = specialPalette?.greetingAnimation ?? "";
   const gridPadding = specialPalette?.gridPadding ?? "";
+
+  // === Temalı arayüz (Orman, Deniz, Gökkuşağı, Konfeti) ===
+  if (tas) {
+    return (
+      <TemaliAnaMenu
+        tas={tas}
+        kartlar={menuItems}
+        onKart={(id) => kartSec(id as KartId)}
+        onProgram={() => onSelectCategory('programMode')}
+        onRastgele={onStartRandomMode}
+        ebeveyn={[
+          { id: 'tips', emoji: '💡', label: 'İpuçları', onClick: onSelectParentTips },
+          ...(onSelectWorksheets ? [{ id: 'sheets', emoji: '🖨️', label: 'Çalışma Kâğıtları', onClick: onSelectWorksheets }] : []),
+          { id: 'reports', emoji: '📊', label: 'Raporlar', onClick: () => onSelectCategory('reports') },
+        ]}
+        selam={`${t("menu.hello", "Merhaba")} 👋`}
+        baslik={t("menu.appTitle", "İlk Sözüm: Otizm & Okul Öncesi")}
+      >
+        <SystemAnnouncementsCard theme={theme} />
+        <AudioIssueNote theme={theme} />
+        <OtherAppsSection theme={theme} />
+      </TemaliAnaMenu>
+    );
+  }
 
   // === SADE2 THEME - Mini Game Style Modern Menu ===
   const isSimple2Theme = theme === "simple2" || theme === "sade2";

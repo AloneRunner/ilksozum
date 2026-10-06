@@ -1,5 +1,6 @@
 // FIX: Import React to use React.Dispatch and React.SetStateAction types.
 import React, { useMemo, useCallback, useEffect, useState } from 'react';
+import type { SahneId } from '../components/ui/ArkaPlanSahnesi.tsx';
 import { Capacitor } from '@capacitor/core';
 import { setCurrentLanguage, type Locale } from '../i18n/index.ts';
 import { useLocalStorage } from './useLocalStorage.ts';
@@ -30,6 +31,8 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
     const [isUnderwaterMusicEnabled, setIsUnderwaterMusicEnabled] = useLocalStorage<boolean>('isUnderwaterMusicEnabled', false);
     const [isRealisticImagesEnabled, setIsRealisticImagesEnabled] = useLocalStorage<boolean>('isRealisticImagesEnabled_v1', false);
     const [theme, setTheme] = useLocalStorage<string>('theme_v2', 'simple');
+    // Temalar (2026-10): arayüz hep Sade; görünüş arka plan sahnesiyle değişir (ui/ArkaPlanSahnesi)
+    const [sahne, setSahne] = useLocalStorage<SahneId>('sahne_v1', 'yok');
     // Uygulama yalnızca Türkçe. Eski 'lang_v1' kaydı (ör. 'en') artık okunmaz, Türkçeye çekilir.
     const language: Locale = 'tr';
     const setLanguage = (_l: Locale) => {};
@@ -317,6 +320,8 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
         isRealisticImagesEnabled,
         isBasaraHighlightEnabled,
         theme,
+        sahne,
+        onChangeSahne: (s: SahneId) => { setTheme('simple'); setSahne(s); },
         language,
         handleToggleMute,
         handleToggleAutoSpeak,
