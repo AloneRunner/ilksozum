@@ -59,3 +59,20 @@ Tek hece ya da kısa kelime çoğu zaman birkaç denemede düzgün çıktığı 
 2. Ses seçimi için örnek dinleme.
 3. API anahtarı. Üretim günü kendi bilgisayarında ortam değişkenine yazılır.
 4. Hangi aşamalardan başlanacağı. Önerim 1 → 2 → 3 → 4.
+
+## Ses denemesi sonucu (6 Ekim 2026, Kaan'la)
+
+- **Hesap:** Starter planı. Kredi her ay 27'sinde yenilenir; 6 Ekim'de 23.840 kredi kalmıştı.
+- **Seçilen ses:** **Gökçe Deniz**, kütüphane sesi `oPC5I9GKjMReiaM29gjY`.
+  - Gökçe'nin hesaba eklenmiş hali farklı bir kimlikle gelir.
+  - Adaylar arasında Nazlı da vardı. Ama hesaba eklenince Nazlı, örnek kaydındaki sese hiç benzemedi; bu yüzden elendi.
+- **Ayarlar:** Kaan'ın beğendiği hali aşağıdaki gibi.
+  - Model: `eleven_multilingual_v2`, dil `tr`.
+  - stability 0.6, similarity_boost 0.8, speed 0.85 (biraz yavaş).
+- **Kalite:** Üretim yüksek kalitede yapılır (`mp3_44100_128`); boyutu biz sonra ffmpeg ile küçültürüz.
+  - 22 kHz / 32 kbps doğrudan üretimde ses bozuldu.
+- **Tek sesler:** "Aaa", "Mmm" gibi tek sesleri yapay ses düzgün okuyamıyor. Gökçe hiç söylemedi, Nazlı'nınki tuhaf çıktı.
+  - Bu sesler ya ebeveyn kaydıyla gelir ya da hece ve kelime içinden öğretilir. Karar Kaan'da.
+- **Ses yeri:** Hesapta 10 ses yeri var, 9'u dolu.
+  - Üretim günü ses hesaba eklenir ve üretimden sonra çıkarılır.
+  - Kaan'ın eski seslerine dokunulmaz.
