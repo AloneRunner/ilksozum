@@ -50,6 +50,13 @@ export const konusmaAraligi = (x) => {
   return [bas, son];
 };
 
+/** Süre (sn) ve tepe seviyesi (0–1): boş/tık kayıtları yakalamak için */
+export const olc = (dosya) => {
+  const x = pcmOku(dosya);
+  let tepe = 0; for (const v of x) tepe = Math.max(tepe, Math.abs(v));
+  return { sure: x.length / SR, tepe };
+};
+
 /** Dosyayı yerinde temizler; [baş, son] döner (harf zamanlarını kaydırmak için). */
 export const temizle = (dosya, { bitHizi = '64k' } = {}) => {
   const x = pcmOku(dosya);

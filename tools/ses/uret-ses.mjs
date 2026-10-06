@@ -14,7 +14,7 @@
 // - Her kayıt temizle.mjs ile temizlenir (baştaki/sondaki hışırtı, tık).
 import fs from 'fs';
 import path from 'path';
-import { temizle } from './temizle.mjs';
+import { temizle, olc } from './temizle.mjs';
 
 const KOK = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '../..');
 const SES = { ad: 'gokce', kutuphaneId: 'oPC5I9GKjMReiaM29gjY', sahip: '991994d44c6bfe4b3978666d09e5539d22ad7a82e1ffc137334d524a61057e0f' };
@@ -87,9 +87,11 @@ fs.mkdirSync(HIZA_KLASOR, { recursive: true });
 const { voice_id: sesId } = await api(`/v1/voices/add/${SES.sahip}/${SES.kutuphaneId}`, { new_name: `ilksozum-${SES.ad}` });
 let n = 0;
 try {
-  for (const m of eksik) {
+  // Starter planı aynı anda 3 isteğe izin veriyor
+  const uret = async (m) => {
     const k = anahtar(m);
     const ad = dosyaAdi(k);
+    for (let deneme = 1; ; deneme++) {
     let c;
     try {
       c = await api(`/v1/text-to-speech/${sesId}/with-timestamps?output_format=${BICIM}`, { text: oku(m), ...AYAR });
@@ -105,6 +107,11 @@ try {
     fs.mkdirSync(HAM_KLASOR, { recursive: true });
     fs.copyFileSync(mp3, path.join(HAM_KLASOR, `${ad}.mp3`)); // ham hali (temizlik ayarı değişirse yeniden işlenir)
     const [bas, son] = temizle(mp3); // baştaki/sondaki hışırtı ve tıkları at
+    const { sure, tepe } = olc(mp3);
+    if ((tepe < 0.1 || sure < 0.12) && deneme < 3) { // model bazen ses yerine tık üretiyor ("e" 0,16 sn)
+      console.log(`  boş çıktı (${sure.toFixed(2)} sn, tepe ${tepe.toFixed(2)}), yeniden deneniyor`);
+      continue;
+    }
     if (c.alignment) {
       const kaydir = (t) => Math.max(0, Math.min(son - bas, t - bas));
       const h = c.alignment;
@@ -114,10 +121,14 @@ try {
         character_end_times_seconds: h.character_end_times_seconds.map(kaydir),
       }));
     }
+    break;
+    }
     liste[k] = ad;
     listeYaz(liste); // her kayıttan sonra yaz: yarıda kesilirse üretilenler kaybolmaz
     console.log(`✓ ${++n}/${eksik.length} ${m.trim()}`);
-  }
+  };
+  const sira = [...eksik];
+  await Promise.all(Array.from({ length: Math.min(3, sira.length) }, async () => { while (sira.length) await uret(sira.shift()); }));
 } finally {
   await api(`/v1/voices/${sesId}`, null, 'DELETE').catch((e) => console.log('Ses hesaptan çıkarılamadı:', e.message));
   console.log(`Bitti: ${n} kayıt. Kalan kredi: ${await kalan()}`);

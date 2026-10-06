@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { SAHNELER } from './ui/ArkaPlanSahnesi.tsx';
 import { trIlgi } from '../utils/trDil.ts';
+import { useLocalStorage } from '../hooks/useLocalStorage.ts';
+import { setKayitliSes } from '../services/speechService.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import RestoreIcon from './icons/RestoreIcon.tsx';
 import CrownIcon from './icons/CrownIcon.tsx';
@@ -340,6 +342,8 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
   isBasaraHighlightEnabled,
   onToggleBasaraHighlight,
 }) => {
+  const [kayitliSes, setKayitliSesAyar] = useLocalStorage<boolean>('kayitliSes_v1', true);
+  useEffect(() => { setKayitliSes(kayitliSes); }, [kayitliSes]);
   // Scroll pozisyonunu localStorage ile koru
   useEffect(() => {
     const saved = localStorage.getItem('settingsScrollY');
@@ -1061,6 +1065,13 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
                     </SettingsRow>
           )}
   {/* Çocuk Modu ve Hatasız Öğrenme kaldırıldı */}
+          <SettingsRow
+            title="Kayıtlı ses (Gökçe)"
+            subtitle="Övgüler, BASARA, Ses Taklit ve bazı kavramlar gerçek bir sesle okunur; diğerleri cihaz sesiyle. Kayıtlar bütçe elverdikçe artacak. Kapalıysa her şey cihaz sesiyle okunur."
+            isThemed={isThemed} themeVariant={themeVariant}
+          >
+            <ToggleSwitch isEnabled={kayitliSes} onToggle={() => setKayitliSesAyar(v => !v)} themeVariant={themeVariant} />
+          </SettingsRow>
           <SettingsRow
             title={t('settingsEx.settingsBlock.realisticImages', 'Alternatif Görseller (Vücut Bölümleri)')}
             subtitle={t('settingsEx.settingsBlock.realisticImagesDesc', 'Vücut bölümlerini fotoğraf yerine çizimle gösterir. Çocuğunuz hangisini daha iyi tanıyorsa onu seçin.')}

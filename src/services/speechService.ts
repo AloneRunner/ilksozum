@@ -129,6 +129,9 @@ const telaffuzDuzelt = (metin: string): string => TELAFFUZ.reduce((m, [re, yeni]
 // Kayıtlı sesler (ElevenLabs, Kaan 2026-10-06): metnin kaydı varsa mp3 çalınır, yoksa cihaz sesi.
 // Anahtar tools/ses/uret-ses.mjs'deki ile aynı olmalı.
 const kayitAnahtari = (m: string): string => m.normalize('NFC').trim().replace(/\s+/g, ' ').toLocaleLowerCase('tr-TR');
+// Ayarlar > "Kayıtlı ses (Gökçe)": kapalıysa her şey cihaz sesiyle okunur
+let kayitliSesAcik = (() => { try { return localStorage.getItem('kayitliSes_v1') !== 'false'; } catch { return true; } })();
+export const setKayitliSes = (acik: boolean) => { kayitliSesAcik = acik; };
 let kayitSesi: HTMLAudioElement | null = null;
 let kayitSayaci = 0; // her yeni konuşma / iptal önceki kayıt dizisini geçersiz kılar
 
@@ -196,8 +199,9 @@ export const speak = async (textToSpeak: string, overrideLang?: string): Promise
     await cancelSpeech();
     stopCurrentEffect();
 
-    if (!overrideLang || overrideLang.startsWith('tr')) {
+    if (kayitliSesAcik && (!overrideLang || overrideLang.startsWith('tr'))) {
         const dosyalar = kayitliDosyalar(kayitMetni);
+        if (import.meta.env.DEV) console.log('[SES]', dosyalar ? 'kayıt' : 'cihaz', kayitMetni);
         if (dosyalar && await kayitCal(dosyalar)) return;
     }
 
