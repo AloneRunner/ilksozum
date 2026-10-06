@@ -1,4 +1,5 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useMemo, useState, useCallback, useEffect } from 'react';
+import { kelimeGorseli } from '../services/kelimeGorseli.ts';
 import { Story } from '../types.ts';
 import { speak, cancelSpeech } from '../services/speechService.ts';
 import SpeakerIcon from './icons/SpeakerIcon.tsx';
@@ -34,6 +35,23 @@ const StoryScreen: React.FC<StoryScreenProps> = ({ stories, letter, onBack, onGo
 
     const currentStory = stories[currentStoryIndex];
     const storyTextToSpeak = currentStory ? `${currentStory.title}. ${currentStory.story}` : null;
+    const EKLER = ['ları', 'leri', 'ndan', 'nden', 'nın', 'nin', 'nun', 'nün', 'lar', 'ler', 'dan', 'den', 'tan', 'ten', 'nda', 'nde', 'yla', 'yle', 'lı', 'li', 'lu', 'lü', 'da', 'de', 'ta', 'te', 'yı', 'yi', 'yu', 'yü', 'ya', 'ye', 'ın', 'in', 'un', 'ün', 'sı', 'si', 'su', 'sü', 'ı', 'i', 'u', 'ü'];
+    // Hikâyedeki kelimelerin fotoğrafları (en çok 3): "elmalı" → elma, "kekleri" → kek
+    const hikayeResimleri = useMemo(() => {
+        if (!currentStory) return [] as Array<{ kelime: string; url: string }>;
+        const out: Array<{ kelime: string; url: string }> = [];
+        const metin = `${currentStory.title} ${currentStory.story}`.toLocaleLowerCase('tr-TR').split(/[^a-zçğıöşü]+/);
+        for (const ham of metin) {
+            // Önce kelimenin kendisi, sonra yalnız gerçek eklerden arındırılmış kökü ("karga" → "kar" olmasın)
+            const adaylar = [ham, ...EKLER.filter((e) => ham.endsWith(e) && ham.length - e.length >= 2).map((e) => ham.slice(0, -e.length))];
+            for (const k of adaylar) {
+                const url = kelimeGorseli(k);
+                if (url) { if (!out.some((o) => o.url === url)) out.push({ kelime: k, url }); break; }
+            }
+            if (out.length >= 3) break;
+        }
+        return out;
+    }, [currentStory]);
 
     useAutoSpeak(storyTextToSpeak, isAutoSpeakEnabled, currentStory?.id);
 
@@ -81,7 +99,17 @@ const StoryScreen: React.FC<StoryScreenProps> = ({ stories, letter, onBack, onGo
                         <SpeakerIcon className="w-7 h-7 text-sky-600" />
                     </button>
                 </div>
-                <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
+                {hikayeResimleri.length > 0 && (
+                    <div className="flex justify-center gap-3 mb-4">
+                        {hikayeResimleri.map((r) => (
+                            <figure key={r.url} className="flex flex-col items-center">
+                                <img src={r.url} alt={r.kelime} className="w-24 h-24 sm:w-28 sm:h-28 object-contain rounded-2xl bg-white shadow" draggable={false} />
+                                <figcaption className="mt-1 text-sm font-bold text-sky-800">{r.kelime}</figcaption>
+                            </figure>
+                        ))}
+                    </div>
+                )}
+                <p className="text-xl sm:text-2xl text-slate-700 leading-relaxed">
                     {highlightLetter(currentStory.story, letter)}
                 </p>
             </div>
