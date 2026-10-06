@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
+import KelimeResmi from '../ui/KelimeResmi.tsx';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
 import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
@@ -219,7 +220,7 @@ const SyllableTrainGameScreen: React.FC<SyllableTrainGameScreenProps> = ({ onBac
 
                 {/* Target Word Image */}
                 <div className="flex flex-col items-center py-4">
-                    <div className="text-8xl mb-2">{word.emoji}</div>
+                    <div className="mb-2 flex justify-center"><KelimeResmi kelime={word.word} emoji={word.emoji} emojiClassName="text-8xl" className="w-36 h-36 object-contain rounded-3xl bg-white shadow-md p-1" /></div>
                     <p className="text-purple-800 font-bold text-lg">Bu kelimeyi oluştur!</p>
                 </div>
 

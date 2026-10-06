@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
+import KelimeResmi from '../ui/KelimeResmi.tsx';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
 import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
@@ -225,7 +226,7 @@ const WordBoxGameScreen: React.FC<WordBoxGameScreenProps> = ({ onBack }) => {
                     <p className="text-indigo-800 font-semibold mb-4 text-lg">Bu ne?</p>
 
                     <div className="bg-white rounded-3xl p-8 shadow-xl mb-6">
-                        <div className="text-9xl">{question.emoji}</div>
+                        <KelimeResmi kelime={question.word} emoji={question.emoji} emojiClassName="text-9xl" className="w-48 h-48 object-contain" />
                     </div>
                 </div>
 
