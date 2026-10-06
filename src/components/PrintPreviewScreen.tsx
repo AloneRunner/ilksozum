@@ -1,5 +1,6 @@
 // src/components/PrintPreviewScreen.tsx
 import React from 'react';
+import { nesneUrl } from '../services/nesneGorsel.ts';
 import { t, getCurrentLanguage } from '../i18n/index.ts';
 import { CommunicationCard } from '../types.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
@@ -45,7 +46,7 @@ const PrintableCard: React.FC<{ card: CommunicationCard; borderColorClass: strin
       <div className="flex-grow w-full flex items-center justify-center overflow-hidden p-1">
         {image ? (
           <img
-            src={image.imageUrl}
+            src={nesneUrl(image.imageUrl)}
             alt={display}
             className="max-w-full max-h-full object-contain"
             draggable={false}

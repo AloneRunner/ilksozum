@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { nesneUrl } from '../../services/nesneGorsel.ts';
 import { ConceptRound } from '../../types.ts';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
 import PrintIcon from '../icons/PrintIcon.tsx';
@@ -94,9 +95,9 @@ const GenericWorksheetPreview: React.FC<GenericWorksheetPreviewProps> = ({
 
   const getImageUrl = (opt: any) => {
     if (useRealistic && opt.imageUrl) {
-      return toRealisticPng(opt.imageUrl);
+      return toRealisticPng(nesneUrl(opt.imageUrl));
     }
-    return opt.imageUrl;
+    return nesneUrl(opt.imageUrl);
   };
 
   const handleImageError = (event: React.SyntheticEvent<HTMLImageElement>, originalUrl: string) => {

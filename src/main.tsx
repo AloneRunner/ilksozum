@@ -5,6 +5,9 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import { Capacitor } from '@capacitor/core';
 import './index.css';
+import { eskiGorselYedeginiKur } from './services/nesneGorsel.ts';
+
+eskiGorselYedeginiKur();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

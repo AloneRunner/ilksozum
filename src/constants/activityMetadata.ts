@@ -627,6 +627,13 @@ export const ACTIVITY_METADATA_MAP: Record<string, ActivityMetadata> = {
     prerequisite: ActivityType.Colors,
     masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
   },
+  [ActivityType.AyniniBul]: {
+    activityId: ActivityType.AyniniBul,
+    activityName: 'Aynısını Bul',
+    unitNumber: 1,
+    prerequisite: null, // En temel eşleme becerisi
+    masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
+  },
   [ActivityType.WhatsMissing]: {
     activityId: ActivityType.WhatsMissing,
     activityName: 'Hangisi Kayıp?',

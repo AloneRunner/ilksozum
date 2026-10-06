@@ -149,6 +149,7 @@ const ParentReportScreen: React.FC<ParentReportScreenProps> = ({ activityStats, 
     if (activityType === ActivityType.Hangman) return t('activities.reasoning.hangman', 'Adam Asmaca');
     if (activityType === ActivityType.WhoseIsThis) return t('activities.reasoning.whoseIsThis', 'Bu Kimin?');
     if (activityType === ActivityType.WhatsMissing) return t('activities.reasoning.whatsMissing', 'Hangisi Kayıp?');
+    if (activityType === ActivityType.AyniniBul) return t('activities.reasoning.ayniniBul', 'Aynısını Bul');
     if (activityType === ActivityType.ColorRecognition) return t('activities.concept.colorRecognition', 'Rengi Ne?');
 
     // Fine motor activities

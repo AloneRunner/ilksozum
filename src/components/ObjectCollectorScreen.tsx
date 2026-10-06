@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { nesneUrl } from '../services/nesneGorsel.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { playEffect } from '../services/speechService.ts';
 import { t } from '../i18n/index.ts';
@@ -258,7 +259,7 @@ const ObjectCollectorScreen: React.FC<ObjectCollectorScreenProps> = ({
               }}
             >
               <img
-                src={obj.imageUrl}
+                src={nesneUrl(obj.imageUrl)}
                 alt={obj.word}
                 className="w-full h-full object-contain drop-shadow-lg"
               />

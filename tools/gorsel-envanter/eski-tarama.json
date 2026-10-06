@@ -24,10 +24,9 @@
   },
   "src/services/database/activities/objects/enAnimalsData.ts": {
     "toplam": 23,
-    "yenisiVar": 20,
+    "yenisiVar": 21,
     "eskiKalan": [
       47,
-      323,
       349
     ]
   },
@@ -88,10 +87,9 @@
   },
   "src/services/database/activities/objects/enHouseholdData.ts": {
     "toplam": 20,
-    "yenisiVar": 18,
+    "yenisiVar": 19,
     "eskiKalan": [
-      82,
-      540
+      82
     ]
   },
   "src/services/database/activities/objects/enHouseholdItemsData.ts": {
@@ -321,12 +319,11 @@
   },
   "src/services/database/activities/qualities/hungryFullData.ts": {
     "toplam": 12,
-    "yenisiVar": 4,
+    "yenisiVar": 5,
     "eskiKalan": [
       151,
       152,
       489,
-      749,
       750,
       753,
       755,
@@ -365,13 +362,12 @@
   },
   "src/services/database/activities/qualities/longShortData.ts": {
     "toplam": 20,
-    "yenisiVar": 12,
+    "yenisiVar": 13,
     "eskiKalan": [
       2,
       8,
       9,
       99,
-      323,
       488,
       494,
       495
@@ -379,12 +375,11 @@
   },
   "src/services/database/activities/qualities/messyCleanData.ts": {
     "toplam": 22,
-    "yenisiVar": 11,
+    "yenisiVar": 12,
     "eskiKalan": [
       254,
       284,
       286,
-      481,
       543,
       544,
       656,
@@ -499,11 +494,10 @@
   },
   "src/services/database/activities/qualities/straightCurvedData.ts": {
     "toplam": 19,
-    "yenisiVar": 14,
+    "yenisiVar": 15,
     "eskiKalan": [
       62,
       136,
-      323,
       530,
       633
     ]
@@ -693,14 +687,13 @@
   },
   "src/services/database/activities/reasoning/fiveWOneHData.ts": {
     "toplam": 180,
-    "yenisiVar": 170,
+    "yenisiVar": 171,
     "eskiKalan": [
       242,
       300,
       350,
       403,
       534,
-      540,
       776,
       795,
       825,
@@ -725,13 +718,12 @@
   },
   "src/services/database/activities/reasoning/ownershipData.ts": {
     "toplam": 43,
-    "yenisiVar": 38,
+    "yenisiVar": 39,
     "eskiKalan": [
       215,
       235,
       534,
-      629,
-      749
+      629
     ]
   },
   "src/services/database/activities/reasoning/patternCompletionData.ts": {
@@ -743,11 +735,10 @@
   },
   "src/services/database/activities/reasoning/sequencingStoriesData.ts": {
     "toplam": 23,
-    "yenisiVar": 18,
+    "yenisiVar": 19,
     "eskiKalan": [
       401,
       402,
-      481,
       583,
       624
     ]
@@ -772,11 +763,10 @@
   },
   "src/services/database/activities/reasoning/whatsMissingData.ts": {
     "toplam": 39,
-    "yenisiVar": 36,
+    "yenisiVar": 37,
     "eskiKalan": [
       47,
-      87,
-      749
+      87
     ]
   },
   "src/services/database/activities/sensesData.ts": {
@@ -987,12 +977,11 @@
   },
   "src/services/database/activities/yeni/ownershipData.ts": {
     "toplam": 29,
-    "yenisiVar": 25,
+    "yenisiVar": 26,
     "eskiKalan": [
       215,
       235,
-      534,
-      749
+      534
     ]
   },
   "src/services/database/activities/yeni/sensesData.ts": {
@@ -1002,9 +991,8 @@
   },
   "src/services/database/soundImitationImages.ts": {
     "toplam": 80,
-    "yenisiVar": 75,
+    "yenisiVar": 76,
     "eskiKalan": [
-      323,
       774,
       786,
       825,

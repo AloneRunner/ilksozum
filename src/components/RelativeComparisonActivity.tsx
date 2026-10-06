@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { nesneUrl } from '../services/nesneGorsel.ts';
 import { t } from '../i18n/index';
 import { playEffect } from '../services/speechService.ts';
 import { useAutoSpeak } from '../hooks/useAutoSpeak.ts';
@@ -387,7 +388,7 @@ const RelativeComparisonActivity: React.FC<Props> = ({
                 {/* Back of the card (Visible) */}
                 <div className="absolute w-full h-full rounded-xl bg-white border-2 flex items-center justify-center p-2" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)', borderColor }}>
                   <img
-                    src={`/images/${item.imageId}.png`}
+                    src={nesneUrl(`/images/${item.imageId}.png`)}
                     alt=""
                     className="w-full h-full object-contain"
                     style={{ maxWidth: '100%', maxHeight: '100%' }}

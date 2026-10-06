@@ -198,6 +198,7 @@ export enum ActivityType {
   TehlikeliGuvenli,     // Tehlikeli / Güvenli
   HavaDurumu,           // Güneşli / Yağmurlu / Karlı / Rüzgârlı
   IlkSon,               // İlk / Son (sırada)
+  AyniniBul,            // Aynısını Bul (eşle: aynı resmi seç) — 2026-10
 }
 
 export enum ActivityCategory {

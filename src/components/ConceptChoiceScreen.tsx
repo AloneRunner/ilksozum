@@ -1863,6 +1863,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     ActivityType.WhoseIsThis,
                     // Saat (kodla çizilmiş saatler)
                     ActivityType.ClockLearning,
+                    ActivityType.AyniniBul,
                     // Zaman kavramları (yeni sorular)
                     ActivityType.DayNight, ActivityType.FastSlow, ActivityType.BeforeAfter,
                     ActivityType.AcikKoyu, ActivityType.YenirYenmez, ActivityType.TehlikeliGuvenli, ActivityType.HavaDurumu, ActivityType.IlkSon,
@@ -2135,6 +2136,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     ActivityType.WhoseIsThis,
                     // Saat (kodla çizilmiş saatler)
                     ActivityType.ClockLearning,
+                    ActivityType.AyniniBul,
                     // Zaman kavramları (yeni sorular)
                     ActivityType.DayNight, ActivityType.FastSlow, ActivityType.BeforeAfter,
                     ActivityType.AcikKoyu, ActivityType.YenirYenmez, ActivityType.TehlikeliGuvenli, ActivityType.HavaDurumu, ActivityType.IlkSon,

@@ -36,7 +36,7 @@ export const patternCompletionData: PatternRound[] = [
     },
     {
         id: 6, question: 'Sıradaki hangisi?', questionAudioKey: 'q_what_is_next', activityType: ActivityType.PatternCompletion,
-        pattern: [ { id: 65, word: 'daire', imageUrl: '/images/65.png'}, { id: 67, word: 'üçgen', imageUrl: '/images/67.png'}, { id: 66, word: 'kare', imageUrl: '/images/66.png'} ],
+        pattern: [ { id: 65, word: 'daire', imageUrl: '/images/65.png'}, { id: 67, word: 'üçgen', imageUrl: '/images/67.png'}, { id: 66, word: 'kare', imageUrl: '/images/7211.webp'} ],
         options: [ { id: 65, word: 'daire', imageUrl: '/images/65.png'}, { id: 67, word: 'üçgen', imageUrl: '/images/67.png'} ],
         answer: { id: 65, word: 'daire', imageUrl: '/images/65.png'}
     },
@@ -62,9 +62,9 @@ export const patternCompletionData: PatternRound[] = [
     },
     {
         id: 10, question: 'Sıradaki hangisi?', questionAudioKey: 'q_what_is_next', activityType: ActivityType.PatternCompletion,
-        pattern: [ { id: 65, word: 'daire', imageUrl: '/images/65.png'}, { id: 66, word: 'kare', imageUrl: '/images/66.png'}, { id: 67, word: 'üçgen', imageUrl: '/images/67.png'}, { id: 69, word: 'yıldız', imageUrl: '/images/69.png'}, { id: 65, word: 'daire', imageUrl: '/images/65.png'} ],
-        options: [ { id: 66, word: 'kare', imageUrl: '/images/66.png'}, { id: 67, word: 'üçgen', imageUrl: '/images/67.png'} ],
-        answer: { id: 66, word: 'kare', imageUrl: '/images/66.png'}
+        pattern: [ { id: 65, word: 'daire', imageUrl: '/images/65.png'}, { id: 66, word: 'kare', imageUrl: '/images/7211.webp'}, { id: 67, word: 'üçgen', imageUrl: '/images/67.png'}, { id: 69, word: 'yıldız', imageUrl: '/images/7221.webp'}, { id: 65, word: 'daire', imageUrl: '/images/65.png'} ],
+        options: [ { id: 66, word: 'kare', imageUrl: '/images/7211.webp'}, { id: 67, word: 'üçgen', imageUrl: '/images/67.png'} ],
+        answer: { id: 66, word: 'kare', imageUrl: '/images/7211.webp'}
     },
     {
         id: 11, question: 'Sıradaki hangisi?', questionAudioKey: 'q_what_is_next', activityType: ActivityType.PatternCompletion,

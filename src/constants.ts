@@ -97,6 +97,7 @@ export const REASONING_ACTIVITIES = [
     ActivityType.Hangman,              // EĞLENCE: Adam Asmaca - Harf seçerek kelimeyi bul
     ActivityType.ObjectCollector,      // EĞLENCE: Nesne Toplama - Düşen objeleri sepete topla
     ActivityType.WhatsMissing,         // Hangisi Kayıp? (Akıl Oyunları menüsünde; bitince oraya dönsün)
+    ActivityType.AyniniBul,            // Aynısını Bul (eşleme)
 ];
 
 export const OBJECT_RECOGNITION_ACTIVITIES = [ActivityType.ObjectRecognition];
@@ -340,6 +341,7 @@ export const ALL_SUB_ACHIEVEMENTS: SubAchievement[] = [
   { id: ActivityType.WhoseIsThis, name: "Bu Kimin?", category: ActivityCategory.Reasoning },
   { id: ActivityType.ColorRecognition, name: "Rengi Ne?", category: ActivityCategory.Concept },
   { id: ActivityType.WhatsMissing, name: "Hangisi Kayıp?", category: ActivityCategory.Reasoning },
+  { id: ActivityType.AyniniBul, name: "Aynısını Bul", category: ActivityCategory.Reasoning },
 
   // Fine motor activities (make them manageable in Activity Management)
   { id: ActivityType.LineTracing, name: "Çizgi Takip", category: ActivityCategory.FineMotor },

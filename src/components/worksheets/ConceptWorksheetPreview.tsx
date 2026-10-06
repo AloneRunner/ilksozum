@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import { nesneUrl } from '../../services/nesneGorsel.ts';
 import { bigSmallData } from '../../services/database/activities/qualities/bigSmallData.ts';
 import { ConceptRound } from '../../types.ts';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
@@ -57,7 +58,8 @@ const ConceptWorksheetPreview: React.FC<ConceptWorksheetPreviewProps> = ({ onBac
     regenerate(questionCount);
   }, [questionCount]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const getImageUrl = (url: string): string => {
+  const getImageUrl = (hamUrl: string): string => {
+    const url = nesneUrl(hamUrl);
     if (!useRealistic) return url;
     return toRealisticPng(url);
   };

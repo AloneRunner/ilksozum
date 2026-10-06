@@ -56,6 +56,7 @@ export const BECERILER: Beceri[] = [
     id: 'dusunme', emoji: '🧠', baslik: 'Düşünme ve Hafıza', alt: 'Dikkat, hafıza, mantık',
     renk: 'from-indigo-400 to-violet-500',
     ogeler: [
+      e(ActivityType.AyniniBul, '👯', 'Aynısını Bul', 'Aynı resmi eşle'),
       e(ActivityType.WhatDoesntBelong, '🔍', 'Hangisi Farklı?', 'Gruba uymayanı bul'),
       e(ActivityType.WhatsMissing, '🫥', 'Hangisi Kayıp?', 'Ezberle, kaybolanı bul'),
       e(ActivityType.MemoryCards, '🃏', 'Hafıza Kartları', 'Kartların eşini bul'),

@@ -15,3 +15,20 @@ export const nesneUrl = (src: string | undefined | null): string => {
     if (id >= 2001) return src;
     return NESNE_YENI[id] || src;
 };
+
+/**
+ * Güvenlik ağı: eski görsel dosyası yüklenemezse (yedek/eski-gorseller'e taşındıysa) yeni karşılığına geç.
+ * Eşleyiciden geçmeyen bir ekran gözden kaçsa bile kırık resim görünmez. Bir kez kurulur.
+ */
+export const eskiGorselYedeginiKur = (): void => {
+    document.addEventListener('error', (e) => {
+        const img = e.target as HTMLImageElement | null;
+        if (!img || img.tagName !== 'IMG') return;
+        const yol = new URL(img.src, location.href).pathname;
+        const yeni = nesneUrl(yol.replace(/^\/realistic\//, '/images/'));
+        if (yeni && yeni !== yol && img.dataset.eskiYedek !== '1') {
+            img.dataset.eskiYedek = '1';
+            img.src = yeni;
+        }
+    }, true);
+};

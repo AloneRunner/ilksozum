@@ -1075,6 +1075,51 @@ export const createObjectChoiceRounds = async (categoryId: string, count?: numbe
     isCorrect,
 }); */
 
+// Aynısını Bul (eşleme): üstte bir resim, altta 3 seçenek; biri aynı resim.
+// İlk yarı kolay (bambaşka kategoriler), ikinci yarı zor (aynı kategoriden çeldiriciler). Yalnızca yeni fotoğraflar.
+const createAyniniBulRounds = (count: number = 8): ConceptRound[] => {
+    const bannedIds = getBannedImageIds();
+    const yeniMi = (u: string) => { const m = /\/images\/(\d+)\.webp$/.exec(u || ''); return !!m && Number(m[1]) >= 2001; };
+    const tekil = new Map<string, ImageMetadata>();
+    for (const item of shuffleArray(imageData)) {
+        const kat = (item.tags as any)?.category;
+        if (!kat || bannedIds.has(item.id) || !yeniMi(item.imageUrl) || genelKelime(item.word)) continue;
+        const k = item.word.toLocaleLowerCase('tr-TR');
+        if (!tekil.has(k) && ![...tekil.values()].some(v => v.imageUrl === item.imageUrl)) tekil.set(k, item);
+    }
+    const havuz = Array.from(tekil.values());
+    const katOf = (i: ImageMetadata) => String((i.tags as any).category);
+    const secenek = (i: ImageMetadata, dogru: boolean) => ({ id: i.id, word: i.word, spokenText: i.word, imageUrl: i.imageUrl, audioKey: i.word, isCorrect: dogru });
+    const rounds: ConceptRound[] = [];
+    const kullanilan = new Set<number>();
+    for (const hedef of havuz) {
+        if (rounds.length >= count) break;
+        if (kullanilan.has(hedef.id)) continue;
+        const zor = rounds.length >= Math.ceil(count / 2);
+        const ayniKat = havuz.filter(i => i.id !== hedef.id && katOf(i) === katOf(hedef));
+        let celdiriciler: ImageMetadata[];
+        if (zor && ayniKat.length >= 2) celdiriciler = getRandomItems(ayniKat, 2);
+        else {
+            const digerKat = shuffleArray(havuz.filter(i => katOf(i) !== katOf(hedef)));
+            const ilk = digerKat[0];
+            const ikinci = digerKat.find(i => ilk && katOf(i) !== katOf(ilk));
+            if (!ilk || !ikinci) continue;
+            celdiriciler = [ilk, ikinci];
+        }
+        kullanilan.add(hedef.id);
+        rounds.push({
+            id: 13000 + rounds.length + 1,
+            activityType: ActivityType.AyniniBul,
+            question: 'Bunun aynısı hangisi?',
+            questionAudioKey: '',
+            questionItem: { id: hedef.id, word: hedef.word, imageUrl: hedef.imageUrl, audioKeys: hedef.audioKeys, tags: hedef.tags },
+            speech: { tr: { question: 'Bunun aynısı hangisi?', correct: `Evet! İkisi de ${hedef.word}.`, wrong: 'Hayır, bu farklı. Aynısını bul.' } },
+            options: shuffleArray([secenek(hedef, true), ...celdiriciler.map(c => secenek(c, false))]),
+        } as any);
+    }
+    return rounds;
+};
+
 const createYesNoRounds = (count: number = 8): Word[] => {
     const bannedIds = getBannedImageIds();
     
@@ -1481,6 +1526,7 @@ export const fetchConceptActivityData = async (
 
     // Dynamic Generators
     if (activity === ActivityType.YesNo) return createYesNoRounds(MAX_QUESTIONS_STATIC);
+    if (activity === ActivityType.AyniniBul) return createAyniniBulRounds(MAX_QUESTIONS_STATIC);
     if (activity === ActivityType.Colors && !YENI_SORULAR_AKTIF) return createColorsRounds(MAX_QUESTIONS_STATIC);
     if (activity === ActivityType.Shapes && !YENI_SORULAR_AKTIF) return createShapesRounds(MAX_QUESTIONS_STATIC);
     // Yeni: aynı çocuğun iki duygusu (çift kavram verisi, aşağıdaki sabit tablodan)
