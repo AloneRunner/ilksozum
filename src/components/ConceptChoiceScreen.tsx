@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useId, useCallback } from 'react';
+import { tasarimAl } from './ui/tasarim.ts';
 import { trHangisi } from '../utils/trDil.ts';
 import { ConceptRound, ActivityType } from '../types.ts';
 import Card from './ui/Card.tsx';
@@ -2405,12 +2406,13 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
             displayOptions.length === 4 ? 'grid-cols-2 sm-landscape:grid-cols-4' :
                 'grid-cols-2 sm-landscape:grid-cols-4';
 
+    const tas = tasarimAl(settings.sahne);
     const renderHeader = () => (
-        <div className={`w-full flex justify-between items-center mb-2 sm:mb-4 px-3 py-1.5 ${isCosmic ? 'bg-slate-900/60 border border-sky-400/20' : 'bg-white/50'} backdrop-blur-sm rounded-full`}>
-            <button onClick={onBack} className="p-1.5 rounded-full hover:bg-white/50 transition-colors" aria-label={t('app.back')}>
-                <ArrowLeftIcon className={`w-7 h-7 ${effectiveTheme.accent}`} />
+        <div className={`w-full flex justify-between items-center mb-2 sm:mb-4 px-3 py-1.5 ${tas ? tas.serit('') : isCosmic ? 'bg-slate-900/60 border border-sky-400/20' : 'bg-white/50'} backdrop-blur-sm rounded-full`}>
+            <button onClick={onBack} className={`p-1.5 rounded-full transition-colors ${tas ? tas.geriDugme : 'hover:bg-white/50'}`} aria-label={t('app.back')}>
+                <ArrowLeftIcon className={`w-7 h-7 ${tas ? '' : effectiveTheme.accent}`} />
             </button>
-            <div className={`text-sm font-bold ${effectiveTheme.text} drop-shadow-md`}>
+            <div className={`text-sm font-bold ${tas ? tas.seritYazi : `${effectiveTheme.text} drop-shadow-md`}`}>
                 {currentCard}/{totalCards}
             </div>
             <div className="w-10 h-10" />
@@ -2516,7 +2518,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 {spamOverlay}
 
                 {/* Header */}
-                <div className={`w-full flex justify-between items-center px-2 py-1 ${isCosmic ? 'bg-slate-900/60 border border-sky-400/20' : 'bg-white/70'} backdrop-blur-sm rounded-full absolute top-1 left-1/2 -translate-x-1/2 z-20 max-w-xs shadow-md`}>
+                <div className={`w-full flex justify-between items-center px-2 py-1 ${tas ? tas.serit('') : isCosmic ? 'bg-slate-900/60 border border-sky-400/20' : 'bg-white/70'} backdrop-blur-sm rounded-full absolute top-1 left-1/2 -translate-x-1/2 z-20 max-w-xs shadow-md`}>
                     <button onClick={onBack} className="p-1 rounded-full hover:bg-white/70 transition-colors" aria-label="Geri dön">
                         <ArrowLeftIcon className={`w-6 h-6 ${effectiveTheme.accent}`} />
                     </button>
@@ -2525,7 +2527,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 </div>
 
                 {/* Question */}
-                <h1 className={`text-xl sm:text-2xl font-bold text-center ${isCosmic ? 'bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-indigo-200 to-fuchsia-300 text-glow-planet' : effectiveTheme.text} flex items-center justify-center gap-3 absolute top-12 left-1/2 -translate-x-1/2 z-20 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]`}>
+                <h1 className={`text-xl sm:text-2xl font-bold text-center ${tas ? `${tas.soruKutu} font-black` : `${isCosmic ? 'bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-indigo-200 to-fuchsia-300 text-glow-planet' : effectiveTheme.text} drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]`} flex items-center justify-center gap-3 absolute top-12 left-1/2 -translate-x-1/2 z-20`}>
                     {settings.theme === 'kedi' ? '🐱 ' : settings.theme === 'zurafa' ? '🦒🌸 ' : ''}{localizedQuestion}
                     <button onClick={handleSpeak} className={`p-1.5 ${effectiveTheme.bg} rounded-full ${effectiveTheme.hoverBg} transition-colors`} aria-label={t('choice.readQuestion')}>
                         <SpeakerIcon className={`w-5 h-5 ${effectiveTheme.accent}`} />
@@ -2623,16 +2625,16 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
 
                 {/* Footer Controls */}
                 <div className={`absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex justify-center items-center gap-4 ${isCosmic ? 'bg-slate-900/70 border border-sky-400/20' : 'bg-white/80'} backdrop-blur-sm rounded-2xl p-2 shadow-lg`}>
-                    <button onClick={onToggleWordLabel} className={`flex flex-col items-center justify-center p-2 w-16 h-14 rounded-lg transition-colors text-center ${isWordLabelVisible ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label={isWordLabelVisible ? t('choice.hideLabel') : t('choice.showLabel')}>
+                    <button onClick={onToggleWordLabel} className={`flex flex-col items-center justify-center p-2 w-16 h-14 rounded-lg transition-colors text-center ${tas ? `${tas.kucukDugme} ${isWordLabelVisible ? 'ring-4 ring-amber-300' : ''}` : isWordLabelVisible ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label={isWordLabelVisible ? t('choice.hideLabel') : t('choice.showLabel')}>
                         {isWordLabelVisible ? <EyeSlashIcon className={`w-6 h-6 ${effectiveTheme.accent}`} /> : <EyeIcon className={`w-6 h-6 ${effectiveTheme.accent}`} />}
                         <span className={`text-xs font-bold ${effectiveTheme.text} mt-1`}>{t('choice.label')}</span>
                     </button>
-                    <button onClick={handleHint} className={`flex flex-col items-center justify-center p-2 w-16 h-14 rounded-lg transition-colors text-center ${isHelperVisible ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label={isHelperVisible ? t('choice.hideHint') : t('choice.showHint')}>
+                    <button onClick={handleHint} className={`flex flex-col items-center justify-center p-2 w-16 h-14 rounded-lg transition-colors text-center ${tas ? `${tas.kucukDugme} ${isHelperVisible ? 'ring-4 ring-amber-300' : ''}` : isHelperVisible ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label={isHelperVisible ? t('choice.hideHint') : t('choice.showHint')}>
                         <LightBulbIcon className={`w-6 h-6 text-amber-600`} />
                         <span className={`text-xs font-bold text-amber-800 mt-1`}>{t('choice.hint')}</span>
                     </button>
                     {(settings as any).handleToggleRealisticImages && (
-                        <button onClick={(settings as any).handleToggleRealisticImages} className={`flex flex-col items-center justify-center p-2 w-16 h-14 rounded-lg transition-colors text-center ${(settings as any).isRealisticImagesEnabled ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label="Gerçekçi/Alternatif Görseller">
+                        <button onClick={(settings as any).handleToggleRealisticImages} className={`flex flex-col items-center justify-center p-2 w-16 h-14 rounded-lg transition-colors text-center ${tas ? `${tas.kucukDugme} ${(settings as any).isRealisticImagesEnabled ? 'ring-4 ring-amber-300' : ''}` : (settings as any).isRealisticImagesEnabled ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label="Gerçekçi/Alternatif Görseller">
                             <svg className={`w-6 h-6 ${effectiveTheme.accent}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -2658,7 +2660,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
 
             {renderHeader()}
 
-            <div className={`relative flex-grow w-full flex flex-col items-center justify-center p-4 sm:p-6 sm-landscape:p-2 ${isCosmic ? 'bg-slate-900/50 border border-sky-400/20' : 'bg-white/60'} backdrop-blur-lg rounded-3xl shadow-xl overflow-y-auto`}>
+            <div className={`relative flex-grow w-full flex flex-col items-center justify-center p-4 sm:p-6 sm-landscape:p-2 ${tas ? tas.etkinlikPanel : isCosmic ? 'bg-slate-900/50 border border-sky-400/20' : 'bg-white/60'} backdrop-blur-lg rounded-3xl shadow-xl overflow-y-auto`}>
                 {isCosmic && (
                     <>
                         <PanelStars count={52} className="rounded-3xl" />
@@ -2667,7 +2669,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 )}
                 <div className="w-full flex flex-col landscape:flex-row landscape:items-start landscape:justify-center landscape:gap-6">
                     <div className="w-full flex flex-col items-center justify-start landscape:justify-center landscape:w-7/12 landscape:max-w-md">
-                        <h1 className={`text-xl sm:text-2xl font-bold text-center ${isCosmic ? 'bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-indigo-200 to-fuchsia-300 text-glow-planet' : effectiveTheme.text} mb-4 flex items-center gap-3 landscape:text-lg sm-landscape:text-base drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]`}>
+                        <h1 className={`text-xl sm:text-2xl font-bold text-center ${tas ? `${tas.soruKutu} font-black` : `${isCosmic ? 'bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-indigo-200 to-fuchsia-300 text-glow-planet' : effectiveTheme.text} drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]`} mb-4 flex items-center gap-3 landscape:text-lg sm-landscape:text-base`}>
                             {settings.theme === 'kedi' ? '🐱 ' : settings.theme === 'zurafa' ? '🦒🌸 ' : ''}{localizedQuestion}
                             <button onClick={handleSpeak} className={`p-2 ${effectiveTheme.bg} rounded-full ${effectiveTheme.hoverBg} transition-colors`} aria-label={t('choice.readQuestion')}>
                                 <SpeakerIcon className={`w-6 h-6 sm-landscape:w-5 sm-landscape:h-5 ${effectiveTheme.accent}`} />
@@ -2696,18 +2698,18 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     </div>
 
                     <div className="flex justify-center items-center gap-4">
-                        <button onClick={onToggleWordLabel} className={`flex flex-col items-center justify-center p-2 w-20 sm-landscape:w-16 h-16 sm-landscape:h-14 rounded-lg transition-colors text-center ${isWordLabelVisible ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 border border-sky-400/20' : 'bg-white/50 border border-slate-300/50')}`} aria-label={isWordLabelVisible ? t('choice.hideLabel') : t('choice.showLabel')}>
+                        <button onClick={onToggleWordLabel} className={`flex flex-col items-center justify-center p-2 w-20 sm-landscape:w-16 h-16 sm-landscape:h-14 rounded-lg transition-colors text-center ${tas ? `${tas.kucukDugme} ${isWordLabelVisible ? 'ring-4 ring-amber-300' : ''}` : isWordLabelVisible ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 border border-sky-400/20' : 'bg-white/50 border border-slate-300/50')}`} aria-label={isWordLabelVisible ? t('choice.hideLabel') : t('choice.showLabel')}>
                             {isWordLabelVisible ? <EyeSlashIcon className={`w-7 h-7 sm-landscape:w-6 sm-landscape:h-6 ${effectiveTheme.accent}`} /> : <EyeIcon className={`w-7 h-7 sm-landscape:w-6 sm-landscape:h-6 ${effectiveTheme.accent}`} />}
                             <span className={`text-xs sm-landscape:text-[10px] font-bold ${effectiveTheme.text} mt-1`}>{t('choice.label')}</span>
                         </button>
                         {supportedHelpers.includes(roundData.activityType) && (
-                            <button onClick={handleHint} className={`flex flex-col items-center justify-center p-2 w-20 sm-landscape:w-16 h-16 sm-landscape:h-14 rounded-lg transition-colors text-center ${isHelperVisible ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label={isHelperVisible ? t('choice.hideHint') : t('choice.showHint')}>
+                            <button onClick={handleHint} className={`flex flex-col items-center justify-center p-2 w-20 sm-landscape:w-16 h-16 sm-landscape:h-14 rounded-lg transition-colors text-center ${tas ? `${tas.kucukDugme} ${isHelperVisible ? 'ring-4 ring-amber-300' : ''}` : isHelperVisible ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label={isHelperVisible ? t('choice.hideHint') : t('choice.showHint')}>
                                 <LightBulbIcon className={`w-7 h-7 sm-landscape:w-6 sm-landscape:h-6 ${effectiveTheme.accent}`} />
                                 <span className={`text-xs sm-landscape:text-[10px] font-bold ${effectiveTheme.text} mt-1`}>{t('choice.hint')}</span>
                             </button>
                         )}
                         {(settings as any).handleToggleRealisticImages && (
-                            <button onClick={(settings as any).handleToggleRealisticImages} className={`flex flex-col items-center justify-center p-2 w-20 sm-landscape:w-16 h-16 sm-landscape:h-14 rounded-lg transition-colors text-center ${(settings as any).isRealisticImagesEnabled ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label="Gerçekçi/Alternatif Görseller">
+                            <button onClick={(settings as any).handleToggleRealisticImages} className={`flex flex-col items-center justify-center p-2 w-20 sm-landscape:w-16 h-16 sm-landscape:h-14 rounded-lg transition-colors text-center ${tas ? `${tas.kucukDugme} ${(settings as any).isRealisticImagesEnabled ? 'ring-4 ring-amber-300' : ''}` : (settings as any).isRealisticImagesEnabled ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label="Gerçekçi/Alternatif Görseller">
                                 <svg className={`w-7 h-7 sm-landscape:w-6 sm-landscape:h-6 ${effectiveTheme.accent}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />

@@ -4,6 +4,7 @@ import { getCurrentLanguage } from '../../i18n/index.ts';
 import { translateLabel } from '../../utils/translate.ts';
 import { useAppContext } from '../../contexts/AppContext.ts';
 import SmartImage from './SmartImage.tsx';
+import { tasarimAl } from './tasarim.ts';
 
 interface CardProps {
     imageUrl: string;
@@ -66,12 +67,15 @@ const Card: React.FC<CardProps> = ({
         return themeColors[settings.theme] || { bg: 'bg-black/60 backdrop-blur-sm', text: 'text-white', border: '' };
     };
 
-    const labelColors = getLabelColors();
+    // Tema tasarımı (Orman, Deniz...): kart çerçevesi ve etiket temaya göre
+    const tas = tasarimAl(settings.sahne);
+    const tohum = [...(imageUrl || '')].reduce((n, c) => n + c.charCodeAt(0), 0);
+    const labelColors = tas ? { bg: tas.etiket, text: '', border: '' } : getLabelColors();
 
     if (!isFlippable) {
         const baseContainer = settings.theme === 'deneme2'
             ? 'bg-slate-900/50 backdrop-blur-md border border-sky-400/20 shadow-[0_0_24px_rgba(56,189,248,0.12)]'
-            : 'bg-white/70 backdrop-blur-md border border-white/50';
+            : tas ? tas.etkinlikKart(tohum) : 'bg-white/70 backdrop-blur-md border border-white/50';
 
         const simpleCardClasses = [
             'relative w-full rounded-2xl overflow-hidden transition-all duration-300 ease-in-out group',
