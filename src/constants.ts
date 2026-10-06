@@ -44,6 +44,8 @@ export const CONCEPT_ACTIVITIES = [
     ActivityType.SivriKut,
     ActivityType.ParlakMat,
     ActivityType.AcikKoyu,
+    ActivityType.ColorRecognition,     // Rengi Ne? ve Bu Kimin? Kavram menüsünde; bitince oraya dönsün
+    ActivityType.WhoseIsThis,
     ActivityType.HavaDurumu,
     ActivityType.IlkSon,
     ActivityType.TehlikeliGuvenli,
@@ -94,6 +96,7 @@ export const REASONING_ACTIVITIES = [
     ActivityType.DragAndDropPositioning,
     ActivityType.Hangman,              // EĞLENCE: Adam Asmaca - Harf seçerek kelimeyi bul
     ActivityType.ObjectCollector,      // EĞLENCE: Nesne Toplama - Düşen objeleri sepete topla
+    ActivityType.WhatsMissing,         // Hangisi Kayıp? (Akıl Oyunları menüsünde; bitince oraya dönsün)
 ];
 
 export const OBJECT_RECOGNITION_ACTIVITIES = [ActivityType.ObjectRecognition];

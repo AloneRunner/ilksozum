@@ -381,7 +381,7 @@ export const AppRouter = () => {
             case ActivityType.WhatsMissing:
                 return <>
                     {renderProgramModeOverlay()}
-                    <WhatsMissingScreen roundData={currentData} onAdvance={(correct) => ctx.activity.handleAdvance(correct)} onBack={onBackToConcept} isAutoSpeakEnabled={ctx.settings.isAutoSpeakEnabled} isWordLabelVisible={ctx.settings.isWordLabelVisible} isFastTransitionEnabled={ctx.settings.isFastTransitionEnabled} />
+                    <WhatsMissingScreen roundData={currentData} onAdvance={(correct) => ctx.activity.handleAdvance(correct)} onBack={onBackToReasoning} isAutoSpeakEnabled={ctx.settings.isAutoSpeakEnabled} isWordLabelVisible={ctx.settings.isWordLabelVisible} isFastTransitionEnabled={ctx.settings.isFastTransitionEnabled} />
                 </>;
 
             case ActivityType.RelativeBigSmall:
