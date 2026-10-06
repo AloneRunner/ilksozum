@@ -2,6 +2,13 @@
  * Worksheet Registry — tüm başarım kategorileriyle eşleştirildi
  */
 
+// Çalışma kâğıtları yeni soruları kullanır (2026-10): eski veri dosyasının yeni karşılığı (xxxDataYeni) varsa o okunur.
+const yeniYaDaEski = async (ad: string, eski: () => Promise<any[]>): Promise<any[]> => {
+  const y: any = await import('../../services/database/activities/yeni/index.ts');
+  if (y.YENI_SORULAR_AKTIF && Array.isArray(y[`${ad}Yeni`])) return y[`${ad}Yeni`];
+  return eski();
+};
+
 export type WorksheetCategory =
   | 'Zıt Kavramlar'
   | 'Mekan & Konum'
@@ -40,166 +47,166 @@ export const WORKSHEET_REGISTRY: WorksheetDef[] = [
   // ═══════════════════════════════════════════════════════
 
   { id: 'big-small',    emoji: '🐘🐭', title: 'Büyük - Küçük',        subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#6366f1',
-    loadData: () => import('../../services/database/activities/qualities/bigSmallData.ts').then(m => m.bigSmallData) },
+    loadData: () => yeniYaDaEski('bigSmallData', () => import('../../services/database/activities/qualities/bigSmallData.ts').then(m => m.bigSmallData)) },
 
   { id: 'relative-big-small', emoji: '🔍🐘', title: 'Büyük - Küçük (Aynı)', subtitle: 'Aynı nesne karşılaştırması', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#4f46e5',
-    loadData: () => import('../../services/database/activities/qualities/relativeBigSmallData').then(m => m.relativeBigSmallData) },
+    loadData: () => yeniYaDaEski('relativeBigSmallData', () => import('../../services/database/activities/qualities/relativeBigSmallData').then(m => m.relativeBigSmallData)) },
 
   { id: 'long-short',   emoji: '📏✂️', title: 'Uzun - Kısa',          subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#0ea5e9',
-    loadData: () => import('../../services/database/activities/qualities/longShortData.ts').then(m => m.longShortData) },
+    loadData: () => yeniYaDaEski('longShortData', () => import('../../services/database/activities/qualities/longShortData.ts').then(m => m.longShortData)) },
 
   { id: 'abstract-long-short', emoji: '✏️📏', title: 'Uzun - Kısa (Basit Çizim)', subtitle: 'Sadeleştirilmiş şekiller', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#3b82f6',
-    loadData: () => import('../../services/database/activities/qualities/abstractLongShortData').then(m => m.abstractLongShortData) },
+    loadData: () => yeniYaDaEski('abstractLongShortData', () => import('../../services/database/activities/qualities/abstractLongShortData').then(m => m.abstractLongShortData)) },
 
   { id: 'thin-thick',   emoji: '📒📚', title: 'İnce - Kalın',          subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#f59e0b',
-    loadData: () => import('../../services/database/activities/qualities/thinThickData.ts').then(m => m.thinThickData) },
+    loadData: () => yeniYaDaEski('thinThickData', () => import('../../services/database/activities/qualities/thinThickData.ts').then(m => m.thinThickData)) },
 
   { id: 'wide-narrow',  emoji: '🛣️🚶', title: 'Geniş - Dar',          subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#10b981',
-    loadData: () => import('../../services/database/activities/qualities/wideNarrowData.ts').then(m => m.wideNarrowData) },
+    loadData: () => yeniYaDaEski('wideNarrowData', () => import('../../services/database/activities/qualities/wideNarrowData.ts').then(m => m.wideNarrowData)) },
 
   { id: 'old-new',      emoji: '🕰️✨', title: 'Eski - Yeni',           subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#f97316',
-    loadData: () => import('../../services/database/activities/qualities/oldNewData.ts').then(m => m.oldNewData) },
+    loadData: () => yeniYaDaEski('oldNewData', () => import('../../services/database/activities/qualities/oldNewData.ts').then(m => m.oldNewData)) },
 
   { id: 'young-old',    emoji: '👶🧓', title: 'Genç - Yaşlı',          subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#ec4899',
-    loadData: () => import('../../services/database/activities/qualities/youngOldData.ts').then(m => m.youngOldData) },
+    loadData: () => yeniYaDaEski('youngOldData', () => import('../../services/database/activities/qualities/youngOldData.ts').then(m => m.youngOldData)) },
 
   { id: 'hard-soft',    emoji: '🪨🧸', title: 'Sert - Yumuşak',        subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#78716c',
-    loadData: () => import('../../services/database/activities/qualities/hardSoftData.ts').then(m => m.hardSoftData) },
+    loadData: () => yeniYaDaEski('hardSoftData', () => import('../../services/database/activities/qualities/hardSoftData.ts').then(m => m.hardSoftData)) },
 
   { id: 'clean-dirty',  emoji: '🧹🪣', title: 'Temiz - Kirli',         subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#38bdf8',
-    loadData: () => import('../../services/database/activities/qualities/cleanDirtyData.ts').then(m => m.cleanDirtyData) },
+    loadData: () => yeniYaDaEski('cleanDirtyData', () => import('../../services/database/activities/qualities/cleanDirtyData.ts').then(m => m.cleanDirtyData)) },
 
   { id: 'wet-dry',      emoji: '💧☀️', title: 'Islak - Kuru',           subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#3b82f6',
-    loadData: () => import('../../services/database/activities/qualities/wetDryData.ts').then(m => m.wetDryData) },
+    loadData: () => yeniYaDaEski('wetDryData', () => import('../../services/database/activities/qualities/wetDryData.ts').then(m => m.wetDryData)) },
 
   { id: 'open-closed',  emoji: '🚪🔒', title: 'Açık - Kapalı',         subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#84cc16',
-    loadData: () => import('../../services/database/activities/qualities/openClosedData.ts').then(m => m.openClosedData) },
+    loadData: () => yeniYaDaEski('openClosedData', () => import('../../services/database/activities/qualities/openClosedData.ts').then(m => m.openClosedData)) },
 
   { id: 'straight-curved', emoji: '➖〰️', title: 'Düz - Eğri',        subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#a78bfa',
-    loadData: () => import('../../services/database/activities/qualities/straightCurvedData.ts').then(m => m.straightCurvedData) },
+    loadData: () => yeniYaDaEski('straightCurvedData', () => import('../../services/database/activities/qualities/straightCurvedData.ts').then(m => m.straightCurvedData)) },
 
   { id: 'alive-lifeless', emoji: '🌱🪨', title: 'Canlı - Cansız',     subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#16a34a',
-    loadData: () => import('../../services/database/activities/qualities/aliveLifelessData.ts').then(m => m.aliveLifelessData) },
+    loadData: () => yeniYaDaEski('aliveLifelessData', () => import('../../services/database/activities/qualities/aliveLifelessData.ts').then(m => m.aliveLifelessData)) },
 
   { id: 'bitter-sweet', emoji: '🍋🍯', title: 'Acı - Tatlı',           subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#ca8a04',
-    loadData: () => import('../../services/database/activities/qualities/bitterSweetData.ts').then(m => m.bitterSweetData) },
+    loadData: () => yeniYaDaEski('bitterSweetData', () => import('../../services/database/activities/qualities/bitterSweetData.ts').then(m => m.bitterSweetData)) },
 
   { id: 'heavy-light',  emoji: '⚖️🪶', title: 'Ağır - Hafif',          subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#8b5cf6',
-    loadData: () => import('../../services/database/activities/qualities/heavyLightData.ts').then(m => m.heavyLightData) },
+    loadData: () => yeniYaDaEski('heavyLightData', () => import('../../services/database/activities/qualities/heavyLightData.ts').then(m => m.heavyLightData)) },
 
   { id: 'hot-cold',     emoji: '🔥❄️', title: 'Sıcak - Soğuk',         subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#ef4444',
-    loadData: () => import('../../services/database/activities/qualities/hotColdData.ts').then(m => m.hotColdData) },
+    loadData: () => yeniYaDaEski('hotColdData', () => import('../../services/database/activities/qualities/hotColdData.ts').then(m => m.hotColdData)) },
 
   { id: 'rough-smooth', emoji: '🪵🪞', title: 'Pürüzlü - Pürüzsüz',    subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#92400e',
-    loadData: () => import('../../services/database/activities/qualities/roughSmoothData.ts').then(m => m.roughSmoothData) },
+    loadData: () => yeniYaDaEski('roughSmoothData', () => import('../../services/database/activities/qualities/roughSmoothData.ts').then(m => m.roughSmoothData)) },
 
   { id: 'broken-intact', emoji: '🔧💎', title: 'Kırık - Sağlam',       subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#dc2626',
-    loadData: () => import('../../services/database/activities/qualities/brokenIntactData.ts').then(m => m.brokenIntactData) },
+    loadData: () => yeniYaDaEski('brokenIntactData', () => import('../../services/database/activities/qualities/brokenIntactData.ts').then(m => m.brokenIntactData)) },
 
   { id: 'messy-clean',  emoji: '🧹📦', title: 'Dağınık - Düzenli',     subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#0891b2',
-    loadData: () => import('../../services/database/activities/qualities/messyCleanData.ts').then(m => m.messyCleanData) },
+    loadData: () => yeniYaDaEski('messyCleanData', () => import('../../services/database/activities/qualities/messyCleanData.ts').then(m => m.messyCleanData)) },
 
   { id: 'fresh-stale',  emoji: '🥖🍞', title: 'Taze - Bayat',          subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#b45309',
-    loadData: () => import('../../services/database/activities/qualities/tazeBayatData.ts').then(m => m.tazeBayatData) },
+    loadData: () => yeniYaDaEski('tazeBayatData', () => import('../../services/database/activities/qualities/tazeBayatData.ts').then(m => m.tazeBayatData)) },
 
   { id: 'wrinkled-smooth', emoji: '👕✨', title: 'Kırışık - Düzgün',   subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#9333ea',
-    loadData: () => import('../../services/database/activities/qualities/kirisikDuzgunData.ts').then(m => m.kirisikDuzgunData) },
+    loadData: () => yeniYaDaEski('kirisikDuzgunData', () => import('../../services/database/activities/qualities/kirisikDuzgunData.ts').then(m => m.kirisikDuzgunData)) },
 
   { id: 'sharp-blunt',  emoji: '🔪🏏', title: 'Sivri - Küt',           subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#64748b',
-    loadData: () => import('../../services/database/activities/qualities/sivriKutData.ts').then(m => m.sivriKutData) },
+    loadData: () => yeniYaDaEski('sivriKutData', () => import('../../services/database/activities/qualities/sivriKutData.ts').then(m => m.sivriKutData)) },
 
   { id: 'shiny-dull',   emoji: '💡🌑', title: 'Parlak - Mat',           subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#eab308',
-    loadData: () => import('../../services/database/activities/qualities/parlakMatData.ts').then(m => m.parlakMatData) },
+    loadData: () => yeniYaDaEski('parlakMatData', () => import('../../services/database/activities/qualities/parlakMatData.ts').then(m => m.parlakMatData)) },
 
   { id: 'lazy-hardworking', emoji: '😴💪', title: 'Tembel - Çalışkan', subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#6d28d9',
-    loadData: () => import('../../services/database/activities/qualities/tembelCaliskanData.ts').then(m => m.tembelCaliskanData) },
+    loadData: () => yeniYaDaEski('tembelCaliskanData', () => import('../../services/database/activities/qualities/tembelCaliskanData.ts').then(m => m.tembelCaliskanData)) },
 
   { id: 'transparent-opaque', emoji: '🔍🧱', title: 'Şeffaf - Opak',  subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#0e7490',
-    loadData: () => import('../../services/database/activities/qualities/seffafOpakData.ts').then(m => m.seffafOpakData) },
+    loadData: () => yeniYaDaEski('seffafOpakData', () => import('../../services/database/activities/qualities/seffafOpakData.ts').then(m => m.seffafOpakData)) },
 
   { id: 'spiky-smooth', emoji: '🌵🧸', title: 'Dikenli - Pürüzsüz',   subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#15803d',
-    loadData: () => import('../../services/database/activities/qualities/dikenliPuruzsuzData.ts').then(m => m.dikenliPuruzsuzData) },
+    loadData: () => yeniYaDaEski('dikenliPuruzsuzData', () => import('../../services/database/activities/qualities/dikenliPuruzsuzData.ts').then(m => m.dikenliPuruzsuzData)) },
 
   { id: 'knotted-untied', emoji: '🪢🧵', title: 'Düğümlü - Çözük',    subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#c2410c',
-    loadData: () => import('../../services/database/activities/qualities/dugumCozukData.ts').then(m => m.dugumCozukData) },
+    loadData: () => yeniYaDaEski('dugumCozukData', () => import('../../services/database/activities/qualities/dugumCozukData.ts').then(m => m.dugumCozukData)) },
 
   { id: 'hungry-full',  emoji: '🍽️😋', title: 'Aç - Tok',              subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#d97706',
-    loadData: () => import('../../services/database/activities/qualities/hungryFullData.ts').then(m => m.hungryFullData) },
+    loadData: () => yeniYaDaEski('hungryFullData', () => import('../../services/database/activities/qualities/hungryFullData.ts').then(m => m.hungryFullData)) },
 
   { id: 'deep-shallow', emoji: '🌊🏊', title: 'Derin - Sığ',            subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#1d4ed8',
-    loadData: () => import('../../services/database/activities/qualities/derinSigData.ts').then(m => m.derinSigData) },
+    loadData: () => yeniYaDaEski('derinSigData', () => import('../../services/database/activities/qualities/derinSigData.ts').then(m => m.derinSigData)) },
 
   { id: 'crowded-empty', emoji: '👥🏙️', title: 'Kalabalık - Tenha',   subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#475569',
-    loadData: () => import('../../services/database/activities/qualities/kalabalikTenhaData.ts').then(m => m.kalabalikTenhaData) },
+    loadData: () => yeniYaDaEski('kalabalikTenhaData', () => import('../../services/database/activities/qualities/kalabalikTenhaData.ts').then(m => m.kalabalikTenhaData)) },
 
   { id: 'upside-down',  emoji: '🔄✅', title: 'Ters - Düz',             subtitle: 'Karışık yönler', category: 'Zıt Kavramlar', answerLabel: 'DOĞRU', color: '#7c3aed',
-    loadData: () => import('../../services/database/activities/qualities/tersDuzData.ts').then(m => m.tersDuzData) },
+    loadData: () => yeniYaDaEski('tersDuzData', () => import('../../services/database/activities/qualities/tersDuzData.ts').then(m => m.tersDuzData)) },
 
   // ═══════════════════════════════════════════════════════
   //  MEKAN & KONUM
   // ═══════════════════════════════════════════════════════
 
   { id: 'on-under',     emoji: '⬆️⬇️', title: 'Üstünde - Altında',     subtitle: 'Karışık yönler', category: 'Mekan & Konum', answerLabel: 'DOĞRU', color: '#0891b2',
-    loadData: () => import('../../services/database/activities/spatial/onUnderData.ts').then(m => m.onUnderData) },
+    loadData: () => yeniYaDaEski('onUnderData', () => import('../../services/database/activities/spatial/onUnderData.ts').then(m => m.onUnderData)) },
 
   { id: 'inside-outside', emoji: '📦🌿', title: 'İçeride - Dışarıda', subtitle: 'Karışık yönler', category: 'Mekan & Konum', answerLabel: 'DOĞRU', color: '#059669',
-    loadData: () => import('../../services/database/activities/spatial/insideOutsideData.ts').then(m => m.insideOutsideData) },
+    loadData: () => yeniYaDaEski('insideOutsideData', () => import('../../services/database/activities/spatial/insideOutsideData.ts').then(m => m.insideOutsideData)) },
 
   { id: 'in-front-behind', emoji: '🚗🚶', title: 'Önde - Arkada',     subtitle: 'Karışık yönler', category: 'Mekan & Konum', answerLabel: 'DOĞRU', color: '#7c3aed',
-    loadData: () => import('../../services/database/activities/spatial/inFrontOfBehindData.ts').then(m => m.inFrontOfBehindData) },
+    loadData: () => yeniYaDaEski('inFrontOfBehindData', () => import('../../services/database/activities/spatial/inFrontOfBehindData.ts').then(m => m.inFrontOfBehindData)) },
 
   { id: 'left-right',   emoji: '⬅️➡️', title: 'Sol - Sağ',             subtitle: 'Karışık yönler', category: 'Mekan & Konum', answerLabel: 'DOĞRU', color: '#db2777',
-    loadData: () => import('../../services/database/activities/spatial/leftRightData.ts').then(m => m.leftRightData) },
+    loadData: () => yeniYaDaEski('leftRightData', () => import('../../services/database/activities/spatial/leftRightData.ts').then(m => m.leftRightData)) },
 
   { id: 'near-far',     emoji: '📍🗺️', title: 'Yakın - Uzak',           subtitle: 'Karışık yönler', category: 'Mekan & Konum', answerLabel: 'DOĞRU', color: '#0284c7',
-    loadData: () => import('../../services/database/activities/spatial/nearFarData.ts').then(m => m.nearFarData) },
+    loadData: () => yeniYaDaEski('nearFarData', () => import('../../services/database/activities/spatial/nearFarData.ts').then(m => m.nearFarData)) },
 
   { id: 'high-low',     emoji: '🏔️🏕️', title: 'Yüksek - Alçak',       subtitle: 'Karışık yönler', category: 'Mekan & Konum', answerLabel: 'DOĞRU', color: '#16a34a',
-    loadData: () => import('../../services/database/activities/spatial/highLowData.ts').then(m => m.highLowData) },
+    loadData: () => yeniYaDaEski('highLowData', () => import('../../services/database/activities/spatial/highLowData.ts').then(m => m.highLowData)) },
 
   { id: 'above-below',  emoji: '🔝🔽', title: 'Yukarıda - Aşağıda',    subtitle: 'Karışık yönler', category: 'Mekan & Konum', answerLabel: 'DOĞRU', color: '#6366f1',
-    loadData: () => import('../../services/database/activities/spatial/belowAboveData.ts').then(m => m.belowAboveData) },
+    loadData: () => yeniYaDaEski('belowAboveData', () => import('../../services/database/activities/spatial/belowAboveData.ts').then(m => m.belowAboveData)) },
 
   { id: 'beside-opposite', emoji: '↔️👥', title: 'Yan Yana - Karşı Karşıya', subtitle: 'Karışık yönler', category: 'Mekan & Konum', answerLabel: 'DOĞRU', color: '#b45309',
-    loadData: () => import('../../services/database/activities/spatial/besideOppositeData.ts').then(m => m.besideOppositeData) },
+    loadData: () => yeniYaDaEski('besideOppositeData', () => import('../../services/database/activities/spatial/besideOppositeData.ts').then(m => m.besideOppositeData)) },
 
   { id: 'between',      emoji: '↔️📍', title: 'Arasında',               subtitle: 'Konum tespiti', category: 'Mekan & Konum', answerLabel: 'DOĞRU', color: '#0f766e',
-    loadData: () => import('../../services/database/activities/spatial/betweenData.ts').then(m => m.betweenData) },
+    loadData: () => yeniYaDaEski('betweenData', () => import('../../services/database/activities/spatial/betweenData.ts').then(m => m.betweenData)) },
 
   // ═══════════════════════════════════════════════════════
   //  MİKTAR & SAYI
   // ═══════════════════════════════════════════════════════
 
   { id: 'full-empty',   emoji: '🥤🫙', title: 'Dolu - Boş',             subtitle: 'Karışık yönler', category: 'Miktar & Sayı', answerLabel: 'DOĞRU', color: '#e11d48',
-    loadData: () => import('../../services/database/activities/quantities/fullEmptyData.ts').then(m => m.fullEmptyData) },
+    loadData: () => yeniYaDaEski('fullEmptyData', () => import('../../services/database/activities/quantities/fullEmptyData.ts').then(m => m.fullEmptyData)) },
 
   { id: 'few-much',     emoji: '🫘🌾', title: 'Az - Çok',               subtitle: 'Karışık yönler', category: 'Miktar & Sayı', answerLabel: 'DOĞRU', color: '#d97706',
-    loadData: () => import('../../services/database/activities/quantities/fewMuchData.ts').then(m => m.fewMuchData) },
+    loadData: () => yeniYaDaEski('fewMuchData', () => import('../../services/database/activities/quantities/fewMuchData.ts').then(m => m.fewMuchData)) },
 
   { id: 'odd-even',     emoji: '🔢🔣', title: 'Tek - Çift',             subtitle: 'Hangi sayı?', category: 'Miktar & Sayı', answerLabel: 'DOĞRU', color: '#7c3aed',
-    loadData: () => import('../../services/database/activities/quantities/oddEvenData.ts').then(m => m.oddEvenData) },
+    loadData: () => yeniYaDaEski('oddEvenData', () => import('../../services/database/activities/quantities/oddEvenData.ts').then(m => m.oddEvenData)) },
 
   { id: 'how-many',     emoji: '🔢👁️', title: 'Kaç Tane Var?',          subtitle: 'Sayma', category: 'Miktar & Sayı', answerLabel: 'DOĞRU', color: '#0e7490',
-    loadData: () => import('../../services/database/activities/quantities/countMatchData.ts').then(m => m.countMatchData) },
+    loadData: () => yeniYaDaEski('countMatchData', () => import('../../services/database/activities/quantities/countMatchData.ts').then(m => m.countMatchData)) },
 
   { id: 'whole-half',   emoji: '🍕🍕', title: 'Tam - Yarım - Çeyrek',  subtitle: 'Bölünme', category: 'Miktar & Sayı', answerLabel: 'DOĞRU', color: '#b45309',
-    loadData: () => import('../../services/database/activities/quantities/halfQuarterWholeData.ts').then(m => m.halfQuarterWholeData) },
+    loadData: () => yeniYaDaEski('halfQuarterWholeData', () => import('../../services/database/activities/quantities/halfQuarterWholeData.ts').then(m => m.halfQuarterWholeData)) },
 
   // ═══════════════════════════════════════════════════════
   //  AKIL YÜRÜTME
   // ═══════════════════════════════════════════════════════
 
   { id: 'what-doesnt-belong', emoji: '❌🔍', title: 'Hangisi Farklı?', subtitle: 'Gruba uymayan hangisi?', category: 'Akıl Yürütme', answerLabel: 'FARKLI OLAN', color: '#dc2626',
-    loadData: () => import('../../services/database/activities/reasoning/whatDoesntBelongData.ts').then(m => m.whatDoesntBelongData) },
+    loadData: () => yeniYaDaEski('whatDoesntBelongData', () => import('../../services/database/activities/reasoning/whatDoesntBelongData.ts').then(m => m.whatDoesntBelongData)) },
 
   { id: 'whose-is-this', emoji: '🎒👶', title: 'Bu Kimin?', subtitle: 'Eşyayı sahibiyle eşleştir', category: 'Akıl Yürütme', answerLabel: 'DOĞRU SAHİP', color: '#7c3aed', component: 'whose-is-this',
-    loadData: () => import('../../services/database/activities/reasoning/ownershipData.ts').then(m => m.ownershipData) },
+    loadData: () => yeniYaDaEski('ownershipData', () => import('../../services/database/activities/reasoning/ownershipData.ts').then(m => m.ownershipData)) },
 
   { id: 'color-recognition', emoji: '🎨🔍', title: 'Rengi Ne?', subtitle: 'Nesnenin rengini bul', category: 'Akıl Yürütme', answerLabel: 'DOĞRU RENK', color: '#f97316', component: 'color-recognition',
-    loadData: () => import('../../services/database/activities/reasoning/colorRecognitionData.ts').then(m => m.colorRecognitionData) },
+    loadData: () => yeniYaDaEski('colorRecognitionData', () => import('../../services/database/activities/reasoning/colorRecognitionData.ts').then(m => m.colorRecognitionData)) },
 
   { id: 'whats-missing', emoji: '❓🔍', title: 'Hangisi Kayıp?', subtitle: 'Nesneleri ezberle, kayıp olanı bul', category: 'Akıl Yürütme', answerLabel: 'KAYIP NESNE', color: '#0891b2', component: 'whats-missing',
-    loadData: () => import('../../services/database/activities/reasoning/whatsMissingData.ts').then(m => m.whatsMissingData) },
+    loadData: () => yeniYaDaEski('whatsMissingData', () => import('../../services/database/activities/reasoning/whatsMissingData.ts').then(m => m.whatsMissingData)) },
 
   { id: 'fivew-kim',    emoji: '🧑‍⚕️👩‍🏫', title: '5N1K — Kim?',        subtitle: 'Kim yapar / kimdir?', category: 'Akıl Yürütme', answerLabel: 'DOĞRU KİŞİ', color: '#be185d',
     loadData: () => import('../../services/database/activities/reasoning/fiveWOneHData.ts')
@@ -234,23 +241,23 @@ export const WORKSHEET_REGISTRY: WorksheetDef[] = [
   // ═══════════════════════════════════════════════════════
 
   { id: 'before-after', emoji: '🔁⏭️', title: 'Önce - Sonra',          subtitle: 'Karışık yönler', category: 'Zaman & Duyular', answerLabel: 'DOĞRU', color: '#7c3aed',
-    loadData: () => import('../../services/database/activities/temporalData.ts').then(m => m.beforeAfterData) },
+    loadData: () => yeniYaDaEski('beforeAfterData', () => import('../../services/database/activities/temporalData.ts').then(m => m.beforeAfterData)) },
 
   { id: 'day-night',    emoji: '🌞🌙', title: 'Gündüz - Gece',         subtitle: 'Karışık yönler', category: 'Zaman & Duyular', answerLabel: 'DOĞRU', color: '#1e40af',
-    loadData: () => import('../../services/database/activities/temporalData.ts').then(m => m.dayNightData) },
+    loadData: () => yeniYaDaEski('dayNightData', () => import('../../services/database/activities/temporalData.ts').then(m => m.dayNightData)) },
 
   { id: 'fast-slow',    emoji: '🐇🐢', title: 'Hızlı - Yavaş',         subtitle: 'Karışık yönler', category: 'Zaman & Duyular', answerLabel: 'DOĞRU', color: '#dc2626',
-    loadData: () => import('../../services/database/activities/temporalData.ts').then(m => m.fastSlowData) },
+    loadData: () => yeniYaDaEski('fastSlowData', () => import('../../services/database/activities/temporalData.ts').then(m => m.fastSlowData)) },
 
   // ═══════════════════════════════════════════════════════
   //  DUYULAR
   // ═══════════════════════════════════════════════════════
 
   { id: 'senses',       emoji: '👁️👂', title: 'Duyularımız',           subtitle: 'Hangi duyu organı?', category: 'Zaman & Duyular', answerLabel: 'DOĞRU ORGAN', color: '#0f766e',
-    loadData: () => import('../../services/database/activities/sensesData.ts').then(m => m.sensesData) },
+    loadData: () => yeniYaDaEski('sensesData', () => import('../../services/database/activities/sensesData.ts').then(m => m.sensesData)) },
 
   { id: 'noisy-quiet',  emoji: '🔊🤫', title: 'Gürültülü - Sessiz',    subtitle: 'Karışık yönler', category: 'Zaman & Duyular', answerLabel: 'DOĞRU', color: '#92400e',
-    loadData: () => import('../../services/database/activities/qualities/noisyQuietData.ts').then(m => m.noisyQuietData) },
+    loadData: () => yeniYaDaEski('noisyQuietData', () => import('../../services/database/activities/qualities/noisyQuietData.ts').then(m => m.noisyQuietData)) },
 
   // ═══════════════════════════════════════════════════════
   //  NESNE TANIMA  (Türkçe sorular otomatik üretilir)

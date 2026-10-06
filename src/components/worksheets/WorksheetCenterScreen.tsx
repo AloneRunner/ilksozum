@@ -12,6 +12,15 @@ import {
 } from './worksheetRegistry.ts';
 import { ConceptRound } from '../../types.ts';
 
+// İlk emoji (bütün olarak): split('') çok baytlı emojileri bölüp "�" gösteriyordu
+const ilkEmoji = (s: string): string => {
+  try {
+    const seg = (Intl as any).Segmenter ? new (Intl as any).Segmenter('tr', { granularity: 'grapheme' }) : null;
+    if (seg) for (const x of seg.segment(s)) return x.segment;
+  } catch { /* yok say */ }
+  return Array.from(s)[0] || '';
+};
+
 const WhoseIsThisWorksheetPreview = lazy(() => import('./WhoseIsThisWorksheetPreview.tsx'));
 const ColorRecognitionWorksheetPreview = lazy(() => import('./ColorRecognitionWorksheetPreview.tsx'));
 const WhatsMissingWorksheetPreview = lazy(() => import('./WhatsMissingWorksheetPreview.tsx'));
@@ -86,7 +95,7 @@ const WorksheetCenterScreen: React.FC<WorksheetCenterScreenProps> = ({ onBack })
       <div className="flex flex-col items-center justify-center h-full w-full bg-slate-100">
         <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-lg animate-bounce"
           style={{ backgroundColor: view.def.color + '22', border: `2px solid ${view.def.color}` }}>
-          {view.def.emoji.split('')[0]}
+          {ilkEmoji(view.def.emoji)}
         </div>
         <p className="mt-4 text-slate-600 font-bold text-sm">{view.def.title}</p>
         <p className="mt-1 text-slate-400 text-xs">Yükleniyor…</p>
@@ -358,11 +367,11 @@ const WorksheetCard: React.FC<{ def: WorksheetDef; onSelect: (d: WorksheetDef) =
       >
         {/* Decorative background emoji */}
         <span className="absolute -right-2 -bottom-4 text-6xl opacity-20 pointer-events-none rotate-12 drop-shadow-lg filter blur-[1px]">
-          {def.emoji.split('')[0]}
+          {ilkEmoji(def.emoji)}
         </span>
         
         <div className="relative z-10 flex items-center justify-center w-10 h-10 rounded-2xl bg-white/20 shadow-inner border border-white/20 backdrop-blur-sm">
-          <span className="text-2xl leading-none drop-shadow-md">{def.emoji.split('')[0]}</span>
+          <span className="text-2xl leading-none drop-shadow-md">{ilkEmoji(def.emoji)}</span>
         </div>
         
         <div
