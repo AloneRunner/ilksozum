@@ -1,5 +1,6 @@
 
 import { ActivityType, ActivityCategory, ImageMetadata, ConceptRound, Word, Story, ScreenState, ConceptOption, ActivityStats, MemoryGameRound, SudokuRound, SudokuItem } from '../types.ts';
+import { trHangisi, trEvetBu, trHayirBuDegil } from '../utils/trDil.ts';
 import { storyData } from './staticData.ts';
 import { imageData } from './database/imageData.ts';
 import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni, fewMuchDataYeni, halfQuarterWholeDataYeni, derinSigDataYeni, openClosedDataYeni, brokenIntactDataYeni, cleanDirtyDataYeni, wetDryDataYeni, oldNewDataYeni, hardSoftDataYeni, hotColdDataYeni, roughSmoothDataYeni, dikenliPuruzsuzDataYeni, parlakMatDataYeni, seffafOpakDataYeni, bitterSweetDataYeni, noisyQuietDataYeni, hungryFullDataYeni, youngOldDataYeni, tembelCaliskanDataYeni, kalabalikTenhaDataYeni, kirisikDuzgunDataYeni, dugumCozukDataYeni, straightCurvedDataYeni, tazeBayatDataYeni, messyCleanDataYeni, hangisiFarkliKolayYeni, hangisiFarkliZorYeni, leftRightDataYeni, aliveLifelessDataYeni, saatDataYeni, nearFarDataYeni, besideOppositeDataYeni, tersDuzDataYeni, sivriKutDataYeni, dayNightDataYeni, fastSlowDataYeni, beforeAfterDataYeni, heavyLightDataYeni, emotionsDataYeni, sensesDataYeni, ownershipDataYeni, acikKoyuDataYeni, countMatchDataYeni, yenirYenmezDataYeni, tehlikeliGuvenliDataYeni, havaDurumuDataYeni, oddEvenDataYeni, ilkSonDataYeni, colorRecognitionDataYeni, colorsDataYeni, shapesDataYeni } from './database/activities/yeni/index.ts';
@@ -1016,7 +1017,7 @@ export const createObjectChoiceRounds = async (categoryId: string, count?: numbe
         
         // Generate question text based on current language with translated word
         const questionTemplates: Record<string, (word: string) => string> = {
-            tr: (word) => `${word} hangisi?`,
+            tr: (word) => trHangisi(word),
             en: (word) => `Which one is the ${word}?`,
             de: (word) => `Welches ist ${word}?`,
             fr: (word) => `Lequel est ${word}?`,
@@ -1034,8 +1035,8 @@ export const createObjectChoiceRounds = async (categoryId: string, count?: numbe
             activityType: ActivityType.ObjectRecognition,
             speech: {
                 tr: {
-                    correct: `Evet, bu ${translateWord(correctItem.word, 'tr')}.`,
-                    wrong: `Hayır, bu ${translateWord(correctItem.word, 'tr')} değil.`
+                    correct: trEvetBu(translateWord(correctItem.word, 'tr')),
+                    wrong: trHayirBuDegil(translateWord(correctItem.word, 'tr'))
                 },
                 en: {
                     correct: `Yes, this is the ${translateWord(correctItem.word, 'en')}.`,

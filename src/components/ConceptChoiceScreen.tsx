@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useId, useCallback } from 'react';
+import { trHangisi } from '../utils/trDil.ts';
 import { ConceptRound, ActivityType } from '../types.ts';
 import Card from './ui/Card.tsx';
 import SmartImage from './ui/SmartImage.tsx';
@@ -351,7 +352,7 @@ function getLocalizedQuestion(roundData: ConceptRound, lang: ReturnType<typeof g
         // Prefer already-localized spokenText; fall back to translating TR word
         const target = correct?.spokenText || (correct ? translateLabel(correct.word, lang) : undefined);
         if (target) {
-            if (lang === 'tr') return `${target} hangisi?`;
+            if (lang === 'tr') return trHangisi(target);
             if (lang === 'de') return `Welche ist ${target}?`;
             if (lang === 'fr') return `Lequel est ${target} ?`;
             if (lang === 'nl') return `Welke is ${target}?`;
