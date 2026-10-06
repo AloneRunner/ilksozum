@@ -11,9 +11,7 @@ import { beceriBul, type BeceriId, type BeceriOge } from '../../data/beceriMenu.
 const ProfileSelectionScreen = lazy(() => import('../ProfileSelectionScreen.tsx'));
 const MainMenuScreen = lazy(() => import('../MainMenuScreen.tsx'));
 const IfadeTahtasi = lazy(() => import('../IfadeTahtasi.tsx'));
-const SoundImitationMenuScreen = lazy(() => import('../SoundImitationMenu.tsx'));
-const SoundImitationScreen = lazy(() => import('../SoundImitationScreen.tsx'));
-const SoundImitationVideoScreen = lazy(() => import('../SoundImitationVideoScreen.tsx'));
+const SesTaklitEkrani = lazy(() => import('../SesTaklitEkrani.tsx'));
 const LetterSelectionScreen = lazy(() => import('../LetterSelectionScreen.tsx'));
 const GroupSelectionScreen = lazy(() => import('../GroupSelectionScreen.tsx'));
 const SyllableCard = lazy(() => import('../SyllableCard.tsx'));
@@ -537,9 +535,8 @@ export const AppRouter = () => {
                 theme={ctx.settings.theme}
             />;
         }
-        case ScreenState.SoundImitationMenu: return <SoundImitationMenuScreen onBack={() => geriDon(ScreenState.MainMenu)} onSelectSadece={() => setScreenState(ScreenState.SoundImitationSadeceGorsel)} onSelectVideo={() => setScreenState(ScreenState.SoundImitationUfakVideolar)} />;
-        case ScreenState.SoundImitationSadeceGorsel: return <SoundImitationScreen onBack={() => setScreenState(ScreenState.SoundImitationMenu)} />;
-        case ScreenState.SoundImitationUfakVideolar: return <SoundImitationVideoScreen onBack={() => setScreenState(ScreenState.SoundImitationMenu)} />;
+        // Ses Taklit: kartlar + şarkılar tek ekranda (videolar kaldırıldı, yedek/seskart)
+        case ScreenState.SoundImitationMenu: return <SesTaklitEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.LetterSelection: {
             return <LetterSelectionScreen onSelectLetter={ctx.activity.handleStartActivityWithLetter} onBack={() => geriDon(ScreenState.MainMenu)} activityType={ctx.activity.selectedActivityForLetter} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} />;
         }
