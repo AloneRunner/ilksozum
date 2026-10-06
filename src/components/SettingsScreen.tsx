@@ -323,7 +323,7 @@ const ParentGateButton: React.FC<{ onConfirm: () => void; isThemed: boolean; lab
 
 const SettingsScreen: React.FC<SettingsScreenProps> = ({
   onBack, isMuted, onToggleMute, isAutoSpeakEnabled, onToggleAutoSpeak, isBanButtonEnabled, onToggleBanButton,
-  isFastTransitionEnabled, onToggleFastTransition, isUnderwaterMusicEnabled, onToggleUnderwaterMusic,
+  isFastTransitionEnabled, onToggleFastTransition,
   onSelectPrivacyPolicy, onManageBannedImages, isPremium, hasPurchasedPremium,
   onPurchaseMonthly, onPurchaseLifetime, onResetProgress, theme, onChangeTheme, activeProfile, onManageProfiles, onManageActivities, showPremiumToast,
   onSelectAchievements,
@@ -1075,11 +1075,6 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
           <SettingsRow title={t('settingsEx.fastMode.title', 'Hızlı Mod')} subtitle={t('settingsEx.fastMode.subtitle', 'Geçişleri hızlandırır')} isPremiumFeature={true} isPremiumUser={isPremium} onClick={!isPremium ? showPremiumToast : undefined} isThemed={isThemed} themeVariant={themeVariant}>
                         {isPremium ? <ToggleSwitch isEnabled={isFastTransitionEnabled} onToggle={onToggleFastTransition} themeVariant={themeVariant} /> : <LockClosedIcon className="w-7 h-7 text-slate-400"/>}
                     </SettingsRow>
-          {theme === 'deneme' && (
-            <SettingsRow title="Okyanus Müziği" subtitle="Okyanus Keşfi temasından arka plan müziği çal" isThemed={isThemed} themeVariant={themeVariant}>
-              <ToggleSwitch isEnabled={isUnderwaterMusicEnabled} onToggle={onToggleUnderwaterMusic} themeVariant={themeVariant} />
-            </SettingsRow>
-          )}
                 </div>
             </div>
              <div>

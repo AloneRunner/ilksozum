@@ -4,7 +4,7 @@ import { Capacitor } from '@capacitor/core';
 import { setCurrentLanguage, type Locale } from '../i18n/index.ts';
 import { useLocalStorage } from './useLocalStorage.ts';
 import { purchasePremium, getPaywallOptions, purchasePackageByIdentifier, syncPremiumEntitlement, restorePurchases } from '../services/monetizationService.ts';
-import { FREE_THEMES } from '../themes/themeManager.ts';
+import { FREE_THEMES, THEMES } from '../themes/themeManager.ts';
 
 interface UseSettingsProps {
     showToast: (message: string, type?: 'error' | 'info', duration?: number) => void;
@@ -110,7 +110,7 @@ export const useSettings = ({ showToast, showPremiumToast }: UseSettingsProps) =
 
     // Enforce free theme restrictions for non-premium users
     useEffect(() => {
-        if (!isPremium && theme !== 'simple' && !FREE_THEMES.has(theme)) {
+        if (!THEMES[theme] || (!isPremium && theme !== 'simple' && !FREE_THEMES.has(theme))) {
             setTheme('simple');
         }
     }, [isPremium, theme, setTheme]);
