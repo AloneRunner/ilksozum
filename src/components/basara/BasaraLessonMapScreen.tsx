@@ -6,7 +6,6 @@ import React from 'react';
 import { ActivityStats } from '../../types.ts';
 import { BasaraLesson } from '../../data/basaraLessons.ts';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
-import CheckCircleIcon from '../icons/CheckCircleIcon.tsx';
 import LockClosedIcon from '../icons/LockClosedIcon.tsx';
 
 interface Props {
@@ -33,34 +32,29 @@ const BasaraLessonMapScreen: React.FC<Props> = ({ lessons, keyPrefix, title, act
   const phase2 = lessons.filter((l) => l.phase === 2);
   const doneCount = lessons.filter((l) => completed(l.id)).length;
 
-  const renderLesson = (id: number, title: string, newUnit: string) => {
-    const isDone = completed(id);
-    const isOpen = unlocked(id);
-    const isCurrent = isOpen && !isDone;
-    const badge = newUnit.replace(/\s+/g, '');
-    const badgeSize = badge.length <= 2 ? 'text-2xl' : badge.length <= 3 ? 'text-lg' : 'text-sm';
+  // Ders döşemesi: büyük hece, türüne göre renk (ünlü / hece / görme kelimesi), tamamlandıysa ✓, okuma metni varsa 📖
+  const renderLesson = (l: BasaraLesson) => {
+    const isDone = completed(l.id);
+    const isOpen = unlocked(l.id);
+    const badge = l.tag === 'vowel' ? l.newUnit.toLocaleUpperCase('tr-TR') : l.newUnit.replace(/\s+/g, '');
+    const badgeSize = badge.length <= 2 ? 'text-4xl' : badge.length <= 3 ? 'text-3xl' : 'text-xl';
+    const tur = l.tag === 'vowel' ? { ad: 'ünlü', renk: 'from-amber-300 to-orange-400' }
+      : l.tag === 'sight' ? { ad: 'görme kelimesi', renk: 'from-violet-400 to-fuchsia-500' }
+      : { ad: 'hece', renk: 'from-sky-400 to-blue-500' };
     return (
       <button
-        key={id}
-        onClick={() => isOpen && onSelectLesson(id)}
+        key={l.id}
+        onClick={() => isOpen && onSelectLesson(l.id)}
         disabled={!isOpen}
-        className={`relative flex items-center gap-3 p-3 rounded-2xl shadow-md text-left transition-all active:scale-95
-          ${isDone ? 'bg-green-50 border-2 border-green-200' : isCurrent ? 'bg-white border-2 border-sky-400 ring-2 ring-sky-200' : 'bg-slate-100 border-2 border-slate-200 opacity-60 cursor-not-allowed'}`}
-        aria-label={`${id}. ders: ${title}${isOpen ? '' : ' (kilitli)'}`}
+        className={`relative flex flex-col items-center justify-center aspect-square rounded-3xl shadow-md transition-all active:scale-95
+          ${isDone ? 'bg-gradient-to-br from-emerald-300 to-green-500' : `bg-gradient-to-br ${tur.renk}`} ${isOpen ? '' : 'opacity-40 cursor-not-allowed'}`}
+        aria-label={`${l.id}. ders: ${l.title}${isOpen ? '' : ' (kilitli)'}`}
       >
-        <div className={`w-12 h-12 flex-shrink-0 rounded-xl flex items-center justify-center font-black ${badgeSize}
-          ${isDone ? 'bg-green-200 text-green-800' : isCurrent ? 'bg-sky-500 text-white' : 'bg-slate-300 text-slate-500'}`}>
-          {badge}
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="text-xs font-semibold text-slate-400">{id}. ders</div>
-          <div className={`text-base font-bold truncate ${isDone ? 'text-green-800' : isCurrent ? 'text-sky-800' : 'text-slate-500'}`}>{title}</div>
-        </div>
-        {isDone ? (
-          <CheckCircleIcon className="w-7 h-7 text-green-500 flex-shrink-0" />
-        ) : !isOpen ? (
-          <LockClosedIcon className="w-6 h-6 text-slate-400 flex-shrink-0" />
-        ) : null}
+        <span className="absolute top-1.5 left-2.5 text-[11px] font-black text-white/90">{l.id}</span>
+        {l.story && <span className="absolute top-1 right-2 text-sm" title="Okuma metni var" aria-label="okuma metni var">📖</span>}
+        <span className={`font-black text-white drop-shadow ${badgeSize}`}>{badge}</span>
+        <span className="mt-0.5 text-[10px] font-bold text-white/90">{isDone ? '✓ tamam' : tur.ad}</span>
+        {!isOpen && <LockClosedIcon className="absolute bottom-2 right-2 w-4 h-4 text-white" />}
       </button>
     );
   };
@@ -80,18 +74,26 @@ const BasaraLessonMapScreen: React.FC<Props> = ({ lessons, keyPrefix, title, act
       </p>
 
       <div className="flex-grow overflow-y-auto pr-1 pb-4">
-        <h2 className="text-sm font-bold text-sky-600 uppercase tracking-wide mb-2">
-          {phase1.some((l) => l.tag === 'vowel') ? '1. Aşama — Ünlüler, heceler ve görme kelimeleri' : '1. Aşama — a-serisi heceler'}
+        {phase1.some((l) => l.tag === 'vowel') && (
+          <>
+            <h2 className="text-sm font-black text-orange-600 mb-2">🅰️ Ünlüler</h2>
+            <div className="grid grid-cols-4 sm:grid-cols-6 landscape:grid-cols-8 gap-2.5 mb-5">
+              {phase1.filter((l) => l.tag === 'vowel').map(renderLesson)}
+            </div>
+          </>
+        )}
+        <h2 className="text-sm font-black text-sky-700 mb-2">
+          {phase1.some((l) => l.tag === 'vowel') ? '📘 Heceler ve görme kelimeleri' : '📘 a-serisi heceler'}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
-          {phase1.map((l) => renderLesson(l.id, l.title, l.newUnit))}
+        <div className="grid grid-cols-4 sm:grid-cols-6 landscape:grid-cols-8 gap-2.5 mb-6">
+          {phase1.filter((l) => l.tag !== 'vowel').map(renderLesson)}
         </div>
 
         {phase2.length > 0 && (
           <>
             <h2 className="text-sm font-bold text-sky-600 uppercase tracking-wide mb-2">2. Aşama — Tüm ünlülerle (ileri okuma)</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-              {phase2.map((l) => renderLesson(l.id, l.title, l.newUnit))}
+            <div className="grid grid-cols-4 sm:grid-cols-6 landscape:grid-cols-8 gap-2.5">
+              {phase2.map(renderLesson)}
             </div>
           </>
         )}

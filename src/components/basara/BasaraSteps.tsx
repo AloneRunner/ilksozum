@@ -229,7 +229,7 @@ export const StoryStage: React.FC<StageProps> = ({ lesson, onDone, isHighlightEn
   if (!lesson.story) return null;
   return (
     <div className="flex flex-col items-center justify-center flex-grow w-full">
-      <h2 className="text-2xl font-bold text-sky-800 mb-1">Küçük Hikaye</h2>
+      <h2 className="text-2xl font-bold text-sky-800 mb-1">Okuma metni</h2>
       <div className="flex items-center gap-1 text-sky-500 text-sm mb-5">
         <SpeakerIcon className="w-4 h-4" /> Dokun ve dinle
       </div>

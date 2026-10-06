@@ -79,14 +79,14 @@ export const BASARA_LESSONS: BasaraLesson[] = [
   syl(19, 'ta', ['ata', 'ota', 'tara', 'tabak', 'tasa', 'taça'], ['isa saça bak tara', 'ata matara al', 'baba atama bak', 'ata taka al.', 'sara matara ara.', 'ata maça gel.', 'baba taka bak.', 'isa ata matara ver.', 'ata kara matara al.', 'sara saça bak tara.', 'ata masa al.', 'isa matara arama.']),
   syl(20, 'na', ['ana', 'ona', 'bana', 'sana', 'nara'], ['baba bana kabak al', 'ana ona mama ver', 'isa ona araba al', 'ana bana kasa al.', 'isa sana araba ver.', 'ata bana taka al.', 'ana ona masa al.', 'baba ona kasa ver.', 'isa sana makara al.', 'ana maça gel.', 'ata bana araba ver.', 'sara ona mama ver.', 'ana bana matara al.']),
   syl(21, 'ya', ['yaka', 'maya', 'kaya', 'yaya', 'yara', 'yasa'], ['kaya aya bak', 'isa arabaya gel', 'oya oraya saya saya gel', 'kaya yaya gel.', 'oya yakaya bak.', 'kaya bana yaka al.', 'baba kaya bak.', 'oya yaya gel.', 'ana oya maça gel.', 'kaya yara bak.', 'ata oraya yaya gel.', 'oya bana matara al.', 'kaya arabaya bak.']),
-  syl(22, 'ha', ['oha', 'aha', 'saha', 'hata', 'boha', 'taha'], ['oya sahaya gel', 'taha kara kabak al', 'kaya gel saraya bak', 'taha sahaya gel.', 'isa hata arama.', 'baba taha arabaya bak.', 'oya sahaya masa al.', 'taha bana yaka al.', 'kaya sahaya yaya gel.', 'ata taha maça gel.', 'taha saraya bak.', 'oya sahaya gel maça bak.', 'kaya taha araba al.']),
-  syl(23, 'pa', ['para', 'paça', 'kapa', 'sapana', 'sopa'], ['baba bana para ver', 'taha takaya gel çapa ver', 'ana yapana mama ver', 'kaya para ver.', 'taha çapa al.', 'oya bana paça al.', 'taha araba kapa.', 'ata sahaya çapa al.', 'kaya para ara.', 'sara paça bak.', 'baba bana para al.', 'taha sapa bak.', 'oya yapana para ver.']),
+  syl(22, 'ha', ['oha', 'aha', 'saha', 'hata', 'taha'], ['oya sahaya gel', 'taha kara kabak al', 'kaya gel saraya bak', 'taha sahaya gel.', 'isa hata arama.', 'baba taha arabaya bak.', 'oya sahaya masa al.', 'taha bana yaka al.', 'kaya sahaya yaya gel.', 'ata taha maça gel.', 'taha saraya bak.', 'oya sahaya gel maça bak.', 'kaya taha araba al.']),
+  syl(23, 'pa', ['para', 'paça', 'kapa', 'sapana'], ['baba bana para ver', 'taha takaya gel çapa ver', 'ana yapana mama ver', 'kaya para ver.', 'taha çapa al.', 'oya bana paça al.', 'taha araba kapa.', 'ata sahaya çapa al.', 'kaya para ara.', 'sara paça bak.', 'baba bana para al.', 'taha sapa bak.', 'oya yapana para ver.']),
   syl(24, 'şa', ['şaka', 'taşa', 'paşa', 'şaha'], ['isa tahaya maşa ver', 'kaya şaka yapama', 'yaşa ata yaşa', 'paşa bana gel', 'paşa şaka yapama.', 'oya maşa al.', 'taha paşa gel.', 'paşa arabaya bak.', 'kaya bana maşa al.', 'ata paşa sahaya gel.', 'taha şaka yapama gel.', 'isa paşa maşa ver.', 'baba oya şaka yapama.', 'kaya paşa sahaya bak.']),
   syl(25, 'za', ['baza', 'kaza', 'saza', 'zara', 'zama'], ['taha pazara gel kabak al', 'isa saza bak', 'yaza gel bahara gel', 'baba baza al.', 'taha pazara gel.', 'isa kazaya bak.', 'oya saza bak.', 'ata yaza maça gel.', 'kaya pazara kabak al.', 'sara kazaya bakma.', 'paşa baza arama.', 'taha saza makara al.', 'isa pazara yaya gel.']),
   syl(26, 'la', ['ala', 'Ela', 'hala', 'lapa', 'bala', 'kala'], ['İsa oraya salata al', 'taha olaya bak', 'Baba halama araba al', 'sara salata al.', 'baba halana araba al.', 'kaya balaya gel.', 'paşa palaya bak.', 'taha halama maşa al.', 'isa pazara gel salata al.', 'ata halana bak.', 'oya salata arama.', 'sara maşala bak.']),
   syl(27, 'va', ['vaka', 'vana', 'tava', 'hava'], ['baba bak baklava', 'isa ovaya gel hava al', 'oya tavaya kabak ver', 'taha vana gel ovaya bak', 'baba baklava al.', 'ata vanaya bak.', 'sara havaya bak.', 'kaya ovaya gel hava al.', 'paşa bana baklava ver.', 'isa tavaya salata yapama.', 'taha vanaya bak hava al.', 'baba ovaya araba al.', 'oya halana baklava ver.']),
   syl(28, 'dı', ['tadı', 'aldı', 'taradı', 'kadı', 'bakmadı'], ['Baba sana araba aldı', 'isa pazara kaçamadı', 'saka ona uçamadı', 'O bana bakamadı', 'baba araba aldı.', 'isa aradı bakamadı.', 'kaya pazara varamadı.', 'sara kanadı aradı.', 'ata halana baklava aldı.', 'oya tavaya bakamadı.', 'taha ovaya varamadı.', 'paşa arabaya bakamadı.', 'isa bana salata aldı.', 'kaya saza bakamadı.']),
-  syl(29, 'ca', ['cama', 'cadı', 'karaca', 'saca', 'baca', 'boca'], ['cadı o bacaya bak', 'baba canana bak cama bak', 'isa bak o cadı', 'cadı karacaya bakmadı', 'isa cadı aradı.', 'baba bacaya bak.', 'ata karacaya bakamadı.', 'oya yamaca varamadı.', 'kaya amaca bakamadı.', 'sara cadıya bakamadı.', 'taha bacaya bak.', 'paşa karaca aldı.', 'isa cadı aramadı.', 'baba karacaya araba aldı.']),
+  syl(29, 'ca', ['cama', 'cadı', 'karaca', 'saca', 'baca', 'acaba'], ['cadı o bacaya bak', 'baba canana bak cama bak', 'isa bak o cadı', 'cadı karacaya bakmadı', 'isa cadı aradı.', 'baba bacaya bak.', 'ata karacaya bakamadı.', 'oya yamaca varamadı.', 'kaya amaca bakamadı.', 'sara cadıya bakamadı.', 'taha bacaya bak.', 'paşa karaca aldı.', 'isa cadı aramadı.', 'baba karacaya araba aldı.']),
   syl(30, 'fa', ['kafa', 'fala', 'ufala', 'faka', 'rafa'], ['o tarafa bakma', 'isa afacana bak yakala', 'ufaladı bana ufaladı', 'baba yakala falakaya al', 'baba kafaya bak.', 'isa lafa bakamadı.', 'sara kafa yaramadı.', 'oya kafana bak.', 'ata faya bakamadı.', 'kaya lafa bak.', 'taha kafana takamadı.', 'paşa o lafa bakamadı.', 'isa kafaya bakamadı.', 'baba faya varamadı.']),
   syl(31, 'ga', ['gaga', 'galata', 'gara', 'gala', 'gata', 'gaza'], ['baba galataya gel', 'o saka kafa gagaladı', 'takaya bak galataya bak', 'isa kabak gagaladı', 'oya kara karacaya bak', 'baba gagaya bak.', 'isa agaya baklava aldı.', 'sara bagaya bakamadı.', 'kaya gaga aradı.', 'ata o gaga kanadı.', 'oya agaya salata ver.', 'taha gagaya bakamadı.', 'paşa agaya araba aldı.', 'isa bagaya varamadı.', 'kaya agaya bak.']),
   syl(32, 'ja', ['baraja', 'masaja', 'garaja', 'pasaja'], ['ajana bak ajana', 'isa masaja gel masaja', 'oya baraja bakamadı', 'pasaja gel baklava al', 'masaja gel rahata gel', 'isa garaja araba aldı.', 'baba bagaja baklava ver.', 'ata baraja bakamadı.', 'oya garaja varamadı.', 'sara bagaja salata aldı.', 'kaya baraja bak.', 'taha garaja araba aldı.', 'paşa bagaja kabak al.', 'isa baraja varamadı.', 'baba garaja bakamadı.']),
@@ -122,6 +122,33 @@ export const BASARA_LESSONS: BasaraLesson[] = [
     'Kağan aşağıya doğru koştu.'
   ]),
 ];
+
+/**
+ * OKUMA METİNLERİ (uzman isteği, 2026-10-06): kısa, bağlantılı okuma parçaları.
+ * Her metin yalnızca o derse kadar öğrenilen birimlerle yazıldı; denetim: node tools/basara/kontrol.mjs
+ * Dersin sonunda "Okuma metni" sahnesinde gösterilir.
+ */
+const BASARA_OKUMA: Record<number, string[]> = {
+  16: ["Baba gel!", "İsa, kasaba bak.", "Sara kabak ara.", "Baba, Sara kara kabak ver.", "İsa kabak bak."],
+  17: ["İsa kasaba gel.", "Baba kabak al.", "Sara makara al.", "İsa kara araba al.", "Baba, bak! Araba kara."],
+  18: ["Sara maça gel.", "İsa saça bak.", "Baba saça makara al.", "İsa, Sara, maça gel!"],
+  19: ["Ata maça gel.", "Ata matara al.", "İsa tabak al.", "Sara tabak ver.", "Ata, bak! Tabak kara."],
+  20: ["Ana gel, bana bak.", "Ata ona tabak ver.", "Ana bana mama ver.", "İsa sana matara al.", "Ana, Sara, masa bak!"],
+  21: ["Kaya arabaya bak.", "Oya masaya gel.", "Ana Oya'ya mama ver.", "Kaya, Oya, masaya gel!"],
+  22: ["Taha sahaya gel.", "Kaya Taha'ya bak.", "Taha, Kaya, sahaya araba al.", "Oya, hata arama!"],
+  23: ["Baba Taha'ya para ver.", "Taha paça al.", "Oya arabaya bak.", "Oya, araba kapa!"],
+  24: ["Paşa, bana gel!", "Oya maşa al.", "Taha, Paşa'ya bak.", "Yaşa Paşa, yaşa!"],
+  25: ["Taha pazara gel.", "Ana kabak al.", "Oya kazaya bakma.", "Taha, Oya, yaza gel!"],
+  26: ["Hala salata al.", "Sara halaya bak.", "Hala Sara'ya salata ver.", "Sara, Ela, salata al!"],
+  27: ["Baba baklava al.", "Ana tava al.", "Taha ovaya gel.", "Taha, ovaya bak! Hava kara."],
+  28: ["Baba pazara gel.", "Baba salata aldı.", "Ana baklava aldı.", "İsa: Baba, bana baklava ver!", "Baba İsa'ya baklava aldı."],
+  29: ["İsa cadı aradı.", "Cadı bacaya bak.", "Karaca ovaya kaçamadı.", "İsa, cadı o! Bak!"],
+  30: ["Baba kafaya bak.", "İsa, o tarafa bakma.", "Sara lafa bakamadı.", "Oya, o lafa bakma!"],
+  31: ["Kaya gaga aradı.", "Baba gagaya bak.", "Ata, Kaya'ya gaga ver.", "Gaga kara, bak!"],
+  32: ["Baba garaja gel.", "Baba garaja araba aldı.", "Taha bagaja baklava aldı.", "Taha, baraja bak!"],
+  33: ["Oya yatağa gel.", "Oya uzağa bakamadı.", "Ana tabağa salata ver.", "Kaya, sağa bak!", "Baba ağaya baklava aldı."],
+};
+for (const l of BASARA_LESSONS) if (l.phase === 1 && BASARA_OKUMA[l.id]) l.story = BASARA_OKUMA[l.id];
 
 export const BASARA_TOTAL_LESSONS = BASARA_LESSONS.length; // 54 (33 çekirdek + 21 alternatif)
 export const BASARA_CORE_LESSONS = BASARA_LESSONS.filter((l) => l.phase === 1).length; // 33
