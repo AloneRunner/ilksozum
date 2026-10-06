@@ -59,10 +59,14 @@ if (mi >= 0) metinler = [arg[mi + 1]];
 else if (arg[0] && !arg[0].startsWith('--')) metinler = JSON.parse(fs.readFileSync(path.resolve(arg[0]), 'utf8'));
 if (!metinler.length) { console.log('Paket dosyası ya da --metin "..." verin.'); process.exit(1); }
 
+// Paket satırı "metin" ya da ["metin", "okunuş"] olabilir (ör. "pöf / öğğ" → "pöf, öğğ"; anahtar metin kalır)
+const okunus = new Map();
+metinler = metinler.map((m) => { if (Array.isArray(m)) { okunus.set(anahtar(m[0]), m[1]); return m[0]; } return m; });
 const liste = listeOku();
 const gorulen = new Set();
 const eksik = metinler.filter((m) => { const k = anahtar(m); if (!k || (liste[k] && !yeniden) || gorulen.has(k)) return false; gorulen.add(k); return true; });
-const karakter = eksik.reduce((t, m) => t + m.trim().length, 0);
+const oku = (m) => (okunus.get(anahtar(m)) ?? m).trim();
+const karakter = eksik.reduce((t, m) => t + oku(m).length, 0);
 console.log(`${metinler.length} metin · ${metinler.length - eksik.length} zaten var · ${eksik.length} üretilecek · ~${karakter} kredi`);
 
 const KEY = process.env.ELEVENLABS_API_KEY;
@@ -88,11 +92,11 @@ try {
     const ad = dosyaAdi(k);
     let c;
     try {
-      c = await api(`/v1/text-to-speech/${sesId}/with-timestamps?output_format=${BICIM}`, { text: m.trim(), ...AYAR });
+      c = await api(`/v1/text-to-speech/${sesId}/with-timestamps?output_format=${BICIM}`, { text: oku(m), ...AYAR });
     } catch (e) {
       // harf zamanları alınamazsa yalnız ses (ağız hareketi bu kayıtta olmaz)
       console.log('  zaman damgası yok:', e.message.slice(0, 80));
-      const r = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${sesId}?output_format=${BICIM}`, { method: 'POST', headers: { 'xi-api-key': KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ text: m.trim(), ...AYAR }) });
+      const r = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${sesId}?output_format=${BICIM}`, { method: 'POST', headers: { 'xi-api-key': KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ text: oku(m), ...AYAR }) });
       if (!r.ok) throw new Error(`TTS → ${r.status} ${(await r.text()).slice(0, 200)}`);
       c = { audio_base64: Buffer.from(await r.arrayBuffer()).toString('base64'), alignment: null };
     }
@@ -105,7 +109,7 @@ try {
       const kaydir = (t) => Math.max(0, Math.min(son - bas, t - bas));
       const h = c.alignment;
       fs.writeFileSync(path.join(HIZA_KLASOR, `${ad}.json`), JSON.stringify({
-        metin: m.trim(), model: AYAR.model_id, characters: h.characters,
+        metin: oku(m), model: AYAR.model_id, characters: h.characters,
         character_start_times_seconds: h.character_start_times_seconds.map(kaydir),
         character_end_times_seconds: h.character_end_times_seconds.map(kaydir),
       }));
