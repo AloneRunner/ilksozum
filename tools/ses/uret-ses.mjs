@@ -71,8 +71,10 @@ console.log(`${metinler.length} metin · ${metinler.length - eksik.length} zaten
 
 const KEY = process.env.ELEVENLABS_API_KEY;
 if (!KEY) { console.log('ELEVENLABS_API_KEY ortam değişkeni yok.'); process.exit(1); }
-const api = async (yol, govde, yontem = govde ? 'POST' : 'GET') => {
+const bekle = (ms) => new Promise((r) => setTimeout(r, ms));
+const api = async (yol, govde, yontem = govde ? 'POST' : 'GET', deneme = 0) => {
   const r = await fetch(`https://api.elevenlabs.io${yol}`, { method: yontem, headers: { 'xi-api-key': KEY, 'Content-Type': 'application/json' }, body: govde ? JSON.stringify(govde) : undefined });
+  if (r.status === 429 && deneme < 6) { await bekle(2000 * (deneme + 1)); return api(yol, govde, yontem, deneme + 1); }
   if (!r.ok) throw new Error(`${yontem} ${yol.split('?')[0]} → ${r.status} ${(await r.text()).slice(0, 200)}`);
   return r.json();
 };
@@ -84,6 +86,10 @@ if (!evet) { console.log('Kuru çalışma. Üretmek için --evet ekleyin (Kaan o
 
 fs.mkdirSync(SES_KLASOR, { recursive: true });
 fs.mkdirSync(HIZA_KLASOR, { recursive: true });
+// Önceki çalışma yarıda kesildiyse hesapta kalan geçici sesi temizle (ses yeri dolmasın)
+for (const v of (await api('/v1/voices')).voices || []) {
+  if (v.name?.startsWith('ilksozum-')) await api(`/v1/voices/${v.voice_id}`, null, 'DELETE').catch(() => {});
+}
 const { voice_id: sesId } = await api(`/v1/voices/add/${SES.sahip}/${SES.kutuphaneId}`, { new_name: `ilksozum-${SES.ad}` });
 let n = 0;
 try {
@@ -92,21 +98,15 @@ try {
     const k = anahtar(m);
     const ad = dosyaAdi(k);
     for (let deneme = 1; ; deneme++) {
-    let c;
-    try {
-      c = await api(`/v1/text-to-speech/${sesId}/with-timestamps?output_format=${BICIM}`, { text: oku(m), ...AYAR });
-    } catch (e) {
-      // harf zamanları alınamazsa yalnız ses (ağız hareketi bu kayıtta olmaz)
-      console.log('  zaman damgası yok:', e.message.slice(0, 80));
-      const r = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${sesId}?output_format=${BICIM}`, { method: 'POST', headers: { 'xi-api-key': KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ text: oku(m), ...AYAR }) });
-      if (!r.ok) throw new Error(`TTS → ${r.status} ${(await r.text()).slice(0, 200)}`);
-      c = { audio_base64: Buffer.from(await r.arrayBuffer()).toString('base64'), alignment: null };
-    }
+    const c = await api(`/v1/text-to-speech/${sesId}/with-timestamps?output_format=${BICIM}`, { text: oku(m), ...AYAR });
+    if (!c.audio_base64) throw new Error('boş ses döndü');
     const mp3 = path.join(SES_KLASOR, `${ad}.mp3`);
     fs.writeFileSync(mp3, Buffer.from(c.audio_base64, 'base64'));
     fs.mkdirSync(HAM_KLASOR, { recursive: true });
     fs.copyFileSync(mp3, path.join(HAM_KLASOR, `${ad}.mp3`)); // ham hali (temizlik ayarı değişirse yeniden işlenir)
-    const [bas, son] = temizle(mp3); // baştaki/sondaki hışırtı ve tıkları at
+    let bas, son;
+    try { [bas, son] = temizle(mp3); } // baştaki/sondaki hışırtı ve tıkları at
+    catch { if (deneme < 3) { console.log('  bozuk dosya, yeniden deneniyor'); continue; } throw new Error('dosya 3 kez bozuk geldi'); }
     const { sure, tepe } = olc(mp3);
     if ((tepe < 0.1 || sure < 0.12) && deneme < 3) { // model bazen ses yerine tık üretiyor ("e" 0,16 sn)
       console.log(`  boş çıktı (${sure.toFixed(2)} sn, tepe ${tepe.toFixed(2)}), yeniden deneniyor`);
@@ -128,7 +128,20 @@ try {
     console.log(`✓ ${++n}/${eksik.length} ${m.trim()}`);
   };
   const sira = [...eksik];
-  await Promise.all(Array.from({ length: Math.min(3, sira.length) }, async () => { while (sira.length) await uret(sira.shift()); }));
+  const atlanan = [];
+  let kotaBitti = false;
+  await Promise.all(Array.from({ length: Math.min(3, sira.length) }, async () => {
+    while (sira.length && !kotaBitti) {
+      const m = sira.shift();
+      try { await uret(m); }
+      catch (e) {
+        if (/quota_exceeded|quota of/.test(e.message)) { kotaBitti = true; console.log('API anahtarının kotası bitti; kalanlar sonraya.'); }
+        else { atlanan.push(m); console.log(`✗ ${m.trim()}: ${e.message.slice(0, 120)}`); }
+      }
+    }
+  }));
+  if (atlanan.length) console.log(`Atlanan ${atlanan.length} metin (tekrar çalıştırınca denenir): ${atlanan.join(' | ')}`);
+  if (kotaBitti) console.log(`Kalan ${sira.length + eksik.length - n - atlanan.length} metin kotası artınca üretilir.`);
 } finally {
   await api(`/v1/voices/${sesId}`, null, 'DELETE').catch((e) => console.log('Ses hesaptan çıkarılamadı:', e.message));
   console.log(`Bitti: ${n} kayıt. Kalan kredi: ${await kalan()}`);
