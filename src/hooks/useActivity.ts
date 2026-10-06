@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { programOturumBitti } from '../program/motor.ts';
 import { ActivityType, ActivityStats, AttemptRecord, ActivityCategory, ParentOverride } from '../types.ts';
 import { ALL_SUB_ACHIEVEMENTS, LETTER_GROUPS, OBJECT_CATEGORIES, LETTER_SOUND_ACTIVITIES } from '../constants.ts';
 import { getActivityMetadata } from '../constants/activityMetadata';
@@ -271,6 +272,19 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
         return true;
     }, [showToast, startNextRandomActivity, handleGoToMenu, activityStats, activeProfileId, isPremium]);
 
+    // Program Modu 2: hazır kuyruğu başlat (oturum ya da yerleştirme turu; program/motor.ts kurar)
+    const handleStartProgramQueue = useCallback(async (queue: (ActivityType | string)[]) => {
+        if (queue.length === 0) { showToast('Program modu için uygun içerik bulunamadı.', 'info'); return false; }
+        setRandomModeQueue(queue);
+        setCurrentRandomActivityIndex(0);
+        setRandomModeAttemptCount({});
+        setIsRandomMode(true);
+        setIsProgramMode(true);
+        const started = await startNextRandomActivity(queue, 0);
+        if (!started) { showToast('Program modu için uygun içerik bulunamadı.', 'info'); return false; }
+        return true;
+    }, [showToast, startNextRandomActivity]);
+
     // Reinforcement-only starter: prefer weak items from focus unit, fallback to previous weak candidates
     const handleStartReinforcementMode = useCallback(async () => {
         // Build a session to learn the focus unit
@@ -530,6 +544,7 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
                      const hasNext = await startNextRandomActivity(randomModeQueue, currentRandomActivityIndex + 1);
                      if (!hasNext) {
                         if (isProgramMode) {
+                            programOturumBitti(activeProfileId);
                             showToast(t('programMode.completed', 'Program mode finished! Great job.'), 'info');
                             resetActivityState();
                             handleGoToProgramIntro?.();
@@ -571,6 +586,7 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
         setSelectedFiveWOneHKey,
         isRandomMode,
         isProgramMode,
+        handleStartProgramQueue,
         resetActivityState,
         handleAdvance,
         handleStartRandomMode,

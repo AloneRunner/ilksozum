@@ -352,7 +352,7 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
             >
               <span className="text-4xl drop-shadow" aria-hidden="true">🎓</span>
               <span className="text-base font-black leading-tight drop-shadow-sm">{t('programMode.menuTitleShort', 'Program Modu')}</span>
-              <span className="text-[11px] font-semibold text-white/90">📚 {t('programMode.unitsCount', '{count} Ünite').replace('{count}', '10')} · {t('programMode.daily', 'günlük plan')}</span>
+              <span className="text-[11px] font-semibold text-white/90">📚 7 beceri · günlük plan</span>
             </button>
             <button
               onClick={onStartRandomMode}

@@ -52,6 +52,9 @@ const PrintSelectionDetailScreen = lazy(() => import('../PrintSelectionDetailScr
 const WorksheetCenterScreen = lazy(() => import('../worksheets/WorksheetCenterScreen.tsx'));
 const RelativeComparisonActivity = lazy(() => (import('../RelativeComparisonActivity.tsx') as any));
 const ProgramModeIntroScreen = lazy(() => import('../ProgramModeIntroScreen.tsx'));
+// Program Modu 2 (beceri kulvarları, 2026-10). false yapılırsa eski üniteli Program Modu açılır.
+const YENI_PROGRAM = true;
+const ProgramEkrani = lazy(() => import('../../program/ProgramEkrani.tsx'));
 const FiveWOneHMenuScreen = lazy(() => import('../FiveWOneHMenuScreen.tsx'));
 const SkillMenuScreen = lazy(() => import('../SkillMenuScreen.tsx'));
 const ShapeMatchingGameScreen = lazy(() => import('../ShapeMatchingGameScreen.tsx'));
@@ -116,7 +119,12 @@ export const AppRouter = () => {
     // Beceri menüsü: hangi beceri açık, etkinlik oradan mı başladı (geri tuşu oraya dönsün)
     const [aktifBeceri, setAktifBeceri] = useState<BeceriId | null>(null);
     const [beceriDonus, setBeceriDonus] = useState(false);
-    const geriDon = (varsayilan: ScreenState) => setScreenState(beceriDonus && aktifBeceri ? ScreenState.SkillMenu : varsayilan);
+    // Ödül oyunu (Program Modu oturum sonu) bitince Program Modu'na dönülür
+    const [odulDonus, setOdulDonus] = useState(false);
+    const geriDon = (varsayilan: ScreenState) => {
+        if (odulDonus) { setOdulDonus(false); setScreenState(ScreenState.ProgramIntro); return; }
+        setScreenState(beceriDonus && aktifBeceri ? ScreenState.SkillMenu : varsayilan);
+    };
     const MENU_EKRANLARI = [ScreenState.MainMenu, ScreenState.ConceptActivitiesMenu];
 
     // Menüden bir etkinlik başlatır (kavram/akıl/ince motor akışı ortak)
@@ -725,7 +733,25 @@ export const AppRouter = () => {
             await etkinlikBaslat(act, ScreenState.ConceptActivitiesMenu);
         }} onBack={handleGoToMenu} activeCategory={ctx.navigation.activeConceptTab} onSelectCategory={ctx.navigation.setActiveConceptTab} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} enabledActivities={ctx.profile.enabledActivitiesSet} />;
 
-        case ScreenState.ProgramIntro: return <ProgramModeIntroScreen
+        case ScreenState.ProgramIntro: if (YENI_PROGRAM) return <ProgramEkrani
+            profilId={ctx.profile.activeProfile?.id}
+            stats={ctx.profile.activityStats}
+            onBack={() => setScreenState(ScreenState.MainMenu)}
+            onStart={async (kuyruk) => {
+                setBeceriDonus(false);
+                setScreenState(ScreenState.Loading);
+                const started = await ctx.activity.handleStartProgramQueue(kuyruk);
+                setScreenState(started ? ScreenState.Playing : ScreenState.ProgramIntro);
+            }}
+            onOdul={(oyun) => {
+                const hedef = MINI_GAME_SCREENS[oyun];
+                if (hedef === undefined) return;
+                setBeceriDonus(false);
+                setOdulDonus(true);
+                setScreenState(hedef);
+            }}
+        />;
+        return <ProgramModeIntroScreen
             onBack={() => setScreenState(ScreenState.MainMenu)}
             onStartProgramMode={async () => {
                 setBeceriDonus(false);

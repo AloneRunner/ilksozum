@@ -24,7 +24,7 @@ const TemaliAnaMenu: React.FC<Props> = ({ tas, kartlar, onKart, onProgram, onRas
 
     <div className="w-full grid grid-cols-2 gap-4 mb-5">
       {[
-        { on: onProgram, cls: tas.programDugme, emoji: '🎓', ad: 'Program Modu', alt: '10 ünite · günlük plan' },
+        { on: onProgram, cls: tas.programDugme, emoji: '🎓', ad: 'Program Modu', alt: '7 beceri · günlük plan' },
         { on: onRastgele, cls: tas.rastgeleDugme, emoji: '🎲', ad: 'Rastgele Oyna', alt: 'Karışık etkinlikler' },
       ].map((d) => (
         <button key={d.ad} onClick={d.on} className={`flex flex-col items-center justify-center gap-1 p-4 transition active:scale-95 ${d.cls}`}>
