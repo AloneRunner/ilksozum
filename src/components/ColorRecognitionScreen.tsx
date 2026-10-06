@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { speak } from '../services/speechService.ts';
+import { nesneUrl } from '../services/nesneGorsel.ts';
 import { COLOR_OPTIONS, ColorRecognitionRound } from '../services/database/activities/reasoning/colorRecognitionData.ts';
 
 interface ColorRecognitionScreenProps {
@@ -93,7 +94,7 @@ const ColorRecognitionScreen: React.FC<ColorRecognitionScreenProps> = ({
           style={isCorrect ? { borderColor: correctColorObj?.hex } : {}}
         >
           <img
-            src={`/images/${roundData.imageId}.png`}
+            src={roundData.imageUrl || nesneUrl(`/images/${roundData.imageId}.png`)}
             alt={roundData.word}
             className="w-full h-full object-contain p-3"
           />

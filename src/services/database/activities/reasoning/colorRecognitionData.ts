@@ -4,6 +4,7 @@ export interface ColorRecognitionRound {
   id: number;
   activityType: ActivityType.ColorRecognition;
   imageId: number;
+  imageUrl?: string;     // yeni veride doğrudan resim adresi (imageId yerine)
   word: string;         // nesnenin adı (TR)
   correctColor: string; // renk key'i
   speech?: { tr: { question: string; correct: string; wrong: string } };

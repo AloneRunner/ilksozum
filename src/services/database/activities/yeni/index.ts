@@ -62,6 +62,7 @@ export { havaDurumuDataYeni } from './havaDurumuData';
 export { oddEvenDataYeni } from './tekCiftData';
 export { ilkSonDataYeni } from './ilkSonData';
 export { countMatchDataYeni } from './countMatchData';
+export { colorRecognitionDataYeni } from './renkTanimaData';
 export { sensesDataYeni } from './sensesData';
 export { ownershipDataYeni } from './ownershipData';
 export { ODA_GORSEL, KAP_GORSEL, RUTIN_GORSEL } from './tekilGorseller';
