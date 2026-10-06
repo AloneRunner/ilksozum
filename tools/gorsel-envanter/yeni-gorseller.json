@@ -13525,6 +13525,16 @@
       }
     },
     {
+      "id": 8898,
+      "kaynak": "nesne/898-kulagi-agriyan.jpg",
+      "word": "kulağı ağrıyan çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 898
+      }
+    },
+    {
       "id": 8899,
       "kaynak": "nesne/899-usuyen.jpg",
       "word": "üşüyen çocuk",
@@ -13902,6 +13912,16 @@
       }
     },
     {
+      "id": 8983,
+      "kaynak": "nesne/983-opucuk.jpg",
+      "word": "öpücük atan çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 983
+      }
+    },
+    {
       "id": 8984,
       "kaynak": "nesne/984-sus.jpg",
       "word": "sus işareti yapan çocuk",
@@ -13919,6 +13939,16 @@
       "sahne": true,
       "tags": {
         "nesneEskiId": 985
+      }
+    },
+    {
+      "id": 8986,
+      "kaynak": "nesne/986-alo.jpg",
+      "word": "alo diyen çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 986
       }
     },
     {
@@ -13952,6 +13982,16 @@
       }
     },
     {
+      "id": 8990,
+      "kaynak": "nesne/990-hapsiran.jpg",
+      "word": "hapşıran çocuk",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 990
+      }
+    },
+    {
       "id": 8991,
       "kaynak": "nesne/991-kotu-koku.jpg",
       "word": "kötü koku yapan çocuk",
@@ -13968,6 +14008,16 @@
       "category": "none",
       "tags": {
         "nesneEskiId": 992
+      }
+    },
+    {
+      "id": 8993,
+      "kaynak": "nesne/993-alkislayan-eller.jpg",
+      "word": "alkışlayan eller",
+      "category": "none",
+      "sahne": true,
+      "tags": {
+        "nesneEskiId": 993
       }
     },
     {
@@ -14640,6 +14690,26 @@
       "id": 9066,
       "kaynak": "nesne-yeni/eczane.jpg",
       "word": "eczane",
+      "category": "Mekanlar & Odalar",
+      "sahne": true,
+      "tags": {
+        "color": "yeşil"
+      }
+    },
+    {
+      "id": 9067,
+      "kaynak": "nesne-yeni/firin-dukkan.jpg",
+      "word": "fırın",
+      "category": "Mekanlar & Odalar",
+      "sahne": true,
+      "tags": {
+        "color": "kahverengi"
+      }
+    },
+    {
+      "id": 9068,
+      "kaynak": "nesne-yeni/hayvanat-bahcesi.jpg",
+      "word": "hayvanat bahçesi",
       "category": "Mekanlar & Odalar",
       "sahne": true,
       "tags": {

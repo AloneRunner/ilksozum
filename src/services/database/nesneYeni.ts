@@ -516,6 +516,7 @@ export const NESNE_YENI: Record<number, string> = {
   895: '/images/8895.webp', // başı ağrıyan çocuk
   896: '/images/8896.webp', // boğazı ağrıyan çocuk
   897: '/images/8897.webp', // karnı ağrıyan çocuk
+  898: '/images/8898.webp', // kulağı ağrıyan çocuk
   899: '/images/8899.webp', // üşüyen çocuk
   900: '/images/8900.webp', // terleyen çocuk
   908: '/images/8908.webp', // gergedan
@@ -560,13 +561,17 @@ export const NESNE_YENI: Record<number, string> = {
   980: '/images/8815.webp', // tuvalet kağıdı
   981: '/images/8981.webp', // diş
   982: '/images/8982.webp', // su
+  983: '/images/8983.webp', // öpücük atan çocuk
   984: '/images/8984.webp', // sus işareti yapan çocuk
   985: '/images/8985.webp', // saklambaç oynayan çocuk
+  986: '/images/8986.webp', // alo diyen çocuk
   987: '/images/8987.webp', // uyuyan bebek
   988: '/images/8988.webp', // kahkaha atan çocuk
   989: '/images/8989.webp', // şaşırmış çocuk
+  990: '/images/8990.webp', // hapşıran çocuk
   991: '/images/8991.webp', // kötü koku yapan çocuk
   992: '/images/8992.webp', // testere
+  993: '/images/8993.webp', // alkışlayan eller
   994: '/images/8994.webp', // bağıran maymun
   995: '/images/8995.webp', // patlayan balon
   996: '/images/8996.webp', // gıdıklanan çocuk
