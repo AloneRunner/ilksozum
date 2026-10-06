@@ -136,13 +136,13 @@ const getActivityName = (activityType: ActivityType | string): string => {
 
 // Helper function to translate category names
 const getCategoryName = (category: ActivityCategory): string => {
-    if (category === ActivityCategory.LetterSound) return t('achievements.categories.letterSound', 'Harf ve Sesler');
-    if (category === ActivityCategory.Objects) return t('achievements.categories.objects', 'Nesneleri Tanıyalım');
-    if (category === ActivityCategory.Concept) return t('achievements.categories.concept', 'Kavramları Öğrenelim');
-    if (category === ActivityCategory.Reasoning) return t('achievements.categories.reasoning', 'Akıl Oyunları');
+    if (category === ActivityCategory.LetterSound) return t('achievements.categories.letterSound', 'Harfler ve Okuma');
+    if (category === ActivityCategory.Objects) return t('achievements.categories.objects', 'Kelimeler');
+    if (category === ActivityCategory.Concept) return t('achievements.categories.concept', 'Kavramlar');
+    if (category === ActivityCategory.Reasoning) return t('achievements.categories.reasoning', 'Düşünme ve Hafıza');
     if (category === ActivityCategory.FiveWOneH) return t('achievements.categories.fiveWOneH', '5N1K');
-    if (category === ActivityCategory.FineMotor) return t('achievements.categories.fineMotor', 'İnce Motor');
-    if (category === ActivityCategory.RelativeComparison) return t('achievements.categories.relativeComparison', 'Göreceli Karşılaştırma');
+    if (category === ActivityCategory.FineMotor) return t('achievements.categories.fineMotor', 'El Becerisi');
+    if (category === ActivityCategory.RelativeComparison) return t('achievements.categories.relativeComparison', 'Kavramlar: Kıyasla (Zor)');
     return String(category);
 };
 

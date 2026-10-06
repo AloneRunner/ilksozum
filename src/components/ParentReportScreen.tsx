@@ -11,7 +11,8 @@ import ClipboardListIcon from './icons/ClipboardListIcon.tsx';
 import { getColorClasses } from '../themes/colorManager.ts';
 import { t } from '../i18n/index.ts';
 import { useAppContext } from '../contexts/AppContext.ts';
-import { getUnlockedUnits } from '../services/masteryEngine.ts';
+import { ayarOku, kulvarDurumu } from '../program/motor.ts';
+import { KULVARLAR } from '../program/kulvarlar.ts';
 // getValueFromLocalStorage no longer needed - using unit-based system
 import CosmicBackdrop from './ui/CosmicBackdrop.tsx';
 import PanelStars from './ui/PanelStars.tsx';
@@ -652,36 +653,33 @@ const ParentReportScreen: React.FC<ParentReportScreenProps> = ({ activityStats, 
 
             <div className="relative w-full flex-grow overflow-y-auto pr-2 space-y-4">
                 {isCosmic && <PanelStars count={80} className="rounded-3xl" />}
-                {/* Program Mode Progress - Unit Based System */}
+                {/* Program Modu 2 (2026-10): kulvar bazlı ilerleme (eski "ünite" sistemi kaldırıldı) */}
                 {(() => {
-                    const unlockedUnits = getUnlockedUnits(activityStats, new Set<string>());
-                    const maxUnit = unlockedUnits.size > 0 ? Math.max(...Array.from(unlockedUnits) as number[]) : 1;
-                    const totalUnits = 10;
-                    
-                    const hasStarted = Object.keys(activityStats).length > 0 && Object.values(activityStats).some(s => s.completions > 0);
-                    
-                    let statusText = '';
-                    if (!hasStarted) {
-                        statusText = t('programReport.notStarted', 'Plan henüz başlatılmadı. Program modunu başlatınca burada ilerlemeyi göreceksiniz.');
-                    } else if (maxUnit === totalUnits) {
-                        statusText = t('programReport.completed', 'Tüm üniteleri tamamladınız! Harika bir başarı!');
-                    } else if (maxUnit >= 7) {
-                        statusText = t('programReport.advanced', 'İleri seviyedesiniz! {unit}. ünitede devam ediyorsunuz.').replace('{unit}', String(maxUnit));
-                    } else if (maxUnit >= 4) {
-                        statusText = t('programReport.progressing', 'Güzel ilerliyorsunuz! {unit}. ünitede çalışıyorsunuz.').replace('{unit}', String(maxUnit));
-                    } else {
-                        statusText = t('programReport.beginning', 'Başlangıç aşamasındasınız. {unit}. ünite ile devam edin!').replace('{unit}', String(maxUnit));
-                    }
-                    
+                    const profilId = (() => { try { return JSON.parse(localStorage.getItem('activeProfileId_v1') || 'null'); } catch { return null; } })();
+                    const ayar = ayarOku(profilId);
+                    const acik = KULVARLAR.filter(k => !ayar.kapaliKulvarlar.includes(k.id));
+                    const baslamadi = !Object.values(activityStats).some(s => s.history?.some(h => (h as any).mode === 'program'));
                     return (
                         <Card icon={AcademicCapIcon} title={t('programReport.title', 'Program Modu İlerlemesi')}>
-                            <div className="text-sm sm:text-base space-y-1">
-                                <div className="flex items-center justify-between"><span className="font-semibold">{t('programReport.currentUnit', 'Mevcut Ünite')}</span><span>{maxUnit} / {totalUnits}</span></div>
-                                <div className="flex items-center justify-between"><span className="font-semibold">{t('programReport.unlockedUnits', 'Açılan Üniteler')}</span><span>{unlockedUnits.size}</span></div>
-                                <div className="flex items-center justify-between"><span className="font-semibold">{t('programReport.progress', 'İlerleme')}</span><span>{Math.round((maxUnit / totalUnits) * 100)}%</span></div>
+                            {baslamadi && <div className="text-xs sm:text-sm text-slate-600 mb-2">Program Modu henüz başlatılmadı. Başlayınca her beceri alanının seviyesi burada görünür.</div>}
+                            <div className="space-y-2">
+                                {acik.map(k => {
+                                    const d = kulvarDurumu(activityStats as any, ayar, k.id, profilId);
+                                    const seviyeAdi = d.bitti ? 'Tamamlandı' : k.seviyeler[d.seviye]?.ad;
+                                    const yuzde = Math.round(((d.bitti ? d.toplam : d.seviye) / d.toplam) * 100);
+                                    return (
+                                        <div key={k.id}>
+                                            <div className="flex items-center justify-between text-sm sm:text-base">
+                                                <span className="font-semibold">{k.emoji} {k.ad}</span>
+                                                <span className="text-slate-600 text-xs sm:text-sm">{d.bitti ? '✓ Tamamlandı' : `Seviye ${d.seviye + 1} / ${d.toplam}`}</span>
+                                            </div>
+                                            <div className="h-2 rounded-full bg-slate-200 overflow-hidden mt-1"><div className="h-full rounded-full bg-emerald-400" style={{ width: `${Math.max(4, yuzde)}%` }} /></div>
+                                            {!d.bitti && <div className="text-[11px] text-slate-500 mt-0.5">{seviyeAdi} · {d.ogrenilen}/{d.seviyeEtkinlikSayisi} etkinlik öğrenildi</div>}
+                                        </div>
+                                    );
+                                })}
                             </div>
-                            <div className="pt-2 text-xs sm:text-sm text-slate-600">{statusText}</div>
-                            <div className="pt-1 text-[11px] text-slate-500">{t('programReport.paceHint', 'Günde en fazla 1 ünite ilerleyebilirsiniz. Bu, sağlam öğrenme için önerilen tempodur.')}</div>
+                            {ayar.sonOturum && <div className="pt-2 text-[11px] text-slate-500">Son program oturumu: {ayar.sonOturum.split('-').reverse().join('.')}</div>}
                         </Card>
                     );
                 })()}

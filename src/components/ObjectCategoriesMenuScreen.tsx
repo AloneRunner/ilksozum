@@ -186,7 +186,7 @@ const ObjectCategoriesMenuScreen: React.FC<ObjectCategoriesMenuScreenProps> = ({
           </button>
           <div className="flex-1 flex justify-center">
             <div className="inline-block px-6 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/80 via-teal-400/80 to-cyan-500/80 border border-cyan-300/40 shadow-lg shadow-cyan-400/30 backdrop-blur-sm">
-              <h1 className="text-xl sm:text-2xl landscape:text-lg font-extrabold text-cyan-100 drop-shadow">{titleOverride || t("menu.objects.title", "Nesneleri Tanıyalım")}</h1>
+              <h1 className="text-xl sm:text-2xl landscape:text-lg font-extrabold text-cyan-100 drop-shadow">{titleOverride || t("menu.objects.title", "Kelimeler")}</h1>
             </div>
           </div>
         </div>
@@ -245,7 +245,7 @@ const ObjectCategoriesMenuScreen: React.FC<ObjectCategoriesMenuScreenProps> = ({
             <ArrowLeftIcon className={`h-7 w-7 landscape:h-6 landscape:w-6 ${iconColorClass}`} />
           </button>
           <h1 className={`flex-1 text-center text-xl sm:text-2xl landscape:text-lg font-black ${titleColorClass}`}>
-            {titleOverride || t("menu.objects.title", "Nesneleri Tanıyalım")}
+            {titleOverride || t("menu.objects.title", "Kelimeler")}
           </h1>
         </div>
 
@@ -307,7 +307,7 @@ const ObjectCategoriesMenuScreen: React.FC<ObjectCategoriesMenuScreenProps> = ({
             <ArrowLeftIcon className={`h-7 w-7 landscape:h-6 landscape:w-6 ${iconColorClass}`} />
           </button>
           <h1 className={`flex-1 text-center text-xl sm:text-2xl landscape:text-lg font-black ${titleColorClass}`}>
-            {titleOverride || t("menu.objects.title", "Nesneleri Tanıyalım")}
+            {titleOverride || t("menu.objects.title", "Kelimeler")}
           </h1>
         </div>
 
@@ -411,7 +411,7 @@ const ObjectCategoriesMenuScreen: React.FC<ObjectCategoriesMenuScreenProps> = ({
           <ArrowLeftIcon className={`h-7 w-7 landscape:h-6 landscape:w-6 ${colors.text}`} />
         </button>
         <h1 className={`flex-1 text-center text-xl sm:text-2xl landscape:text-lg font-black ${colors.titleText}`}>
-          {titleOverride || t("menu.objects.title", "Nesneleri Tanıyalım")}
+          {titleOverride || t("menu.objects.title", "Kelimeler")}
         </h1>
       </div>
 

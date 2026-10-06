@@ -86,11 +86,11 @@
       "subtitle": "Uygulamayı daha etkili kullanın"
     },
     "letterSound": {
-      "title": "Harfler ve Sesler",
+      "title": "Harfler ve Okuma",
       "subtitle": "Harfleri ve sesleri öğren, hecele ve oku."
     },
     "objects": {
-      "title": "Nesneleri Öğrenelim",
+      "title": "Kelimeler",
       "subtitle": "Hayvanları, meyveleri ve daha fazlasını öğren."
     },
     "concepts": {
@@ -98,11 +98,11 @@
       "subtitle": "Renkleri, şekilleri ve zıt kavramları öğren."
     },
     "reasoning": {
-      "title": "Akıl Oyunları",
+      "title": "Düşünme ve Hafıza",
       "subtitle": "Hafıza, sudoku ve mantık oyunları oyna."
     },
     "fineMotor": {
-      "title": "İnce Motor",
+      "title": "El Becerisi",
       "subtitle": "Çizgi Takibi, Boyama ve daha fazlası",
       "badge": "Geliştirme Aşamasında",
       "developingNote": "Bu etkinlikler geliştirilmeye devam ediyor",
@@ -145,7 +145,7 @@
   },
   "experimental": {
     "relativeComparison": {
-      "title": "Göreceli Karşılaştırma",
+      "title": "Kıyasla (Zor)",
       "instruction": "Açılan iki kartı karşılaştır ve soruyu cevapla."
     }
   },

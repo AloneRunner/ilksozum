@@ -202,19 +202,19 @@ const ActivityManagementScreen: React.FC<ActivityManagementScreenProps> = ({
   const getCategoryTitle = (cat: ActivityCategory) => {
     switch (cat) {
       case ActivityCategory.LetterSound:
-        return t('achievements.categories.letterSound', 'Harf ve Sesler');
+        return t('achievements.categories.letterSound', 'Harfler ve Okuma');
       case ActivityCategory.Objects:
-        return t('achievements.categories.objects', 'Nesneleri Tanıyalım');
+        return t('achievements.categories.objects', 'Kelimeler');
       case ActivityCategory.Concept:
-        return t('achievements.categories.concept', 'Kavramları Öğrenelim');
+        return t('achievements.categories.concept', 'Kavramlar');
       case ActivityCategory.Reasoning:
-        return t('achievements.categories.reasoning', 'Akıl Oyunları');
+        return t('achievements.categories.reasoning', 'Düşünme ve Hafıza');
       case ActivityCategory.FiveWOneH:
         return t('achievements.categories.fiveWOneH', '5N1K');
       case ActivityCategory.FineMotor:
-        return t('menu.fineMotor.title', 'İnce Motor');
+        return t('menu.fineMotor.title', 'El Becerisi');
       case ActivityCategory.RelativeComparison:
-        return t('experimental.relativeComparison.title', 'Göreceli Karşılaştırma');
+        return t('experimental.relativeComparison.title', 'Kavramlar: Kıyasla (Zor)');
       default:
         return t('tabs.activities', 'Etkinlikler');
     }
@@ -452,7 +452,7 @@ const ActivityManagementScreen: React.FC<ActivityManagementScreenProps> = ({
             >
               {(() => {
                 const resolved = getActivityDisplayName(activity.id, activity.name);
-                const fallbackName = typeof activity.name === 'string' && activity.name.trim().length > 0 ? activity.name : t('experimental.relativeComparison.title', 'Göreceli Karşılaştırma');
+                const fallbackName = typeof activity.name === 'string' && activity.name.trim().length > 0 ? activity.name : t('experimental.relativeComparison.title', 'Kavramlar: Kıyasla (Zor)');
                 const labelToShow = resolved || fallbackName;
                 return <span className={activityLabelClass}>{labelToShow}</span>;
               })()}

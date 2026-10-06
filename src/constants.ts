@@ -206,25 +206,25 @@ export const LETTER_GROUPS = [
 export const ACHIEVEMENTS: Achievement[] = [
   {
     id: ActivityCategory.LetterSound,
-    name: 'Harf ve Sesler',
+    name: 'Harfler ve Okuma',
     icon: BookOpenIcon,
     color: 'sky',
   },
   {
     id: ActivityCategory.Objects,
-    name: 'Nesneleri Tanıyalım',
+    name: 'Kelimeler',
     icon: ObjectsIcon,
     color: 'amber',
   },
   {
     id: ActivityCategory.Concept,
-    name: 'Kavramları Öğrenelim',
+    name: 'Kavramlar',
     icon: LightBulbIcon,
     color: 'teal',
   },
   {
     id: ActivityCategory.Reasoning,
-    name: 'Akıl Oyunları',
+    name: 'Düşünme ve Hafıza',
     icon: BrainIcon,
     color: 'indigo',
   },
@@ -236,13 +236,13 @@ export const ACHIEVEMENTS: Achievement[] = [
   },
   {
     id: ActivityCategory.FineMotor,
-    name: 'İnce Motor',
+    name: 'El Becerisi',
     icon: HandIcon,
     color: 'pink',
   },
   {
     id: ActivityCategory.RelativeComparison,
-    name: 'Göreceli Karşılaştırma',
+    name: 'Kavramlar: Kıyasla (Zor)',
     icon: LightBulbIcon, // Use same icon for now
     color: 'purple',
   },
