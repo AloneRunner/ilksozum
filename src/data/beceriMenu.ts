@@ -10,6 +10,7 @@ interface OgeTemel { emoji: string; baslik: string; alt: string; sadeceTr?: bool
 export type BeceriOge =
   | (OgeTemel & { tur: 'etkinlik'; tip: ActivityType })
   | (OgeTemel & { tur: 'oyun'; oyun: string })
+  | (OgeTemel & { tur: 'harf'; tip: ActivityType }) // önce harf (ya da hece grubu) seçilir
   | (OgeTemel & { tur: 'ekran'; ekran: BeceriEkran });
 
 export interface Beceri {
@@ -29,9 +30,15 @@ export const BECERILER: Beceri[] = [
     id: 'harfler', emoji: '🔤', baslik: 'Harfler ve Okuma', alt: 'Harf, ses, hece ve ilk okuma',
     renk: 'from-sky-400 to-blue-500',
     ogeler: [
-      { tur: 'ekran', ekran: 'harfSes', emoji: '🔠', baslik: 'Harf ve Sesler', alt: 'Harf bul, sesi bul, hecele, hikâye dinle' },
+      // Harf ve Sesler'in etkinlikleri doğrudan burada (ara menü kalktı, 2026-10-06)
       { tur: 'ekran', ekran: 'basara', emoji: '📖', baslik: 'BASARA Yöntemi', alt: 'Önce ünlüler, sonra heceler', sadeceTr: true },
       { tur: 'ekran', ekran: 'basara2', emoji: '📗', baslik: 'BASARA 2 (Klasik)', alt: 'a-serisi heceler ve tüm ünlüler', sadeceTr: true },
+      { tur: 'harf', tip: ActivityType.FindTheLetterInGrid, emoji: '🔠', baslik: 'Harf Tablosu', alt: 'Karışık harflerden isteneni bul' },
+      { tur: 'harf', tip: ActivityType.FindTheLetter, emoji: '🔍', baslik: 'Harf Bulma', alt: 'Kelimedeki harfi bul' },
+      { tur: 'harf', tip: ActivityType.SoundPresence, emoji: '👂', baslik: 'Seste Harf Var mı?', alt: 'Resmin adında o ses var mı?' },
+      { tur: 'harf', tip: ActivityType.FindTheSoundInImage, emoji: '🖼️', baslik: 'Görselde Sesi Bul', alt: 'O sesi içeren resmi seç' },
+      { tur: 'harf', tip: ActivityType.Syllabification, emoji: '👏', baslik: 'Heceleme', alt: 'Kelimeyi hecelerine ayır', sadeceTr: true },
+      { tur: 'harf', tip: ActivityType.EmbeddedStory, emoji: '📚', baslik: 'Hikâye Zamanı', alt: 'Harfle ilgili kısa hikâyeler', sadeceTr: true },
       e(ActivityType.LetterTracing, '✍️', 'Harf Çizgisi', 'Harfin üzerinden parmağınla git'),
       o('letterBubbles', '🫧', 'Harf Baloncukları', 'Söylenen harfi bul'),
       o('syllableTrain', '🚃', 'Hece Treni', 'Heceleri birleştir'),

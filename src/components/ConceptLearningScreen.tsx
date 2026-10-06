@@ -284,7 +284,7 @@ const ConceptLearningScreen: React.FC<ConceptLearningScreenProps> = ({
                             `}
                             aria-label="Evet"
                         >
-                            <img src="/images/yes.gif" alt="Doğru Cevap" className="w-24 h-24 sm:w-32 sm:h-32 sm-landscape:w-20 sm-landscape:h-20" />
+                            <span className="flex flex-col items-center gap-1"><img src="/images/yes.gif" alt="Doğru Cevap" className="w-24 h-24 sm:w-32 sm:h-32 sm-landscape:w-20 sm-landscape:h-20" /><span className="text-xl font-black text-green-700">✓ Evet</span></span>
                         </button>
                         <button
                             onClick={() => handleAnswer('no')}
@@ -299,7 +299,7 @@ const ConceptLearningScreen: React.FC<ConceptLearningScreenProps> = ({
                             `}
                             aria-label="Hayır"
                         >
-                            <img src="/images/no.gif" alt="Yanlış Cevap" className="w-24 h-24 sm:w-32 sm:h-32 sm-landscape:w-20 sm-landscape:h-20" />
+                            <span className="flex flex-col items-center gap-1"><img src="/images/no.gif" alt="Yanlış Cevap" className="w-24 h-24 sm:w-32 sm:h-32 sm-landscape:w-20 sm-landscape:h-20" /><span className="text-xl font-black text-red-700">✗ Hayır</span></span>
                         </button>
                     </div>
                 </div>

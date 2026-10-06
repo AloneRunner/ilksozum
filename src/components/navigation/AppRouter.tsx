@@ -165,6 +165,16 @@ export const AppRouter = () => {
             return;
         }
         if (oge.tur === 'etkinlik') { etkinlikBaslat(oge.tip, ScreenState.SkillMenu); return; }
+        if (oge.tur === 'harf') {
+            if (oge.tip === ActivityType.Syllabification) {
+                ctx.activity.setActivityType(ActivityType.Syllabification);
+                setScreenState(ScreenState.GroupSelection);
+            } else {
+                ctx.activity.setSelectedActivityForLetter(oge.tip);
+                setScreenState(ScreenState.LetterSelection);
+            }
+            return;
+        }
         switch (oge.ekran) {
             case 'harfSes': setScreenState(ScreenState.LetterActivitiesMenu); return;
             case 'basara': setBasaraVariant(1); setBasaraGeri(ScreenState.SkillMenu); setScreenState(ScreenState.BasaraLessonMap); return;
@@ -599,7 +609,7 @@ export const AppRouter = () => {
         }
 
         case ScreenState.LetterSelection: {
-            return <LetterSelectionScreen onSelectLetter={ctx.activity.handleStartActivityWithLetter} onBack={() => setScreenState(ScreenState.LetterActivitiesMenu)} activityType={ctx.activity.selectedActivityForLetter} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} />;
+            return <LetterSelectionScreen onSelectLetter={ctx.activity.handleStartActivityWithLetter} onBack={() => geriDon(ScreenState.LetterActivitiesMenu)} activityType={ctx.activity.selectedActivityForLetter} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} />;
         }
 
         case ScreenState.GroupSelection: {
@@ -620,7 +630,7 @@ export const AppRouter = () => {
                     ctx.toast.showToast(t('letters.noWordsForGroup', 'No words found for this group.'));
                     setScreenState(ScreenState.GroupSelection);
                 }
-            }} onBack={() => setScreenState(ScreenState.LetterActivitiesMenu)} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} />;
+            }} onBack={() => geriDon(ScreenState.LetterActivitiesMenu)} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} />;
         }
 
         case ScreenState.BasaraLessonMap: {

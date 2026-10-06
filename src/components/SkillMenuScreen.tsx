@@ -46,7 +46,7 @@ const SkillMenuScreen: React.FC<SkillMenuScreenProps> = ({ beceri, onBack, onSel
       <div className="flex-1 overflow-y-auto px-3 pt-4 pb-6">
         <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 landscape:grid-cols-4 gap-3">
           {ogeler.map((oge, i) => {
-            const kapali = oge.tur === 'etkinlik' && !enabledActivities.has(String(oge.tip));
+            const kapali = (oge.tur === 'etkinlik' || oge.tur === 'harf') && !enabledActivities.has(String(oge.tip));
             const st = oge.tur === 'etkinlik' ? activityStats[String(oge.tip)] : undefined;
             const yildiz = Math.min(st?.completions || 0, 5);
             return (

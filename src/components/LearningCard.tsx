@@ -8,7 +8,7 @@ import EyeIcon from './icons/EyeIcon.tsx';
 import EyeSlashIcon from './icons/EyeSlashIcon.tsx';
 import BanIcon from './icons/BanIcon.tsx';
 import { useAutoSpeak } from '../hooks/useAutoSpeak.ts';
-import { t, getCurrentLanguage } from '../i18n/index.ts';
+import { getCurrentLanguage } from '../i18n/index.ts';
 
 interface LearningCardProps {
     word: Word;
@@ -116,8 +116,9 @@ const LearningCard: React.FC<LearningCardProps> = ({
             <div className="flex-grow w-full flex flex-col landscape:flex-row items-center justify-center gap-4">
                 {/* Left Side: Title and Image */}
                 <div className="w-full landscape:w-2/5 flex flex-col items-center">
-                    <h1 className="text-base sm:text-lg font-bold text-center text-sky-800 mb-2 drop-shadow-md">
-                        <span className="text-red-500 font-black text-lg sm:text-xl">{`"${upperCaseLetter}"`}</span> {t('letters.findTheLetter.instruction', "'{letter}' sesini bul").replace('{letter}', upperCaseLetter).replace(`"${upperCaseLetter}" `, '')}
+                    <h1 className="text-lg sm:text-xl font-black text-center text-sky-900 mb-3">
+                        Kelimedeki <span className="text-red-500 text-2xl">{upperCaseLetter}</span> harflerini bul
+                        <span className="ml-2 inline-block rounded-full bg-sky-100 px-2 py-0.5 text-sm text-sky-700 align-middle">{foundIndices.length}/{totalCorrectLetters}</span>
                     </h1>
                     <Card
                         imageUrl={word.imageUrl}
@@ -125,7 +126,7 @@ const LearningCard: React.FC<LearningCardProps> = ({
                         isRevealed={isCorrect || isWordLabelVisible}
                         isCorrect={isCorrect}
                         onClick={() => {}}
-                        className={`${wrongIndex !== null ? 'animate-shake' : ''} w-full max-w-[200px] sm:max-w-[240px] landscape:max-w-[200px] h-auto aspect-square`}
+                        className={`${wrongIndex !== null ? 'animate-shake' : ''} w-full max-w-[280px] sm:max-w-[320px] landscape:max-w-[240px] h-auto aspect-square`}
                         aria-label={word.word}
                         isLetterActivity={true}
                     >
@@ -150,7 +151,7 @@ const LearningCard: React.FC<LearningCardProps> = ({
             
                 {/* Right Side: Letter choices */}
                 <div className="w-full mt-2 landscape:w-3/5 landscape:mt-0 max-w-sm">
-                    <div className="flex flex-col items-center justify-center gap-2 p-2 bg-white/60 rounded-xl shadow-inner">
+                    <div className="flex flex-col items-center justify-center gap-2 p-3 bg-white/70 rounded-2xl shadow-inner">
                         {word.word.split(' ').map((wordPart, wordIndex) => {
                             const precedingLetters = word.word.split(' ').slice(0, wordIndex).join('').length + wordIndex;
                             return (
@@ -166,7 +167,7 @@ const LearningCard: React.FC<LearningCardProps> = ({
                                                 onClick={() => handleLetterClick(char, overallIndex)}
                                                 disabled={isCorrect || isFound}
                                                 className={`
-                                                    w-9 h-9 sm:w-10 sm:h-10 text-lg sm:text-xl font-bold rounded-lg shadow-md
+                                                    w-11 h-12 sm:w-12 sm:h-14 text-2xl sm:text-3xl font-black rounded-xl shadow-md
                                                     transition-all duration-200 ease-in-out
                                                     focus:outline-none focus:ring-4 focus:ring-amber-400
                                                     ${
