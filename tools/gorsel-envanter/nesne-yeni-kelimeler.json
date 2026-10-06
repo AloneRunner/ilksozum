@@ -351,5 +351,77 @@
     "word": "şerit metre",
     "category": "Aletler",
     "color": "sarı"
+  },
+  {
+    "ad": "yonca",
+    "word": "yonca",
+    "category": "Bitkiler",
+    "color": "yeşil"
+  },
+  {
+    "ad": "cam-agaci",
+    "word": "çam ağacı",
+    "category": "Bitkiler",
+    "color": "yeşil"
+  },
+  {
+    "ad": "kum",
+    "word": "kum",
+    "category": "Doğal Yapılar & Uzay",
+    "color": "sarı",
+    "sahne": true
+  },
+  {
+    "ad": "magara",
+    "word": "mağara",
+    "category": "Doğal Yapılar & Uzay",
+    "color": "gri",
+    "sahne": true
+  },
+  {
+    "ad": "mont",
+    "word": "mont",
+    "category": "Giysiler & Aksesuarlar",
+    "color": "mavi"
+  },
+  {
+    "ad": "yagmurluk",
+    "word": "yağmurluk",
+    "category": "Giysiler & Aksesuarlar",
+    "color": "sarı"
+  },
+  {
+    "ad": "esofman",
+    "word": "eşofman",
+    "category": "Giysiler & Aksesuarlar",
+    "color": "mavi"
+  },
+  {
+    "ad": "kutuphane",
+    "word": "kütüphane",
+    "category": "Mekanlar & Odalar",
+    "color": "kahverengi",
+    "sahne": true
+  },
+  {
+    "ad": "eczane",
+    "word": "eczane",
+    "category": "Mekanlar & Odalar",
+    "color": "yeşil",
+    "sahne": true
+  },
+  {
+    "ad": "firin-dukkan",
+    "word": "fırın",
+    "category": "Mekanlar & Odalar",
+    "color": "kahverengi",
+    "sahne": true
+  },
+  {
+    "ad": "hayvanat-bahcesi",
+    "word": "hayvanat bahçesi",
+    "category": "Mekanlar & Odalar",
+    "color": "yeşil",
+    "sahne": true
   }
 ]

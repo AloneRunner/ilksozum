@@ -3,6 +3,7 @@
 export const NESNE_YENI: Record<number, string> = {
   1: '/images/3102.webp', // araba
   5: '/images/2313.webp', // kutu
+  10: '/images/4901.webp', // ağaç
   13: '/images/3420.webp', // tişört
   23: '/images/2819.webp', // pizza
   26: '/images/8026.webp', // ördek
@@ -22,6 +23,7 @@ export const NESNE_YENI: Record<number, string> = {
   46: '/images/3214.webp', // köpek
   50: '/images/6815.webp', // peynir
   51: '/images/2011.webp', // fırça
+  52: '/images/6908.webp', // yağmur
   53: '/images/8053.webp', // vida
   55: '/images/2813.webp', // limon
   56: '/images/8056.webp', // dondurma
@@ -72,6 +74,7 @@ export const NESNE_YENI: Record<number, string> = {
   137: '/images/2320.webp', // yastık
   138: '/images/8138.webp', // halter
   140: '/images/8140.webp', // kahve
+  141: '/images/6103.webp', // buz
   142: '/images/8142.webp', // anahtar
   143: '/images/8143.webp', // merdiven
   144: '/images/5818.webp', // makas
@@ -91,11 +94,13 @@ export const NESNE_YENI: Record<number, string> = {
   176: '/images/8176.webp', // yoğurt
   177: '/images/3112.webp', // robot
   178: '/images/8178.webp', // dinozor
+  179: '/images/5906.webp', // çadır
   180: '/images/8180.webp', // gitar
   181: '/images/8181.webp', // kamera
   182: '/images/8182.webp', // mikrofon
   184: '/images/8184.webp', // kumbara
   186: '/images/8186.webp', // pil
+  195: '/images/2513.webp', // dağ
   201: '/images/8201.webp', // hazine sandığı
   204: '/images/8204.webp', // roket
   207: '/images/3410.webp', // çanta
@@ -114,6 +119,7 @@ export const NESNE_YENI: Record<number, string> = {
   224: '/images/2003.webp', // ip
   227: '/images/8227.webp', // biber
   228: '/images/8228.webp', // bal
+  229: '/images/5114.webp', // oda
   231: '/images/8231.webp', // jandarma
   232: '/images/8232.webp', // penguen
   240: '/images/8240.webp', // lolipop
@@ -136,6 +142,7 @@ export const NESNE_YENI: Record<number, string> = {
   267: '/images/8267.webp', // makarna
   268: '/images/4701.webp', // elbise
   269: '/images/4703.webp', // etek
+  271: '/images/2402.webp', // atkı
   273: '/images/8273.webp', // arı
   274: '/images/6208.webp', // kelebek
   275: '/images/8275.webp', // kurbağa
@@ -144,8 +151,10 @@ export const NESNE_YENI: Record<number, string> = {
   278: '/images/8278.webp', // kiraz
   279: '/images/8279.webp', // ananas
   280: '/images/8280.webp', // patlıcan
+  281: '/images/3810.webp', // kaktüs
   282: '/images/8282.webp', // gece lambası
   283: '/images/4717.webp', // perde
+  285: '/images/6305.webp', // el
   287: '/images/6327.webp', // kitaplık
   288: '/images/8288.webp', // kamyon
   289: '/images/6002.webp', // traktör
@@ -162,6 +171,7 @@ export const NESNE_YENI: Record<number, string> = {
   305: '/images/3619.webp', // ütü
   306: '/images/4905.webp', // çivi
   308: '/images/6970.webp', // terlik
+  309: '/images/3809.webp', // gül
   310: '/images/2602.webp', // akvaryum
   311: '/images/8311.webp', // brokoli
   312: '/images/8312.webp', // sosis
@@ -186,7 +196,9 @@ export const NESNE_YENI: Record<number, string> = {
   339: '/images/8339.webp', // elbise dolabı
   340: '/images/6864.webp', // priz
   341: '/images/8341.webp', // paspas
+  343: '/images/2214.webp', // nehir
   344: '/images/8344.webp', // pense
+  347: '/images/6211.webp', // taş
   352: '/images/2519.webp', // masa
   353: '/images/8353.webp', // bilgisayar faresi
   354: '/images/8354.webp', // klavye
@@ -219,6 +231,8 @@ export const NESNE_YENI: Record<number, string> = {
   398: '/images/8398.webp', // mandal
   399: '/images/8399.webp', // fıskiye
   400: '/images/8400.webp', // olta
+  405: '/images/6906.webp', // kar
+  406: '/images/6907.webp', // rüzgar
   415: '/images/8415.webp', // tilki
   416: '/images/8416.webp', // geyik
   417: '/images/8417.webp', // sincap
@@ -245,18 +259,23 @@ export const NESNE_YENI: Record<number, string> = {
   460: '/images/8460.webp', // koyun
   461: '/images/8461.webp', // keçi
   462: '/images/4417.webp', // kuzu
+  479: '/images/3005.webp', // gözler
   480: '/images/8480.webp', // yapboz
   486: '/images/8486.webp', // pasta dilimi
+  490: '/images/6302.webp', // kulak
   491: '/images/8491.webp', // balina
   493: '/images/6016.webp', // sandal
   496: '/images/8496.webp', // çekiç
   498: '/images/8498.webp', // nar
+  505: '/images/5912.webp', // çocuk parkı
   510: '/images/8510.webp', // satranç taşları
   527: '/images/8527.webp', // tığ
   535: '/images/8535.webp', // silgi
   538: '/images/6020.webp', // sıcak hava balonu
   542: '/images/8542.webp', // kitap ayracı
   548: '/images/8548.webp', // koltuk
+  556: '/images/6303.webp', // burun
+  558: '/images/6304.webp', // dil
   568: '/images/8568.webp', // koli bandı
   569: '/images/8569.webp', // bant
   578: '/images/6314.webp', // dede
@@ -265,8 +284,10 @@ export const NESNE_YENI: Record<number, string> = {
   592: '/images/6954.webp', // davul çubuğu
   593: '/images/3018.webp', // pencere
   595: '/images/3008.webp', // kapı
+  597: '/images/6301.webp', // göz
   600: '/images/8600.webp', // zarf
   606: '/images/5120.webp', // yatak
+  609: '/images/2009.webp', // ağaç
   610: '/images/8610.webp', // raf
   615: '/images/6019.webp', // uçak
   617: '/images/5615.webp', // kuşlar
@@ -291,6 +312,7 @@ export const NESNE_YENI: Record<number, string> = {
   650: '/images/8650.webp', // ceviz
   654: '/images/8149.webp', // cetvel
   657: '/images/8657.webp', // oyuncaklar
+  662: '/images/2414.webp', // saç
   668: '/images/8642.webp', // kağıt
   669: '/images/3710.webp', // tahta
   670: '/images/8670.webp', // araba lastiği
@@ -311,6 +333,7 @@ export const NESNE_YENI: Record<number, string> = {
   693: '/images/8693.webp', // dikenli tel
   694: '/images/8694.webp', // kirpi balığı
   695: '/images/8695.webp', // enginar
+  696: '/images/8982.webp', // su
   700: '/images/2907.webp', // kase
   701: '/images/6313.webp', // nine
   704: '/images/8704.webp', // roka
@@ -322,6 +345,7 @@ export const NESNE_YENI: Record<number, string> = {
   712: '/images/8712.webp', // tamir aletleri
   713: '/images/8713.webp', // at nalı
   716: '/images/8716.webp', // asker
+  737: '/images/6323.webp', // sınıf
   740: '/images/5205.webp', // balık
   752: '/images/6316.webp', // bebek
   763: '/images/3814.webp', // yunus
@@ -377,6 +401,7 @@ export const NESNE_YENI: Record<number, string> = {
   854: '/images/8854.webp', // dolma biber
   855: '/images/8855.webp', // ıslak mendil
   856: '/images/8856.webp', // tarak
+  858: '/images/5916.webp', // plaj
   859: '/images/8859.webp', // tartı
   860: '/images/8860.webp', // salam
   861: '/images/8861.webp', // hamster
@@ -393,6 +418,7 @@ export const NESNE_YENI: Record<number, string> = {
   883: '/images/8883.webp', // kara tahta
   884: '/images/8884.webp', // bilgisayar
   887: '/images/8887.webp', // led ampul
+  889: '/images/5908.webp', // ev
   892: '/images/8161.webp', // akıllı televizyon
   908: '/images/8908.webp', // gergedan
   909: '/images/8909.webp', // deve
