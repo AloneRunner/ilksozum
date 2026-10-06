@@ -30,7 +30,8 @@ const dosyaAdi = (k) => `${SES.ad}-${fnv(k)}`;
 
 const listeOku = () => {
   if (!fs.existsSync(LISTE)) return {};
-  const m = fs.readFileSync(LISTE, 'utf8').match(/\/\/ BASLA\n([\s\S]*)\n\/\/ BITIR/);
+  const m = fs.readFileSync(LISTE, 'utf8').match(/\/\/ BASLA\r?\n([\s\S]*?)\r?\n\/\/ BITIR/);
+  if (!m) throw new Error('sesListesi.ts okunamadı; liste silinmesin diye durdu.');
   return m ? JSON.parse(m[1]) : {};
 };
 const listeYaz = (liste) => {
