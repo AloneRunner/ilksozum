@@ -79,4 +79,5 @@ ${satirlar.join('\n')}
 export const NESNE_RENK: Record<number, string> = ${JSON.stringify(renkler)};
 `);
 const toplam = Object.keys(eskiKayit).length;
-console.log(`nesne: ${yeni.length - yeniKelimeSay} yeni görsel, ${yeniKelimeSay} yeni kelime, ${Object.keys(harita).length - (yeni.length - yeniKelimeSay)} yeniden kullanım; ${Object.keys(harita).length}/${toplam} nesne yeni`);
+const kategorili = Object.keys(harita).filter(k => eskiKayit[k]).length;
+console.log(`nesne: ${yeni.length - yeniKelimeSay} yeni görsel, ${yeniKelimeSay} yeni kelime; kategorili nesne ${kategorili}/${toplam}, kategorisiz eski görsel ${Object.keys(harita).length - kategorili} (sorularda kullanılanlar)`);
