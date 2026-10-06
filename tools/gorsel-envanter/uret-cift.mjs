@@ -697,6 +697,46 @@ const KAVRAMLAR = [
     },
   },
   {
+    klasor: 'renkler', dosya: 'renklerData.ts', exportAdi: 'colorsDataYeni',
+    activityType: 'Colors', idBaslangic: 7101, etiket: 'renk',
+    // renkler.py: aynı nesne farklı renklere boyandı. "Hangi balon kırmızı?" → "Evet! Balon kırmızı." / "Hayır, bu balon mavi."
+    haller: {
+      kirmizi: { deger: 'kırmızı', soru: 'Kırmızı olan hangisi?', sifat: 'kırmızı' },
+      mavi: { deger: 'mavi', soru: 'Mavi olan hangisi?', sifat: 'mavi' },
+      sari: { deger: 'sarı', soru: 'Sarı olan hangisi?', sifat: 'sarı' },
+      yesil: { deger: 'yeşil', soru: 'Yeşil olan hangisi?', sifat: 'yeşil' },
+      turuncu: { deger: 'turuncu', soru: 'Turuncu olan hangisi?', sifat: 'turuncu' },
+      mor: { deger: 'mor', soru: 'Mor olan hangisi?', sifat: 'mor' },
+      pembe: { deger: 'pembe', soru: 'Pembe olan hangisi?', sifat: 'pembe' },
+    },
+    // Birbirine yakın renkler (kırmızı-pembe, kırmızı-turuncu, mor-mavi) yan yana gelmez
+    ciftler: [['kirmizi', 'mavi'], ['sari', 'mor'], ['yesil', 'turuncu'], ['pembe', 'mavi'], ['kirmizi', 'yesil'],
+      ['sari', 'mavi'], ['turuncu', 'mor'], ['pembe', 'yesil']],
+    kelime: { canta: 'çanta', semsiye: 'şemsiye', balon: 'balon', kupa: 'kupa', top: 'top', araba: 'araba',
+      tisort: 'tişört', elbise: 'elbise', cizme: 'çizme', sise: 'şişe', kova: 'çöp kovası' },
+  },
+  {
+    klasor: 'sekiller', dosya: 'sekillerData.ts', exportAdi: 'shapesDataYeni',
+    activityType: 'Shapes', idBaslangic: 7201, etiket: 'sekil',
+    // sekiller.py: kodla çizilmiş şekiller; iki şıkta aynı renk, sadece şekil farklı. "Hangisi üçgen?" → "Evet! Bu üçgen."
+    haller: {
+      daire: { deger: 'daire', soru: 'Daire olan hangisi?', sifat: 'daire' },
+      kare: { deger: 'kare', soru: 'Kare olan hangisi?', sifat: 'kare' },
+      ucgen: { deger: 'üçgen', soru: 'Üçgen olan hangisi?', sifat: 'üçgen' },
+      dikdortgen: { deger: 'dikdörtgen', soru: 'Dikdörtgen olan hangisi?', sifat: 'dikdörtgen' },
+      oval: { deger: 'oval', soru: 'Oval olan hangisi?', sifat: 'oval' },
+      yildiz: { deger: 'yıldız', soru: 'Yıldız olan hangisi?', sifat: 'yıldız' },
+      kalp: { deger: 'kalp', soru: 'Kalp olan hangisi?', sifat: 'kalp' },
+    },
+    // Birbirine çok benzeyenler (daire-oval, kare-dikdörtgen) yan yana gelmez
+    ciftler: [['daire', 'kare'], ['ucgen', 'daire'], ['kare', 'ucgen'], ['yildiz', 'daire'], ['kalp', 'kare'],
+      ['dikdortgen', 'ucgen'], ['oval', 'kare'], ['yildiz', 'kalp'], ['dikdortgen', 'daire']],
+    soruKalip: (w, d) => `Hangisi ${d}?`,
+    buYok: true,
+    ozne: { kirmizi: 'bu', mavi: 'bu', yesil: 'bu', sari: 'bu' },
+    kelime: { kirmizi: 'şekil', mavi: 'şekil', yesil: 'şekil', sari: 'şekil' },
+  },
+  {
     klasor: 'kirisik-duzgun', dosya: 'kirisikDuzgunData.ts', exportAdi: 'kirisikDuzgunDataYeni',
     activityType: 'KirisikDuzgun', idBaslangic: 4701, etiket: 'condition', sahneNesneler: ['masaortusu', 'ortu', 'perde'],
     a: { ek: 'kirisik', deger: 'kırışık', soru: 'Kırışık olan hangisi?', sifat: 'kırışıktır' },

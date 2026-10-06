@@ -10379,6 +10379,951 @@
       }
     },
     {
+      "id": 7101,
+      "kaynak": "renkler/araba-kirmizi.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "renk": "kırmızı"
+      }
+    },
+    {
+      "id": 7102,
+      "kaynak": "renkler/araba-mavi.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "renk": "mavi"
+      }
+    },
+    {
+      "id": 7103,
+      "kaynak": "renkler/araba-mor.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "renk": "mor"
+      }
+    },
+    {
+      "id": 7104,
+      "kaynak": "renkler/araba-pembe.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "renk": "pembe"
+      }
+    },
+    {
+      "id": 7105,
+      "kaynak": "renkler/araba-sari.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "renk": "sarı"
+      }
+    },
+    {
+      "id": 7106,
+      "kaynak": "renkler/araba-turuncu.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "renk": "turuncu"
+      }
+    },
+    {
+      "id": 7107,
+      "kaynak": "renkler/araba-yesil.jpg",
+      "word": "araba",
+      "category": "none",
+      "tags": {
+        "renk": "yeşil"
+      }
+    },
+    {
+      "id": 7108,
+      "kaynak": "renkler/balon-kirmizi.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "renk": "kırmızı"
+      }
+    },
+    {
+      "id": 7109,
+      "kaynak": "renkler/balon-mavi.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "renk": "mavi"
+      }
+    },
+    {
+      "id": 7110,
+      "kaynak": "renkler/balon-mor.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "renk": "mor"
+      }
+    },
+    {
+      "id": 7111,
+      "kaynak": "renkler/balon-pembe.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "renk": "pembe"
+      }
+    },
+    {
+      "id": 7112,
+      "kaynak": "renkler/balon-sari.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "renk": "sarı"
+      }
+    },
+    {
+      "id": 7113,
+      "kaynak": "renkler/balon-turuncu.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "renk": "turuncu"
+      }
+    },
+    {
+      "id": 7114,
+      "kaynak": "renkler/balon-yesil.jpg",
+      "word": "balon",
+      "category": "none",
+      "tags": {
+        "renk": "yeşil"
+      }
+    },
+    {
+      "id": 7115,
+      "kaynak": "renkler/canta-kirmizi.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "renk": "kırmızı"
+      }
+    },
+    {
+      "id": 7116,
+      "kaynak": "renkler/canta-mavi.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "renk": "mavi"
+      }
+    },
+    {
+      "id": 7117,
+      "kaynak": "renkler/canta-mor.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "renk": "mor"
+      }
+    },
+    {
+      "id": 7118,
+      "kaynak": "renkler/canta-pembe.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "renk": "pembe"
+      }
+    },
+    {
+      "id": 7119,
+      "kaynak": "renkler/canta-sari.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "renk": "sarı"
+      }
+    },
+    {
+      "id": 7120,
+      "kaynak": "renkler/canta-turuncu.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "renk": "turuncu"
+      }
+    },
+    {
+      "id": 7121,
+      "kaynak": "renkler/canta-yesil.jpg",
+      "word": "çanta",
+      "category": "none",
+      "tags": {
+        "renk": "yeşil"
+      }
+    },
+    {
+      "id": 7122,
+      "kaynak": "renkler/cizme-kirmizi.jpg",
+      "word": "çizme",
+      "category": "none",
+      "tags": {
+        "renk": "kırmızı"
+      }
+    },
+    {
+      "id": 7123,
+      "kaynak": "renkler/cizme-mavi.jpg",
+      "word": "çizme",
+      "category": "none",
+      "tags": {
+        "renk": "mavi"
+      }
+    },
+    {
+      "id": 7124,
+      "kaynak": "renkler/cizme-mor.jpg",
+      "word": "çizme",
+      "category": "none",
+      "tags": {
+        "renk": "mor"
+      }
+    },
+    {
+      "id": 7125,
+      "kaynak": "renkler/cizme-pembe.jpg",
+      "word": "çizme",
+      "category": "none",
+      "tags": {
+        "renk": "pembe"
+      }
+    },
+    {
+      "id": 7126,
+      "kaynak": "renkler/cizme-sari.jpg",
+      "word": "çizme",
+      "category": "none",
+      "tags": {
+        "renk": "sarı"
+      }
+    },
+    {
+      "id": 7127,
+      "kaynak": "renkler/cizme-turuncu.jpg",
+      "word": "çizme",
+      "category": "none",
+      "tags": {
+        "renk": "turuncu"
+      }
+    },
+    {
+      "id": 7128,
+      "kaynak": "renkler/cizme-yesil.jpg",
+      "word": "çizme",
+      "category": "none",
+      "tags": {
+        "renk": "yeşil"
+      }
+    },
+    {
+      "id": 7129,
+      "kaynak": "renkler/elbise-kirmizi.jpg",
+      "word": "elbise",
+      "category": "none",
+      "tags": {
+        "renk": "kırmızı"
+      }
+    },
+    {
+      "id": 7130,
+      "kaynak": "renkler/elbise-mavi.jpg",
+      "word": "elbise",
+      "category": "none",
+      "tags": {
+        "renk": "mavi"
+      }
+    },
+    {
+      "id": 7131,
+      "kaynak": "renkler/elbise-mor.jpg",
+      "word": "elbise",
+      "category": "none",
+      "tags": {
+        "renk": "mor"
+      }
+    },
+    {
+      "id": 7132,
+      "kaynak": "renkler/elbise-pembe.jpg",
+      "word": "elbise",
+      "category": "none",
+      "tags": {
+        "renk": "pembe"
+      }
+    },
+    {
+      "id": 7133,
+      "kaynak": "renkler/elbise-sari.jpg",
+      "word": "elbise",
+      "category": "none",
+      "tags": {
+        "renk": "sarı"
+      }
+    },
+    {
+      "id": 7134,
+      "kaynak": "renkler/elbise-turuncu.jpg",
+      "word": "elbise",
+      "category": "none",
+      "tags": {
+        "renk": "turuncu"
+      }
+    },
+    {
+      "id": 7135,
+      "kaynak": "renkler/elbise-yesil.jpg",
+      "word": "elbise",
+      "category": "none",
+      "tags": {
+        "renk": "yeşil"
+      }
+    },
+    {
+      "id": 7136,
+      "kaynak": "renkler/kova-kirmizi.jpg",
+      "word": "çöp kovası",
+      "category": "none",
+      "tags": {
+        "renk": "kırmızı"
+      }
+    },
+    {
+      "id": 7137,
+      "kaynak": "renkler/kova-mavi.jpg",
+      "word": "çöp kovası",
+      "category": "none",
+      "tags": {
+        "renk": "mavi"
+      }
+    },
+    {
+      "id": 7138,
+      "kaynak": "renkler/kova-mor.jpg",
+      "word": "çöp kovası",
+      "category": "none",
+      "tags": {
+        "renk": "mor"
+      }
+    },
+    {
+      "id": 7139,
+      "kaynak": "renkler/kova-pembe.jpg",
+      "word": "çöp kovası",
+      "category": "none",
+      "tags": {
+        "renk": "pembe"
+      }
+    },
+    {
+      "id": 7140,
+      "kaynak": "renkler/kova-sari.jpg",
+      "word": "çöp kovası",
+      "category": "none",
+      "tags": {
+        "renk": "sarı"
+      }
+    },
+    {
+      "id": 7141,
+      "kaynak": "renkler/kova-turuncu.jpg",
+      "word": "çöp kovası",
+      "category": "none",
+      "tags": {
+        "renk": "turuncu"
+      }
+    },
+    {
+      "id": 7142,
+      "kaynak": "renkler/kova-yesil.jpg",
+      "word": "çöp kovası",
+      "category": "none",
+      "tags": {
+        "renk": "yeşil"
+      }
+    },
+    {
+      "id": 7143,
+      "kaynak": "renkler/kupa-kirmizi.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "renk": "kırmızı"
+      }
+    },
+    {
+      "id": 7144,
+      "kaynak": "renkler/kupa-mavi.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "renk": "mavi"
+      }
+    },
+    {
+      "id": 7145,
+      "kaynak": "renkler/kupa-mor.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "renk": "mor"
+      }
+    },
+    {
+      "id": 7146,
+      "kaynak": "renkler/kupa-pembe.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "renk": "pembe"
+      }
+    },
+    {
+      "id": 7147,
+      "kaynak": "renkler/kupa-sari.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "renk": "sarı"
+      }
+    },
+    {
+      "id": 7148,
+      "kaynak": "renkler/kupa-turuncu.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "renk": "turuncu"
+      }
+    },
+    {
+      "id": 7149,
+      "kaynak": "renkler/kupa-yesil.jpg",
+      "word": "kupa",
+      "category": "none",
+      "tags": {
+        "renk": "yeşil"
+      }
+    },
+    {
+      "id": 7150,
+      "kaynak": "renkler/semsiye-kirmizi.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "renk": "kırmızı"
+      }
+    },
+    {
+      "id": 7151,
+      "kaynak": "renkler/semsiye-mavi.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "renk": "mavi"
+      }
+    },
+    {
+      "id": 7152,
+      "kaynak": "renkler/semsiye-mor.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "renk": "mor"
+      }
+    },
+    {
+      "id": 7153,
+      "kaynak": "renkler/semsiye-pembe.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "renk": "pembe"
+      }
+    },
+    {
+      "id": 7154,
+      "kaynak": "renkler/semsiye-sari.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "renk": "sarı"
+      }
+    },
+    {
+      "id": 7155,
+      "kaynak": "renkler/semsiye-turuncu.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "renk": "turuncu"
+      }
+    },
+    {
+      "id": 7156,
+      "kaynak": "renkler/semsiye-yesil.jpg",
+      "word": "şemsiye",
+      "category": "none",
+      "tags": {
+        "renk": "yeşil"
+      }
+    },
+    {
+      "id": 7157,
+      "kaynak": "renkler/sise-kirmizi.jpg",
+      "word": "şişe",
+      "category": "none",
+      "tags": {
+        "renk": "kırmızı"
+      }
+    },
+    {
+      "id": 7158,
+      "kaynak": "renkler/sise-mavi.jpg",
+      "word": "şişe",
+      "category": "none",
+      "tags": {
+        "renk": "mavi"
+      }
+    },
+    {
+      "id": 7159,
+      "kaynak": "renkler/sise-mor.jpg",
+      "word": "şişe",
+      "category": "none",
+      "tags": {
+        "renk": "mor"
+      }
+    },
+    {
+      "id": 7160,
+      "kaynak": "renkler/sise-pembe.jpg",
+      "word": "şişe",
+      "category": "none",
+      "tags": {
+        "renk": "pembe"
+      }
+    },
+    {
+      "id": 7161,
+      "kaynak": "renkler/sise-sari.jpg",
+      "word": "şişe",
+      "category": "none",
+      "tags": {
+        "renk": "sarı"
+      }
+    },
+    {
+      "id": 7162,
+      "kaynak": "renkler/sise-turuncu.jpg",
+      "word": "şişe",
+      "category": "none",
+      "tags": {
+        "renk": "turuncu"
+      }
+    },
+    {
+      "id": 7163,
+      "kaynak": "renkler/sise-yesil.jpg",
+      "word": "şişe",
+      "category": "none",
+      "tags": {
+        "renk": "yeşil"
+      }
+    },
+    {
+      "id": 7164,
+      "kaynak": "renkler/tisort-kirmizi.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "renk": "kırmızı"
+      }
+    },
+    {
+      "id": 7165,
+      "kaynak": "renkler/tisort-mavi.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "renk": "mavi"
+      }
+    },
+    {
+      "id": 7166,
+      "kaynak": "renkler/tisort-mor.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "renk": "mor"
+      }
+    },
+    {
+      "id": 7167,
+      "kaynak": "renkler/tisort-pembe.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "renk": "pembe"
+      }
+    },
+    {
+      "id": 7168,
+      "kaynak": "renkler/tisort-sari.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "renk": "sarı"
+      }
+    },
+    {
+      "id": 7169,
+      "kaynak": "renkler/tisort-turuncu.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "renk": "turuncu"
+      }
+    },
+    {
+      "id": 7170,
+      "kaynak": "renkler/tisort-yesil.jpg",
+      "word": "tişört",
+      "category": "none",
+      "tags": {
+        "renk": "yeşil"
+      }
+    },
+    {
+      "id": 7171,
+      "kaynak": "renkler/top-kirmizi.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "renk": "kırmızı"
+      }
+    },
+    {
+      "id": 7172,
+      "kaynak": "renkler/top-mavi.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "renk": "mavi"
+      }
+    },
+    {
+      "id": 7173,
+      "kaynak": "renkler/top-mor.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "renk": "mor"
+      }
+    },
+    {
+      "id": 7174,
+      "kaynak": "renkler/top-pembe.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "renk": "pembe"
+      }
+    },
+    {
+      "id": 7175,
+      "kaynak": "renkler/top-sari.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "renk": "sarı"
+      }
+    },
+    {
+      "id": 7176,
+      "kaynak": "renkler/top-turuncu.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "renk": "turuncu"
+      }
+    },
+    {
+      "id": 7177,
+      "kaynak": "renkler/top-yesil.jpg",
+      "word": "top",
+      "category": "none",
+      "tags": {
+        "renk": "yeşil"
+      }
+    },
+    {
+      "id": 7201,
+      "kaynak": "sekiller/kirmizi-daire.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "daire"
+      }
+    },
+    {
+      "id": 7202,
+      "kaynak": "sekiller/kirmizi-dikdortgen.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "dikdörtgen"
+      }
+    },
+    {
+      "id": 7203,
+      "kaynak": "sekiller/kirmizi-kalp.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "kalp"
+      }
+    },
+    {
+      "id": 7204,
+      "kaynak": "sekiller/kirmizi-kare.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "kare"
+      }
+    },
+    {
+      "id": 7205,
+      "kaynak": "sekiller/kirmizi-oval.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "oval"
+      }
+    },
+    {
+      "id": 7206,
+      "kaynak": "sekiller/kirmizi-ucgen.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "üçgen"
+      }
+    },
+    {
+      "id": 7207,
+      "kaynak": "sekiller/kirmizi-yildiz.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "yıldız"
+      }
+    },
+    {
+      "id": 7208,
+      "kaynak": "sekiller/mavi-daire.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "daire"
+      }
+    },
+    {
+      "id": 7209,
+      "kaynak": "sekiller/mavi-dikdortgen.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "dikdörtgen"
+      }
+    },
+    {
+      "id": 7210,
+      "kaynak": "sekiller/mavi-kalp.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "kalp"
+      }
+    },
+    {
+      "id": 7211,
+      "kaynak": "sekiller/mavi-kare.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "kare"
+      }
+    },
+    {
+      "id": 7212,
+      "kaynak": "sekiller/mavi-oval.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "oval"
+      }
+    },
+    {
+      "id": 7213,
+      "kaynak": "sekiller/mavi-ucgen.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "üçgen"
+      }
+    },
+    {
+      "id": 7214,
+      "kaynak": "sekiller/mavi-yildiz.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "yıldız"
+      }
+    },
+    {
+      "id": 7215,
+      "kaynak": "sekiller/sari-daire.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "daire"
+      }
+    },
+    {
+      "id": 7216,
+      "kaynak": "sekiller/sari-dikdortgen.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "dikdörtgen"
+      }
+    },
+    {
+      "id": 7217,
+      "kaynak": "sekiller/sari-kalp.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "kalp"
+      }
+    },
+    {
+      "id": 7218,
+      "kaynak": "sekiller/sari-kare.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "kare"
+      }
+    },
+    {
+      "id": 7219,
+      "kaynak": "sekiller/sari-oval.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "oval"
+      }
+    },
+    {
+      "id": 7220,
+      "kaynak": "sekiller/sari-ucgen.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "üçgen"
+      }
+    },
+    {
+      "id": 7221,
+      "kaynak": "sekiller/sari-yildiz.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "yıldız"
+      }
+    },
+    {
+      "id": 7222,
+      "kaynak": "sekiller/yesil-daire.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "daire"
+      }
+    },
+    {
+      "id": 7223,
+      "kaynak": "sekiller/yesil-dikdortgen.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "dikdörtgen"
+      }
+    },
+    {
+      "id": 7224,
+      "kaynak": "sekiller/yesil-kalp.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "kalp"
+      }
+    },
+    {
+      "id": 7225,
+      "kaynak": "sekiller/yesil-kare.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "kare"
+      }
+    },
+    {
+      "id": 7226,
+      "kaynak": "sekiller/yesil-oval.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "oval"
+      }
+    },
+    {
+      "id": 7227,
+      "kaynak": "sekiller/yesil-ucgen.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "üçgen"
+      }
+    },
+    {
+      "id": 7228,
+      "kaynak": "sekiller/yesil-yildiz.jpg",
+      "word": "şekil",
+      "category": "none",
+      "tags": {
+        "sekil": "yıldız"
+      }
+    },
+    {
       "id": 8011,
       "kaynak": "nesne/11-manzara.jpg",
       "word": "manzara",

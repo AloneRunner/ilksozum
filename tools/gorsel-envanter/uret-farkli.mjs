@@ -30,7 +30,7 @@ for (const [ad, rounds] of Object.entries(mod)) {
   if (!Array.isArray(rounds) || ATLA.has(ad)) continue;
   const gorulen = new Set();
   for (const r of rounds) {
-    if (r.options.length !== 2) continue;
+    if (!r.options || r.options.length !== 2) continue;
     const [x, y] = r.options;
     const key = [x.id, y.id].sort().join('-');
     if (gorulen.has(key)) continue;
