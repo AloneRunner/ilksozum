@@ -5,16 +5,13 @@ import ShapesIcon from "./icons/ShapesIcon.tsx";
 import QuantityIcon from "./icons/QuantityIcon.tsx";
 import LocationIcon from "./icons/LocationIcon.tsx";
 import TimeIcon from "./icons/TimeIcon.tsx";
-import ProgressIndicator from "./ui/ProgressIndicator.tsx";
-import MenuButton from "./ui/MenuButton.tsx";
 import WideNarrowIcon from "./icons/WideNarrowIcon.tsx";
 import TextureIcon from "./icons/TextureIcon.tsx";
 import ArrowsRightLeftIcon from "./icons/ArrowsRightLeftIcon.tsx";
 import OppositesIcon from "./icons/OppositesIcon.tsx";
 import SensesIcon from "./icons/SensesIcon.tsx";
-import ColorsIcon from "./icons/ColorsIcon.tsx";
-import PersonIcon from "./icons/PersonIcon.tsx";
 import { getCurrentLanguage, t } from "../i18n/index.ts";
+import { KAVRAM_KAPAK } from "../data/kavramKapak.ts";
 import CosmicBackdrop from './ui/CosmicBackdrop.tsx';
 import PanelStars from './ui/PanelStars.tsx';
 
@@ -405,6 +402,11 @@ const buildEskiTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[
   ];
 };
 
+// Sekme ikonu olarak emoji (çocuk için tanıdık)
+const emojiIkon = (e: string): React.FC<{ className?: string }> => ({ className }) => (
+  <span className={`${className || ""} inline-flex items-center justify-center text-xl leading-none`} aria-hidden="true">{e}</span>
+);
+
 // Kavram sekmeleri (2026-10): ne öğrettiğine göre 8 sekme + zor seviye kıyaslama.
 // Etkinlik tanımları eski listeden alınır; sadece gruplama değişir.
 const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] => {
@@ -425,47 +427,47 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
   return [
     {
       name: isTr ? "Renk ve Şekil" : t("concepts.colorShape", "Color & Shape"),
-      icon: ColorsIcon,
+      icon: emojiIkon("🎨"),
       activities: sec([ActivityType.Colors, ActivityType.ColorRecognition, ActivityType.Shapes, ActivityType.AcikKoyu, ActivityType.ParlakMat, ActivityType.SeffafOpak]),
     },
     {
       name: isTr ? "Boyut" : t("concepts.dimensional", "Size"),
-      icon: WideNarrowIcon,
+      icon: emojiIkon("📏"),
       activities: sec([ActivityType.BigSmall, ActivityType.LongShort, ActivityType.ThinThick, ActivityType.WideNarrow, ActivityType.DerinSig, ActivityType.HeavyLight]),
     },
     {
       name: isTr ? "Konum" : t("concepts.position", "Spatial"),
-      icon: LocationIcon,
+      icon: emojiIkon("📍"),
       activities: sec([ActivityType.OnUnder, ActivityType.BelowAbove, ActivityType.InFrontOfBehind, ActivityType.InsideOutside, ActivityType.BesideOpposite, ActivityType.Between, ActivityType.LeftRight, ActivityType.NearFar, ActivityType.HighLow, ActivityType.TersDuz, ActivityType.IlkSon]),
     },
     {
       name: isTr ? "Miktar" : t("concepts.quantity", "Quantity"),
-      icon: QuantityIcon,
+      icon: emojiIkon("🔢"),
       activities: sec([ActivityType.CountMatch, ActivityType.FewMuch, ActivityType.KalabalikTenha, ActivityType.FullEmpty, ActivityType.HalfQuarterWhole, ActivityType.OddEven]),
     },
     {
       name: isTr ? "Duyular" : t("concepts.sensory", "Senses"),
-      icon: TextureIcon,
+      icon: emojiIkon("✋"),
       activities: sec([ActivityType.Senses, ActivityType.HardSoft, ActivityType.RoughSmooth, ActivityType.DikenliPuruzsuz, ActivityType.SivriKut, ActivityType.WetDry, ActivityType.HotCold, ActivityType.BitterSweet, ActivityType.NoisyQuiet, ActivityType.KirisikDuzgun]),
     },
     {
       name: isTr ? "Zaman" : t("concepts.time", "Time"),
-      icon: TimeIcon,
+      icon: emojiIkon("⏰"),
       activities: sec([ActivityType.BeforeAfter, ActivityType.DayNight, ActivityType.FastSlow, ActivityType.ClockLearning, ActivityType.HavaDurumu]),
     },
     {
       name: isTr ? "Nesnenin Hali" : t("concepts.state", "State"),
-      icon: OppositesIcon,
+      icon: emojiIkon("🔧"),
       activities: sec([ActivityType.OpenClosed, ActivityType.BrokenIntact, ActivityType.TazeBayat, ActivityType.DugumCozuk, ActivityType.OldNew, ActivityType.CleanDirty, ActivityType.MessyClean, ActivityType.StraightCurved, ActivityType.AliveLifeless]),
     },
     {
       name: isTr ? "Ben ve Çevrem" : t("concepts.meWorld", "Me & My World"),
-      icon: PersonIcon,
+      icon: emojiIkon("🙂"),
       activities: sec([ActivityType.Emotions, ActivityType.HungryFull, ActivityType.YoungOld, ActivityType.TembelCaliskan, ActivityType.WhoseIsThis, ActivityType.YenirYenmez, ActivityType.TehlikeliGuvenli, ActivityType.YesNo]),
     },
     {
       name: isTr ? "Kıyasla (Zor)" : t("concepts.relative", "Compare (Hard)"),
-      icon: ArrowsRightLeftIcon,
+      icon: emojiIkon("⚖️"),
       activities: kiyas,
     },
   ];
@@ -557,7 +559,6 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
   const lang = getCurrentLanguage();
   const tabs = React.useMemo(() => buildTabs(lang), [lang]);
   const activeTabData = tabs.find((t) => t.name === activeCategory) || tabs[0];
-  const colors = ["teal", "rose", "sky", "amber", "purple", "cyan", "indigo"] as const;
   const isSimpleTheme = theme === "simple";
   const isCosmic = theme === 'deneme2';
   const isUnderwater = theme === 'deneme';
@@ -569,146 +570,7 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
     : isSimpleTheme ? "text-purple-900" : "text-white text-shadow-soft";
   const iconColorClass = isCosmic ? 'text-sky-300' : isUnderwater ? 'text-cyan-300' : isSimpleTheme ? "text-purple-700" : "text-white";
 
-  // Cosmic gradient palettes for each activity
-  const cosmicPalettes: Record<number, string> = {
-    0: 'from-teal-400 via-cyan-300 to-sky-200',
-    1: 'from-rose-400 via-pink-300 to-fuchsia-200',
-    2: 'from-sky-400 via-blue-300 to-indigo-200',
-    3: 'from-amber-400 via-orange-300 to-yellow-200',
-    4: 'from-purple-400 via-violet-300 to-indigo-200',
-    5: 'from-cyan-400 via-teal-300 to-emerald-200',
-    6: 'from-indigo-400 via-purple-300 to-fuchsia-200',
-  };
-
-  // Render cosmic activity card
-  const renderCosmicCard = (activity: ConceptActivity, index: number, Icon: React.FC<{ className?: string }>, stats: ActivityStats, isDisabled: boolean) => {
-    const gradient = cosmicPalettes[index % 7];
-    return (
-      <button
-        key={activity.type}
-        onClick={() => !isDisabled && onSelectActivity(activity.type)}
-        disabled={isDisabled}
-        className={`group relative overflow-hidden rounded-3xl p-4 min-h-[180px] flex flex-col transition-all duration-300 ${
-          isDisabled 
-            ? 'opacity-40 cursor-not-allowed' 
-            : 'hover:scale-105 hover:shadow-[0_0_30px_rgba(56,189,248,0.5)] active:scale-95'
-        }`}
-        style={{
-          background: isDisabled 
-            ? 'linear-gradient(135deg, rgba(51,65,85,0.6), rgba(30,41,59,0.6))' 
-            : `linear-gradient(135deg, rgba(15,23,42,0.85), rgba(30,41,59,0.85))`,
-          border: '2px solid rgba(56,189,248,0.3)',
-        }}
-      >
-        {/* Inner glow layer */}
-        <div 
-          className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity rounded-3xl"
-          style={{
-            background: `radial-gradient(circle at 30% 30%, ${gradient.split(' ')[0].replace('from-', '')}, transparent 70%)`,
-          }}
-        />
-        
-        {/* Icon orb */}
-        <div className="relative z-10 mb-2 flex justify-center flex-shrink-0">
-          <div 
-            className={`w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-br ${gradient} shadow-lg ${!isDisabled && 'group-hover:shadow-[0_0_20px_rgba(56,189,248,0.6)]'} transition-shadow`}
-          >
-            <Icon className="w-7 h-7 text-slate-900" />
-          </div>
-        </div>
-        
-        {/* Title */}
-        <h3 className="relative z-10 text-center font-bold text-sm text-sky-100 mb-1 group-hover:text-white transition-colors flex-shrink-0">
-          {activity.title}
-        </h3>
-        
-        {/* Subtitle */}
-        <p className="relative z-10 text-center text-xs text-sky-300/70 mb-2 flex-shrink-0 line-clamp-1">
-          {activity.subtitle}
-        </p>
-        
-        {/* Progress */}
-        <div className="relative z-10 mt-auto">
-          <ProgressIndicator
-            attempts={stats.attempts}
-            completions={stats.completions}
-            totalCorrect={stats.totalCorrect}
-            totalQuestions={stats.totalQuestions}
-          />
-        </div>
-      </button>
-    );
-  };
-
-  // Render underwater activity card - jellyfish style matching main menu
-  const renderUnderwaterCard = (activity: ConceptActivity, _index: number, Icon: React.FC<{ className?: string }>, stats: ActivityStats, isDisabled: boolean) => {
-    const jellyfishColors = [
-      // Oceanic palette — prioritize blues, cyans and teals. Keep variety but avoid pinks.
-      'from-blue-600 to-cyan-500',
-      'from-cyan-600 to-teal-500',
-      'from-teal-600 to-blue-500',
-      'from-sky-600 to-cyan-400',
-      'from-indigo-600 to-blue-500',
-      'from-blue-700 to-teal-500',
-      'from-cyan-500 to-sky-400',
-      'from-teal-500 to-cyan-400',
-    ];
-    const color = jellyfishColors[_index % jellyfishColors.length];
-    
-    return (
-      <button
-        key={activity.type}
-        onClick={() => !isDisabled && onSelectActivity(activity.type)}
-        disabled={isDisabled}
-        className={`relative flex flex-col items-center transition-all duration-300 ${
-          isDisabled ? 'opacity-40 cursor-not-allowed' : 'hover:scale-110 cursor-pointer'
-        }`}
-      >
-        {/* Jellyfish body (dome) */}
-        <div className={`w-32 h-24 sm:w-36 sm:h-28 rounded-t-full bg-gradient-to-b ${color} border-2 border-white/30 backdrop-blur-sm shadow-lg relative overflow-hidden ${!isDisabled && 'hover:shadow-2xl'}`}>
-          {/* Shine effect */}
-          <div className="absolute top-1 left-3 w-4 h-4 bg-white/40 rounded-full blur-sm"></div>
-          <div className="absolute top-2 right-4 w-2 h-2 bg-white/30 rounded-full blur-sm"></div>
-          
-          {/* Icon in center */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-white drop-shadow-md" />
-          </div>
-        </div>
-        
-        {/* Tentacles */}
-        <div className="flex gap-0.5 justify-center -mt-1">
-          {[...Array(8)].map((_, i) => (
-            <div 
-              key={i} 
-              className={`w-0.5 h-8 bg-gradient-to-b ${color} opacity-60 rounded-full animate-tentacle`}
-              style={{ height: `${32 + Math.random() * 12}px`, animationDelay: `${i * 0.15}s`, transformOrigin: 'top' }}
-            />
-          ))}
-        </div>
-        
-        {/* Title */}
-        <h3 className="text-sm font-bold text-white text-center mt-2 line-clamp-2 px-2 drop-shadow-[0_0_8px_rgba(6,182,212,0.8)]">
-          {activity.title}
-        </h3>
-        
-        {/* Subtitle */}
-        <p className="text-xs text-white/90 text-center line-clamp-1 px-2 mb-2 drop-shadow-[0_0_6px_rgba(6,182,212,0.6)]">
-          {activity.subtitle}
-        </p>
-        
-        {/* Progress */}
-        <div className="w-full px-2">
-          <ProgressIndicator
-            attempts={stats.attempts}
-            completions={stats.completions}
-            totalCorrect={stats.totalCorrect}
-            totalQuestions={stats.totalQuestions}
-          />
-        </div>
-      </button>
-    );
-  };
+  const koyuKart = isCosmic || isUnderwater;
 
   return (
     <div className={`relative flex h-full max-w-4xl flex-col items-center p-2 sm:p-4 animate-fade-in ${isCosmic || isUnderwater ? 'overflow-hidden' : ''}`}>
@@ -792,7 +654,7 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
         </div>
 
         <div
-          className={`relative z-10 mb-4 w-full overflow-x-auto rounded-t-xl pb-1 sm-landscape:mb-2 h-14 sm-landscape:h-12 flex-shrink-0 ${
+          className={`relative z-10 mb-4 w-full overflow-x-auto rounded-t-xl pb-1 sm-landscape:mb-2 h-16 sm-landscape:h-14 flex-shrink-0 ${
             isCosmic ? '' : isUnderwater ? 'bg-gradient-to-r from-cyan-900/20 to-teal-900/20' : isSimpleTheme ? "bg-purple-100/50" : "bg-black/20"
           }`}
         >
@@ -812,68 +674,41 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
           </div>
         </div>
 
-        <div key={activeTabData.name} className="relative z-10 flex-grow overflow-y-auto animate-fade-in">
-          {isCosmic ? (
-            <div className="grid grid-cols-2 gap-3 sm:gap-4 landscape:grid-cols-3 sm-landscape:grid-cols-4">
-              {activeTabData.activities.map((activity, index) => {
-                const stats =
-                  activityStats[String(activity.type)] || {
-                    attempts: 0,
-                    completions: 0,
-                    totalCorrect: 0,
-                    totalQuestions: 0,
-                  };
-                const isDisabled = !enabledActivities.has(String(activity.type));
-                return renderCosmicCard(activity, index, activeTabData.icon, stats, isDisabled);
-              })}
-            </div>
-          ) : isUnderwater ? (
-            <div className="grid grid-cols-2 gap-6 sm:gap-8 landscape:grid-cols-3 sm-landscape:grid-cols-4">
-              {activeTabData.activities.map((activity, index) => {
-                const stats =
-                  activityStats[String(activity.type)] || {
-                    attempts: 0,
-                    completions: 0,
-                    totalCorrect: 0,
-                    totalQuestions: 0,
-                  };
-                const isDisabled = !enabledActivities.has(String(activity.type));
-                return renderUnderwaterCard(activity, index, activeTabData.icon, stats, isDisabled);
-              })}
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 landscape:grid-cols-3 sm-landscape:grid-cols-4">
-              {activeTabData.activities.map((activity, index) => {
-                const stats =
-                  activityStats[String(activity.type)] || {
-                    attempts: 0,
-                    completions: 0,
-                    totalCorrect: 0,
-                    totalQuestions: 0,
-                  };
-                const isDisabled = !enabledActivities.has(String(activity.type));
-                return (
-                  <MenuButton
-                    key={activity.type}
-                    icon={activeTabData.icon}
-                    title={activity.title}
-                    subtitle={activity.subtitle}
-                    onClick={() => onSelectActivity(activity.type)}
-                    color={colors[index % colors.length]}
-                    theme={theme}
-                    disabled={isDisabled}
-                  >
-                    <ProgressIndicator
-                      attempts={stats.attempts}
-                      completions={stats.completions}
-                      totalCorrect={stats.totalCorrect}
-                      totalQuestions={stats.totalQuestions}
-                    />
-                  </MenuButton>
-                );
-              })}
-            </div>
-          )}
+        <div key={activeTabData.name} className="relative z-10 flex-grow overflow-y-auto animate-fade-in w-full px-1 pb-4">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 landscape:grid-cols-4">
+            {activeTabData.activities.map((activity) => {
+              const stats = activityStats[String(activity.type)];
+              const isDisabled = !enabledActivities.has(String(activity.type));
+              const kapak = KAVRAM_KAPAK[ActivityType[activity.type] as string];
+              const yildiz = Math.min(stats?.completions || 0, 5);
+              return (
+                <button
+                  key={activity.type}
+                  onClick={() => !isDisabled && onSelectActivity(activity.type)}
+                  disabled={isDisabled}
+                  className={`relative flex flex-col overflow-hidden rounded-3xl text-left transition-all duration-200 ${koyuKart
+                    ? 'bg-white/10 border border-white/15 hover:bg-white/15'
+                    : 'bg-white border border-slate-200 shadow-[0_6px_16px_rgba(15,23,42,0.08)] hover:shadow-[0_10px_24px_rgba(15,23,42,0.14)]'
+                    } ${isDisabled ? 'opacity-40 cursor-not-allowed' : 'hover:-translate-y-0.5 active:scale-95'}`}
+                >
+                  <div className="grid grid-cols-2 gap-px bg-slate-100 aspect-[2/1]">
+                    {kapak ? kapak.map((u) => (
+                      <img key={u} src={u} alt="" loading="lazy" draggable={false} className="w-full h-full object-cover bg-white" />
+                    )) : (
+                      <div className="col-span-2 flex items-center justify-center bg-gradient-to-br from-emerald-100 to-rose-100 text-4xl">✅❌</div>
+                    )}
+                  </div>
+                  <div className="px-3 py-2">
+                    <div className={`text-sm font-black leading-tight ${koyuKart ? 'text-white' : 'text-slate-800'}`}>{activity.title}</div>
+                    <div className={`mt-0.5 text-[11px] leading-snug line-clamp-1 ${koyuKart ? 'text-white/70' : 'text-slate-500'}`}>{activity.subtitle}</div>
+                  </div>
+                  {yildiz > 0 && (
+                    <span className="absolute top-1.5 right-1.5 rounded-full bg-white/90 px-1.5 text-[11px] font-bold text-amber-500 shadow-sm">{'★'.repeat(yildiz)}</span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
