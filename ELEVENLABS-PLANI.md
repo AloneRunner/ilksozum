@@ -67,8 +67,10 @@ Tek hece ya da kısa kelime çoğu zaman birkaç denemede düzgün çıktığı 
   - Gökçe'nin hesaba eklenmiş hali farklı bir kimlikle gelir.
   - Adaylar arasında Nazlı da vardı. Ama hesaba eklenince Nazlı, örnek kaydındaki sese hiç benzemedi; bu yüzden elendi.
 - **Ayarlar:** Kaan'ın beğendiği hali aşağıdaki gibi.
-  - Model: `eleven_multilingual_v2`, dil `tr`.
-  - stability 0.6, similarity_boost 0.8, speed 0.85 (biraz yavaş).
+  - Model: **`eleven_v3`**, dil `tr`, ses ayarı verilmez.
+  - İlk denemelerde `eleven_multilingual_v2` kullanıldı. Kısa kelimelerde ("Aferin!") aksanlı ve şiveli çıktı.
+  - Kaan v3'ü seçti (7 Ekim).
+  - Öğretmen sesi adayları da denendi (Alice, Burcu, Aura, Mine, Ahu). Kaan: "Alice komutan gibi". Gökçe ile kalındı.
 - **Kalite:** Üretim yüksek kalitede yapılır (`mp3_44100_128`); boyutu biz sonra ffmpeg ile küçültürüz.
   - 22 kHz / 32 kbps doğrudan üretimde ses bozuldu.
 - **Tek sesler:** "Aaa", "Mmm" gibi tek sesleri yapay ses düzgün okuyamıyor. Gökçe hiç söylemedi, Nazlı'nınki tuhaf çıktı.
