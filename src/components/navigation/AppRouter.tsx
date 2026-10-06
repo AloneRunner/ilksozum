@@ -1,5 +1,4 @@
 import { lazy, useCallback, useMemo, useState, useEffect } from 'react';
-import { YENI_SORULAR_AKTIF } from '../../services/database/activities/yeni/index.ts';
 import { useAppContext } from '../../contexts/AppContext.ts';
 import { ScreenState, ActivityType, ActivityCategory } from '../../types.ts';
 import Spinner from '../Spinner.tsx';
@@ -26,7 +25,6 @@ const ConceptLearningScreen = lazy(() => import('../ConceptLearningScreen.tsx'))
 const SettingsScreen = lazy(() => import('../SettingsScreen.tsx'));
 const ConceptChoiceScreen = lazy(() => import('../ConceptChoiceScreen.tsx'));
 const ConceptActivitiesMenuScreen = lazy(() => import('../ConceptActivitiesMenuScreen.tsx'));
-const ReasoningActivitiesMenuScreen = lazy(() => import('../ReasoningActivitiesMenuScreen.tsx'));
 const SudokuScreen = lazy(() => import('../SudokuScreen.tsx'));
 const PatternCompletionScreen = lazy(() => import('../PatternCompletionScreen.tsx'));
 const MemoryCardsScreen = lazy(() => import('../MemoryCardsScreen.tsx'));
@@ -39,7 +37,6 @@ const BannedImagesScreen = lazy(() => import('../BannedImagesScreen.tsx'));
 const CommunicationCardDetailScreen = lazy(() => import('../CommunicationCardDetailScreen.tsx'));
 const ObjectCategoriesMenuScreen = lazy(() => import('../ObjectCategoriesMenuScreen.tsx'));
 const SequencingStoryScreen = lazy(() => import('../SequencingStoryScreen.tsx'));
-const LetterActivitiesMenuScreen = lazy(() => import('../LetterActivitiesMenuScreen.tsx'));
 const BasaraLessonMapScreen = lazy(() => import('../basara/BasaraLessonMapScreen.tsx'));
 const BasaraLessonScreen = lazy(() => import('../basara/BasaraLessonScreen.tsx'));
 const LearningCard = lazy(() => import('../LearningCard.tsx'));
@@ -57,14 +54,10 @@ const PrintPreviewScreen = lazy(() => import('../PrintPreviewScreen.tsx'));
 const PrintPoolScreen = lazy(() => import('../PrintPoolScreen.tsx'));
 const PrintSelectionDetailScreen = lazy(() => import('../PrintSelectionDetailScreen.tsx'));
 const WorksheetCenterScreen = lazy(() => import('../worksheets/WorksheetCenterScreen.tsx'));
-const FineMotorActivitiesMenuScreen = lazy(() => import('../FineMotorActivitiesMenuScreen.tsx'));
-const RelativeComparisonActivitiesMenuScreen = lazy(() => import('../RelativeComparisonActivitiesMenuScreen.tsx'));
 const RelativeComparisonActivity = lazy(() => (import('../RelativeComparisonActivity.tsx') as any));
 const ProgramModeIntroScreen = lazy(() => import('../ProgramModeIntroScreen.tsx'));
 const FiveWOneHMenuScreen = lazy(() => import('../FiveWOneHMenuScreen.tsx'));
-const MiniGamesMenuScreen = lazy(() => import('../MiniGamesMenuScreen.tsx'));
 const SkillMenuScreen = lazy(() => import('../SkillMenuScreen.tsx'));
-const ClockLearningGameScreen = lazy(() => import('../activities/games/ClockLearningGameScreen.tsx'));
 const ShapeMatchingGameScreen = lazy(() => import('../ShapeMatchingGameScreen.tsx'));
 const MusicTouchGameScreen = lazy(() => import('../MusicTouchGameScreen.tsx'));
 const SheepGameScreen = lazy(() => import('../games/SheepGameScreen.tsx'));
@@ -121,15 +114,14 @@ const WhatsMissingScreen = lazy(() => import('../WhatsMissingScreen.tsx'));
 export const AppRouter = () => {
     const ctx = useAppContext();
     const { screenState, setScreenState, setPreviousScreen, handleGoToMenu } = ctx;
-    const [relativeComparisonRounds, setRelativeComparisonRounds] = useState<any[]>([]);
     const [basaraLessonId, setBasaraLessonId] = useState<number>(1);
     const [basaraVariant, setBasaraVariant] = useState<1 | 2>(1);
-    const [basaraGeri, setBasaraGeri] = useState<ScreenState>(ScreenState.LetterActivitiesMenu);
+    const [basaraGeri, setBasaraGeri] = useState<ScreenState>(ScreenState.SkillMenu);
     // Beceri menüsü: hangi beceri açık, etkinlik oradan mı başladı (geri tuşu oraya dönsün)
     const [aktifBeceri, setAktifBeceri] = useState<BeceriId | null>(null);
     const [beceriDonus, setBeceriDonus] = useState(false);
     const geriDon = (varsayilan: ScreenState) => setScreenState(beceriDonus && aktifBeceri ? ScreenState.SkillMenu : varsayilan);
-    const MENU_EKRANLARI = [ScreenState.MainMenu, ScreenState.ConceptActivitiesMenu, ScreenState.ReasoningActivitiesMenu, ScreenState.FineMotorMenu, ScreenState.RelativeComparisonActivitiesMenu, ScreenState.MiniGamesMenu];
+    const MENU_EKRANLARI = [ScreenState.MainMenu, ScreenState.ConceptActivitiesMenu];
 
     // Menüden bir etkinlik başlatır (kavram/akıl/ince motor akışı ortak)
     const etkinlikBaslat = async (act: ActivityType, hataEkrani: ScreenState) => {
@@ -176,7 +168,6 @@ export const AppRouter = () => {
             return;
         }
         switch (oge.ekran) {
-            case 'harfSes': setScreenState(ScreenState.LetterActivitiesMenu); return;
             case 'basara': setBasaraVariant(1); setBasaraGeri(ScreenState.SkillMenu); setScreenState(ScreenState.BasaraLessonMap); return;
             case 'basara2': setBasaraVariant(2); setBasaraGeri(ScreenState.SkillMenu); setScreenState(ScreenState.BasaraLessonMap); return;
             case 'sesTaklit': setScreenState(ScreenState.SoundImitationMenu); return;
@@ -206,7 +197,7 @@ export const AppRouter = () => {
         if (activityType === ActivityType.Syllabification) return { backScreen: ScreenState.GroupSelection, backButtonText: t('letterActivities.backToGroupSelection', 'Grup Seçimine Dön') };
         if (LETTER_SOUND_ACTIVITIES.includes(activityType)) return { backScreen: ScreenState.LetterSelection, backButtonText: t('letterActivities.backToLetterSelection', 'Harf Seçimine Dön') };
         if (CONCEPT_ACTIVITIES.includes(activityType)) return { backScreen: ScreenState.ConceptActivitiesMenu, backButtonText: t('menu.concepts.backButton', 'Kavram Menüsüne Dön') };
-        if (REASONING_ACTIVITIES.includes(activityType)) return { backScreen: ScreenState.ReasoningActivitiesMenu, backButtonText: t('menu.reasoning.backButton', 'Oyun Menüsüne Dön') };
+        if (REASONING_ACTIVITIES.includes(activityType)) return { backScreen: ScreenState.MainMenu, backButtonText: t('menu.reasoning.backButton', 'Oyun Menüsüne Dön') };
         if (OBJECT_RECOGNITION_ACTIVITIES.includes(activityType)) return { backScreen: ScreenState.ObjectCategoriesMenu, backButtonText: t('menu.objects.backButton', 'Nesne Menüsüne Dön') };
         if (
             activityType === ActivityType.LineTracing ||
@@ -214,27 +205,10 @@ export const AppRouter = () => {
             activityType === ActivityType.RhythmFollowing ||
             activityType === ActivityType.LetterTracing ||
             activityType === ActivityType.ConstrainedColoring
-        ) return { backScreen: ScreenState.FineMotorMenu, backButtonText: t('menu.fineMotor.backButton', 'İnce Motor Menüsüne Dön') };
+        ) return { backScreen: ScreenState.MainMenu, backButtonText: t('menu.fineMotor.backButton', 'İnce Motor Menüsüne Dön') };
         return { backScreen: ScreenState.MainMenu, backButtonText: t('app.back', 'Etkinlik Menüsüne Dön') };
     };
 
-    useEffect(() => {
-        if (screenState === ScreenState.RelativeComparisonMenu && relativeComparisonRounds.length === 0) {
-            const loadRounds = async () => {
-                try {
-                    const mod = (await import('../../data/experimental/relative_concepts.json')) as any;
-                    const payload = mod.default ?? mod;
-                    const loadedRounds = payload?.rounds ?? [];
-                    setRelativeComparisonRounds(loadedRounds);
-                } catch (e) {
-                    console.error('Could not load relative comparison data', e);
-                    ctx.toast.showToast(t('app.noContentForActivity', 'No content found for this activity.'), 'error');
-                    handleGoToMenu();
-                }
-            };
-            loadRounds();
-        }
-    }, [screenState, relativeComparisonRounds.length, handleGoToMenu, ctx.toast]);
 
     // Language validation for letter activities
     useEffect(() => {
@@ -328,8 +302,8 @@ export const AppRouter = () => {
         };
 
         const onBackToConcept = () => geriDon(ScreenState.ConceptActivitiesMenu);
-        const onBackToReasoning = () => geriDon(ScreenState.ReasoningActivitiesMenu);
-        const onBackToFineMotor = () => geriDon(ScreenState.FineMotorMenu);
+        const onBackToReasoning = () => geriDon(ScreenState.MainMenu);
+        const onBackToFineMotor = () => geriDon(ScreenState.MainMenu);
         const onBackToLetterSelection = () => setScreenState(ScreenState.LetterSelection);
 
         switch (activityType) {
@@ -497,30 +471,10 @@ export const AppRouter = () => {
                 if (beceriBul(category as BeceriId)) { setAktifBeceri(category as BeceriId); setScreenState(ScreenState.SkillMenu); return; }
                 if (category === 'reports') { setScreenState(ScreenState.ParentReport); return; }
                 setBeceriDonus(false);
-                if (category === 'soundImitation') { setScreenState(ScreenState.SoundImitationMenu); return; }
-                if (category === 'miniGames') { setScreenState(ScreenState.MiniGamesMenu); return; }
-                if (category === 'letterSound') {
-                    const lang = getCurrentLanguage();
-                    const allowed = new Set(['tr', 'de', 'az', 'en', 'fr', 'nl']);
-                    if (!allowed.has(lang)) {
-                        ctx.toast.showToast(t('settings.languageNote', 'Letter activities are currently Turkish-only.'), 'info');
-                        return;
-                    }
-                    setScreenState(ScreenState.LetterActivitiesMenu);
-                }
                 if (category === 'objectCategories') setScreenState(ScreenState.ObjectCategoriesMenu);
                 if (category === 'objectCategoriesIntl') setScreenState(ScreenState.ObjectCategoriesIntlMenu);
                 if (category === 'conceptActivities') setScreenState(ScreenState.ConceptActivitiesMenu);
-                if (category === 'reasoningActivities') setScreenState(ScreenState.ReasoningActivitiesMenu);
-                if (category === 'fiveWOneH') {
-                    ctx.activity.setActivityType(ActivityType.FiveWOneH);
-                    setScreenState(ScreenState.FiveWOneHMenu);
-                }
-                if (category === 'fineMotor') setScreenState(ScreenState.FineMotorMenu);
                 if (category === 'programMode') setScreenState(ScreenState.ProgramIntro);
-                if (category === 'relativeComparison') {
-                    setScreenState(ScreenState.RelativeComparisonActivitiesMenu);
-                }
             }}
             onStartRandomMode={async () => {
                 setBeceriDonus(false);
@@ -588,28 +542,8 @@ export const AppRouter = () => {
         case ScreenState.SoundImitationMenu: return <SoundImitationMenuScreen onBack={() => geriDon(ScreenState.MainMenu)} onSelectSadece={() => setScreenState(ScreenState.SoundImitationSadeceGorsel)} onSelectVideo={() => setScreenState(ScreenState.SoundImitationUfakVideolar)} />;
         case ScreenState.SoundImitationSadeceGorsel: return <SoundImitationScreen onBack={() => setScreenState(ScreenState.SoundImitationMenu)} />;
         case ScreenState.SoundImitationUfakVideolar: return <SoundImitationVideoScreen onBack={() => setScreenState(ScreenState.SoundImitationMenu)} />;
-        case ScreenState.LetterActivitiesMenu: {
-            return <LetterActivitiesMenuScreen onSelectActivity={(act) => {
-                if (act === ActivityType.Syllabification) {
-                    ctx.activity.setActivityType(ActivityType.Syllabification);
-                    setScreenState(ScreenState.GroupSelection);
-                } else if (act === ActivityType.Basara) {
-                    setBasaraVariant(1);
-                    setBasaraGeri(ScreenState.LetterActivitiesMenu);
-                    setScreenState(ScreenState.BasaraLessonMap);
-                } else if (act === ActivityType.Basara2) {
-                    setBasaraVariant(2);
-                    setBasaraGeri(ScreenState.LetterActivitiesMenu);
-                    setScreenState(ScreenState.BasaraLessonMap);
-                } else {
-                    ctx.activity.setSelectedActivityForLetter(act);
-                    setScreenState(ScreenState.LetterSelection);
-                }
-            }} onBack={() => geriDon(ScreenState.MainMenu)} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} enabledActivities={ctx.profile.enabledActivitiesSet} />;
-        }
-
         case ScreenState.LetterSelection: {
-            return <LetterSelectionScreen onSelectLetter={ctx.activity.handleStartActivityWithLetter} onBack={() => geriDon(ScreenState.LetterActivitiesMenu)} activityType={ctx.activity.selectedActivityForLetter} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} />;
+            return <LetterSelectionScreen onSelectLetter={ctx.activity.handleStartActivityWithLetter} onBack={() => geriDon(ScreenState.MainMenu)} activityType={ctx.activity.selectedActivityForLetter} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} />;
         }
 
         case ScreenState.GroupSelection: {
@@ -630,7 +564,7 @@ export const AppRouter = () => {
                     ctx.toast.showToast(t('letters.noWordsForGroup', 'No words found for this group.'));
                     setScreenState(ScreenState.GroupSelection);
                 }
-            }} onBack={() => geriDon(ScreenState.LetterActivitiesMenu)} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} />;
+            }} onBack={() => geriDon(ScreenState.MainMenu)} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} />;
         }
 
         case ScreenState.BasaraLessonMap: {
@@ -792,83 +726,9 @@ export const AppRouter = () => {
         }
 
         case ScreenState.ConceptActivitiesMenu: return <ConceptActivitiesMenuScreen onSelectActivity={async (act) => {
-            // Saat artık normal kavram sorusu (Kaan: mini oyun değil). Eski oyun ekranı yalnızca eski veriyle.
-            if (act === ActivityType.ClockLearning && !YENI_SORULAR_AKTIF) {
-                setScreenState(ScreenState.ClockLearningGame);
-                return;
-            }
             setBeceriDonus(false);
             await etkinlikBaslat(act, ScreenState.ConceptActivitiesMenu);
         }} onBack={handleGoToMenu} activeCategory={ctx.navigation.activeConceptTab} onSelectCategory={ctx.navigation.setActiveConceptTab} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} enabledActivities={ctx.profile.enabledActivitiesSet} />;
-
-        case ScreenState.ReasoningActivitiesMenu: return <ReasoningActivitiesMenuScreen onSelectActivity={async (act) => {
-            setBeceriDonus(false);
-            // Special cases for reasoning menu
-            if (act === ActivityType.FiveWOneH) {
-                setScreenState(ScreenState.FiveWOneHMenu);
-                return;
-            }
-            // Hangman is a self-contained mini game (no external content, no stats)
-            if (act === ActivityType.Hangman) {
-                ctx.activity.setActivityType(act);
-                // Provide a placeholder round so Playing screen renders
-                ctx.activity.setActivityData([{ id: 'hangman-placeholder' }]);
-                ctx.activity.setCurrentIndex(0);
-                ctx.activity.setScore(0);
-                setScreenState(ScreenState.Playing);
-                return;
-            }
-            // Normal reasoning/concept flow
-            ctx.profile.updateActivityAttempt(String(act));
-            ctx.activity.setActivityType(act);
-            setScreenState(ScreenState.Loading);
-            const { fetchConceptActivityData } = await import('../../services/contentService.ts');
-            const data = await fetchConceptActivityData(act, ctx.profile.activityStats, undefined, ctx.settings.isPremium);
-            if (data.length > 0) {
-                ctx.activity.setActivityData(data);
-                ctx.activity.setCurrentIndex(0);
-                ctx.activity.setScore(0);
-                setScreenState(ScreenState.Playing);
-            } else {
-                ctx.toast.showToast(t('app.noContentForActivity', 'No content found for this activity.'));
-                setScreenState(ScreenState.ReasoningActivitiesMenu);
-            }
-        }} onBack={handleGoToMenu} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} enabledActivities={ctx.profile.enabledActivitiesSet} />;
-
-        case ScreenState.FineMotorMenu: return <FineMotorActivitiesMenuScreen onSelectActivity={async (act) => {
-            setBeceriDonus(false);
-            ctx.profile.updateActivityAttempt(String(act));
-            ctx.activity.setActivityType(act);
-            setScreenState(ScreenState.Loading);
-            const { fetchConceptActivityData } = await import('../../services/contentService.ts');
-            const data = await fetchConceptActivityData(act, ctx.profile.activityStats, undefined, ctx.settings.isPremium);
-            if (data.length > 0) {
-                ctx.activity.setActivityData(data);
-                ctx.activity.setCurrentIndex(0);
-                ctx.activity.setScore(0);
-                setScreenState(ScreenState.Playing);
-            } else {
-                ctx.toast.showToast(t('app.noContentForActivity', 'No content found for this activity.'), 'error');
-                setScreenState(ScreenState.FineMotorMenu);
-            }
-        }} onBack={handleGoToMenu} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} enabledActivities={ctx.profile.enabledActivitiesSet} />;
-
-        case ScreenState.RelativeComparisonActivitiesMenu: return <RelativeComparisonActivitiesMenuScreen onSelectActivity={async (act) => {
-            ctx.profile.updateActivityAttempt(String(act));
-            ctx.activity.setActivityType(act);
-            setScreenState(ScreenState.Loading);
-            const { fetchConceptActivityData } = await import('../../services/contentService.ts');
-            const data = await fetchConceptActivityData(act, ctx.profile.activityStats, undefined, ctx.settings.isPremium);
-            if (data.length > 0) {
-                ctx.activity.setActivityData(data);
-                ctx.activity.setCurrentIndex(0);
-                ctx.activity.setScore(0);
-                setScreenState(ScreenState.Playing);
-            } else {
-                ctx.toast.showToast(t('app.noContentForActivity', 'No content found for this activity.'));
-                setScreenState(ScreenState.RelativeComparisonActivitiesMenu);
-            }
-        }} onBack={handleGoToMenu} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} enabledActivities={ctx.profile.enabledActivitiesSet} />;
 
         case ScreenState.ProgramIntro: return <ProgramModeIntroScreen
             onBack={() => setScreenState(ScreenState.MainMenu)}
@@ -983,15 +843,6 @@ export const AppRouter = () => {
         // Worksheet Flow
         case ScreenState.WorksheetCenter: return <WorksheetCenterScreen onBack={() => setScreenState(ScreenState.MainMenu)} />;
         // Mini Games
-        case ScreenState.MiniGamesMenu: return <MiniGamesMenuScreen
-            onBack={() => setScreenState(ScreenState.MainMenu)}
-            onSelectGame={(gameId) => {
-                setBeceriDonus(false);
-                const target = MINI_GAME_SCREENS[gameId];
-                if (target !== undefined) setScreenState(target);
-                else console.error('Unknown gameId:', gameId);
-            }}
-        />;
         case ScreenState.SkillMenu: {
             const beceri = beceriBul(aktifBeceri);
             if (!beceri) return <div className="flex items-center justify-center h-full w-full"><Spinner /></div>;
@@ -1004,30 +855,29 @@ export const AppRouter = () => {
                 theme={ctx.settings.theme}
             />;
         }
-        case ScreenState.ClockLearningGame: return <ClockLearningGameScreen onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} />;
-        case ScreenState.ShapeMatchingGame: return <ShapeMatchingGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.MusicTouchGame: return <MusicTouchGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.SheepShearingGame: return <SheepGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.BubblePopGame: return <BubblePopGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.BusJamGame: return <BusJamGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.PuzzleGame: return <PuzzleGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.RoomCleaningGame: return <RoomCleaningGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.TrainTrackGame: return <TrainTrackGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.MazeGame: return <MazeGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.MemoryMatchGame: return <MemoryMatchGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.LetterBubblesGame: return <LetterBubblesGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.DailyRoutineGame: return <DailyRoutineGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.ConnectDotsGame: return <ConnectDotsGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.CountingGame: return <CountingGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.ShadowMatchGame: return <ShadowMatchGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.SizeOrderingGame: return <SizeOrderingGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.NumberSequenceGame: return <NumberSequenceGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.PlantGrowingGame: return <PlantGrowingGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.ColorSequenceGame: return <ColorSequenceGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.WaitAndPressGame: return <WaitAndPressGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.WhereBelongsGame: return <WhereBelongsGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.SyllableTrainGame: return <SyllableTrainGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
-        case ScreenState.WordBoxGame: return <WordBoxGameScreen onBack={() => geriDon(ScreenState.MiniGamesMenu)} />;
+        case ScreenState.ShapeMatchingGame: return <ShapeMatchingGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.MusicTouchGame: return <MusicTouchGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.SheepShearingGame: return <SheepGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.BubblePopGame: return <BubblePopGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.BusJamGame: return <BusJamGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.PuzzleGame: return <PuzzleGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.RoomCleaningGame: return <RoomCleaningGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.TrainTrackGame: return <TrainTrackGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.MazeGame: return <MazeGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.MemoryMatchGame: return <MemoryMatchGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.LetterBubblesGame: return <LetterBubblesGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.DailyRoutineGame: return <DailyRoutineGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.ConnectDotsGame: return <ConnectDotsGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.CountingGame: return <CountingGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.ShadowMatchGame: return <ShadowMatchGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.SizeOrderingGame: return <SizeOrderingGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.NumberSequenceGame: return <NumberSequenceGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.PlantGrowingGame: return <PlantGrowingGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.ColorSequenceGame: return <ColorSequenceGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.WaitAndPressGame: return <WaitAndPressGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.WhereBelongsGame: return <WhereBelongsGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.SyllableTrainGame: return <SyllableTrainGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.WordBoxGame: return <WordBoxGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
 
         default: return <MainMenuScreen onSelectCategory={() => { }} onStartRandomMode={ctx.activity.handleStartRandomMode} onSelectParentTips={() => setScreenState(ScreenState.ParentTips)} onSelectSettings={() => setScreenState(ScreenState.Settings)} theme={ctx.settings.theme} />;
     }

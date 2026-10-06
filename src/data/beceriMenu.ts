@@ -4,7 +4,7 @@
 import { ActivityType } from '../types.ts';
 
 export type BeceriId = 'harfler' | 'sayilar' | 'dusunme' | 'el' | 'konusma' | 'oyunOdasi';
-export type BeceriEkran = 'harfSes' | 'basara' | 'basara2' | 'sesTaklit' | 'besNBirK';
+export type BeceriEkran = 'basara' | 'basara2' | 'sesTaklit' | 'besNBirK';
 
 interface OgeTemel { emoji: string; baslik: string; alt: string; sadeceTr?: boolean }
 export type BeceriOge =
