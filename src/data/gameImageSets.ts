@@ -4,12 +4,17 @@
  * Emoji yerine uygulamanın kendi görsellerini kullanmak, çocuğun kartlarda
  * öğrendiği nesneyi oyunda da tanımasını sağlar.
  */
+import { GOLGE_KESIMLERI } from './golgeListesi.ts';
+
 export interface GameImage {
     id: number;
     name: string;
 }
 
 export const imgUrl = (id: number): string => `/images/${id}.png`;
+
+/** Yeni fotoğrafın saydam kesimi (gölge oyunu için); kesimi yoksa eski saydam çizim. */
+export const kesimUrl = (id: number): string => GOLGE_KESIMLERI.has(id) ? `/images/golge/${id}.webp` : imgUrl(id);
 
 export const IMAGE_SETS = {
     animals: [

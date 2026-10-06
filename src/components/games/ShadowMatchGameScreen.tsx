@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
-import { IMAGE_SETS, imgUrl, type GameImage } from '../../data/gameImageSets.ts';
+import { IMAGE_SETS, kesimUrl, type GameImage } from '../../data/gameImageSets.ts';
 import { sayInstruction, sayCorrect, sayWrong, sayFinished } from '../../utils/gameVoice.ts';
 
 // --- Sound Effects ---
@@ -240,7 +240,7 @@ const ShadowMatchGameScreen: React.FC<ShadowMatchGameScreenProps> = ({ onBack })
                 <div className="flex-1 flex items-center justify-center">
                     <div className="bg-slate-900/50 rounded-3xl p-8 shadow-2xl">
                         <img
-                            src={imgUrl(question.targetId)}
+                            src={kesimUrl(question.targetId)}
                             alt="gölge"
                             draggable={false}
                             className="w-40 h-40 sm:w-52 sm:h-52 object-contain transition-transform hover:scale-110"
@@ -275,7 +275,7 @@ const ShadowMatchGameScreen: React.FC<ShadowMatchGameScreenProps> = ({ onBack })
                                             : 'bg-slate-100 hover:bg-slate-200 hover:scale-105 active:scale-95'
                                         }`}
                                 >
-                                    <img src={imgUrl(option.id)} alt={option.name} draggable={false} className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
+                                    <img src={kesimUrl(option.id)} alt={option.name} draggable={false} className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
                                     <span className="text-xs font-medium">{option.name}</span>
                                 </button>
                             );
