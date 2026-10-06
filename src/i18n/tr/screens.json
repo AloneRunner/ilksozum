@@ -251,12 +251,12 @@
     "viewReportAria": "Gelişim Raporunu Görüntüle",
     "completed": "Tamamlandı",
     "categories": {
-      "letterSound": "Harf ve Sesler",
-      "objects": "Nesneleri Tanıyalım",
-      "concept": "Kavramları Öğrenelim",
-      "reasoning": "Akıl Oyunları",
+      "letterSound": "Harfler ve Okuma",
+      "objects": "Kelimeler",
+      "concept": "Kavramlar",
+      "reasoning": "Düşünme ve Hafıza",
       "fiveWOneH": "5N1K",
-      "relativeComparison": "Göreceli Karşılaştırma"
+      "relativeComparison": "Kavramlar: Kıyasla (Zor)"
     }
   },
   "activities": {
