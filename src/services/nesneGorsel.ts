@@ -32,3 +32,26 @@ export const eskiGorselYedeginiKur = (): void => {
         }
     }, true);
 };
+
+// Vücut bölümleri (Kaan, 2026-10-06): varsayılan yeni fotoğraf; "Alternatif" açıksa eski çizim.
+// Yeni adres → eski id (aynı fotoğrafı paylaşan dudak/ağız kelimeyle ayrılır).
+const ORGAN_ESKI: Array<[number, string]> = [
+    [285, 'el'], [479, 'gözler'], [490, 'kulak'], [555, 'kaş'], [556, 'burun'], [557, 'dudak'], [558, 'dil'],
+    [559, 'omuz'], [560, 'kol'], [561, 'ayak'], [562, 'bacak'], [563, 'parmak'], [597, 'göz'], [662, 'saç'],
+    [949, 'ağız'], [981, 'diş'],
+];
+const organlar = new Map<string, Array<[number, string]>>();
+for (const [id, ad] of ORGAN_ESKI) {
+    const yeni = NESNE_YENI[id];
+    if (yeni) organlar.set(yeni, [...(organlar.get(yeni) || []), [id, ad]]);
+}
+
+/** Organ fotoğrafıysa eski çizim adresini döner (yoksa null). */
+export const organCizimi = (src: string | undefined | null, kelime?: string): string | null => {
+    if (!src) return null;
+    const adaylar = organlar.get(src);
+    if (!adaylar) return null;
+    const k = (kelime || '').toLocaleLowerCase('tr-TR').trim();
+    const secilen = adaylar.find(([, ad]) => ad === k) || adaylar[0];
+    return `/images/${secilen[0]}.png`;
+};

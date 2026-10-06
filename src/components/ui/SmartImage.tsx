@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAppContext } from '../../contexts/AppContext.ts';
-import { nesneUrl } from '../../services/nesneGorsel.ts';
+import { nesneUrl, organCizimi } from '../../services/nesneGorsel.ts';
 
 interface SmartImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   disableRealistic?: boolean;
@@ -42,7 +42,11 @@ const SmartImage: React.FC<SmartImageProps> = ({ src: hamSrc, disableRealistic, 
     }, [src, isRealisticEnabled]);
 
     let actualSrc = src || '';
-    if (isRealisticEnabled && !imageError && src && typeof src === 'string' && src.startsWith('/images/')) {
+    // "Alternatif" açıkken vücut bölümleri eski çizimiyle gösterilir (diğer yeni fotoğraflar aynı kalır)
+    const organ = isRealisticEnabled && typeof src === 'string' ? organCizimi(src, typeof props.alt === 'string' ? props.alt : undefined) : null;
+    if (organ) {
+        actualSrc = organ;
+    } else if (isRealisticEnabled && !imageError && src && typeof src === 'string' && src.startsWith('/images/')) {
         actualSrc = realisticVariant === 'png' ? getRealisticPngPath(src) : getMirroredRealisticPath(src);
     }
 

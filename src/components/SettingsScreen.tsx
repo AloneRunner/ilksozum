@@ -1065,8 +1065,8 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
           )}
   {/* Çocuk Modu ve Hatasız Öğrenme kaldırıldı */}
           <SettingsRow
-            title={t('settingsEx.settingsBlock.realisticImages', 'Gerçekçi Görseller (Alternatif)')}
-            subtitle={t('settingsEx.settingsBlock.realisticImagesDesc', 'Çizimler otizmli çocuklar için bazen soyut gelebilir. Etkinliklerde varsa fotoğraf (gerçek) görselleri dener.')}
+            title={t('settingsEx.settingsBlock.realisticImages', 'Alternatif Görseller (Vücut Bölümleri)')}
+            subtitle={t('settingsEx.settingsBlock.realisticImagesDesc', 'Vücut bölümlerini fotoğraf yerine çizimle gösterir. Çocuğunuz hangisini daha iyi tanıyorsa onu seçin.')}
             isThemed={isThemed} themeVariant={themeVariant}
           >
             <ToggleSwitch isEnabled={isRealisticImagesEnabled} onToggle={onToggleRealisticImages} themeVariant={themeVariant} />
