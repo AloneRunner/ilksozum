@@ -12,6 +12,12 @@ Bunlar 9.1.1'e girecek:
 - **Gelişim raporu.** "Program Modu İlerlemesi" bölümü eski ünite sistemini gösteriyordu ("Ünite 1/10, günde en fazla 3 ünite").
   - Artık yeni Program Modu'nun her beceri alanı için seviyeyi ve öğrenilen etkinlik sayısını gösteriyor.
 
+- **Başarımlar, Etkinlik Yönetimi, menü başlıkları.** Eski adlar ("Nesneleri Tanıyalım", "Akıl Oyunları", "İnce Motor") yeni menü adlarıyla değiştirildi.
+- **Bozuk Türkçe karakterler.** Başarımlar'da ve kelime adlarında "DiÄŸer Yiyecekler", "Ev EÅŸyaları" gibi görünüyordu. objects.json'daki 48 yer düzeltildi.
+- **Ayarlar.** Eski ünite sistemine ait "Joker Hakkı" bölümü gizlendi; yeni Program Modu'nda etkisizdi.
+- **Not:** Play'e yüklenen 9.1.1 (93) bu düzeltmeleri İÇERMİYOR. Paket, akşamki aktarmadan sonra yeniden aktarılmadan üretildi.
+  - Sonraki paketten önce: `npm run build && npx cap sync android`.
+
 ## 2. Ses (ElevenLabs): Kaan'la birlikte, ondan izin almadan üretim yok
 
 Şu an Gökçe'nin sesiyle konuşanlar, toplam 1.900 kayıt (~20 MB):
