@@ -4,6 +4,7 @@
 //   node tools/ses/uret-ses.mjs tools/ses/paketler/ovguler.json        → kuru çalışma: kaç metin, kaç kredi
 //   node tools/ses/uret-ses.mjs tools/ses/paketler/ovguler.json --evet → üretir
 //   node tools/ses/uret-ses.mjs --metin "Aferin!" --evet
+//   --yeniden: listede olanları da baştan üretir (beğenilmeyen kayıtlar için)
 //
 // - API anahtarı yalnız ortam değişkeninden okunur (ELEVENLABS_API_KEY); hiçbir dosyaya yazılmaz.
 // - Daha önce üretilen metin tekrar üretilmez (kredi boşa gitmez).
@@ -15,8 +16,8 @@ import path from 'path';
 
 const KOK = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '../..');
 const SES = { ad: 'gokce', kutuphaneId: 'oPC5I9GKjMReiaM29gjY', sahip: '991994d44c6bfe4b3978666d09e5539d22ad7a82e1ffc137334d524a61057e0f' };
-// Kaan'ın beğendiği ayar: biraz yavaş ve sakin
-const AYAR = { model_id: 'eleven_multilingual_v2', language_code: 'tr', voice_settings: { stability: 0.6, similarity_boost: 0.8, speed: 0.85 } };
+// Kaan (2026-10-06): multilingual_v2 kısa kelimelerde aksanlı ("Aferin" olmadı); v3 doğal ve aksansız.
+const AYAR = { model_id: 'eleven_v3', language_code: 'tr' };
 const BICIM = 'mp3_44100_64';
 
 const LISTE = path.join(KOK, 'src/data/sesListesi.ts');
@@ -48,6 +49,7 @@ ${JSON.stringify(sirali, null, 1)}
 
 const arg = process.argv.slice(2);
 const evet = arg.includes('--evet');
+const yeniden = arg.includes('--yeniden');
 let metinler = [];
 const mi = arg.indexOf('--metin');
 if (mi >= 0) metinler = [arg[mi + 1]];
@@ -56,7 +58,7 @@ if (!metinler.length) { console.log('Paket dosyası ya da --metin "..." verin.')
 
 const liste = listeOku();
 const gorulen = new Set();
-const eksik = metinler.filter((m) => { const k = anahtar(m); if (!k || liste[k] || gorulen.has(k)) return false; gorulen.add(k); return true; });
+const eksik = metinler.filter((m) => { const k = anahtar(m); if (!k || (liste[k] && !yeniden) || gorulen.has(k)) return false; gorulen.add(k); return true; });
 const karakter = eksik.reduce((t, m) => t + m.trim().length, 0);
 console.log(`${metinler.length} metin · ${metinler.length - eksik.length} zaten var · ${eksik.length} üretilecek · ~${karakter} kredi`);
 
@@ -81,9 +83,18 @@ try {
   for (const m of eksik) {
     const k = anahtar(m);
     const ad = dosyaAdi(k);
-    const c = await api(`/v1/text-to-speech/${sesId}/with-timestamps?output_format=${BICIM}`, { text: m.trim(), ...AYAR });
+    let c;
+    try {
+      c = await api(`/v1/text-to-speech/${sesId}/with-timestamps?output_format=${BICIM}`, { text: m.trim(), ...AYAR });
+    } catch (e) {
+      // harf zamanları alınamazsa yalnız ses (ağız hareketi bu kayıtta olmaz)
+      console.log('  zaman damgası yok:', e.message.slice(0, 80));
+      const r = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${sesId}?output_format=${BICIM}`, { method: 'POST', headers: { 'xi-api-key': KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ text: m.trim(), ...AYAR }) });
+      if (!r.ok) throw new Error(`TTS → ${r.status} ${(await r.text()).slice(0, 200)}`);
+      c = { audio_base64: Buffer.from(await r.arrayBuffer()).toString('base64'), alignment: null };
+    }
     fs.writeFileSync(path.join(SES_KLASOR, `${ad}.mp3`), Buffer.from(c.audio_base64, 'base64'));
-    fs.writeFileSync(path.join(HIZA_KLASOR, `${ad}.json`), JSON.stringify({ metin: m.trim(), ...c.alignment }));
+    if (c.alignment) fs.writeFileSync(path.join(HIZA_KLASOR, `${ad}.json`), JSON.stringify({ metin: m.trim(), model: AYAR.model_id, ...c.alignment }));
     liste[k] = ad;
     listeYaz(liste); // her kayıttan sonra yaz: yarıda kesilirse üretilenler kaybolmaz
     console.log(`✓ ${++n}/${eksik.length} ${m.trim()}`);
