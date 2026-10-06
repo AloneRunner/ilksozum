@@ -1,5 +1,6 @@
 import { Capacitor } from '@capacitor/core';
 import { TextToSpeech } from '@capacitor-community/text-to-speech';
+import { SES_KAYITLARI } from '../data/sesListesi.ts';
 
 // Current language code for TTS (BCP-47)
 let speechLang = 'tr-TR';
@@ -92,6 +93,7 @@ export const getMutedState = (): boolean => isMuted;
  * Stops any currently playing or pending speech.
  */
 export const cancelSpeech = async () => {
+    kayitDurdur();
     if (Capacitor.isNativePlatform()) {
         try {
             await TextToSpeech.stop();
@@ -124,6 +126,46 @@ const TELAFFUZ: Array<[RegExp, string]> = [
 ];
 const telaffuzDuzelt = (metin: string): string => TELAFFUZ.reduce((m, [re, yeni]) => m.replace(re, yeni), metin);
 
+// Kayıtlı sesler (ElevenLabs, Kaan 2026-10-06): metnin kaydı varsa mp3 çalınır, yoksa cihaz sesi.
+// Anahtar tools/ses/uret-ses.mjs'deki ile aynı olmalı.
+const kayitAnahtari = (m: string): string => m.normalize('NFC').trim().replace(/\s+/g, ' ').toLocaleLowerCase('tr-TR');
+let kayitSesi: HTMLAudioElement | null = null;
+let kayitSayaci = 0; // her yeni konuşma / iptal önceki kayıt dizisini geçersiz kılar
+
+function kayitDurdur() {
+    kayitSayaci++;
+    if (kayitSesi) { kayitSesi.pause(); kayitSesi = null; }
+}
+
+/** Metnin tamamı ya da cümlelerinin hepsi kayıtlıysa dosya listesi ("Aferin! Bu kalem kalın." → 2 kayıt). */
+const kayitliDosyalar = (metin: string): string[] | null => {
+    const tam = SES_KAYITLARI[kayitAnahtari(metin)];
+    if (tam) return [tam];
+    const parcalar = (metin.match(/[^.!?]+[.!?]*/g) || []).map((p) => p.trim()).filter(Boolean);
+    if (parcalar.length < 2) return null;
+    const dosyalar = parcalar.map((p) => SES_KAYITLARI[kayitAnahtari(p)]);
+    return dosyalar.every(Boolean) ? dosyalar : null;
+};
+
+/** Kayıtları sırayla çalar; çalınamazsa false döner (cihaz sesine düşülür). */
+const kayitCal = async (dosyalar: string[]): Promise<boolean> => {
+    const sira = ++kayitSayaci;
+    for (const d of dosyalar) {
+        if (sira !== kayitSayaci) return true; // araya başka konuşma girdi
+        const tamam = await new Promise<boolean>((resolve) => {
+            const audio = new Audio(`/audio/ses/${d}.mp3`);
+            kayitSesi = audio;
+            audio.onended = () => resolve(true);
+            audio.onerror = () => resolve(false);
+            audio.onpause = () => { if (!audio.ended) resolve(true); };
+            audio.play().catch(() => resolve(false));
+        });
+        if (!tamam) return false;
+    }
+    if (sira === kayitSayaci) kayitSesi = null;
+    return true;
+};
+
 /**
  * Speaks a given text using the appropriate TTS engine for the platform.
  * Returns a promise that resolves when the speech is finished.
@@ -134,6 +176,7 @@ export const speak = async (textToSpeak: string, overrideLang?: string): Promise
     if (isMuted || !textToSpeak) {
         return Promise.resolve();
     }
+    const kayitMetni = textToSpeak;
     if (!overrideLang || overrideLang.startsWith('tr')) textToSpeak = telaffuzDuzelt(textToSpeak);
 
     // Dev: log the exact text spoken so F12 shows live TTS output (useful for i18n checks)
@@ -152,6 +195,11 @@ export const speak = async (textToSpeak: string, overrideLang?: string): Promise
 
     await cancelSpeech();
     stopCurrentEffect();
+
+    if (!overrideLang || overrideLang.startsWith('tr')) {
+        const dosyalar = kayitliDosyalar(kayitMetni);
+        if (dosyalar && await kayitCal(dosyalar)) return;
+    }
 
     if (Capacitor.isNativePlatform()) {
         const requestedLang = overrideLang || speechLang;
