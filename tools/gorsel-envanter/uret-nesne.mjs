@@ -39,18 +39,6 @@ if (fs.existsSync(klasor)) {
     harita[eskiId] = `/images/${id}.webp`;
   }
 }
-// 2) Kavram turlarından yeniden kullanılanlar (kaynak dosyası zaten yeni-gorseller.json'da kayıtlı olmalı)
-const esleme = fs.existsSync(ESLEME) ? JSON.parse(fs.readFileSync(ESLEME, 'utf8')) : {};
-const kaynaktanId = Object.fromEntries([...liste.gorseller, ...yeni].map(g => [g.kaynak, g.id]));
-for (const [eskiId, deger] of Object.entries(esleme)) {
-  if (harita[eskiId]) continue; // kendi yeni görseli varsa o öncelikli
-  const kaynak = typeof deger === 'string' ? deger : deger.kaynak;
-  if (typeof deger === 'object' && deger.renk) renkler[eskiId] = deger.renk;
-  const id = kaynaktanId[kaynak];
-  if (!id) { console.log('eşleme kaynağı kayıtlı değil:', eskiId, kaynak); continue; }
-  harita[eskiId] = `/images/${id}.webp`;
-}
-
 // 3) Uygulamada hiç olmayan yeni kelimeler (Kaan: "önceden olmayan yeni şeyler de ekle").
 //    nesne-yeni-kelimeler.json: [{ ad, word, category, color? }] — sıra sabit, id = 9001 + sıra (yalnız sona ekle).
 //    Dosya: gorsel-ham/nesne-yeni/<ad>.jpg. Kendi kategorisinde nesne havuzuna girer (hece/harf gorsel-isle'de).
@@ -63,6 +51,18 @@ yeniKelimeler.forEach((k, i) => {
   yeni.push({ id: 9001 + i, kaynak: dosya, word: k.word, category: k.category, ...(k.sahne ? { sahne: true } : {}), tags: k.color ? { color: k.color } : {} });
   yeniKelimeSay++;
 });
+
+// 2) Kavram turlarından yeniden kullanılanlar (yeni kelimelerden SONRA: eşleme bunlara da işaret edebilir) (kaynak dosyası zaten yeni-gorseller.json'da kayıtlı olmalı)
+const esleme = fs.existsSync(ESLEME) ? JSON.parse(fs.readFileSync(ESLEME, 'utf8')) : {};
+const kaynaktanId = Object.fromEntries([...liste.gorseller, ...yeni].map(g => [g.kaynak, g.id]));
+for (const [eskiId, deger] of Object.entries(esleme)) {
+  if (harita[eskiId]) continue; // kendi yeni görseli varsa o öncelikli
+  const kaynak = typeof deger === 'string' ? deger : deger.kaynak;
+  if (typeof deger === 'object' && deger.renk) renkler[eskiId] = deger.renk;
+  const id = kaynaktanId[kaynak];
+  if (!id) { console.log('eşleme kaynağı kayıtlı değil:', eskiId, kaynak); continue; }
+  harita[eskiId] = `/images/${id}.webp`;
+}
 
 liste.gorseller = [...liste.gorseller.filter(g => !g.kaynak.startsWith('nesne/') && !g.kaynak.startsWith('nesne-yeni/')), ...yeni].sort((a, b) => a.id - b.id);
 fs.writeFileSync(LIST, JSON.stringify(liste, null, 2) + '\n');

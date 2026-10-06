@@ -158,6 +158,7 @@ export const NESNE_YENI: Record<number, string> = {
   218: '/images/8218.webp', // pirinç
   219: '/images/8219.webp', // yangın söndürme tüpü
   220: '/images/8220.webp', // pergel
+  221: '/images/9130.webp', // 
   222: '/images/6006.webp', // salyangoz
   223: '/images/4811.webp', // halat
   224: '/images/2003.webp', // ip
@@ -513,6 +514,7 @@ export const NESNE_YENI: Record<number, string> = {
   775: '/images/6341.webp', // 
   776: '/images/9109.webp', // 
   777: '/images/9110.webp', // 
+  778: '/images/9129.webp', // 
   779: '/images/6510.webp', // 
   780: '/images/9111.webp', // 
   781: '/images/6509.webp', // 
@@ -638,6 +640,7 @@ export const NESNE_YENI: Record<number, string> = {
   903: '/images/9126.webp', // 
   904: '/images/6508.webp', // 
   905: '/images/9127.webp', // 
+  906: '/images/9128.webp', // 
   908: '/images/8908.webp', // gergedan
   909: '/images/8909.webp', // deve
   915: '/images/5205.webp', // balık

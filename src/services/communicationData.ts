@@ -199,11 +199,11 @@ export const communicationCategories: CommunicationCategory[] = [
       { id: 'negatif', title: 'Negatif', imageId: 501, cards: [
         createCardFromImage(501, 'Üzgün'), createCardFromImage(780, 'Kızgın'), createCardFromImage(127, 'Korkmuş'),
         createCardFromImage(782, 'Utanmış'), createCardFromImage(781, 'Ağlayan'), createManualCard('endiseli', 'Endişeli', 127),
-        createManualCard('kiskanc', 'Kıskanç', 780), createManualCard('hayal_kirikligi', 'Hayal kırıklığına uğramış', 501), createManualCard('yalniz', 'Yalnız', 501),
+        createManualCard('kiskanc', 'Kıskanç', 9132), createManualCard('hayal_kirikligi', 'Hayal kırıklığına uğramış', 501), createManualCard('yalniz', 'Yalnız', 501),
       ]},
       { id: 'fiziksel', title: 'Fiziksel Haller', imageId: 783, cards: [
         createCardFromImage(783, 'Yorgun'), createCardFromImage(784, 'Hasta'), createCardFromImage(785, 'Uykulu'),
-        createCardFromImage(786, 'Sıkılmış'), createCardFromImage(752, 'Aç'), createCardFromImage(774, 'Susamış'),
+        createCardFromImage(786, 'Sıkılmış'), createCardFromImage(752, 'Aç'), createCardFromImage(9131, 'Susamış'),
         createManualCard('aci_ceken', 'Acı çeken', 784),
       ]}
     ]

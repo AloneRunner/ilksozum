@@ -763,5 +763,34 @@
     "word": "parka gitmek istiyorum",
     "category": "none",
     "sahne": true
+  },
+  {
+    "ad": "gezmeye-gitmek-istiyorum",
+    "word": "gezmeye gitmek istiyorum",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "gururlu",
+    "word": "gururlu",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "paten-cift",
+    "word": "paten",
+    "category": "none"
+  },
+  {
+    "ad": "susamis",
+    "word": "susamış",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "kiskanc",
+    "word": "kıskanç",
+    "category": "none",
+    "sahne": true
   }
 ]

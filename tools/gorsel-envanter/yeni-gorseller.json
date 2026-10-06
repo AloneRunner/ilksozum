@@ -16121,6 +16121,45 @@
       "category": "none",
       "sahne": true,
       "tags": {}
+    },
+    {
+      "id": 9128,
+      "kaynak": "nesne-yeni/gezmeye-gitmek-istiyorum.jpg",
+      "word": "gezmeye gitmek istiyorum",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9129,
+      "kaynak": "nesne-yeni/gururlu.jpg",
+      "word": "gururlu",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9130,
+      "kaynak": "nesne-yeni/paten-cift.jpg",
+      "word": "paten",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9131,
+      "kaynak": "nesne-yeni/susamis.jpg",
+      "word": "susamış",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9132,
+      "kaynak": "nesne-yeni/kiskanc.jpg",
+      "word": "kıskanç",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
     }
   ]
 }
