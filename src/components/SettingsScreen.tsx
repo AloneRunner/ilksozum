@@ -324,6 +324,8 @@ const ParentGateButton: React.FC<{ onConfirm: () => void; isThemed: boolean; lab
 };
 
 
+const JOKER_GOSTER = false;
+
 const SettingsScreen: React.FC<SettingsScreenProps> = ({
   onBack, isMuted, onToggleMute, isAutoSpeakEnabled, onToggleAutoSpeak, isBanButtonEnabled, onToggleBanButton,
   isFastTransitionEnabled, onToggleFastTransition,
@@ -1232,8 +1234,9 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
             </div>
         </div>
 
-        {/* Joker Hakkı (Parent Override) */}
-        <div className="rounded-2xl p-4 bg-white/90 border border-emerald-200 shadow-sm mt-4">
+        {/* Joker Hakkı (Parent Override): eski ünite sistemine aitti; Program Modu 2'de yerine "Bu seviyeyi biliyor, atla" var.
+            Gizlendi (Kaan, 2026-10-07). Geri açmak için JOKER_GOSTER = true. */}
+        {JOKER_GOSTER && <div className="rounded-2xl p-4 bg-white/90 border border-emerald-200 shadow-sm mt-4">
           <div className="flex items-center justify-between mb-2">
             <h2 className="font-bold text-emerald-800 flex items-center gap-2">
               🎟️ Joker Hakkı
@@ -1353,7 +1356,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
           ) : (
             <p className="text-xs text-slate-500 mt-3">Aktif joker yok.</p>
           )}
-        </div>
+        </div>}
       </div>
     </div>
   );
