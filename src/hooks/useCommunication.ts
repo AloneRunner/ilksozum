@@ -11,8 +11,13 @@ export const useCommunication = () => {
     const [selectedCommSubCategory, setSelectedCommSubCategory] = useState<CommunicationSubCategory | null>(null);
     const [sentence, setSentence] = useState<CommunicationCard[]>([]);
 
+    // Türkçe sıra: fiil kartları sonda kalır ("İstiyorum" sonra "Elma" seçilse de "Elma istiyorum")
     const handleCardClick = useCallback((card: CommunicationCard) => {
-        setSentence(prev => [...prev, card]);
+        setSentence(prev => {
+            if (card.fiil) return [...prev, card];
+            const ilkFiil = prev.findIndex(c => c.fiil);
+            return ilkFiil < 0 ? [...prev, card] : [...prev.slice(0, ilkFiil), card, ...prev.slice(ilkFiil)];
+        });
         const lang = getCurrentLanguage();
         const spoken = lang === 'tr' ? card.text : translateLabel(card.text, lang);
         speak(spoken);
@@ -27,6 +32,7 @@ export const useCommunication = () => {
     }, [sentence]);
 
     const handleClearSentence = useCallback(() => setSentence([]), []);
+    const handleRemoveLast = useCallback(() => setSentence(prev => prev.slice(0, -1)), []);
 
     const resetCommunicationState = useCallback(() => {
         setSelectedCommCategory(null);
@@ -44,6 +50,7 @@ export const useCommunication = () => {
         handleCardClick,
         handleSpeakSentence,
         handleClearSentence,
+        handleRemoveLast,
         resetCommunicationState,
         communicationCategories,
     };

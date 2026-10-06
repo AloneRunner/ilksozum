@@ -10,7 +10,7 @@ import { beceriBul, type BeceriId, type BeceriOge } from '../../data/beceriMenu.
 // Lazy load all screens
 const ProfileSelectionScreen = lazy(() => import('../ProfileSelectionScreen.tsx'));
 const MainMenuScreen = lazy(() => import('../MainMenuScreen.tsx'));
-const CommunicationCardMenuScreen = lazy(() => import('../CommunicationCardMenuScreen.tsx'));
+const IfadeTahtasi = lazy(() => import('../IfadeTahtasi.tsx'));
 const SoundImitationMenuScreen = lazy(() => import('../SoundImitationMenu.tsx'));
 const SoundImitationScreen = lazy(() => import('../SoundImitationScreen.tsx'));
 const SoundImitationVideoScreen = lazy(() => import('../SoundImitationVideoScreen.tsx'));
@@ -34,7 +34,6 @@ const PrivacyPolicyScreen = lazy(() => import('../PrivacyPolicyScreen.tsx'));
 const AchievementsScreen = lazy(() => import('../AchievementsScreen.tsx'));
 const ParentReportScreen = lazy(() => import('../ParentReportScreen.tsx'));
 const BannedImagesScreen = lazy(() => import('../BannedImagesScreen.tsx'));
-const CommunicationCardDetailScreen = lazy(() => import('../CommunicationCardDetailScreen.tsx'));
 const ObjectCategoriesMenuScreen = lazy(() => import('../ObjectCategoriesMenuScreen.tsx'));
 const SequencingStoryScreen = lazy(() => import('../SequencingStoryScreen.tsx'));
 const BasaraLessonMapScreen = lazy(() => import('../basara/BasaraLessonMapScreen.tsx'));
@@ -47,7 +46,6 @@ const ShapeColoringScreen = lazy(() => import('../ShapeColoringScreen.tsx'));
 const RhythmFollowingScreen = lazy(() => import('../RhythmFollowingScreen.tsx'));
 const LetterTracingScreen = lazy(() => import('../LetterTracingScreen.tsx'));
 const ConstrainedColoringScreen = lazy(() => import('../ConstrainedColoringScreen.tsx'));
-const CommunicationSubCategoryScreen = lazy(() => import('../CommunicationSubCategoryScreen.tsx'));
 const ParentTipsScreen = lazy(() => import('../ParentTipsScreen.tsx'));
 const ActivityManagementScreen = lazy(() => import('../ActivityManagementScreen.tsx'));
 const PrintPreviewScreen = lazy(() => import('../PrintPreviewScreen.tsx'));
@@ -807,22 +805,20 @@ export const AppRouter = () => {
         case ScreenState.ActivityManagement: return <ActivityManagementScreen onBack={() => setScreenState(ScreenState.Settings)} category={ctx.categoryToManage!} enabledActivities={ctx.profile.enabledActivitiesSet} onToggleActivity={ctx.profile.handleToggleActivityEnabled} onToggleCategory={ctx.profile.handleToggleCategoryEnabled} isPremium={ctx.settings.isPremium} showPremiumToast={ctx.toast.showPremiumToast} />;
 
         // Communication Flow
-        case ScreenState.CommunicationMenu: return <CommunicationCardMenuScreen categories={ctx.communication.communicationCategories} onSelectCategory={(cat) => {
-            ctx.communication.setSelectedCommCategory(cat);
-            ctx.communication.setSelectedCommSubCategory(null);
-            ctx.communication.setSentence([]);
-            if (cat.subCategories) setScreenState(ScreenState.CommunicationSubCategory);
-            else setScreenState(ScreenState.CommunicationDetail);
-        }} onBack={handleGoToMenu} theme={ctx.settings.theme} />;
-
-        case ScreenState.CommunicationSubCategory: return <CommunicationSubCategoryScreen category={ctx.communication.selectedCommCategory!} onSelectSubCategory={(sub) => {
-            ctx.communication.setSelectedCommSubCategory(sub);
-            setScreenState(ScreenState.CommunicationDetail);
-        }} onBack={() => setScreenState(ScreenState.CommunicationMenu)} />;
-
-        case ScreenState.CommunicationDetail: return <CommunicationCardDetailScreen subcategoryId={ctx.communication.selectedCommSubCategory?.id || ''} categoryTitle={ctx.communication.selectedCommSubCategory?.title || ctx.communication.selectedCommCategory!.title} categoryColor={ctx.communication.selectedCommCategory!.color} cards={ctx.communication.selectedCommSubCategory?.cards || ctx.communication.selectedCommCategory!.cards!} onBack={() => ctx.communication.selectedCommCategory?.subCategories ? setScreenState(ScreenState.CommunicationSubCategory) : setScreenState(ScreenState.CommunicationMenu)} sentence={ctx.communication.sentence} onCardClick={ctx.communication.handleCardClick} onSpeakSentence={ctx.communication.handleSpeakSentence} onClearSentence={ctx.communication.handleClearSentence} isPremium={ctx.settings.isPremium} printPool={ctx.print.printPool} onTogglePrintPool={ctx.print.handleTogglePrintPool} />;
-
-
+        // İfade Tahtası: kategoriler, alt kategoriler ve kartlar tek ekranda (eski 3 basamaklı akış yerine)
+        case ScreenState.CommunicationMenu: return <IfadeTahtasi
+            categories={ctx.communication.communicationCategories}
+            sentence={ctx.communication.sentence}
+            onCardClick={ctx.communication.handleCardClick}
+            onSpeakSentence={ctx.communication.handleSpeakSentence}
+            onClearSentence={ctx.communication.handleClearSentence}
+            onRemoveLast={ctx.communication.handleRemoveLast}
+            onBack={handleGoToMenu}
+            isPremium={ctx.settings.isPremium}
+            printPool={ctx.print.printPool}
+            onTogglePrintPool={ctx.print.handleTogglePrintPool}
+            profilId={ctx.profile.activeProfile?.id}
+        />;
 
         // Print Flow
         case ScreenState.PrintPool: return <PrintPoolScreen

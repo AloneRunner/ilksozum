@@ -472,6 +472,8 @@ export interface CommunicationCard {
   imageId?: number; // Optional imageId for cards with real images
   audioKey: string;
   categoryColor?: string;
+  emoji?: string;   // Hızlı kelimeler (istiyorum, ver, daha...) için
+  fiil?: boolean;   // Cümlede sona gider: "İstiyorum" + "Elma" → "Elma istiyorum"
 }
 
 export interface CommunicationSubCategory {

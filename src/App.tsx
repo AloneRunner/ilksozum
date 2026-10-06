@@ -86,7 +86,7 @@ export default function App(): React.ReactNode {
   , [profile.activeProfile, appCore.screenState]);
 
   const showPrintPoolButton = useMemo(() =>
-    settings.isPremium && [ScreenState.CommunicationDetail, ScreenState.ObjectCategoriesMenu, ScreenState.ObjectCategoriesIntlMenu, ScreenState.PrintSelectionDetail].includes(appCore.screenState)
+    settings.isPremium && [ScreenState.CommunicationMenu, ScreenState.ObjectCategoriesMenu, ScreenState.ObjectCategoriesIntlMenu, ScreenState.PrintSelectionDetail].includes(appCore.screenState)
   , [settings.isPremium, appCore.screenState]);
 
   return (
