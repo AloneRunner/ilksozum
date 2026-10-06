@@ -423,5 +423,345 @@
     "category": "Mekanlar & Odalar",
     "color": "yeşil",
     "sahne": true
+  },
+  {
+    "ad": "lego",
+    "word": "lego",
+    "category": "Oyuncaklar",
+    "color": "karışık"
+  },
+  {
+    "ad": "ahsap-bloklar",
+    "word": "bloklar",
+    "category": "Oyuncaklar",
+    "color": "kahverengi"
+  },
+  {
+    "ad": "boyama-yapmak",
+    "word": "boyama yapmak",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "rahat",
+    "word": "rahat",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "yardim-istiyorum",
+    "word": "yardım istiyorum",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "ders-dinlemek",
+    "word": "ders dinlemek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "spor-salonu",
+    "word": "spor salonu",
+    "category": "Mekanlar & Odalar",
+    "color": "kahverengi",
+    "sahne": true
+  },
+  {
+    "ad": "oyuna-katilmak",
+    "word": "oyununa katılabilir miyim",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "yuruyen-asker",
+    "word": "asker",
+    "category": "none"
+  },
+  {
+    "ad": "kahve",
+    "word": "kahve",
+    "category": "none"
+  },
+  {
+    "ad": "tac",
+    "word": "taç",
+    "category": "none"
+  },
+  {
+    "ad": "futbol-topu",
+    "word": "futbol topu",
+    "category": "none"
+  },
+  {
+    "ad": "orman",
+    "word": "orman",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "dus-basligi",
+    "word": "duş başlığı",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "surahi",
+    "word": "sürahi",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "ziplamak",
+    "word": "zıplamak",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "salincak",
+    "word": "salıncakta sallanmak",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "resim",
+    "word": "resim",
+    "category": "none"
+  },
+  {
+    "ad": "boyama",
+    "word": "boyama",
+    "category": "none"
+  },
+  {
+    "ad": "hediye-kutusu",
+    "word": "hediye kutusu",
+    "category": "none"
+  },
+  {
+    "ad": "pecete",
+    "word": "peçete",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "havlu",
+    "word": "havlu",
+    "category": "none"
+  },
+  {
+    "ad": "hali",
+    "word": "halı",
+    "category": "none"
+  },
+  {
+    "ad": "kopek-kulubesi",
+    "word": "köpek kulübesi",
+    "category": "none"
+  },
+  {
+    "ad": "kus-yuvasi",
+    "word": "kuş yuvası",
+    "category": "none"
+  },
+  {
+    "ad": "dondurma",
+    "word": "dondurma",
+    "category": "none"
+  },
+  {
+    "ad": "iribas",
+    "word": "iribaş",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "sandvic-malzemeleri",
+    "word": "sandviç malzemeleri",
+    "category": "none"
+  },
+  {
+    "ad": "kirik-vazo",
+    "word": "kırık vazo",
+    "category": "none"
+  },
+  {
+    "ad": "kup",
+    "word": "küp",
+    "category": "none"
+  },
+  {
+    "ad": "insaat-iscisi",
+    "word": "inşaat işçisi",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "giyinmek",
+    "word": "giyinmek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "selam-vermek",
+    "word": "selam vermek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "paylasmak",
+    "word": "paylaşmak",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "tesekkur",
+    "word": "teşekkür etmek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "yurumek",
+    "word": "yürümek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "tirmanmak",
+    "word": "tırmanmak",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "ozur-dilemek",
+    "word": "özür dilemek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "sirada-beklemek",
+    "word": "sırada beklemek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "su-icen",
+    "word": "su içmek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "heyecanli",
+    "word": "heyecanlı",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "sakin",
+    "word": "sakin",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "kizgin",
+    "word": "kızgın",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "utanmis",
+    "word": "utanmış",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "sikilmis",
+    "word": "sıkılmış",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "resim-yapan",
+    "word": "resim yapmak",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "yuzmek",
+    "word": "yüzmek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "muzik-dinlemek",
+    "word": "müzik dinlemek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "dans",
+    "word": "dans etmek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "el-yikamak",
+    "word": "el yıkamak",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "el-sikismak",
+    "word": "el sıkışmak",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "yardim-etmek",
+    "word": "yardım etmek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "konusmak",
+    "word": "konuşmak",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "dinlemek",
+    "word": "dinlemek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "bisiklet-suren",
+    "word": "bisiklet sürmek",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "top-oynayan",
+    "word": "top oynamak",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "oyun-oynamak-istiyorum",
+    "word": "oyun oynamak istiyorum",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "disari-cikmak-isteyen",
+    "word": "dışarı çıkmak istiyorum",
+    "category": "none",
+    "sahne": true
+  },
+  {
+    "ad": "parka-gitmek-istiyorum",
+    "word": "parka gitmek istiyorum",
+    "category": "none",
+    "sahne": true
   }
 ]

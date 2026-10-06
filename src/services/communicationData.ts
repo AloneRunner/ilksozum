@@ -158,12 +158,12 @@ export const communicationCategories: CommunicationCategory[] = [
         createCardFromImage(864, 'Hoşça kal'), createCardFromImage(768, 'Teşekkür etmek'), createCardFromImage(772, 'Özür dilemek'),
         createCardFromImage(800, 'Sarılmak'), createCardFromImage(821, 'El sıkışmak'), createCardFromImage(822, 'Yardım etmek'),
         createCardFromImage(767, 'Paylaşmak'), createCardFromImage(773, 'Sırada beklemek'),
-        createManualCard('oyuna_katilabilir_miyim', 'Oyununa katılabilir miyim?', 658), createCardFromImage(863, 'Seni seviyorum'),
+        createManualCard('oyuna_katilabilir_miyim', 'Oyununa katılabilir miyim?', 9076), createCardFromImage(863, 'Seni seviyorum'),
       ]},
       { id: 'sanatsal', title: 'Sanatsal ve Yaratıcı', imageId: 795, cards: [
         createCardFromImage(795, 'Resim yapmak'), createCardFromImage(876, 'Şarkı söylemek'), createCardFromImage(817, 'Müzik dinlemek'),
-        createCardFromImage(818, 'Dans etmek'), createCardFromImage(775, 'Kitap okumak'), createCardFromImage(795, 'Boyama yapmak'),
-        createCardFromImage(66, 'Lego oynamak'), createCardFromImage(161, 'Film izlemek'),
+        createCardFromImage(818, 'Dans etmek'), createCardFromImage(775, 'Kitap okumak'), createCardFromImage(9071, 'Boyama yapmak'),
+        createCardFromImage(9069, 'Lego oynamak'), createCardFromImage(161, 'Film izlemek'),
         // Yeni hobi / oyun kartları
         createCardFromImage(940, 'Kukla'), createCardFromImage(937, 'Tenis Raketi'),
       ]},
@@ -173,14 +173,14 @@ export const communicationCategories: CommunicationCategory[] = [
         createCardFromImage(904, 'Mola vermek istiyorum'),
         createCardFromImage(905, 'Parka gitmek istiyorum'),
         createCardFromImage(906, 'Gezmeye gitmek istiyorum'),
-        createManualCard('yardim_istiyorum', 'Yardım istiyorum', 822),
+        createManualCard('yardim_istiyorum', 'Yardım istiyorum', 9073),
       ]}
       ,
       // Yeni alt kategori: Okul Eylemleri
       { id: 'okul_eylemleri', title: 'Okul Eylemleri', imageId: 831, cards: [
         createCardFromImage(773, 'Sıraya girmek'),
         createCardFromImage(831, 'Parmak kaldırmak'),
-        createCardFromImage(824, 'Ders dinlemek'),
+        createCardFromImage(9074, 'Ders dinlemek'),
       ]}
     ]
   },
@@ -193,7 +193,7 @@ export const communicationCategories: CommunicationCategory[] = [
     subCategories: [
       { id: 'pozitif', title: 'Pozitif', imageId: 500, cards: [
         createCardFromImage(500, 'Mutlu'), createCardFromImage(779, 'Neşeli'), createCardFromImage(776, 'Heyecanlı'),
-        createManualCard('sakin', 'Sakin', 777), createCardFromImage(777, 'Rahat'), createCardFromImage(778, 'Gururlu'),
+        createManualCard('sakin', 'Sakin', 777), createCardFromImage(9072, 'Rahat'), createCardFromImage(778, 'Gururlu'),
         createManualCard('sevgi_dolu', 'Sevgi dolu', 800), createCardFromImage(503, 'Şaşırmış'), createManualCard('merakli', 'Meraklı', 503),
       ]},
       { id: 'negatif', title: 'Negatif', imageId: 501, cards: [
@@ -252,7 +252,7 @@ export const communicationCategories: CommunicationCategory[] = [
       ]},
       { id: 'okul_yer', title: 'Okul', imageId: 497, cards: [
         createCardFromImage(497, 'Okul'), createCardFromImage(883, 'Sınıf'), createCardFromImage(614, 'Kütüphane'),
-        createManualCard('kantin', 'Kantin', 851), createManualCard('okul_bahcesi', 'Okul Bahçesi', 850), createManualCard('spor_salonu', 'Spor Salonu', 826),
+        createManualCard('kantin', 'Kantin', 851), createManualCard('okul_bahcesi', 'Okul Bahçesi', 850), createManualCard('spor_salonu', 'Spor Salonu', 9075),
       ]},
       { id: 'dis_mekan', title: 'Dış Mekan', imageId: 505, cards: [
         createCardFromImage(505, 'Park'), createCardFromImage(879, 'Market'), createCardFromImage(852, 'Hastane'),
@@ -285,9 +285,9 @@ export const communicationCategories: CommunicationCategory[] = [
       ]},
       { id: 'oyun_esya', title: 'Oyun ve Hobi', imageId: 177, cards: [
         createCardFromImage(156, 'Top'), createCardFromImage(4, 'Oyuncak araba'), createCardFromImage(480, 'Yapboz'), 
-        createManualCard('bloklar', 'Bloklar', 66), createCardFromImage(276, 'Peluş oyuncak'), createCardFromImage(135, 'Uçurtma'),
+        createManualCard('bloklar', 'Bloklar', 9070), createCardFromImage(276, 'Peluş oyuncak'), createCardFromImage(135, 'Uçurtma'),
         createCardFromImage(221, 'Paten'), createCardFromImage(383, 'Kaykay'), createCardFromImage(109, 'Bebek'),
-        createManualCard('oyun_hamuru', 'Oyun hamuru', 66), createCardFromImage(940, 'Kukla'), createCardFromImage(937, 'Tenis Raketi'),
+        createManualCard('oyun_hamuru', 'Oyun hamuru', 9046), createCardFromImage(940, 'Kukla'), createCardFromImage(937, 'Tenis Raketi'),
       ]}
     ]
   },

@@ -15660,6 +15660,467 @@
       "tags": {
         "color": "yeşil"
       }
+    },
+    {
+      "id": 9069,
+      "kaynak": "nesne-yeni/lego.jpg",
+      "word": "lego",
+      "category": "Oyuncaklar",
+      "tags": {
+        "color": "karışık"
+      }
+    },
+    {
+      "id": 9070,
+      "kaynak": "nesne-yeni/ahsap-bloklar.jpg",
+      "word": "bloklar",
+      "category": "Oyuncaklar",
+      "tags": {
+        "color": "kahverengi"
+      }
+    },
+    {
+      "id": 9071,
+      "kaynak": "nesne-yeni/boyama-yapmak.jpg",
+      "word": "boyama yapmak",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9072,
+      "kaynak": "nesne-yeni/rahat.jpg",
+      "word": "rahat",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9073,
+      "kaynak": "nesne-yeni/yardim-istiyorum.jpg",
+      "word": "yardım istiyorum",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9074,
+      "kaynak": "nesne-yeni/ders-dinlemek.jpg",
+      "word": "ders dinlemek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9075,
+      "kaynak": "nesne-yeni/spor-salonu.jpg",
+      "word": "spor salonu",
+      "category": "Mekanlar & Odalar",
+      "sahne": true,
+      "tags": {
+        "color": "kahverengi"
+      }
+    },
+    {
+      "id": 9076,
+      "kaynak": "nesne-yeni/oyuna-katilmak.jpg",
+      "word": "oyununa katılabilir miyim",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9077,
+      "kaynak": "nesne-yeni/yuruyen-asker.jpg",
+      "word": "asker",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9078,
+      "kaynak": "nesne-yeni/kahve.jpg",
+      "word": "kahve",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9079,
+      "kaynak": "nesne-yeni/tac.jpg",
+      "word": "taç",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9080,
+      "kaynak": "nesne-yeni/futbol-topu.jpg",
+      "word": "futbol topu",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9081,
+      "kaynak": "nesne-yeni/orman.jpg",
+      "word": "orman",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9082,
+      "kaynak": "nesne-yeni/dus-basligi.jpg",
+      "word": "duş başlığı",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9083,
+      "kaynak": "nesne-yeni/surahi.jpg",
+      "word": "sürahi",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9084,
+      "kaynak": "nesne-yeni/ziplamak.jpg",
+      "word": "zıplamak",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9085,
+      "kaynak": "nesne-yeni/salincak.jpg",
+      "word": "salıncakta sallanmak",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9086,
+      "kaynak": "nesne-yeni/resim.jpg",
+      "word": "resim",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9087,
+      "kaynak": "nesne-yeni/boyama.jpg",
+      "word": "boyama",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9088,
+      "kaynak": "nesne-yeni/hediye-kutusu.jpg",
+      "word": "hediye kutusu",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9089,
+      "kaynak": "nesne-yeni/pecete.jpg",
+      "word": "peçete",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9090,
+      "kaynak": "nesne-yeni/havlu.jpg",
+      "word": "havlu",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9091,
+      "kaynak": "nesne-yeni/hali.jpg",
+      "word": "halı",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9092,
+      "kaynak": "nesne-yeni/kopek-kulubesi.jpg",
+      "word": "köpek kulübesi",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9093,
+      "kaynak": "nesne-yeni/kus-yuvasi.jpg",
+      "word": "kuş yuvası",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9094,
+      "kaynak": "nesne-yeni/dondurma.jpg",
+      "word": "dondurma",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9095,
+      "kaynak": "nesne-yeni/iribas.jpg",
+      "word": "iribaş",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9096,
+      "kaynak": "nesne-yeni/sandvic-malzemeleri.jpg",
+      "word": "sandviç malzemeleri",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9097,
+      "kaynak": "nesne-yeni/kirik-vazo.jpg",
+      "word": "kırık vazo",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9098,
+      "kaynak": "nesne-yeni/kup.jpg",
+      "word": "küp",
+      "category": "none",
+      "tags": {}
+    },
+    {
+      "id": 9099,
+      "kaynak": "nesne-yeni/insaat-iscisi.jpg",
+      "word": "inşaat işçisi",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9100,
+      "kaynak": "nesne-yeni/giyinmek.jpg",
+      "word": "giyinmek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9101,
+      "kaynak": "nesne-yeni/selam-vermek.jpg",
+      "word": "selam vermek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9102,
+      "kaynak": "nesne-yeni/paylasmak.jpg",
+      "word": "paylaşmak",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9103,
+      "kaynak": "nesne-yeni/tesekkur.jpg",
+      "word": "teşekkür etmek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9104,
+      "kaynak": "nesne-yeni/yurumek.jpg",
+      "word": "yürümek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9105,
+      "kaynak": "nesne-yeni/tirmanmak.jpg",
+      "word": "tırmanmak",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9106,
+      "kaynak": "nesne-yeni/ozur-dilemek.jpg",
+      "word": "özür dilemek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9107,
+      "kaynak": "nesne-yeni/sirada-beklemek.jpg",
+      "word": "sırada beklemek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9108,
+      "kaynak": "nesne-yeni/su-icen.jpg",
+      "word": "su içmek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9109,
+      "kaynak": "nesne-yeni/heyecanli.jpg",
+      "word": "heyecanlı",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9110,
+      "kaynak": "nesne-yeni/sakin.jpg",
+      "word": "sakin",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9111,
+      "kaynak": "nesne-yeni/kizgin.jpg",
+      "word": "kızgın",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9112,
+      "kaynak": "nesne-yeni/utanmis.jpg",
+      "word": "utanmış",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9113,
+      "kaynak": "nesne-yeni/sikilmis.jpg",
+      "word": "sıkılmış",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9114,
+      "kaynak": "nesne-yeni/resim-yapan.jpg",
+      "word": "resim yapmak",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9115,
+      "kaynak": "nesne-yeni/yuzmek.jpg",
+      "word": "yüzmek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9116,
+      "kaynak": "nesne-yeni/muzik-dinlemek.jpg",
+      "word": "müzik dinlemek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9117,
+      "kaynak": "nesne-yeni/dans.jpg",
+      "word": "dans etmek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9118,
+      "kaynak": "nesne-yeni/el-yikamak.jpg",
+      "word": "el yıkamak",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9119,
+      "kaynak": "nesne-yeni/el-sikismak.jpg",
+      "word": "el sıkışmak",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9120,
+      "kaynak": "nesne-yeni/yardim-etmek.jpg",
+      "word": "yardım etmek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9121,
+      "kaynak": "nesne-yeni/konusmak.jpg",
+      "word": "konuşmak",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9122,
+      "kaynak": "nesne-yeni/dinlemek.jpg",
+      "word": "dinlemek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9123,
+      "kaynak": "nesne-yeni/bisiklet-suren.jpg",
+      "word": "bisiklet sürmek",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9124,
+      "kaynak": "nesne-yeni/top-oynayan.jpg",
+      "word": "top oynamak",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9125,
+      "kaynak": "nesne-yeni/oyun-oynamak-istiyorum.jpg",
+      "word": "oyun oynamak istiyorum",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9126,
+      "kaynak": "nesne-yeni/disari-cikmak-isteyen.jpg",
+      "word": "dışarı çıkmak istiyorum",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
+    },
+    {
+      "id": 9127,
+      "kaynak": "nesne-yeni/parka-gitmek-istiyorum.jpg",
+      "word": "parka gitmek istiyorum",
+      "category": "none",
+      "sahne": true,
+      "tags": {}
     }
   ]
 }

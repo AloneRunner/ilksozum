@@ -9,24 +9,18 @@
   },
   "src/services/communicationData.ts": {
     "toplam": 36,
-    "yenisiVar": 34,
-    "eskiKalan": [
-      776,
-      795
-    ]
+    "yenisiVar": 36,
+    "eskiKalan": []
   },
   "src/services/database/activities/games/objectCollectorData.ts": {
     "toplam": 36,
-    "yenisiVar": 35,
-    "eskiKalan": [
-      47
-    ]
+    "yenisiVar": 36,
+    "eskiKalan": []
   },
   "src/services/database/activities/objects/enAnimalsData.ts": {
     "toplam": 23,
-    "yenisiVar": 21,
+    "yenisiVar": 22,
     "eskiKalan": [
-      47,
       349
     ]
   },
@@ -39,16 +33,10 @@
   },
   "src/services/database/activities/objects/enBuildingsData.ts": {
     "toplam": 10,
-    "yenisiVar": 8,
+    "yenisiVar": 9,
     "eskiKalan": [
-      533,
-      534
+      533
     ]
-  },
-  "src/services/database/activities/objects/enClothesAccessoriesData.ts": {
-    "toplam": 4,
-    "yenisiVar": 4,
-    "eskiKalan": []
   },
   "src/services/database/activities/objects/enClothesData.ts": {
     "toplam": 17,
@@ -66,10 +54,8 @@
   },
   "src/services/database/activities/objects/enFoodsData.ts": {
     "toplam": 25,
-    "yenisiVar": 24,
-    "eskiKalan": [
-      63
-    ]
+    "yenisiVar": 25,
+    "eskiKalan": []
   },
   "src/services/database/activities/objects/enFruitsData.ts": {
     "toplam": 12,
@@ -78,10 +64,9 @@
   },
   "src/services/database/activities/objects/enHomeData.ts": {
     "toplam": 27,
-    "yenisiVar": 24,
+    "yenisiVar": 25,
     "eskiKalan": [
       82,
-      439,
       735
     ]
   },
@@ -92,17 +77,10 @@
       82
     ]
   },
-  "src/services/database/activities/objects/enHouseholdItemsData.ts": {
-    "toplam": 4,
-    "yenisiVar": 4,
-    "eskiKalan": []
-  },
   "src/services/database/activities/objects/enKitchenData.ts": {
     "toplam": 15,
-    "yenisiVar": 14,
-    "eskiKalan": [
-      350
-    ]
+    "yenisiVar": 15,
+    "eskiKalan": []
   },
   "src/services/database/activities/objects/enMusicalInstrumentsData.ts": {
     "toplam": 10,
@@ -123,10 +101,8 @@
   },
   "src/services/database/activities/objects/enNaturalStructuresData.ts": {
     "toplam": 12,
-    "yenisiVar": 11,
-    "eskiKalan": [
-      242
-    ]
+    "yenisiVar": 12,
+    "eskiKalan": []
   },
   "src/services/database/activities/objects/enPeopleData.ts": {
     "toplam": 10,
@@ -138,10 +114,9 @@
   },
   "src/services/database/activities/objects/enPlacesData.ts": {
     "toplam": 11,
-    "yenisiVar": 9,
+    "yenisiVar": 10,
     "eskiKalan": [
-      198,
-      242
+      198
     ]
   },
   "src/services/database/activities/objects/enPlantsData.ts": {
@@ -161,14 +136,6 @@
     "yenisiVar": 7,
     "eskiKalan": [
       372
-    ]
-  },
-  "src/services/database/activities/objects/enSchoolOfficeData.ts": {
-    "toplam": 6,
-    "yenisiVar": 4,
-    "eskiKalan": [
-      902,
-      903
     ]
   },
   "src/services/database/activities/objects/enSpaceData.ts": {
@@ -208,15 +175,13 @@
   },
   "src/services/database/activities/qualities/bigSmallData.ts": {
     "toplam": 32,
-    "yenisiVar": 22,
+    "yenisiVar": 24,
     "eskiKalan": [
       2,
-      4,
       349,
       494,
       495,
       533,
-      534,
       554,
       571,
       762
@@ -224,21 +189,17 @@
   },
   "src/services/database/activities/qualities/bitterSweetData.ts": {
     "toplam": 20,
-    "yenisiVar": 19,
-    "eskiKalan": [
-      63
-    ]
+    "yenisiVar": 20,
+    "eskiKalan": []
   },
   "src/services/database/activities/qualities/brokenIntactData.ts": {
     "toplam": 26,
-    "yenisiVar": 15,
+    "yenisiVar": 17,
     "eskiKalan": [
       82,
       122,
       154,
       318,
-      465,
-      651,
       653,
       655,
       706,
@@ -248,12 +209,11 @@
   },
   "src/services/database/activities/qualities/cleanDirtyData.ts": {
     "toplam": 16,
-    "yenisiVar": 11,
+    "yenisiVar": 12,
     "eskiKalan": [
       3,
       60,
       82,
-      439,
       589
     ]
   },
@@ -309,9 +269,8 @@
   },
   "src/services/database/activities/qualities/hotColdData.ts": {
     "toplam": 21,
-    "yenisiVar": 17,
+    "yenisiVar": 18,
     "eskiKalan": [
-      63,
       261,
       440,
       466
@@ -332,13 +291,12 @@
   },
   "src/services/database/activities/qualities/kalabalikTenhaData.ts": {
     "toplam": 16,
-    "yenisiVar": 5,
+    "yenisiVar": 6,
     "eskiKalan": [
       104,
       193,
       194,
       198,
-      242,
       718,
       739,
       741,
@@ -399,11 +357,10 @@
   },
   "src/services/database/activities/qualities/oldNewData.ts": {
     "toplam": 26,
-    "yenisiVar": 11,
+    "yenisiVar": 12,
     "eskiKalan": [
       60,
       318,
-      465,
       570,
       572,
       573,
@@ -517,14 +474,13 @@
   },
   "src/services/database/activities/qualities/tembelCaliskanData.ts": {
     "toplam": 21,
-    "yenisiVar": 14,
+    "yenisiVar": 15,
     "eskiKalan": [
       348,
       349,
       388,
       675,
       676,
-      679,
       753
     ]
   },
@@ -540,11 +496,9 @@
   },
   "src/services/database/activities/qualities/thinThickData.ts": {
     "toplam": 22,
-    "yenisiVar": 13,
+    "yenisiVar": 15,
     "eskiKalan": [
       122,
-      409,
-      410,
       467,
       516,
       517,
@@ -581,11 +535,10 @@
   },
   "src/services/database/activities/qualities/youngOldData.ts": {
     "toplam": 17,
-    "yenisiVar": 13,
+    "yenisiVar": 14,
     "eskiKalan": [
       547,
       581,
-      583,
       584
     ]
   },
@@ -601,7 +554,7 @@
   },
   "src/services/database/activities/quantities/fewMuchData.ts": {
     "toplam": 16,
-    "yenisiVar": 5,
+    "yenisiVar": 6,
     "eskiKalan": [
       87,
       389,
@@ -609,7 +562,6 @@
       459,
       483,
       613,
-      715,
       739,
       741,
       742,
@@ -660,10 +612,8 @@
   },
   "src/services/database/activities/reasoning/causeEffectData.ts": {
     "toplam": 40,
-    "yenisiVar": 39,
-    "eskiKalan": [
-      651
-    ]
+    "yenisiVar": 40,
+    "eskiKalan": []
   },
   "src/services/database/activities/reasoning/colorRecognitionData.ts": {
     "toplam": 25,
@@ -687,85 +637,45 @@
   },
   "src/services/database/activities/reasoning/fiveWOneHData.ts": {
     "toplam": 180,
-    "yenisiVar": 171,
-    "eskiKalan": [
-      242,
-      300,
-      350,
-      403,
-      534,
-      776,
-      795,
-      825,
-      826
-    ]
-  },
-  "src/services/database/activities/reasoning/functionalMatchingData.ts": {
-    "toplam": 34,
-    "yenisiVar": 32,
-    "eskiKalan": [
-      402,
-      903
-    ]
+    "yenisiVar": 180,
+    "eskiKalan": []
   },
   "src/services/database/activities/reasoning/memoryCardsData.ts": {
-    "toplam": 12,
-    "yenisiVar": 10,
-    "eskiKalan": [
-      66,
-      68
-    ]
+    "toplam": 9,
+    "yenisiVar": 9,
+    "eskiKalan": []
   },
   "src/services/database/activities/reasoning/ownershipData.ts": {
     "toplam": 43,
-    "yenisiVar": 39,
+    "yenisiVar": 42,
     "eskiKalan": [
-      215,
-      235,
-      534,
       629
     ]
   },
   "src/services/database/activities/reasoning/patternCompletionData.ts": {
-    "toplam": 22,
-    "yenisiVar": 21,
-    "eskiKalan": [
-      66
-    ]
+    "toplam": 20,
+    "yenisiVar": 20,
+    "eskiKalan": []
   },
   "src/services/database/activities/reasoning/sequencingStoriesData.ts": {
     "toplam": 23,
-    "yenisiVar": 19,
-    "eskiKalan": [
-      401,
-      402,
-      583,
-      624
-    ]
+    "yenisiVar": 23,
+    "eskiKalan": []
   },
   "src/services/database/activities/reasoning/sudokuData.ts": {
-    "toplam": 5,
-    "yenisiVar": 3,
-    "eskiKalan": [
-      66,
-      68
-    ]
+    "toplam": 2,
+    "yenisiVar": 2,
+    "eskiKalan": []
   },
   "src/services/database/activities/reasoning/whatDoesntBelongData.ts": {
     "toplam": 72,
-    "yenisiVar": 68,
-    "eskiKalan": [
-      47,
-      66,
-      242,
-      903
-    ]
+    "yenisiVar": 72,
+    "eskiKalan": []
   },
   "src/services/database/activities/reasoning/whatsMissingData.ts": {
     "toplam": 39,
-    "yenisiVar": 37,
+    "yenisiVar": 38,
     "eskiKalan": [
-      47,
       87
     ]
   },
@@ -803,22 +713,19 @@
   },
   "src/services/database/activities/spatial/betweenData.ts": {
     "toplam": 8,
-    "yenisiVar": 2,
+    "yenisiVar": 3,
     "eskiKalan": [
       22,
       457,
       476,
       477,
-      624,
       632
     ]
   },
   "src/services/database/activities/spatial/highLowData.ts": {
     "toplam": 14,
-    "yenisiVar": 8,
+    "yenisiVar": 10,
     "eskiKalan": [
-      391,
-      392,
       495,
       571,
       611,
@@ -844,9 +751,8 @@
   },
   "src/services/database/activities/spatial/insideOutsideData.ts": {
     "toplam": 10,
-    "yenisiVar": 1,
+    "yenisiVar": 2,
     "eskiKalan": [
-      47,
       193,
       194,
       394,
@@ -887,82 +793,11 @@
       499
     ]
   },
-  "src/services/database/activities/spatialData.ts": {
-    "toplam": 91,
-    "yenisiVar": 27,
-    "eskiKalan": [
-      20,
-      21,
-      22,
-      47,
-      48,
-      49,
-      85,
-      86,
-      91,
-      97,
-      104,
-      160,
-      172,
-      173,
-      183,
-      193,
-      194,
-      391,
-      392,
-      394,
-      395,
-      450,
-      451,
-      452,
-      453,
-      454,
-      455,
-      457,
-      472,
-      473,
-      474,
-      475,
-      476,
-      477,
-      478,
-      482,
-      484,
-      485,
-      495,
-      499,
-      511,
-      513,
-      514,
-      515,
-      543,
-      544,
-      545,
-      547,
-      571,
-      611,
-      613,
-      616,
-      618,
-      620,
-      622,
-      624,
-      626,
-      628,
-      629,
-      630,
-      632,
-      717,
-      718,
-      719
-    ]
-  },
   "src/services/database/activities/temporalData.ts": {
     "toplam": 40,
-    "yenisiVar": 28,
+    "yenisiVar": 29,
     "eskiKalan": [
       12,
-      63,
       83,
       506,
       601,
@@ -977,12 +812,8 @@
   },
   "src/services/database/activities/yeni/ownershipData.ts": {
     "toplam": 29,
-    "yenisiVar": 26,
-    "eskiKalan": [
-      215,
-      235,
-      534
-    ]
+    "yenisiVar": 29,
+    "eskiKalan": []
   },
   "src/services/database/activities/yeni/sensesData.ts": {
     "toplam": 14,
@@ -991,12 +822,7 @@
   },
   "src/services/database/soundImitationImages.ts": {
     "toplam": 80,
-    "yenisiVar": 76,
-    "eskiKalan": [
-      774,
-      786,
-      825,
-      1001
-    ]
+    "yenisiVar": 80,
+    "eskiKalan": []
   }
 }
