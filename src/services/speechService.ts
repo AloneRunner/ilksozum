@@ -97,6 +97,14 @@ const stopCurrentEffect = () => {
     }
 };
 
+// Telaffuz düzeltmeleri (yalnız seslendirmede; ekrandaki yazı değişmez).
+// Kaan (2026-10-06): ses motoru tek başına "nine" kelimesini İngilizce 9 sanıp "nayn" okuyordu.
+// Görünmez hece işareti (U+00AD) kelimeyi İngilizceden ayırır, okunuş "ni-ne" kalır.
+const TELAFFUZ: Array<[RegExp, string]> = [
+    [/(^|[^a-zçğıöşü])(n)ine(?=$|[^a-zçğıöşü])/gi, '$1$2i­ne'],
+];
+const telaffuzDuzelt = (metin: string): string => TELAFFUZ.reduce((m, [re, yeni]) => m.replace(re, yeni), metin);
+
 /**
  * Speaks a given text using the appropriate TTS engine for the platform.
  * Returns a promise that resolves when the speech is finished.
@@ -107,6 +115,7 @@ export const speak = async (textToSpeak: string, overrideLang?: string): Promise
     if (isMuted || !textToSpeak) {
         return Promise.resolve();
     }
+    if (!overrideLang || overrideLang.startsWith('tr')) textToSpeak = telaffuzDuzelt(textToSpeak);
 
     // Dev: log the exact text spoken so F12 shows live TTS output (useful for i18n checks)
     try {
