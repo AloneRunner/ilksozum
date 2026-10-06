@@ -36,6 +36,13 @@ const SelectableCard: React.FC<{ card: CommunicationCard; onSelect: () => void; 
     );
 };
 
+// Kategori etiketi verilerde iki biçimde: eski kelimelerde başlık ("Giysiler & Aksesuarlar"), yenilerde kimlik
+// ("giysiler_aksesuarlar"). İkisini aynı anahtara indirger (Kaan, 2026-10-07: "Meyveler'de sadece incir var").
+const kategoriAnahtari = (s: string | undefined): string => (s || '')
+    .toLocaleLowerCase('tr-TR')
+    .replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u')
+    .replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+
 const PrintSelectionDetailScreen: React.FC<PrintSelectionDetailScreenProps> = ({
   category, onBack, onConfirmSelection, bannedImageIds, currentPrintPool
 }) => {
@@ -43,7 +50,8 @@ const PrintSelectionDetailScreen: React.FC<PrintSelectionDetailScreenProps> = ({
     const POOL_LIMIT = 9;
 
     const availableCards = useMemo(() => {
-        const itemsToPrint = imageData.filter(item => item.tags.category === category.id && !bannedImageIds.has(item.id));
+        const hedef = new Set([kategoriAnahtari(category.id), kategoriAnahtari(category.title)]);
+        const itemsToPrint = imageData.filter(item => hedef.has(kategoriAnahtari(item.tags.category)) && !bannedImageIds.has(item.id));
         const uniqueItems = Array.from(new Map(itemsToPrint.map(item => [item.word, item])).values());
 
         return uniqueItems.map(item => ({
