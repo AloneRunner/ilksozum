@@ -17,7 +17,9 @@ export interface ProgramAyar {
   bekleyenDegerlendirme?: boolean; // yerleştirme turu bitti, sonuç program ekranında hesaplanacak
 }
 
-const VARSAYILAN: ProgramAyar = { oturumUzunlugu: 7, kapaliKulvarlar: [], odak: null, bilinen: {}, yerlestirme: 'yok' };
+// Okuma varsayılan kapalı (Kaan, 2026-10-06): çocuğun yaşı bilinmiyor (3 de olabilir 10 da); okuma ayrı menüde.
+// Ebeveyn Program Modu > Ayarlar'dan açabilir.
+const VARSAYILAN: ProgramAyar = { oturumUzunlugu: 7, kapaliKulvarlar: ['okuma'], odak: null, bilinen: {}, yerlestirme: 'yok' };
 const anahtar = (profil?: string | null) => `program2_${profil || 'misafir'}`;
 
 export const ayarOku = (profil?: string | null): ProgramAyar => {

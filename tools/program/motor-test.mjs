@@ -40,7 +40,9 @@ ok(odak.filter((x) => x.kulvar === 'kavramlar').length >= 2, `odak kulvarı daha
 
 // 4) yerleştirme
 const y = m.yerlestirmeKur({}, a0, 'p1');
-ok(y.length === 6 && !y.some((x) => x.kulvar === 'el'), `tanıma turu 6 kulvar (el hariç) (${y.length})`);
+ok(y.length === 5 && !y.some((x) => x.kulvar === 'el' || x.kulvar === 'okuma'), `tanıma turu 5 kulvar (el ve okuma hariç) (${y.length})`);
+ok(!m.oturumKur({}, a0, 'p1').some((x) => x.kulvar === 'okuma'), 'okuma varsayılan kapalı: oturumda yok');
+ok(m.oturumKur({}, { ...a0, kapaliKulvarlar: [] }, 'p1', 3).length === 7, 'okuma açılınca oturum yine 7');
 const yStats = { [String(y[0].id)]: st(kayit(6, 6)), [String(y[1].id)]: st(kayit(2, 6)) };
 const d = m.yerlestirmeDegerlendir(yStats, { ...a0, yerlestirme: 'devam', yerlestirmeKuyrugu: y.map((x) => ({ id: x.id, kulvar: x.kulvar })) }, 'p1');
 ok(d.atlanan.length === 1 && d.atlanan[0] === y[0].kulvar, `iyi yapılan kulvar atlandı (${d.atlanan})`);

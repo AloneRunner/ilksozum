@@ -174,7 +174,8 @@ const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOd
               </div>
             </div>
             <div>
-              <div className="font-black text-slate-800 mb-2">Kulvarlar</div>
+              <div className="font-black text-slate-800 mb-1">Kulvarlar</div>
+              <p className="text-xs text-slate-500 mb-2">Okuma varsayılan olarak kapalı; çocuğunuz okumaya hazırsa açın. Harf ve okuma etkinlikleri her zaman Harfler ve Okuma menüsünde.</p>
               <div className="flex flex-wrap gap-2">
                 {KULVARLAR.map((k) => {
                   const acik = !ayar.kapaliKulvarlar.includes(k.id);

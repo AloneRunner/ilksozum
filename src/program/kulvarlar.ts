@@ -44,8 +44,8 @@ export const KULVARLAR: Kulvar[] = [
     ],
   },
   {
-    id: 'okuma', ad: 'Okuma', emoji: '🔤', seviyeler: [
-      { ad: 'Harfleri tanı', etkinlikler: [A.FindTheLetterInGrid, A.SoundPresence] },
+    id: 'okuma', ad: 'Okuma (isteğe bağlı)', emoji: '🔤', seviyeler: [
+      { ad: 'Harfleri tanı', etkinlikler: [A.FindTheLetterInGrid, A.SoundPresence, A.LetterTracing] },
       { ad: 'Sesleri bul', etkinlikler: [A.FindTheLetter, A.FindTheSoundInImage] },
       { ad: 'Hece ve hikâye', etkinlikler: [A.Syllabification, A.EmbeddedStory] },
     ],
@@ -53,7 +53,7 @@ export const KULVARLAR: Kulvar[] = [
   {
     id: 'el', ad: 'El Becerisi', emoji: '✋', seviyeler: [
       { ad: 'Çizgi ve boya', etkinlikler: [A.LineTracing, A.ShapeColoring] },
-      { ad: 'Harf ve kurallı boyama', etkinlikler: [A.LetterTracing, A.ConstrainedColoring] },
+      { ad: 'Kurallı boyama', etkinlikler: [A.ConstrainedColoring] },
     ],
   },
   {
