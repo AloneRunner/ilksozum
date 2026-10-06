@@ -4,6 +4,7 @@ import { trHangisi } from '../utils/trDil.ts';
 import { ConceptRound, ActivityType } from '../types.ts';
 import Card from './ui/Card.tsx';
 import SmartImage from './ui/SmartImage.tsx';
+import { organCizimi } from '../services/nesneGorsel.ts';
 import SpeakerIcon from './icons/SpeakerIcon.tsx';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { speak, playEffect } from '../services/speechService.ts';
@@ -2633,7 +2634,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         <LightBulbIcon className={`w-6 h-6 text-amber-600`} />
                         <span className={`text-xs font-bold text-amber-800 mt-1`}>{t('choice.hint')}</span>
                     </button>
-                    {(settings as any).handleToggleRealisticImages && (
+                    {(settings as any).handleToggleRealisticImages && roundData.options?.some(o => organCizimi(o.imageUrl, o.word)) && (
                         <button onClick={(settings as any).handleToggleRealisticImages} className={`flex flex-col items-center justify-center p-2 w-16 h-14 rounded-lg transition-colors text-center ${tas ? `${tas.kucukDugme} ${(settings as any).isRealisticImagesEnabled ? 'ring-4 ring-amber-300' : ''}` : (settings as any).isRealisticImagesEnabled ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label="Gerçekçi/Alternatif Görseller">
                             <svg className={`w-6 h-6 ${effectiveTheme.accent}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
@@ -2708,7 +2709,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                                 <span className={`text-xs sm-landscape:text-[10px] font-bold ${effectiveTheme.text} mt-1`}>{t('choice.hint')}</span>
                             </button>
                         )}
-                        {(settings as any).handleToggleRealisticImages && (
+                        {(settings as any).handleToggleRealisticImages && roundData.options?.some(o => organCizimi(o.imageUrl, o.word)) && (
                             <button onClick={(settings as any).handleToggleRealisticImages} className={`flex flex-col items-center justify-center p-2 w-20 sm-landscape:w-16 h-16 sm-landscape:h-14 rounded-lg transition-colors text-center ${tas ? `${tas.kucukDugme} ${(settings as any).isRealisticImagesEnabled ? 'ring-4 ring-amber-300' : ''}` : (settings as any).isRealisticImagesEnabled ? effectiveTheme.bg : (isCosmic ? 'bg-slate-900/50 hover:bg-slate-900/60 border border-sky-400/20' : 'bg-white/50 hover:bg-white/70 border border-slate-300/50')}`} aria-label="Gerçekçi/Alternatif Görseller">
                                 <svg className={`w-7 h-7 sm-landscape:w-6 sm-landscape:h-6 ${effectiveTheme.accent}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
