@@ -125,7 +125,8 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
         const isMobile = screenWidth < 600;
 
         // Fixed sizes that work well on mobile
-        const bubbleSize = isMobile ? 44 + Math.random() * 8 : 50 + Math.random() * 10; // 44-52px on mobile
+        // Çocuk parmağına uygun: telefonda 76-88px (eskiden tuval esnediği için küçük görünmüyordu)
+        const bubbleSize = isMobile ? 76 + Math.random() * 12 : 90 + Math.random() * 14;
 
         return {
             id,
@@ -297,16 +298,19 @@ const LetterBubblesGameScreen: React.FC<LetterBubblesGameScreenProps> = ({ onBac
 
     // Handle canvas resize
     useEffect(() => {
+        // Tuval ekrandaki kutusunun boyutunda olmalı; pencere boyutu verilince CSS ile esniyor, baloncuklar oval çıkıyordu
         const handleResize = () => {
-            if (canvasRef.current) {
-                canvasRef.current.width = window.innerWidth;
-                canvasRef.current.height = window.innerHeight;
-            }
+            const c = canvasRef.current;
+            if (!c) return;
+            const r = c.getBoundingClientRect();
+            if (r.width > 0 && r.height > 0) { c.width = Math.round(r.width); c.height = Math.round(r.height); }
         };
         handleResize();
+        const ro = typeof ResizeObserver !== 'undefined' && canvasRef.current ? new ResizeObserver(handleResize) : null;
+        if (ro && canvasRef.current) ro.observe(canvasRef.current);
         window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+        return () => { window.removeEventListener('resize', handleResize); ro?.disconnect(); };
+    }, [gameState]); // tuval oyun başlayınca ekrana gelir
 
     const handleBubbleClick = useCallback((clientX: number, clientY: number) => {
         const canvas = canvasRef.current;
