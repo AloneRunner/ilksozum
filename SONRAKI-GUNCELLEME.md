@@ -86,6 +86,18 @@ Play istatistiklerinde yabancı ülkelerden kullanıcılar da görünüyor. Ger�
   - Ayarlar → "Kayıtlı ses (Gökçe)" anahtarı.
 - Yazdırma: bir kategoriden kart seçip PDF almak. Düzeltme 9.1.1'de.
 
-## 7. Gece taraması sonuçları
+## 7. Gece taraması sonuçları (7 Ekim, 81 çalışma kâğıdı tek tek açıldı)
 
-(Aşağıya eklenecek.)
+- **Kırık ya da boş görsel:** 0. Bütün kâğıtlar açılıyor ve resimleri yükleniyor.
+  - Meyveler, Aile Üyeleri ve 🎨 boyama kâğıdı yavaş açılıyor (10 saniyeye kadar "Yükleniyor…").
+- **Hâlâ eski çizim kullanan 8 kâğıt.** Bu kelimelerin yeni fotoğrafı yok; eski çizimler yedeğe taşınmadığı için görünüyorlar:
+  - Hangisi Kayıp? (2)
+  - Ev Eşyaları (1)
+  - Oyuncaklar (2)
+  - Okul & Ofis Eşyaları (3)
+  - Aile Üyeleri (8)
+  - Meslekler (1)
+  - Yerler & Odalar (2)
+  - Vücudun Bölümleri (6; organlarda "Alternatif" çizim zaten bilerek duruyor)
+- Kâğıtta fotoğraf ile çizim karışık görünüyor. Bölüm 4'teki karar (yazıcı dostu tarz) verilince bunlar da tek tarza getirilmeli.
+
