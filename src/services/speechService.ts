@@ -141,13 +141,20 @@ function kayitDurdur() {
 }
 
 /** Metnin tamamı ya da cümlelerinin hepsi kayıtlıysa dosya listesi ("Aferin! Bu kalem kalın." → 2 kayıt). */
+const kayitBul = (metin: string): string | undefined => {
+    const k = kayitAnahtari(metin);
+    return SES_KAYITLARI[k] || SES_KAYITLARI[k.replace(/[.!?,]+$/, '')];
+};
+/** Metnin Gökçe kaydı var mı (İfade Tahtası cümlesi gibi parça parça okumalar için). */
+export const kayitVarMi = (metin: string): boolean => kayitliSesAcik && !!kayitBul(metin);
+
 const kayitliDosyalar = (metin: string): string[] | null => {
-    const tam = SES_KAYITLARI[kayitAnahtari(metin)];
+    const tam = kayitBul(metin);
     if (tam) return [tam];
     const parcalar = (metin.match(/[^.!?]+[.!?]*/g) || []).map((p) => p.trim()).filter(Boolean);
     if (parcalar.length < 2) return null;
-    const dosyalar = parcalar.map((p) => SES_KAYITLARI[kayitAnahtari(p)]);
-    return dosyalar.every(Boolean) ? dosyalar : null;
+    const dosyalar = parcalar.map((p) => kayitBul(p));
+    return dosyalar.every(Boolean) ? (dosyalar as string[]) : null;
 };
 
 /** Kayıtları sırayla çalar; çalınamazsa false döner (cihaz sesine düşülür). */

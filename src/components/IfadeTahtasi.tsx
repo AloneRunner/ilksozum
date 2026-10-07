@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { CommunicationCard, CommunicationCategory } from '../types.ts';
 import { imageData } from '../services/database/imageData.ts';
@@ -41,6 +41,7 @@ const KATEGORI_EMOJI: Record<string, string> = {
 };
 // İlk açılışta (henüz sayaç yokken) sık kullanılanlar
 const VARSAYILAN_SIK = ['su', 'süt', 'elma', 'muz', 'ekmek', 'yemek yemek', 'tuvalete gitmek', 'uyumak', 'anne', 'baba', 'sarılmak', 'oyun oynamak istiyorum', 'parka gitmek istiyorum', 'dışarı çıkmak istiyorum', 'mola vermek istiyorum', 'yardım istiyorum'];
+const SIK_SAYI = 16;
 const BOYUT = { buyuk: 'grid-cols-2 landscape:grid-cols-4', orta: 'grid-cols-3 landscape:grid-cols-5', kucuk: 'grid-cols-4 landscape:grid-cols-7' } as const;
 type Boyut = keyof typeof BOYUT;
 
@@ -84,14 +85,22 @@ const IfadeTahtasi: React.FC<Props> = ({ categories, sentence, onCardClick, onSp
     return m;
   }, [categories]);
 
-  const sikKullanilan = useMemo(() => {
-    const sirali = Object.entries(sayac).sort((a, b) => b[1] - a[1]).map(([id]) => tumKartlar.get(id)).filter(Boolean) as CommunicationCard[];
-    if (sirali.length >= 12) return sirali.slice(0, 16);
+  // Sık kullanılanlar SABİT yerde durur (Kaan, 2026-10-07: "yeri değişiyor, çocuğun aklı karışmaz mı?").
+  // AAC'de kartın hep aynı yerde olması önemli: çocuk konumu ezberler (motor planlama).
+  // Yeni kart boş yere eklenir; doluysa yalnız çok kullanılan yeni kart, en az kullanılanın YERİNE geçer.
+  const siraAnahtar = `ifade_sira_v1_${profilId || 'misafir'}`;
+  const [sira, setSira] = useState<string[] | null>(() => oku<string[] | null>(siraAnahtar, null));
+  const ilkSira = useMemo(() => {
+    const sirali = Object.entries(sayac).sort((a, b) => b[1] - a[1]).map(([id]) => id).filter((id) => tumKartlar.has(id));
     const ek = VARSAYILAN_SIK
-      .map((v) => [...tumKartlar.values()].find((c) => c.text.toLocaleLowerCase('tr-TR') === v))
-      .filter((c): c is CommunicationCard => !!c && !sirali.some((s) => s.id === c.id));
-    return [...sirali, ...ek].slice(0, 16);
-  }, [sayac, tumKartlar]);
+      .map((v) => [...tumKartlar.values()].find((c) => c.text.toLocaleLowerCase('tr-TR') === v)?.id)
+      .filter((id): id is string => !!id && !sirali.includes(id));
+    return [...sirali, ...ek].slice(0, SIK_SAYI);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tumKartlar]);
+  const aktifSira = sira ?? ilkSira;
+  useEffect(() => { if (!sira && ilkSira.length) { setSira(ilkSira); yaz(siraAnahtar, ilkSira); } }, [sira, ilkSira, siraAnahtar]);
+  const sikKullanilan = useMemo(() => aktifSira.map((id) => tumKartlar.get(id)).filter(Boolean) as CommunicationCard[], [aktifSira, tumKartlar]);
 
   const kategori = categories.find((k) => k.id === katId);
   const altlar = kategori?.subCategories || [];
@@ -104,6 +113,17 @@ const IfadeTahtasi: React.FC<Props> = ({ categories, sentence, onCardClick, onSp
     if (!c.id.startsWith('hz_')) {
       const yeni = { ...sayac, [c.id]: (sayac[c.id] || 0) + 1 };
       setSayac(yeni); yaz(sayacAnahtar, yeni);
+      if (!aktifSira.includes(c.id)) {
+        const y = [...aktifSira];
+        if (y.length < SIK_SAYI) y.push(c.id);
+        else {
+          let enAz = 0;
+          y.forEach((id, i) => { if ((yeni[id] || 0) < (yeni[y[enAz]] || 0)) enAz = i; });
+          // tek dokunuşla yer kapmasın: en az 3 kez kullanılmış ve en azdan çok kullanılmış olmalı
+          if (yeni[c.id] >= 3 && yeni[c.id] > (yeni[y[enAz]] || 0)) y[enAz] = c.id;
+        }
+        if (y.join() !== aktifSira.join()) { setSira(y); yaz(siraAnahtar, y); }
+      }
     }
   };
   const boyutDegistir = () => {

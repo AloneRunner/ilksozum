@@ -1,7 +1,7 @@
 
 import { useState, useCallback } from 'react';
 import { CommunicationCard, CommunicationCategory, CommunicationSubCategory } from '../types.ts';
-import { speak } from '../services/speechService.ts';
+import { kayitVarMi, speak } from '../services/speechService.ts';
 import { getCurrentLanguage } from '../i18n/index.ts';
 import { translateLabel } from '../utils/translate.ts';
 import { communicationCategories } from '../services/communicationData.ts';
@@ -25,9 +25,10 @@ export const useCommunication = () => {
 
     const handleSpeakSentence = useCallback(() => {
         const lang = getCurrentLanguage();
-        const textToSpeak = sentence
-            .map(card => (lang === 'tr' ? card.text : translateLabel(card.text, lang)))
-            .join(' ');
+        const parcalar = sentence.map(card => (lang === 'tr' ? card.text : translateLabel(card.text, lang)));
+        // Her kartın Gökçe kaydı varsa kartları sırayla kayıttan oku (kart ile cümle aynı sesle duyulsun)
+        if (lang === 'tr' && parcalar.length > 1 && parcalar.every(kayitVarMi)) { speak(parcalar.join('. ') + '.'); return; }
+        const textToSpeak = parcalar.join(' ');
         if (textToSpeak) speak(textToSpeak);
     }, [sentence]);
 
