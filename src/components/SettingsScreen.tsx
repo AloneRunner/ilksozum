@@ -1098,7 +1098,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
   {/* Çocuk Modu ve Hatasız Öğrenme kaldırıldı */}
           <SettingsRow
             title="Kayıtlı ses (Gökçe)"
-            subtitle="Övgüler, BASARA, Ses Taklit ve bazı kavramlar gerçek bir sesle okunur; diğerleri cihaz sesiyle. Kayıtlar bütçe elverdikçe artacak. Kapalıysa her şey cihaz sesiyle okunur."
+            subtitle="Övgüler, hece okuma dersleri, Ses Taklit ve bazı kavramlar gerçek bir sesle okunur; diğerleri cihaz sesiyle. Kayıtlar bütçe elverdikçe artacak. Kapalıysa her şey cihaz sesiyle okunur."
             isThemed={isThemed} themeVariant={themeVariant}
           >
             <ToggleSwitch isEnabled={kayitliSes} onToggle={() => setKayitliSesAyar(v => !v)} themeVariant={themeVariant} />

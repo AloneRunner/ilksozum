@@ -136,10 +136,10 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
           <>
             {/* Duyurular 9.1 (Kaan, 2026-10-08: "gizli duyuruları da güncelleyelim") */}
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>YENİ — Gökçe'nin sesi:</b> BASARA, kavramlar, İfade Tahtası, Ses Taklit ve oyunlar artık gerçek bir insan sesiyle konuşuyor. İsterseniz <b>Ayarlar › Kayıtlı ses</b> ile telefonun sesine dönebilirsiniz.
+              <b>YENİ — Gökçe'nin sesi:</b> Hece okuma dersleri, kavramlar, İfade Tahtası, Ses Taklit ve oyunlar artık gerçek bir insan sesiyle konuşuyor. İsterseniz <b>Ayarlar › Kayıtlı ses</b> ile telefonun sesine dönebilirsiniz.
             </p>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>YENİ — Ağzımı İzle:</b> Konuşan yüz, sesleri ve ilk kelimeleri dudak hareketiyle gösteriyor (<b>Konuşma ve Anlama</b> menüsü). BASARA derslerinde de var.
+              <b>YENİ — Ağzımı İzle:</b> Konuşan yüz, sesleri ve ilk kelimeleri dudak hareketiyle gösteriyor (<b>Konuşma ve Anlama</b> menüsü). Hece okuma derslerinde de var.
             </p>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
               <b>YENİ — Program Modu:</b> Beceri alanlarına göre günlük plan, ilk girişte tanıma turu, unutulmasın diye tekrar ve sonunda ödül oyunu.
@@ -176,7 +176,7 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
         ) : (
           <>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>NEW:</b> Real human voice (Gökçe) for BASARA, concepts, the communication board and games; a talking face that shows mouth movements (“Watch My Mouth”); a new Program Mode; and rebuilt games. İlk Sözüm is <b>completely free and ad-free.</b>
+              <b>NEW:</b> Real human voice (Gökçe) for syllable reading lessons, concepts, the communication board and games; a talking face that shows mouth movements (“Watch My Mouth”); a new Program Mode; and rebuilt games. İlk Sözüm is <b>completely free and ad-free.</b>
             </p>
             {androidUygulama && (
               <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
@@ -277,7 +277,7 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
       ? { id: "objectCategoriesIntl", emoji: "🍎", label: t("categories.objectsIntl.title") || "Objects", icon: BasketIcon, title: t("categories.objectsIntl.title") || "Objects", subtitle: t("categories.objectsIntl.subtitle") || "Animals, fruits and more", color: "amber", grad: "from-amber-300 to-orange-400", hex: "#f59e0b" }
       : { id: "objectCategories", emoji: "🍎", label: "Kelimeler", icon: BasketIcon, title: "Kelimeler", subtitle: "Hayvanlar, meyveler, eşyalar: nesneleri tanı", color: "amber", grad: "from-amber-300 to-orange-400", hex: "#f59e0b" },
     { id: "conceptActivities", emoji: "💡", label: "Kavramlar", icon: SparklesIcon, title: "Kavramlar", subtitle: "Renk, boyut, konum, miktar, zaman ve daha fazlası", color: "teal", grad: "from-teal-300 to-emerald-400", hex: "#14b8a6" },
-    { id: "harfler", emoji: "🔤", label: "Harfler ve Okuma", icon: StoryIcon, title: "Harfler ve Okuma", subtitle: "Harf, ses, hece, BASARA", color: "sky", grad: "from-sky-300 to-blue-400", hex: "#3b82f6" },
+    { id: "harfler", emoji: "🔤", label: "Harfler ve Okuma", icon: StoryIcon, title: "Harfler ve Okuma", subtitle: "Harf, ses, hece, okuma", color: "sky", grad: "from-sky-300 to-blue-400", hex: "#3b82f6" },
     { id: "sayilar", emoji: "🔢", label: "Sayılar", icon: NumberIcon, title: "Sayılar", subtitle: "Say, eşle, sırala", color: "lime", grad: "from-lime-300 to-green-400", hex: "#22c55e" },
     { id: "dusunme", emoji: "🧠", label: "Düşünme ve Hafıza", icon: BrainIcon, title: "Düşünme ve Hafıza", subtitle: "Hangisi farklı, hafıza, sıralama, örüntü", color: "indigo", grad: "from-indigo-300 to-violet-400", hex: "#6366f1" },
     { id: "el", emoji: "✋", label: "El Becerisi", icon: HandIcon, title: "El Becerisi", subtitle: "Çizgi, boyama, labirent, yapboz", color: "rose", grad: "from-rose-300 to-pink-400", hex: "#f43f5e" },
