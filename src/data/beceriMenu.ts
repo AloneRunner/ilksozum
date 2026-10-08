@@ -43,7 +43,6 @@ export const BECERILER: Beceri[] = [
       o('letterBubbles', '🫧', 'Harf Baloncukları', 'Söylenen harfi bul'),
       o('syllableTrain', '🚃', 'Hece Treni', 'Heceleri birleştir'),
       o('wordBox', '📦', 'Kelime Kutusu', 'Resmi kelimeyle eşle'),
-      e(ActivityType.Hangman, '🎈', 'Adam Asmaca', 'Kelimeyi tahmin et'),
     ],
   },
   {
@@ -75,7 +74,6 @@ export const BECERILER: Beceri[] = [
       e(ActivityType.Sudoku, '🧩', 'Görsel Sudoku', 'Eksik parçayı tamamla'),
       o('shadowMatch', '🔦', 'Gölge Eşleştirme', 'Gölge kime ait?'),
       o('whereBelongs', '🏠', 'Nereye Ait?', 'Eşyayı doğru odaya koy'),
-      e(ActivityType.ObjectCollector, '🧺', 'Nesne Toplama', 'Doğru nesneleri sepete topla'),
       e(ActivityType.DragAndDropPositioning, '📍', 'Nesneyi Yerleştir', 'Nesneyi söylenen yere koy'),
     ],
   },

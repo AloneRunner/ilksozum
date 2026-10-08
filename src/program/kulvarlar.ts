@@ -40,7 +40,7 @@ export const KULVARLAR: Kulvar[] = [
     id: 'dusunme', ad: 'Düşünme ve Hafıza', emoji: '🧠', seviyeler: [
       { ad: 'Aynı ve farklı', etkinlikler: [A.AyniniBul, A.WhatDoesntBelong, A.MemoryCards] },
       { ad: 'Hafıza ve örüntü', etkinlikler: [A.WhatsMissing, A.PatternCompletion, A.DragAndDropPositioning] },
-      { ad: 'Sıralama ve mantık', etkinlikler: [A.SequencingStories, A.Sudoku, A.ObjectCollector] },
+      { ad: 'Sıralama ve mantık', etkinlikler: [A.SequencingStories, A.Sudoku] },
     ],
   },
   {

@@ -198,10 +198,12 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
         return false; // No more activities in the queue
     }, [startSpecificRandomActivity, setActivityStats]);
     
+    // Menüden kaldırılanlar (Kaan, 2026-10-08): Adam Asmaca okuma ister ve adam çizer; Nesne Toplama süre + can baskısı
+    const KALDIRILAN = new Set<ActivityType>([ActivityType.Hangman, ActivityType.ObjectCollector]);
     const handleStartRandomMode = useCallback(async () => {
         const lang = getCurrentLanguage();
         const availableToPlay = ALL_SUB_ACHIEVEMENTS
-            .filter(sa => enabledActivitiesSet.has(String(sa.id)) && sa.id !== ActivityType.EmbeddedStory)
+            .filter(sa => enabledActivitiesSet.has(String(sa.id)) && sa.id !== ActivityType.EmbeddedStory && !KALDIRILAN.has(sa.id as ActivityType))
             // Guard: allow letter activities for tr/de/az/en/fr/nl only
             .filter(sa => {
                 if (sa.category !== ActivityCategory.LetterSound) return true;
