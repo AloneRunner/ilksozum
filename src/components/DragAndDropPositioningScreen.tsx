@@ -178,9 +178,15 @@ const DragAndDropPositioningScreen: React.FC<DragAndDropPositioningScreenProps> 
                         <div />
                         <Zone position="solunda" gridClass="col-start-1 row-start-2" />
                         <div className="relative col-start-2 row-start-2">
-                            <div className="absolute inset-0 bg-amber-300 rounded-2xl flex items-center justify-center shadow-lg">
-                                            <span className="font-bold text-white text-xl landscape:text-base">{t('reasoning.activities.dragAndDropPositioning.boxLabel', currentLang === 'tr' ? 'KUTU' : 'BOX')}</span>
-                            </div>
+                            {/* Karton kutu çizimi (Kaan, 2026-10-08: "KUTU" yazısı yerine gerçek kutu görünümü) */}
+                            <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full drop-shadow-lg" aria-label={t('reasoning.activities.dragAndDropPositioning.boxLabel', 'Kutu')}>
+                                <path d="M14 36 L50 24 L86 36 L50 48 Z" fill="#7c4a1e" />
+                                <path d="M14 36 L50 48 L50 92 L14 80 Z" fill="#c98a4b" stroke="#8a5a2b" strokeWidth="1.5" strokeLinejoin="round" />
+                                <path d="M86 36 L50 48 L50 92 L86 80 Z" fill="#b5763a" stroke="#8a5a2b" strokeWidth="1.5" strokeLinejoin="round" />
+                                <path d="M14 36 L2 24 L38 12 L50 24 Z" fill="#d9a066" stroke="#8a5a2b" strokeWidth="1.5" strokeLinejoin="round" />
+                                <path d="M86 36 L98 24 L62 12 L50 24 Z" fill="#cf9455" stroke="#8a5a2b" strokeWidth="1.5" strokeLinejoin="round" />
+                                <path d="M24 60 L40 66" stroke="#8a5a2b" strokeWidth="2" strokeLinecap="round" opacity=".5" />
+                            </svg>
                             <Zone position="içinde" gridClass="w-full h-full" />
                         </div>
                         <Zone position="sağında" gridClass="col-start-3 row-start-2" />
