@@ -991,7 +991,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
                 <ParentGateButton
                   onConfirm={onPurchaseLifetime}
                   isThemed={isThemed}
-                  label={`${t('settingsEx.donate.oneTime', 'Tek seferlik destek')}${settings.paywall?.lifetimePrice ? `: ${settings.paywall.lifetimePrice}` : ''}`}
+                  label={`${t('settingsEx.donate.oneTime', '💛 Tam destek')}${settings.paywall?.lifetimePrice ? `: ${settings.paywall.lifetimePrice}` : ''}`}
                 />
               )}
               <ParentGateButton

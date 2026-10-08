@@ -372,12 +372,12 @@ export const migrateOldPurchases = async (oldUserId: string): Promise<boolean> =
 
 // --- Somut destek (Kaan, 2026-10-08: "kahve ısmarla değil, şu kadar Gökçe sesi, şu kadar görsel, şu kadar kod") ---
 // Play Console'da uygulama içi ürün (tekrar alınabilir / tüketilebilir) olarak açılır; RevenueCat'te "consumable".
+// Büyük destek ayrı ürün değil: premium_upgrade "Tam destek" (Kaan, 2026-10-08).
 // Teklif (offering) gerekmez: ürünler kimlikle çekilir. Play'de yoksa düğme görünmez.
 export interface DestekUrunu { id: string; emoji: string; baslik: string; aciklama: string }
 export const DESTEK_URUNLERI: DestekUrunu[] = [
   { id: 'destek_ses', emoji: '🎙️', baslik: 'Gökçe’ye ses ekle', aciklama: 'Desteğiniz Gökçe’nin seslendirmelerine gidiyor (yaklaşık 1.000 cümle).' },
   { id: 'destek_gorsel', emoji: '🖼️', baslik: 'Yeni görseller', aciklama: 'Desteğiniz yeni gerçek fotoğraflara gidiyor.' },
-  { id: 'destek_oyun', emoji: '🧩', baslik: 'Yeni oyun', aciklama: 'Desteğiniz yeni oyun ve etkinliklere gidiyor.' },
 ];
 
 /** Play'de bulunan destek ürünlerinin fiyatları (id → "49,99 ₺"); bulunamayan ürün listede olmaz */
