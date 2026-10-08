@@ -5,7 +5,7 @@ import {
   BannerAdPosition,
   BannerAdSize,
 } from '@capacitor-community/admob';
-import { Purchases, LOG_LEVEL } from '@revenuecat/purchases-capacitor';
+import { Purchases, LOG_LEVEL, PRODUCT_CATEGORY } from '@revenuecat/purchases-capacitor';
 
 // ---- Ad IDs
 const REAL_BANNER_ID = 'ca-app-pub-1337451525993562/1685338874';
@@ -368,3 +368,46 @@ export const migrateOldPurchases = async (oldUserId: string): Promise<boolean> =
   }
 };
 
+
+
+// --- Somut destek (Kaan, 2026-10-08: "kahve ısmarla değil, şu kadar Gökçe sesi, şu kadar görsel, şu kadar kod") ---
+// Play Console'da uygulama içi ürün (tekrar alınabilir / tüketilebilir) olarak açılır; RevenueCat'te "consumable".
+// Teklif (offering) gerekmez: ürünler kimlikle çekilir. Play'de yoksa düğme görünmez.
+export interface DestekUrunu { id: string; emoji: string; baslik: string; aciklama: string }
+export const DESTEK_URUNLERI: DestekUrunu[] = [
+  { id: 'destek_ses', emoji: '🎙️', baslik: 'Gökçe’ye ses ekle', aciklama: 'Desteğiniz Gökçe’nin seslendirmelerine gidiyor (yaklaşık 1.000 cümle).' },
+  { id: 'destek_gorsel', emoji: '🖼️', baslik: 'Yeni görseller', aciklama: 'Desteğiniz yeni gerçek fotoğraflara gidiyor.' },
+  { id: 'destek_oyun', emoji: '🧩', baslik: 'Yeni oyun', aciklama: 'Desteğiniz yeni oyun ve etkinliklere gidiyor.' },
+];
+
+/** Play'de bulunan destek ürünlerinin fiyatları (id → "49,99 ₺"); bulunamayan ürün listede olmaz */
+export const destekFiyatlari = async (userId?: string): Promise<Record<string, string>> => {
+  if (!Capacitor.isNativePlatform()) return {};
+  await initializeRevenueCat(userId);
+  if (!rcInitialized) return {};
+  try {
+    const { products } = await Purchases.getProducts({ productIdentifiers: DESTEK_URUNLERI.map((u) => u.id), type: PRODUCT_CATEGORY.NON_SUBSCRIPTION });
+    return Object.fromEntries(products.map((p) => [p.identifier.split(':')[0], p.priceString]));
+  } catch (e) {
+    console.warn('destekFiyatlari:', e);
+    return {};
+  }
+};
+
+/** Destek ürününü satın al (tekrar tekrar alınabilir). İptalde false. */
+export const destekSatinAl = async (id: string, userId?: string): Promise<boolean> => {
+  if (!Capacitor.isNativePlatform()) return false;
+  await initializeRevenueCat(userId);
+  if (!rcInitialized) return false;
+  try {
+    const { products } = await Purchases.getProducts({ productIdentifiers: [id], type: PRODUCT_CATEGORY.NON_SUBSCRIPTION });
+    const urun = products.find((p) => p.identifier.split(':')[0] === id);
+    if (!urun) return false;
+    await Purchases.purchaseStoreProduct({ product: urun });
+    return true;
+  } catch (e: any) {
+    if (e?.userCancelled) return false;
+    console.error('destekSatinAl:', e);
+    return false;
+  }
+};

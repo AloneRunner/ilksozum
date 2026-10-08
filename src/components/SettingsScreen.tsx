@@ -2,7 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { SAHNELER } from './ui/ArkaPlanSahnesi.tsx';
 import { trIlgi } from '../utils/trDil.ts';
 import { useLocalStorage } from '../hooks/useLocalStorage.ts';
-import { setKayitliSes } from '../services/speechService.ts';
+import { DESTEK_URUNLERI, destekFiyatlari, destekSatinAl } from '../services/monetizationService.ts';
+import { setKayitliSes, speak } from '../services/speechService.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import RestoreIcon from './icons/RestoreIcon.tsx';
 import CrownIcon from './icons/CrownIcon.tsx';
@@ -345,6 +346,14 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
   onToggleBasaraHighlight,
 }) => {
   const [kayitliSes, setKayitliSesAyar] = useLocalStorage<boolean>('kayitliSes_v1', true);
+  // Somut destek ürünleri (Play'de varsa görünür, tekrar alınabilir)
+  const [destekFiyat, setDestekFiyat] = useState<Record<string, string>>({});
+  const [destekMesaj, setDestekMesaj] = useState<string | null>(null);
+  useEffect(() => { destekFiyatlari().then(setDestekFiyat).catch(() => { /* yok say */ }); }, []);
+  const destekAl = async (id: string) => {
+    const ok = await destekSatinAl(id);
+    if (ok) { setDestekMesaj('Desteğiniz için çok teşekkürler! 💛'); speak('Çok teşekkürler!'); setTimeout(() => setDestekMesaj(null), 6000); }
+  };
   useEffect(() => { setKayitliSes(kayitliSes); }, [kayitliSes]);
   // Ana ekrandaki "💛 Destek Ol" ile gelindiyse destek kartına kaydır
   useEffect(() => {
@@ -991,6 +1000,18 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
                 label={`${t('settingsEx.donate.monthly', 'Aylık destek')}${settings.paywall?.monthlyPrice ? `: ${settings.paywall.monthlyPrice}` : ''}`}
               />
             </div>
+            {/* Somut destek: "desteğiniz şuna gidiyor" (ödül değil); Play'de ürün yoksa görünmez */}
+            {DESTEK_URUNLERI.some((u) => destekFiyat[u.id]) && (
+              <div className="mt-4 flex flex-col gap-2 w-full max-w-md mx-auto">
+                {DESTEK_URUNLERI.filter((u) => destekFiyat[u.id]).map((u) => (
+                  <div key={u.id} className="flex flex-col items-center gap-1 rounded-2xl bg-white/70 border border-amber-200 p-2">
+                    <ParentGateButton onConfirm={() => { void destekAl(u.id); }} isThemed={isThemed} label={`${u.emoji} ${u.baslik} · ${destekFiyat[u.id]}`} />
+                    <p className="text-[11px] text-slate-600 text-center leading-snug">{u.aciklama}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            {destekMesaj && <p className="mt-3 text-center font-bold text-emerald-700">{destekMesaj}</p>}
           </div>
         )}
 
