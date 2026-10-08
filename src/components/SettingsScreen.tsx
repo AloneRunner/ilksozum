@@ -987,13 +987,13 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
             )}
             {/* Destek düğmeleri: ebeveyn onayı (basılı tutma + matematik sorusu) korunur */}
             <div className="mt-3 flex gap-3 justify-center flex-wrap">
-              {!hasPurchasedPremium && (
+              {/* premium_upgrade RevenueCat'te Consumable: Tam destek tekrar alınabilir (Kaan, 2026-10-08) */}
                 <ParentGateButton
                   onConfirm={onPurchaseLifetime}
                   isThemed={isThemed}
                   label={`${t('settingsEx.donate.oneTime', '💛 Tam destek')}${settings.paywall?.lifetimePrice ? `: ${settings.paywall.lifetimePrice}` : ''}`}
                 />
-              )}
+
               <ParentGateButton
                 onConfirm={onPurchaseMonthly}
                 isThemed={isThemed}
