@@ -133,7 +133,8 @@ const kayitAnahtari = (m: string): string => m.normalize('NFC').trim().replace(/
 let kayitliSesAcik = (() => { try { return localStorage.getItem('kayitliSes_v1') !== 'false'; } catch { return true; } })();
 export const setKayitliSes = (acik: boolean) => { kayitliSesAcik = acik; };
 let kayitSesi: HTMLAudioElement | null = null;
-let kayitSayaci = 0; // her yeni konuşma / iptal önceki kayıt dizisini geçersiz kılar
+let kayitSayaci = 0;
+let konusmaNo = 0; // speak / kayittanSoyle sırası // her yeni konuşma / iptal önceki kayıt dizisini geçersiz kılar
 
 // Kayıt hızı (Ağzımı İzle "yavaş" modu); tarayıcı sesin perdesini korur
 let kayitHizi = 1;
@@ -158,10 +159,12 @@ const kayitBul = (metin: string): string | undefined => {
 /** Metnin Gökçe kaydı var mı (İfade Tahtası cümlesi gibi parça parça okumalar için). */
 export const kayitVarMi = (metin: string): boolean => kayitliSesAcik && !!kayitBul(metin);
 
+const cumleler = (metin: string): string[] => (metin.match(/[^.!?]+[.!?]*/g) || []).map((p) => p.trim()).filter(Boolean);
+
 const kayitliDosyalar = (metin: string): string[] | null => {
     const tam = kayitBul(metin);
     if (tam) return [tam];
-    const parcalar = (metin.match(/[^.!?]+[.!?]*/g) || []).map((p) => p.trim()).filter(Boolean);
+    const parcalar = cumleler(metin);
     if (parcalar.length < 2) return null;
     const dosyalar = parcalar.map((p) => kayitBul(p));
     return dosyalar.every(Boolean) ? (dosyalar as string[]) : null;
@@ -191,8 +194,10 @@ const kayitCal = async (dosyalar: string[]): Promise<boolean> => {
 /** Ağzımı İzle: kayıt varsa (Kayıtlı ses ayarı kapalı olsa bile) kayıttan çalar; ağız ancak kayıtla senkron. */
 export const kayittanSoyle = async (metin: string): Promise<void> => {
     if (isMuted || !metin) return;
+    const benim = ++konusmaNo;
     await cancelSpeech();
     stopCurrentEffect();
+    if (benim !== konusmaNo) return;
     const d = kayitliDosyalar(metin);
     if (d && await kayitCal(d)) return;
     await speak(metin);
@@ -225,15 +230,34 @@ export const speak = async (textToSpeak: string, overrideLang?: string): Promise
         // ignore logging errors
     }
 
+    // Her konuşmanın sıra numarası: iki konuşma üst üste başlarsa eskisi susar (yankı olmasın)
+    const benim = ++konusmaNo;
     await cancelSpeech();
     stopCurrentEffect();
+    if (benim !== konusmaNo) return;
 
     if (kayitliSesAcik && (!overrideLang || overrideLang.startsWith('tr'))) {
         const dosyalar = kayitliDosyalar(kayitMetni);
         if (import.meta.env.DEV) console.log('[SES]', dosyalar ? 'kayıt' : 'cihaz', kayitMetni);
         if (dosyalar && await kayitCal(dosyalar)) return;
+        // Bazı cümleleri kayıtlıysa sırayla: kayıtlı parça Gökçe, kalanı cihaz sesi
+        // ("Aferin! Leylek." → Gökçe "Aferin!" + cihaz "Leylek."; aferin iki farklı sesle duyulmasın)
+        const parcalar = cumleler(kayitMetni);
+        if (parcalar.length >= 2 && parcalar.some((p) => kayitBul(p))) {
+            for (const p of parcalar) {
+                if (benim !== konusmaNo) return;
+                const d = kayitBul(p);
+                if (!d || !(await kayitCal([d]))) await cihazSoyle(telaffuzDuzelt(p), overrideLang);
+            }
+            return;
+        }
     }
 
+    return cihazSoyle(textToSpeak, overrideLang);
+};
+
+/** Cihazın kendi sesiyle (TTS) okur. */
+const cihazSoyle = async (textToSpeak: string, overrideLang?: string): Promise<void> => {
     if (Capacitor.isNativePlatform()) {
         const requestedLang = overrideLang || speechLang;
         
