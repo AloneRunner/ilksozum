@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { useSeviye } from '../oyunKiti/OyunKiti.tsx';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
 import { getMutedState, speak, cancelSpeech } from '../../services/speechService.ts';
 
@@ -51,7 +52,10 @@ const OVGU = ['Aferin!', 'Harika!', 'Süper!', 'Bravo!'];
 const konus = (metin: string) => Promise.race([speak(metin).catch(() => { /* yoksay */ }), wait(4000)]);
 
 const ColorSequenceGameScreen: React.FC<ColorSequenceGameScreenProps> = ({ onBack }) => {
-    const [faz, setFaz] = useState<Faz>('menu');
+    // Açılışta ayar menüsü yok (Kaan, 2026-10-08): oyun hemen başlar; uzunluk çocuğun seviyesine göre (3 → 5 → 8).
+    // Ayarlar köşedeki ⚙️ ile ebeveyne açık.
+    const { seviye, basari } = useSeviye('renksirasi', HEDEFLER.length - 1);
+    const [faz, setFaz] = useState<Faz>('izle');
     const [hedef, setHedef] = useState(3);
     const [hiz, setHiz] = useState<Hiz>('yavas');
     const [renkSoyle, setRenkSoyle] = useState(false);
@@ -187,6 +191,7 @@ const ColorSequenceGameScreen: React.FC<ColorSequenceGameScreenProps> = ({ onBac
         setFaz('izle');
         const run = ++runRef.current;
         if (sira.length >= hedef) {
+            if (hedef >= HEDEFLER[seviye].uzunluk) basari();
             setFaz('bitti');
             (async () => {
                 await wait(400);
@@ -212,6 +217,9 @@ const ColorSequenceGameScreen: React.FC<ColorSequenceGameScreenProps> = ({ onBac
             goster(yeni, '');
         })();
     }, [faz, hiz, sira, adim, hedef, goster, ton, kutlamaSesi]);
+
+    const ilkBasla = useRef(false);
+    useEffect(() => { if (!ilkBasla.current) { ilkBasla.current = true; basla(HEDEFLER[seviye].uzunluk); } }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     const menuyeDon = () => {
         runRef.current++;
@@ -273,10 +281,10 @@ const ColorSequenceGameScreen: React.FC<ColorSequenceGameScreenProps> = ({ onBac
                 <div className="text-7xl animate-bounce">🌟</div>
                 <h2 className="text-2xl font-black text-indigo-700 text-center">Harika! {enUzun} rengi sırayla bastın!</h2>
                 <div className="flex gap-3">
-                    <button onClick={() => basla(hedef)} style={{ touchAction: 'manipulation' }}
+                    <button onClick={() => basla(HEDEFLER[seviye].uzunluk)} style={{ touchAction: 'manipulation' }}
                         className="bg-green-500 text-white px-6 py-3 rounded-2xl font-bold shadow-lg">🔁 Tekrar</button>
-                    <button onClick={menuyeDon} style={{ touchAction: 'manipulation' }}
-                        className="bg-white text-indigo-600 px-6 py-3 rounded-2xl font-bold shadow-lg">Menü</button>
+                    <button onClick={onBack} style={{ touchAction: 'manipulation' }}
+                        className="bg-white text-indigo-600 px-6 py-3 rounded-2xl font-bold shadow-lg">🏠 Çık</button>
                 </div>
             </div>
         );
@@ -286,9 +294,12 @@ const ColorSequenceGameScreen: React.FC<ColorSequenceGameScreenProps> = ({ onBac
     return (
         <div className="w-full h-full bg-gradient-to-br from-sky-100 via-indigo-50 to-pink-100 flex flex-col">
             <div className="flex items-center justify-between p-3">
-                <button onClick={menuyeDon} className="bg-white rounded-full p-2.5 shadow-lg text-indigo-600" style={{ touchAction: 'manipulation' }}>
-                    <ArrowLeftIcon className="w-5 h-5" />
-                </button>
+                <div className="flex gap-2">
+                    <button onClick={() => { runRef.current++; cancelSpeech().catch(() => { /* yoksay */ }); onBack(); }} className="bg-white rounded-full p-2.5 shadow-lg text-indigo-600" style={{ touchAction: 'manipulation' }} aria-label="Geri dön">
+                        <ArrowLeftIcon className="w-5 h-5" />
+                    </button>
+                    <button onClick={menuyeDon} className="bg-white rounded-full w-10 h-10 shadow-lg text-lg" style={{ touchAction: 'manipulation' }} aria-label="Ayarlar (ebeveyn)">⚙️</button>
+                </div>
                 {/* İlerleme: hedef uzunluk kadar nokta, ulaşılan uzunluk dolu */}
                 <div className="flex gap-1.5">
                     {Array.from({ length: hedef }, (_, i) => (

@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
+import { useSeviye } from '../oyunKiti/OyunKiti.tsx';
 import { getMutedState, speak, cancelSpeech } from '../../services/speechService.ts';
 
 // Bekle ve Bas (dürtü kontrolü): kırmızıda bekle, yeşilde bas. Her doğru basışta araba eve bir adım yaklaşır.
@@ -24,8 +25,10 @@ const wait = (ms: number) => new Promise(r => setTimeout(r, ms));
 const konus = (metin: string) => Promise.race([speak(metin).catch(() => { /* yoksay */ }), wait(4000)]);
 
 const WaitAndPressGameScreen: React.FC<WaitAndPressGameScreenProps> = ({ onBack }) => {
-    const [faz, setFaz] = useState<Faz>('menu');
-    const [seviye, setSeviye] = useState(0);
+    // Açılışta zorluk menüsü yok (Kaan, 2026-10-08): oyun hemen başlar, bekleme süresi çocuğun seviyesine göre; ⚙️ ebeveyne
+    const kit = useSeviye('bekleBas', SEVIYELER.length - 1);
+    const [faz, setFaz] = useState<Faz>('oyna');
+    const [seviye, setSeviye] = useState(kit.seviye);
     const [isik, setIsik] = useState<Isik>('kirmizi');
     const [adim, setAdim] = useState(0);
     const [uyari, setUyari] = useState(false);
@@ -110,6 +113,7 @@ const WaitAndPressGameScreen: React.FC<WaitAndPressGameScreenProps> = ({ onBack 
             ton([523, 659, 784, 1047], 0.22, 0.12);
             await wait(700);
             setFaz('bitti');
+            kit.basari();
             await konus('Eve vardın! Çok güzel bekledin.');
             kilitRef.current = false;
             return;
@@ -119,6 +123,9 @@ const WaitAndPressGameScreen: React.FC<WaitAndPressGameScreenProps> = ({ onBack 
         kirmiziYak(seviye);
     }, [faz, isik, adim, seviye, ton, kirmiziYak]);
 
+    const ilkBasla = useRef(false);
+    useEffect(() => { if (!ilkBasla.current) { ilkBasla.current = true; basla(kit.seviye); } }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
     const menuyeDon = () => {
         if (zamanRef.current) clearTimeout(zamanRef.current);
         cancelSpeech().catch(() => { /* yoksay */ });
@@ -126,13 +133,13 @@ const WaitAndPressGameScreen: React.FC<WaitAndPressGameScreenProps> = ({ onBack 
         setFaz('menu');
     };
 
-    const Baslik = ({ geri }: { geri: () => void }) => (
+    const Baslik = ({ geri, ayar }: { geri: () => void; ayar?: () => void }) => (
         <div className="flex items-center justify-between p-3">
             <button onClick={geri} className="bg-white rounded-full p-2.5 shadow-lg text-emerald-700" style={{ touchAction: 'manipulation' }} aria-label="Geri">
                 <ArrowLeftIcon className="w-5 h-5" />
             </button>
             <h1 className="text-xl font-black text-emerald-800">🚦 Bekle ve Bas</h1>
-            <div className="w-10" />
+            {ayar ? <button onClick={ayar} className="bg-white rounded-full w-10 h-10 shadow-lg text-lg" style={{ touchAction: 'manipulation' }} aria-label="Ayarlar (ebeveyn)">⚙️</button> : <div className="w-10" />}
         </div>
     );
 
@@ -165,8 +172,8 @@ const WaitAndPressGameScreen: React.FC<WaitAndPressGameScreenProps> = ({ onBack 
                 <div className="text-7xl animate-bounce">🏠</div>
                 <h2 className="text-2xl font-black text-emerald-700 text-center">Eve vardın! Çok güzel bekledin!</h2>
                 <div className="flex gap-3">
-                    <button onClick={() => basla(seviye)} style={{ touchAction: 'manipulation' }} className="bg-green-500 text-white px-6 py-3 rounded-2xl font-bold shadow-lg">🔁 Tekrar</button>
-                    <button onClick={menuyeDon} style={{ touchAction: 'manipulation' }} className="bg-white text-emerald-700 px-6 py-3 rounded-2xl font-bold shadow-lg">Menü</button>
+                    <button onClick={() => basla(kit.seviye)} style={{ touchAction: 'manipulation' }} className="bg-green-500 text-white px-6 py-3 rounded-2xl font-bold shadow-lg">🔁 Tekrar</button>
+                    <button onClick={onBack} style={{ touchAction: 'manipulation' }} className="bg-white text-emerald-700 px-6 py-3 rounded-2xl font-bold shadow-lg">🏠 Çık</button>
                 </div>
             </div>
         );
@@ -175,7 +182,7 @@ const WaitAndPressGameScreen: React.FC<WaitAndPressGameScreenProps> = ({ onBack 
     const yesil = isik === 'yesil';
     return (
         <div className="w-full h-full bg-gradient-to-b from-sky-100 to-emerald-100 flex flex-col select-none">
-            <Baslik geri={menuyeDon} />
+            <Baslik geri={() => { menuyeDon(); onBack(); }} ayar={menuyeDon} />
 
             {/* Trafik lambası */}
             <div className="flex justify-center mt-1">
