@@ -123,3 +123,13 @@ Veri: localStorage `tuvalet_v1_<profil>`.
 Eksik görseller (Flow ile, Kaan isterse): külot/iç çamaşırı; çocuk lazımlıkta oturuyor (giyinik, yandan, sade);
 "çiş geldi" yüz ifadesi (karnını tutan çocuk); pantolonu indiren/çeken çocuk (yalnız bacaklar, giyinik).
 Şimdilik nesne fotoğrafları + ok/emoji kullanılıyor.
+
+## Kullanım sayaçları (yarın Kaan'la, PC başında; 2026-10-08'de konuşuldu)
+Zekâ'daki gameStats gibi: kimliksiz toplam sayaçlar. Firebase projesi tazof-platform (D:\projeler\zeka), dal `ilksozum/`.
+- Sayılacaklar: etkinlik açıldı/bitti (id bazında), ekranlar (Tuvalet, Ağzımı İzle, Hece Okuma, İfade Tahtası, mini oyunlar,
+  Program oturumu), günlük açılış (cihaz başına günde 1, android/web ayrı).
+- İlk Sözüm: Firebase SDK yok; RTDB REST PATCH + {".sv":{"increment":1}}; hata/çevrimdışı sessiz.
+- Zekâ kuralı: `ilksozum/` girişsiz yalnız +1 yazma (validate newData == data+1), okuma yalnız admin. Önce repo kuralı = canlı kural mı bak; yayını Kaan yapar.
+- Zekâ AdminPanel'e "İlk Sözüm" sekmesi.
+- Play Veri güvenliği: "Uygulama etkileşimleri — anonim, kullanıcıyla ilişkilendirilmez" + gizlilik metnine bir cümle.
+Bekleyen sesler (eşinin dinlemesiyle; Kaan "üret" deyince): ça (eşi bozuk dedi), bebek, el; kelimeler topluca gözden geçirilecek.
