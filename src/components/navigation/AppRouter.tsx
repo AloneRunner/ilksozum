@@ -13,6 +13,7 @@ const MainMenuScreen = lazy(() => import('../MainMenuScreen.tsx'));
 const IfadeTahtasi = lazy(() => import('../IfadeTahtasi.tsx'));
 const SesTaklitEkrani = lazy(() => import('../SesTaklitEkrani.tsx'));
 const AgzimiIzleEkrani = lazy(() => import('../agiz/AgzimiIzleEkrani.tsx'));
+const TuvaletEkrani = lazy(() => import('../tuvalet/TuvaletEkrani.tsx'));
 const LetterSelectionScreen = lazy(() => import('../LetterSelectionScreen.tsx'));
 const GroupSelectionScreen = lazy(() => import('../GroupSelectionScreen.tsx'));
 const SyllableCard = lazy(() => import('../SyllableCard.tsx'));
@@ -186,6 +187,7 @@ export const AppRouter = () => {
             case 'basara2': setBasaraVariant(2); setBasaraGeri(ScreenState.SkillMenu); setScreenState(ScreenState.BasaraLessonMap); return;
             case 'sesTaklit': setScreenState(ScreenState.SoundImitationMenu); return;
             case 'agiz': setScreenState(ScreenState.AgzimiIzle); return;
+            case 'tuvalet': setScreenState(ScreenState.TuvaletEgitimi); return;
             case 'besNBirK': ctx.activity.setActivityType(ActivityType.FiveWOneH); setScreenState(ScreenState.FiveWOneHMenu); return;
         }
     };
@@ -557,6 +559,7 @@ export const AppRouter = () => {
         // Ses Taklit: kartlar + şarkılar tek ekranda (videolar kaldırıldı, yedek/seskart)
         case ScreenState.SoundImitationMenu: return <SesTaklitEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.AgzimiIzle: return <AgzimiIzleEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.TuvaletEgitimi: return <TuvaletEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.LetterSelection: {
             return <LetterSelectionScreen onSelectLetter={ctx.activity.handleStartActivityWithLetter} onBack={() => geriDon(ScreenState.MainMenu)} activityType={ctx.activity.selectedActivityForLetter} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} />;
         }

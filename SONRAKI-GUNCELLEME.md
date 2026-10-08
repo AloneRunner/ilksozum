@@ -115,3 +115,11 @@ Play istatistiklerinde yabancı ülkelerden kullanıcılar da görünüyor. Ger�
   - Vücudun Bölümleri (6; organlarda "Alternatif" çizim zaten bilerek duruyor)
 - Kâğıtta fotoğraf ile çizim karışık görünüyor. Bölüm 4'teki karar (yazıcı dostu tarz) verilince bunlar da tek tarza getirilmeli.
 
+
+## Tuvalet Zamanı (2026-10-08, yapıldı)
+Konuşma ve Anlama > Tuvalet Zamanı: Adımlar (9 adım, "Yaptım"), Öykü (7 sayfa sosyal öykü), Ödül (günlük yıldız + 7 gün),
+Hatırlatıcı (30/45/60/90 dk, yalnız uygulama açıkken), Kayıt (çiş/kaka/kaza/kuru + saat grafiği, kaza saatine göre öneri), İpuçları.
+Veri: localStorage `tuvalet_v1_<profil>`.
+Eksik görseller (Flow ile, Kaan isterse): külot/iç çamaşırı; çocuk lazımlıkta oturuyor (giyinik, yandan, sade);
+"çiş geldi" yüz ifadesi (karnını tutan çocuk); pantolonu indiren/çeken çocuk (yalnız bacaklar, giyinik).
+Şimdilik nesne fotoğrafları + ok/emoji kullanılıyor.
