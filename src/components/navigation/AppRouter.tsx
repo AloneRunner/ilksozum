@@ -82,7 +82,8 @@ const NumberSequenceGameScreen = lazy(() => import('../games/NumberSequenceGameS
 const PlantGrowingGameScreen = lazy(() => import('../games/PlantGrowingGameScreen.tsx'));
 const ColorSequenceGameScreen = lazy(() => import('../games/ColorSequenceGameScreen.tsx'));
 const WaitAndPressGameScreen = lazy(() => import('../games/WaitAndPressGameScreen.tsx'));
-const WhereBelongsGameScreen = lazy(() => import('../games/WhereBelongsGameScreen.tsx'));
+// Eski Nereye Ait? (WhereBelongsGameScreen.tsx) yedekte
+const NereyeAitOyunu = lazy(() => import('../games/OdaToplamaOyunu.tsx').then((m) => ({ default: m.NereyeAitOyunu })));
 const SyllableTrainGameScreen = lazy(() => import('../games/SyllableTrainGameScreen.tsx'));
 const WordBoxGameScreen = lazy(() => import('../games/WordBoxGameScreen.tsx'));
 
@@ -901,7 +902,7 @@ export const AppRouter = () => {
         case ScreenState.PlantGrowingGame: return <PlantGrowingGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.ColorSequenceGame: return <ColorSequenceGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.WaitAndPressGame: return <WaitAndPressGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
-        case ScreenState.WhereBelongsGame: return <WhereBelongsGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.WhereBelongsGame: return <NereyeAitOyunu onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.SyllableTrainGame: return <SyllableTrainGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.WordBoxGame: return <WordBoxGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
 

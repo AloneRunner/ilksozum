@@ -2,11 +2,12 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { OyunCercevesi, Kutlama, OyunSonu, useSeviye } from '../oyunKiti/OyunKiti.tsx';
 import { speak, playEffect } from '../../services/speechService.ts';
 
+// Doğru yere taşı (sınıflandırma) oyunu: Oda Temizliği ve Nereye Ait? bunu kullanır.
 // Oda Temizliği (yeniden, Kaan 2026-10-08: "oda çok kötü şu an"): gerçek fotoğraflı eşyalar ve kutular.
 // Eşyayı doğru kutuya taşı (ya da eşyaya, sonra kutuya dokun). Ceza yok; iki yanlıştan sonra doğru kutu parlar.
 // Seviye: 2 kutu / 4 eşya → 3 kutu / 6 eşya → 4 kutu / 8 eşya.
 interface Kap { id: string; ad: string; url: string; esyalar: [string, string][] }
-const KAPLAR: Kap[] = [
+const ODA_KAPLARI: Kap[] = [
   { id: 'oyuncak', ad: 'Oyuncak kutusu', url: '/images/2615.webp', esyalar: [['top', '/images/2317.webp'], ['oyuncak araba', '/images/9047.webp'], ['oyuncak ayı', '/images/5703.webp'], ['lego', '/images/9069.webp'], ['yapboz', '/images/8480.webp'], ['uçurtma', '/images/8135.webp'], ['oyuncak bebek', '/images/8109.webp']] },
   { id: 'kiyafet', ad: 'Çamaşır sepeti', url: '/images/6328.webp', esyalar: [['çorap', '/images/6958.webp'], ['tişört', '/images/3420.webp'], ['pantolon', '/images/4713.webp'], ['elbise', '/images/4701.webp'], ['mont', '/images/9062.webp']] },
   { id: 'kitap', ad: 'Kitaplık', url: '/images/6327.webp', esyalar: [['kitap', '/images/3416.webp'], ['defter', '/images/8882.webp']] },
@@ -14,17 +15,29 @@ const KAPLAR: Kap[] = [
 ];
 const SEVIYELER = [{ kap: 2, esya: 4 }, { kap: 3, esya: 6 }, { kap: 4, esya: 8 }];
 const OTURUM = 3;
+
+// Nereye Ait? (yeniden): eşyayı ait olduğu odaya taşı (eski hali belirsiz emojilerle).
+const ODALAR: Kap[] = [
+  { id: 'mutfak', ad: 'Mutfak', url: '/images/6320.webp', esyalar: [['tencere', '/images/2315.webp'], ['kaşık', '/images/3908.webp'], ['tabak', '/images/3118.webp']] },
+  { id: 'banyo', ad: 'Banyo', url: '/images/6321.webp', esyalar: [['diş fırçası', '/images/8441.webp'], ['sabun', '/images/3708.webp'], ['şampuan', '/images/8426.webp'], ['havlu', '/images/3304.webp']] },
+  { id: 'yatak', ad: 'Yatak odası', url: '/images/6322.webp', esyalar: [['yastık', '/images/2320.webp'], ['battaniye', '/images/9036.webp'], ['yorgan', '/images/9052.webp']] },
+  { id: 'bahce', ad: 'Bahçe', url: '/images/6324.webp', esyalar: [['çiçek', '/images/3003.webp'], ['kürek', '/images/8369.webp'], ['salıncak', '/images/8393.webp']] },
+];
+
+interface Ayar { baslik: string; emoji: string; yonerge: string; kaplar: Kap[]; arkaPlan?: string; seviyeAnahtari: string; kutlama: string; bitisSozu: string }
+const ODA_AYAR: Ayar = { baslik: 'Oda Temizliği', emoji: '🧹', yonerge: 'Eşyaları yerine kaldır.', kaplar: ODA_KAPLARI, arkaPlan: '/images/8867.webp', seviyeAnahtari: 'odatoplama', kutlama: 'Tertemiz!', bitisSozu: 'Aferin! Oda tertemiz oldu.' };
+export const NEREYE_AYAR: Ayar = { baslik: 'Nereye Ait?', emoji: '🏠', yonerge: 'Her eşyayı ait olduğu yere götür.', kaplar: ODALAR, seviyeAnahtari: 'nereyeait', kutlama: 'Harika!', bitisSozu: 'Aferin! Hepsi yerini buldu.' };
 const karistir = <T,>(a: T[]): T[] => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 
 interface Esya { i: number; ad: string; url: string; kap: string; x: number; y: number; a: number }
 
-const OdaToplamaOyunu: React.FC<{ onBack: () => void }> = ({ onBack }) => {
-  const { seviye, basari, zorlandi } = useSeviye('odatoplama', SEVIYELER.length - 1);
+export const SiniflandirmaOyunu: React.FC<{ onBack: () => void; ayar: Ayar }> = ({ onBack, ayar }) => {
+  const { seviye, basari, zorlandi } = useSeviye(ayar.seviyeAnahtari, SEVIYELER.length - 1);
   const [adim, setAdim] = useState(0);
   const [tur, setTur] = useState(0);
   const { kaplar, esyalar } = useMemo(() => {
     const ay = SEVIYELER[seviye];
-    const k = KAPLAR.slice(0, ay.kap);
+    const k = ayar.kaplar.slice(0, ay.kap);
     // her kaptan en az bir eşya, kalan rastgele
     const havuz = k.flatMap((kp) => karistir(kp.esyalar).map(([ad, url]) => ({ ad, url, kap: kp.id })));
     const secilen = [...k.map((kp) => havuz.find((h) => h.kap === kp.id)!)];
@@ -46,14 +59,14 @@ const OdaToplamaOyunu: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   const [bitti, setBitti] = useState(false);
   const kapRef = useRef<Record<string, HTMLDivElement | null>>({});
 
-  useEffect(() => { setKaldirilan(new Set()); setYanlis(0); setSecili(null); speak('Eşyaları yerine kaldır.'); }, [tur]);
+  useEffect(() => { setKaldirilan(new Set()); setYanlis(0); setSecili(null); speak(ayar.yonerge); }, [tur]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const birak = (i: number, kapId: string) => {
     const e = esyalar[i];
     if (e.kap === kapId) {
       setKaldirilan((s) => {
         const y = new Set(s).add(i);
-        if (y.size === esyalar.length) setTimeout(() => { setKutlama(true); speak('Aferin! Oda tertemiz oldu.'); }, 300);
+        if (y.size === esyalar.length) setTimeout(() => { setKutlama(true); speak(ayar.bitisSozu); }, 300);
         return y;
       });
       setZiplayan(kapId); setTimeout(() => setZiplayan(null), 500);
@@ -89,10 +102,10 @@ const OdaToplamaOyunu: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   const esyaBoy = esyalar.length <= 4 ? 112 : esyalar.length <= 6 ? 96 : 82;
 
   return (
-    <OyunCercevesi baslik="Oda Temizliği" emoji="🧹" onBack={onBack} adim={adim + (bitti ? 1 : 0)} toplamAdim={OTURUM} yonerge="Eşyaları yerine kaldır.">
+    <OyunCercevesi baslik={ayar.baslik} emoji={ayar.emoji} onBack={onBack} adim={adim + (bitti ? 1 : 0)} toplamAdim={OTURUM} yonerge={ayar.yonerge}>
       <div className="absolute inset-0 flex flex-col px-3 pb-3 gap-3 select-none touch-none">
         {/* dağınık oda */}
-        <div className="relative flex-1 rounded-3xl overflow-hidden shadow-inner bg-cover bg-center" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.55)), url(/images/8867.webp)' }}>
+        <div className="relative flex-1 rounded-3xl overflow-hidden shadow-inner bg-cover bg-center" style={{ backgroundImage: ayar.arkaPlan ? `linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.55)), url(${ayar.arkaPlan})` : 'linear-gradient(135deg, #fef3c7, #e0f2fe)' }}>
           {esyalar.map((e) => !kaldirilan.has(e.i) && (
             <button key={e.i} data-esya={e.i}
               onPointerDown={(ev) => { ev.preventDefault(); setSecili(e.i); setSurukle({ i: e.i, x: ev.clientX, y: ev.clientY }); speak(e.ad.charAt(0).toLocaleUpperCase('tr-TR') + e.ad.slice(1)); }}
@@ -121,10 +134,12 @@ const OdaToplamaOyunu: React.FC<{ onBack: () => void }> = ({ onBack }) => {
           <img src={esyalar[surukle.i].url} alt="" className="w-full h-full object-cover rounded-xl" />
         </div>
       )}
-      <Kutlama acik={kutlama} yazi="Tertemiz!" onBitti={sonraki} sure={2000} />
+      <Kutlama acik={kutlama} yazi={ayar.kutlama} onBitti={sonraki} sure={2000} />
       {bitti && <OyunSonu onTekrar={tekrar} onBack={onBack} />}
     </OyunCercevesi>
   );
 };
 
+const OdaToplamaOyunu: React.FC<{ onBack: () => void }> = ({ onBack }) => <SiniflandirmaOyunu onBack={onBack} ayar={ODA_AYAR} />;
+export const NereyeAitOyunu: React.FC<{ onBack: () => void }> = ({ onBack }) => <SiniflandirmaOyunu onBack={onBack} ayar={NEREYE_AYAR} />;
 export default OdaToplamaOyunu;
