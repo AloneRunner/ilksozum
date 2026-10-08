@@ -43,7 +43,7 @@ const SmartImage: React.FC<SmartImageProps> = ({ src: hamSrc, disableRealistic, 
 
     let actualSrc = src || '';
     // "Alternatif" açıkken vücut bölümleri eski çizimiyle gösterilir (diğer yeni fotoğraflar aynı kalır)
-    const organ = isRealisticEnabled && typeof src === 'string' ? organCizimi(src, typeof props.alt === 'string' ? props.alt : undefined) : null;
+    const organ = isRealisticEnabled && typeof hamSrc === 'string' ? organCizimi(hamSrc) : null;
     if (organ) {
         actualSrc = organ;
     } else if (isRealisticEnabled && !imageError && src && typeof src === 'string' && src.startsWith('/images/')) {

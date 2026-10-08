@@ -73,6 +73,16 @@ const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOd
 
         {sekme === 'bugun' && (
           <>
+            <details className="rounded-2xl bg-white/80 shadow-sm px-4 py-2 text-sm text-slate-700">
+              <summary className="font-black text-emerald-800 cursor-pointer">ℹ️ Program nasıl ilerler?</summary>
+              <ul className="mt-2 space-y-1 list-disc pl-5">
+                <li>Ünite yok; 7 beceri kulvarı var (Kelimeler, Kavramlar, Sayılar…). Her kulvar kendi seviyesinde, birlikte ilerler.</li>
+                <li>Her gün her kulvardan birkaç etkinlik gelir: <b>Yeni</b> (o seviyenin sıradaki konusu), <b>Tekrar</b> ve <b>Pekiştir</b> (önceki konulardan).</li>
+                <li>Bir etkinlik, Program Modu'nda art arda 2 kez %80 ve üstü yapılınca "öğrendi" sayılır; seviyedeki etkinliklerin çoğu (%80) öğrenilince kulvar bir üst seviyeye geçer.</li>
+                <li>Etkinlik sırasında sağ üstteki <b>Geç ⏭</b> ile o etkinliği atlayabilirsiniz. <b>Kulvarlar</b> sekmesinde bildiği seviyeyi "biliyor" diye işaretleyebilirsiniz.</li>
+                <li>Tanıma turu isteğe bağlıdır: bildiği konuları baştan atlamak için. İstemezseniz "Atla".</li>
+              </ul>
+            </details>
             {ayar.yerlestirme === 'yok' && (
               <div className="rounded-3xl bg-white shadow-md p-4">
                 <div className="text-lg font-black text-slate-800">🧭 Hızlı tanıma turu</div>

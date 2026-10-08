@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { programOturumBitti } from '../program/motor.ts';
+import { programOturumBitti, ayarOku as programAyarOku } from '../program/motor.ts';
 import { ActivityType, ActivityStats, AttemptRecord, ActivityCategory, ParentOverride } from '../types.ts';
 import { ALL_SUB_ACHIEVEMENTS, LETTER_GROUPS, OBJECT_CATEGORIES, LETTER_SOUND_ACTIVITIES } from '../constants.ts';
 import { getActivityMetadata } from '../constants/activityMetadata';
@@ -287,6 +287,15 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
         return true;
     }, [showToast, startNextRandomActivity]);
 
+    // Program Modu: bu etkinliği geç, sıradakine geç (kuyruk bittiyse oturum biter)
+    const handleProgramGec = useCallback(async () => {
+        const hasNext = await startNextRandomActivity(randomModeQueue, currentRandomActivityIndex + 1);
+        if (hasNext) return;
+        programOturumBitti(activeProfileId);
+        resetActivityState();
+        handleGoToProgramIntro?.();
+    }, [randomModeQueue, currentRandomActivityIndex, startNextRandomActivity, activeProfileId, resetActivityState, handleGoToProgramIntro]);
+
     // Reinforcement-only starter: prefer weak items from focus unit, fallback to previous weak candidates
     const handleStartReinforcementMode = useCallback(async () => {
         // Build a session to learn the focus unit
@@ -531,7 +540,9 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
                 setRandomModeAttemptCount(prev => ({ ...prev, [String(currentActivity)]: attempts }));
 
                 const successRate = totalQuestions > 0 ? (finalScore / totalQuestions) : 0;
-                if (successRate < 0.75 && attempts < 2) {
+                // Tanıma turu yoklamadır: düşük başarıda tekrar yok (Kaan, 2026-10-08: tur bitmiyordu)
+                const tanimaTuru = isProgramMode && programAyarOku(activeProfileId).yerlestirme === 'devam';
+                if (successRate < 0.75 && attempts < 2 && !tanimaTuru) {
                     showToast("Bu konuyu biraz daha pekiştirelim!", 'info');
                     const { success, data, type } = await startSpecificRandomActivity(currentActivity);
                     if (success && data && type) {
@@ -589,6 +600,7 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
         isRandomMode,
         isProgramMode,
         handleStartProgramQueue,
+        handleProgramGec,
         resetActivityState,
         handleAdvance,
         handleStartRandomMode,

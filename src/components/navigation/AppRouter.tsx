@@ -311,8 +311,11 @@ export const AppRouter = () => {
                         <span>•</span>
                         <span>{t('programMode.progress.activity', 'Etkinlik {current}/{total}').replace('{current}', String(step)).replace('{total}', String(total))}</span>
                     </div>
+<div className="flex items-center gap-1">
+                    <button onClick={() => { void ctx.activity.handleProgramGec(); }} className="inline-flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-xs font-black text-violet-700 shadow-sm border border-violet-200 active:scale-95" aria-label="Bu etkinliği geç">Geç ⏭</button>
                     <div className="inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1 text-xs font-semibold text-slate-700 shadow-sm border border-slate-200">
                         <span>{t('programMode.progress.round', 'Tur {current}/{total}').replace('{current}', String(round)).replace('{total}', String(roundTotal))}</span>
+                    </div>
                     </div>
                 </div>
             );

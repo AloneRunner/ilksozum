@@ -40,18 +40,17 @@ const ORGAN_ESKI: Array<[number, string]> = [
     [559, 'omuz'], [560, 'kol'], [561, 'ayak'], [562, 'bacak'], [563, 'parmak'], [597, 'göz'], [662, 'saç'],
     [949, 'ağız'], [981, 'diş'],
 ];
-const organlar = new Map<string, Array<[number, string]>>();
-for (const [id, ad] of ORGAN_ESKI) {
-    const yeni = NESNE_YENI[id];
-    if (yeni) organlar.set(yeni, [...(organlar.get(yeni) || []), [id, ad]]);
-}
+const ORGAN_IDLERI = new Set(ORGAN_ESKI.map(([id]) => id));
 
-/** Organ fotoğrafıysa eski çizim adresini döner (yoksa null). */
-export const organCizimi = (src: string | undefined | null, kelime?: string): string | null => {
+/**
+ * Vücut bölümüyse eski çizim adresini döner (yoksa null). Ham adres (veri dosyasındaki) verilmeli: yalnız eski
+ * organ kimliğiyle gelen görsel çizime döner. Aynı fotoğrafı doğrudan kullanan kavram soruları ("Hangi kızın saçı
+ * uzun?" → 2414) fotoğraf kalır (Kaan, 2026-10-08: Alternatif açıkken uzun saçlı kız eski çizim oluyordu).
+ */
+export const organCizimi = (src: string | undefined | null): string | null => {
     if (!src) return null;
-    const adaylar = organlar.get(src);
-    if (!adaylar) return null;
-    const k = (kelime || '').toLocaleLowerCase('tr-TR').trim();
-    const secilen = adaylar.find(([, ad]) => ad === k) || adaylar[0];
-    return `/images/${secilen[0]}.png`;
+    const m = ESKI.exec(src);
+    if (!m) return null;
+    const id = Number(m[1]);
+    return ORGAN_IDLERI.has(id) ? `/images/${id}.png` : null;
 };
