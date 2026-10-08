@@ -70,7 +70,8 @@ const OdaToplamaOyunu = lazy(() => import('../games/OdaToplamaOyunu.tsx'));
 // Eski Tren Yolu (TrainTrackGameScreen.tsx) yedekte; 2026-10-08'den beri yeni oyun
 const TrenYoluOyunu = lazy(() => import('../games/TrenYoluOyunu.tsx'));
 const MazeGameScreen = lazy(() => import('../games/MazeGameScreen.tsx'));
-const MemoryMatchGameScreen = lazy(() => import('../games/MemoryMatchGameScreen.tsx'));
+// Eski Hafıza Çiftleri (MemoryMatchGameScreen.tsx) yedekte
+const HafizaOyunu = lazy(() => import('../games/HafizaOyunu.tsx'));
 const LetterBubblesGameScreen = lazy(() => import('../games/LetterBubblesGameScreen.tsx'));
 const DailyRoutineGameScreen = lazy(() => import('../games/DailyRoutineGameScreen.tsx'));
 const ConnectDotsGameScreen = lazy(() => import('../games/ConnectDotsGameScreen.tsx'));
@@ -889,7 +890,7 @@ export const AppRouter = () => {
         case ScreenState.RoomCleaningGame: return <OdaToplamaOyunu onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.TrainTrackGame: return <TrenYoluOyunu onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.MazeGame: return <MazeGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
-        case ScreenState.MemoryMatchGame: return <MemoryMatchGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.MemoryMatchGame: return <HafizaOyunu onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.LetterBubblesGame: return <LetterBubblesGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.DailyRoutineGame: return <DailyRoutineGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.ConnectDotsGame: return <ConnectDotsGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
