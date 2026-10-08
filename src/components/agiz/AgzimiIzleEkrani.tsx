@@ -72,7 +72,7 @@ const AgzimiIzleEkrani: React.FC<{ onBack: () => void }> = ({ onBack }) => {
       <div className="flex flex-col landscape:flex-row gap-3 flex-1 min-h-0">
         <section className="flex flex-col items-center landscape:w-[42%] shrink-0">
           <button onClick={() => secili && soyle(secili)} className="w-[min(62vw,250px)] landscape:w-[min(34vw,250px)] active:scale-[0.98] transition" aria-label="Tekrar söyle">
-            <KonusanAgiz className="w-full h-auto drop-shadow-lg" onHarf={setHarf} />
+            <KonusanAgiz className="w-full h-auto drop-shadow-lg" onHarf={setHarf} buyukAgiz />
           </button>
           <div className="min-h-[56px] flex items-center justify-center gap-0.5 mt-1">
             {yazi ? [...yazi].map((h, i) => (

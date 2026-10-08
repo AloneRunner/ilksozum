@@ -20,7 +20,7 @@ interface DragAndDropPositioningScreenProps {
 const DragAndDropPositioningScreen: React.FC<DragAndDropPositioningScreenProps> = ({
     roundData, onAdvance, onBack, currentCard, totalCards, isAutoSpeakEnabled
 }) => {
-    const [ballPosition, setBallPosition] = useState({ x: 0, y: 0 });
+    const [, setBallPosition] = useState({ x: 0, y: 0 });
     const [isDragging, setIsDragging] = useState(false);
     const [isCorrect, setIsCorrect] = useState(false);
     const [isWrong, setIsWrong] = useState(false);
@@ -47,17 +47,20 @@ const DragAndDropPositioningScreen: React.FC<DragAndDropPositioningScreenProps> 
 
     }, [roundData]);
     
+    // Sürükleme başlangıcı: hareket bu noktaya göre hesaplanır (bazı telefonlar movementX vermiyor; top kıpırdamıyordu)
+    const baslangic = useRef({ x: 0, y: 0 });
     const handleDragStart = (e: React.PointerEvent) => {
         if (isCorrect) return;
         (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+        baslangic.current = { x: e.clientX, y: e.clientY };
         setIsDragging(true);
     };
 
     const handleDragMove = (e: React.PointerEvent) => {
         if (!isDragging || !ballRef.current || !containerRef.current) return;
         
-        const newX = ballPosition.x + e.movementX;
-        const newY = ballPosition.y + e.movementY;
+        const newX = e.clientX - baslangic.current.x;
+        const newY = e.clientY - baslangic.current.y;
 
         setBallPosition({ x: newX, y: newY });
         // Compose translation while keeping the -50% centering from the CSS class so the ball doesn't jump
@@ -91,6 +94,12 @@ const DragAndDropPositioningScreen: React.FC<DragAndDropPositioningScreenProps> 
             }
         }
 
+        // Hiçbir bölgeye bırakılmadıysa (ör. yalnız dokunma) hata sayma, top yerine dönsün
+        if (!droppedInZone) {
+            if (ballRef.current) ballRef.current.style.transform = 'translate(0px, 0px) translate(-50%, -50%)';
+            setBallPosition({ x: 0, y: 0 });
+            return;
+        }
         if (droppedInZone === roundData.correctZone) {
             setIsCorrect(true);
             await playEffect('correct');

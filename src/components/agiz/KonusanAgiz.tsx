@@ -10,7 +10,7 @@ let hizaSozu: Promise<Record<string, Hiza>> | null = null;
 const hizalamaYukle = (): Promise<Record<string, Hiza>> =>
   (hizaSozu ??= fetch('/audio/ses/hizalama.json').then((r) => (r.ok ? r.json() : {})).catch(() => ({})) as Promise<Record<string, Hiza>>);
 
-const DUDAK = '#d95f6c', DUDAK_KOYU = '#b3434f', ICERI = '#5b1d2a', DIL = '#e8737f', DIS = '#ffffff';
+const DUDAK = '#ec8a96', DUDAK_KOYU = '#c9606e', ICERI = '#5b1d2a', DIL = '#e8737f', DIS = '#ffffff';
 
 /** Ağzın kendisi (merkez 0,0). */
 export const AgizCizim: React.FC<{ p: AgizDurus; id: string }> = ({ p, id }) => {
@@ -59,9 +59,11 @@ interface Props {
   className?: string;
   /** Çalan kaydın kaçıncı harfinde (-1 = sustu); ekrandaki yazıyı vurgulamak için */
   onHarf?: (i: number) => void;
+  /** Ağzımı İzle ve BASARA'da ağız büyük (hareket görünsün); maskotta küçük ve doğal */
+  buyukAgiz?: boolean;
 }
 
-const KonusanAgiz: React.FC<Props> = ({ className, onHarf }) => {
+const KonusanAgiz: React.FC<Props> = ({ className, onHarf, buyukAgiz }) => {
   const id = React.useId().replace(/:/g, '');
   const [p, setP] = useState<AgizDurus>(DURUSLAR.sus);
   const [kirp, setKirp] = useState(false);
@@ -125,28 +127,42 @@ const KonusanAgiz: React.FC<Props> = ({ className, onHarf }) => {
     return () => clearTimeout(z);
   }, []);
 
-  return (
-    <svg viewBox="0 0 240 240" className={className} role="img" aria-label="Konuşan yüz">
-      {/* Gökçe: kız (Kaan, 2026-10-08) — uzun saç, kâkül, fiyonk, kirpik */}
-      <path d="M 16 118 C 8 36 70 4 120 6 C 170 4 232 36 224 118 L 230 214 C 214 236 188 232 180 208 L 176 150 L 64 150 L 60 208 C 52 232 26 236 10 214 Z" fill="#6b4a3a" />
-      <circle cx={120} cy={124} r={100} fill="#fbe1cf" stroke="#f0c9ae" strokeWidth={3} />
-      <path d="M 26 112 C 28 50 78 24 120 24 C 162 24 212 50 214 112 C 196 84 170 66 146 74 C 130 60 112 58 98 70 C 74 60 46 80 26 112 Z" fill="#6b4a3a" />
-      <g transform="translate(176 40) rotate(18)">
-        <path d="M 0 0 L -22 -14 L -22 14 Z" fill="#f472b6" stroke="#db2777" strokeWidth={2} strokeLinejoin="round" />
-        <path d="M 0 0 L 22 -14 L 22 14 Z" fill="#f472b6" stroke="#db2777" strokeWidth={2} strokeLinejoin="round" />
-        <circle cx={0} cy={0} r={6} fill="#ec4899" />
+  // Gökçe (Kaan, 2026-10-08: "daha güzel kız olmaz mı"): yuvarlak yüz, büyük parlak gözler, kâkül, iki topuz + toka
+  const SAC = '#5b3a29', TEN = '#ffe3d1';
+  const goz = (cx: number) => kirp
+    ? <path d={`M ${cx - 12} 130 Q ${cx} 138 ${cx + 12} 130`} stroke="#3b2a24" strokeWidth={3} fill="none" strokeLinecap="round" />
+    : (
+      <g>
+        <ellipse cx={cx} cy={128} rx={13} ry={15} fill="#fff" />
+        <circle cx={cx} cy={131} r={10} fill="#7a4a2a" />
+        <circle cx={cx} cy={132} r={5.5} fill="#2b1a12" />
+        <circle cx={cx + 4} cy={126} r={3.6} fill="#fff" />
+        <circle cx={cx - 3} cy={136} r={1.6} fill="#fff" opacity={0.9} />
+        <path d={`M ${cx - 13} 122 Q ${cx} 108 ${cx + 13} 122`} stroke="#3b2a24" strokeWidth={2.6} fill="none" strokeLinecap="round" />
+        <path d={cx < 120 ? `M ${cx - 12} 120 l -6 -4 M ${cx - 8} 115 l -4 -6` : `M ${cx + 12} 120 l 6 -4 M ${cx + 8} 115 l 4 -6`} stroke="#3b2a24" strokeWidth={2.2} strokeLinecap="round" />
       </g>
-      <ellipse cx={66} cy={150} rx={17} ry={11} fill="#f4a6a6" opacity={0.45} />
-      <ellipse cx={174} cy={150} rx={17} ry={11} fill="#f4a6a6" opacity={0.45} />
-      <path d="M 70 88 Q 85 80 100 88" stroke="#6b4a3a" strokeWidth={4} fill="none" strokeLinecap="round" />
-      <path d="M 140 88 Q 155 80 170 88" stroke="#6b4a3a" strokeWidth={4} fill="none" strokeLinecap="round" />
-      <path d="M 74 100 l -6 -5 M 78 97 l -3 -7 M 96 100 l 6 -5 M 92 97 l 3 -7" stroke="#3b2a24" strokeWidth={2.2} strokeLinecap="round" opacity={kirp ? 0 : 1} />
-      <path d="M 144 100 l -6 -5 M 148 97 l -3 -7 M 166 100 l 6 -5 M 162 97 l 3 -7" stroke="#3b2a24" strokeWidth={2.2} strokeLinecap="round" opacity={kirp ? 0 : 1} />
-      <ellipse cx={85} cy={108} rx={9} ry={kirp ? 1.2 : 11} fill="#3b2a24" />
-      <ellipse cx={155} cy={108} rx={9} ry={kirp ? 1.2 : 11} fill="#3b2a24" />
-      {!kirp && <><circle cx={88} cy={104} r={3} fill="#fff" /><circle cx={158} cy={104} r={3} fill="#fff" /></>}
-      <path d="M 116 124 Q 120 138 126 132" stroke="#d9a989" strokeWidth={3} fill="none" strokeLinecap="round" />
-      <g transform="translate(120 176) scale(1.35)"><AgizCizim p={p} id={id} /></g>
+    );
+  return (
+    <svg viewBox="0 0 240 240" className={className} role="img" aria-label="Gökçe">
+      {/* topuzlar ve tokalar */}
+      <circle cx={30} cy={96} r={30} fill={SAC} />
+      <circle cx={210} cy={96} r={30} fill={SAC} />
+      {/* arka saç */}
+      <path d="M 26 140 C 20 60 70 22 120 22 C 170 22 220 60 214 140 C 214 175 200 196 186 204 L 54 204 C 40 196 26 175 26 140 Z" fill={SAC} />
+      {/* tokalar: topuzla saçın birleştiği yerde */}
+      <circle cx={52} cy={70} r={9} fill="#f472b6" stroke="#db2777" strokeWidth={2} />
+      <circle cx={188} cy={70} r={9} fill="#f472b6" stroke="#db2777" strokeWidth={2} />
+      {/* yüz */}
+      <ellipse cx={120} cy={138} rx={90} ry={86} fill={TEN} stroke="#f5c9ae" strokeWidth={2.5} />
+      {/* kâkül + parlaklık */}
+      <path d="M 34 132 C 30 64 80 34 120 34 C 160 34 210 64 206 132 C 194 106 176 94 158 98 C 148 86 132 82 120 88 C 106 82 90 86 80 98 C 62 94 46 106 34 132 Z" fill={SAC} />
+      <path d="M 70 62 C 90 48 120 44 146 50" stroke="#fff" strokeWidth={5} strokeLinecap="round" fill="none" opacity={0.22} />
+      {goz(86)}
+      {goz(154)}
+      <ellipse cx={62} cy={164} rx={15} ry={9} fill="#f9a8b8" opacity={0.55} />
+      <ellipse cx={178} cy={164} rx={15} ry={9} fill="#f9a8b8" opacity={0.55} />
+      <path d="M 117 150 Q 120 155 124 152" stroke="#e0a688" strokeWidth={2.6} fill="none" strokeLinecap="round" />
+      <g transform={`translate(120 ${buyukAgiz ? 184 : 180}) scale(${buyukAgiz ? 1.15 : 0.72})`}><AgizCizim p={p} id={id} /></g>
     </svg>
   );
 };

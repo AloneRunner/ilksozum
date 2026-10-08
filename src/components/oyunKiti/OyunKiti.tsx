@@ -50,7 +50,7 @@ export const OyunCercevesi: React.FC<{
 }> = ({ baslik, emoji, onBack, adim, toplamAdim, yonerge, children }) => (
   <div className="relative flex flex-col h-full w-full overflow-hidden bg-gradient-to-b from-sky-100 via-white to-emerald-50">
     <style>{STIL}</style>
-    <header className="flex items-center gap-2 px-3 pt-3 pb-1 shrink-0 z-10">
+    <header className="flex items-center gap-2 px-3 pt-3 pb-1 shrink-0 z-10 w-full max-w-3xl mx-auto">
       <button onClick={onBack} className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center active:scale-95" aria-label="Geri dön">
         <ArrowLeftIcon className="w-7 h-7 text-slate-700" />
       </button>
@@ -64,12 +64,13 @@ export const OyunCercevesi: React.FC<{
       ) : null}
     </header>
     {yonerge && (
-      <button onClick={() => speak(yonerge)} className="mx-3 mb-1 flex items-center gap-2 text-left shrink-0 z-10" aria-label="Yönergeyi tekrar dinle">
+      <button onClick={() => speak(yonerge)} className="mx-3 mb-1 flex items-center gap-2 text-left shrink-0 z-10 w-full max-w-3xl self-center px-3" aria-label="Yönergeyi tekrar dinle">
         <KonusanAgiz className="w-14 h-14 shrink-0 drop-shadow" />
         <span className="relative bg-white rounded-2xl px-3 py-2 shadow text-base font-bold text-slate-700 leading-snug">{yonerge}</span>
       </button>
     )}
-    <main className="relative flex-1 min-h-0">{children}</main>
+    {/* geniş ekranda (web, tablet yatay) oyun ortada ve makul genişlikte kalsın */}
+    <main className="relative flex-1 min-h-0 w-full max-w-3xl mx-auto">{children}</main>
   </div>
 );
 

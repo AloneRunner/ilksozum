@@ -122,7 +122,7 @@ export const SiniflandirmaOyunu: React.FC<{ onBack: () => void; ayar: Ayar }> = 
               onClick={() => secili !== null && birak(secili, k.id)}
               className={`flex flex-col items-center rounded-2xl bg-white p-1.5 shadow-md ring-4 transition ${ipucuKap === k.id ? 'ring-amber-400 animate-pulse' : 'ring-transparent'}`}
               style={ziplayan === k.id ? { animation: 'ok-yildiz .45s ease-out' } : undefined}>
-              <img src={k.url} alt={k.ad} draggable={false} className="w-full aspect-square object-cover rounded-xl" />
+              <img src={k.url} alt={k.ad} draggable={false} className="w-full aspect-square max-h-[17vh] object-cover rounded-xl" />
               <span className="text-xs sm:text-sm font-black text-slate-700 text-center leading-tight mt-1">{k.ad}</span>
             </div>
           ))}

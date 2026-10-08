@@ -127,7 +127,7 @@ export const SyllableStage: React.FC<StageProps> = ({ lesson, onDone }) => {
         <SpeakerIcon className="w-4 h-4" /> Dinlemek için dokun
       </div>
       {/* Konuşan yüz: hece okunurken ağız Gökçe'yle senkron hareket eder (Ağzımı İzle ile aynı) */}
-      <KonusanAgiz className="w-32 h-32 sm:w-40 sm:h-40 mb-3 drop-shadow" />
+      <KonusanAgiz className="w-32 h-32 sm:w-40 sm:h-40 mb-3 drop-shadow" buyukAgiz />
 
       <div className="flex flex-wrap justify-center gap-3">
         {lesson.family.map((s) => (

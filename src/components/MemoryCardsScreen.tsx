@@ -183,7 +183,7 @@ const MemoryCardsScreen: React.FC<MemoryCardsScreenProps> = ({
                         return (
                             <div 
                                 key={card.uniqueId} 
-                                className={`aspect-square ${isLandscape ? 'w-20 sm:w-24 md:w-28' : 'w-20 sm:w-24'}`}
+                                className={`aspect-square ${board.length <= 4 ? 'w-36 sm:w-44' : board.length <= 8 ? 'w-28 sm:w-36' : 'w-24 sm:w-28'}`}
                             >
                                 <Card
                                     imageUrl={card.imageUrl}
