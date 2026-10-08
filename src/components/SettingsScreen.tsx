@@ -346,6 +346,14 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
 }) => {
   const [kayitliSes, setKayitliSesAyar] = useLocalStorage<boolean>('kayitliSes_v1', true);
   useEffect(() => { setKayitliSes(kayitliSes); }, [kayitliSes]);
+  // Ana ekrandaki "💛 Destek Ol" ile gelindiyse destek kartına kaydır
+  useEffect(() => {
+    try {
+      if (localStorage.getItem('ayarHedef') !== 'destek') return;
+      localStorage.removeItem('ayarHedef');
+      setTimeout(() => document.getElementById('destek')?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 350);
+    } catch { /* yok say */ }
+  }, []);
   // Scroll pozisyonunu localStorage ile koru
   useEffect(() => {
     const saved = localStorage.getItem('settingsScrollY');
@@ -921,7 +929,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
   <div className={`w-full space-y-4 ${themeVariant ? 'pr-2 pb-10' : 'pb-12'} ${isCosmicTheme ? 'pt-2' : ''}`}>
         {/* Bağış Google Play ile alınır; Windows ve web sürümünde kart gösterilmez */}
         {Capacitor.getPlatform() === 'android' && (
-          <div className={premiumCardClass}>
+          <div id="destek" className={premiumCardClass}>
             {themeVariant === 'cat' && (
               <>
                 <span className="absolute -top-4 -left-2 text-4xl opacity-60 drop-shadow-[0_12px_28px_rgba(249,115,22,0.3)] pointer-events-none">
@@ -964,7 +972,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
             )}
             <HeartIcon className={premiumCrownClass}/>
             <h2 className={premiumTitleClass}>{t('settingsEx.donate.title', 'Geliştiriciye Destek Ol')}</h2>
-            <p className={premiumDescClass}>{t('settingsEx.donate.desc', 'Uygulamadaki her şey ücretsiz ve herkese açık. Bu ödeme hiçbir özelliği açmaz; tamamen gönüllü bir destektir ve uygulamanın geliştirilmesine katkı sağlar.')}</p>
+            <p className={premiumDescClass}>{t('settingsEx.donate.desc', 'Uygulamadaki her şey ücretsiz ve herkese açık; bağış hiçbir özelliği açmaz. Destekler doğrudan uygulamaya gidiyor: Gökçe’nin seslendirmeleri, yeni gerçek fotoğraflar ve iPhone/iPad sürümü için Apple geliştirici hesabı. 💛')}</p>
             {hasPurchasedPremium && (
               <p className={premiumDescClass}>{t('settingsEx.donate.thanks', 'Daha önce destek oldunuz, çok teşekkürler!')}</p>
             )}

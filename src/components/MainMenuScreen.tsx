@@ -134,16 +134,32 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
         
         {isTr ? (
           <>
+            {/* Duyurular 9.1 (Kaan, 2026-10-08: "gizli duyuruları da güncelleyelim") */}
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>GÜNCELLEME:</b> İlk Sözüm <b>tamamen ücretsiz ve reklamsızdır.</b> Tüm eğitim içerikleri herkese açıktır; hiçbir özellik için ödeme gerekmez.
+              <b>YENİ — Gökçe'nin sesi:</b> BASARA, kavramlar, İfade Tahtası, Ses Taklit ve oyunlar artık gerçek bir insan sesiyle konuşuyor. İsterseniz <b>Ayarlar › Kayıtlı ses</b> ile telefonun sesine dönebilirsiniz.
+            </p>
+            <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
+              <b>YENİ — Ağzımı İzle:</b> Konuşan yüz, sesleri ve ilk kelimeleri dudak hareketiyle gösteriyor (<b>Konuşma ve Anlama</b> menüsü). BASARA derslerinde de var.
+            </p>
+            <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
+              <b>YENİ — Program Modu:</b> Beceri alanlarına göre günlük plan, ilk girişte tanıma turu, unutulmasın diye tekrar ve sonunda ödül oyunu.
+            </p>
+            <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
+              <b>YENİ — Oyunlar:</b> Yapboz, Tren Yolu, Boyama (bitince resim canlanıyor!), Hafıza, Sayma, Gölge ve daha fazlası baştan yapıldı. Süre ve puan baskısı yok; çocuk başardıkça oyun kendiliğinden zorlaşıyor.
+            </p>
+            <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
+              İlk Sözüm <b>tamamen ücretsiz ve reklamsızdır.</b> Hiçbir özellik için ödeme gerekmez.
             </p>
             {androidUygulama && (
               <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-                <b>DESTEK:</b> Uygulamanın gelişmesine katkıda bulunmak isteyenler <b>Ayarlar › {destekKartiAdi}</b> bölümünden gönüllü bağış yapabilir. Bağış hiçbir özelliği açmaz; her şey zaten ücretsizdir. 💛
+                <b>DESTEK 💛:</b> Seslendirmeler (ses kredisi), yeni gerçek fotoğraflar ve iPhone/iPad sürümü (Apple geliştirici hesabı) için desteğe ihtiyacımız var. <b>Ebeveyn Köşesi › Destek Ol</b> ya da <b>Ayarlar › {destekKartiAdi}</b> bölümünden gönüllü bağış yapabilirsiniz. Bağış hiçbir özelliği açmaz.
               </p>
             )}
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>YAKINDA:</b> Uygulamamız <b>Windows Store'da</b> da yayınlanacak. Böylece bilgisayar üzerinden de eğitim etkinliklerine kolayca ulaşabileceksiniz.
+              <b>DİL:</b> Uygulamayı Türkçe dışında bir dilde kullanmak isterseniz lütfen mağaza yorumuna yazın; istek gelirse çoklu dil desteği ekleyeceğiz.
+            </p>
+            <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
+              <b>YAKINDA:</b> Windows Store ve iPhone/iPad sürümleri.
             </p>
             <div className="bg-white/20 p-2 rounded-lg mt-1 border border-sky-500/20">
               <p className={`text-xs leading-relaxed font-semibold ${subTextClass}`}>
@@ -160,7 +176,7 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
         ) : (
           <>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>UPDATE:</b> İlk Sözüm is <b>completely free and ad-free.</b> All educational content is open to everyone; no feature requires payment.
+              <b>NEW:</b> Real human voice (Gökçe) for BASARA, concepts, the communication board and games; a talking face that shows mouth movements (“Watch My Mouth”); a new Program Mode; and rebuilt games. İlk Sözüm is <b>completely free and ad-free.</b>
             </p>
             {androidUygulama && (
               <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
@@ -168,7 +184,7 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
               </p>
             )}
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>COMING SOON:</b> The app will also be available on the <b>Windows Store</b>, making it easier to use the activities on a computer.
+              <b>LANGUAGE:</b> Would you like to use the app in another language? Please tell us in a store review. <b>COMING SOON:</b> Windows Store and iPhone/iPad.
             </p>
             <p className={`text-xs sm:text-sm leading-relaxed mt-1 ${subTextClass}`}>
               Explore our other educational apps at <b>ozarik.org</b>, including Zeka Ustası for TAZOF tournaments and DersTimeTable for school scheduling.
@@ -217,9 +233,13 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
   onStartRandomMode,
   onSelectParentTips,
   onSelectWorksheets,
+  onSelectSettings,
   theme,
 }) => {
   const { settings: ayarlar } = useAppContext();
+  // Ebeveyn Köşesi "💛 Destek Ol" (Kaan, 2026-10-08: "seslendirme ve Apple için lazım"): bağış Google Play ile, yalnız Android
+  const destekGoster = Capacitor.getPlatform() === 'android' && !!onSelectSettings;
+  const destegeGit = () => { try { localStorage.setItem('ayarHedef', 'destek'); } catch { /* yok say */ } onSelectSettings?.(); };
   const tas = tasarimAl(ayarlar.sahne);
   const lang = getCurrentLanguage();
   const showObjectsIntl = lang !== "tr";
@@ -295,6 +315,7 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
           { id: 'tips', emoji: '💡', label: 'İpuçları', onClick: onSelectParentTips },
           ...(onSelectWorksheets ? [{ id: 'sheets', emoji: '🖨️', label: 'Çalışma Kâğıtları', onClick: onSelectWorksheets }] : []),
           { id: 'reports', emoji: '📊', label: 'Raporlar', onClick: () => onSelectCategory('reports') },
+          ...(destekGoster ? [{ id: 'destek', emoji: '💛', label: 'Destek Ol', onClick: destegeGit }] : []),
         ]}
         selam={`${t("menu.hello", "Merhaba")} 👋`}
         baslik={t("menu.appTitle", "İlk Sözüm: Otizm & Okul Öncesi")}
@@ -395,6 +416,7 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
                 { id: 'tips', emoji: '💡', label: t('menu.parentTips.short', 'İpuçları'), onClick: onSelectParentTips },
                 ...(onSelectWorksheets ? [{ id: 'sheets', emoji: '🖨️', label: t('menu.worksheets.short', 'Çalışma Kâğıtları'), onClick: onSelectWorksheets }] : []),
                 { id: 'reports', emoji: '📊', label: t('menu.reports.title', 'Raporlar'), onClick: () => onSelectCategory('reports') },
+                ...(destekGoster ? [{ id: 'destek', emoji: '💛', label: 'Destek Ol', onClick: destegeGit }] : []),
               ].map((k) => (
                 <button
                   key={k.id}
