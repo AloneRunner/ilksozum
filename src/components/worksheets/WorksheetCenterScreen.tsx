@@ -258,7 +258,7 @@ const WorksheetCenterScreen: React.FC<WorksheetCenterScreenProps> = ({ onBack })
             <div className="flex flex-col gap-2">
               <p className="text-xs text-indigo-800 leading-relaxed">
                 <strong>Bilgisayardan Yazdırmak Daha Kolay!</strong><br />
-                Çalışma kağıtlarına bilgisayarınızdan erişmek ve çok daha rahat yazıcıdan çıktı almak için <span className="font-bold font-mono bg-indigo-200/50 px-1 py-0.5 rounded select-all">ilksozumotizm.netlify.app</span> adresine girebilirsiniz.
+                Çalışma kağıtlarına bilgisayarınızdan erişmek ve çok daha rahat yazıcıdan çıktı almak için <span className="font-bold font-mono bg-indigo-200/50 px-1 py-0.5 rounded select-all">ilksozum.ozarik.org</span> adresine girebilirsiniz.
               </p>
               <button 
                 onClick={() => {

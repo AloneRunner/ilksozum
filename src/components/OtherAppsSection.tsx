@@ -21,7 +21,7 @@ const OtherAppsSection: React.FC<OtherAppsSectionProps> = ({ theme }) => {
         >
           <span className="text-base">🌐</span>
           <span className="text-xs text-cyan-300 leading-snug">
-            Web versiyonuna <strong className="text-cyan-100">ilksozumotizm.netlify.app</strong> adresinden de ulaşabilirsiniz
+            Web versiyonuna <strong className="text-cyan-100">ilksozum.ozarik.org</strong> adresinden de ulaşabilirsiniz
           </span>
         </a>
 
@@ -69,7 +69,7 @@ const OtherAppsSection: React.FC<OtherAppsSectionProps> = ({ theme }) => {
       >
         <span className="text-xl flex-shrink-0">🌐</span>
         <span className="text-sm leading-snug">
-          Web versiyonuna <strong>ilksozumotizm.netlify.app</strong> adresinden de ulaşabilirsiniz
+          Web versiyonuna <strong>ilksozum.ozarik.org</strong> adresinden de ulaşabilirsiniz
         </span>
       </a>
 
