@@ -68,7 +68,7 @@ Play istatistiklerinde yabancı ülkelerden kullanıcılar da görünüyor. Ger�
 
 ## 5. Diğer bekleyenler
 
-- **Netlify** (ilksozumotizm.netlify.app):
+- **Netlify** (ilksozumotizm.netlify.app): GitHub'a BAĞLI (8 Ekim'de doğrulandı); her gönderim web sürümünü günceller. Aşağıdaki not eski:
   - Projede Netlify ayar dosyası yok. Site GitHub'a bağlı değilse elle yüklenmiş olabilir.
   - Kaan Netlify panelinde "Site configuration → Build & deploy → Continuous deployment" bölümüne bakmalı. Bağlıysa her GitHub gönderiminde site kendiliğinden güncellenir.
   - ozarik.org'un altında `ilksozum.ozarik.org` adresi açılacak.
