@@ -35,7 +35,7 @@ const BOLUMLER: Bolum[] = [
     ['ka', 'Dilin geride, ağzın açık.'], ['ga', 'Dilin geride, sesli.'], ['ha', 'Aynayı buğular gibi nefes ver.'],
   ] },
   { id: 'kelime', ad: 'İlk kelimeler', emoji: '⭐', ogeler: [
-    ['baba'], ['mama'], ['nine'], ['bebek'], ['su'], ['süt'], ['muz'], ['elma'], ['bal'], ['çay'], ['ev'], ['el'],
+    ['baba'], ['mama'], ['bebek'], ['su'], ['süt'], ['muz'], ['elma'], ['bal'], ['çay'], ['ev'], ['el'],
     ['göz'], ['at'], ['ayı'], ['balık'], ['araba'], ['ip'], ['evet'], ['hayır'], ['daha'], ['bitti'], ['gel'], ['ver'], ['dur'],
   ] },
 ];
