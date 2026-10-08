@@ -81,7 +81,8 @@ const SaymaOyunu = lazy(() => import('../games/SaymaOyunu.tsx'));
 const GolgeOyunu = lazy(() => import('../games/GolgeOyunu.tsx'));
 // Eski Boyut Sıralama (SizeOrderingGameScreen.tsx) yedekte
 const BoyutSiralaOyunu = lazy(() => import('../games/BoyutSiralaOyunu.tsx'));
-const NumberSequenceGameScreen = lazy(() => import('../games/NumberSequenceGameScreen.tsx'));
+// Eski Sayı Sırala (NumberSequenceGameScreen.tsx) yedekte
+const SayiSiralaOyunu = lazy(() => import('../games/SayiSiralaOyunu.tsx'));
 const PlantGrowingGameScreen = lazy(() => import('../games/PlantGrowingGameScreen.tsx'));
 const ColorSequenceGameScreen = lazy(() => import('../games/ColorSequenceGameScreen.tsx'));
 const WaitAndPressGameScreen = lazy(() => import('../games/WaitAndPressGameScreen.tsx'));
@@ -901,7 +902,7 @@ export const AppRouter = () => {
         case ScreenState.CountingGame: return <SaymaOyunu onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.ShadowMatchGame: return <GolgeOyunu onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.SizeOrderingGame: return <BoyutSiralaOyunu onBack={() => geriDon(ScreenState.MainMenu)} />;
-        case ScreenState.NumberSequenceGame: return <NumberSequenceGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.NumberSequenceGame: return <SayiSiralaOyunu onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.PlantGrowingGame: return <PlantGrowingGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.ColorSequenceGame: return <ColorSequenceGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.WaitAndPressGame: return <WaitAndPressGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
