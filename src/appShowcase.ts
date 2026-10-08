@@ -44,7 +44,7 @@ export const APP_SHOWCASE: AppShowcaseItem[] = [
   },
 ];
 
-export const WEB_VERSION_URL = 'https://ilksozumotizm.netlify.app/';
+export const WEB_VERSION_URL = 'https://ilksozum.ozarik.org/';
 
 export const getPlatformLink = (item: AppShowcaseItem) => {
   const isAndroid = typeof Capacitor !== 'undefined'

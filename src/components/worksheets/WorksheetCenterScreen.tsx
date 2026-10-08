@@ -263,7 +263,7 @@ const WorksheetCenterScreen: React.FC<WorksheetCenterScreenProps> = ({ onBack })
               <button 
                 onClick={() => {
                   if (typeof navigator !== 'undefined' && navigator.clipboard) {
-                    navigator.clipboard.writeText('https://ilksozumotizm.netlify.app');
+                    navigator.clipboard.writeText('https://ilksozum.ozarik.org');
                     alert('Bağlantı kopyalandı! Bilgisayarınıza gönderebilirsiniz.');
                   }
                 }}
