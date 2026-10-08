@@ -75,6 +75,14 @@ Play istatistiklerinde yabancı ülkelerden kullanıcılar da görünüyor. Ger�
   - Kaan Netlify panelinde "Site configuration → Build & deploy → Continuous deployment" bölümüne bakmalı. Bağlıysa her GitHub gönderiminde site kendiliğinden güncellenir.
   - ozarik.org'un altında `ilksozum.ozarik.org` adresi açılacak.
 - **Windows Store:** Yayınlanacak, içinde ödeme YOK. Destek yalnız Google Play'den. Kod zaten öyle: destek kartı ve düğmesi yalnız Android'de. Paketleme PWABuilder ile.
+- **Google Play mağaza sayfası (Kaan, 8 Ekim: "görselleri güncellemek lazım"):** Eski ekran görüntüleri yeni arayüzü yansıtmıyor.
+  - Hazırlanacaklar:
+    - 8 telefon ekranı: ana ekran, Program Modu, Gökçe/Ağzımı İzle, BASARA, kavram, yapboz, boyama canlanma, İfade Tahtası. Her birinde kısa başlık olacak.
+    - Tablet ekranları.
+    - 1024×500 öne çıkan görsel.
+    - Kısa ve uzun açıklama güncellemesi.
+  - Tarayıcıdan gerçek ekranlar çekilir; Kaan yükler.
+- **Windows Store bağlantısı:** Partner Center → New product → MSIX or PWA app → "İlk Sözüm: Otizm & Okul Öncesi" adını ayır. Product identity sayfasında Store ID ve bağlantı çıkar.
 - **Pardus (okullar, akıllı tahta ETAP):** Fikir bekliyor (Kaan, 8 Ekim).
   - Ileride .deb/Flatpak paketi hazırlanacak; Zeka Ustası gibi diğer uygulamalarla birlikte.
   - O zamana kadar web sürümü Pardus'ta tarayıcıdan çalışıyor (ilksozumotizm.netlify.app).
