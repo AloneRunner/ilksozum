@@ -74,7 +74,11 @@ Play istatistiklerinde yabancı ülkelerden kullanıcılar da görünüyor. Ger�
   - Projede Netlify ayar dosyası yok. Site GitHub'a bağlı değilse elle yüklenmiş olabilir.
   - Kaan Netlify panelinde "Site configuration → Build & deploy → Continuous deployment" bölümüne bakmalı. Bağlıysa her GitHub gönderiminde site kendiliğinden güncellenir.
   - ozarik.org'un altında `ilksozum.ozarik.org` adresi açılacak.
-- **Windows Store:** Kaan, Store kimliği için uygulama adını ayıracak.
+- **Windows Store:** Yayınlanacak, içinde ödeme YOK. Destek yalnız Google Play'den. Kod zaten öyle: destek kartı ve düğmesi yalnız Android'de. Paketleme PWABuilder ile.
+- **Pardus (okullar, akıllı tahta ETAP):** Fikir bekliyor (Kaan, 8 Ekim).
+  - Ileride .deb/Flatpak paketi hazırlanacak; Zeka Ustası gibi diğer uygulamalarla birlikte.
+  - O zamana kadar web sürümü Pardus'ta tarayıcıdan çalışıyor (ilksozumotizm.netlify.app).
+  - Pardus Yazılım Merkezi "öner" formu hata veriyordu.
 - **Program Modu:** Kaan oğluyla birkaç gün deneyecek. Gerekirse seviyeler ve eşikler ayarlanacak.
 - **Organ görselleri, temalar, "nine" telaffuzu:** Kaan deneyecek.
 
