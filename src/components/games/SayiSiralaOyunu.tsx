@@ -23,7 +23,7 @@ const SayiSiralaOyunu: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   const [kutlama, setKutlama] = useState(false);
   const [bitti, setBitti] = useState(false);
   const beklenen = sira[binen.length];
-  const yonerge = ayar.geri ? `${SAYI[ayar.n]}'ten geriye say. Önce ${ayar.n}.` : 'Sayıları sırayla seç. Önce bir.';
+  const yonerge = ayar.geri ? 'Beşten geriye say. Önce beş.' : 'Sayıları sırayla seç. Önce bir.'; // geriye sayma yalnız 5'ten
 
   useEffect(() => { setBinen([]); setYanlis(0); speak(yonerge); }, [tur]); // eslint-disable-line react-hooks/exhaustive-deps
 

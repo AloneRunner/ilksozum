@@ -1,0 +1,2474 @@
+[
+ [
+  "araba",
+  "Araba."
+ ],
+ [
+  "kutu",
+  "Kutu."
+ ],
+ [
+  "ağaç",
+  "Ağaç."
+ ],
+ [
+  "manzara",
+  "Manzara."
+ ],
+ [
+  "tişört",
+  "Tişört."
+ ],
+ [
+  "pizza",
+  "Pizza."
+ ],
+ [
+  "ördek",
+  "Ördek."
+ ],
+ [
+  "pamuk",
+  "Pamuk."
+ ],
+ [
+  "fil",
+  "Fil."
+ ],
+ [
+  "fare",
+  "Fare."
+ ],
+ [
+  "düğme",
+  "Düğme."
+ ],
+ [
+  "valiz",
+  "Valiz."
+ ],
+ [
+  "papağan",
+  "Papağan."
+ ],
+ [
+  "jeton",
+  "Jeton."
+ ],
+ [
+  "vazo",
+  "Vazo."
+ ],
+ [
+  "kitap",
+  "Kitap."
+ ],
+ [
+  "kapı",
+  "Kapı."
+ ],
+ [
+  "tavşan",
+  "Tavşan."
+ ],
+ [
+  "kaplumbağa",
+  "Kaplumbağa."
+ ],
+ [
+  "elma",
+  "Elma."
+ ],
+ [
+  "çöp kutusu",
+  "Çöp kutusu."
+ ],
+ [
+  "köpek",
+  "Köpek."
+ ],
+ [
+  "peynir",
+  "Peynir."
+ ],
+ [
+  "fırça",
+  "Fırça."
+ ],
+ [
+  "yağmur",
+  "Yağmur."
+ ],
+ [
+  "vida",
+  "Vida."
+ ],
+ [
+  "pijama",
+  "Pijama."
+ ],
+ [
+  "limon",
+  "Limon."
+ ],
+ [
+  "dondurma",
+  "Dondurma."
+ ],
+ [
+  "lale",
+  "Lale."
+ ],
+ [
+  "çorap",
+  "Çorap."
+ ],
+ [
+  "ayakkabı",
+  "Ayakkabı."
+ ],
+ [
+  "yol",
+  "Yol."
+ ],
+ [
+  "yıldız",
+  "Yıldız."
+ ],
+ [
+  "davul",
+  "Davul."
+ ],
+ [
+  "kuş",
+  "Kuş."
+ ],
+ [
+  "el feneri",
+  "El feneri."
+ ],
+ [
+  "soğan",
+  "Soğan."
+ ],
+ [
+  "papatya",
+  "Papatya."
+ ],
+ [
+  "yumurta",
+  "Yumurta."
+ ],
+ [
+  "pasta",
+  "Pasta."
+ ],
+ [
+  "pantolon",
+  "Pantolon."
+ ],
+ [
+  "şort",
+  "Şort."
+ ],
+ [
+  "pencere",
+  "Pencere."
+ ],
+ [
+  "öğretmen",
+  "Öğretmen."
+ ],
+ [
+  "üzüm",
+  "Üzüm."
+ ],
+ [
+  "vantilatör",
+  "Vantilatör."
+ ],
+ [
+  "uğur böceği",
+  "Uğur böceği."
+ ],
+ [
+  "gözlük",
+  "Gözlük."
+ ],
+ [
+  "fındık",
+  "Fındık."
+ ],
+ [
+  "jakuzi",
+  "Jakuzi."
+ ],
+ [
+  "sandalye",
+  "Sandalye."
+ ],
+ [
+  "havuç",
+  "Havuç."
+ ],
+ [
+  "aslan",
+  "Aslan."
+ ],
+ [
+  "zürafa",
+  "Zürafa."
+ ],
+ [
+  "horoz",
+  "Horoz."
+ ],
+ [
+  "baykuş",
+  "Baykuş."
+ ],
+ [
+  "okul otobüsü",
+  "Okul otobüsü."
+ ],
+ [
+  "tren",
+  "Tren."
+ ],
+ [
+  "uçak",
+  "Uçak."
+ ],
+ [
+  "oyuncak bebek",
+  "Oyuncak bebek."
+ ],
+ [
+  "bisiklet",
+  "Bisiklet."
+ ],
+ [
+  "şapka",
+  "Şapka."
+ ],
+ [
+  "ekmek",
+  "Ekmek."
+ ],
+ [
+  "muz",
+  "Muz."
+ ],
+ [
+  "portakal",
+  "Portakal."
+ ],
+ [
+  "salatalık",
+  "Salatalık."
+ ],
+ [
+  "saat",
+  "Saat."
+ ],
+ [
+  "zeytin",
+  "Zeytin."
+ ],
+ [
+  "jilet",
+  "Jilet."
+ ],
+ [
+  "kalem",
+  "Kalem."
+ ],
+ [
+  "bardak",
+  "Bardak."
+ ],
+ [
+  "kaşık",
+  "Kaşık."
+ ],
+ [
+  "çatal",
+  "Çatal."
+ ],
+ [
+  "çocuk",
+  "Çocuk."
+ ],
+ [
+  "domates",
+  "Domates."
+ ],
+ [
+  "marul",
+  "Marul."
+ ],
+ [
+  "balon",
+  "Balon."
+ ],
+ [
+  "masa",
+  "Masa."
+ ],
+ [
+  "uçurtma",
+  "Uçurtma."
+ ],
+ [
+  "yastık",
+  "Yastık."
+ ],
+ [
+  "halter",
+  "Halter."
+ ],
+ [
+  "kahve",
+  "Kahve."
+ ],
+ [
+  "buz",
+  "Buz."
+ ],
+ [
+  "anahtar",
+  "Anahtar."
+ ],
+ [
+  "merdiven",
+  "Merdiven."
+ ],
+ [
+  "makas",
+  "Makas."
+ ],
+ [
+  "çita",
+  "Çita."
+ ],
+ [
+  "ayna",
+  "Ayna."
+ ],
+ [
+  "cetvel",
+  "Cetvel."
+ ],
+ [
+  "solucan",
+  "Solucan."
+ ],
+ [
+  "tabak",
+  "Tabak."
+ ],
+ [
+  "top",
+  "Top."
+ ],
+ [
+  "şemsiye",
+  "Şemsiye."
+ ],
+ [
+  "gökkuşağı",
+  "Gökkuşağı."
+ ],
+ [
+  "televizyon",
+  "Televizyon."
+ ],
+ [
+  "helikopter",
+  "Helikopter."
+ ],
+ [
+  "bitki",
+  "Bitki."
+ ],
+ [
+  "sünger",
+  "Sünger."
+ ],
+ [
+  "çamaşır makinesi",
+  "Çamaşır makinesi."
+ ],
+ [
+  "karpuz",
+  "Karpuz."
+ ],
+ [
+  "çilek",
+  "Çilek."
+ ],
+ [
+  "yoğurt",
+  "Yoğurt."
+ ],
+ [
+  "robot",
+  "Robot."
+ ],
+ [
+  "dinozor",
+  "Dinozor."
+ ],
+ [
+  "çadır",
+  "Çadır."
+ ],
+ [
+  "gitar",
+  "Gitar."
+ ],
+ [
+  "kamera",
+  "Kamera."
+ ],
+ [
+  "mikrofon",
+  "Mikrofon."
+ ],
+ [
+  "kumbara",
+  "Kumbara."
+ ],
+ [
+  "kaydırak",
+  "Kaydırak."
+ ],
+ [
+  "pil",
+  "Pil."
+ ],
+ [
+  "dağ",
+  "Dağ."
+ ],
+ [
+  "tepe",
+  "Tepe."
+ ],
+ [
+  "durak",
+  "Durak."
+ ],
+ [
+  "hazine sandığı",
+  "Hazine sandığı."
+ ],
+ [
+  "roket",
+  "Roket."
+ ],
+ [
+  "gezegen",
+  "Gezegen."
+ ],
+ [
+  "kask",
+  "Kask."
+ ],
+ [
+  "çanta",
+  "Çanta."
+ ],
+ [
+  "keman",
+  "Keman."
+ ],
+ [
+  "sabun",
+  "Sabun."
+ ],
+ [
+  "oyun halısı",
+  "Oyun halısı."
+ ],
+ [
+  "krem",
+  "Krem."
+ ],
+ [
+  "kale",
+  "Kale."
+ ],
+ [
+  "hazine haritası",
+  "Hazine haritası."
+ ],
+ [
+  "dürbün",
+  "Dürbün."
+ ],
+ [
+  "şelale",
+  "Şelale."
+ ],
+ [
+  "tornavida",
+  "Tornavida."
+ ],
+ [
+  "pirinç",
+  "Pirinç."
+ ],
+ [
+  "yangın söndürme tüpü",
+  "Yangın söndürme tüpü."
+ ],
+ [
+  "pergel",
+  "Pergel."
+ ],
+ [
+  "salyangoz",
+  "Salyangoz."
+ ],
+ [
+  "halat",
+  "Halat."
+ ],
+ [
+  "ip",
+  "İp."
+ ],
+ [
+  "deniz",
+  "Deniz."
+ ],
+ [
+  "havuz",
+  "Havuz."
+ ],
+ [
+  "biber",
+  "Biber."
+ ],
+ [
+  "bal",
+  "Bal."
+ ],
+ [
+  "oda",
+  "Oda."
+ ],
+ [
+  "jandarma",
+  "Jandarma."
+ ],
+ [
+  "penguen",
+  "Penguen."
+ ],
+ [
+  "volkan",
+  "Volkan."
+ ],
+ [
+  "bulut",
+  "Bulut."
+ ],
+ [
+  "güneş",
+  "Güneş."
+ ],
+ [
+  "lolipop",
+  "Lolipop."
+ ],
+ [
+  "şurup",
+  "Şurup."
+ ],
+ [
+  "çöl",
+  "Çöl."
+ ],
+ [
+  "toplu iğne",
+  "Toplu iğne."
+ ],
+ [
+  "gazete",
+  "Gazete."
+ ],
+ [
+  "para",
+  "Para."
+ ],
+ [
+  "patlamış mısır",
+  "Patlamış mısır."
+ ],
+ [
+  "soba",
+  "Soba."
+ ],
+ [
+  "buzdolabı",
+  "Buzdolabı."
+ ],
+ [
+  "gömlek",
+  "Gömlek."
+ ],
+ [
+  "itfaiye aracı",
+  "İtfaiye aracı."
+ ],
+ [
+  "ambulans",
+  "Ambulans."
+ ],
+ [
+  "polis arabası",
+  "Polis arabası."
+ ],
+ [
+  "motosiklet",
+  "Motosiklet."
+ ],
+ [
+  "termometre",
+  "Termometre."
+ ],
+ [
+  "bıçak",
+  "Bıçak."
+ ],
+ [
+  "tava",
+  "Tava."
+ ],
+ [
+  "çorba",
+  "Çorba."
+ ],
+ [
+  "makarna",
+  "Makarna."
+ ],
+ [
+  "elbise",
+  "Elbise."
+ ],
+ [
+  "etek",
+  "Etek."
+ ],
+ [
+  "ceket",
+  "Ceket."
+ ],
+ [
+  "atkı",
+  "Atkı."
+ ],
+ [
+  "eldivenler",
+  "Eldivenler."
+ ],
+ [
+  "arı",
+  "Arı."
+ ],
+ [
+  "kelebek",
+  "Kelebek."
+ ],
+ [
+  "kurbağa",
+  "Kurbağa."
+ ],
+ [
+  "oyuncak ayı",
+  "Oyuncak ayı."
+ ],
+ [
+  "maymun",
+  "Maymun."
+ ],
+ [
+  "kiraz",
+  "Kiraz."
+ ],
+ [
+  "ananas",
+  "Ananas."
+ ],
+ [
+  "patlıcan",
+  "Patlıcan."
+ ],
+ [
+  "kaktüs",
+  "Kaktüs."
+ ],
+ [
+  "gece lambası",
+  "Gece lambası."
+ ],
+ [
+  "perde",
+  "Perde."
+ ],
+ [
+  "el",
+  "El."
+ ],
+ [
+  "kitaplık",
+  "Kitaplık."
+ ],
+ [
+  "kamyon",
+  "Kamyon."
+ ],
+ [
+  "traktör",
+  "Traktör."
+ ],
+ [
+  "at",
+  "At."
+ ],
+ [
+  "inek",
+  "İnek."
+ ],
+ [
+  "fok balığı",
+  "Fok balığı."
+ ],
+ [
+  "vişne",
+  "Vişne."
+ ],
+ [
+  "kavun",
+  "Kavun."
+ ],
+ [
+  "simit",
+  "Simit."
+ ],
+ [
+  "çikolata",
+  "Çikolata."
+ ],
+ [
+  "bulaşık makinesi",
+  "Bulaşık makinesi."
+ ],
+ [
+  "fırın",
+  "Fırın."
+ ],
+ [
+  "musluk",
+  "Musluk."
+ ],
+ [
+  "ütü",
+  "Ütü."
+ ],
+ [
+  "çivi",
+  "Çivi."
+ ],
+ [
+  "bot",
+  "Bot."
+ ],
+ [
+  "terlik",
+  "Terlik."
+ ],
+ [
+  "gül",
+  "Gül."
+ ],
+ [
+  "akvaryum",
+  "Akvaryum."
+ ],
+ [
+  "brokoli",
+  "Brokoli."
+ ],
+ [
+  "sosis",
+  "Sosis."
+ ],
+ [
+  "kraliçe",
+  "Kraliçe."
+ ],
+ [
+  "kral",
+  "Kral."
+ ],
+ [
+  "mikroskop",
+  "Mikroskop."
+ ],
+ [
+  "tohum",
+  "Tohum."
+ ],
+ [
+  "filiz",
+  "Filiz."
+ ],
+ [
+  "panda",
+  "Panda."
+ ],
+ [
+  "tavuk",
+  "Tavuk."
+ ],
+ [
+  "doktor",
+  "Doktor."
+ ],
+ [
+  "polis",
+  "Polis."
+ ],
+ [
+  "aşçı",
+  "Aşçı."
+ ],
+ [
+  "itfaiyeci",
+  "İtfaiyeci."
+ ],
+ [
+  "flüt",
+  "Flüt."
+ ],
+ [
+  "marakas",
+  "Marakas."
+ ],
+ [
+  "bisküvi",
+  "Bisküvi."
+ ],
+ [
+  "limonata",
+  "Limonata."
+ ],
+ [
+  "salata",
+  "Salata."
+ ],
+ [
+  "şeftali",
+  "Şeftali."
+ ],
+ [
+  "lahana",
+  "Lahana."
+ ],
+ [
+  "kazak",
+  "Kazak."
+ ],
+ [
+  "bere",
+  "Bere."
+ ],
+ [
+  "denizaltı",
+  "Denizaltı."
+ ],
+ [
+  "vinç",
+  "Vinç."
+ ],
+ [
+  "elbise dolabı",
+  "Elbise dolabı."
+ ],
+ [
+  "priz",
+  "Priz."
+ ],
+ [
+  "paspas",
+  "Paspas."
+ ],
+ [
+  "göl",
+  "Göl."
+ ],
+ [
+  "nehir",
+  "Nehir."
+ ],
+ [
+  "pense",
+  "Pense."
+ ],
+ [
+  "yüzük",
+  "Yüzük."
+ ],
+ [
+  "gül dalı",
+  "Gül dalı."
+ ],
+ [
+  "taş",
+  "Taş."
+ ],
+ [
+  "bilgisayar faresi",
+  "Bilgisayar faresi."
+ ],
+ [
+  "klavye",
+  "Klavye."
+ ],
+ [
+  "kulaklık",
+  "Kulaklık."
+ ],
+ [
+  "çaydanlık",
+  "Çaydanlık."
+ ],
+ [
+  "ıstakoz",
+  "Istakoz."
+ ],
+ [
+  "ahtapot",
+  "Ahtapot."
+ ],
+ [
+  "deniz yıldızı",
+  "Deniz yıldızı."
+ ],
+ [
+  "jöle",
+  "Jöle."
+ ],
+ [
+  "pilates topu",
+  "Pilates topu."
+ ],
+ [
+  "misketler",
+  "Misketler."
+ ],
+ [
+  "saksafon",
+  "Saksafon."
+ ],
+ [
+  "armut",
+  "Armut."
+ ],
+ [
+  "sosisli sandviç",
+  "Sosisli sandviç."
+ ],
+ [
+  "mikser",
+  "Mikser."
+ ],
+ [
+  "pusula",
+  "Pusula."
+ ],
+ [
+  "kürek",
+  "Kürek."
+ ],
+ [
+  "biberon",
+  "Biberon."
+ ],
+ [
+  "menekşe",
+  "Menekşe."
+ ],
+ [
+  "yelkenli",
+  "Yelkenli."
+ ],
+ [
+  "civciv",
+  "Civciv."
+ ],
+ [
+  "teleskop",
+  "Teleskop."
+ ],
+ [
+  "astronot",
+  "Astronot."
+ ],
+ [
+  "uzay mekiği",
+  "Uzay mekiği."
+ ],
+ [
+  "kaykay",
+  "Kaykay."
+ ],
+ [
+  "şömine",
+  "Şömine."
+ ],
+ [
+  "hemşire",
+  "Hemşire."
+ ],
+ [
+  "pilot",
+  "Pilot."
+ ],
+ [
+  "salıncak",
+  "Salıncak."
+ ],
+ [
+  "pul",
+  "Pul."
+ ],
+ [
+  "mandal",
+  "Mandal."
+ ],
+ [
+  "fıskiye",
+  "Fıskiye."
+ ],
+ [
+  "olta",
+  "Olta."
+ ],
+ [
+  "kar",
+  "Kar."
+ ],
+ [
+  "rüzgar",
+  "Rüzgar."
+ ],
+ [
+  "şimşek",
+  "Şimşek."
+ ],
+ [
+  "göktaşı",
+  "Göktaşı."
+ ],
+ [
+  "tilki",
+  "Tilki."
+ ],
+ [
+  "geyik",
+  "Geyik."
+ ],
+ [
+  "sincap",
+  "Sincap."
+ ],
+ [
+  "kirpi",
+  "Kirpi."
+ ],
+ [
+  "mandalina",
+  "Mandalina."
+ ],
+ [
+  "ıspanak",
+  "Ispanak."
+ ],
+ [
+  "pırasa",
+  "Pırasa."
+ ],
+ [
+  "tuvalet",
+  "Tuvalet."
+ ],
+ [
+  "lavabo",
+  "Lavabo."
+ ],
+ [
+  "küvet",
+  "Küvet."
+ ],
+ [
+  "diş macunu",
+  "Diş macunu."
+ ],
+ [
+  "şampuan",
+  "Şampuan."
+ ],
+ [
+  "düdük",
+  "Düdük."
+ ],
+ [
+  "zil",
+  "Zil."
+ ],
+ [
+  "tef",
+  "Tef."
+ ],
+ [
+  "bank",
+  "Bank."
+ ],
+ [
+  "posta kutusu",
+  "Posta kutusu."
+ ],
+ [
+  "saksı",
+  "Saksı."
+ ],
+ [
+  "çim",
+  "Çim."
+ ],
+ [
+  "baston",
+  "Baston."
+ ],
+ [
+  "halı",
+  "Halı."
+ ],
+ [
+  "diş fırçası",
+  "Diş fırçası."
+ ],
+ [
+  "çiçek",
+  "Çiçek."
+ ],
+ [
+  "palmiye ağacı",
+  "Palmiye ağacı."
+ ],
+ [
+  "kavanoz",
+  "Kavanoz."
+ ],
+ [
+  "sepet",
+  "Sepet."
+ ],
+ [
+  "binalar",
+  "Binalar."
+ ],
+ [
+  "koyun",
+  "Koyun."
+ ],
+ [
+  "keçi",
+  "Keçi."
+ ],
+ [
+  "kuzu",
+  "Kuzu."
+ ],
+ [
+  "gözler",
+  "Gözler."
+ ],
+ [
+  "yapboz",
+  "Yapboz."
+ ],
+ [
+  "pasta dilimi",
+  "Pasta dilimi."
+ ],
+ [
+  "kulak",
+  "Kulak."
+ ],
+ [
+  "balina",
+  "Balina."
+ ],
+ [
+  "sandal",
+  "Sandal."
+ ],
+ [
+  "çekiç",
+  "Çekiç."
+ ],
+ [
+  "okul",
+  "Okul."
+ ],
+ [
+  "nar",
+  "Nar."
+ ],
+ [
+  "çocuk parkı",
+  "Çocuk parkı."
+ ],
+ [
+  "satranç taşları",
+  "Satranç taşları."
+ ],
+ [
+  "tığ",
+  "Tığ."
+ ],
+ [
+  "patika",
+  "Patika."
+ ],
+ [
+  "silgi",
+  "Silgi."
+ ],
+ [
+  "dal",
+  "Dal."
+ ],
+ [
+  "sıcak hava balonu",
+  "Sıcak hava balonu."
+ ],
+ [
+  "kitap ayracı",
+  "Kitap ayracı."
+ ],
+ [
+  "koltuk",
+  "Koltuk."
+ ],
+ [
+  "kaş",
+  "Kaş."
+ ],
+ [
+  "burun",
+  "Burun."
+ ],
+ [
+  "dudak",
+  "Dudak."
+ ],
+ [
+  "dil",
+  "Dil."
+ ],
+ [
+  "omuz",
+  "Omuz."
+ ],
+ [
+  "kol",
+  "Kol."
+ ],
+ [
+  "ayak",
+  "Ayak."
+ ],
+ [
+  "bacak",
+  "Bacak."
+ ],
+ [
+  "parmak",
+  "Parmak."
+ ],
+ [
+  "koli bandı",
+  "Koli bandı."
+ ],
+ [
+  "bant",
+  "Bant."
+ ],
+ [
+  "kravat",
+  "Kravat."
+ ],
+ [
+  "papyon",
+  "Papyon."
+ ],
+ [
+  "dede",
+  "Dede."
+ ],
+ [
+  "kedi",
+  "Kedi."
+ ],
+ [
+  "tomurcuk",
+  "Tomurcuk."
+ ],
+ [
+  "hamur",
+  "Hamur."
+ ],
+ [
+  "davul çubuğu",
+  "Davul çubuğu."
+ ],
+ [
+  "göz",
+  "Göz."
+ ],
+ [
+  "zarf",
+  "Zarf."
+ ],
+ [
+  "gökyüzü",
+  "Gökyüzü."
+ ],
+ [
+  "yatak",
+  "Yatak."
+ ],
+ [
+  "sokak lambası",
+  "Sokak lambası."
+ ],
+ [
+  "raf",
+  "Raf."
+ ],
+ [
+  "gökdelen",
+  "Gökdelen."
+ ],
+ [
+  "kuşlar",
+  "Kuşlar."
+ ],
+ [
+  "ay",
+  "Ay."
+ ],
+ [
+  "gemi",
+  "Gemi."
+ ],
+ [
+  "sandviç",
+  "Sandviç."
+ ],
+ [
+  "tuzluk ve biberlik",
+  "Tuzluk ve biberlik."
+ ],
+ [
+  "kediler",
+  "Kediler."
+ ],
+ [
+  "ok",
+  "Ok."
+ ],
+ [
+  "turp",
+  "Turp."
+ ],
+ [
+  "greyfurt",
+  "Greyfurt."
+ ],
+ [
+  "sirke",
+  "Sirke."
+ ],
+ [
+  "reçel",
+  "Reçel."
+ ],
+ [
+  "zencefil",
+  "Zencefil."
+ ],
+ [
+  "erik",
+  "Erik."
+ ],
+ [
+  "kağıt",
+  "Kağıt."
+ ],
+ [
+  "buzdağı",
+  "Buzdağı."
+ ],
+ [
+  "çay",
+  "Çay."
+ ],
+ [
+  "milkshake",
+  "Milkshake."
+ ],
+ [
+  "iglo",
+  "İglo."
+ ],
+ [
+  "yaprak",
+  "Yaprak."
+ ],
+ [
+  "karnabahar",
+  "Karnabahar."
+ ],
+ [
+  "kivi",
+  "Kivi."
+ ],
+ [
+  "ceviz",
+  "Ceviz."
+ ],
+ [
+  "oyuncaklar",
+  "Oyuncaklar."
+ ],
+ [
+  "saç",
+  "Saç."
+ ],
+ [
+  "tahta",
+  "Tahta."
+ ],
+ [
+  "araba lastiği",
+  "Araba lastiği."
+ ],
+ [
+  "tencere",
+  "Tencere."
+ ],
+ [
+  "disko topu",
+  "Disko topu."
+ ],
+ [
+  "öğrenci",
+  "Öğrenci."
+ ],
+ [
+  "işçi",
+  "İşçi."
+ ],
+ [
+  "kunduz",
+  "Kunduz."
+ ],
+ [
+  "koala",
+  "Koala."
+ ],
+ [
+  "adam",
+  "Adam."
+ ],
+ [
+  "tembel hayvan",
+  "Tembel hayvan."
+ ],
+ [
+  "konserve kutusu",
+  "Konserve kutusu."
+ ],
+ [
+  "güneş gözlüğü",
+  "Güneş gözlüğü."
+ ],
+ [
+  "streç film",
+  "Streç film."
+ ],
+ [
+  "dosya",
+  "Dosya."
+ ],
+ [
+  "büyüteç",
+  "Büyüteç."
+ ],
+ [
+  "deniz kestanesi",
+  "Deniz kestanesi."
+ ],
+ [
+  "dikenli tel",
+  "Dikenli tel."
+ ],
+ [
+  "kirpi balığı",
+  "Kirpi balığı."
+ ],
+ [
+  "enginar",
+  "Enginar."
+ ],
+ [
+  "su",
+  "Su."
+ ],
+ [
+  "kuyu",
+  "Kuyu."
+ ],
+ [
+  "su birikintisi",
+  "Su birikintisi."
+ ],
+ [
+  "kase",
+  "Kase."
+ ],
+ [
+  "nine",
+  "Nine."
+ ],
+ [
+  "roka",
+  "Roka."
+ ],
+ [
+  "monitör",
+  "Monitör."
+ ],
+ [
+  "ateş",
+  "Ateş."
+ ],
+ [
+  "klima",
+  "Klima."
+ ],
+ [
+  "atlet",
+  "Atlet."
+ ],
+ [
+  "anten",
+  "Anten."
+ ],
+ [
+  "anne",
+  "Anne."
+ ],
+ [
+  "tamir aletleri",
+  "Tamir aletleri."
+ ],
+ [
+  "at nalı",
+  "At nalı."
+ ],
+ [
+  "asker",
+  "Asker."
+ ],
+ [
+  "çukur",
+  "Çukur."
+ ],
+ [
+  "tümsek",
+  "Tümsek."
+ ],
+ [
+  "sınıf",
+  "Sınıf."
+ ],
+ [
+  "balık",
+  "Balık."
+ ],
+ [
+  "bebek",
+  "Bebek."
+ ],
+ [
+  "küpeler",
+  "Küpeler."
+ ],
+ [
+  "yunus",
+  "Yunus."
+ ],
+ [
+  "yeşil biber",
+  "Yeşil biber."
+ ],
+ [
+  "sulu yemek",
+  "Sulu yemek."
+ ],
+ [
+  "gazoz",
+  "Gazoz."
+ ],
+ [
+  "sıvı sabun",
+  "Sıvı sabun."
+ ],
+ [
+  "temizlik kovası",
+  "Temizlik kovası."
+ ],
+ [
+  "lazımlık",
+  "Lazımlık."
+ ],
+ [
+  "sifon",
+  "Sifon."
+ ],
+ [
+  "süt",
+  "Süt."
+ ],
+ [
+  "patates",
+  "Patates."
+ ],
+ [
+  "bal kabağı",
+  "Bal kabağı."
+ ],
+ [
+  "cips",
+  "Cips."
+ ],
+ [
+  "kraker",
+  "Kraker."
+ ],
+ [
+  "jelibon",
+  "Jelibon."
+ ],
+ [
+  "kuruyemiş",
+  "Kuruyemiş."
+ ],
+ [
+  "köfte",
+  "Köfte."
+ ],
+ [
+  "hamburger",
+  "Hamburger."
+ ],
+ [
+  "tereyağı",
+  "Tereyağı."
+ ],
+ [
+  "meyve suyu",
+  "Meyve suyu."
+ ],
+ [
+  "mantı",
+  "Mantı."
+ ],
+ [
+  "ayran",
+  "Ayran."
+ ],
+ [
+  "su şişesi",
+  "Su şişesi."
+ ],
+ [
+  "tuvalet kağıdı",
+  "Tuvalet kağıdı."
+ ],
+ [
+  "havlu",
+  "Havlu."
+ ],
+ [
+  "baba",
+  "Baba."
+ ],
+ [
+  "kız kardeş",
+  "Kız kardeş."
+ ],
+ [
+  "erkek kardeş",
+  "Erkek kardeş."
+ ],
+ [
+  "müdür",
+  "Müdür."
+ ],
+ [
+  "temizlik görevlisi",
+  "Temizlik görevlisi."
+ ],
+ [
+  "postacı",
+  "Postacı."
+ ],
+ [
+  "berber",
+  "Berber."
+ ],
+ [
+  "hademe",
+  "Hademe."
+ ],
+ [
+  "çiftçi",
+  "Çiftçi."
+ ],
+ [
+  "arkadaş",
+  "Arkadaş."
+ ],
+ [
+  "cami",
+  "Cami."
+ ],
+ [
+  "fincan",
+  "Fincan."
+ ],
+ [
+  "sandalet",
+  "Sandalet."
+ ],
+ [
+  "yapıştırıcı",
+  "Yapıştırıcı."
+ ],
+ [
+  "okul bahçesi",
+  "Okul bahçesi."
+ ],
+ [
+  "okul kantini",
+  "Okul kantini."
+ ],
+ [
+  "hastane",
+  "Hastane."
+ ],
+ [
+  "mısır",
+  "Mısır."
+ ],
+ [
+  "dolma biber",
+  "Dolma biber."
+ ],
+ [
+  "ıslak mendil",
+  "Islak mendil."
+ ],
+ [
+  "tarak",
+  "Tarak."
+ ],
+ [
+  "alışveriş merkezi",
+  "Alışveriş merkezi."
+ ],
+ [
+  "plaj",
+  "Plaj."
+ ],
+ [
+  "tartı",
+  "Tartı."
+ ],
+ [
+  "salam",
+  "Salam."
+ ],
+ [
+  "hamster",
+  "Hamster."
+ ],
+ [
+  "kaplan",
+  "Kaplan."
+ ],
+ [
+  "seni seviyorum",
+  "Seni seviyorum."
+ ],
+ [
+  "hoşça kal",
+  "Hoşça kal."
+ ],
+ [
+  "eşek",
+  "Eşek."
+ ],
+ [
+  "zebra",
+  "Zebra."
+ ],
+ [
+  "oturma odası",
+  "Oturma odası."
+ ],
+ [
+  "balkon",
+  "Balkon."
+ ],
+ [
+  "manav",
+  "Manav."
+ ],
+ [
+  "kalemtıraş",
+  "Kalemtıraş."
+ ],
+ [
+  "yara bandı",
+  "Yara bandı."
+ ],
+ [
+  "ateşli çocuk",
+  "Ateşli çocuk."
+ ],
+ [
+  "canı acıyan çocuk",
+  "Canı acıyan çocuk."
+ ],
+ [
+  "lif",
+  "Lif."
+ ],
+ [
+  "banyo yapan çocuk",
+  "Banyo yapan çocuk."
+ ],
+ [
+  "şarkı söyleyen çocuk",
+  "Şarkı söyleyen çocuk."
+ ],
+ [
+  "kasiyer",
+  "Kasiyer."
+ ],
+ [
+  "garson",
+  "Garson."
+ ],
+ [
+  "market",
+  "Market."
+ ],
+ [
+  "restoran",
+  "Restoran."
+ ],
+ [
+  "sinema salonu",
+  "Sinema salonu."
+ ],
+ [
+  "defter",
+  "Defter."
+ ],
+ [
+  "kara tahta",
+  "Kara tahta."
+ ],
+ [
+  "bilgisayar",
+  "Bilgisayar."
+ ],
+ [
+  "kütük",
+  "Kütük."
+ ],
+ [
+  "led ampul",
+  "Led ampul."
+ ],
+ [
+  "ev",
+  "Ev."
+ ],
+ [
+  "kaldırım",
+  "Kaldırım."
+ ],
+ [
+  "akıllı televizyon",
+  "Akıllı televizyon."
+ ],
+ [
+  "ateşi olan çocuk",
+  "Ateşi olan çocuk."
+ ],
+ [
+  "başı ağrıyan çocuk",
+  "Başı ağrıyan çocuk."
+ ],
+ [
+  "boğazı ağrıyan çocuk",
+  "Boğazı ağrıyan çocuk."
+ ],
+ [
+  "karnı ağrıyan çocuk",
+  "Karnı ağrıyan çocuk."
+ ],
+ [
+  "kulağı ağrıyan çocuk",
+  "Kulağı ağrıyan çocuk."
+ ],
+ [
+  "üşüyen çocuk",
+  "Üşüyen çocuk."
+ ],
+ [
+  "terleyen çocuk",
+  "Terleyen çocuk."
+ ],
+ [
+  "gergedan",
+  "Gergedan."
+ ],
+ [
+  "deve",
+  "Deve."
+ ],
+ [
+  "ayı",
+  "Ayı."
+ ],
+ [
+  "örümcek",
+  "Örümcek."
+ ],
+ [
+  "hindi",
+  "Hindi."
+ ],
+ [
+  "koç",
+  "Koç."
+ ],
+ [
+  "tavus kuşu",
+  "Tavus kuşu."
+ ],
+ [
+  "kuğu",
+  "Kuğu."
+ ],
+ [
+  "kurt",
+  "Kurt."
+ ],
+ [
+  "domuz",
+  "Domuz."
+ ],
+ [
+  "karides",
+  "Karides."
+ ],
+ [
+  "yengeç",
+  "Yengeç."
+ ],
+ [
+  "timsah",
+  "Timsah."
+ ],
+ [
+  "deniz atı",
+  "Deniz atı."
+ ],
+ [
+  "bezelye",
+  "Bezelye."
+ ],
+ [
+  "bebek bezi",
+  "Bebek bezi."
+ ],
+ [
+  "saç kurutma makinesi",
+  "Saç kurutma makinesi."
+ ],
+ [
+  "kereviz",
+  "Kereviz."
+ ],
+ [
+  "elektrikli süpürge",
+  "Elektrikli süpürge."
+ ],
+ [
+  "kağıt havlu",
+  "Kağıt havlu."
+ ],
+ [
+  "mutfak önlüğü",
+  "Mutfak önlüğü."
+ ],
+ [
+  "rende",
+  "Rende."
+ ],
+ [
+  "tel zımba",
+  "Tel zımba."
+ ],
+ [
+  "tenis raketi",
+  "Tenis raketi."
+ ],
+ [
+  "tırnak makası",
+  "Tırnak makası."
+ ],
+ [
+  "ocak",
+  "Ocak."
+ ],
+ [
+  "kukla",
+  "Kukla."
+ ],
+ [
+  "mikro dalga fırın",
+  "Mikro dalga fırın."
+ ],
+ [
+  "sivrisinek",
+  "Sivrisinek."
+ ],
+ [
+  "sarımsak",
+  "Sarımsak."
+ ],
+ [
+  "incir",
+  "İncir."
+ ],
+ [
+  "tablet",
+  "Tablet."
+ ],
+ [
+  "kumanda",
+  "Kumanda."
+ ],
+ [
+  "kanguru",
+  "Kanguru."
+ ],
+ [
+  "köpek balığı",
+  "Köpek balığı."
+ ],
+ [
+  "ağız",
+  "Ağız."
+ ],
+ [
+  "kemer",
+  "Kemer."
+ ],
+ [
+  "toka",
+  "Toka."
+ ],
+ [
+  "diş",
+  "Diş."
+ ],
+ [
+  "öpücük atan çocuk",
+  "Öpücük atan çocuk."
+ ],
+ [
+  "sus işareti yapan çocuk",
+  "Sus işareti yapan çocuk."
+ ],
+ [
+  "saklambaç oynayan çocuk",
+  "Saklambaç oynayan çocuk."
+ ],
+ [
+  "alo diyen çocuk",
+  "Alo diyen çocuk."
+ ],
+ [
+  "uyuyan bebek",
+  "Uyuyan bebek."
+ ],
+ [
+  "kahkaha atan çocuk",
+  "Kahkaha atan çocuk."
+ ],
+ [
+  "şaşırmış çocuk",
+  "Şaşırmış çocuk."
+ ],
+ [
+  "hapşıran çocuk",
+  "Hapşıran çocuk."
+ ],
+ [
+  "kötü koku yapan çocuk",
+  "Kötü koku yapan çocuk."
+ ],
+ [
+  "testere",
+  "Testere."
+ ],
+ [
+  "alkışlayan eller",
+  "Alkışlayan eller."
+ ],
+ [
+  "bağıran maymun",
+  "Bağıran maymun."
+ ],
+ [
+  "patlayan balon",
+  "Patlayan balon."
+ ],
+ [
+  "gıdıklanan çocuk",
+  "Gıdıklanan çocuk."
+ ],
+ [
+  "ip atlayan çocuk",
+  "İp atlayan çocuk."
+ ],
+ [
+  "matkap",
+  "Matkap."
+ ],
+ [
+  "gülen noel baba",
+  "Gülen noel baba."
+ ],
+ [
+  "üfleyen çocuk",
+  "Üfleyen çocuk."
+ ],
+ [
+  "kayısı",
+  "Kayısı."
+ ],
+ [
+  "ayva",
+  "Ayva."
+ ],
+ [
+  "dut",
+  "Dut."
+ ],
+ [
+  "kabak",
+  "Kabak."
+ ],
+ [
+  "taze fasulye",
+  "Taze fasulye."
+ ],
+ [
+  "mantar",
+  "Mantar."
+ ],
+ [
+  "maydanoz",
+  "Maydanoz."
+ ],
+ [
+  "nane",
+  "Nane."
+ ],
+ [
+  "börek",
+  "Börek."
+ ],
+ [
+  "poğaça",
+  "Poğaça."
+ ],
+ [
+  "tost",
+  "Tost."
+ ],
+ [
+  "kek",
+  "Kek."
+ ],
+ [
+  "kurabiye",
+  "Kurabiye."
+ ],
+ [
+  "pilav",
+  "Pilav."
+ ],
+ [
+  "mısır gevreği",
+  "Mısır gevreği."
+ ],
+ [
+  "patates kızartması",
+  "Patates kızartması."
+ ],
+ [
+  "omlet",
+  "Omlet."
+ ],
+ [
+  "şeker",
+  "Şeker."
+ ],
+ [
+  "köpek yavrusu",
+  "Köpek yavrusu."
+ ],
+ [
+  "kedi yavrusu",
+  "Kedi yavrusu."
+ ],
+ [
+  "buzağı",
+  "Buzağı."
+ ],
+ [
+  "tay",
+  "Tay."
+ ],
+ [
+  "aslan yavrusu",
+  "Aslan yavrusu."
+ ],
+ [
+  "tırtıl",
+  "Tırtıl."
+ ],
+ [
+  "şahin",
+  "Şahin."
+ ],
+ [
+  "kartal",
+  "Kartal."
+ ],
+ [
+  "karınca",
+  "Karınca."
+ ],
+ [
+  "yarasa",
+  "Yarasa."
+ ],
+ [
+  "leylek",
+  "Leylek."
+ ],
+ [
+  "güvercin",
+  "Güvercin."
+ ],
+ [
+  "kaz",
+  "Kaz."
+ ],
+ [
+  "oğlak",
+  "Oğlak."
+ ],
+ [
+  "ayı yavrusu",
+  "Ayı yavrusu."
+ ],
+ [
+  "telefon",
+  "Telefon."
+ ],
+ [
+  "masa lambası",
+  "Masa lambası."
+ ],
+ [
+  "battaniye",
+  "Battaniye."
+ ],
+ [
+  "fotoğraf çerçevesi",
+  "Fotoğraf çerçevesi."
+ ],
+ [
+  "şifonyer",
+  "Şifonyer."
+ ],
+ [
+  "otobüs",
+  "Otobüs."
+ ],
+ [
+  "taksi",
+  "Taksi."
+ ],
+ [
+  "metro",
+  "Metro."
+ ],
+ [
+  "scooter",
+  "Scooter."
+ ],
+ [
+  "bebek arabası",
+  "Bebek arabası."
+ ],
+ [
+  "çöp kamyonu",
+  "Çöp kamyonu."
+ ],
+ [
+  "yapı blokları",
+  "Yapı blokları."
+ ],
+ [
+  "oyun hamuru",
+  "Oyun hamuru."
+ ],
+ [
+  "oyuncak araba",
+  "Oyuncak araba."
+ ],
+ [
+  "piyano",
+  "Piyano."
+ ],
+ [
+  "ksilofon",
+  "Ksilofon."
+ ],
+ [
+  "mızıka",
+  "Mızıka."
+ ],
+ [
+  "askı",
+  "Askı."
+ ],
+ [
+  "yorgan",
+  "Yorgan."
+ ],
+ [
+  "suluboya",
+  "Suluboya."
+ ],
+ [
+  "boya kalemleri",
+  "Boya kalemleri."
+ ],
+ [
+  "oklava",
+  "Oklava."
+ ],
+ [
+  "süzgeç",
+  "Süzgeç."
+ ],
+ [
+  "şerit metre",
+  "Şerit metre."
+ ],
+ [
+  "yonca",
+  "Yonca."
+ ],
+ [
+  "çam ağacı",
+  "Çam ağacı."
+ ],
+ [
+  "kum",
+  "Kum."
+ ],
+ [
+  "mağara",
+  "Mağara."
+ ],
+ [
+  "mont",
+  "Mont."
+ ],
+ [
+  "yağmurluk",
+  "Yağmurluk."
+ ],
+ [
+  "eşofman",
+  "Eşofman."
+ ],
+ [
+  "kütüphane",
+  "Kütüphane."
+ ],
+ [
+  "eczane",
+  "Eczane."
+ ],
+ [
+  "hayvanat bahçesi",
+  "Hayvanat bahçesi."
+ ],
+ [
+  "lego",
+  "Lego."
+ ],
+ [
+  "bloklar",
+  "Bloklar."
+ ],
+ [
+  "spor salonu",
+  "Spor salonu."
+ ]
+]
