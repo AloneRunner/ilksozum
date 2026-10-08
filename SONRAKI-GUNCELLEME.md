@@ -18,6 +18,8 @@ Bunlar 9.1.1'e girecek:
 - **Not:** Play'e yüklenen 9.1.1 (93) bu düzeltmeleri İÇERMİYOR. Paket, akşamki aktarmadan sonra yeniden aktarılmadan üretildi.
   - Sonraki paketten önce: `npm run build && npx cap sync android`.
 
+- **Bağış:** "Tek seferlik destek" düğmesi herkeste gizleniyordu ve herkese "Daha önce destek oldunuz" yazıyordu (Kaan fark etti, 8 Ekim). Ayarlara satın alma yerine "premium mu" bilgisi gidiyordu; premium herkese açık olduğu için hep doğruydu. Düzeltildi.
+
 ## 2. Ses (ElevenLabs): Kaan'la birlikte, ondan izin almadan üretim yok
 
 Şu an Gökçe'nin sesiyle konuşanlar, toplam 1.900 kayıt (~20 MB):
