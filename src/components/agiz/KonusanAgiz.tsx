@@ -127,12 +127,21 @@ const KonusanAgiz: React.FC<Props> = ({ className, onHarf }) => {
 
   return (
     <svg viewBox="0 0 240 240" className={className} role="img" aria-label="Konuşan yüz">
-      <circle cx={120} cy={124} r={108} fill="#fbe1cf" stroke="#f0c9ae" strokeWidth={3} />
-      <path d="M 22 112 C 26 40 90 14 120 16 C 150 14 214 40 218 112 C 200 70 160 52 120 54 C 80 52 40 70 22 112 Z" fill="#6b4a3a" />
+      {/* Gökçe: kız (Kaan, 2026-10-08) — uzun saç, kâkül, fiyonk, kirpik */}
+      <path d="M 16 118 C 8 36 70 4 120 6 C 170 4 232 36 224 118 L 230 214 C 214 236 188 232 180 208 L 176 150 L 64 150 L 60 208 C 52 232 26 236 10 214 Z" fill="#6b4a3a" />
+      <circle cx={120} cy={124} r={100} fill="#fbe1cf" stroke="#f0c9ae" strokeWidth={3} />
+      <path d="M 26 112 C 28 50 78 24 120 24 C 162 24 212 50 214 112 C 196 84 170 66 146 74 C 130 60 112 58 98 70 C 74 60 46 80 26 112 Z" fill="#6b4a3a" />
+      <g transform="translate(176 40) rotate(18)">
+        <path d="M 0 0 L -22 -14 L -22 14 Z" fill="#f472b6" stroke="#db2777" strokeWidth={2} strokeLinejoin="round" />
+        <path d="M 0 0 L 22 -14 L 22 14 Z" fill="#f472b6" stroke="#db2777" strokeWidth={2} strokeLinejoin="round" />
+        <circle cx={0} cy={0} r={6} fill="#ec4899" />
+      </g>
       <ellipse cx={66} cy={150} rx={17} ry={11} fill="#f4a6a6" opacity={0.45} />
       <ellipse cx={174} cy={150} rx={17} ry={11} fill="#f4a6a6" opacity={0.45} />
       <path d="M 70 88 Q 85 80 100 88" stroke="#6b4a3a" strokeWidth={4} fill="none" strokeLinecap="round" />
       <path d="M 140 88 Q 155 80 170 88" stroke="#6b4a3a" strokeWidth={4} fill="none" strokeLinecap="round" />
+      <path d="M 74 100 l -6 -5 M 78 97 l -3 -7 M 96 100 l 6 -5 M 92 97 l 3 -7" stroke="#3b2a24" strokeWidth={2.2} strokeLinecap="round" opacity={kirp ? 0 : 1} />
+      <path d="M 144 100 l -6 -5 M 148 97 l -3 -7 M 166 100 l 6 -5 M 162 97 l 3 -7" stroke="#3b2a24" strokeWidth={2.2} strokeLinecap="round" opacity={kirp ? 0 : 1} />
       <ellipse cx={85} cy={108} rx={9} ry={kirp ? 1.2 : 11} fill="#3b2a24" />
       <ellipse cx={155} cy={108} rx={9} ry={kirp ? 1.2 : 11} fill="#3b2a24" />
       {!kirp && <><circle cx={88} cy={104} r={3} fill="#fff" /><circle cx={158} cy={104} r={3} fill="#fff" /></>}
