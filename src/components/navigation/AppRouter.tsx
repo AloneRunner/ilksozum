@@ -65,7 +65,8 @@ const BubblePopGameScreen = lazy(() => import('../games/BubblePopGameScreen.tsx'
 const BusJamGameScreen = lazy(() => import('../games/BusJamGameScreen.tsx'));
 // Eski yapboz (PuzzleGameScreen.tsx) yedek olarak duruyor; 2026-10-08'den beri yeni Yapboz kullanılıyor
 const YapbozOyunu = lazy(() => import('../games/YapbozOyunu.tsx'));
-const RoomCleaningGameScreen = lazy(() => import('../games/RoomCleaningGameScreen.tsx'));
+// Eski Oda Temizliği (RoomCleaningGameScreen.tsx) yedekte
+const OdaToplamaOyunu = lazy(() => import('../games/OdaToplamaOyunu.tsx'));
 // Eski Tren Yolu (TrainTrackGameScreen.tsx) yedekte; 2026-10-08'den beri yeni oyun
 const TrenYoluOyunu = lazy(() => import('../games/TrenYoluOyunu.tsx'));
 const MazeGameScreen = lazy(() => import('../games/MazeGameScreen.tsx'));
@@ -885,7 +886,7 @@ export const AppRouter = () => {
         case ScreenState.BubblePopGame: return <BubblePopGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.BusJamGame: return <BusJamGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.PuzzleGame: return <YapbozOyunu onBack={() => geriDon(ScreenState.MainMenu)} />;
-        case ScreenState.RoomCleaningGame: return <RoomCleaningGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.RoomCleaningGame: return <OdaToplamaOyunu onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.TrainTrackGame: return <TrenYoluOyunu onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.MazeGame: return <MazeGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.MemoryMatchGame: return <MemoryMatchGameScreen onBack={() => geriDon(ScreenState.MainMenu)} />;
