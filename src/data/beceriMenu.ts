@@ -4,7 +4,7 @@
 import { ActivityType } from '../types.ts';
 
 export type BeceriId = 'harfler' | 'sayilar' | 'dusunme' | 'el' | 'konusma' | 'oyunOdasi';
-export type BeceriEkran = 'basara' | 'basara2' | 'sesTaklit' | 'besNBirK';
+export type BeceriEkran = 'basara' | 'basara2' | 'sesTaklit' | 'besNBirK' | 'agiz';
 
 interface OgeTemel { emoji: string; baslik: string; alt: string; sadeceTr?: boolean }
 export type BeceriOge =
@@ -100,6 +100,7 @@ export const BECERILER: Beceri[] = [
     id: 'konusma', emoji: '🗣️', baslik: 'Konuşma ve Anlama', alt: 'Ses taklidi, soru-cevap, günlük işler',
     renk: 'from-cyan-400 to-teal-500',
     ogeler: [
+      { tur: 'ekran', ekran: 'agiz', emoji: '👄', baslik: 'Ağzımı İzle', alt: 'Sesleri ve kelimeleri ağız hareketiyle öğren' },
       { tur: 'ekran', ekran: 'sesTaklit', emoji: '🔊', baslik: 'Ses Taklit Kartları', alt: 'Hayvan ve eşya seslerini taklit et' },
       { tur: 'ekran', ekran: 'besNBirK', emoji: '❓', baslik: '5N1K', alt: 'Kim, ne, nerede, ne zaman, neden, nasıl' },
       o('dailyRoutine', '📋', 'Sıralı Ol!', 'Günlük işleri sıraya koy'),

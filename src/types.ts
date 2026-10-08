@@ -64,6 +64,7 @@ export enum ScreenState {
   BasaraLessonMap,    // BASARA Yöntemi — ders haritası
   BasaraLesson,       // BASARA Yöntemi — tek ders akışı
   SkillMenu,          // Beceri menüsü (Harfler, Sayılar, Düşünme...)
+  AgzimiIzle,         // Ağzımı İzle: konuşan yüz, ses/hece/kelime (sona eklendi; değerler kaymasın)
 }
 
 export enum Tab {

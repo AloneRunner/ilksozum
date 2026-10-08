@@ -135,9 +135,19 @@ export const setKayitliSes = (acik: boolean) => { kayitliSesAcik = acik; };
 let kayitSesi: HTMLAudioElement | null = null;
 let kayitSayaci = 0; // her yeni konuşma / iptal önceki kayıt dizisini geçersiz kılar
 
+// Kayıt hızı (Ağzımı İzle "yavaş" modu); tarayıcı sesin perdesini korur
+let kayitHizi = 1;
+export const setKayitHizi = (h: number) => { kayitHizi = h; };
+
+// Ağız hareketi için: hangi kaydın çaldığını dinleyenlere bildirir (null = sustu)
+type KayitDinleyici = (k: { dosya: string; audio: HTMLAudioElement } | null) => void;
+const kayitDinleyiciler = new Set<KayitDinleyici>();
+export const kayitDinle = (cb: KayitDinleyici): (() => void) => { kayitDinleyiciler.add(cb); return () => { kayitDinleyiciler.delete(cb); }; };
+const kayitBildir = (k: { dosya: string; audio: HTMLAudioElement } | null) => { kayitDinleyiciler.forEach((cb) => { try { cb(k); } catch { /* yok say */ } }); };
+
 function kayitDurdur() {
     kayitSayaci++;
-    if (kayitSesi) { kayitSesi.pause(); kayitSesi = null; }
+    if (kayitSesi) { kayitSesi.pause(); kayitSesi = null; kayitBildir(null); }
 }
 
 /** Metnin tamamı ya da cümlelerinin hepsi kayıtlıysa dosya listesi ("Aferin! Bu kalem kalın." → 2 kayıt). */
@@ -165,6 +175,8 @@ const kayitCal = async (dosyalar: string[]): Promise<boolean> => {
         const tamam = await new Promise<boolean>((resolve) => {
             const audio = new Audio(`/audio/ses/${d}.mp3`);
             kayitSesi = audio;
+            audio.playbackRate = kayitHizi;
+            audio.onplaying = () => kayitBildir({ dosya: d, audio });
             audio.onended = () => resolve(true);
             audio.onerror = () => resolve(false);
             audio.onpause = () => { if (!audio.ended) resolve(true); };
@@ -172,8 +184,18 @@ const kayitCal = async (dosyalar: string[]): Promise<boolean> => {
         });
         if (!tamam) return false;
     }
-    if (sira === kayitSayaci) kayitSesi = null;
+    if (sira === kayitSayaci) { kayitSesi = null; kayitBildir(null); }
     return true;
+};
+
+/** Ağzımı İzle: kayıt varsa (Kayıtlı ses ayarı kapalı olsa bile) kayıttan çalar; ağız ancak kayıtla senkron. */
+export const kayittanSoyle = async (metin: string): Promise<void> => {
+    if (isMuted || !metin) return;
+    await cancelSpeech();
+    stopCurrentEffect();
+    const d = kayitliDosyalar(metin);
+    if (d && await kayitCal(d)) return;
+    await speak(metin);
 };
 
 /**

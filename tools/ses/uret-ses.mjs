@@ -15,6 +15,7 @@
 import fs from 'fs';
 import path from 'path';
 import { temizle, olc } from './temizle.mjs';
+import { execFileSync } from 'child_process';
 
 const KOK = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '../..');
 const SES = { ad: 'gokce', kutuphaneId: 'oPC5I9GKjMReiaM29gjY', sahip: '991994d44c6bfe4b3978666d09e5539d22ad7a82e1ffc137334d524a61057e0f' };
@@ -145,4 +146,5 @@ try {
 } finally {
   await api(`/v1/voices/${sesId}`, null, 'DELETE').catch((e) => console.log('Ses hesaptan çıkarılamadı:', e.message));
   console.log(`Bitti: ${n} kayıt. Kalan kredi: ${await kalan()}`);
+  if (n) execFileSync(process.execPath, [path.join(KOK, 'tools/ses/hizalama-paketle.mjs')], { stdio: 'inherit' }); // ağız hareketi verisi
 }

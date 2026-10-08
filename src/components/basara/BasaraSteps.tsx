@@ -13,6 +13,7 @@ import { BasaraLesson, BASARA_VOWELS } from '../../data/basaraLessons.ts';
 import { speak, playEffect } from '../../services/speechService.ts';
 import { imageData } from '../../services/database/imageData.ts';
 import SpeakerIcon from '../icons/SpeakerIcon.tsx';
+import KonusanAgiz from '../agiz/KonusanAgiz.tsx';
 
 interface StageProps {
   lesson: BasaraLesson;
@@ -122,9 +123,11 @@ export const SyllableStage: React.FC<StageProps> = ({ lesson, onDone }) => {
   return (
     <div className="flex flex-col items-center justify-center flex-grow w-full">
       <h2 className="text-2xl font-bold text-sky-800 mb-1">{heading}</h2>
-      <div className="flex items-center gap-1 text-sky-500 text-sm mb-5">
+      <div className="flex items-center gap-1 text-sky-500 text-sm mb-2">
         <SpeakerIcon className="w-4 h-4" /> Dinlemek için dokun
       </div>
+      {/* Konuşan yüz: hece okunurken ağız Gökçe'yle senkron hareket eder (Ağzımı İzle ile aynı) */}
+      <KonusanAgiz className="w-32 h-32 sm:w-40 sm:h-40 mb-3 drop-shadow" />
 
       <div className="flex flex-wrap justify-center gap-3">
         {lesson.family.map((s) => (
