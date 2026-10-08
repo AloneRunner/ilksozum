@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
 import KonusanAgiz from '../agiz/KonusanAgiz.tsx';
-import { speak, playEffect } from '../../services/speechService.ts';
+import { speak, playEffect, getMutedState } from '../../services/speechService.ts';
 
 // Ortak oyun kiti (Kaan, 2026-10-08: "mini oyunları baştan, çok daha kaliteli, çocuklara yönelik").
 // Kurallar: puan, süre, can yok; başarısızlık ekranı yok; yazı okumadan oynanır (yönerge sesli);
@@ -13,8 +13,33 @@ const STIL = `
 @keyframes ok-sallan { 0%,100% { transform: translateX(0) } 25% { transform: translateX(-8px) } 75% { transform: translateX(8px) } }
 @keyframes ok-zipla { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
 .ok-sallan { animation: ok-sallan .35s ease-in-out 2 }
+@keyframes ok-yuz { 0%,100% { transform: translateX(-7%) } 50% { transform: translateX(7%) } }
+@keyframes ok-sur { 0% { transform: translateX(0) } 15% { transform: translateX(-3%) } 100% { transform: translateX(130%) } }
+@keyframes ok-uc { 0% { transform: translateY(0) } 100% { transform: translateY(-140%) } }
+@keyframes ok-ruzgar { 0%,100% { transform: rotate(-3deg) } 50% { transform: rotate(3deg) } }
+@keyframes ok-don { to { transform: rotate(360deg) } }
+@keyframes ok-ucus { 0% { transform: translate(-30%, 0) } 50% { transform: translate(160%, -25%) } 100% { transform: translate(360%, 10%) } }
+@keyframes ok-kelebek { 0% { transform: translate(0,0) } 25% { transform: translate(120%,-80%) } 50% { transform: translate(260%,-20%) } 75% { transform: translate(140%,60%) } 100% { transform: translate(0,0) } }
+@keyframes ok-kabarcik { 0% { transform: translateY(0); opacity: 0 } 20% { opacity: 1 } 100% { transform: translateY(-260%); opacity: 0 } }
 .ok-zipla { animation: ok-zipla .9s ease-in-out infinite }
 `;
+
+/** Kısa neşeli müzik (Web Audio; ses dosyası yok). Sessiz ayarına uyar. */
+export const neseliMelodi = () => {
+  if (getMutedState()) return;
+  try {
+    const AC = (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext);
+    const ac = new AC();
+    const notalar = [523, 659, 784, 1047, 784, 880, 1047, 1319];
+    notalar.forEach((f, i) => {
+      const o = ac.createOscillator(), g = ac.createGain(), t = ac.currentTime + i * 0.17;
+      o.type = 'triangle'; o.frequency.value = f;
+      g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.18, t + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.3);
+      o.connect(g).connect(ac.destination); o.start(t); o.stop(t + 0.32);
+    });
+    setTimeout(() => ac.close(), 2200);
+  } catch { /* ses yok */ }
+};
 
 /** Bütün oyunlarda aynı çerçeve: geri, başlık, ilerleme noktaları, Gökçe ve yönerge balonu. */
 export const OyunCercevesi: React.FC<{

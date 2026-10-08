@@ -41,10 +41,10 @@ const LearningCard = lazy(() => import('../LearningCard.tsx'));
 const DragAndDropCountingScreen = lazy(() => import('../DragAndDropCountingScreen.tsx'));
 const DragAndDropPositioningScreen = lazy(() => import('../DragAndDropPositioningScreen.tsx'));
 const LineTracingScreen = lazy(() => import('../LineTracingScreen.tsx'));
-const ShapeColoringScreen = lazy(() => import('../ShapeColoringScreen.tsx'));
+// Eski Şekil Boyama / Kurallı Boyama ekranları yedekte; 2026-10-08'den beri ikisi de BoyamaEkrani
+const BoyamaEkrani = lazy(() => import('../boyama/BoyamaEkrani.tsx'));
 const RhythmFollowingScreen = lazy(() => import('../RhythmFollowingScreen.tsx'));
 const LetterTracingScreen = lazy(() => import('../LetterTracingScreen.tsx'));
-const ConstrainedColoringScreen = lazy(() => import('../ConstrainedColoringScreen.tsx'));
 const ParentTipsScreen = lazy(() => import('../ParentTipsScreen.tsx'));
 const ActivityManagementScreen = lazy(() => import('../ActivityManagementScreen.tsx'));
 const PrintPreviewScreen = lazy(() => import('../PrintPreviewScreen.tsx'));
@@ -400,7 +400,7 @@ export const AppRouter = () => {
             case ActivityType.ShapeColoring:
                 return <>
                     {renderProgramModeOverlay()}
-                    <ShapeColoringScreen {...commonProps} onBack={onBackToFineMotor} />
+                    <BoyamaEkrani {...commonProps} onBack={onBackToFineMotor} />
                 </>;
             case ActivityType.RhythmFollowing:
                 return <>
@@ -415,7 +415,7 @@ export const AppRouter = () => {
             case ActivityType.ConstrainedColoring:
                 return <>
                     {renderProgramModeOverlay()}
-                    <ConstrainedColoringScreen {...commonProps} onBack={onBackToFineMotor} />
+                    <BoyamaEkrani {...commonProps} onBack={onBackToFineMotor} kurallı />
                 </>;
 
             case ActivityType.ColorRecognition:
