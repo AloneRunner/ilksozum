@@ -31,8 +31,8 @@ export const BECERILER: Beceri[] = [
     renk: 'from-sky-400 to-blue-500',
     ogeler: [
       // Harf ve Sesler'in etkinlikleri doğrudan burada (ara menü kalktı, 2026-10-06)
-      { tur: 'ekran', ekran: 'basara', emoji: '📖', baslik: 'BASARA Yöntemi', alt: 'Önce ünlüler, sonra heceler', sadeceTr: true },
-      { tur: 'ekran', ekran: 'basara2', emoji: '📗', baslik: 'BASARA 2 (Klasik)', alt: 'a-serisi heceler ve tüm ünlüler', sadeceTr: true },
+      { tur: 'ekran', ekran: 'basara', emoji: '📖', baslik: 'Hece Okuma', alt: 'Önce ünlüler, sonra heceler', sadeceTr: true },
+      { tur: 'ekran', ekran: 'basara2', emoji: '📗', baslik: 'Hece Okuma 2 (Klasik)', alt: 'a-serisi heceler ve tüm ünlüler', sadeceTr: true },
       { tur: 'harf', tip: ActivityType.FindTheLetterInGrid, emoji: '🔠', baslik: 'Harf Tablosu', alt: 'Karışık harflerden isteneni bul' },
       { tur: 'harf', tip: ActivityType.FindTheLetter, emoji: '🔍', baslik: 'Harf Bulma', alt: 'Kelimedeki harfi bul' },
       { tur: 'harf', tip: ActivityType.SoundPresence, emoji: '👂', baslik: 'Seste Harf Var mı?', alt: 'Resmin adında o ses var mı?' },

@@ -1127,7 +1127,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
                             <RestoreIcon className={manageBannedIconClass}/>
                         </button>
                     </SettingsRow>
-          <SettingsRow title={t('settingsEx.basaraHighlight.title', 'Basara Hece Renklendirme')} subtitle={t('settingsEx.basaraHighlight.subtitle', 'Öğrenilen güncel heceleri belirginleştirir')} isThemed={isThemed} themeVariant={themeVariant}>
+          <SettingsRow title={t('settingsEx.basaraHighlight.title', 'Hece Okuma: Hece Renklendirme')} subtitle={t('settingsEx.basaraHighlight.subtitle', 'Öğrenilen güncel heceleri belirginleştirir')} isThemed={isThemed} themeVariant={themeVariant}>
             <ToggleSwitch isEnabled={isBasaraHighlightEnabled} onToggle={onToggleBasaraHighlight} themeVariant={themeVariant} />
           </SettingsRow>
                 </div>

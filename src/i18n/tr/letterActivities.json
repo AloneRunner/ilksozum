@@ -35,8 +35,8 @@
       "embeddedStory": "Hikaye Zamanı",
       "soundPresence": "Seste Harf Var mı?",
       "findTheLetter": "Harf Bulma Oyunu",
-      "basara": "BASARA Yöntemi",
-      "basara2": "BASARA 2 (Klasik)",
+      "basara": "Hece Okuma",
+      "basara2": "Hece Okuma 2 (Klasik)",
       "betaNotice": "Harf etkinlikleri deneme aşamasında. Hata görürseniz lütfen bize bildirin."
     },
     "letterSubtitles": {
@@ -49,7 +49,7 @@
     }
   },
   "basara": {
-    "title": "BASARA Yöntemi",
+    "title": "Hece Okuma",
     "subtitle": "Önce ünlüler, sonra heceler. Bir ders bitmeden diğeri açılmaz.",
     "lessonComplete": "Ders tamamlandı! 🎉",
     "phase1": "1. Aşama — Ünlüler ve a-serisi",

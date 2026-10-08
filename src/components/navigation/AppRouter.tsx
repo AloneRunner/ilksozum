@@ -247,7 +247,7 @@ export const AppRouter = () => {
         // BASARA kulvarı yalnızca Türkçe
         if (screenState === ScreenState.BasaraLessonMap || screenState === ScreenState.BasaraLesson) {
             if (lang !== 'tr') {
-                ctx.toast.showToast(t('settings.languageNote', 'BASARA is currently available only in Turkish.'), 'info');
+                ctx.toast.showToast(t('settings.languageNote', 'Hece Okuma is currently available only in Turkish.'), 'info');
                 setScreenState(ScreenState.MainMenu);
             }
         }
@@ -585,7 +585,7 @@ export const AppRouter = () => {
         case ScreenState.BasaraLessonMap: {
             const lessons = getBasaraLessons(basaraVariant);
             const keyPrefix = basaraVariant === 2 ? 'basara2' : 'basara';
-            const title = basaraVariant === 2 ? 'BASARA 2 (Klasik)' : 'BASARA Yöntemi';
+            const title = basaraVariant === 2 ? 'Hece Okuma 2 (Klasik)' : 'Hece Okuma';
             return <BasaraLessonMapScreen
                 lessons={lessons}
                 keyPrefix={keyPrefix}
