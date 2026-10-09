@@ -79,7 +79,7 @@ const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOd
                 <li>Ünite yok; 7 beceri kulvarı var (Kelimeler, Kavramlar, Sayılar…). Her kulvar kendi seviyesinde, birlikte ilerler.</li>
                 <li>Her gün her kulvardan birkaç etkinlik gelir: <b>Yeni</b> (o seviyenin sıradaki konusu), <b>Tekrar</b> ve <b>Pekiştir</b> (önceki konulardan).</li>
                 <li>Bir etkinlik, Program Modu'nda art arda 2 kez %80 ve üstü yapılınca "öğrendi" sayılır; seviyedeki etkinliklerin çoğu (%80) öğrenilince kulvar bir üst seviyeye geçer.</li>
-                <li>Etkinlik sırasında sağ üstteki <b>Geç ⏭</b> ile o etkinliği atlayabilirsiniz. <b>Kulvarlar</b> sekmesinde bildiği seviyeyi "biliyor" diye işaretleyebilirsiniz.</li>
+                <li>Etkinlik sırasında sağ üstteki <b>Geç ⏭</b> ile o etkinliği atlayabilirsiniz. <b>Kulvarlar</b> sekmesinde bir kulvarı "Daha kolay" ile bir seviye geri alabilir, bildiği seviyeyi "biliyor" diye atlayabilirsiniz.</li>
                 <li>Tanıma turu isteğe bağlıdır: bildiği konuları baştan atlamak için. İstemezseniz "Atla".</li>
               </ul>
             </details>
@@ -165,7 +165,7 @@ const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOd
               )}
               <div className="mt-3 flex gap-2">
                 {!d.bitti && <button onClick={() => setAyar({ ...ayar, bilinen: { ...ayar.bilinen, [k.id]: d.seviye + 1 } })} className="px-3 py-2 rounded-xl bg-emerald-50 text-emerald-800 text-xs font-black active:scale-95">✓ Bu seviyeyi biliyor, atla</button>}
-                {(ayar.bilinen[k.id] || 0) > 0 && <button onClick={() => setAyar({ ...ayar, bilinen: { ...ayar.bilinen, [k.id]: Math.max(0, (ayar.bilinen[k.id] || 0) - 1) } })} className="px-3 py-2 rounded-xl bg-slate-100 text-slate-600 text-xs font-bold active:scale-95">↩ Bir seviye geri</button>}
+                {d.seviye > 0 && <button onClick={() => setAyar({ ...ayar, bilinen: { ...ayar.bilinen, [k.id]: d.seviye - 1 } })} className="px-3 py-2 rounded-xl bg-amber-50 text-amber-800 text-xs font-black active:scale-95">⬇ Daha kolay</button>}
               </div>
             </div>
           );

@@ -18,29 +18,35 @@ export const KULVARLAR: Kulvar[] = [
       { ad: 'Dünya', etkinlikler: ['meslekler', 'mekanlar_odalar', 'aletler', 'muzik_aletleri', 'bitkiler', 'okul_ofis_gerecleri', 'dogal_yapilar_uzay'] },
     ],
   },
+  // Kavram, sayı ve düşünme seviyeleri eski ünite sırasını izler (Kaan, 2026-10-10: "önceki sistemi ona göre yapmıştık";
+  // yumurta-civciv sıralaması erken geliyordu). Parantezde eski ünite.
   {
     id: 'kavramlar', ad: 'Kavramlar', emoji: '💡', seviyeler: [
-      { ad: 'Renk, şekil, büyük/küçük', etkinlikler: [A.Colors, A.Shapes, A.BigSmall, A.YesNo] },
-      { ad: 'İçinde, üstünde', etkinlikler: [A.OnUnder, A.InsideOutside, A.ColorRecognition, A.LongShort, A.FullEmpty] },
-      { ad: 'Günlük nitelikler', etkinlikler: [A.HotCold, A.WetDry, A.CleanDirty, A.OpenClosed, A.HardSoft, A.Emotions, A.DayNight, A.FewMuch] },
-      { ad: 'Boyut ve konum', etkinlikler: [A.ThinThick, A.WideNarrow, A.HeavyLight, A.BelowAbove, A.InFrontOfBehind, A.Between, A.NearFar, A.HighLow] },
-      { ad: 'Ben ve çevrem', etkinlikler: [A.BrokenIntact, A.OldNew, A.YoungOld, A.HungryFull, A.YenirYenmez, A.TehlikeliGuvenli, A.HavaDurumu, A.AcikKoyu, A.WhoseIsThis] },
-      { ad: 'Zaman ve duyular', etkinlikler: [A.LeftRight, A.BeforeAfter, A.FastSlow, A.IlkSon, A.Senses, A.NoisyQuiet, A.BitterSweet, A.RoughSmooth, A.ClockLearning] },
-      { ad: 'Nesnenin hali', etkinlikler: [A.BesideOpposite, A.TersDuz, A.DikenliPuruzsuz, A.SivriKut, A.ParlakMat, A.SeffafOpak, A.KirisikDuzgun, A.DugumCozuk, A.TazeBayat, A.MessyClean, A.StraightCurved, A.AliveLifeless, A.DerinSig, A.KalabalikTenha, A.TembelCaliskan, A.HalfQuarterWhole] },
-      { ad: 'Kıyasla (zor)', etkinlikler: [A.RelativeBigSmall, A.RelativeLongShort, A.RelativeThinThick, A.RelativeWideNarrow, A.RelativeFewMuch, A.RelativeNearFar, A.RelativeHighLow] },
+      { ad: 'Renk, şekil, büyük/küçük', etkinlikler: [A.Colors, A.Shapes, A.BigSmall, A.ColorRecognition] }, // 1-2
+      { ad: 'İçinde, üstünde', etkinlikler: [A.InsideOutside, A.OnUnder, A.FullEmpty] }, // 2-3
+      { ad: 'Uzun, kalın, geniş', etkinlikler: [A.LongShort, A.ThinThick, A.WideNarrow, A.FewMuch, A.OpenClosed] }, // 4
+      { ad: 'Günlük nitelikler', etkinlikler: [A.WetDry, A.CleanDirty, A.HotCold, A.HardSoft, A.Emotions, A.DayNight, A.DikenliPuruzsuz, A.DugumCozuk] }, // 5
+      { ad: 'Dokun ve hisset', etkinlikler: [A.BrokenIntact, A.RoughSmooth, A.HeavyLight, A.BitterSweet, A.NoisyQuiet] }, // 6
+      { ad: 'Konum', etkinlikler: [A.BelowAbove, A.InFrontOfBehind, A.NearFar, A.HighLow, A.BesideOpposite, A.BeforeAfter, A.YesNo] }, // 7
+      { ad: 'Ben ve çevrem', etkinlikler: [A.OldNew, A.TazeBayat, A.KirisikDuzgun, A.SivriKut, A.ParlakMat, A.AcikKoyu, A.HavaDurumu, A.IlkSon, A.TehlikeliGuvenli, A.YenirYenmez, A.WhoseIsThis] }, // 7
+      { ad: 'Nesnenin hali', etkinlikler: [A.MessyClean, A.StraightCurved, A.HalfQuarterWhole, A.AliveLifeless, A.Between, A.DerinSig, A.KalabalikTenha, A.HungryFull, A.YoungOld, A.TersDuz] }, // 8-9
+      { ad: 'Zaman ve duyular', etkinlikler: [A.LeftRight, A.Senses, A.TembelCaliskan, A.SeffafOpak, A.FastSlow, A.ClockLearning] }, // 10
+      { ad: 'Kıyasla (zor)', etkinlikler: [A.RelativeBigSmall, A.RelativeLongShort, A.RelativeThinThick, A.RelativeWideNarrow, A.RelativeFewMuch, A.RelativeNearFar, A.RelativeHighLow] }, // 7-9
     ],
   },
   {
     id: 'sayilar', ad: 'Sayılar', emoji: '🔢', seviyeler: [
       { ad: 'Kaç tane?', etkinlikler: [A.CountMatch] },
-      { ad: 'Say ve taşı', etkinlikler: [A.DragAndDropCounting, A.OddEven] },
+      { ad: 'Say ve taşı', etkinlikler: [A.DragAndDropCounting] }, // 8
+      { ad: 'Tek ve çift', etkinlikler: [A.OddEven] }, // 9
     ],
   },
   {
     id: 'dusunme', ad: 'Düşünme ve Hafıza', emoji: '🧠', seviyeler: [
-      { ad: 'Aynı ve farklı', etkinlikler: [A.AyniniBul, A.WhatDoesntBelong, A.MemoryCards] },
-      { ad: 'Hafıza ve örüntü', etkinlikler: [A.WhatsMissing, A.PatternCompletion, A.DragAndDropPositioning] },
-      { ad: 'Sıralama ve mantık', etkinlikler: [A.SequencingStories, A.Sudoku] },
+      { ad: 'Aynısını bul', etkinlikler: [A.AyniniBul, A.MemoryCards] }, // 3
+      { ad: 'Örüntü ve eksik', etkinlikler: [A.PatternCompletion, A.WhatsMissing] }, // 6
+      { ad: 'Farklı olan', etkinlikler: [A.WhatDoesntBelong, A.DragAndDropPositioning] }, // 8
+      { ad: 'Sıralama ve mantık', etkinlikler: [A.SequencingStories, A.Sudoku] }, // 8-9
     ],
   },
   {

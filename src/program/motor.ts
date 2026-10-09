@@ -2,6 +2,7 @@
 // Kayıtlar eskisiyle aynı (activityStats; history.mode === 'program'), bu yüzden mevcut ilerleme kaybolmaz.
 import { ActivityStats, AttemptRecord } from '../types.ts';
 import { KULVARLAR, KulvarId, EtkinlikId, ODUL_OYUNLARI } from './kulvarlar.ts';
+import { UNIT_DEFINITIONS } from '../constants/unitDefinitions.ts';
 
 export type Rol = 'isinma' | 'yeni' | 'pekistirme' | 'yerlestirme';
 export interface OturumOgesi { id: EtkinlikId; rol: Rol; kulvar: KulvarId }
@@ -44,18 +45,23 @@ export const ogrendiMi = (stats: Kayitlar, id: EtkinlikId): boolean => {
 const yuklenemiyor = (stats: Kayitlar, id: EtkinlikId) => (stats[String(id)]?.loadFailures || 0) >= 2 && kayitlari(stats, id).length === 0;
 export const sonOran = (stats: Kayitlar, id: EtkinlikId): number | null => { const h = kayitlari(stats, id); return h.length ? oran(h[h.length - 1]) : null; };
 
-/** Eski Program Modu'nda ilerlemiş çocuk geri düşmesin: eski en yüksek ünite → kulvarlarda en az bu kadar seviye bilinir */
-const ESKI_UNITE_KARSILIGI: Array<[number, Partial<Record<KulvarId, number>>]> = [
-  [3, { kelimeler: 1, kavramlar: 1 }],
-  [5, { kelimeler: 2, kavramlar: 2, dusunme: 1 }],
-  [7, { kelimeler: 3, kavramlar: 3, sayilar: 1, el: 1 }],
-  [9, { kelimeler: 3, kavramlar: 4, sayilar: 1, dusunme: 2, el: 1 }],
-];
+/** Eski Program Modu'nda ilerlemiş çocuk geri düşmesin: eski en yüksek açık ünite u ise, etkinliklerinin hepsi
+ *  u-1'den önceki ünitelerde olan baştaki seviyeler bilinir sayılır (ünitesi olmayan etkinlik hesaba katılmaz). */
+const UNITE: Record<string, number> = Object.fromEntries(UNIT_DEFINITIONS.flatMap((u) => u.activities.map((a) => [String(a), u.unitNumber])));
 const eskiBilinen = (profil?: string | null): Partial<Record<KulvarId, number>> => {
   let u = 0;
   try { u = Number(localStorage.getItem(`programHighWater_${profil}`) || 0); } catch { /* yok say */ }
-  let sonuc: Partial<Record<KulvarId, number>> = {};
-  for (const [esik, b] of ESKI_UNITE_KARSILIGI) if (u >= esik) sonuc = b;
+  const sonuc: Partial<Record<KulvarId, number>> = {};
+  if (u < 2) return sonuc;
+  for (const k of KULVARLAR) {
+    let n = 0;
+    for (const sv of k.seviyeler) {
+      const uniteler = sv.etkinlikler.map((e) => UNITE[String(e)]).filter((x): x is number => !!x);
+      if (!uniteler.length || Math.max(...uniteler) >= u - 1) break; // temkinli: bir ünite geriden başla
+      n++;
+    }
+    if (n) sonuc[k.id] = n;
+  }
   return sonuc;
 };
 
@@ -64,7 +70,8 @@ export interface KulvarDurumu { id: KulvarId; seviye: number; toplam: number; bi
 /** Kulvarın şu anki seviyesi: bilinen seviyelerden sonra, etkinliklerinin %80'i öğrenilmemiş ilk seviye (0 tabanlı) */
 export const kulvarDurumu = (stats: Kayitlar, ayar: ProgramAyar, id: KulvarId, profil?: string | null): KulvarDurumu => {
   const k = KULVARLAR.find((x) => x.id === id)!;
-  const taban = Math.max(ayar.bilinen[id] || 0, eskiBilinen(profil)[id] || 0);
+  // Ebeveynin/tanıma turunun kararı varsa o geçerli ("Daha kolay" eski ünite karşılığının altına da inebilir)
+  const taban = ayar.bilinen[id] ?? eskiBilinen(profil)[id] ?? 0;
   for (let s = Math.min(taban, k.seviyeler.length); s < k.seviyeler.length; s++) {
     const et = k.seviyeler[s].etkinlikler;
     const ogrenilen = et.filter((e) => ogrendiMi(stats, e) || yuklenemiyor(stats, e)).length;
