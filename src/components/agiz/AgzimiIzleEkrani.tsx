@@ -79,8 +79,9 @@ const AgzimiIzleEkrani: React.FC<{ onBack: () => void }> = ({ onBack }) => {
               <span key={i} className={`text-5xl font-black transition-all ${i === harf ? 'text-rose-500 scale-125' : 'text-slate-700'}`}>{h}</span>
             )) : <span className="text-base font-semibold text-slate-500">Bir karta dokun 👇</span>}
           </div>
-          {secili?.[1] && <p className="text-center text-sm font-semibold text-slate-600 max-w-xs">{secili[1]}</p>}
-          {senSoyle && <div className="mt-2 px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-black text-lg animate-bounce">Şimdi sen söyle! 🗣️</div>}
+          {/* Yer hep ayrılı: ipucu ve "Şimdi sen söyle" çıkıp kaybolurken ekran oynamasın (Kaan, 2026-10-09) */}
+          <p className="text-center text-sm font-semibold text-slate-600 max-w-xs min-h-[2.5rem] line-clamp-2">{secili?.[1] || ''}</p>
+          <div className={`mt-1 px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-black text-lg transition-opacity duration-300 ${senSoyle ? 'opacity-100 animate-pulse' : 'opacity-0'}`} aria-hidden={!senSoyle}>Şimdi sen söyle! 🗣️</div>
           <div className="flex gap-2 mt-2">
             <button disabled={!secili} onClick={() => secili && soyle(secili)} className="px-4 py-2 rounded-full bg-sky-500 text-white font-black shadow active:scale-95 disabled:opacity-40">🔁 Tekrar</button>
             <button onClick={() => setYavas((y) => !y)} className={`px-4 py-2 rounded-full font-black shadow active:scale-95 ${yavas ? 'bg-emerald-500 text-white' : 'bg-white text-slate-700'}`}>🐢 Yavaş {yavas ? 'açık' : ''}</button>
