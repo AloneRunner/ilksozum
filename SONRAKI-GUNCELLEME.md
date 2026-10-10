@@ -124,12 +124,15 @@ Eksik görseller (Flow ile, Kaan isterse): külot/iç çamaşırı; çocuk lazı
 "çiş geldi" yüz ifadesi (karnını tutan çocuk); pantolonu indiren/çeken çocuk (yalnız bacaklar, giyinik).
 Şimdilik nesne fotoğrafları + ok/emoji kullanılıyor.
 
-## Kullanım sayaçları (yarın Kaan'la, PC başında; 2026-10-08'de konuşuldu)
-Zekâ'daki gameStats gibi: kimliksiz toplam sayaçlar. Firebase projesi tazof-platform (D:\projeler\zeka), dal `ilksozum/`.
-- Sayılacaklar: etkinlik açıldı/bitti (id bazında), ekranlar (Tuvalet, Ağzımı İzle, Hece Okuma, İfade Tahtası, mini oyunlar,
-  Program oturumu), günlük açılış (cihaz başına günde 1, android/web ayrı).
-- İlk Sözüm: Firebase SDK yok; RTDB REST PATCH + {".sv":{"increment":1}}; hata/çevrimdışı sessiz.
-- Zekâ kuralı: `ilksozum/` girişsiz yalnız +1 yazma (validate newData == data+1), okuma yalnız admin. Önce repo kuralı = canlı kural mı bak; yayını Kaan yapar.
-- Zekâ AdminPanel'e "İlk Sözüm" sekmesi.
+## Kullanım sayaçları — ortak panel (Kaan, 2026-10-10: "zekaya koymayalım, kendi uygulamalarım için ortak sayaç paneli")
+Kimliksiz toplam sayaçlar; tüm uygulamalar (İlk Sözüm, Zekâ, Ders Programı, Kelime Pusulası…) aynı panelde.
+- Ayrı Firebase projesi (ör. ozarik-sayac, Spark/ücretsiz), RTDB Avrupa. Zekâ'nın projesine/kurallarına dokunulmaz.
+- Dal: `sayac/<uygulama>/{gun/<YYYY-MM-DD>/<platform>, etkinlik/<id>/{acildi,bitti}, ekran/<ad>}`.
+- Kural: girişsiz yalnız +1 yazma (newData == data+1), okuma yalnız Kaan'ın Google hesabı.
+- Her uygulamaya `sayac.ts` (REST PATCH + {".sv":{"increment":1}}, SDK yok, çevrimdışı sessiz; günlük açılış cihaz başına günde 1).
+- Panel: tek sayfa, Netlify (sayac.ozarik.org), Google girişi; uygulama seçici, günlük açılış grafiği, en çok açılan, en çok yarıda bırakılan.
+- Kaan yapacak: Firebase projesi + RTDB aç; Netlify adresi. Gerisi Claude.
+- İlk Sözüm sayılacaklar: etkinlik açıldı/bitti, ekranlar (Tuvalet, Ağzımı İzle, Hece Okuma, İfade Tahtası, mini oyunlar, Program oturumu/tanıma turu), günlük açılış.
 - Play Veri güvenliği: "Uygulama etkileşimleri — anonim, kullanıcıyla ilişkilendirilmez" + gizlilik metnine bir cümle.
+- Seslendirme sırası sayaçlara göre (temel kavramlar beklemeden).
 Bekleyen sesler (eşinin dinlemesiyle; Kaan "üret" deyince): ça (eşi bozuk dedi), bebek, el; kelimeler topluca gözden geçirilecek.
