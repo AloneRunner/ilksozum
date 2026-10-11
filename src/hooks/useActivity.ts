@@ -1,4 +1,5 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
+import { etkinlikSay } from '../services/sayac.ts';
 import { programOturumBitti, ayarOku as programAyarOku } from '../program/motor.ts';
 import { ActivityType, ActivityStats, AttemptRecord, ActivityCategory, ParentOverride } from '../types.ts';
 import { ALL_SUB_ACHIEVEMENTS, LETTER_GROUPS, OBJECT_CATEGORIES, LETTER_SOUND_ACTIVITIES } from '../constants.ts';
@@ -21,6 +22,9 @@ interface UseActivityProps {
     activeProfileId?: string | null;
     isPremium?: boolean;
 }
+
+/** Sayaç için okunur ad: sayı ise ActivityType adı (ör. "12" → "BigSmall"), değilse kategori/alt başlık. */
+const sayacAdi = (k: string): string => (/^\d+$/.test(k) ? (ActivityType as unknown as Record<number, string>)[Number(k)] || k : k);
 
 export const useActivity = ({ activityStats, setActivityStats, showToast, handleGoToMenu, handleGoToProgramIntro, enabledActivitiesSet, activeProfileId, isPremium }: UseActivityProps) => {
     const safeParseArray = <T,>(raw: string | null): T[] => {
@@ -61,6 +65,16 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
     // --- Program Mode progression (per-profile) ---
     // Old 24-level system removed - now using unit-based progression with progressionPolicy service
     // Program mode now uses buildDailySession from sessionBuilder.ts with dynamic difficulty adaptation
+
+    // Kullanım sayacı: yeni etkinlik verisi yüklenince (ilk soru) "açıldı" (kimliksiz toplam, services/sayac.ts)
+    useEffect(() => {
+        if (!activityData.length || currentIndex !== 0) return;
+        const k = isRandomMode ? randomModeQueue[currentRandomActivityIndex]
+            : activityType === ActivityType.ObjectRecognition && selectedObjectCategory ? selectedObjectCategory.id
+            : activityType === ActivityType.FiveWOneH && selectedFiveWOneHKey ? selectedFiveWOneHKey
+            : activityType;
+        if (k !== null && k !== undefined) etkinlikSay(sayacAdi(String(k)), 'acildi');
+    }, [activityData]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const resetActivityState = useCallback(() => {
         setActivityType(null);
@@ -475,6 +489,7 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
                 }
             }
 
+            if (genericKey) etkinlikSay(sayacAdi(genericKey), 'bitti');
             if (genericKey) {
                 const newRecord: AttemptRecord = { timestamp: Date.now(), score: finalScore, total: totalQuestions, mode: isProgramMode ? 'program' : 'free' };
                 const isComplete = finalScore === totalQuestions;

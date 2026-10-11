@@ -1,6 +1,7 @@
 import { lazy, useCallback, useMemo, useState, useEffect } from 'react';
 import { useAppContext } from '../../contexts/AppContext.ts';
 import { ScreenState, ActivityType, ActivityCategory } from '../../types.ts';
+import { ekranSay } from '../../services/sayac.ts';
 import Spinner from '../Spinner.tsx';
 import { OBJECT_CATEGORIES, OBJECTS_INTL_ORDER, LETTER_SOUND_ACTIVITIES, CONCEPT_ACTIVITIES, REASONING_ACTIVITIES, OBJECT_RECOGNITION_ACTIVITIES } from '../../constants.ts';
 import { t, getCurrentLanguage } from '../../i18n/index.ts';
@@ -124,6 +125,10 @@ const WhatsMissingScreen = lazy(() => import('../WhatsMissingScreen.tsx'));
 export const AppRouter = () => {
     const ctx = useAppContext();
     const { screenState, setScreenState, setPreviousScreen, handleGoToMenu } = ctx;
+    // Kullanım sayacı: açılan ekran (kimliksiz toplam; etkinliklerin kendisi useActivity'de sayılır)
+    useEffect(() => {
+        if (screenState !== ScreenState.Loading && screenState !== ScreenState.Playing) ekranSay(ScreenState[screenState]);
+    }, [screenState]);
     const [basaraLessonId, setBasaraLessonId] = useState<number>(1);
     const [basaraVariant, setBasaraVariant] = useState<1 | 2>(1);
     const [basaraGeri, setBasaraGeri] = useState<ScreenState>(ScreenState.SkillMenu);

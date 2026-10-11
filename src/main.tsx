@@ -6,8 +6,12 @@ import App from './App.tsx';
 import { Capacitor } from '@capacitor/core';
 import './index.css';
 import { eskiGorselYedeginiKur } from './services/nesneGorsel.ts';
+import { acilisSay } from './services/sayac.ts';
 
 eskiGorselYedeginiKur();
+// Kimliksiz kullanım sayacı: günde bir açılış (arka plandan dönünce yeni günse yine sayılır)
+acilisSay();
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') acilisSay(); });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
