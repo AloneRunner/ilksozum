@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { pdfAdiAyarla } from '../../services/sayac.ts';
 import { nesneUrl } from '../../services/nesneGorsel.ts';
 import { ConceptRound } from '../../types.ts';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
@@ -70,6 +71,8 @@ const GenericWorksheetPreview: React.FC<GenericWorksheetPreviewProps> = ({
   answerLabel: _answerLabel, // reserved for future use (e.g. answer key)
   onBack,
 }) => {
+  // Yazdırma/PDF sayacında bu kağıdın adı (kimliksiz toplam)
+  React.useEffect(() => { pdfAdiAyarla(worksheetTitle || 'kavram'); }, [worksheetTitle]);
   const [questionCount, setQuestionCount] = useState(Math.min(9, rounds.length));
   const [useRealistic, setUseRealistic] = useState(false);
   const [cols, setCols] = useState<2 | 3>(questionCount <= 6 ? 2 : 3);

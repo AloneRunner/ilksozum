@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { etkinlikSay } from '../services/sayac.ts';
+import { etkinlikSay, basariSay, modSay } from '../services/sayac.ts';
 import { programOturumBitti, ayarOku as programAyarOku } from '../program/motor.ts';
 import { ActivityType, ActivityStats, AttemptRecord, ActivityCategory, ParentOverride } from '../types.ts';
 import { ALL_SUB_ACHIEVEMENTS, LETTER_GROUPS, OBJECT_CATEGORIES, LETTER_SOUND_ACTIVITIES } from '../constants.ts';
@@ -238,6 +238,7 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
     setIsProgramMode(false);
         
         const started = await startNextRandomActivity(shuffledQueue, 0);
+        if (started) modSay('rastgele', 'basladi');
         if (!started) {
             showToast("Rastgele mod için uygun etkinlik bulunamadı.", 'info');
             handleGoToMenu();
@@ -291,6 +292,7 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
     // Program Modu 2: hazır kuyruğu başlat (oturum ya da yerleştirme turu; program/motor.ts kurar)
     const handleStartProgramQueue = useCallback(async (queue: (ActivityType | string)[]) => {
         if (queue.length === 0) { showToast('Program modu için uygun içerik bulunamadı.', 'info'); return false; }
+        modSay(programAyarOku(activeProfileId).yerlestirme === 'devam' ? 'tanima' : 'program', 'basladi');
         setRandomModeQueue(queue);
         setCurrentRandomActivityIndex(0);
         setRandomModeAttemptCount({});
@@ -299,13 +301,13 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
         const started = await startNextRandomActivity(queue, 0);
         if (!started) { showToast('Program modu için uygun içerik bulunamadı.', 'info'); return false; }
         return true;
-    }, [showToast, startNextRandomActivity]);
+    }, [showToast, startNextRandomActivity, activeProfileId]);
 
     // Program Modu: bu etkinliği geç, sıradakine geç (kuyruk bittiyse oturum biter)
     const handleProgramGec = useCallback(async () => {
         const hasNext = await startNextRandomActivity(randomModeQueue, currentRandomActivityIndex + 1);
         if (hasNext) return;
-        programOturumBitti(activeProfileId);
+        modSay(programAyarOku(activeProfileId).yerlestirme === 'devam' ? 'tanima' : 'program', 'bitti'); programOturumBitti(activeProfileId);
         resetActivityState();
         handleGoToProgramIntro?.();
     }, [randomModeQueue, currentRandomActivityIndex, startNextRandomActivity, activeProfileId, resetActivityState, handleGoToProgramIntro]);
@@ -489,7 +491,7 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
                 }
             }
 
-            if (genericKey) etkinlikSay(sayacAdi(genericKey), 'bitti');
+            if (genericKey) { etkinlikSay(sayacAdi(genericKey), 'bitti'); basariSay(sayacAdi(genericKey), finalScore, totalQuestions); }
             if (genericKey) {
                 const newRecord: AttemptRecord = { timestamp: Date.now(), score: finalScore, total: totalQuestions, mode: isProgramMode ? 'program' : 'free' };
                 const isComplete = finalScore === totalQuestions;
@@ -572,12 +574,12 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
                      const hasNext = await startNextRandomActivity(randomModeQueue, currentRandomActivityIndex + 1);
                      if (!hasNext) {
                         if (isProgramMode) {
-                            programOturumBitti(activeProfileId);
+                            modSay(programAyarOku(activeProfileId).yerlestirme === 'devam' ? 'tanima' : 'program', 'bitti'); programOturumBitti(activeProfileId);
                             showToast(t('programMode.completed', 'Program mode finished! Great job.'), 'info');
                             resetActivityState();
                             handleGoToProgramIntro?.();
                         } else {
-                            showToast("Rastgele mod tamamlandı! Harika iş.", 'info');
+                            modSay('rastgele', 'bitti'); showToast("Rastgele mod tamamlandı! Harika iş.", 'info');
                             handleGoToMenu();
                         }
                      }

@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { ifadeSay } from '../services/sayac.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { CommunicationCard, CommunicationCategory } from '../types.ts';
 import { imageData } from '../services/database/imageData.ts';
@@ -110,6 +111,7 @@ const IfadeTahtasi: React.FC<Props> = ({ categories, sentence, onCardClick, onSp
   const kartaBas = (c: CommunicationCard) => {
     if (yazdirma) { onTogglePrintPool({ ...c, categoryColor: kategori?.color || 'slate' }); return; }
     onCardClick(c);
+    ifadeSay(katId === 'sik' ? 'sik' : (kategori?.id || katId), c.text); // kimliksiz kart sayacı
     if (!c.id.startsWith('hz_')) {
       const yeni = { ...sayac, [c.id]: (sayac[c.id] || 0) + 1 };
       setSayac(yeni); yaz(sayacAnahtar, yeni);

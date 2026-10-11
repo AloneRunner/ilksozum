@@ -1,7 +1,7 @@
 import { lazy, useCallback, useMemo, useState, useEffect } from 'react';
 import { useAppContext } from '../../contexts/AppContext.ts';
 import { ScreenState, ActivityType, ActivityCategory } from '../../types.ts';
-import { ekranSay } from '../../services/sayac.ts';
+import { ekranSay, heceSay } from '../../services/sayac.ts';
 import Spinner from '../Spinner.tsx';
 import { OBJECT_CATEGORIES, OBJECTS_INTL_ORDER, LETTER_SOUND_ACTIVITIES, CONCEPT_ACTIVITIES, REASONING_ACTIVITIES, OBJECT_RECOGNITION_ACTIVITIES } from '../../constants.ts';
 import { t, getCurrentLanguage } from '../../i18n/index.ts';
@@ -132,6 +132,8 @@ export const AppRouter = () => {
     const [basaraLessonId, setBasaraLessonId] = useState<number>(1);
     const [basaraVariant, setBasaraVariant] = useState<1 | 2>(1);
     const [basaraGeri, setBasaraGeri] = useState<ScreenState>(ScreenState.SkillMenu);
+    // Kullanım sayacı: Hece Okuma'da girilen ders
+    useEffect(() => { if (screenState === ScreenState.BasaraLesson) heceSay(basaraVariant, basaraLessonId); }, [screenState, basaraLessonId]); // eslint-disable-line react-hooks/exhaustive-deps
     // Beceri menüsü: hangi beceri açık, etkinlik oradan mı başladı (geri tuşu oraya dönsün)
     const [aktifBeceri, setAktifBeceri] = useState<BeceriId | null>(null);
     const [beceriDonus, setBeceriDonus] = useState(false);
