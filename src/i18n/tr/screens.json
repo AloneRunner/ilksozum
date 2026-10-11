@@ -197,7 +197,7 @@
   },
   "consent": {
     "title": "Gizlilik Sözleşmesi",
-    "body": "Uygulamayı kullanmaya devam etmek için Gizlilik Politikası'nı kabul etmeniz gerekir. Kişisel veriler toplamıyoruz; oyun ilerlemeniz ve ayarlarınız yalnızca cihazınızda saklanır. Ücretsiz sürümde kişiselleştirilmemiş reklamlar gösterilebilir.",
+    "body": "Uygulamayı kullanmaya devam etmek için Gizlilik Politikası'nı kabul etmeniz gerekir. Kişisel veriler toplamıyoruz; oyun ilerlemeniz ve ayarlarınız yalnızca cihazınızda saklanır. Uygulamamız ücretsiz ve reklamsızdır. Hangi etkinliklerin ne kadar kullanıldığını görmek için yalnızca kimliksiz toplam sayılar gönderilir (ör. \"Renkler bir kez açıldı\"); kim olduğunuz, cihazınız ya da çocuğunuzla ilgili hiçbir bilgi gönderilmez.",
     "accept": "Kabul Ediyorum",
     "viewPolicy": "Gizlilik Politikası'nı Oku"
   },

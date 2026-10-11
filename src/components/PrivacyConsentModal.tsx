@@ -16,7 +16,7 @@ const PrivacyConsentModal: React.FC<PrivacyConsentModalProps> = ({ onAccept, onV
         <p className="text-slate-700 leading-relaxed text-sm sm:text-base mb-4 text-center">
           {t(
             'consent.body',
-            "Uygulamayı kullanmaya devam etmek için Gizlilik Politikası'nı kabul etmeniz gerekir. Kişisel veriler toplamıyoruz; oyun ilerlemeniz ve ayarlarınız yalnızca cihazınızda saklanır. Uygulamamız ücretsiz ve reklamsızdır."
+            "Uygulamayı kullanmaya devam etmek için Gizlilik Politikası'nı kabul etmeniz gerekir. Kişisel veriler toplamıyoruz; oyun ilerlemeniz ve ayarlarınız yalnızca cihazınızda saklanır. Uygulamamız ücretsiz ve reklamsızdır. Hangi etkinliklerin ne kadar kullanıldığını görmek için yalnızca kimliksiz toplam sayılar gönderilir (ör. \"Renkler bir kez açıldı\"); kim olduğunuz, cihazınız ya da çocuğunuzla ilgili hiçbir bilgi gönderilmez."
           )}
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">

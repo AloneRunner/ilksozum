@@ -3,7 +3,7 @@
 // Firebase kütüphanesi yok: Realtime Database REST + sunucu tarafı artırma. İnternet yoksa sessizce atlanır.
 import { Capacitor } from '@capacitor/core';
 
-const DB = ''; // ör. https://ozarik-sayac-default-rtdb.europe-west1.firebasedatabase.app — boşsa hiçbir şey gönderilmez
+const DB = 'https://ozarik-sayac-default-rtdb.europe-west1.firebasedatabase.app'; // ozarik-sayac projesi (boşsa hiçbir şey gönderilmez)
 const UYGULAMA = 'ilksozum';
 
 type Grup = 'gun' | 'kurulum' | 'etkinlik' | 'ekran' | 'mod' | 'pdf' | 'basari' | 'hece' | 'ifade';

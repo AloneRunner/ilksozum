@@ -13,7 +13,7 @@ const trSections = [
     },
     {
         title: "2. Toplanan Veriler ve Cihaz Üzerinde Saklama",
-        content: `Uygulamamız, kullanıcılarından kesinlikle hiçbir <strong>kişisel tanımlayıcı bilgi</strong> (isim, e-posta adresi, konum, fotoğraf vb.) toplamaz veya saklamaz. Oyun ilerlemeniz, ayarlarınız ve premium üyelik durumunuz gibi veriler, yalnızca sizin cihazınızda yerel olarak saklanır, sunucularımıza gönderilmez ve üçüncü taraflarla paylaşılmaz.`
+        content: `Uygulamamız, kullanıcılarından kesinlikle hiçbir <strong>kişisel tanımlayıcı bilgi</strong> (isim, e-posta adresi, konum, fotoğraf vb.) toplamaz veya saklamaz. Oyun ilerlemeniz, ayarlarınız ve premium üyelik durumunuz gibi veriler, yalnızca sizin cihazınızda yerel olarak saklanır, sunucularımıza gönderilmez ve üçüncü taraflarla paylaşılmaz.<br/><br/><strong>Kimliksiz kullanım sayıları:</strong> Uygulamayı geliştirmek için yalnızca toplam sayılar gönderilir; örneğin "Renkler etkinliği bir kez açıldı", "bugün uygulama bir cihazda açıldı" (Android / web / Windows) ya da bir etkinlikteki toplam doğru cevap sayısı. Bu sayılar hiçbir kimlik, cihaz bilgisi, konum, isim ya da profil bilgisi içermez, kişiyle ilişkilendirilemez ve reklam için kullanılmaz. Google Firebase (Avrupa sunucusu) üzerinde saklanır.`
     },
     {
         title: "3. Uygulama İçi Satın Alımlar",
@@ -43,7 +43,7 @@ const enSections = [
     },
     {
         title: "2. Data Collected and On-Device Storage",
-        content: `Our app does not collect or store any <strong>personally identifiable information</strong> (such as name, email address, location, photos, etc.). Your game progress, settings, and premium status are stored <em>only on your device</em>, are not sent to our servers, and are not shared with third parties.`
+        content: `Our app does not collect or store any <strong>personally identifiable information</strong> (such as name, email address, location, photos, etc.). Your game progress, settings, and premium status are stored <em>only on your device</em>, are not sent to our servers, and are not shared with third parties.<br/><br/><strong>Anonymous usage counts:</strong> To improve the app, only aggregate counts are sent, e.g. "the Colors activity was opened once", "the app was opened on one device today" (Android / web / Windows) or the total number of correct answers in an activity. These counts contain no identifiers, device information, location, names or profile data, cannot be linked to a person and are never used for advertising. They are stored on Google Firebase (European server).`
     },
     {
         title: "3. In-App Purchases",

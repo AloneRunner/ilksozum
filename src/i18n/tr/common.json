@@ -198,7 +198,7 @@
   },
   "consent": {
     "title": "Gizlilik Onayı",
-    "body": "Uygulamayı kullanmaya devam etmek için Gizlilik Politikamızı kabul etmelisiniz. Kişisel veri toplamıyoruz; ilerlemeniz ve ayarlarınız cihazınızda kalır. Ücretsiz sürümde kişiselleştirilmemiş reklamlar gösterilebilir.",
+    "body": "Uygulamayı kullanmaya devam etmek için Gizlilik Politikamızı kabul etmelisiniz. Kişisel veri toplamıyoruz; ilerlemeniz ve ayarlarınız cihazınızda kalır. Uygulamamız ücretsiz ve reklamsızdır. Hangi etkinliklerin ne kadar kullanıldığını görmek için yalnızca kimliksiz toplam sayılar gönderilir (ör. \"Renkler bir kez açıldı\"); kim olduğunuz, cihazınız ya da çocuğunuzla ilgili hiçbir bilgi gönderilmez.",
     "accept": "Kabul Ediyorum",
     "viewPolicy": "Gizlilik Politikasını Oku"
   },
