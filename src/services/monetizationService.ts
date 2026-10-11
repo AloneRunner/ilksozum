@@ -376,7 +376,7 @@ export const migrateOldPurchases = async (oldUserId: string): Promise<boolean> =
 // Teklif (offering) gerekmez: ürünler kimlikle çekilir. Play'de yoksa düğme görünmez.
 export interface DestekUrunu { id: string; emoji: string; baslik: string; aciklama: string }
 export const DESTEK_URUNLERI: DestekUrunu[] = [
-  { id: 'destek_ses', emoji: '🎙️', baslik: 'Gökçe’ye ses ekle', aciklama: 'Desteğiniz Gökçe’nin seslendirmelerine gidiyor (yaklaşık 1.000 cümle).' },
+  { id: 'destek_ses', emoji: '🎙️', baslik: 'Seslendirmeye destek', aciklama: 'Desteğiniz yeni seslendirmelere gidiyor.' },
   { id: 'destek_gorsel', emoji: '🖼️', baslik: 'Yeni görseller', aciklama: 'Desteğiniz yeni gerçek fotoğraflara gidiyor.' },
 ];
 

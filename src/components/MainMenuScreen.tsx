@@ -136,7 +136,7 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
           <>
             {/* Duyurular 9.1 (Kaan, 2026-10-08: "gizli duyuruları da güncelleyelim") */}
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>YENİ — Gökçe'nin sesi:</b> Hece okuma dersleri, kavramlar, İfade Tahtası, Ses Taklit ve oyunlar artık gerçek bir insan sesiyle konuşuyor. İsterseniz <b>Ayarlar › Kayıtlı ses</b> ile telefonun sesine dönebilirsiniz.
+              <b>YENİ — Gerçek insan sesi:</b> Hece okuma dersleri, kavramlar, kelimeler, İfade Tahtası, Ses Taklit ve oyunlar artık gerçek bir insan sesiyle konuşuyor. İsterseniz <b>Ayarlar › Kayıtlı ses</b> ile telefonun sesine dönebilirsiniz.
             </p>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
               <b>YENİ — Ağzımı İzle:</b> Konuşan yüz, sesleri ve ilk kelimeleri dudak hareketiyle gösteriyor (<b>Konuşma ve Anlama</b> menüsü). Hece okuma derslerinde de var.
@@ -176,7 +176,7 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
         ) : (
           <>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>NEW:</b> Real human voice (Gökçe) for syllable reading lessons, concepts, the communication board and games; a talking face that shows mouth movements (“Watch My Mouth”); a new Program Mode; and rebuilt games. İlk Sözüm is <b>completely free and ad-free.</b>
+              <b>NEW:</b> Real human voice for syllable reading lessons, concepts, the communication board and games; a talking face that shows mouth movements (“Watch My Mouth”); a new Program Mode; and rebuilt games. İlk Sözüm is <b>completely free and ad-free.</b>
             </p>
             {androidUygulama && (
               <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>

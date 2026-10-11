@@ -151,7 +151,7 @@ const KonusanAgiz: React.FC<Props> = ({ className, onHarf, buyukAgiz }) => {
       </g>
     );
   return (
-    <svg viewBox="0 0 240 240" className={className} role="img" aria-label="Gökçe">
+    <svg viewBox="0 0 240 240" className={className} role="img" aria-label="Konuşan yüz">
       {/* topuzlar ve tokalar */}
       <circle cx={30} cy={96} r={30} fill={SAC} />
       <circle cx={210} cy={96} r={30} fill={SAC} />

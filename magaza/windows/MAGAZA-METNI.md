@@ -15,7 +15,7 @@ Otizmli ve okul öncesi çocuklar için ücretsiz, reklamsız eğitim uygulamas�
 
 • Kavramlar: büyük/küçük, içinde/dışında, altında/üstünde, kalın/ince, ıslak/kuru ve 60'tan fazla kavram, gerçek fotoğraflarla
 • Kelimeler: 40 kategoride yaklaşık 1000 kelime (hayvanlar, meyveler, eşyalar, aile…)
-• Ağzımı İzle: Gökçe'nin konuşan yüzüyle sesleri, heceleri ve ilk kelimeleri ağız hareketiyle öğrenme
+• Ağzımı İzle: Konuşan yüzle sesleri, heceleri ve ilk kelimeleri ağız hareketiyle öğrenme
 • Hece Okuma: ünlülerden başlayan, adım adım hece okuma dersleri
 • İfade Kartları: konuşamayan çocuklar için tek ekranda resimli iletişim tahtası
 • Program Modu: çocuğun düzeyine göre günlük kısa oturumlar, beceri beceri ilerleme

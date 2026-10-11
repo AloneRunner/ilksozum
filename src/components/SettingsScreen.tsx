@@ -981,7 +981,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
             )}
             <HeartIcon className={premiumCrownClass}/>
             <h2 className={premiumTitleClass}>{t('settingsEx.donate.title', 'Geliştiriciye Destek Ol')}</h2>
-            <p className={premiumDescClass}>{t('settingsEx.donate.desc', 'Uygulamadaki her şey ücretsiz ve herkese açık; bağış hiçbir özelliği açmaz. Destekler doğrudan uygulamaya gidiyor: Gökçe’nin seslendirmeleri, yeni gerçek fotoğraflar ve iPhone/iPad sürümü için Apple geliştirici hesabı. 💛')}</p>
+            <p className={premiumDescClass}>{t('settingsEx.donate.desc', 'Uygulamadaki her şey ücretsiz ve herkese açık; bağış hiçbir özelliği açmaz. Destekler doğrudan uygulamaya gidiyor: gerçek insan sesli seslendirmeler, yeni gerçek fotoğraflar ve iPhone/iPad sürümü için Apple geliştirici hesabı. 💛')}</p>
             {hasPurchasedPremium && (
               <p className={premiumDescClass}>{t('settingsEx.donate.thanks', 'Daha önce destek oldunuz, çok teşekkürler!')}</p>
             )}
@@ -1097,8 +1097,8 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
           )}
   {/* Çocuk Modu ve Hatasız Öğrenme kaldırıldı */}
           <SettingsRow
-            title="Kayıtlı ses (Gökçe)"
-            subtitle="Övgüler, hece okuma dersleri, Ses Taklit ve bazı kavramlar gerçek bir sesle okunur; diğerleri cihaz sesiyle. Kayıtlar bütçe elverdikçe artacak. Kapalıysa her şey cihaz sesiyle okunur."
+            title="Kayıtlı ses"
+            subtitle="Hece okuma dersleri, kavramlar, kelimeler, övgüler, Ses Taklit ve oyun yönergeleri gerçek bir insan sesiyle okunur. Kapalıysa her şey cihaz sesiyle okunur."
             isThemed={isThemed} themeVariant={themeVariant}
           >
             <ToggleSwitch isEnabled={kayitliSes} onToggle={() => setKayitliSesAyar(v => !v)} themeVariant={themeVariant} />
