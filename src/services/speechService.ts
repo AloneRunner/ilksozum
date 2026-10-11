@@ -372,8 +372,13 @@ const cihazSoyleIc = async (textToSpeak: string, overrideLang?: string): Promise
                         return;
                     }
                     
+                    // Türkçe: Gökçe kayıtlarıyla karışınca kopmasın diye kadın sesi öne (Kaan, 2026-10-11: PC'de erkek ses Tolga
+                    // okuyordu). Edge "Emel (Natural)", Chrome "Google Türkçe" kadın; Tolga/Ahmet erkek.
+                    const kadinTr = (v: SpeechSynthesisVoice) => /emel|google|seda|filiz|yelda|female|kadın/i.test(v.name) && !/tolga|ahmet/i.test(v.name);
+                    const trSesleri = langPrefix === 'tr' ? voices.filter(v => v.lang?.toLowerCase().startsWith('tr')) : [];
+                    const kadin = trSesleri.filter(kadinTr).sort((x, y) => Number(/emel/i.test(y.name)) - Number(/emel/i.test(x.name)))[0];
                     // Exact match first
-                    let voice = voices.find(v => v.lang?.toLowerCase() === lang.toLowerCase());
+                    let voice: SpeechSynthesisVoice | undefined = kadin || voices.find(v => v.lang?.toLowerCase() === lang.toLowerCase());
                     // Then language-only match (en-*, de-*, ...)
                     if (!voice) voice = voices.find(v => v.lang?.toLowerCase().startsWith(langPrefix));
                     

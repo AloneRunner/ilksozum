@@ -2477,7 +2477,8 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
 
     // Avatar bileşeni (tüm temalarda, yalnızca dikey ekranda)
     const isPortrait = !isLandscape;
-    const showAvatar = isPortrait && ProfileAvatar;
+    // Alttaki profil resmi (ayı/köpek) kaldırıldı (Kaan, 2026-10-11: "ona gerek yok"); soruyu Gökçe söylüyor
+    const showAvatar = false && isPortrait && ProfileAvatar;
 
     const spamOverlay = (isSpamGuardEnabled && isSpamLocked) ? (
         <div className="absolute inset-0 z-50 flex items-center justify-center bg-slate-900/70 backdrop-blur-sm px-6 text-center">
@@ -2528,7 +2529,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 </div>
 
                 {/* Question */}
-                <h1 className={`text-xl sm:text-2xl font-bold text-center ${tas ? `${tas.soruKutu} font-black` : `${isCosmic ? 'bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-indigo-200 to-fuchsia-300 text-glow-planet' : effectiveTheme.text} drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]`} flex items-center justify-center gap-3 absolute top-12 left-1/2 -translate-x-1/2 z-20`}>
+                <h1 className={`text-xl sm:text-2xl font-bold text-center ${tas ? `${tas.soruKutu} font-black` : `${isCosmic ? 'bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-indigo-200 to-fuchsia-300 text-glow-planet' : effectiveTheme.text} drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]`} flex items-center justify-center gap-3 relative mt-12 self-center z-20 shrink-0 px-2 max-w-[92%]`}>
                     {settings.theme === 'kedi' ? '🐱 ' : settings.theme === 'zurafa' ? '🦒🌸 ' : ''}{localizedQuestion}
                     {/* Gökçe soruyu söyler; yüzüne dokununca tekrar */}
                     <button onClick={handleSpeak} className="shrink-0 active:scale-95 transition" aria-label={t('choice.readQuestion')}>
@@ -2544,7 +2545,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                             : translateLabel(roundData.questionItem!.word, currentLang);
                         return (
                             // Akışın içinde (Kaan, 2026-10-08: yatayda parmak resmi ortadaki seçeneğin üstüne biniyordu)
-                            <div className="shrink-0 flex justify-center pt-[5.25rem] mb-2 z-20">
+                            <div className="shrink-0 flex justify-center pt-1 mb-2 z-20">
                                 <div className="h-[22vh] max-h-32 aspect-square">
                                     <Card
                                         imageUrl={roundData.questionItem.imageUrl}
@@ -2560,7 +2561,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 )}
 
                 {/* Options */}
-                <div className={`flex-grow flex flex-row items-stretch justify-center w-full pb-[4.75rem] ${roundData.questionItem ? 'min-h-0' : 'min-h-0 pt-[5.25rem]'}`}>
+                <div className={`flex-grow flex flex-row items-stretch justify-center w-full pb-[4.75rem] min-h-0`}>
                     {roundData.options.map((option, index) => {
                         const isOptionCorrect = isCorrect && selectedId === option.id;
                         const isOptionWrong = isWrong === option.id;
