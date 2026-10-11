@@ -8,7 +8,7 @@ const trSections = [
         title: "1. Giriş",
         content: `<strong>Uygulama Adı:</strong> İlk Sözüm: Otizm & Okul Öncesi<br>
                   <strong>Geliştirici:</strong> Ozarik<br>
-                  <strong>Son Güncelleme:</strong> 27 Temmuz 2024<br><br>
+                  <strong>Son Güncelleme:</strong> 11 Ekim 2026<br><br>
                   "İlk Sözüm: Otizm & Okul Öncesi" ("Uygulama") olarak, kullanıcılarımızın ve özellikle çocuklarımızın gizliliğini korumaya büyük önem veriyoruz. Bu gizlilik politikası, uygulamamızın hangi verileri nasıl kullandığını şeffaf bir şekilde açıklamaktadır.`
     },
     {
@@ -38,7 +38,7 @@ const enSections = [
         title: "1. Introduction",
         content: `<strong>App Name:</strong> My First Words: Learning Cards<br>
                   <strong>Developer:</strong> Ozarik<br>
-                  <strong>Last Update:</strong> July 27, 2024<br><br>
+                  <strong>Last Update:</strong> October 11, 2026<br><br>
                   We care deeply about the privacy of our users, especially children. This policy explains clearly which data the app uses and how.`
     },
     {
