@@ -23,8 +23,12 @@ interface UseActivityProps {
     isPremium?: boolean;
 }
 
-/** Sayaç için okunur ad: sayı ise ActivityType adı (ör. "12" → "BigSmall"), değilse kategori/alt başlık. */
-const sayacAdi = (k: string): string => (/^\d+$/.test(k) ? (ActivityType as unknown as Record<number, string>)[Number(k)] || k : k);
+/** Sayaç için okunur ad: menüdeki Türkçe ad (ör. "Büyük / Küçük"); yoksa ActivityType adı ya da kategori kimliği. */
+let sayacAdlari: Map<string, string> | null = null;
+const sayacAdi = (k: string): string => {
+    sayacAdlari ??= new Map(ALL_SUB_ACHIEVEMENTS.map((x) => [String(x.id), x.name]));
+    return sayacAdlari.get(k) || (/^\d+$/.test(k) ? (ActivityType as unknown as Record<number, string>)[Number(k)] || k : k);
+};
 
 export const useActivity = ({ activityStats, setActivityStats, showToast, handleGoToMenu, handleGoToProgramIntro, enabledActivitiesSet, activeProfileId, isPremium }: UseActivityProps) => {
     const safeParseArray = <T,>(raw: string | null): T[] => {
