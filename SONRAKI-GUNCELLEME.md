@@ -141,3 +141,8 @@ Bekleyen sesler (eşinin dinlemesiyle; Kaan "üret" deyince): ça (eşi bozuk de
 - Bozuk: ça (eşi), bebek ("ebek"), el, at (İngilizce "æt" okunuyor). Okunuş ipucuyla 2'şer seçenek (ör. "Be-bek.", "Eel.", "Aat.").
 - Ses Taklit maymun sesi "u-u-a-a" (gokce-9a9ac862) bozuk; "Uu uu aa aa!" gibi okunuşla yeniden.
 - Eksik (Ağzımı İzle > Ailem): abi, teyze, amca, kardeş.
+
+## Ses boyutu kararı (Kaan, 2026-10-12)
+- Tüm sesler topluca 32 kbps'ye SIKIŞTIRILMAYACAK. Sayaç istatistikleri birikince karar verilecek.
+- Büyük ihtimalle yalnız oyunlardaki (mini oyun/efekt) sesler küçültülür; Gökçe kayıtlarına dokunulmaz.
+- Play AAB: 9.1.5 (97) indirme boyutu 201 MB (uyarı var, hata yok). Ses klasörü ~100+ MB; yeni 134 + 6 + 339 cümle bir sonraki pakette.
