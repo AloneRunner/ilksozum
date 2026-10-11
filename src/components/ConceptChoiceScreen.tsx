@@ -5,7 +5,7 @@ import { ConceptRound, ActivityType } from '../types.ts';
 import Card from './ui/Card.tsx';
 import SmartImage from './ui/SmartImage.tsx';
 import { organCizimi } from '../services/nesneGorsel.ts';
-import SpeakerIcon from './icons/SpeakerIcon.tsx';
+import KonusanAgiz from './agiz/KonusanAgiz.tsx';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { speak, playEffect } from '../services/speechService.ts';
 import BanIcon from './icons/BanIcon.tsx';
@@ -2530,8 +2530,9 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 {/* Question */}
                 <h1 className={`text-xl sm:text-2xl font-bold text-center ${tas ? `${tas.soruKutu} font-black` : `${isCosmic ? 'bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-indigo-200 to-fuchsia-300 text-glow-planet' : effectiveTheme.text} drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]`} flex items-center justify-center gap-3 absolute top-12 left-1/2 -translate-x-1/2 z-20`}>
                     {settings.theme === 'kedi' ? '🐱 ' : settings.theme === 'zurafa' ? '🦒🌸 ' : ''}{localizedQuestion}
-                    <button onClick={handleSpeak} className={`p-1.5 ${effectiveTheme.bg} rounded-full ${effectiveTheme.hoverBg} transition-colors`} aria-label={t('choice.readQuestion')}>
-                        <SpeakerIcon className={`w-5 h-5 ${effectiveTheme.accent}`} />
+                    {/* Gökçe soruyu söyler; yüzüne dokununca tekrar */}
+                    <button onClick={handleSpeak} className="shrink-0 active:scale-95 transition" aria-label={t('choice.readQuestion')}>
+                        <KonusanAgiz className="w-11 h-11 drop-shadow" />
                     </button>
                 </h1>
 
@@ -2559,7 +2560,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 )}
 
                 {/* Options */}
-                <div className={`flex-grow flex flex-row items-stretch justify-center w-full pb-[4.75rem] ${roundData.questionItem ? 'min-h-0' : 'h-full'}`}>
+                <div className={`flex-grow flex flex-row items-stretch justify-center w-full pb-[4.75rem] ${roundData.questionItem ? 'min-h-0' : 'min-h-0 pt-[5.25rem]'}`}>
                     {roundData.options.map((option, index) => {
                         const isOptionCorrect = isCorrect && selectedId === option.id;
                         const isOptionWrong = isWrong === option.id;
@@ -2673,8 +2674,9 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     <div className="w-full flex flex-col items-center justify-start landscape:justify-center landscape:w-7/12 landscape:max-w-md">
                         <h1 className={`text-xl sm:text-2xl font-bold text-center ${tas ? `${tas.soruKutu} font-black` : `${isCosmic ? 'bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-indigo-200 to-fuchsia-300 text-glow-planet' : effectiveTheme.text} drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]`} mb-4 flex items-center gap-3 landscape:text-lg sm-landscape:text-base`}>
                             {settings.theme === 'kedi' ? '🐱 ' : settings.theme === 'zurafa' ? '🦒🌸 ' : ''}{localizedQuestion}
-                            <button onClick={handleSpeak} className={`p-2 ${effectiveTheme.bg} rounded-full ${effectiveTheme.hoverBg} transition-colors`} aria-label={t('choice.readQuestion')}>
-                                <SpeakerIcon className={`w-6 h-6 sm-landscape:w-5 sm-landscape:h-5 ${effectiveTheme.accent}`} />
+                            {/* Gökçe soruyu söyler; yüzüne dokununca tekrar */}
+                            <button onClick={handleSpeak} className="shrink-0 active:scale-95 transition" aria-label={t('choice.readQuestion')}>
+                                <KonusanAgiz className="w-14 h-14 sm-landscape:w-11 sm-landscape:h-11 drop-shadow" />
                             </button>
                         </h1>
                         {renderQuestionItem()}

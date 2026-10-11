@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { kayitDinle } from '../../services/speechService.ts';
+import { kayitDinle, cihazKonusuyorMu } from '../../services/speechService.ts';
 import { AgizDurus, DURUSLAR, Vizem, harfVizemi, karistir } from './agizSekilleri.ts';
 
 // Konuşan yüz (Kaan, 2026-10-08): Gökçe kaydı çalarken ağız harf zamanlarıyla (hizalama.json) senkron hareket eder.
@@ -10,6 +10,7 @@ let hizaSozu: Promise<Record<string, Hiza>> | null = null;
 const hizalamaYukle = (): Promise<Record<string, Hiza>> =>
   (hizaSozu ??= fetch('/audio/ses/hizalama.json').then((r) => (r.ok ? r.json() : {})).catch(() => ({})) as Promise<Record<string, Hiza>>);
 
+const CIHAZ_VIZEMLERI: Vizem[] = ['A', 'E', 'O', 'M', 'A', 'I', 'M'];
 const DUDAK = '#ec8a96', DUDAK_KOYU = '#c9606e', ICERI = '#5b1d2a', DIL = '#e8737f', DIS = '#ffffff';
 
 /** Ağzın kendisi (merkez 0,0). */
@@ -72,6 +73,8 @@ const KonusanAgiz: React.FC<Props> = ({ className, onHarf, buyukAgiz }) => {
   const sonVizem = useRef<Vizem>('sus');
   const sonHarf = useRef(-1);
   const tutma = useRef(0);
+  const cihazSonraki = useRef(0);
+  const cihazVizem = useRef<Vizem>('A');
   const harfCb = useRef(onHarf);
   harfCb.current = onHarf;
 
@@ -105,6 +108,11 @@ const KonusanAgiz: React.FC<Props> = ({ className, onHarf, buyukAgiz }) => {
         } else {
           hedef = Math.floor(t / 15) % 2 ? 'A' : 'M'; // zaman verisi yoksa kaba ağız aç-kapa
         }
+      }
+      else if (cihazKonusuyorMu()) {
+        // Cihaz sesi (kayıt yok): hece hızında rastgele ağız şekilleri — doğal görünsün, harf eşlemesi yok
+        if (simdi > cihazSonraki.current) { cihazSonraki.current = simdi + 110 + Math.random() * 90; cihazVizem.current = CIHAZ_VIZEMLERI[Math.floor(Math.random() * CIHAZ_VIZEMLERI.length)]; }
+        hedef = cihazVizem.current;
       }
       // ses bitince son şekli yarım saniye tut: kısa kayıtlarda (tek ünlü 0,3 sn) çocuk ağzı görebilsin
       if (hedef !== 'sus') tutma.current = simdi + 500;

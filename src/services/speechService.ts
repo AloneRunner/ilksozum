@@ -94,6 +94,7 @@ export const getMutedState = (): boolean => isMuted;
  */
 export const cancelSpeech = async () => {
     kayitDurdur();
+    cihazKonusmaBitis = 0;
     if (Capacitor.isNativePlatform()) {
         try {
             await TextToSpeech.stop();
@@ -256,8 +257,19 @@ export const speak = async (textToSpeak: string, overrideLang?: string): Promise
     return cihazSoyle(textToSpeak, overrideLang);
 };
 
+// Cihaz sesi konuşurken Gökçe'nin ağzı da (kaba) hareket etsin (KonusanAgiz bunu sorar). Kayıtta harf zamanları var, burada yok.
+let cihazKonusmaNo = 0;
+let cihazKonusmaBitis = 0; // güvenlik: söz bitmezse süre dolunca susmuş say
+export const cihazKonusuyorMu = (): boolean => cihazKonusmaBitis > Date.now();
+
 /** Cihazın kendi sesiyle (TTS) okur. */
 const cihazSoyle = async (textToSpeak: string, overrideLang?: string): Promise<void> => {
+    const no = ++cihazKonusmaNo;
+    cihazKonusmaBitis = Date.now() + 2000 + textToSpeak.length * 120;
+    try { await cihazSoyleIc(textToSpeak, overrideLang); } finally { if (no === cihazKonusmaNo) cihazKonusmaBitis = 0; }
+};
+
+const cihazSoyleIc = async (textToSpeak: string, overrideLang?: string): Promise<void> => {
     if (Capacitor.isNativePlatform()) {
         const requestedLang = overrideLang || speechLang;
         

@@ -1,4 +1,5 @@
 import React, { useMemo, useRef, useState } from 'react';
+import KonusanAgiz from './agiz/KonusanAgiz.tsx';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import soundImitationImages from '../services/database/soundImitationImages.ts';
 import SoundImitationLightbox from './SoundImitationLightbox.tsx';
@@ -54,6 +55,7 @@ const SesTaklitEkrani: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   };
   React.useEffect(() => () => { sesRef.current?.pause(); }, []);
 
+  const calanKart = calan ? kartlar.find((k) => k.id === calan) : undefined;
   return (
     <div className="flex flex-col h-full w-full max-w-5xl mx-auto px-3 pt-3 animate-fade-in">
       <div className="flex items-center gap-2 mb-3">
@@ -78,7 +80,13 @@ const SesTaklitEkrani: React.FC<{ onBack: () => void }> = ({ onBack }) => {
               </button>
             ))}
           </div>
-          <p className="text-center text-xs font-semibold text-slate-500 mb-2">Karta dokun, sesi dinle ve taklit et.</p>
+          {/* Gökçe sesi söyler (ağzı kayıtla senkron); balonda çalan ses (Kaan, 2026-10-11: "konuşan kız çoğu yerde gözüksün") */}
+          <div className="flex items-center gap-2 mb-2">
+            <KonusanAgiz className="w-14 h-14 shrink-0 drop-shadow" />
+            <div className="min-h-[2.75rem] flex items-center bg-white rounded-2xl px-3 py-1.5 shadow text-sm font-bold text-slate-700">
+              {calanKart ? <span><span className="text-amber-600 text-lg font-black">{sesEtiketi(calanKart)}</span> · Sen de söyle!</span> : 'Karta dokun, sesi dinle ve taklit et.'}
+            </div>
+          </div>
           <div className="flex-1 overflow-y-auto pb-24">
             <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 landscape:grid-cols-5">
               {kartlar.map((it, i) => (

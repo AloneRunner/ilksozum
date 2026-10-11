@@ -136,3 +136,7 @@ Kimliksiz toplam sayaçlar; tüm uygulamalar (İlk Sözüm, Zekâ, Ders Program�
 - Play Veri güvenliği: "Uygulama etkileşimleri — anonim, kullanıcıyla ilişkilendirilmez" + gizlilik metnine bir cümle.
 - Seslendirme sırası sayaçlara göre (temel kavramlar beklemeden).
 Bekleyen sesler (eşinin dinlemesiyle; Kaan "üret" deyince): ça (eşi bozuk dedi), bebek, el; kelimeler topluca gözden geçirilecek.
+
+## Yeniden üretilecek sesler (eşi dinleyip seçecek; Kaan "üret" deyince)
+- Bozuk: ça (eşi), bebek ("ebek"), el, at (İngilizce "æt" okunuyor). Okunuş ipucuyla 2'şer seçenek (ör. "Be-bek.", "Eel.", "Aat.").
+- Eksik (Ağzımı İzle > Ailem): abi, teyze, amca, kardeş.

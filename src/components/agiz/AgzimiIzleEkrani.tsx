@@ -34,8 +34,12 @@ const BOLUMLER: Bolum[] = [
   { id: 'bogaz', ad: 'Boğaz', emoji: '🗣️', ogeler: [
     ['ka', 'Dilin geride, ağzın açık.'], ['ga', 'Dilin geride, sesli.'], ['ha', 'Aynayı buğular gibi nefes ver.'],
   ] },
+  // Kaan, 2026-10-11: "anne yok, anne kıskandı; abi de yok". Kaydı olmayanlar (abi, teyze, amca, kardeş) kayıt gelince kendiliğinden görünür.
+  { id: 'aile', ad: 'Ailem', emoji: '👪', ogeler: [
+    ['anne'], ['baba'], ['abla'], ['abi'], ['kardeş'], ['bebek'], ['dede'], ['nine'], ['teyze'], ['amca'],
+  ] },
   { id: 'kelime', ad: 'İlk kelimeler', emoji: '⭐', ogeler: [
-    ['baba'], ['mama'], ['bebek'], ['su'], ['süt'], ['muz'], ['elma'], ['bal'], ['çay'], ['ev'], ['el'],
+    ['anne'], ['baba'], ['mama'], ['bebek'], ['su'], ['süt'], ['muz'], ['elma'], ['bal'], ['çay'], ['ev'], ['el'],
     ['göz'], ['at'], ['ayı'], ['balık'], ['araba'], ['ip'], ['evet'], ['hayır'], ['daha'], ['bitti'], ['gel'], ['ver'], ['dur'],
   ] },
 ];
