@@ -139,4 +139,5 @@ Bekleyen sesler (eşinin dinlemesiyle; Kaan "üret" deyince): ça (eşi bozuk de
 
 ## Yeniden üretilecek sesler (eşi dinleyip seçecek; Kaan "üret" deyince)
 - Bozuk: ça (eşi), bebek ("ebek"), el, at (İngilizce "æt" okunuyor). Okunuş ipucuyla 2'şer seçenek (ör. "Be-bek.", "Eel.", "Aat.").
+- Ses Taklit maymun sesi "u-u-a-a" (gokce-9a9ac862) bozuk; "Uu uu aa aa!" gibi okunuşla yeniden.
 - Eksik (Ağzımı İzle > Ailem): abi, teyze, amca, kardeş.
