@@ -1,471 +1,234 @@
 import { sayInstruction } from '../../utils/gameVoice.ts';
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import React, { useRef, useEffect, useMemo, useCallback } from 'react';
 import { t } from '../../i18n/index.ts';
 
 interface BubblePopGameScreenProps {
   onBack: () => void;
 }
 
-// Baloncuk tipi
-interface Bubble {
-  id: number;
-  x: number;
-  y: number;
-  size: number;
-  speed: number;
-  wobble: number;
-  wobbleSpeed: number;
-  hue: number;
-  opacity: number;
-  popped: boolean;
-  popScale: number;
-}
+// Baloncuk oyunu (Kaan, 2026-10-12: "eski telefonda kasıyor"): her karede React'i yeniden çizmek yerine
+// tek bir canvas'a çizilir; baloncuk görselleri bir kez hazırlanıp (sprite) kopyalanır. Gölge/bulanıklık yok.
 
-// Pop parçacığı
-interface PopParticle {
-  id: number;
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  size: number;
-  hue: number;
-  life: number;
-}
+interface Bubble { x: number; y: number; size: number; speed: number; wobble: number; wobbleSpeed: number; hue: number; opacity: number; popT: number; } // popT: -1 canlı, 0..1 patlıyor
+interface Particle { x: number; y: number; vx: number; vy: number; size: number; hue: number; life: number; }
+
+const HUE_ADIMI = 30;      // 12 renk
+const SPRITE_BOYUT = 96;   // piksel; ekranda ölçeklenir
+const MAKS_BALON = 12;
+const MAKS_PARCACIK = 60;
+
+const spriteYap = (hue: number): HTMLCanvasElement => {
+  const c = document.createElement('canvas');
+  c.width = c.height = SPRITE_BOYUT;
+  const g = c.getContext('2d');
+  if (!g) return c;
+  const r = SPRITE_BOYUT / 2;
+  const grad = g.createRadialGradient(r * 0.7, r * 0.7, r * 0.1, r, r, r);
+  grad.addColorStop(0, `hsla(${hue}, 70%, 85%, 0.95)`);
+  grad.addColorStop(0.45, `hsla(${hue}, 62%, 62%, 0.75)`);
+  grad.addColorStop(1, `hsla(${hue}, 55%, 42%, 0.55)`);
+  g.fillStyle = grad;
+  g.beginPath(); g.arc(r, r, r - 1.5, 0, Math.PI * 2); g.fill();
+  g.strokeStyle = `hsla(${hue}, 60%, 80%, 0.45)`; g.lineWidth = 2; g.stroke();
+  g.fillStyle = 'rgba(255,255,255,0.65)';
+  g.beginPath(); g.ellipse(r * 0.62, r * 0.5, r * 0.22, r * 0.14, -0.5, 0, Math.PI * 2); g.fill();
+  g.fillStyle = 'rgba(255,255,255,0.3)';
+  g.beginPath(); g.arc(r * 1.2, r * 1.3, r * 0.08, 0, Math.PI * 2); g.fill();
+  return c;
+};
 
 const BubblePopGameScreen: React.FC<BubblePopGameScreenProps> = ({ onBack }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const audioContextRef = useRef<AudioContext | null>(null);
-  const animationRef = useRef<number>(0);
-  const lastTimeRef = useRef<number>(0);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const balonlar = useRef<Bubble[]>([]);
+  const parcaciklar = useRef<Particle[]>([]);
+  const spriteler = useRef<Map<number, HTMLCanvasElement>>(new Map());
+  const sesBaglami = useRef<AudioContext | null>(null);
+  const seri = useRef(0);
+  const seriZamani = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const boyut = useRef({ w: 0, h: 0, dpr: 1 });
 
-  const [bubbles, setBubbles] = useState<Bubble[]>([]);
-  const [particles, setParticles] = useState<PopParticle[]>([]);
-  // Rahatlama oyunu: skor ve seri göstergesi yok (performans baskısı olmasın)
-  const [, setCombo] = useState(0);
+  // Sabit arka plan yıldızları (bir kez üretilir; her çizimde değişmez)
+  const yildizlar = useMemo(() => Array.from({ length: 24 }, () => ({
+    left: Math.random() * 100, top: Math.random() * 100, s: 1 + Math.random() * 2, o: 0.3 + Math.random() * 0.5,
+  })), []);
 
-  // Pop sesi
-  const playPopSound = useCallback((pitch: number = 1) => {
+  const sesCal = useCallback((pitch: number) => {
     try {
-      if (!audioContextRef.current) {
-        audioContextRef.current = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
-      }
-      const ctx = audioContextRef.current;
-
-      // Bubble pop - yumuşak "plop" sesi
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-
+      const AC = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+      if (!sesBaglami.current) sesBaglami.current = new AC();
+      const ctx = sesBaglami.current;
+      if (ctx.state === 'suspended') ctx.resume().catch(() => { /* yok say */ });
+      const osc = ctx.createOscillator(); const gain = ctx.createGain();
       osc.type = 'sine';
       osc.frequency.setValueAtTime(400 * pitch, ctx.currentTime);
       osc.frequency.exponentialRampToValueAtTime(150 * pitch, ctx.currentTime + 0.1);
-
       gain.gain.setValueAtTime(0.2, ctx.currentTime);
       gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.15);
-
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-
-      osc.start();
-      osc.stop(ctx.currentTime + 0.15);
-
-      // İkinci harmonik - daha zengin ses
-      const osc2 = ctx.createOscillator();
-      const gain2 = ctx.createGain();
-      osc2.type = 'sine';
-      osc2.frequency.setValueAtTime(800 * pitch, ctx.currentTime);
-      osc2.frequency.exponentialRampToValueAtTime(300 * pitch, ctx.currentTime + 0.08);
-      gain2.gain.setValueAtTime(0.1, ctx.currentTime);
-      gain2.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
-      osc2.connect(gain2);
-      gain2.connect(ctx.destination);
-      osc2.start();
-      osc2.stop(ctx.currentTime + 0.1);
-    } catch (e) {
-      console.log('Audio error:', e);
-    }
+      osc.connect(gain); gain.connect(ctx.destination);
+      osc.start(); osc.stop(ctx.currentTime + 0.15);
+    } catch { /* ses yoksa oyun yine çalışır */ }
   }, []);
 
-  // Combo sesi
-  const playComboSound = useCallback(() => {
+  const seriSesi = useCallback(() => {
     try {
-      if (!audioContextRef.current) return;
-      const ctx = audioContextRef.current;
-
+      const ctx = sesBaglami.current; if (!ctx) return;
       [523, 659, 784].forEach((freq, i) => {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = 'sine';
-        osc.frequency.value = freq;
+        const osc = ctx.createOscillator(); const gain = ctx.createGain();
+        osc.type = 'sine'; osc.frequency.value = freq;
         gain.gain.setValueAtTime(0.1, ctx.currentTime + i * 0.08);
         gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + i * 0.08 + 0.15);
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        osc.start(ctx.currentTime + i * 0.08);
-        osc.stop(ctx.currentTime + i * 0.08 + 0.15);
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.start(ctx.currentTime + i * 0.08); osc.stop(ctx.currentTime + i * 0.08 + 0.15);
       });
-    } catch (e) {
-      console.log('Audio error:', e);
-    }
+    } catch { /* yok say */ }
   }, []);
 
-  // Yeni baloncuk oluştur
-  const createBubble = useCallback((): Bubble => {
-    const container = containerRef.current;
-    const width = container?.clientWidth || window.innerWidth;
-
+  const baloncukUret = (alttan: boolean): Bubble => {
+    const { w, h } = boyut.current;
+    const size = 44 + Math.random() * 50;
     return {
-      id: Date.now() + Math.random(),
-      x: 50 + Math.random() * (width - 100),
-      y: window.innerHeight + 50,
-      size: 40 + Math.random() * 50,
-      speed: 1 + Math.random() * 2,
-      wobble: 0,
-      wobbleSpeed: 0.02 + Math.random() * 0.03,
-      hue: Math.random() * 360,
-      opacity: 0.7 + Math.random() * 0.3,
-      popped: false,
-      popScale: 1
+      x: 40 + Math.random() * Math.max(10, w - 80),
+      y: alttan ? h + size : 90 + Math.random() * Math.max(10, h - 180),
+      size, speed: 55 + Math.random() * 90, // px/sn
+      wobble: Math.random() * 6, wobbleSpeed: 1.2 + Math.random() * 1.6,
+      hue: Math.floor(Math.random() * (360 / HUE_ADIMI)) * HUE_ADIMI, opacity: 0.75 + Math.random() * 0.25, popT: -1,
     };
-  }, []);
+  };
 
-  // Oyun başlat
-  useEffect(() => {
-    // İlk baloncuklar
-    const initialBubbles: Bubble[] = [];
-    for (let i = 0; i < 8; i++) {
-      const bubble = createBubble();
-      bubble.y = 100 + Math.random() * (window.innerHeight - 200);
-      initialBubbles.push(bubble);
+  const patlat = useCallback((b: Bubble) => {
+    b.popT = 0;
+    const adet = 8 + Math.floor(b.size / 12);
+    for (let i = 0; i < adet; i++) {
+      const a = (i / adet) * Math.PI * 2; const sp = 90 + Math.random() * 140;
+      parcaciklar.current.push({ x: b.x, y: b.y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - 90, size: 3 + Math.random() * 4, hue: b.hue, life: 1 });
     }
-    setBubbles(initialBubbles);
-    sayInstruction('Baloncuklara dokun ve patlat!', 500);
-  }, [createBubble]);
+    if (parcaciklar.current.length > MAKS_PARCACIK) parcaciklar.current.splice(0, parcaciklar.current.length - MAKS_PARCACIK);
+    seri.current += 1;
+    if (seri.current >= 3) seriSesi();
+    if (seriZamani.current) clearTimeout(seriZamani.current);
+    seriZamani.current = setTimeout(() => { seri.current = 0; }, 1500);
+    sesCal(1.5 - b.size / 150);
+  }, [seriSesi, sesCal]);
 
-  // Ana animasyon döngüsü
+  const dokun = useCallback((e: React.PointerEvent, genis: boolean) => {
+    const c = canvasRef.current; if (!c) return;
+    const r = c.getBoundingClientRect();
+    const x = e.clientX - r.left; const y = e.clientY - r.top;
+    for (const b of balonlar.current) {
+      if (b.popT >= 0) continue;
+      const dx = b.x - x; const dy = b.y - y;
+      if (Math.hypot(dx, dy) < b.size / 2 + (genis ? 10 : 0)) { patlat(b); if (genis) break; }
+    }
+  }, [patlat]);
+
   useEffect(() => {
-    let bubbleSpawnTimer = 0;
+    const canvas = canvasRef.current; if (!canvas) return;
+    const ctx = canvas.getContext('2d'); if (!ctx) return;
 
-    const animate = (timestamp: number) => {
-      const deltaTime = Math.min((timestamp - lastTimeRef.current) / 16.67, 3);
-      lastTimeRef.current = timestamp;
-      bubbleSpawnTimer += deltaTime;
+    const boyutla = () => {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2); // eski telefonda piksel sayısını sınırla
+      const w = window.innerWidth; const h = window.innerHeight;
+      boyut.current = { w, h, dpr };
+      canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+      canvas.style.width = `${w}px`; canvas.style.height = `${h}px`;
+    };
+    boyutla();
+    window.addEventListener('resize', boyutla);
 
-      // Yeni baloncuk ekle
-      if (bubbleSpawnTimer > 60) {
-        bubbleSpawnTimer = 0;
-        setBubbles((prev) => {
-          if (prev.filter((b) => !b.popped).length < 15) {
-            return [...prev, createBubble()];
-          }
-          return prev;
-        });
-      }
+    balonlar.current = Array.from({ length: 7 }, () => baloncukUret(false));
+    sayInstruction('Baloncuklara dokun ve patlat!', 500);
 
-      // Baloncukları güncelle
-      setBubbles((prev) =>
-        prev
-          .map((bubble) => {
-            if (bubble.popped) {
-              return {
-                ...bubble,
-                popScale: bubble.popScale + 0.15,
-                opacity: bubble.opacity - 0.08
-              };
-            }
-
-            const newWobble = bubble.wobble + bubble.wobbleSpeed * deltaTime;
-            return {
-              ...bubble,
-              y: bubble.y - bubble.speed * deltaTime,
-              x: bubble.x + Math.sin(newWobble) * 0.8,
-              wobble: newWobble
-            };
-          })
-          .filter((b) => b.y > -100 && b.opacity > 0)
-      );
-
-      // Parçacıkları güncelle
-      setParticles((prev) =>
-        prev
-          .map((p) => ({
-            ...p,
-            x: p.x + p.vx * deltaTime,
-            y: p.y + p.vy * deltaTime,
-            vy: p.vy + 0.1 * deltaTime,
-            life: p.life - 0.02 * deltaTime
-          }))
-          .filter((p) => p.life > 0)
-      );
-
-      animationRef.current = requestAnimationFrame(animate);
+    let son = performance.now(); let spawn = 0; let raf = 0; let durdu = false;
+    const spriteAl = (hue: number) => {
+      let s = spriteler.current.get(hue);
+      if (!s) { s = spriteYap(hue); spriteler.current.set(hue, s); }
+      return s;
     };
 
-    animationRef.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationRef.current);
-  }, [createBubble]);
+    const kare = (simdi: number) => {
+      if (durdu) return;
+      const dt = Math.min((simdi - son) / 1000, 0.05); son = simdi;
+      const { w, h, dpr } = boyut.current;
 
-  // Baloncuk patlatma
-  const popBubble = useCallback(
-    (bubbleId: number, x: number, y: number, hue: number, size: number) => {
-      // Baloncuğu patlat
-      setBubbles((prev) =>
-        prev.map((b) => (b.id === bubbleId ? { ...b, popped: true } : b))
-      );
+      spawn += dt;
+      if (spawn > 1.0) { spawn = 0; if (balonlar.current.filter((b) => b.popT < 0).length < MAKS_BALON) balonlar.current.push(baloncukUret(true)); }
 
-      // Parçacıklar oluştur
-      const newParticles: PopParticle[] = [];
-      const particleCount = 8 + Math.floor(size / 10);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, w, h);
 
-      for (let i = 0; i < particleCount; i++) {
-        const angle = (i / particleCount) * Math.PI * 2;
-        const speed = 2 + Math.random() * 3;
-        newParticles.push({
-          id: Date.now() + i,
-          x,
-          y,
-          vx: Math.cos(angle) * speed,
-          vy: Math.sin(angle) * speed - 2,
-          size: 4 + Math.random() * 6,
-          hue,
-          life: 1
-        });
+      // Baloncuklar
+      const kalan: Bubble[] = [];
+      for (const b of balonlar.current) {
+        if (b.popT >= 0) { b.popT += dt / 0.18; if (b.popT >= 1) continue; }
+        else { b.wobble += b.wobbleSpeed * dt; b.y -= b.speed * dt; b.x += Math.sin(b.wobble) * 28 * dt; if (b.y < -b.size) continue; }
+        kalan.push(b);
+        const olcek = b.popT >= 0 ? 1 + b.popT * 0.6 : 1;
+        const opak = b.popT >= 0 ? b.opacity * (1 - b.popT) : b.opacity;
+        const d = b.size * olcek;
+        ctx.globalAlpha = Math.max(0, opak);
+        ctx.drawImage(spriteAl(b.hue), b.x - d / 2, b.y - d / 2, d, d);
       }
-      setParticles((prev) => [...prev, ...newParticles].slice(-100));
+      balonlar.current = kalan;
 
-      // Seri sesi (görsel gösterge yok)
-      setCombo((prev) => {
-        const newCombo = prev + 1;
-        if (newCombo >= 3) {
-          playComboSound();
-        }
-        return newCombo;
-      });
+      // Parçacıklar (düz daire; gölge yok)
+      const pk: Particle[] = [];
+      for (const p of parcaciklar.current) {
+        p.x += p.vx * dt; p.y += p.vy * dt; p.vy += 260 * dt; p.life -= 1.4 * dt;
+        if (p.life <= 0) continue;
+        pk.push(p);
+        ctx.globalAlpha = Math.max(0, p.life);
+        ctx.fillStyle = `hsl(${p.hue}, 70%, 65%)`;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); ctx.fill();
+      }
+      parcaciklar.current = pk;
+      ctx.globalAlpha = 1;
+      raf = requestAnimationFrame(kare);
+    };
+    raf = requestAnimationFrame(kare);
 
-      // Combo reset timer
-      setTimeout(() => {
-        setCombo(0);
-      }, 1500);
+    const gorunurluk = () => { if (document.hidden) { durdu = true; cancelAnimationFrame(raf); } else if (durdu) { durdu = false; son = performance.now(); raf = requestAnimationFrame(kare); } };
+    document.addEventListener('visibilitychange', gorunurluk);
 
-      // Pop sesi (pitch boyuta göre)
-      playPopSound(1.5 - size / 150);
-    },
-    [playPopSound, playComboSound]
-  );
-
-  // Dokunma/tıklama
-  const handlePointerDown = useCallback(
-    (e: React.PointerEvent) => {
-      const rect = containerRef.current?.getBoundingClientRect();
-      if (!rect) return;
-
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      // En yakın baloncuğu bul
-      setBubbles((prev) => {
-        const clickedBubble = prev.find((b) => {
-          if (b.popped) return false;
-          const dx = b.x - x;
-          const dy = b.y - y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          return dist < b.size / 2 + 10;
-        });
-
-        if (clickedBubble) {
-          popBubble(clickedBubble.id, clickedBubble.x, clickedBubble.y, clickedBubble.hue, clickedBubble.size);
-        }
-
-        return prev;
-      });
-    },
-    [popBubble]
-  );
-
-  // Sürükleme ile patlat
-  const handlePointerMove = useCallback(
-    (e: React.PointerEvent) => {
-      if (e.buttons === 0) return;
-
-      const rect = containerRef.current?.getBoundingClientRect();
-      if (!rect) return;
-
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      setBubbles((prev) => {
-        const touchedBubble = prev.find((b) => {
-          if (b.popped) return false;
-          const dx = b.x - x;
-          const dy = b.y - y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          return dist < b.size / 2;
-        });
-
-        if (touchedBubble) {
-          popBubble(touchedBubble.id, touchedBubble.x, touchedBubble.y, touchedBubble.hue, touchedBubble.size);
-        }
-
-        return prev;
-      });
-    },
-    [popBubble]
-  );
+    return () => {
+      durdu = true; cancelAnimationFrame(raf);
+      window.removeEventListener('resize', boyutla);
+      document.removeEventListener('visibilitychange', gorunurluk);
+      if (seriZamani.current) clearTimeout(seriZamani.current);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
-    <div className="fixed inset-0 overflow-hidden select-none" style={{ touchAction: 'none' }}>
-      {/* Arka plan - gökkuşağı gradyan */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `
-            linear-gradient(180deg, 
-              #1a1a2e 0%, 
-              #16213e 30%, 
-              #0f3460 60%, 
-              #1a1a2e 100%)
-          `
-        }}
-      />
-
-      {/* Yıldızlar */}
+    <div className="fixed inset-0 overflow-hidden select-none" style={{ touchAction: 'none', background: 'linear-gradient(180deg, #1a1a2e 0%, #16213e 30%, #0f3460 60%, #1a1a2e 100%)' }}>
+      {/* Yıldızlar: sabit, animasyonsuz */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {[...Array(30)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              width: `${1 + Math.random() * 2}px`,
-              height: `${1 + Math.random() * 2}px`,
-              backgroundColor: 'white',
-              opacity: 0.3 + Math.random() * 0.5,
-              animation: `twinkle ${2 + Math.random() * 3}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 2}s`
-            }}
-          />
+        {yildizlar.map((s, i) => (
+          <div key={i} className="absolute rounded-full bg-white" style={{ left: `${s.left}%`, top: `${s.top}%`, width: s.s, height: s.s, opacity: s.o }} />
         ))}
       </div>
 
+      {/* Oyun alanı */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 cursor-pointer"
+        onPointerDown={(e) => dokun(e, true)}
+        onPointerMove={(e) => { if (e.buttons !== 0) dokun(e, false); }}
+      />
+
       {/* Başlık */}
-      <div className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between p-3 sm:p-4">
-        <button
-          onClick={onBack}
-          className="p-3 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur shadow-lg transition-all"
-        >
+      <div className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between p-3 sm:p-4 pointer-events-none">
+        <button onClick={onBack} className="pointer-events-auto p-3 rounded-full bg-white/20 hover:bg-white/30 shadow-lg transition-all" aria-label={t('common.back', 'Geri')}>
           <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-
-        <h1 className="text-xl sm:text-2xl font-bold text-white drop-shadow-lg">
-          🫧 {t('miniGames.bubblePop.title', 'Baloncuk Patlatma')}
-        </h1>
-
-        {/* Başlık ortada kalsın diye boş yer tutucu */}
+        <h1 className="text-xl sm:text-2xl font-bold text-white drop-shadow-lg">🫧 {t('miniGames.bubblePop.title', 'Baloncuk Patlatma')}</h1>
         <div className="w-12" />
       </div>
 
-      {/* Oyun alanı */}
-      <div
-        ref={containerRef}
-        className="absolute inset-0 cursor-pointer"
-        onPointerDown={handlePointerDown}
-        onPointerMove={handlePointerMove}
-      >
-        {/* Baloncuklar */}
-        {bubbles.map((bubble) => (
-          <div
-            key={bubble.id}
-            className="absolute pointer-events-none"
-            style={{
-              left: bubble.x,
-              top: bubble.y,
-              width: bubble.size,
-              height: bubble.size,
-              transform: `translate(-50%, -50%) scale(${bubble.popScale})`,
-              opacity: bubble.opacity,
-              transition: bubble.popped ? 'transform 0.1s, opacity 0.1s' : 'none'
-            }}
-          >
-            {/* Baloncuk gövdesi */}
-            <div
-              className="w-full h-full rounded-full"
-              style={{
-                background: `
-                  radial-gradient(circle at 30% 30%, 
-                    hsla(${bubble.hue}, 70%, 80%, 0.9) 0%,
-                    hsla(${bubble.hue}, 60%, 60%, 0.7) 40%,
-                    hsla(${bubble.hue}, 50%, 40%, 0.5) 100%)
-                `,
-                boxShadow: `
-                  inset -8px -8px 20px hsla(${bubble.hue}, 50%, 30%, 0.3),
-                  inset 5px 5px 15px hsla(${bubble.hue}, 80%, 90%, 0.5),
-                  0 4px 15px hsla(${bubble.hue}, 60%, 50%, 0.3)
-                `,
-                border: `1px solid hsla(${bubble.hue}, 60%, 70%, 0.3)`
-              }}
-            >
-              {/* Parlak nokta */}
-              <div
-                className="absolute rounded-full bg-white/60"
-                style={{
-                  width: bubble.size * 0.25,
-                  height: bubble.size * 0.2,
-                  left: '20%',
-                  top: '15%',
-                  filter: 'blur(2px)'
-                }}
-              />
-
-              {/* İkinci parlak nokta */}
-              <div
-                className="absolute rounded-full bg-white/30"
-                style={{
-                  width: bubble.size * 0.1,
-                  height: bubble.size * 0.1,
-                  left: '55%',
-                  top: '60%',
-                  filter: 'blur(1px)'
-                }}
-              />
-            </div>
-          </div>
-        ))}
-
-        {/* Pop parçacıkları */}
-        {particles.map((p) => (
-          <div
-            key={p.id}
-            className="absolute rounded-full pointer-events-none"
-            style={{
-              left: p.x,
-              top: p.y,
-              width: p.size,
-              height: p.size,
-              backgroundColor: `hsla(${p.hue}, 70%, 60%, ${p.life})`,
-              transform: 'translate(-50%, -50%)',
-              boxShadow: `0 0 ${p.size}px hsla(${p.hue}, 70%, 60%, ${p.life * 0.5})`
-            }}
-          />
-        ))}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-40 pointer-events-none">
+        <p className="text-white/60 text-sm text-center">👆 {t('miniGames.bubblePop.hint', 'Baloncuklara dokun veya sürükle!')}</p>
       </div>
-
-      {/* Alt bilgi */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-40">
-        <p className="text-white/60 text-sm text-center">
-          👆 {t('miniGames.bubblePop.hint', 'Baloncuklara dokun veya sürükle!')}
-        </p>
-      </div>
-
-      {/* Animasyon stilleri */}
-      <style>{`
-        @keyframes twinkle {
-          0%, 100% { opacity: 0.3; transform: scale(1); }
-          50% { opacity: 0.8; transform: scale(1.2); }
-        }
-      `}</style>
     </div>
   );
 };
