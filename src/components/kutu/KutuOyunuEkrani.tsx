@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { OyunCercevesi, OyunSonu } from '../oyunKiti/OyunKiti.tsx';
-import KutuIcDis from './KutuIcDis.tsx';
+import KonumSahnesi, { TUM_HEDEFLER } from './KonumSahnesi.tsx';
 import { etkinlikSay } from '../../services/sayac.ts';
 
-// Kutu Oyunu (Kaan, 2026-10-13): İç/Dış kavram etkinliğinden AYRI, çizimli kutu sahnesi.
-// Kendi tur sayacı var (6 tur); sonda "Tekrar / Çık". Kavram istatistiklerine yazılmaz.
-const TUR = 6;
+// Kutu Oyunu (Kaan, 2026-10-13): İç/Dış kavram etkinliğinden AYRI, çizimli sahneler.
+// Kutu (içine/dışına), masa (üstüne/altına/soluna/sağına), ağaç (önüne/arkasına), iki kutu (arasına).
+// Kendi tur sayacı var (8 tur); sonda "Tekrar / Çık". Kavram istatistiklerine yazılmaz.
+const TUR = 8;
 
 const KutuOyunuEkrani: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   const [tur, setTur] = useState(1);
@@ -20,9 +21,10 @@ const KutuOyunuEkrani: React.FC<{ onBack: () => void }> = ({ onBack }) => {
     );
   }
   return (
-    <KutuIcDis
+    <KonumSahnesi
       key={`${oturum}-${tur}`}
-      baslik="Kutu Oyunu"
+      baslik="Kutu Oyunu" emoji="📦"
+      havuz={TUM_HEDEFLER}
       currentCard={tur}
       totalCards={TUR}
       onBack={onBack}

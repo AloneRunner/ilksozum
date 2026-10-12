@@ -146,3 +146,9 @@ Bekleyen sesler (eşinin dinlemesiyle; Kaan "üret" deyince): ça (eşi bozuk de
 - Tüm sesler topluca 32 kbps'ye SIKIŞTIRILMAYACAK. Sayaç istatistikleri birikince karar verilecek.
 - Büyük ihtimalle yalnız oyunlardaki (mini oyun/efekt) sesler küçültülür; Gökçe kayıtlarına dokunulmaz.
 - Play AAB: 9.1.5 (97) indirme boyutu 201 MB (uyarı var, hata yok). Ses klasörü ~100+ MB; yeni 134 + 6 + 339 cümle bir sonraki pakette.
+
+## Konum sahneleri (Kaan, 2026-10-13)
+- Kutu Oyunu (Kavramlar › Konum) ve Nesneyi Yerleştir (Düşünme) aynı motoru kullanır: src/components/kutu/KonumSahnesi.tsx.
+- Sahneler: kutu (içine/dışına), masa (üstüne/altına/soluna/sağına), ağaç (önüne/arkasına), iki kutu (arasına). Yeni yer eklemek için HEDEFLER + SAHNE_HEDEFLERI + çizim.
+- İç/Dış kavram etkinliği (fotoğraflı) olduğu gibi duruyor. Eski DragAndDropPositioningScreen.tsx artık kullanılmıyor (silinmedi).
+- Ses: yeni cümleler için paket üretilir (tools/ses/paketler/konum-sahnesi.json örneği).
