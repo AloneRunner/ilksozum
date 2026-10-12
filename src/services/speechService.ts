@@ -155,7 +155,9 @@ function kayitDurdur() {
 /** Metnin tamamı ya da cümlelerinin hepsi kayıtlıysa dosya listesi ("Aferin! Bu kalem kalın." → 2 kayıt). */
 const kayitBul = (metin: string): string | undefined => {
     const k = kayitAnahtari(metin);
-    return SES_KAYITLARI[k] || SES_KAYITLARI[k.replace(/[.!?,]+$/, '')];
+    const sade = k.replace(/[.!?,]+$/, '');
+    // Noktasız metin ("G harfi") kayıtta noktalı anahtarla ("g harfi.") durabilir
+    return SES_KAYITLARI[k] || SES_KAYITLARI[sade] || SES_KAYITLARI[`${sade}.`];
 };
 /** Metnin Gökçe kaydı var mı (İfade Tahtası cümlesi gibi parça parça okumalar için). */
 export const kayitVarMi = (metin: string): boolean => kayitliSesAcik && !!kayitBul(metin);
