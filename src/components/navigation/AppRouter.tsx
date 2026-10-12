@@ -42,7 +42,7 @@ const BasaraLessonMapScreen = lazy(() => import('../basara/BasaraLessonMapScreen
 const BasaraLessonScreen = lazy(() => import('../basara/BasaraLessonScreen.tsx'));
 const LearningCard = lazy(() => import('../LearningCard.tsx'));
 const DragAndDropCountingScreen = lazy(() => import('../DragAndDropCountingScreen.tsx'));
-const DragAndDropPositioningScreen = lazy(() => import('../DragAndDropPositioningScreen.tsx'));
+const NesneYerlestir = lazy(() => import('../kutu/NesneYerlestir.tsx'));
 const LineTracingScreen = lazy(() => import('../LineTracingScreen.tsx'));
 // Eski Şekil Boyama / Kurallı Boyama ekranları yedekte; 2026-10-08'den beri ikisi de BoyamaEkrani
 const BoyamaEkrani = lazy(() => import('../boyama/BoyamaEkrani.tsx'));
@@ -334,6 +334,20 @@ export const AppRouter = () => {
         const onBackToFineMotor = () => geriDon(ScreenState.MainMenu);
         const onBackToLetterSelection = () => setScreenState(ScreenState.LetterSelection);
 
+        // İçinde/Dışında: kutu sahnesi (SVG, sürükle-bırak) ile fotoğraflı soru dönüşümlü; çift turlar sahne, tek turlar fotoğraf
+
+        if (activityType === ActivityType.InsideOutside && currentIndex % 2 === 0) {
+
+            return <>
+
+                {renderProgramModeOverlay()}
+
+                <KutuIcDis key={currentIndex} currentCard={commonProps.currentCard} totalCards={commonProps.totalCards} onAdvance={(correct) => ctx.activity.handleAdvance(correct)} onBack={onBackToConcept} />
+
+            </>;
+
+        }
+
         switch (activityType) {
             case ActivityType.Syllabification:
                 return <>
@@ -409,7 +423,7 @@ export const AppRouter = () => {
             case ActivityType.DragAndDropPositioning:
                 return <>
                     {renderProgramModeOverlay()}
-                    <DragAndDropPositioningScreen roundData={currentData} {...commonProps} onBack={onBackToReasoning} />
+                    <NesneYerlestir key={currentIndex} currentCard={commonProps.currentCard} totalCards={commonProps.totalCards} onAdvance={(correct) => ctx.activity.handleAdvance(correct)} onBack={onBackToReasoning} />
                 </>;
             case ActivityType.LineTracing:
                 return <>
@@ -441,11 +455,6 @@ export const AppRouter = () => {
                 return <>
                     {renderProgramModeOverlay()}
                     <ColorRecognitionScreen roundData={currentData} onAdvance={(correct) => ctx.activity.handleAdvance(correct)} onBack={onBackToConcept} isAutoSpeakEnabled={ctx.settings.isAutoSpeakEnabled} isWordLabelVisible={ctx.settings.isWordLabelVisible} isFastTransitionEnabled={ctx.settings.isFastTransitionEnabled} />
-                </>;
-            case ActivityType.InsideOutside:
-                return <>
-                    {renderProgramModeOverlay()}
-                    <KutuIcDis key={currentIndex} currentCard={commonProps.currentCard} totalCards={commonProps.totalCards} onAdvance={(correct) => ctx.activity.handleAdvance(correct)} onBack={onBackToConcept} />
                 </>;
             case ActivityType.WhatsMissing:
                 return <>

@@ -7,8 +7,8 @@ import { speak } from '../../services/speechService.ts';
 // Kurallar (oyun kiti ile aynı): puan/süre/can yok, yanlışta ceza yok (nesne yerine döner), 2 yanlıştan sonra ipucu parlar.
 // Hafif: CSS dönüşümü + SVG; canvas/3D yok (eski telefonda akıcı).
 
-type Nesne = 'top' | 'elma' | 'ayi' | 'araba' | 'yildiz';
-const NESNELER: { id: Nesne; ad: string; belirtme: string }[] = [
+export type Nesne = 'top' | 'elma' | 'ayi' | 'araba' | 'yildiz';
+export const NESNELER: { id: Nesne; ad: string; belirtme: string }[] = [
   { id: 'top', ad: 'Top', belirtme: 'Topu' },
   { id: 'elma', ad: 'Elma', belirtme: 'Elmayı' },
   { id: 'ayi', ad: 'Ayı', belirtme: 'Ayıyı' },
@@ -29,7 +29,7 @@ const px = (v: number) => `${(v / W) * 100}%`;               // x konumu / geni�
 const py = (v: number) => `${((v - Y0) / H) * 100}%`;          // y konumu
 const ph = (v: number) => `${(v / H) * 100}%`;                  // yükseklik
 
-const NesneCizimi: React.FC<{ tur: Nesne }> = ({ tur }) => {
+export const NesneCizimi: React.FC<{ tur: Nesne }> = ({ tur }) => {
   switch (tur) {
     case 'top': return (
       <svg viewBox="0 0 100 100" className="w-full h-full">
@@ -124,7 +124,7 @@ const KutuIcDis: React.FC<Props> = ({ currentCard, totalCards, onAdvance, onBack
   // Tur ayarı: ilk iki tur hep "içine"; sonra karışık
   const { nesne, mod } = useMemo(() => {
     const n = NESNELER[Math.floor(Math.random() * NESNELER.length)];
-    const m: 'icine' | 'disina' = currentCard <= 2 ? 'icine' : Math.random() < 0.5 ? 'icine' : 'disina';
+    const m: 'icine' | 'disina' = currentCard <= 3 ? 'icine' : Math.random() < 0.5 ? 'icine' : 'disina';
     return { nesne: n, mod: m };
   }, [currentCard]);
 
