@@ -25,6 +25,7 @@ const StoryScreen = lazy(() => import('../StoryScreen.tsx'));
 const ConceptLearningScreen = lazy(() => import('../ConceptLearningScreen.tsx'));
 const SettingsScreen = lazy(() => import('../SettingsScreen.tsx'));
 const ConceptChoiceScreen = lazy(() => import('../ConceptChoiceScreen.tsx'));
+const KutuIcDis = lazy(() => import('../kutu/KutuIcDis.tsx'));
 const ConceptActivitiesMenuScreen = lazy(() => import('../ConceptActivitiesMenuScreen.tsx'));
 const SudokuScreen = lazy(() => import('../SudokuScreen.tsx'));
 const PatternCompletionScreen = lazy(() => import('../PatternCompletionScreen.tsx'));
@@ -440,6 +441,11 @@ export const AppRouter = () => {
                 return <>
                     {renderProgramModeOverlay()}
                     <ColorRecognitionScreen roundData={currentData} onAdvance={(correct) => ctx.activity.handleAdvance(correct)} onBack={onBackToConcept} isAutoSpeakEnabled={ctx.settings.isAutoSpeakEnabled} isWordLabelVisible={ctx.settings.isWordLabelVisible} isFastTransitionEnabled={ctx.settings.isFastTransitionEnabled} />
+                </>;
+            case ActivityType.InsideOutside:
+                return <>
+                    {renderProgramModeOverlay()}
+                    <KutuIcDis key={currentIndex} currentCard={commonProps.currentCard} totalCards={commonProps.totalCards} onAdvance={(correct) => ctx.activity.handleAdvance(correct)} onBack={onBackToConcept} />
                 </>;
             case ActivityType.WhatsMissing:
                 return <>
