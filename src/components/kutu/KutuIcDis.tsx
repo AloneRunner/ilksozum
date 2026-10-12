@@ -105,9 +105,9 @@ const Kutu: React.FC<{ icerik?: Nesne | null; parla?: boolean }> = ({ icerik, pa
   </svg>
 );
 
-interface Props { currentCard: number; totalCards: number; onAdvance: (correct: boolean) => void; onBack: () => void; }
+interface Props { currentCard: number; totalCards: number; onAdvance: (correct: boolean) => void; onBack: () => void; baslik?: string; }
 
-const KutuIcDis: React.FC<Props> = ({ currentCard, totalCards, onAdvance, onBack }) => {
+const KutuIcDis: React.FC<Props> = ({ currentCard, totalCards, onAdvance, onBack, baslik = 'İçinde / Dışında' }) => {
   const sahneRef = useRef<HTMLDivElement>(null);
   const kutuRef = useRef<HTMLDivElement>(null);
   const nesneRef = useRef<HTMLDivElement>(null);
@@ -182,7 +182,7 @@ const KutuIcDis: React.FC<Props> = ({ currentCard, totalCards, onAdvance, onBack
   const disaridaGoster = !icindeBitti; // iç durumda nesneyi SVG çizer
 
   return (
-    <OyunCercevesi baslik="İçinde / Dışında" emoji="📦" onBack={onBack} adim={currentCard} toplamAdim={totalCards} yonerge={yonerge}>
+    <OyunCercevesi baslik={baslik} emoji="📦" onBack={onBack} adim={currentCard} toplamAdim={totalCards} yonerge={yonerge}>
       <div ref={kapRef} className="absolute inset-0 flex items-center justify-center">
         <div ref={sahneRef} className="relative" style={{ width: sahneBoyu.w, height: sahneBoyu.h }}>
           <Kutu icerik={icindeBitti ? nesne.id : null} parla={hata >= 2 && mod === 'icine' && !bitti} />

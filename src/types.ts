@@ -66,6 +66,7 @@ export enum ScreenState {
   SkillMenu,          // Beceri menüsü (Harfler, Sayılar, Düşünme...)
   AgzimiIzle,         // Ağzımı İzle: konuşan yüz, ses/hece/kelime (sona eklendi; değerler kaymasın)
   TuvaletEgitimi,     // Tuvalet Zamanı: adımlar, öykü, ödül, hatırlatıcı, kayıt (sona eklendi)
+  KutuOyunu,          // Kutu Oyunu: İç/Dış kavram etkinliğinden ayrı, çizimli sürükle-bırak sahnesi (sona eklendi)
 }
 
 export enum Tab {
