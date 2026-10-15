@@ -1,12 +1,15 @@
 import React from 'react';
-import KonumSahnesi, { MASA_HEDEFLERI } from './KonumSahnesi.tsx';
+import KonumSahnesi, { TUM_HEDEFLER } from './KonumSahnesi.tsx';
 
-// Nesneyi Yerleştir (Kaan, 2026-10-13): fotoğraf/ızgara yerine çizimli masa; nesne masanın üstüne / altına / soluna / sağına konur.
-// Sahne motoru KonumSahnesi'nde (Kutu Oyunu ile ortak); burada yalnız masa yerleri kullanılır.
+// Nesneyi Yerleştir (Kaan, 2026-10-13): fotoğraf/ızgara yerine çizimli masa; nesne söylenen yere konur.
+// Sahne motoru KonumSahnesi'nde (Kutu Oyunu ile ortak).
+// Masa (üstüne/altına/soluna/sağına), ağaç (önüne/arkasına) ve iki kutu (arasına); kutu içi/dışı Kutu Oyunu'nda
+const YERLER = TUM_HEDEFLER.filter((h) => !h.startsWith('kutu-'));
+
 interface Props { currentCard: number; totalCards: number; onAdvance: (correct: boolean) => void; onBack: () => void; }
 
 const NesneYerlestir: React.FC<Props> = (p) => (
-  <KonumSahnesi {...p} baslik="Nesneyi Yerleştir" emoji="📍" havuz={MASA_HEDEFLERI} />
+  <KonumSahnesi {...p} baslik="Nesneyi Yerleştir" emoji="📍" havuz={YERLER} />
 );
 
 export default NesneYerlestir;

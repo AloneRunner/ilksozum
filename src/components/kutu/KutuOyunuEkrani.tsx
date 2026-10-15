@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { OyunCercevesi, OyunSonu } from '../oyunKiti/OyunKiti.tsx';
 import KonumSahnesi, { TUM_HEDEFLER } from './KonumSahnesi.tsx';
 import { etkinlikSay } from '../../services/sayac.ts';
@@ -12,6 +12,7 @@ const KutuOyunuEkrani: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   const [tur, setTur] = useState(1);
   const [bitti, setBitti] = useState(false);
   const [oturum, setOturum] = useState(0);
+  useEffect(() => { etkinlikSay('Kutu Oyunu', 'acildi'); }, [oturum]);
 
   if (bitti) {
     return (

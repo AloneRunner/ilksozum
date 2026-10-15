@@ -1509,7 +1509,8 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.FiveWOneH]: fiveWOneHData,
     [ActivityType.SequencingStories]: sequencingStoryData,
     [ActivityType.PatternCompletion]: patternCompletionData,
-    [ActivityType.DragAndDropCounting]: dragAndDropCountingData,
+    // Nesneleri Taşı: çizimli TabagaKoy turları kendisi üretir; 8 tur için veri çoğaltılır (eskiden 4)
+    [ActivityType.DragAndDropCounting]: Array.from({ length: 8 }, (_, i) => ({ ...dragAndDropCountingData[i % dragAndDropCountingData.length], id: (dragAndDropCountingData[i % dragAndDropCountingData.length] as any).id + 1000 * Math.floor(i / dragAndDropCountingData.length) })) as typeof dragAndDropCountingData,
     // Nesneyi Yerleştir: çizimli masa sahnesi turları kendisi üretir; 8 tur için veri çoğaltılır (eskiden 5)
     [ActivityType.DragAndDropPositioning]: Array.from({ length: 8 }, (_, i) => ({ ...dragAndDropPositioningData[i % dragAndDropPositioningData.length], id: (dragAndDropPositioningData[i % dragAndDropPositioningData.length] as any).id + 1000 * Math.floor(i / dragAndDropPositioningData.length) })) as typeof dragAndDropPositioningData,
     [ActivityType.WhoseIsThis]: YENI_SORULAR_AKTIF ? ownershipDataYeni : ownershipData,

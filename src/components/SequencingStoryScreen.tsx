@@ -68,6 +68,15 @@ const SequencingStoryScreen: React.FC<SequencingStoryScreenProps> = ({
         speak(item.word);
     };
 
+    // Sayaç verisi (2026-10-15): açılan 10 oturumun hiçbiri bitmedi; çocuklar 'Kontrol' düğmesini bulamıyor olabilir.
+    // Son kutu doldurulunca sıra kendiliğinden kontrol edilir.
+    useEffect(() => {
+        if (isCorrect !== null || userOrder.length === 0 || userOrder.length !== roundData.items.length) return;
+        const z = setTimeout(() => { void checkOrder(); }, 700);
+        return () => clearTimeout(z);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [userOrder, isCorrect]);
+
     const handleUndo = () => {
         if (userOrder.length === 0 || isCorrect !== null) return;
         const lastItem = userOrder[userOrder.length - 1];

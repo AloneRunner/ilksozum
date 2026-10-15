@@ -41,8 +41,8 @@ const SequencingStoryScreen = lazy(() => import('../SequencingStoryScreen.tsx'))
 const BasaraLessonMapScreen = lazy(() => import('../basara/BasaraLessonMapScreen.tsx'));
 const BasaraLessonScreen = lazy(() => import('../basara/BasaraLessonScreen.tsx'));
 const LearningCard = lazy(() => import('../LearningCard.tsx'));
-const DragAndDropCountingScreen = lazy(() => import('../DragAndDropCountingScreen.tsx'));
 const NesneYerlestir = lazy(() => import('../kutu/NesneYerlestir.tsx'));
+const TabagaKoy = lazy(() => import('../kutu/TabagaKoy.tsx'));
 const LineTracingScreen = lazy(() => import('../LineTracingScreen.tsx'));
 // Eski Şekil Boyama / Kurallı Boyama ekranları yedekte; 2026-10-08'den beri ikisi de BoyamaEkrani
 const BoyamaEkrani = lazy(() => import('../boyama/BoyamaEkrani.tsx'));
@@ -404,7 +404,7 @@ export const AppRouter = () => {
             case ActivityType.DragAndDropCounting:
                 return <>
                     {renderProgramModeOverlay()}
-                    <DragAndDropCountingScreen roundData={currentData} {...commonProps} onBack={onBackToReasoning} isAutoSpeakEnabled={ctx.settings.isAutoSpeakEnabled} isWordLabelVisible={ctx.settings.isWordLabelVisible} onToggleWordLabel={ctx.settings.handleToggleWordLabel} />
+                    <TabagaKoy key={currentIndex} currentCard={commonProps.currentCard} totalCards={commonProps.totalCards} onAdvance={(correct) => ctx.activity.handleAdvance(correct)} onBack={onBackToReasoning} />
                 </>;
             case ActivityType.DragAndDropPositioning:
                 return <>
