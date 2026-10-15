@@ -74,6 +74,7 @@ const getActivityName = (activityType: ActivityType | string): string => {
     if (activityType === ActivityType.BesideOpposite) return t('concepts.activities.besideOpposite', 'Yanında / Karşısında');
     if (activityType === ActivityType.InFrontOfBehind) return t('concepts.activities.inFrontOfBehind', 'Önünde / Arkada');
     if (activityType === ActivityType.InsideOutside) return t('concepts.activities.insideOutside', 'İçinde / Dışında');
+    if (activityType === ActivityType.KutuOyunu) return t('concepts.activities.kutuOyunu', 'Kutu Oyunu');
     if (activityType === ActivityType.Between) return t('concepts.activities.between', 'Arasında');
     if (activityType === ActivityType.LeftRight) return t('concepts.activities.leftRight', 'Sağ / Sol');
     if (activityType === ActivityType.NearFar) return t('concepts.activities.nearFar', 'Yakın / Uzak');

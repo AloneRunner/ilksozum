@@ -25,7 +25,7 @@ const StoryScreen = lazy(() => import('../StoryScreen.tsx'));
 const ConceptLearningScreen = lazy(() => import('../ConceptLearningScreen.tsx'));
 const SettingsScreen = lazy(() => import('../SettingsScreen.tsx'));
 const ConceptChoiceScreen = lazy(() => import('../ConceptChoiceScreen.tsx'));
-const KutuOyunuEkrani = lazy(() => import('../kutu/KutuOyunuEkrani.tsx'));
+const KutuOyunuTur = lazy(() => import('../kutu/KutuOyunuTur.tsx'));
 const ConceptActivitiesMenuScreen = lazy(() => import('../ConceptActivitiesMenuScreen.tsx'));
 const SudokuScreen = lazy(() => import('../SudokuScreen.tsx'));
 const PatternCompletionScreen = lazy(() => import('../PatternCompletionScreen.tsx'));
@@ -413,6 +413,11 @@ export const AppRouter = () => {
                     {renderProgramModeOverlay()}
                     <TabagaKoy key={currentIndex} currentCard={commonProps.currentCard} totalCards={commonProps.totalCards} onAdvance={(correct) => ctx.activity.handleAdvance(correct)} onBack={onBackToReasoning} />
                 </>;
+            case ActivityType.KutuOyunu:
+                return <>
+                    {renderProgramModeOverlay()}
+                    <KutuOyunuTur key={currentIndex} currentCard={commonProps.currentCard} totalCards={commonProps.totalCards} onAdvance={(correct) => ctx.activity.handleAdvance(correct)} onBack={onBackToConcept} />
+                </>;
             case ActivityType.DragAndDropPositioning:
                 return <>
                     {renderProgramModeOverlay()}
@@ -577,7 +582,6 @@ export const AppRouter = () => {
         // Ses Taklit: kartlar + şarkılar tek ekranda (videolar kaldırıldı, yedek/seskart)
         case ScreenState.SoundImitationMenu: return <SesTaklitEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.AgzimiIzle: return <AgzimiIzleEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
-        case ScreenState.KutuOyunu: return <KutuOyunuEkrani onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} />;
         case ScreenState.TuvaletEgitimi: return <TuvaletEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.LetterSelection: {
             return <LetterSelectionScreen onSelectLetter={ctx.activity.handleStartActivityWithLetter} onBack={() => geriDon(ScreenState.MainMenu)} activityType={ctx.activity.selectedActivityForLetter} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} />;
@@ -764,7 +768,6 @@ export const AppRouter = () => {
 
         case ScreenState.ConceptActivitiesMenu: return <ConceptActivitiesMenuScreen onSelectActivity={async (act) => {
             setBeceriDonus(false);
-            if (String(act) === 'KutuOyunu') { setScreenState(ScreenState.KutuOyunu); return; }
             await etkinlikBaslat(act, ScreenState.ConceptActivitiesMenu);
         }} onBack={handleGoToMenu} activeCategory={ctx.navigation.activeConceptTab} onSelectCategory={ctx.navigation.setActiveConceptTab} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} enabledActivities={ctx.profile.enabledActivitiesSet} />;
 

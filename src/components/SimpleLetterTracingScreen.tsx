@@ -19,10 +19,10 @@ const VIBRATE = (ms: number) => titret(ms >= 25 ? 'orta' : 'hafif', 80);
 // Kontrol: harfin üstünde bir nokta ağı var. Çocuk harfin çoğunu boyamalı (KAPLAMA)
 // ve çizdiğinin çoğu harfin üstünde kalmalı (UZERINDE). Her yeri karalamak kabul edilmez.
 const AG_ADIM = 7;          // harf noktaları arası (CSS px)
-const BOYA_YARICAP = 24;    // parmak izinin harfi boyadığı yarıçap
-const UZAK_SINIR = 30;      // bundan uzak çizim "harfin dışında" sayılır
-const KAPLAMA_HEDEF = 0.8;
-const UZERINDE_HEDEF = 0.6;
+const BOYA_YARICAP = 28;    // parmak izinin harfi boyadığı yarıçap
+const UZAK_SINIR = 36;      // bundan uzak çizim "harfin dışında" sayılır
+const KAPLAMA_HEDEF = 0.7;  // sayaç (2026-10-15): açılan 10 oturumdan 2si bitti; eşikler gevşetildi (0.8 → 0.7)
+const UZERINDE_HEDEF = 0.45; // (0.6 → 0.45)
 
 const SimpleLetterTracingScreen: React.FC<SimpleLetterTracingScreenProps> = ({
   letter,

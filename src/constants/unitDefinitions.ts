@@ -35,6 +35,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
     activities: [
       ActivityType.BigSmall,
       ActivityType.InsideOutside,
+      ActivityType.KutuOyunu,
       ActivityType.OnUnder,
       ActivityType.ShapeColoring,
       'vucudun_bolumleri',

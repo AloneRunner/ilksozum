@@ -158,6 +158,7 @@ const ActivityManagementScreen: React.FC<ActivityManagementScreenProps> = ({
         case ActivityType.BelowAbove: return t('concepts.activities.belowAbove', fallback);
         case ActivityType.InFrontOfBehind: return t('concepts.activities.inFrontOfBehind', fallback);
         case ActivityType.InsideOutside: return t('concepts.activities.insideOutside', fallback);
+        case ActivityType.KutuOyunu: return t('concepts.activities.kutuOyunu', 'Kutu Oyunu');
         case ActivityType.BesideOpposite: return t('concepts.activities.besideOpposite', fallback);
         case ActivityType.Between: return t('concepts.activities.between', fallback);
         case ActivityType.LeftRight: return t('concepts.activities.leftRight', fallback);

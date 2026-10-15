@@ -17,9 +17,6 @@ import { tasarimAl } from "./ui/tasarim.ts";
 import CosmicBackdrop from './ui/CosmicBackdrop.tsx';
 import PanelStars from './ui/PanelStars.tsx';
 
-// Ayrı ekranlı (ActivityType'sız) kart kimliği
-export const KUTU_OYUNU = 'KutuOyunu' as unknown as ActivityType;
-
 interface ConceptActivity {
   type: ActivityType;
   title: string;
@@ -418,8 +415,8 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
   const isTr = lang === "tr";
   const tanim = new Map<ActivityType, ConceptActivity>();
   for (const tab of buildEskiTabs(lang)) for (const a of tab.activities) tanim.set(a.type, a);
-  // Kutu Oyunu: ActivityType olmayan, ayrı ekranlı kart (İç/Dış fotoğraf etkinliğinden bağımsız)
-  tanim.set(KUTU_OYUNU, { type: KUTU_OYUNU, title: isTr ? 'Kutu Oyunu' : 'Box Game', subtitle: isTr ? 'Nesneyi kutuya koy' : 'Put it in the box' });
+  // Kutu Oyunu: İç/Dış fotoğraf etkinliğinden bağımsız, çizimli sahneler
+  tanim.set(ActivityType.KutuOyunu, { type: ActivityType.KutuOyunu, title: isTr ? 'Kutu Oyunu' : 'Box Game', subtitle: isTr ? 'Nesneyi kutuya koy' : 'Put it in the box' });
   const kiyasSub = isTr ? "İki kartı karşılaştır" : t("experimental.relativeComparison.instruction", "Compare the two cards");
   const kiyas: ConceptActivity[] = [
     { type: ActivityType.RelativeBigSmall, title: isTr ? "Hangisi Daha Büyük?" : t("concepts.activities.bigSmall", "Big / Small"), subtitle: kiyasSub },
@@ -445,7 +442,7 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
     {
       name: isTr ? "Konum" : t("concepts.position", "Spatial"),
       icon: emojiIkon("📍"),
-      activities: sec([ActivityType.OnUnder, ActivityType.BelowAbove, ActivityType.InFrontOfBehind, ActivityType.InsideOutside, KUTU_OYUNU, ActivityType.BesideOpposite, ActivityType.Between, ActivityType.LeftRight, ActivityType.NearFar, ActivityType.HighLow, ActivityType.TersDuz, ActivityType.IlkSon]),
+      activities: sec([ActivityType.OnUnder, ActivityType.BelowAbove, ActivityType.InFrontOfBehind, ActivityType.InsideOutside, ActivityType.KutuOyunu, ActivityType.BesideOpposite, ActivityType.Between, ActivityType.LeftRight, ActivityType.NearFar, ActivityType.HighLow, ActivityType.TersDuz, ActivityType.IlkSon]),
     },
     {
       name: isTr ? "Miktar" : t("concepts.quantity", "Quantity"),
@@ -695,7 +692,7 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 landscape:grid-cols-4">
             {activeTabData.activities.map((activity, index) => {
               const stats = activityStats[String(activity.type)];
-              const isDisabled = activity.type !== KUTU_OYUNU && !enabledActivities.has(String(activity.type));
+              const isDisabled = !enabledActivities.has(String(activity.type));
               const kapak = KAVRAM_KAPAK[ActivityType[activity.type] as string];
               const yildiz = Math.min(stats?.completions || 0, 5);
               return (
@@ -712,7 +709,7 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
                     {kapak ? kapak.map((u) => (
                       <img key={u} src={u} alt="" loading="lazy" draggable={false} className="w-full h-full object-cover bg-white" />
                     )) : (
-                      <div className="col-span-2 flex items-center justify-center bg-gradient-to-br from-emerald-100 to-rose-100 text-4xl">{activity.type === KUTU_OYUNU ? '📦⬇️' : '✅❌'}</div>
+                      <div className="col-span-2 flex items-center justify-center bg-gradient-to-br from-emerald-100 to-rose-100 text-4xl">{activity.type === ActivityType.KutuOyunu ? '📦⬇️' : '✅❌'}</div>
                     )}
                   </div>
                   <div className="px-3 py-2">

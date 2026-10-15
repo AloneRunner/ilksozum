@@ -23,7 +23,7 @@ export const KULVARLAR: Kulvar[] = [
   {
     id: 'kavramlar', ad: 'Kavramlar', emoji: '💡', seviyeler: [
       { ad: 'Renk, şekil, büyük/küçük', etkinlikler: [A.Colors, A.Shapes, A.BigSmall, A.ColorRecognition] }, // 1-2
-      { ad: 'İçinde, üstünde', etkinlikler: [A.InsideOutside, A.OnUnder, A.FullEmpty] }, // 2-3
+      { ad: 'İçinde, üstünde', etkinlikler: [A.InsideOutside, A.KutuOyunu, A.OnUnder, A.FullEmpty] }, // 2-3
       { ad: 'Uzun, kalın, geniş', etkinlikler: [A.LongShort, A.ThinThick, A.WideNarrow, A.FewMuch, A.OpenClosed] }, // 4
       { ad: 'Günlük nitelikler', etkinlikler: [A.WetDry, A.CleanDirty, A.HotCold, A.HardSoft, A.Emotions, A.DayNight, A.DikenliPuruzsuz, A.DugumCozuk] }, // 5
       { ad: 'Dokun ve hisset', etkinlikler: [A.BrokenIntact, A.RoughSmooth, A.HeavyLight, A.BitterSweet, A.NoisyQuiet] }, // 6

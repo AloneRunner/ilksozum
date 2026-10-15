@@ -68,7 +68,8 @@ export const CONCEPT_ACTIVITIES = [
     ActivityType.BelowAbove, 
     ActivityType.BesideOpposite, 
     ActivityType.InFrontOfBehind, 
-    ActivityType.InsideOutside, 
+    ActivityType.InsideOutside,
+    ActivityType.KutuOyunu,   // Kutu Oyunu (çizimli konum sahneleri)
     ActivityType.Between, 
     ActivityType.LeftRight,
     ActivityType.NearFar,
@@ -316,6 +317,7 @@ export const ALL_SUB_ACHIEVEMENTS: SubAchievement[] = [
   { id: ActivityType.BesideOpposite, name: "Yanında / Karşısında", category: ActivityCategory.Concept },
   { id: ActivityType.InFrontOfBehind, name: "Önünde / Arkada", category: ActivityCategory.Concept },
   { id: ActivityType.InsideOutside, name: "İçinde / Dışında", category: ActivityCategory.Concept },
+  { id: ActivityType.KutuOyunu, name: "Kutu Oyunu", category: ActivityCategory.Concept },
   { id: ActivityType.Between, name: "Arasında", category: ActivityCategory.Concept },
   { id: ActivityType.LeftRight, name: "Sağ / Sol", category: ActivityCategory.Concept },
   { id: ActivityType.NearFar, name: "Yakın / Uzak", category: ActivityCategory.Concept },

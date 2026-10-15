@@ -110,7 +110,7 @@ const ColorRecognitionScreen: React.FC<ColorRecognitionScreenProps> = ({
         <p className="text-center text-slate-400 font-bold text-xs uppercase tracking-wider mb-4">
           Rengi Seç
         </p>
-        <div className="grid grid-cols-2 gap-3 max-w-sm mx-auto">
+        <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto">
           {options.map((opt) => {
             const isThisCorrect = isCorrect && opt.key === roundData.correctColor;
             const isThisWrong = isWrong === opt.key;
@@ -119,17 +119,17 @@ const ColorRecognitionScreen: React.FC<ColorRecognitionScreenProps> = ({
                 key={opt.key}
                 onClick={() => handleSelect(opt.key)}
                 disabled={!!isCorrect}
-                className={`flex items-center gap-3 rounded-2xl px-4 py-3 border-2 font-bold text-base transition-all shadow-sm
-                  ${isThisCorrect ? 'border-green-500 scale-105 bg-green-50' : ''}
-                  ${isThisWrong ? 'border-red-400 bg-red-50 animate-shake' : ''}
-                  ${!isThisCorrect && !isThisWrong ? 'border-slate-200 bg-slate-50 hover:border-slate-400 hover:bg-slate-100' : ''}
+                aria-label={opt.label}
+                // Sayaç (2026-10-15): 'Rengi Ne?' %79 yarıda kalıyor; yazı yerine büyük renk düğmeleri (okuma gerektirmez)
+                className={`relative flex h-24 items-end justify-center rounded-3xl border-4 pb-2 shadow-md transition-all active:scale-95
+                  ${isThisCorrect ? 'border-green-500 scale-105 ring-4 ring-green-300' : ''}
+                  ${isThisWrong ? 'border-red-400 animate-shake' : ''}
+                  ${!isThisCorrect && !isThisWrong ? 'border-white' : ''}
                 `}
+                style={{ backgroundColor: opt.hex }}
               >
-                <span
-                  className="w-8 h-8 rounded-full border-2 border-slate-300 flex-shrink-0 shadow-inner"
-                  style={{ backgroundColor: opt.hex }}
-                />
-                <span className="text-slate-700">{opt.label}</span>
+                <span className="rounded-full bg-white/90 px-3 py-0.5 text-sm font-black text-slate-700 shadow-sm">{opt.label}</span>
+                {isThisCorrect && <span className="absolute right-2 top-1 text-2xl">✅</span>}
               </button>
             );
           })}

@@ -93,6 +93,13 @@ export const ACTIVITY_METADATA_MAP: Record<string, ActivityMetadata> = {
     prerequisite: { type: 'OR', conditions: ['oyuncaklar', 'ev_esyalari'] },
     masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
   },
+  [ActivityType.KutuOyunu]: {
+    activityId: ActivityType.KutuOyunu,
+    activityName: 'Kutu Oyunu',
+    unitNumber: 2,
+    prerequisite: { type: 'OR', conditions: ['oyuncaklar', 'ev_esyalari'] },
+    masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
+  },
   [ActivityType.OnUnder]: {
     activityId: ActivityType.OnUnder,
     activityName: 'Üstünde / Altında',
