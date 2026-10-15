@@ -7,6 +7,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: './', // Capacitor için gerekli
   plugins: [react()],
+  // Geliştirme sunucusu: derleme çıktıları ve Android kopyası (on binlerce ses/görsel) izlenmesin; yavaşlatıyordu
+  server: { watch: { ignored: ['**/android/**', '**/dist/**', '**/tools/**', '**/yedek/**', '**/backup*/**', '**/node_modules/**'] } },
   build: {
     chunkSizeWarningLimit: 600,
     rollupOptions: {

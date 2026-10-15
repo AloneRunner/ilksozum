@@ -42,6 +42,7 @@ const BasaraLessonMapScreen = lazy(() => import('../basara/BasaraLessonMapScreen
 const BasaraLessonScreen = lazy(() => import('../basara/BasaraLessonScreen.tsx'));
 const LearningCard = lazy(() => import('../LearningCard.tsx'));
 const NesneYerlestir = lazy(() => import('../kutu/NesneYerlestir.tsx'));
+const SekilOgren = lazy(() => import('../kutu/SekilOgren.tsx'));
 const TabagaKoy = lazy(() => import('../kutu/TabagaKoy.tsx'));
 const LineTracingScreen = lazy(() => import('../LineTracingScreen.tsx'));
 // Eski Şekil Boyama / Kurallı Boyama ekranları yedekte; 2026-10-08'den beri ikisi de BoyamaEkrani
@@ -138,6 +139,8 @@ export const AppRouter = () => {
     // Beceri menüsü: hangi beceri açık, etkinlik oradan mı başladı (geri tuşu oraya dönsün)
     const [aktifBeceri, setAktifBeceri] = useState<BeceriId | null>(null);
     const [beceriDonus, setBeceriDonus] = useState(false);
+    // Şekiller: her oturumun başında kısa tanıtım; öğrenilen oturumun veri dizisi burada tutulur
+    const [sekilTanitilan, setSekilTanitilan] = useState<unknown>(null);
     // Ödül oyunu (Program Modu oturum sonu) bitince Program Modu'na dönülür
     const [odulDonus, setOdulDonus] = useState(false);
     const geriDon = (varsayilan: ScreenState) => {
@@ -334,6 +337,10 @@ export const AppRouter = () => {
         const onBackToFineMotor = () => geriDon(ScreenState.MainMenu);
         const onBackToLetterSelection = () => setScreenState(ScreenState.LetterSelection);
 
+        // Şekiller (sayaç: %54 = yazı-tura): soru sormadan önce şekilleri tanıt (oturum başında bir kez)
+        if (activityType === ActivityType.Shapes && currentIndex === 0 && sekilTanitilan !== activityData) {
+            return <SekilOgren onBitti={() => setSekilTanitilan(activityData)} onBack={onBackToConcept} />;
+        }
         switch (activityType) {
             case ActivityType.Syllabification:
                 return <>
