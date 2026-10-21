@@ -11,7 +11,7 @@ type KayitTuru = 'cis' | 'kaka' | 'kaza' | 'kuru';
 interface Kayit { t: number; tur: KayitTuru }
 interface Veri { kayitlar: Kayit[]; yildiz: Record<string, number> }
 
-const ADIMLAR: { url: string; ok?: '⬇️' | '⬆️' | '💧'; yazi: string; soz: string }[] = [
+export const ADIMLAR: { url: string; ok?: '⬇️' | '⬆️' | '💧'; yazi: string; soz: string }[] = [
   { url: '/images/8422.webp', yazi: 'Tuvalete git', soz: 'Tuvalete gidiyoruz.' },
   { url: '/images/4713.webp', ok: '⬇️', yazi: 'Pantolonu indir', soz: 'Pantolonunu indir.' },
   { url: '/images/8422.webp', yazi: 'Tuvalete otur', soz: 'Tuvalete otur.' },

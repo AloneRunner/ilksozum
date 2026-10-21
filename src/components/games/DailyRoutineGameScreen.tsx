@@ -78,7 +78,7 @@ const createRoutineSound = () => {
 interface Adim { gorsel: string; emoji: string; text: string }
 const A = (gorsel: string, emoji: string, text: string): Adim => ({ gorsel, emoji, text });
 type Seviye = 'kolay' | 'zor';
-const ROUTINES: Record<Seviye, { title: string; icon: string; items: Adim[] }[]> = {
+export const ROUTINES: Record<Seviye, { title: string; icon: string; items: Adim[] }[]> = {
     kolay: [
         { title: 'Yemek Zamanı', icon: '🍽️', items: [A('09-el-yika', '🧼', 'Ellerini yıka'), A('10-ogle-yemegi', '🍝', 'Yemeğini ye'), A('06-dis-fircala', '🦷', 'Dişlerini fırçala')] },
         { title: 'Sabah', icon: '🌅', items: [A('01-uyan', '😴', 'Uyan'), A('04-giyin', '👕', 'Giyin'), A('05-kahvalti', '🍳', 'Kahvaltı yap')] },

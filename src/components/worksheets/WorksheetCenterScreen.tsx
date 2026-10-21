@@ -25,6 +25,7 @@ const ilkEmoji = (s: string): string => {
 const WhoseIsThisWorksheetPreview = lazy(() => import('./WhoseIsThisWorksheetPreview.tsx'));
 const ColorRecognitionWorksheetPreview = lazy(() => import('./ColorRecognitionWorksheetPreview.tsx'));
 const WhatsMissingWorksheetPreview = lazy(() => import('./WhatsMissingWorksheetPreview.tsx'));
+const KartAtolyesi = lazy(() => import('./KartAtolyesi.tsx'));
 
 interface WorksheetCenterScreenProps {
   onBack: () => void;
@@ -35,7 +36,8 @@ type ViewState =
   | { mode: 'loading'; def: WorksheetDef }
   | { mode: 'preview'; def: WorksheetDef; rounds: any[] }
   | { mode: 'fineMotor' }
-  | { mode: 'matching' };
+  | { mode: 'matching' }
+  | { mode: 'kart' };
 
 // Category config
 const CATEGORY_META: Record<WorksheetCategory, { icon: string; bg: string; text: string }> = {
@@ -145,6 +147,15 @@ const WorksheetCenterScreen: React.FC<WorksheetCenterScreenProps> = ({ onBack })
   if (view.mode === 'fineMotor') {
     return (
       <FineMotorWorksheetScreen onBack={() => setView({ mode: 'menu' })} />
+    );
+  }
+
+  /* ───── KART ATÖLYESİ (iletişim/kelime kartları, görsel program) ───── */
+  if (view.mode === 'kart') {
+    return (
+      <Suspense fallback={null}>
+        <KartAtolyesi onBack={() => setView({ mode: 'menu' })} />
+      </Suspense>
     );
   }
 
@@ -288,6 +299,21 @@ const WorksheetCenterScreen: React.FC<WorksheetCenterScreenProps> = ({ onBack })
         {/* Special Banner for Fine Motor */}
         {!search && activeCategory === 'Tümü' && (
           <div className="flex flex-col gap-3">
+            <button
+              onClick={() => setView({ mode: 'kart' })}
+              className="w-full relative overflow-hidden bg-gradient-to-r from-amber-500 to-rose-500 rounded-2xl p-4 shadow-md text-left transition-transform hover:scale-[1.02] active:scale-95"
+            >
+              <div className="absolute top-0 right-0 -mt-4 -mr-4 text-7xl opacity-20">🃏</div>
+              <div className="relative z-10 flex items-center justify-between">
+                <div>
+                  <h3 className="text-white font-black text-lg">Kart Atölyesi</h3>
+                  <p className="text-amber-50 text-xs font-semibold mt-1">Kesip kullanılan iletişim (PECS) ve kelime kartları · Tuvalet ve günlük rutin için görsel program</p>
+                </div>
+                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                  <ArrowLeftIcon className="w-5 h-5 text-white rotate-180" />
+                </div>
+              </div>
+            </button>
             <button
               onClick={() => setView({ mode: 'fineMotor' })}
               className="w-full relative overflow-hidden bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl p-4 shadow-md text-left transition-transform hover:scale-[1.02] active:scale-95"

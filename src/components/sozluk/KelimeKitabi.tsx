@@ -18,7 +18,7 @@ const buyuk = (s: string) => s.charAt(0).toLocaleUpperCase('tr-TR') + s.slice(1)
 interface Oge { kelime: string; url: string }
 
 // Kategori → tekil kelimeler (yalnız yeni fotoğraflar: .webp)
-const kategoriOgeleri = (id: string): Oge[] => {
+export const kategoriOgeleri = (id: string): Oge[] => {
   const gorulen = new Set<string>(); const l: Oge[] = [];
   for (const i of imageData) {
     if (normal(i.tags?.category) !== id) continue;
