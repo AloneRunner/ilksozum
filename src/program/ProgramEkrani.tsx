@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import ArrowLeftIcon from '../components/icons/ArrowLeftIcon.tsx';
-import { ActivityStats } from '../types.ts';
+import { ActivityStats, ParentOverride } from '../types.ts';
 import { ALL_SUB_ACHIEVEMENTS } from '../constants.ts';
 import { KULVARLAR, KulvarId, EtkinlikId } from './kulvarlar.ts';
 import {
   ayarOku, ayarYaz, bugun, kulvarDurumu, oturumKur, yerlestirmeKur, yerlestirmeDegerlendir, ogrendiMi, sonOran, odulOyunu,
-  ProgramAyar, OturumOgesi,
+  ProgramAyar, OturumOgesi, ertelenenleriOku,
 } from './motor.ts';
 
 // Program Modu 2 ekranı: Bugün (oturum, tanıma turu, ödül) · Kulvarlar (seviyeler, "biliyor") · Ayarlar
@@ -15,6 +15,10 @@ interface Props {
   onBack: () => void;
   onStart: (kuyruk: EtkinlikId[]) => void;
   onOdul: (oyunId: string) => void;
+  /** Ebeveyn: etkinliği 14 gün ertele / ertelemeyi kaldır (eski modla aynı kayıt) */
+  parentOverrides?: ParentOverride[];
+  onErtele?: (id: string) => void;
+  onErteleKaldir?: (id: string) => void;
 }
 
 const ADLAR = new Map(ALL_SUB_ACHIEVEMENTS.map((s) => [String(s.id), s.name]));
@@ -27,7 +31,10 @@ const ROL: Record<OturumOgesi['rol'], { ad: string; renk: string }> = {
 };
 const emoji = (k: KulvarId) => KULVARLAR.find((x) => x.id === k)?.emoji || '•';
 
-const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOdul }) => {
+const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOdul, parentOverrides, onErtele, onErteleKaldir }) => {
+  const ertelenen = useMemo(() => ertelenenleriOku(profilId, parentOverrides || []), [profilId, parentOverrides]);
+  const ertelenenListe = (parentOverrides || []).filter((o) => ertelenen.has(String(o.activityId)))
+    .map((o) => ({ id: String(o.activityId), gun: Math.max(1, Math.ceil((o.expiresAt - Date.now()) / 86400000)) }));
   const [ayar, setAyarDurum] = useState<ProgramAyar>(() => ayarOku(profilId));
   const [sekme, setSekme] = useState<'bugun' | 'kulvar' | 'ayar'>('bugun');
   const [ek, setEk] = useState(0);
@@ -45,7 +52,7 @@ const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOd
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const oturum = useMemo(() => oturumKur(stats, ayar, profilId, ek), [stats, ayar, profilId, ek]);
+  const oturum = useMemo(() => oturumKur(stats, ayar, profilId, ek, ertelenen), [stats, ayar, profilId, ek, ertelenen]);
   const bugunBitti = ayar.sonOturum === bugun();
 
   const tanimaBaslat = () => {
@@ -80,6 +87,7 @@ const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOd
                 <li>Her gün her kulvardan birkaç etkinlik gelir: <b>Yeni</b> (o seviyenin sıradaki konusu), <b>Tekrar</b> ve <b>Pekiştir</b> (önceki konulardan).</li>
                 <li>Bir etkinlik, Program Modu'nda art arda 2 kez %80 ve üstü yapılınca "öğrendi" sayılır; seviyedeki etkinliklerin çoğu (%80) öğrenilince kulvar bir üst seviyeye geçer.</li>
                 <li>Etkinlik sırasında sağ üstteki <b>Geç ⏭</b> ile o etkinliği atlayabilirsiniz. <b>Kulvarlar</b> sekmesinde bir kulvarı "Daha kolay" ile bir seviye geri alabilir, bildiği seviyeyi "biliyor" diye atlayabilirsiniz.</li>
+                <li>Zorlandığı bir etkinliği listedeki <b>⏸</b> ile 14 gün erteleyebilirsiniz; seviye tıkanmaz. Uzun süre çalışıp %60'ı geçen çocukta seviye kendiliğinden ilerler.</li>
                 <li>Tanıma turu isteğe bağlıdır: bildiği konuları baştan atlamak için. İstemezseniz "Atla".</li>
               </ul>
             </details>
@@ -103,6 +111,18 @@ const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOd
               </div>
             )}
 
+            {ertelenenListe.length > 0 && (
+              <div className="rounded-2xl border border-amber-200 bg-amber-50 p-3 text-sm">
+                <div className="mb-1 text-xs font-black text-amber-800">⏸ Ertelenenler (programa gelmez, seviyeyi tıkamaz)</div>
+                {ertelenenListe.map((e) => (
+                  <div key={e.id} className="flex items-center gap-2 py-0.5">
+                    <span className="font-bold text-slate-800">{ad(e.id)}</span>
+                    <span className="text-xs text-amber-700">{e.gun} gün sonra geri gelir</span>
+                    {onErteleKaldir && <button onClick={() => onErteleKaldir(e.id)} className="ml-auto rounded-full border border-slate-200 bg-white px-2 py-0.5 text-[11px] font-black text-slate-600">Geri al</button>}
+                  </div>
+                ))}
+              </div>
+            )}
             {bugunBitti && (
               <div className="rounded-3xl bg-gradient-to-br from-amber-300 to-rose-400 p-4 text-white shadow-md text-center">
                 <div className="text-2xl font-black">🎉 Bugünkü oturum tamamlandı!</div>
@@ -121,6 +141,7 @@ const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOd
                     <span className="text-xl" aria-hidden="true">{emoji(o.kulvar)}</span>
                     <span className="flex-1 text-sm font-bold text-slate-800">{ad(o.id)}</span>
                     <span className={`rounded-full px-2 py-0.5 text-[11px] font-black ${ROL[o.rol].renk}`}>{ROL[o.rol].ad}</span>
+                    {onErtele && <button onClick={() => onErtele(String(o.id))} title="14 gün programa getirme" className="rounded-full border border-amber-200 bg-amber-50 px-2 py-0.5 text-[11px] font-black text-amber-800">⏸</button>}
                   </li>
                 ))}
                 <li className="flex items-center gap-2 rounded-xl bg-rose-50 px-3 py-2">
@@ -140,7 +161,7 @@ const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOd
 
         {sekme === 'kulvar' && KULVARLAR.map((k) => {
           const kapali = ayar.kapaliKulvarlar.includes(k.id);
-          const d = kulvarDurumu(stats, ayar, k.id, profilId);
+          const d = kulvarDurumu(stats, ayar, k.id, profilId, ertelenen);
           const sv = d.bitti ? null : k.seviyeler[d.seviye];
           return (
             <div key={k.id} className={`rounded-3xl bg-white shadow-md p-4 ${kapali ? 'opacity-50' : ''}`}>

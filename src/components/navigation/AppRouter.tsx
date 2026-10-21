@@ -793,6 +793,9 @@ export const AppRouter = () => {
         case ScreenState.ProgramIntro: { const programEkrani = yeniProgram ? <ProgramEkrani
             profilId={ctx.profile.activeProfile?.id}
             stats={ctx.profile.activityStats}
+            parentOverrides={ctx.profile.parentOverrides}
+            onErtele={(id) => ctx.profile.handleErtele(id)}
+            onErteleKaldir={(id) => ctx.profile.handleErteleKaldir(id)}
             onBack={() => setScreenState(ScreenState.MainMenu)}
             onStart={async (kuyruk) => {
                 setBeceriDonus(false);

@@ -27,10 +27,10 @@ export const KULVARLAR: Kulvar[] = [
       { ad: 'Uzun, kalın, geniş', etkinlikler: [A.LongShort, A.ThinThick, A.WideNarrow, A.FewMuch, A.OpenClosed] }, // 4
       { ad: 'Günlük nitelikler', etkinlikler: [A.WetDry, A.CleanDirty, A.HotCold, A.HardSoft, A.Emotions, A.DayNight, A.DikenliPuruzsuz, A.DugumCozuk] }, // 5
       { ad: 'Dokun ve hisset', etkinlikler: [A.BrokenIntact, A.RoughSmooth, A.HeavyLight, A.BitterSweet, A.NoisyQuiet] }, // 6
-      { ad: 'Konum', etkinlikler: [A.BelowAbove, A.InFrontOfBehind, A.NearFar, A.HighLow, A.BesideOpposite, A.BeforeAfter, A.YesNo] }, // 7
+      { ad: 'Konum', etkinlikler: [A.BelowAbove, A.InFrontOfBehind, A.NearFar, A.HighLow, A.BesideOpposite, A.YesNo] }, // 7
       { ad: 'Ben ve çevrem', etkinlikler: [A.OldNew, A.TazeBayat, A.KirisikDuzgun, A.SivriKut, A.ParlakMat, A.AcikKoyu, A.HavaDurumu, A.IlkSon, A.TehlikeliGuvenli, A.YenirYenmez, A.WhoseIsThis] }, // 7
       { ad: 'Nesnenin hali', etkinlikler: [A.MessyClean, A.StraightCurved, A.HalfQuarterWhole, A.AliveLifeless, A.Between, A.DerinSig, A.KalabalikTenha, A.HungryFull, A.YoungOld, A.TersDuz] }, // 8-9
-      { ad: 'Zaman ve duyular', etkinlikler: [A.LeftRight, A.Senses, A.TembelCaliskan, A.SeffafOpak, A.FastSlow, A.ClockLearning] }, // 10
+      { ad: 'Zaman ve duyular', etkinlikler: [A.LeftRight, A.Senses, A.TembelCaliskan, A.SeffafOpak, A.FastSlow, A.ClockLearning, A.BeforeAfter] }, // 10
       { ad: 'Kıyasla (zor)', etkinlikler: [A.RelativeBigSmall, A.RelativeLongShort, A.RelativeThinThick, A.RelativeWideNarrow, A.RelativeFewMuch, A.RelativeNearFar, A.RelativeHighLow] }, // 7-9
     ],
   },
@@ -53,7 +53,7 @@ export const KULVARLAR: Kulvar[] = [
     id: 'okuma', ad: 'Okuma (isteğe bağlı)', emoji: '🔤', seviyeler: [
       { ad: 'Harfleri tanı', etkinlikler: [A.FindTheLetterInGrid, A.SoundPresence, A.LetterTracing] },
       { ad: 'Sesleri bul', etkinlikler: [A.FindTheLetter, A.FindTheSoundInImage] },
-      { ad: 'Hece ve hikâye', etkinlikler: [A.Syllabification, A.EmbeddedStory] },
+      { ad: 'Hece', etkinlikler: [A.Syllabification] }, // Hikâye Zamanı çıkarıldı: bitişi yok, seviyeyi kilitliyordu
     ],
   },
   {

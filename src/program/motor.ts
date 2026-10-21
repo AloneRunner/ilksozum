@@ -1,6 +1,6 @@
 // Program Modu 2 motoru: öğrenme kuralı, kulvar seviyesi, günlük oturum, yerleştirme (konu atlama), ayarlar.
 // Kayıtlar eskisiyle aynı (activityStats; history.mode === 'program'), bu yüzden mevcut ilerleme kaybolmaz.
-import { ActivityStats, AttemptRecord } from '../types.ts';
+import { ActivityStats, AttemptRecord, ParentOverride, ERTELE } from '../types.ts';
 import { KULVARLAR, KulvarId, EtkinlikId, ODUL_OYUNLARI } from './kulvarlar.ts';
 import { UNIT_DEFINITIONS } from '../constants/unitDefinitions.ts';
 
@@ -43,6 +43,12 @@ export const ogrendiMi = (stats: Kayitlar, id: EtkinlikId): boolean => {
 };
 /** İçeriği hiç yüklenemeyen etkinlik seviyeyi kilitlemesin */
 const yuklenemiyor = (stats: Kayitlar, id: EtkinlikId) => (stats[String(id)]?.loadFailures || 0) >= 2 && kayitlari(stats, id).length === 0;
+/** Ebeveynin ertelediği etkinlikler (Program Modu ekranındaki ⏸ Ertele; eski modla aynı kayıt) */
+export const ertelenenleriOku = (profil?: string | null, overrides?: ParentOverride[]): Set<string> => {
+  let liste = overrides;
+  if (!liste) { try { liste = JSON.parse(localStorage.getItem(`parentOverrides_profile_${profil}`) || '[]'); } catch { liste = []; } }
+  return new Set((liste || []).filter((o) => o.reason === ERTELE && o.expiresAt > Date.now()).map((o) => String(o.activityId)));
+};
 export const sonOran = (stats: Kayitlar, id: EtkinlikId): number | null => { const h = kayitlari(stats, id); return h.length ? oran(h[h.length - 1]) : null; };
 
 /** Eski Program Modu'nda ilerlemiş çocuk geri düşmesin: eski en yüksek açık ünite u ise, etkinliklerinin hepsi
@@ -68,16 +74,28 @@ const eskiBilinen = (profil?: string | null): Partial<Record<KulvarId, number>> 
 export interface KulvarDurumu { id: KulvarId; seviye: number; toplam: number; bitti: boolean; ogrenilen: number; seviyeEtkinlikSayisi: number }
 
 /** Kulvarın şu anki seviyesi: bilinen seviyelerden sonra, etkinliklerinin %80'i öğrenilmemiş ilk seviye (0 tabanlı) */
-export const kulvarDurumu = (stats: Kayitlar, ayar: ProgramAyar, id: KulvarId, profil?: string | null): KulvarDurumu => {
+export const kulvarDurumu = (stats: Kayitlar, ayar: ProgramAyar, id: KulvarId, profil?: string | null, ertelenen: Set<string> = ertelenenleriOku(profil)): KulvarDurumu => {
   const k = KULVARLAR.find((x) => x.id === id)!;
   // Ebeveynin/tanıma turunun kararı varsa o geçerli ("Daha kolay" eski ünite karşılığının altına da inebilir)
   const taban = ayar.bilinen[id] ?? eskiBilinen(profil)[id] ?? 0;
   for (let s = Math.min(taban, k.seviyeler.length); s < k.seviyeler.length; s++) {
     const et = k.seviyeler[s].etkinlikler;
-    const ogrenilen = et.filter((e) => ogrendiMi(stats, e) || yuklenemiyor(stats, e)).length;
-    if (ogrenilen < Math.ceil(et.length * 0.8)) return { id, seviye: s, toplam: k.seviyeler.length, bitti: false, ogrenilen, seviyeEtkinlikSayisi: et.length };
+    const ogrenilen = et.filter((e) => ogrendiMi(stats, e) || yuklenemiyor(stats, e) || ertelenen.has(String(e))).length;
+    if (ogrenilen < Math.ceil(et.length * 0.8) && !sabirliGecer(stats, et, ertelenen)) return { id, seviye: s, toplam: k.seviyeler.length, bitti: false, ogrenilen, seviyeEtkinlikSayisi: et.length };
   }
   return { id, seviye: k.seviyeler.length, toplam: k.seviyeler.length, bitti: true, ogrenilen: 0, seviyeEtkinlikSayisi: 0 };
+};
+
+/** Sabırlı ilerleme (Kaan, 2026-10-21): seviyedeki her etkinlik denenmiş, toplam program denemesi yeterli
+ *  (etkinlik başına ~4, yaklaşık 10 oturum) ve son denemelerin ortalaması %60 ve üstüyse seviye geçilir; zayıflar pekiştirmede gelmeye devam eder. */
+const sabirliGecer = (stats: Kayitlar, et: EtkinlikId[], ertelenen: Set<string>): boolean => {
+  const bakilan = et.filter((e) => !ertelenen.has(String(e)));
+  if (!bakilan.length) return true;
+  const oranlar = bakilan.map((e) => sonOran(stats, e));
+  if (oranlar.some((o) => o === null)) return false;
+  const deneme = bakilan.reduce((t, e) => t + kayitlari(stats, e).filter((h) => h.mode === 'program').length, 0);
+  const ort = (oranlar as number[]).reduce((t, o) => t + o, 0) / oranlar.length;
+  return deneme >= Math.max(16, bakilan.length * 4) && ort >= 0.6; // ~10 oturum
 };
 
 /** Gün + profile göre sabit karıştırma: önizlemede görülen oturum Başlat'ta değişmesin */
@@ -91,10 +109,11 @@ const karistir = <T,>(dizi: T[], r: () => number) => dizi.map((x) => [r(), x] as
 /** Aralıklı tekrar: öğrenilmiş etkinlik ne zaman yeniden gelsin (gün) */
 const tekrarAraligi = (n: number) => [1, 3, 7, 14, 30][Math.min(n, 4)];
 
-export const oturumKur = (stats: Kayitlar, ayar: ProgramAyar, profil?: string | null, ek = 0): OturumOgesi[] => {
+export const oturumKur = (stats: Kayitlar, ayar: ProgramAyar, profil?: string | null, ek = 0, ertelenen: Set<string> = ertelenenleriOku(profil)): OturumOgesi[] => {
+  const uygun = (e: EtkinlikId) => !ertelenen.has(String(e)); // ertelenenler oturuma girmez
   const r = tohumluRastgele(`${bugun()}|${profil}|${ek}`);
   const acik = KULVARLAR.filter((k) => !ayar.kapaliKulvarlar.includes(k.id));
-  const durumlar = acik.map((k) => kulvarDurumu(stats, ayar, k.id, profil));
+  const durumlar = acik.map((k) => kulvarDurumu(stats, ayar, k.id, profil, ertelenen));
   const uzunluk = ayar.oturumUzunlugu;
   const secilen = new Set<string>();
   const oturum: OturumOgesi[] = [];
@@ -104,7 +123,7 @@ export const oturumKur = (stats: Kayitlar, ayar: ProgramAyar, profil?: string | 
   const simdi = Date.now();
   const tekrarlar: Array<{ id: EtkinlikId; kulvar: KulvarId; gecikme: number }> = [];
   for (const k of acik) for (const sv of k.seviyeler) for (const e of sv.etkinlikler) {
-    if (!ogrendiMi(stats, e)) continue;
+    if (!ogrendiMi(stats, e) || !uygun(e)) continue;
     const h = kayitlari(stats, e);
     const son = h[h.length - 1]?.timestamp || 0;
     const gecikme = (simdi - son) / 86400000 - tekrarAraligi(h.filter((x) => x.mode === 'program').length);
@@ -117,7 +136,7 @@ export const oturumKur = (stats: Kayitlar, ayar: ProgramAyar, profil?: string | 
   const adaylar = new Map<KulvarId, EtkinlikId[]>();
   for (const d of durumlar) {
     if (d.bitti) continue;
-    const et = KULVARLAR.find((k) => k.id === d.id)!.seviyeler[d.seviye].etkinlikler.filter((e) => !ogrendiMi(stats, e) && !yuklenemiyor(stats, e));
+    const et = KULVARLAR.find((k) => k.id === d.id)!.seviyeler[d.seviye].etkinlikler.filter((e) => !ogrendiMi(stats, e) && !yuklenemiyor(stats, e) && uygun(e));
     const denenmemis = karistir(et.filter((e) => sonOran(stats, e) === null), r);
     const zayif = et.filter((e) => sonOran(stats, e) !== null).sort((a, b) => (sonOran(stats, a)! - sonOran(stats, b)!));
     adaylar.set(d.id, [...denenmemis, ...zayif]);
@@ -142,7 +161,7 @@ export const oturumKur = (stats: Kayitlar, ayar: ProgramAyar, profil?: string | 
   const zayiflar: Array<{ id: EtkinlikId; kulvar: KulvarId; o: number }> = [];
   for (const k of acik) for (const sv of k.seviyeler) for (const e of sv.etkinlikler) {
     const o = sonOran(stats, e);
-    if (o !== null && o < 0.8 && !ogrendiMi(stats, e) && !secilen.has(String(e))) zayiflar.push({ id: e, kulvar: k.id, o });
+    if (o !== null && o < 0.8 && !ogrendiMi(stats, e) && !secilen.has(String(e)) && uygun(e)) zayiflar.push({ id: e, kulvar: k.id, o });
   }
   zayiflar.sort((a, b) => a.o - b.o);
   if (zayiflar[0]) ekle({ id: zayiflar[0].id, kulvar: zayiflar[0].kulvar, rol: 'pekistirme' });
