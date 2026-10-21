@@ -8,7 +8,6 @@ import { UNIT_DEFINITIONS } from '../constants/unitDefinitions';
 import { getUnitCompletionPercentage, getUnitDisplaySuccessPercentageForProgramMode, isUnitUnlockedForProgramMode, getUnlockedUnitsForProgramMode, getActivityProgramSuccessPercentage } from '../services/masteryEngine';
 import { buildDailySession, getRecommendedSessionLength, shouldShowNewSession } from '../services/sessionBuilder';
 import { getActivityMetadata } from '../constants/activityMetadata';
-import { getAllowedUnitCeiling, getPolicyToday } from '../services/progressionPolicy';
 import LockClosedIcon from './icons/LockClosedIcon';
 import CheckCircleIcon from './icons/CheckCircleIcon';
 
@@ -154,7 +153,7 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
     // the same logic used by unit-advancement tracking in useActivity.
     const unlocked = getUnlockedUnitsForProgramMode(activityStats, masteredObjectCategories, parentOverrides, 6, profileId);
     const ceiling = profileId
-      ? (isPremium ? getHighestUnlockedUnit(unlocked) : getAllowedUnitCeiling(profileId, unlocked))
+      ? getHighestUnlockedUnit(unlocked) // günlük ünite sınırı yok (ücretsiz uygulama)
       : undefined;
     return buildDailySession(activityStats, masteredObjectCategories, undefined, sessionLength, ceiling, parentOverrides);
   }, [activityStats, masteredObjectCategories, profileId, isPremium, parentOverrides]);
@@ -280,23 +279,7 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
                 </div>
               </div>
 
-              {/* Daily progression note: hide for premium users */}
-              {!isPremium && profileId && (() => {
-                const snap = getPolicyToday(profileId);
-                const used = snap.advances || 0;
-                if (used >= 3) {
-                  return (
-                    <div className="mb-3 text-xs text-amber-800 bg-amber-100 border border-amber-200 rounded-lg px-3 py-2">
-                      {t('programMode.dailyLimitNote', "Daily unit advancement limit (3) reached. Let's continue with reinforcement today.")}
-                    </div>
-                  );
-                }
-                return (
-                  <div className="mb-3 text-xs text-emerald-800 bg-emerald-100 border border-emerald-200 rounded-lg px-3 py-2">
-                    {t('programMode.dailyLimitRemaining', 'Daily advancement: {used}/3').replace('{used}', String(used))}
-                  </div>
-                );
-              })()}
+              {/* Günlük ünite sınırı ve Joker kaldırıldı (Kaan, 2026-10-21: uygulama tamamen ücretsiz, premium yok) */}
 
               <div className="space-y-3">
                 {/* Warmup */}
@@ -433,20 +416,14 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
               <li>
                 <strong>{t('programMode.rules.unlocking', 'Ünite açma şartı:')}</strong> {t('programMode.rules.unlockingDesc', 'Program sırası 1. üniteden başlayarak ilk tamamlanmamış üniteye göre belirlenir. Bir ünitenin tamamlanması için ünitedeki etkinliklerin en az %75i en az 1 kez çözülmüş olmalı ve son 6 program/pekiştirme denemesinin ortalaması ≥ %75 olmalıdır.')}
               </li>
-              {!isPremium ? (
-                <li>
-                  <strong>{t('programMode.rules.daily', 'Günlük sınır:')}</strong> {t('programMode.rules.dailyDesc', 'Günde en fazla 3 ünite açılır; her ünite günde bir kez sayılır. Sayaç her gece yarısı (yerel saat) sıfırlanır.')}
-                </li>
-              ) : (
-                <li>
-                  <strong>{t('programMode.rules.dailyPremium', 'Premium:')}</strong> {t('programMode.rules.dailyPremiumDesc', 'Günlük ilerleme sınırı yoktur; kilidi açılan üniteler serbestçe oynanır.')}
-                </li>
-              )}
               <li>
-                <strong>{t('programMode.rules.progressDisplay', 'Görünen yüzde:')}</strong> {t('programMode.rules.progressDisplayDesc', 'Program Modu ekranindaki yuzdeler son 6 program denemesini baz alir; ebeveyn raporundaki genel yuzdeyle birebir ayni olmayabilir.')}
+                <strong>Sabırlı ilerleme:</strong> Çocuk bir ünitede uzun süre çalıştıysa (yaklaşık 10 oturum) ve başarısı %60'ın üstündeyse sonraki üniteye geçilir; zayıf kalan etkinlikler pekiştirmede gelmeye devam eder.
               </li>
               <li>
-                <strong>{t('programMode.rules.joker', 'Joker:')}</strong> {t('programMode.rules.jokerDesc', 'Ebeveynler geçici olarak kilitli bir etkinliği açabilir; ustalık kuralları değişmez, sadece erişim sağlar.')}
+                <strong>Ertele:</strong> Çocuğunuzun henüz hazır olmadığı bir etkinliği ⏸ Ertele ile 14 gün programdan çıkarabilirsiniz. Ertelenen etkinlik ünitenin ilerlemesini tıkamaz; süre dolunca kendiliğinden geri gelir.
+              </li>
+              <li>
+                <strong>{t('programMode.rules.progressDisplay', 'Görünen yüzde:')}</strong> Program Modu'ndaki yüzdeler son 6 program denemesine göredir; ebeveyn raporundaki genel yüzdeyle birebir aynı olmayabilir.
               </li>
             </ul>
           </section>

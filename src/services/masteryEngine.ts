@@ -555,8 +555,17 @@ export function isUnitCompleteForProgramMode(
 
   const progressPercent = getUnitDisplaySuccessPercentageForProgramMode(unitNumber, allStats, masteredObjectCategories, parentOverrides, recentAttemptsWindow);
   const thresholdPercent = unitDef.completionThreshold * 100;
-  return progressPercent >= thresholdPercent;
+  if (progressPercent >= thresholdPercent) return true;
+
+  // Sabırlı ilerleme (Kaan, 2026-10-21): çocuk bu ünitede uzun süre çalıştıysa (~10 oturum ≈ 60 program denemesi)
+  // ve başarısı %60'ın üstündeyse ünite tamam sayılır; zayıf kalanlar pekiştirmede gelmeye devam eder.
+  // Böylece %60-75 arası başaran bir çocuk aylarca aynı ünitede kalmaz.
+  const programDenemesi = unitDef.activities.reduce((t, id) => t + getProgramScopedAttempts(allStats[String(id)]).length, 0);
+  return progressPercent >= SABIRLI_ILERLEME_ESIK && programDenemesi >= SABIRLI_ILERLEME_DENEME;
 }
+
+const SABIRLI_ILERLEME_ESIK = 60;    // yüzde
+const SABIRLI_ILERLEME_DENEME = 60;  // ünitedeki toplam program denemesi
 
 export function isUnitUnlockedForProgramMode(
   unitNumber: number,
