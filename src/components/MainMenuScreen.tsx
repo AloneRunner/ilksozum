@@ -134,18 +134,18 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
         
         {isTr ? (
           <>
-            {/* Duyurular 9.1 (Kaan, 2026-10-08: "gizli duyuruları da güncelleyelim") */}
+            {/* Duyurular 9.2 (Kaan, 2026-10-21: "duyuruları komple değiştirebiliriz") */}
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>YENİ — Gerçek insan sesi:</b> Hece okuma dersleri, kavramlar, kelimeler, İfade Tahtası, Ses Taklit ve oyunlar artık gerçek bir insan sesiyle konuşuyor. İsterseniz <b>Ayarlar › Kayıtlı ses</b> ile telefonun sesine dönebilirsiniz.
+              <b>YENİ — Kelime Kitabı:</b> Soru yok, puan yok. Kategoriyi seçin, resme dokunun; konuşan yüz kelimeyi söylesin. Bebekler ve konuşmaya yeni başlayan çocuklar için. <b>Kelimeler</b> menüsünün en üstünde.
             </p>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>YENİ — Ağzımı İzle:</b> Konuşan yüz, sesleri ve ilk kelimeleri dudak hareketiyle gösteriyor (<b>Konuşma ve Anlama</b> menüsü). Hece okuma derslerinde de var.
+              <b>YENİ — Sürükle, yerleştir:</b> <b>Kutu Oyunu</b> (Kavramlar › Konum) ve <b>Nesneyi Yerleştir</b>: nesneyi kutunun içine, masanın altına, ağacın arkasına, iki kutunun arasına koy. <b>Nesneleri Taşı</b>: "Tabağa iki kurabiye koy."
             </p>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>YENİ — Program Modu:</b> Beceri alanlarına göre günlük plan, ilk girişte tanıma turu, unutulmasın diye tekrar ve sonunda ödül oyunu.
+              <b>Program Modu:</b> Artık <b>üniteli (eski)</b> ya da <b>beceri kulvarlı (yeni)</b> programı seçebilirsiniz. Çocuğun takıldığı etkinliği <b>Geç</b> ile atlayabilirsiniz.
             </p>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>YENİ — Oyunlar:</b> Yapboz, Tren Yolu, Boyama (bitince resim canlanıyor!), Hafıza, Sayma, Gölge ve daha fazlası baştan yapıldı. Süre ve puan baskısı yok; çocuk başardıkça oyun kendiliğinden zorlaşıyor.
+              <b>Gerçek insan sesi:</b> Soruların, kelimelerin, hikâyelerin ve oyun yönergelerinin neredeyse tamamı gerçek bir insan sesiyle. <b>Ağzımı İzle</b>'de konuşan yüz sesleri ve kelimeleri dudak hareketiyle gösteriyor.
             </p>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
               İlk Sözüm <b>tamamen ücretsiz ve reklamsızdır.</b> Hiçbir özellik için ödeme gerekmez.
@@ -159,7 +159,7 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
               <b>DİL:</b> Uygulamayı Türkçe dışında bir dilde kullanmak isterseniz lütfen mağaza yorumuna yazın; istek gelirse çoklu dil desteği ekleyeceğiz.
             </p>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>YAKINDA:</b> Windows Store ve iPhone/iPad sürümleri.
+              <b>YAKINDA:</b> Windows Store sürümü; destek gelirse iPhone/iPad sürümü.
             </p>
             <div className="bg-white/20 p-2 rounded-lg mt-1 border border-sky-500/20">
               <p className={`text-xs leading-relaxed font-semibold ${subTextClass}`}>
@@ -176,7 +176,7 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
         ) : (
           <>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>NEW:</b> Real human voice for syllable reading lessons, concepts, the communication board and games; a talking face that shows mouth movements (“Watch My Mouth”); a new Program Mode; and rebuilt games. İlk Sözüm is <b>completely free and ad-free.</b>
+              <b>NEW:</b> Word Book (no questions: tap a picture and the talking face says the word), drag-and-place games (Box Game, Place the Object, Move the Objects), a choice between the classic and the new Program Mode, and a real human voice almost everywhere. İlk Sözüm is <b>completely free and ad-free.</b>
             </p>
             {androidUygulama && (
               <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
