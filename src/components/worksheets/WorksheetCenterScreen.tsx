@@ -1,4 +1,5 @@
-import React, { useState, useMemo, lazy, Suspense } from 'react';
+import React, { useState, useMemo, Suspense } from 'react';
+import { lazyGuvenli as lazy } from '../../utils/lazyGuvenli.ts';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon.tsx';
 import PrintIcon from '../icons/PrintIcon.tsx';
 import GenericWorksheetPreview from './GenericWorksheetPreview.tsx';

@@ -1,4 +1,5 @@
-import { lazy, useCallback, useMemo, useState, useEffect } from 'react';
+import { useCallback, useMemo, useState, useEffect } from 'react';
+import { lazyGuvenli as lazy } from '../../utils/lazyGuvenli.ts';
 import { useAppContext } from '../../contexts/AppContext.ts';
 import { ScreenState, ActivityType, ActivityCategory } from '../../types.ts';
 import { ekranSay, heceSay } from '../../services/sayac.ts';
