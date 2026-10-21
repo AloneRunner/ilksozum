@@ -57,8 +57,8 @@ const PrintSelectionDetailScreen = lazy(() => import('../PrintSelectionDetailScr
 const WorksheetCenterScreen = lazy(() => import('../worksheets/WorksheetCenterScreen.tsx'));
 const RelativeComparisonActivity = lazy(() => (import('../RelativeComparisonActivity.tsx') as any));
 const ProgramModeIntroScreen = lazy(() => import('../ProgramModeIntroScreen.tsx'));
-// Program Modu 2 (beceri kulvarları, 2026-10). false yapılırsa eski üniteli Program Modu açılır.
-const YENI_PROGRAM = true;
+// Program Modu 2 (beceri kulvarları, 2026-10) ve eski üniteli Program Modu: ebeveyn seçer (Kaan, 2026-10-21: eskiyi tercih ediyorum).
+// Varsayılan: eski. Seçim localStorage 'programSurumu' = 'yeni' | 'eski'.
 const ProgramEkrani = lazy(() => import('../../program/ProgramEkrani.tsx'));
 const FiveWOneHMenuScreen = lazy(() => import('../FiveWOneHMenuScreen.tsx'));
 const SkillMenuScreen = lazy(() => import('../SkillMenuScreen.tsx'));
@@ -139,6 +139,8 @@ export const AppRouter = () => {
     // Beceri menüsü: hangi beceri açık, etkinlik oradan mı başladı (geri tuşu oraya dönsün)
     const [aktifBeceri, setAktifBeceri] = useState<BeceriId | null>(null);
     const [beceriDonus, setBeceriDonus] = useState(false);
+    const [yeniProgram, setYeniProgram] = useState<boolean>(() => { try { return window.localStorage.getItem('programSurumu') === 'yeni'; } catch { return false; } });
+    const programSurumuSec = (yeni: boolean) => { try { window.localStorage.setItem('programSurumu', yeni ? 'yeni' : 'eski'); } catch { /* yok say */ } setYeniProgram(yeni); };
     // Şekiller: her oturumun başında kısa tanıtım; öğrenilen oturumun veri dizisi burada tutulur
     const [sekilTanitilan, setSekilTanitilan] = useState<unknown>(null);
     // Ödül oyunu (Program Modu oturum sonu) bitince Program Modu'na dönülür
@@ -771,7 +773,7 @@ export const AppRouter = () => {
             await etkinlikBaslat(act, ScreenState.ConceptActivitiesMenu);
         }} onBack={handleGoToMenu} activeCategory={ctx.navigation.activeConceptTab} onSelectCategory={ctx.navigation.setActiveConceptTab} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} enabledActivities={ctx.profile.enabledActivitiesSet} />;
 
-        case ScreenState.ProgramIntro: if (YENI_PROGRAM) return <ProgramEkrani
+        case ScreenState.ProgramIntro: { const programEkrani = yeniProgram ? <ProgramEkrani
             profilId={ctx.profile.activeProfile?.id}
             stats={ctx.profile.activityStats}
             onBack={() => setScreenState(ScreenState.MainMenu)}
@@ -788,8 +790,7 @@ export const AppRouter = () => {
                 setOdulDonus(true);
                 setScreenState(hedef);
             }}
-        />;
-        return <ProgramModeIntroScreen
+        /> : <ProgramModeIntroScreen
             onBack={() => setScreenState(ScreenState.MainMenu)}
             onStartProgramMode={async () => {
                 setBeceriDonus(false);
@@ -814,6 +815,17 @@ export const AppRouter = () => {
             isPremium={ctx.settings.isPremium}
             parentOverrides={ctx.profile.parentOverrides}
         />;
+        // Sürüm seçici: ekranın üstünde ince şerit (alttaki sabit düğmelerin üstüne binmesin)
+        return <div className="flex h-full w-full flex-col">
+            <div className="flex shrink-0 items-center justify-center gap-2 bg-white/90 px-3 py-1.5 shadow-sm">
+                <span className="text-xs font-bold text-slate-500">Program türü:</span>
+                <div className="flex gap-1 rounded-full bg-slate-100 p-0.5">
+                    <button onClick={() => programSurumuSec(false)} className={`rounded-full px-3 py-1 text-xs font-black ${!yeniProgram ? 'bg-emerald-500 text-white shadow' : 'text-slate-500'}`}>Üniteli (eski)</button>
+                    <button onClick={() => programSurumuSec(true)} className={`rounded-full px-3 py-1 text-xs font-black ${yeniProgram ? 'bg-emerald-500 text-white shadow' : 'text-slate-500'}`}>Beceri kulvarlı (yeni)</button>
+                </div>
+            </div>
+            <div className="relative min-h-0 flex-1 overflow-y-auto">{programEkrani}</div>
+        </div>; }
 
         case ScreenState.Playing: return renderPlayingScreen();
 

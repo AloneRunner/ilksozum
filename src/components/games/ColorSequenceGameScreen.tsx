@@ -130,10 +130,12 @@ const ColorSequenceGameScreen: React.FC<ColorSequenceGameScreenProps> = ({ onBac
     }, [hiz, renkSoyle, ton]);
 
     const yeniRenk = (dizi: number[]) => {
-        // Aynı renk üç kez art arda gelmesin (çocuk için kafa karıştırıcı)
+        // Kaan (2026-10-21): "bir renk iki kere üst üste yanmasın, çocukların kafası karışıyor".
+        // Kısa ve orta seviyede aynı renk art arda hiç gelmez; uzun seviyede en fazla iki kez.
         let r = Math.floor(Math.random() * PADS.length);
         const n = dizi.length;
-        while (n >= 2 && dizi[n - 1] === r && dizi[n - 2] === r) r = Math.floor(Math.random() * PADS.length);
+        const kolay = seviye < HEDEFLER.length - 1;
+        while (n >= 1 && dizi[n - 1] === r && (kolay || (n >= 2 && dizi[n - 2] === r))) r = Math.floor(Math.random() * PADS.length);
         return r;
     };
 
