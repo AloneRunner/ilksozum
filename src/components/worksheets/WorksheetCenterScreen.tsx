@@ -29,6 +29,8 @@ const KartAtolyesi = lazy(() => import('./KartAtolyesi.tsx'));
 
 interface WorksheetCenterScreenProps {
   onBack: () => void;
+  /** Program Modu'ndan gelince: çocuğun bu hafta çalıştığı konuların kâğıtları (en üstte) */
+  onerilen?: string[];
 }
 
 type ViewState =
@@ -49,7 +51,8 @@ const CATEGORY_META: Record<WorksheetCategory, { icon: string; bg: string; text:
   'Nesne Tanıma':   { icon: '🔍', bg: 'bg-emerald-500', text: 'Nesne Tanıma'   },
 };
 
-const WorksheetCenterScreen: React.FC<WorksheetCenterScreenProps> = ({ onBack }) => {
+const WorksheetCenterScreen: React.FC<WorksheetCenterScreenProps> = ({ onBack, onerilen }) => {
+  const onerilenler = (onerilen || []).map((id) => WORKSHEET_REGISTRY.find((w) => w.id === id)).filter((w): w is WorksheetDef => !!w);
   const [view, setView] = useState<ViewState>({ mode: 'menu' });
   const [activeCategory, setActiveCategory] = useState<WorksheetCategory | 'Tümü'>('Tümü');
   const [search, setSearch] = useState('');
@@ -293,6 +296,15 @@ const WorksheetCenterScreen: React.FC<WorksheetCenterScreenProps> = ({ onBack })
             <span className="text-5xl">🔍</span>
             <p className="text-slate-500 font-semibold text-sm">"{search}" için sonuç bulunamadı</p>
             <button onClick={() => setSearch('')} className="text-indigo-500 text-sm font-bold">Temizle</button>
+          </div>
+        )}
+
+        {!search && onerilenler.length > 0 && (
+          <div className="rounded-2xl border-2 border-amber-300 bg-amber-50 p-3">
+            <h3 className="mb-2 text-sm font-black text-amber-900">⭐ Çocuğunuzun bu hafta çalıştığı konular ({onerilenler.length})</h3>
+            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+              {onerilenler.map(def => <WorksheetCard key={`o-${def.id}`} def={def} onSelect={handleSelectWorksheet} />)}
+            </div>
           </div>
         )}
 

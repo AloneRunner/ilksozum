@@ -26,6 +26,8 @@ interface ProgramModeIntroScreenProps {
   /** Ebeveyn: etkinliği X gün ertele / ertelemeyi kaldır */
   onErtele?: (activityId: string) => void;
   onErteleKaldir?: (activityId: string) => void;
+  /** Bu hafta çalışılan konuların çalışma kâğıtları */
+  onKagitlar?: (etkinlikler: string[]) => void;
 }
 
 type TabType = 'progress' | 'units' | 'today';
@@ -49,7 +51,8 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
   isPremium,
   parentOverrides,
   onErtele,
-  onErteleKaldir
+  onErteleKaldir,
+  onKagitlar
 }) => {
   // Ertelenenler (kalan gün)
   const ertelenenler = (parentOverrides || []).filter(o => o.reason === ERTELE && o.expiresAt > Date.now())
@@ -529,6 +532,13 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
             ))}
           </div>
         </section>
+      )}
+
+      {onKagitlar && (
+        <button type="button" onClick={() => onKagitlar(todaySession.activities.map(a => String(a.activityId)))}
+          className="mt-2 w-full rounded-2xl border-2 border-indigo-200 bg-indigo-50 px-4 py-3 text-sm font-black text-indigo-800 shadow-sm active:scale-95">
+          🖨️ Bu haftanın çalışma kâğıtları
+        </button>
       )}
 
       <div className="mt-2 flex items-center justify-between gap-3">

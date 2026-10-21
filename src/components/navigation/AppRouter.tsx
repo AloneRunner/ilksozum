@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useState, useEffect } from 'react';
 import { lazyGuvenli as lazy } from '../../utils/lazyGuvenli.ts';
+import { haftaninKagitlari } from '../worksheets/etkinlikKagitlari.ts';
 import { useAppContext } from '../../contexts/AppContext.ts';
 import { ScreenState, ActivityType, ActivityCategory } from '../../types.ts';
 import { ekranSay, heceSay } from '../../services/sayac.ts';
@@ -141,6 +142,14 @@ export const AppRouter = () => {
     // Beceri menüsü: hangi beceri açık, etkinlik oradan mı başladı (geri tuşu oraya dönsün)
     const [aktifBeceri, setAktifBeceri] = useState<BeceriId | null>(null);
     const [beceriDonus, setBeceriDonus] = useState(false);
+    // Program Modu → "Bu haftanın kâğıtları": önerilen kâğıtlar ve dönüş ekranı
+    const [onerilenKagitlar, setOnerilenKagitlar] = useState<string[]>([]);
+    const [kagitDonus, setKagitDonus] = useState<ScreenState>(ScreenState.MainMenu);
+    const kagitlaraGit = (etkinlikler: string[]) => {
+        setOnerilenKagitlar(haftaninKagitlari(etkinlikler, ctx.profile.activityStats));
+        setKagitDonus(ScreenState.ProgramIntro);
+        setScreenState(ScreenState.WorksheetCenter);
+    };
     // Kelime Kitabı: nereden açıldıysa oraya dön
     const [kitapDonus, setKitapDonus] = useState<ScreenState>(ScreenState.ObjectCategoriesMenu);
     const kitapSeridi = (donus: ScreenState, alt: string) => (
@@ -796,6 +805,7 @@ export const AppRouter = () => {
             parentOverrides={ctx.profile.parentOverrides}
             onErtele={(id) => ctx.profile.handleErtele(id)}
             onErteleKaldir={(id) => ctx.profile.handleErteleKaldir(id)}
+            onKagitlar={kagitlaraGit}
             onBack={() => setScreenState(ScreenState.MainMenu)}
             onStart={async (kuyruk) => {
                 setBeceriDonus(false);
@@ -836,6 +846,7 @@ export const AppRouter = () => {
             parentOverrides={ctx.profile.parentOverrides}
             onErtele={(id) => ctx.profile.handleErtele(id)}
             onErteleKaldir={(id) => ctx.profile.handleErteleKaldir(id)}
+            onKagitlar={kagitlaraGit}
         />;
         // Sürüm seçici: ekranın üstünde ince şerit (alttaki sabit düğmelerin üstüne binmesin)
         return <div className="flex h-full w-full flex-col">
@@ -932,7 +943,7 @@ export const AppRouter = () => {
         case ScreenState.PrintSelectionDetail: return <PrintSelectionDetailScreen category={ctx.print.categoryForPrintSelection!} onBack={() => setScreenState(ctx.previousScreen)} onConfirmSelection={(cards) => ctx.print.handleUpdatePrintPool(cards, ctx.previousScreen, setScreenState)} bannedImageIds={ctx.settings.bannedImageIds} currentPrintPool={ctx.print.printPool} />;
 
         // Worksheet Flow
-        case ScreenState.WorksheetCenter: return <WorksheetCenterScreen onBack={() => setScreenState(ScreenState.MainMenu)} />;
+        case ScreenState.WorksheetCenter: return <WorksheetCenterScreen onerilen={onerilenKagitlar} onBack={() => { setOnerilenKagitlar([]); setScreenState(kagitDonus); setKagitDonus(ScreenState.MainMenu); }} />;
         // Mini Games
         case ScreenState.SkillMenu: {
             const beceri = beceriBul(aktifBeceri);

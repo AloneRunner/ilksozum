@@ -19,6 +19,8 @@ interface Props {
   parentOverrides?: ParentOverride[];
   onErtele?: (id: string) => void;
   onErteleKaldir?: (id: string) => void;
+  /** Bu hafta çalışılan konuların çalışma kâğıtları */
+  onKagitlar?: (etkinlikler: string[]) => void;
 }
 
 const ADLAR = new Map(ALL_SUB_ACHIEVEMENTS.map((s) => [String(s.id), s.name]));
@@ -31,7 +33,7 @@ const ROL: Record<OturumOgesi['rol'], { ad: string; renk: string }> = {
 };
 const emoji = (k: KulvarId) => KULVARLAR.find((x) => x.id === k)?.emoji || '•';
 
-const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOdul, parentOverrides, onErtele, onErteleKaldir }) => {
+const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOdul, parentOverrides, onErtele, onErteleKaldir, onKagitlar }) => {
   const ertelenen = useMemo(() => ertelenenleriOku(profilId, parentOverrides || []), [profilId, parentOverrides]);
   const ertelenenListe = (parentOverrides || []).filter((o) => ertelenen.has(String(o.activityId)))
     .map((o) => ({ id: String(o.activityId), gun: Math.max(1, Math.ceil((o.expiresAt - Date.now()) / 86400000)) }));
@@ -155,6 +157,12 @@ const ProgramEkrani: React.FC<Props> = ({ profilId, stats, onBack, onStart, onOd
               >
                 ▶ {bugunBitti ? 'Bir oturum daha başlat' : 'Oturumu başlat'}
               </button>
+              {onKagitlar && (
+                <button onClick={() => onKagitlar(oturum.map((o) => String(o.id)))}
+                  className="mt-2 w-full rounded-2xl border-2 border-indigo-200 bg-indigo-50 py-3 text-sm font-black text-indigo-800 active:scale-95">
+                  🖨️ Bu haftanın çalışma kâğıtları
+                </button>
+              )}
             </div>
           </>
         )}
