@@ -350,8 +350,14 @@ export const AppRouter = () => {
         const onBackToLetterSelection = () => setScreenState(ScreenState.LetterSelection);
 
         // Şekiller (sayaç: %54 = yazı-tura): soru sormadan önce şekilleri tanıt (oturum başında bir kez)
-        if (activityType === ActivityType.Shapes && currentIndex === 0 && sekilTanitilan !== activityData) {
-            return <SekilOgren onBitti={() => setSekilTanitilan(activityData)} onBack={onBackToConcept} />;
+        // Program Modu'nda bu tanıtım çocuk başına yalnız bir kez gösterilir (her oturumda tekrar etmesin)
+        const sekilAnahtar = `sekilTanitildi_${ctx.profile.activeProfile?.id || 'misafir'}`;
+        const sekilProgramdaGoruldu = ctx.activity.isProgramMode && (() => { try { return window.localStorage.getItem(sekilAnahtar) === '1'; } catch { return false; } })();
+        if (activityType === ActivityType.Shapes && currentIndex === 0 && sekilTanitilan !== activityData && !sekilProgramdaGoruldu) {
+            return <SekilOgren onBitti={() => {
+                if (ctx.activity.isProgramMode) { try { window.localStorage.setItem(sekilAnahtar, '1'); } catch { /* yok say */ } }
+                setSekilTanitilan(activityData);
+            }} onBack={onBackToConcept} />;
         }
         switch (activityType) {
             case ActivityType.Syllabification:
@@ -825,6 +831,8 @@ export const AppRouter = () => {
             lastSessionDate={window.localStorage.getItem(`lastProgramSession_${ctx.profile.activeProfile?.id}`) || undefined}
             isPremium={ctx.settings.isPremium}
             parentOverrides={ctx.profile.parentOverrides}
+            onErtele={(id) => ctx.profile.handleErtele(id)}
+            onErteleKaldir={(id) => ctx.profile.handleErteleKaldir(id)}
         />;
         // Sürüm seçici: ekranın üstünde ince şerit (alttaki sabit düğmelerin üstüne binmesin)
         return <div className="flex h-full w-full flex-col">

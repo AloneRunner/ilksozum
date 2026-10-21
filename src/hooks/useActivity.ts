@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { etkinlikSay, basariSay, modSay } from '../services/sayac.ts';
 import { programOturumBitti, ayarOku as programAyarOku } from '../program/motor.ts';
-import { ActivityType, ActivityStats, AttemptRecord, ActivityCategory, ParentOverride } from '../types.ts';
+import { ActivityType, ActivityStats, AttemptRecord, ActivityCategory, ParentOverride, ertelendiMi } from '../types.ts';
 import { ALL_SUB_ACHIEVEMENTS, LETTER_GROUPS, OBJECT_CATEGORIES, LETTER_SOUND_ACTIVITIES } from '../constants.ts';
 import { getActivityMetadata } from '../constants/activityMetadata';
 import { createObjectChoiceRounds, fetchConceptActivityData, fetchLetterActivityData, fetchSyllableWordsForGroup, fetchFiveWOneHBySubKey } from '../services/contentService.ts';
@@ -279,6 +279,7 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
         }
 
         const PROGRAM_QUEUE = session.activities.map(a => a.activityId);
+        modSay('program', 'basladi'); // üniteli (eski) Program Modu da sayılsın
         setRandomModeQueue(PROGRAM_QUEUE);
         setCurrentRandomActivityIndex(0);
         setRandomModeAttemptCount({});
@@ -356,7 +357,7 @@ export const useActivity = ({ activityStats, setActivityStats, showToast, handle
 
                 // Weak candidates from focus unit: success < 0.80 (include zeros so reinforcement appears
                 // even when a child kept failing and the percentage stuck just below threshold).
-                const weakFocus = focusActivities.filter(a => {
+                const weakFocus = focusActivities.filter(a => !ertelendiMi(parentOverrides, a)).filter(a => {
                         const s = successOf(a);
                         return s < 0.80;
                 }).sort((a,b) => successOf(b) - successOf(a));

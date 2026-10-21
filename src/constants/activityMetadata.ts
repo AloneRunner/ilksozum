@@ -43,7 +43,7 @@ export const ACTIVITY_METADATA_MAP: Record<string, ActivityMetadata> = {
   [ActivityType.LetterTracing]: {
     activityId: ActivityType.LetterTracing,
     activityName: 'Harf Çizgi Takibi',
-    unitNumber: 1,
+    unitNumber: 10,
     prerequisite: null,
     masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
   },
@@ -117,7 +117,7 @@ export const ACTIVITY_METADATA_MAP: Record<string, ActivityMetadata> = {
   [ActivityType.ConstrainedColoring]: {
     activityId: ActivityType.ConstrainedColoring,
     activityName: 'Kısıtlı Boyama',
-    unitNumber: 2,
+    unitNumber: 4,
     prerequisite: ActivityType.Shapes,
     masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
   },
@@ -440,7 +440,7 @@ export const ACTIVITY_METADATA_MAP: Record<string, ActivityMetadata> = {
   [ActivityType.BeforeAfter]: {
     activityId: ActivityType.BeforeAfter,
     activityName: 'Önce / Sonra',
-    unitNumber: 7,
+    unitNumber: 9,
     prerequisite: ActivityType.DayNight,
     masteryRule: { poolType: MasteryPoolType.WIDE, masteryThreshold: 0.8, recentAttemptsWindow: 5 }
   },

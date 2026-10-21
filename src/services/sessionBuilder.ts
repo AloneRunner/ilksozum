@@ -34,7 +34,7 @@
  *    pekiştirme turu eklenmez.
  */
 
-import { ActivityType, ActivityStats, ParentOverride } from '../types';
+import { ActivityType, ActivityStats, ParentOverride, ertelendiMi } from '../types';
 import { 
   getAvailableActivities, 
   getMasteredActivities,
@@ -99,6 +99,8 @@ export function buildDailySession(
     return hist.length > 0;
   };
   const randPick = <T,>(arr: T[], n: number) => arr.slice().sort(() => Math.random() - 0.5).slice(0, n);
+  // Ebeveynin ertelediği etkinlikler bu oturuma hiç girmez (ısınma, yeni, pekiştirme)
+  const ertelenmedi = (id: ActivityType | string) => !ertelendiMi(parentOverrides, id);
 
   // --- Focus (first incomplete unit, scanned sequentially from 1) ---
   const highestAllowedUnit = (() => {
@@ -123,7 +125,7 @@ export function buildDailySession(
   const focusDef = getUnitDefinition(focusUnit);
   const focusActivities = (focusDef?.activities || []).filter(a => {
     const meta = getActivityMetadata(a);
-    return meta && meta.unitNumber === focusUnit; // sanity
+    return meta && meta.unitNumber === focusUnit && ertelenmedi(a); // sanity
   });
 
   // Previous units' activities (flatten) for warmup / reinforcement pools
@@ -131,7 +133,7 @@ export function buildDailySession(
   for (let u = 1; u < focusUnit; u++) {
     const def = getUnitDefinition(u);
     if (!def) continue;
-    previousActivities.push(...def.activities);
+    previousActivities.push(...def.activities.filter(ertelenmedi));
   }
 
   // Filter previous activities:

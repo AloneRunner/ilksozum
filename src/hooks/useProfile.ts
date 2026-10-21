@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import { Profile, ActivityStats, ActivityCategory, ParentOverride } from '../types.ts';
+import { Profile, ActivityStats, ActivityCategory, ParentOverride, ERTELE } from '../types.ts';
 import { useLocalStorage } from './useLocalStorage.ts';
 import { getValueFromLocalStorage } from '../utils.ts';
 import { ALL_SUB_ACHIEVEMENTS } from '../constants.ts';
@@ -211,7 +211,7 @@ export const useProfile = ({ showToast }: UseProfileProps) => {
     const handleAddParentOverride = useCallback((activityId: string, durationHours: number = 24, reason?: string, isPremium: boolean = false, ignoreForProgress: boolean = false) => {
         // Limit active overrides by premium status: non-premium = 3, premium = 15
         const now = Date.now();
-        const activeCount = parentOverrides.filter(o => o.expiresAt > now).length;
+        const activeCount = parentOverrides.filter(o => o.expiresAt > now && o.reason !== ERTELE).length; // ertelemeler joker sayılmaz
         const limit = isPremium ? 15 : 3;
         if (activeCount >= limit) {
             showToast(isPremium ? `Premium için aktif joker limiti (${limit}) doldu.` : `Üzgünüz, aktif joker limiti (${limit}) doldu.`, 'info');
@@ -231,6 +231,19 @@ export const useProfile = ({ showToast }: UseProfileProps) => {
     const handleRemoveParentOverride = useCallback((activityId: string) => {
         setParentOverrides(prev => prev.filter(o => o.activityId !== activityId));
         showToast(`"${activityId}" için joker kaldırıldı`, 'info');
+    }, [showToast]);
+
+    // Erteleme (Kaan, 2026-10-21: "aile isterse konuyu erteleyebilsin"): etkinlik X gün Program Modu'na gelmez
+    // ve ünitenin ilerlemesini tıkamaz (ignoreForProgress). Süre dolunca kendiliğinden geri gelir. Joker sınırına sayılmaz.
+    const handleErtele = useCallback((activityId: string, gun: number = 14) => {
+        const yeni: ParentOverride = { activityId, expiresAt: Date.now() + gun * 24 * 60 * 60 * 1000, reason: ERTELE, ignoreForProgress: true };
+        setParentOverrides(prev => [...prev.filter(o => o.activityId !== activityId), yeni]);
+        showToast(`Ertelendi: ${gun} gün sonra programa geri gelecek.`, 'info');
+    }, [showToast]);
+
+    const handleErteleKaldir = useCallback((activityId: string) => {
+        setParentOverrides(prev => prev.filter(o => !(o.activityId === activityId && o.reason === ERTELE)));
+        showToast('Erteleme kaldırıldı; etkinlik programa geri döndü.', 'info');
     }, [showToast]);
 
     const handleClearExpiredOverrides = useCallback(() => {
@@ -261,5 +274,7 @@ export const useProfile = ({ showToast }: UseProfileProps) => {
         handleAddParentOverride,
         handleRemoveParentOverride,
         handleClearExpiredOverrides,
+        handleErtele,
+        handleErteleKaldir,
     };
 };

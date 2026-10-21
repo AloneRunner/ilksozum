@@ -573,3 +573,9 @@ export interface ParentOverride {
   /** If true, this override should exclude the activity from unit progression calculations (treated as covered/mastered for unlocking) */
   ignoreForProgress?: boolean;
 }
+
+/** Ebeveynin "Ertele" seçimi (ParentOverride.reason). Ertelenen etkinlik süre dolana dek Program Modu'na gelmez. */
+export const ERTELE = 'ertele';
+/** Etkinlik şu an ertelenmiş mi? */
+export const ertelendiMi = (overrides: ParentOverride[] | undefined, activityId: ActivityType | string): boolean =>
+  !!overrides?.some(o => String(o.activityId) === String(activityId) && o.reason === ERTELE && o.expiresAt > Date.now());

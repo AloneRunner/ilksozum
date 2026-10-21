@@ -3,7 +3,7 @@ import { t } from '../i18n';
 import { ActivityType } from '../types';
 import { SimpleThemeWrapper, SIMPLE_THEME_ACTION_BUTTON, SIMPLE_THEME_TEXT_PRIMARY, SIMPLE_THEME_TEXT_SECONDARY } from '../themes/simpleTheme';
 import AcademicCapIcon from './icons/AcademicCapIcon.tsx';
-import { ActivityStats, ParentOverride } from '../types.ts';
+import { ActivityStats, ParentOverride, ERTELE } from '../types.ts';
 import { UNIT_DEFINITIONS } from '../constants/unitDefinitions';
 import { getUnitCompletionPercentage, getUnitDisplaySuccessPercentageForProgramMode, isUnitUnlockedForProgramMode, getUnlockedUnitsForProgramMode, getActivityProgramSuccessPercentage } from '../services/masteryEngine';
 import { buildDailySession, getRecommendedSessionLength, shouldShowNewSession } from '../services/sessionBuilder';
@@ -24,6 +24,9 @@ interface ProgramModeIntroScreenProps {
   profileId?: string;
   isPremium?: boolean;
   parentOverrides?: ParentOverride[];
+  /** Ebeveyn: etkinliği X gün ertele / ertelemeyi kaldır */
+  onErtele?: (activityId: string) => void;
+  onErteleKaldir?: (activityId: string) => void;
 }
 
 type TabType = 'progress' | 'units' | 'today';
@@ -45,8 +48,17 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
   lastSessionDate,
   profileId,
   isPremium,
-  parentOverrides
+  parentOverrides,
+  onErtele,
+  onErteleKaldir
 }) => {
+  // Ertelenenler (kalan gün)
+  const ertelenenler = (parentOverrides || []).filter(o => o.reason === ERTELE && o.expiresAt > Date.now())
+    .map(o => ({ id: String(o.activityId), gun: Math.max(1, Math.ceil((o.expiresAt - Date.now()) / 86400000)) }));
+  const erteleDugmesi = (id: string) => onErtele ? (
+    <button type="button" onClick={() => onErtele(id)} title="Bu etkinliği 2 hafta programa getirme"
+      className="ml-auto shrink-0 rounded-full border border-amber-200 bg-amber-50 px-2 py-0.5 text-[11px] font-bold text-amber-800 hover:bg-amber-100">⏸ Ertele</button>
+  ) : null;
   const [activeTab, setActiveTab] = useState<TabType>('today');
   // Manual reinforcement selections per-profile (persisted in localStorage)
   const [manualReinforcement, setManualReinforcement] = useState<Set<string>>(new Set());
@@ -215,12 +227,12 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
         <p className={`mt-3 text-sm sm:text-base ${SIMPLE_THEME_TEXT_SECONDARY}`}>
           {t('programMode.subtitle', '10 ünitede planlı ve dengeli ilerleme')}
         </p>
-        {/* Development warning banner */}
-        <div className="mt-3 text-xs sm:text-sm text-amber-800 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 inline-flex items-start gap-2 text-left">
-          <span>⚠️</span>
+        {/* "Deneysel" uyarısı yerine aileye kısa yol gösterme (Kaan, 2026-10-21: üniteli program elden geçirildi) */}
+        <div className="mt-3 text-xs sm:text-sm text-emerald-900 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2 inline-flex items-start gap-2 text-left">
+          <span>💡</span>
           <div>
-            <div className="font-semibold">{t('programMode.devWarningTitle', 'Deneysel: Program Modu')}</div>
-            <div>{t('programMode.devWarningDesc', 'Bu mod hâlâ geliştirilme aşamasındadır. Zaman zaman ünite geçişi/ilerleme beklediğiniz gibi çalışmayabilir. Lütfen hataları ve görüşlerinizi bizimle paylaşın.')}</div>
+            Çocuğunuzun zorlandığı bir etkinliği <b>⏸ Ertele</b> ile iki hafta programdan çıkarabilirsiniz; ünite ilerlemesi tıkanmaz.
+            Oyun sırasında üstteki <b>Geç</b> ile o etkinliği atlayabilirsiniz.
           </div>
         </div>
       </header>
@@ -235,6 +247,20 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
       {/* TAB CONTENT */}
       {activeTab === 'today' && (
         <>
+          {ertelenenler.length > 0 && (
+            <section className="rounded-2xl border border-amber-200 bg-amber-50 p-3 text-sm shadow-sm">
+              <p className="mb-1 text-xs font-bold text-amber-800">⏸ Ertelenenler (programa gelmez, ünite ilerlemesini tıkamaz)</p>
+              <ul className="space-y-1">
+                {ertelenenler.map(e => (
+                  <li key={e.id} className="flex items-center gap-2">
+                    <span>{getActivityName(e.id)}</span>
+                    <span className="text-xs text-amber-700">{e.gun} gün sonra geri gelir</span>
+                    {onErteleKaldir && <button type="button" onClick={() => onErteleKaldir(e.id)} className="ml-auto rounded-full border border-slate-200 bg-white px-2 py-0.5 text-[11px] font-bold text-slate-600">Geri al</button>}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
           {/* TODAY'S SESSION */}
           {todaySession.activities.length > 0 ? (
             <section className="rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 shadow-sm p-4 sm:p-6">
@@ -305,6 +331,7 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
                           <li key={idx} className="flex items-center gap-2">
                             <span className="text-blue-500">•</span>
                             <span>{getActivityName(String(activity.activityId))}</span>
+                            {erteleDugmesi(String(activity.activityId))}
                           </li>
                         ))}
                     </ul>
@@ -502,6 +529,16 @@ const ProgramModeIntroScreen: React.FC<ProgramModeIntroScreenProps> = ({
                         <span className={unit.isUnlocked ? SIMPLE_THEME_TEXT_SECONDARY : 'text-gray-400'}>
                           {getActivityName(activityId as string)}
                         </span>
+                        {(() => {
+                          const e = ertelenenler.find(x => x.id === String(activityId));
+                          if (e) return (
+                            <span className="ml-auto flex shrink-0 items-center gap-1 text-[11px] font-bold text-amber-700">
+                              ⏸ {e.gun} gün
+                              {onErteleKaldir && <button type="button" onClick={() => onErteleKaldir(String(activityId))} className="rounded-full border border-slate-200 bg-white px-2 py-0.5 text-slate-600 hover:bg-slate-50">Geri al</button>}
+                            </span>
+                          );
+                          return unit.isUnlocked ? erteleDugmesi(String(activityId)) : null;
+                        })()}
                       </li>
                     ))}
                   </ul>

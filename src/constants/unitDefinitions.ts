@@ -25,6 +25,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       'meyveler',
       'tasitlar',
       'oyuncaklar',
+      ActivityType.AyniniBul,          // Aynısını Bul (2026-10-21)
     ],
     completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [], // No prerequisites - first unit is always unlocked
@@ -55,6 +56,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       'icecekler',
       'sebzeler',
       'diger_yiyecekler',
+      ActivityType.ColorRecognition,   // Rengi Ne? (2026-10-21)
     ],
     completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [2],
@@ -70,6 +72,8 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       ActivityType.OpenClosed,
       'bitkiler',
       'aile_uyeleri',
+      ActivityType.CountMatch,         // Kaç Tane Var? (2026-10-21)
+      ActivityType.ConstrainedColoring, // Kısıtlı Boyama (2026-10-21)
     ],
     completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [3],
@@ -118,7 +122,6 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       ActivityType.RelativeThinThick,
       ActivityType.RelativeWideNarrow,
       ActivityType.RelativeFewMuch,
-      ActivityType.BeforeAfter,
       ActivityType.BelowAbove,
       ActivityType.BesideOpposite,
       ActivityType.InFrontOfBehind,
@@ -135,6 +138,9 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       ActivityType.TehlikeliGuvenli,
       ActivityType.YenirYenmez,
       ActivityType.OldNew,
+      ActivityType.NoisyQuiet,         // Gürültülü / Sessiz (2026-10-21)
+      ActivityType.TersDuz,            // Ters / Düz (2026-10-21)
+      ActivityType.WhatsMissing,       // Hangisi Kayıp? (2026-10-21)
     ],
     completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [6],
@@ -153,6 +159,7 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       'dogal_yapilar_uzay',
       ActivityType.MessyClean,
       ActivityType.StraightCurved,
+      ActivityType.WhoseIsThis,        // Bu Kimin? (2026-10-21)
     ],
     completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [7],
@@ -175,6 +182,8 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       ActivityType.KalabalikTenha,
       ActivityType.HungryFull,
       ActivityType.YoungOld,
+      ActivityType.ClockLearning,      // Saat (2026-10-21)
+      ActivityType.BeforeAfter,        // Önce / Sonra: 7. üniteden taşındı (Kaan: küçük yaşta zor, ünite tıkanıyordu)
     ],
     completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [8],
@@ -198,7 +207,8 @@ export const UNIT_DEFINITIONS: UnitDefinition[] = [
       ActivityType.FindTheLetterInGrid,
       ActivityType.SoundPresence,
       ActivityType.Syllabification,
-      ActivityType.EmbeddedStory,
+      ActivityType.LetterTracing,      // Harf Çizgi Takibi (2026-10-21)
+      // Hikâye Zamanı programdan çıkarıldı (2026-10-21): bitişi olmayan gezinme ekranı, ünite ilerlemesini tıkıyordu
     ],
     completionThreshold: UNIT_COMPLETION_THRESHOLD,
     prerequisiteUnits: [9],
