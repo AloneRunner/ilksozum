@@ -2455,7 +2455,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         key={`${option.id}-${index}`}
                         imageUrl={option.imageUrl}
                         word={displayWord}
-                        isRevealed={isCorrect || isWordLabelVisible}
+                        isRevealed={isWordLabelVisible} // Kaan (2026-10-21): etiket kapalıysa doğru cevaptan sonra da yazı çıkmasın
                         isSelected={selectedId === option.id && !isWrong}
                         isCorrect={isCorrect && selectedId === option.id}
                         onClick={() => handleCardClick(option.id, option.isCorrect, spokenWord)}

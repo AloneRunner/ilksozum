@@ -74,7 +74,7 @@ const GenericWorksheetPreview: React.FC<GenericWorksheetPreviewProps> = ({
   // Yazdırma/PDF sayacında bu kağıdın adı (kimliksiz toplam)
   React.useEffect(() => { pdfAdiAyarla(worksheetTitle || 'kavram'); }, [worksheetTitle]);
   const [questionCount, setQuestionCount] = useState(Math.min(9, rounds.length));
-  const [useRealistic, setUseRealistic] = useState(false);
+  const useRealistic = false; // çizgi film görselleri kaldırıldı; hep yeni fotoğraf
   const [cols, setCols] = useState<2 | 3>(questionCount <= 6 ? 2 : 3);
   const [layoutMode, setLayoutMode] = useState<'standard' | 'cards'>('standard');
 
@@ -175,13 +175,7 @@ const GenericWorksheetPreview: React.FC<GenericWorksheetPreviewProps> = ({
             ))}
           </div>
 
-          {/* Realistic toggle */}
-          <button
-            onClick={() => setUseRealistic(v => !v)}
-            className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-semibold transition-colors ${useRealistic ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-100 text-slate-600'}`}
-          >
-            {useRealistic ? '📷 Gerçekçi' : '🎨 Çizgifilm'}
-          </button>
+          {/* "Çizgifilm / Gerçekçi" düğmesi kaldırıldı (Kaan, 2026-10-21): çizgi film görselleri artık yok, her zaman yeni fotoğraflar */}
 
           {/* Layout Mode */}
           <div className="flex items-center bg-slate-100 rounded-lg p-1 text-sm font-semibold text-slate-700 h-[34px]">

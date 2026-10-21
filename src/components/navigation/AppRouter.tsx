@@ -42,6 +42,7 @@ const BasaraLessonMapScreen = lazy(() => import('../basara/BasaraLessonMapScreen
 const BasaraLessonScreen = lazy(() => import('../basara/BasaraLessonScreen.tsx'));
 const LearningCard = lazy(() => import('../LearningCard.tsx'));
 const NesneYerlestir = lazy(() => import('../kutu/NesneYerlestir.tsx'));
+const KelimeKitabi = lazy(() => import('../sozluk/KelimeKitabi.tsx'));
 const SekilOgren = lazy(() => import('../kutu/SekilOgren.tsx'));
 const TabagaKoy = lazy(() => import('../kutu/TabagaKoy.tsx'));
 const LineTracingScreen = lazy(() => import('../LineTracingScreen.tsx'));
@@ -139,6 +140,14 @@ export const AppRouter = () => {
     // Beceri menüsü: hangi beceri açık, etkinlik oradan mı başladı (geri tuşu oraya dönsün)
     const [aktifBeceri, setAktifBeceri] = useState<BeceriId | null>(null);
     const [beceriDonus, setBeceriDonus] = useState(false);
+    // Kelime Kitabı: nereden açıldıysa oraya dön
+    const [kitapDonus, setKitapDonus] = useState<ScreenState>(ScreenState.ObjectCategoriesMenu);
+    const kitapSeridi = (donus: ScreenState, alt: string) => (
+        <button onClick={() => { setKitapDonus(donus); setScreenState(ScreenState.KelimeKitabi); }}
+            className="flex shrink-0 items-center justify-center gap-2 bg-amber-100 px-3 py-2 text-sm font-black text-amber-900 shadow-sm active:bg-amber-200">
+            <span className="text-lg">📖</span> Kelime Kitabı <span className="font-semibold text-amber-700">· {alt}</span> <span>▶</span>
+        </button>
+    );
     const [yeniProgram, setYeniProgram] = useState<boolean>(() => { try { return window.localStorage.getItem('programSurumu') === 'yeni'; } catch { return false; } });
     const programSurumuSec = (yeni: boolean) => { try { window.localStorage.setItem('programSurumu', yeni ? 'yeni' : 'eski'); } catch { /* yok say */ } setYeniProgram(yeni); };
     // Şekiller: her oturumun başında kısa tanıtım; öğrenilen oturumun veri dizisi burada tutulur
@@ -583,7 +592,8 @@ export const AppRouter = () => {
         }
         // Ses Taklit: kartlar + şarkılar tek ekranda (videolar kaldırıldı, yedek/seskart)
         case ScreenState.SoundImitationMenu: return <SesTaklitEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
-        case ScreenState.AgzimiIzle: return <AgzimiIzleEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.KelimeKitabi: return <KelimeKitabi onBack={() => setScreenState(kitapDonus)} />;
+        case ScreenState.AgzimiIzle: return <div className="flex h-full w-full flex-col">{kitapSeridi(ScreenState.AgzimiIzle, 'Daha çok kelime')}<div className="relative min-h-0 flex-1"><AgzimiIzleEkrani onBack={() => geriDon(ScreenState.MainMenu)} /></div></div>;
         case ScreenState.TuvaletEgitimi: return <TuvaletEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.LetterSelection: {
             return <LetterSelectionScreen onSelectLetter={ctx.activity.handleStartActivityWithLetter} onBack={() => geriDon(ScreenState.MainMenu)} activityType={ctx.activity.selectedActivityForLetter} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} />;
@@ -644,7 +654,7 @@ export const AppRouter = () => {
             />;
         }
 
-        case ScreenState.ObjectCategoriesMenu: return <ObjectCategoriesMenuScreen onSelectCategory={async (catId) => {
+        case ScreenState.ObjectCategoriesMenu: return <div className="flex h-full w-full flex-col">{kitapSeridi(ScreenState.ObjectCategoriesMenu, 'Sorusuz: dokun ve dinle')}<div className="relative min-h-0 flex-1 overflow-y-auto"><ObjectCategoriesMenuScreen onSelectCategory={async (catId) => {
             ctx.profile.updateActivityAttempt(catId);
             const catInfo = resolveObjectCategory(catId);
             if (catInfo) ctx.activity.setSelectedObjectCategory(catInfo);
@@ -668,7 +678,7 @@ export const AppRouter = () => {
             ctx.print.setCategoryForPrintSelection({ id: String(catId), title: String(resolved?.title || ''), color: String(color) });
             setPreviousScreen(screenState);
             setScreenState(ScreenState.PrintSelectionDetail);
-        }} isPremium={ctx.settings.isPremium} key={ctx.settings.language} />;
+        }} isPremium={ctx.settings.isPremium} key={ctx.settings.language} /></div></div>;
 
         case ScreenState.ObjectCategoriesIntlMenu: {
             // Only show a subset that has curated EN datasets for now, in a fixed logical order
