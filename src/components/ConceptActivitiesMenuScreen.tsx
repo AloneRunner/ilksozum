@@ -273,7 +273,7 @@ const buildEskiTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[
         {
           type: ActivityType.ClockLearning,
           title: isTr ? "Saat Öğreniyorum" : "Clock Learning",
-          subtitle: isTr ? "Saatleri eşleştir" : "Match the clocks",
+          subtitle: isTr ? "Tam, buçuk, çeyrek; saati kur" : "Match the clocks",
         },
       ],
     },

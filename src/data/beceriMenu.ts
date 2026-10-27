@@ -4,7 +4,7 @@
 import { ActivityType } from '../types.ts';
 
 export type BeceriId = 'harfler' | 'sayilar' | 'dusunme' | 'el' | 'konusma' | 'oyunOdasi';
-export type BeceriEkran = 'basara' | 'basara2' | 'sesTaklit' | 'besNBirK' | 'agiz' | 'tuvalet';
+export type BeceriEkran = 'basara' | 'basara2' | 'sesTaklit' | 'besNBirK' | 'agiz' | 'tuvalet' | 'saat';
 
 interface OgeTemel { emoji: string; baslik: string; alt: string; sadeceTr?: boolean }
 export type BeceriOge =
@@ -56,6 +56,7 @@ export const BECERILER: Beceri[] = [
       e(ActivityType.DragAndDropCounting, '🧺', 'Nesneleri Taşı', 'İstenen sayıda nesneyi taşı'),
       o('numberSequence', '🪜', 'Sayı Sırala', '1, 2, 3... sırala'),
       e(ActivityType.OddEven, '🧦', 'Tek / Çift', 'Tek mi, bir çift mi?'),
+      { tur: 'ekran', ekran: 'saat', emoji: '🕒', baslik: 'Saat', alt: 'Akrep, yelkovan; tam, buçuk, çeyrek; saati kur' },
     ],
   },
   {

@@ -45,6 +45,7 @@ const BasaraLessonScreen = lazy(() => import('../basara/BasaraLessonScreen.tsx')
 const LearningCard = lazy(() => import('../LearningCard.tsx'));
 const NesneYerlestir = lazy(() => import('../kutu/NesneYerlestir.tsx'));
 const KelimeKitabi = lazy(() => import('../sozluk/KelimeKitabi.tsx'));
+const SaatMerkezi = lazy(() => import('../saat/SaatMerkezi.tsx'));
 const SekilOgren = lazy(() => import('../kutu/SekilOgren.tsx'));
 const TabagaKoy = lazy(() => import('../kutu/TabagaKoy.tsx'));
 const LineTracingScreen = lazy(() => import('../LineTracingScreen.tsx'));
@@ -220,6 +221,7 @@ export const AppRouter = () => {
             case 'sesTaklit': setScreenState(ScreenState.SoundImitationMenu); return;
             case 'agiz': setScreenState(ScreenState.AgzimiIzle); return;
             case 'tuvalet': setScreenState(ScreenState.TuvaletEgitimi); return;
+            case 'saat': setScreenState(ScreenState.ClockLearningGame); return;
             case 'besNBirK': ctx.activity.setActivityType(ActivityType.FiveWOneH); setScreenState(ScreenState.FiveWOneHMenu); return;
         }
     };
@@ -609,6 +611,7 @@ export const AppRouter = () => {
         // Ses Taklit: kartlar + şarkılar tek ekranda (videolar kaldırıldı, yedek/seskart)
         case ScreenState.SoundImitationMenu: return <SesTaklitEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.KelimeKitabi: return <KelimeKitabi onBack={() => setScreenState(kitapDonus)} />;
+        case ScreenState.ClockLearningGame: return <SaatMerkezi onBack={() => geriDon(ScreenState.ConceptActivitiesMenu)} />;
         case ScreenState.AgzimiIzle: return <div className="flex h-full w-full flex-col">{kitapSeridi(ScreenState.AgzimiIzle, 'Daha çok kelime')}<div className="relative min-h-0 flex-1"><AgzimiIzleEkrani onBack={() => geriDon(ScreenState.MainMenu)} /></div></div>;
         case ScreenState.TuvaletEgitimi: return <TuvaletEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.LetterSelection: {
@@ -796,6 +799,8 @@ export const AppRouter = () => {
 
         case ScreenState.ConceptActivitiesMenu: return <ConceptActivitiesMenuScreen onSelectActivity={async (act) => {
             setBeceriDonus(false);
+            // Saat: sekmeli Saat Merkezi açılır (Program Modu eski saat sorularıyla devam eder)
+            if (act === ActivityType.ClockLearning) { setScreenState(ScreenState.ClockLearningGame); return; }
             await etkinlikBaslat(act, ScreenState.ConceptActivitiesMenu);
         }} onBack={handleGoToMenu} activeCategory={ctx.navigation.activeConceptTab} onSelectCategory={ctx.navigation.setActiveConceptTab} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} enabledActivities={ctx.profile.enabledActivitiesSet} />;
 
