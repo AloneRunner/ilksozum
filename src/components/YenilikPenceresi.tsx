@@ -80,6 +80,8 @@ const YenilikPenceresi: React.FC<{ onDestek?: () => void }> = ({ onDestek }) => 
           </div>
         ) : (
           <div className="p-5 space-y-3 text-center">
+            {/* Aile politikası: bağış çağrısı ebeveynlere; satın alma Ayarlar'da ebeveyn kilidinin (ParentGateButton) arkasında */}
+            <span className="inline-block rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-500">👨‍👩‍👧 Ebeveynler için</span>
             <div className="text-6xl">💛</div>
             <h2 className="text-2xl font-black text-slate-800">Bir ricamız var</h2>
             <p className="text-slate-700 leading-relaxed">
