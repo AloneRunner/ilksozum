@@ -86,7 +86,7 @@ const YenilikPenceresi: React.FC<{ onDestek?: () => void }> = ({ onDestek }) => 
               İlk Sözüm <b>tamamen ücretsiz ve reklamsız</b>, öyle de kalacak.
             </p>
             <p className="text-slate-700 leading-relaxed">
-              İlk Sözüm'ü otizmli oğlu için bir baba geliştiriyor. Gerçek insan sesi kayıtları, yeni fotoğraflar ve
+              İlk Sözüm'ü bir şirket değil, tek bir geliştirici kendi imkânlarıyla yapıyor. Gerçek insan sesi kayıtları, yeni fotoğraflar ve
               iPhone/iPad sürümü için Apple hesabı her ay masraf demek.
             </p>
             <p className="text-slate-700 leading-relaxed">
