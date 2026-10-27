@@ -13,6 +13,7 @@ import { t } from "../i18n/index.ts";
 // import ShootingStars from "./ui/ShootingStars.tsx"; // sadeleştirildi
 // Heavy animations removed: WanderingMeteors, UFOFlyby
 import OtherAppsSection from "./OtherAppsSection.tsx";
+import YenilikPenceresi from "./YenilikPenceresi.tsx";
 import StoryIcon from "./icons/StoryIcon.tsx";
 import BasketIcon from "./icons/BasketIcon.tsx";
 import SparklesIcon from "./icons/SparklesIcon.tsx";
@@ -134,7 +135,13 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
         
         {isTr ? (
           <>
-            {/* Duyurular 9.2 (Kaan, 2026-10-21: "duyuruları komple değiştirebiliriz") */}
+            {/* Duyurular 9.2 (Kaan, 2026-10-21: "duyuruları komple değiştirebiliriz"); en üstte Kasım yenilikleri (YenilikPenceresi ile aynı) */}
+            <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
+              <b>YENİ — Saat Merkezi:</b> Akrep ve yelkovanı tanı, saatle oyna, tam saat, buçuk, çeyrek geçiyor, çeyrek var, dijital saat ve parmakla saati kur. <b>Kavramlar › Zaman</b> ya da <b>Sayılar</b> menüsünde.
+            </p>
+            <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
+              <b>Özel eğitimcilerin önerisi:</b> <b>Ayarlar › Yanlışta kavramı olumsuzla</b> açılınca yanlışta "Hayır, bu atkı kısa." yerine "Hayır, bu atkı uzun değil." denir. Olay Sıralama yenilendi; harf ve ses etkinlikleri kısa kelimelerle başlıyor.
+            </p>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
               <b>YENİ — Kelime Kitabı:</b> Soru yok, puan yok. Kategoriyi seçin, resme dokunun; konuşan yüz kelimeyi söylesin. Bebekler ve konuşmaya yeni başlayan çocuklar için. <b>Kelimeler</b> menüsünün en üstünde.
             </p>
@@ -321,6 +328,7 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
         baslik={t("menu.appTitle", "İlk Sözüm: Otizm & Okul Öncesi")}
       >
         <BilgiDugmeleri theme={theme} />
+        <YenilikPenceresi onDestek={onSelectSettings ? destegeGit : undefined} />
       </TemaliAnaMenu>
     );
   }
@@ -432,6 +440,7 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
 
           {/* Duyurular ve ses yardımı: küçük düğmeler, içerik pencerede */}
           <BilgiDugmeleri theme={theme} />
+        <YenilikPenceresi onDestek={onSelectSettings ? destegeGit : undefined} />
         </div>
       </div>
     </div>
