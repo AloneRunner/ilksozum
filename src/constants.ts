@@ -198,7 +198,7 @@ export const OBJECTS_INTL_ORDER: string[] = OBJECT_CATEGORIES.flatMap(c => {
 
 export const LETTER_GROUPS = [
   { name: '1. Grup', letters: 'ANETİL'.split('') },
-  { name: '2. Grup', letters: 'OKURİM'.split('') },
+  { name: '2. Grup', letters: 'OKURIM'.split('') },
   { name: '3. Grup', letters: 'ÜSÖYDZ'.split('') },
   { name: '4. Grup', letters: 'ÇBGCŞ'.split('') },
   { name: '5. Grup', letters: 'PHVĞFJ'.split('') },

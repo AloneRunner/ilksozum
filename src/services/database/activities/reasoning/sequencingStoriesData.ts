@@ -93,15 +93,6 @@ export const sequencingStoryData: SequencingStoryRound[] = [
             { id: 583, word: 'iribaş', imageUrl: '/images/583.png', audioKey: 'iribaş' },
             { id: 275, word: 'kurbağa', imageUrl: '/images/275.png', audioKey: 'kurbağa' }
         ]
-    },
-    {
-        id: 10,
-        question: 'Olayları doğru sıraya diz.',
-        questionAudioKey: 'q_order_events',
-        activityType: ActivityType.SequencingStories,
-        items: [
-            { id: 481, word: 'dağınık yapboz', imageUrl: '/images/481.png', audioKey: 'dağınık_yapboz' },
-            { id: 480, word: 'tamamlanmış yapboz', imageUrl: '/images/480.png', audioKey: 'tamamlanmış_yapboz' }
-        ]
     }
+    // Yapboz turu çıkarıldı (2026-10-27): yeni görsellerde dağınık ve tamamlanmış yapboz aynı resme düşüyor (8480), tur çözülemiyordu.
 ];

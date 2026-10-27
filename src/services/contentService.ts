@@ -25,6 +25,18 @@ const getRandomItems = <T,>(arr: T[], n: number): T[] => {
     return shuffleArray(arr).slice(0, n);
 };
 
+// Ses çalışmasında kısa sözcükten uzuna (özel eğitimciler, 2026-10-27): önce 1-2 heceli sözcükler.
+// Türkçede hece sayısı ünlü sayısına eşittir.
+const heceSayisi = (w: string) => (w.toLocaleLowerCase('tr-TR').match(/[aeıioöuü]/g) || []).length;
+const kisadanUzuna = <T extends { word: string }>(words: T[], n: number): T[] => {
+    const kisa = shuffleArray(words.filter(w => heceSayisi(w.word) <= 2));
+    const uzun = shuffleArray(words.filter(w => heceSayisi(w.word) > 2));
+    // Turun çoğu (en az %60) kısa sözcük; kısa yetmezse uzunla tamamlanır
+    const kisaSayi = Math.min(kisa.length, Math.max(n - uzun.length, Math.ceil(n * 0.6)));
+    return [...kisa.slice(0, kisaSayi), ...uzun.slice(0, n - kisaSayi)]
+        .sort((a, b) => heceSayisi(a.word) - heceSayisi(b.word));
+};
+
 const QUESTION_SIDE_ALIASES: Record<string, string> = {
     alive: 'alive',
     lifeless: 'lifeless',
@@ -653,17 +665,17 @@ export const createLetterPresenceRounds = async (letter: string, count?: number)
         const upperCaseLetter = upperDisplayLetter; // UI display
         const allWords = await fetchWordsForLetter(mapLetterForSearch(lang, letter));
 
-    const wordsWithLetter = shuffleArray(allWords.filter(w => w.hasLetter));
-    const wordsWithoutLetter = shuffleArray(allWords.filter(w => !w.hasLetter));
-    
     const numRounds = count || 8;
     const numEach = Math.floor(numRounds / 2);
+
+    const wordsWithLetter = kisadanUzuna(allWords.filter(w => w.hasLetter), numEach);
+    const wordsWithoutLetter = kisadanUzuna(allWords.filter(w => !w.hasLetter), numEach);
 
     if (wordsWithLetter.length < numEach || wordsWithoutLetter.length < numEach) {
         return [];
     }
 
-    const selectedWithLetter = wordsWithLetter.slice(0, numEach).map(word => ({
+    const selectedWithLetter = wordsWithLetter.map(word => ({
         ...word,
         questionText: t('letters.soundPresence.question', `Bu görselde '{letter}' sesi var mı?`).replace('{letter}', upperCaseLetter),
         questionAudioKey: 'q_does_this_have_sound',
@@ -671,7 +683,7 @@ export const createLetterPresenceRounds = async (letter: string, count?: number)
         activityType: ActivityType.SoundPresence,
     }));
 
-    const selectedWithoutLetter = wordsWithoutLetter.slice(0, numEach).map(word => ({
+    const selectedWithoutLetter = wordsWithoutLetter.map(word => ({
         ...word,
         questionText: t('letters.soundPresence.question', `Bu görselde '{letter}' sesi var mı?`).replace('{letter}', upperCaseLetter),
         questionAudioKey: 'q_does_this_have_sound',
@@ -679,7 +691,9 @@ export const createLetterPresenceRounds = async (letter: string, count?: number)
         activityType: ActivityType.SoundPresence,
     }));
 
-    return shuffleArray([...selectedWithLetter, ...selectedWithoutLetter]);
+    // Var/yok karışık, sözcükler kısadan uzuna
+    return shuffleArray([...selectedWithLetter, ...selectedWithoutLetter])
+        .sort((a, b) => heceSayisi(a.word) - heceSayisi(b.word));
 };
 
 
@@ -1926,7 +1940,11 @@ export const fetchConceptActivityData = async (
     } else {
         processedRounds = rawData.map(round => ({...round, activityType: activity}));
     }
-    
+
+    // Olay Sıralama: kısadan uzuna (önce 2 kartlık turlar, sonra 3-4 kartlıklar)
+    if (activity === ActivityType.SequencingStories) {
+        return getRandomItems(processedRounds, MAX_QUESTIONS_STATIC).sort((a, b) => (a.items?.length || 0) - (b.items?.length || 0));
+    }
     return getRandomItems(processedRounds, MAX_QUESTIONS_STATIC);
 };
 
@@ -1942,18 +1960,20 @@ export const fetchLetterActivityData = async (activity: ActivityType, letter: st
              return await createLetterPresenceRounds(letter, count);
         }
         
-        const fetchedWords = await fetchWordsForLetter(letter, count);
-        
+        // Tüm havuz alınır: kısa sözcükler rastgele bir alt kümeye kalmasın
+        const fetchedWords = await fetchWordsForLetter(letter);
+
         if (activity === ActivityType.FindTheLetter) {
             const wordsWithLetter = fetchedWords.filter(w => w.hasLetter && w.word.replace(/\s/g, '').length <= 7);
-            return getRandomItems(wordsWithLetter, count || 8).map(w => ({ ...w, activityType: activity }));
+            return kisadanUzuna(wordsWithLetter, count || 8).map(w => ({ ...w, activityType: activity }));
         }
 
         if (activity === ActivityType.FindTheSoundInImage) {
-            const correctWords = fetchedWords.filter(w => w.hasLetter);
-            const distractorPool = fetchedWords.filter(w => !w.hasLetter);
-            
-            const numRounds = Math.min(correctWords.length, Math.floor(distractorPool.length / 2), count || 8);
+            const n = count || 8;
+            const correctWords = kisadanUzuna(fetchedWords.filter(w => w.hasLetter), n);
+            const distractorPool = kisadanUzuna(fetchedWords.filter(w => !w.hasLetter), n * 2);
+
+            const numRounds = Math.min(correctWords.length, Math.floor(distractorPool.length / 2), n);
             if (numRounds < 1) return [];
 
             const rounds: Word[] = [];

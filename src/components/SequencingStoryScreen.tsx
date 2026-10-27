@@ -5,8 +5,6 @@ import Card from './ui/Card.tsx';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { speak, playEffect } from '../services/speechService.ts';
 import SpeakerIcon from './icons/SpeakerIcon.tsx';
-import CheckIcon from './icons/CheckIcon.tsx';
-import UndoIcon from './icons/UndoIcon.tsx';
 import EyeIcon from './icons/EyeIcon.tsx';
 import EyeSlashIcon from './icons/EyeSlashIcon.tsx';
 import { useAutoSpeak } from '../hooks/useAutoSpeak.ts';
@@ -33,76 +31,48 @@ const SequencingStoryScreen: React.FC<SequencingStoryScreenProps> = ({
     const [mistakeMade, setMistakeMade] = useState(false);
     const currentLang = getCurrentLanguage();
     const localizedQuestion = translateQuestion(roundData.question, currentLang);
-    const undoLabelMap: Record<string, string> = {
-        tr: 'Geri Al',
-        en: 'Undo',
-        de: 'Rückgängig',
-        fr: 'Annuler',
-        nl: 'Ongedaan maken',
-        az: 'Geri al'
-    };
-    const checkLabelMap: Record<string, string> = {
-        tr: 'Kontrol Et',
-        en: 'Check',
-        de: 'Prüfen',
-        fr: 'Vérifier',
-        nl: 'Controleer',
-        az: 'Yoxla'
-    };
-    const undoLabel = undoLabelMap[currentLang] ?? undoLabelMap.en;
-    const checkLabel = checkLabelMap[currentLang] ?? checkLabelMap.en;
 
     useAutoSpeak(localizedQuestion, isAutoSpeakEnabled, roundData.id);
+
+    // Sallanan (yanlış) kart ve aynı adımdaki hata sayısı; 2 hatadan sonra doğru kart parlar (ipucu)
+    const [wrongId, setWrongId] = useState<number | string | null>(null);
+    const [stepMistakes, setStepMistakes] = useState(0);
 
     useEffect(() => {
         setShuffledItems([...roundData.items].sort(() => Math.random() - 0.5));
         setUserOrder([]);
         setIsCorrect(null);
         setMistakeMade(false);
+        setStepMistakes(0);
+        setWrongId(null);
     }, [roundData]);
 
-    const handleItemClick = (item: SequencingStoryItem) => {
-        if (isCorrect !== null || userOrder.length >= roundData.items.length) return;
-        setUserOrder(prev => [...prev, item]);
-        setShuffledItems(prev => prev.filter(i => i.id !== item.id));
-        speak(item.word);
-    };
-
-    // Sayaç verisi (2026-10-15): açılan 10 oturumun hiçbiri bitmedi; çocuklar 'Kontrol' düğmesini bulamıyor olabilir.
-    // Son kutu doldurulunca sıra kendiliğinden kontrol edilir.
-    useEffect(() => {
-        if (isCorrect !== null || userOrder.length === 0 || userOrder.length !== roundData.items.length) return;
-        const z = setTimeout(() => { void checkOrder(); }, 700);
-        return () => clearTimeout(z);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [userOrder, isCorrect]);
-
-    const handleUndo = () => {
-        if (userOrder.length === 0 || isCorrect !== null) return;
-        const lastItem = userOrder[userOrder.length - 1];
-        setUserOrder(prev => prev.slice(0, -1));
-        setShuffledItems(prev => [...prev, lastItem].sort(() => Math.random() - 0.5));
-    };
-
-    const checkOrder = async () => {
-        if (userOrder.length !== roundData.items.length) return;
-
-        const isOrderCorrect = userOrder.every((item, index) => item.id === roundData.items[index].id);
-        setIsCorrect(isOrderCorrect);
-
-        if (isOrderCorrect) {
-            await playEffect('correct');
-            setTimeout(() => onAdvance(!mistakeMade), 1200);
-        } else {
+    // Sayaç verisi (2026-10-27): 54 açılışın yalnız 6'sı bitti. Eskiden sıra en sonda kontrol edilip yanlışta
+    // tamamen sıfırlanıyordu. Artık hatasız öğrenme: her dokunuş hemen kontrol edilir, doğru kart yerine oturur,
+    // yanlış kart sallanır ve yerinde kalır; sıra hiç bozulmaz.
+    const handleItemClick = async (item: SequencingStoryItem) => {
+        if (isCorrect !== null || userOrder.length >= roundData.items.length || wrongId !== null) return;
+        const expected = roundData.items[userOrder.length];
+        if (item.id !== expected.id) {
             setMistakeMade(true);
-            await playEffect('incorrect');
-            setTimeout(() => {
-                setShuffledItems([...roundData.items].sort(() => Math.random() - 0.5));
-                setUserOrder([]);
-                setIsCorrect(null);
-            }, 1500);
+            setStepMistakes(n => n + 1);
+            setWrongId(item.id);
+            void playEffect('softincorrect');
+            setTimeout(() => setWrongId(null), 700);
+            return;
         }
+        const placed = [...userOrder, item];
+        setUserOrder(placed);
+        setShuffledItems(prev => prev.filter(i => i.id !== item.id));
+        setStepMistakes(0);
+        if (placed.length < roundData.items.length) { speak(item.word); return; }
+        // Son kart: önce söz, sonra ton, sonra sonraki tur (üst üste binmesin)
+        setIsCorrect(true);
+        await Promise.race([speak(item.word), new Promise(r => setTimeout(r, 3000))]);
+        await playEffect('correct');
+        setTimeout(() => onAdvance(!mistakeMade), 900);
     };
+    const nextExpectedId = roundData.items[userOrder.length]?.id;
     
     return (
         <div className="flex flex-col items-center h-full w-full max-w-5xl mx-auto p-4 landscape:p-2 animate-fade-in overflow-y-auto">
@@ -139,10 +109,12 @@ const SequencingStoryScreen: React.FC<SequencingStoryScreenProps> = ({
                 {/* User Sequence Area - Üstte yatay sıralı boş alanlar */}
                 <div className="w-full flex items-center justify-center gap-2 sm:gap-3 landscape:gap-2 p-4 landscape:p-2 rounded-2xl bg-white/60 shadow-inner min-h-[140px] landscape:min-h-[80px]">
                     {roundData.items.map((_, index) => (
-                        <div key={index} className={`w-20 h-28 sm:w-24 sm:h-32 landscape:w-20 landscape:h-[70px] flex items-center justify-center rounded-xl bg-slate-200 border-2 border-dashed border-slate-400 transition-all p-0.5
-                            ${isCorrect === false ? 'border-red-500 animate-shake' : ''}
+                        <div key={index} className={`relative w-20 h-28 sm:w-24 sm:h-32 landscape:w-20 landscape:h-[70px] flex items-center justify-center rounded-xl bg-slate-200 border-2 border-dashed transition-all p-0.5
+                            ${index === userOrder.length && isCorrect === null ? 'border-fuchsia-500 ring-4 ring-fuchsia-200 animate-pulse' : 'border-slate-400'}
                             ${isCorrect === true ? 'border-green-500' : ''}
                         `}>
+                            {/* Kutu numarası: 1 önce, 2 sonra... */}
+                            {!userOrder[index] && <span className="text-4xl landscape:text-2xl font-black text-slate-400">{index + 1}</span>}
                             {userOrder[index] && (
                                 <div className="w-full h-full">
                                     <Card imageUrl={userOrder[index].imageUrl} word={userOrder[index].word} isRevealed={isWordLabelVisible} onClick={() => {}} />
@@ -152,22 +124,12 @@ const SequencingStoryScreen: React.FC<SequencingStoryScreenProps> = ({
                     ))}
                 </div>
 
-                {/* Butonlar ortada */}
-                <div className="flex gap-3 landscape:gap-2 flex-shrink-0">
-                    <button onClick={handleUndo} disabled={userOrder.length === 0 || isCorrect !== null} className="px-5 py-2 landscape:px-2 landscape:py-1 bg-yellow-400 text-white font-bold rounded-lg shadow-md hover:bg-yellow-500 disabled:opacity-50 flex items-center gap-2 text-sm landscape:text-xs">
-                        <UndoIcon className="w-5 h-5 landscape:w-4 landscape:h-4" />
-                        <span className="landscape:hidden">{undoLabel}</span>
-                    </button>
-                    <button onClick={checkOrder} disabled={userOrder.length !== roundData.items.length || isCorrect !== null} className="px-5 py-2 landscape:px-2 landscape:py-1 bg-green-500 text-white font-bold rounded-lg shadow-md hover:bg-green-600 disabled:opacity-50 flex items-center gap-2 text-sm landscape:text-xs">
-                        <CheckIcon className="w-5 h-5 landscape:w-4 landscape:h-4" />
-                        <span className="landscape:hidden">{checkLabel}</span>
-                    </button>
-                </div>
-
                 {/* Seçenek kartları altta - Yatay ekranda küçük ve kompakt */}
                 <div className="w-full flex items-center justify-center gap-2 sm:gap-3 landscape:gap-2 min-h-[150px] landscape:min-h-[70px] flex-wrap landscape:overflow-y-auto landscape:flex-1 landscape:px-2 landscape:pb-2">
                     {shuffledItems.map(item => (
-                        <div key={item.id} className="w-24 h-32 sm:w-28 sm:h-36 landscape:w-20 landscape:h-[70px] flex-shrink-0 p-0.5">
+                        <div key={item.id} className={`w-24 h-32 sm:w-28 sm:h-36 landscape:w-20 landscape:h-[70px] flex-shrink-0 p-0.5 rounded-xl transition-all
+                            ${wrongId === item.id ? 'animate-shake ring-4 ring-rose-300' : ''}
+                            ${stepMistakes >= 2 && item.id === nextExpectedId ? 'ring-4 ring-amber-400 animate-pulse' : ''}`}>
                             <Card imageUrl={item.imageUrl} word={item.word} isRevealed={isWordLabelVisible} onClick={() => handleItemClick(item)} />
                         </div>
                     ))}

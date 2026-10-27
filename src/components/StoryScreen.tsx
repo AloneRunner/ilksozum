@@ -1,4 +1,5 @@
-import React, { useMemo, useState, useCallback, useEffect } from 'react';
+import React, { useMemo, useState, useCallback, useEffect, useRef } from 'react';
+import { etkinlikSay } from '../services/sayac.ts';
 import { kelimeGorseli } from '../services/kelimeGorseli.ts';
 import { Story } from '../types.ts';
 import { speak, cancelSpeech } from '../services/speechService.ts';
@@ -60,6 +61,21 @@ const StoryScreen: React.FC<StoryScreenProps> = ({ stories, letter, onBack, onGo
             cancelSpeech();
         };
     }, []);
+
+    // Sayaç: hikâyeler başa saran bir döngü olduğu için hiç "bitti" sayılmıyordu (27 açılış, 0 bitti).
+    // Her hikâyede en az 8 sn kalınınca görülmüş sayılır; hepsi görülünce bir kez "bitti".
+    const gorulen = useRef(new Set<number>());
+    const bittiSayildi = useRef(false);
+    useEffect(() => {
+        const z = setTimeout(() => {
+            gorulen.current.add(currentStoryIndex);
+            if (!bittiSayildi.current && gorulen.current.size >= stories.length) {
+                bittiSayildi.current = true;
+                etkinlikSay('Hikaye Zamanı', 'bitti');
+            }
+        }, 8000);
+        return () => clearTimeout(z);
+    }, [currentStoryIndex, stories.length]);
 
     const handleSpeak = useCallback(() => {
         if (storyTextToSpeak) {

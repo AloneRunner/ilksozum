@@ -26,7 +26,9 @@ interface UseActivityProps {
 /** Sayaç için okunur ad: menüdeki Türkçe ad (ör. "Büyük / Küçük"); yoksa ActivityType adı ya da kategori kimliği. */
 let sayacAdlari: Map<string, string> | null = null;
 const sayacAdi = (k: string): string => {
-    sayacAdlari ??= new Map(ALL_SUB_ACHIEVEMENTS.map((x) => [String(x.id), x.name]));
+    // Kıyasla (Relative*) etkinlikleri temel kavramla aynı adı taşıyor ("Büyük / Küçük"); sayaçta ayrı görünsün
+    sayacAdlari ??= new Map(ALL_SUB_ACHIEVEMENTS.map((x) => [String(x.id),
+        String((ActivityType as unknown as Record<number, string>)[Number(x.id)] ?? '').startsWith('Relative') ? `${x.name} (Kıyasla)` : x.name]));
     return sayacAdlari.get(k) || (/^\d+$/.test(k) ? (ActivityType as unknown as Record<number, string>)[Number(k)] || k : k);
 };
 
