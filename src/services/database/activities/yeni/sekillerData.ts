@@ -10,7 +10,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7201, word: "şekil", imageUrl: "/images/7201.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -23,7 +23,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7204, word: "şekil", imageUrl: "/images/7204.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -36,7 +36,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu üçgen değil.' }
         },
         options: [
             { id: 7206, word: "şekil", imageUrl: "/images/7206.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -49,7 +49,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu üçgen.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu üçgen.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7201, word: "şekil", imageUrl: "/images/7201.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -62,7 +62,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu üçgen.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu üçgen.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7204, word: "şekil", imageUrl: "/images/7204.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -75,7 +75,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu üçgen değil.' }
         },
         options: [
             { id: 7206, word: "şekil", imageUrl: "/images/7206.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -88,7 +88,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu yıldız değil.' }
         },
         options: [
             { id: 7207, word: "şekil", imageUrl: "/images/7207.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -101,7 +101,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu yıldız.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu yıldız.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7201, word: "şekil", imageUrl: "/images/7201.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -114,7 +114,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu kalp değil.' }
         },
         options: [
             { id: 7203, word: "şekil", imageUrl: "/images/7203.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -127,7 +127,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu kalp.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu kalp.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7204, word: "şekil", imageUrl: "/images/7204.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -140,7 +140,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu üçgen.' }
+            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu üçgen.', wrongOlumsuz: 'Hayır, bu dikdörtgen değil.' }
         },
         options: [
             { id: 7202, word: "şekil", imageUrl: "/images/7202.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -153,7 +153,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu dikdörtgen.' }
+            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu dikdörtgen.', wrongOlumsuz: 'Hayır, bu üçgen değil.' }
         },
         options: [
             { id: 7206, word: "şekil", imageUrl: "/images/7206.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -166,7 +166,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi oval?', correct: 'Evet! Bu oval.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi oval?', correct: 'Evet! Bu oval.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu oval değil.' }
         },
         options: [
             { id: 7205, word: "şekil", imageUrl: "/images/7205.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -179,7 +179,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu oval.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu oval.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7204, word: "şekil", imageUrl: "/images/7204.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -192,7 +192,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu kalp.' }
+            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu kalp.', wrongOlumsuz: 'Hayır, bu yıldız değil.' }
         },
         options: [
             { id: 7207, word: "şekil", imageUrl: "/images/7207.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -205,7 +205,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu yıldız.' }
+            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu yıldız.', wrongOlumsuz: 'Hayır, bu kalp değil.' }
         },
         options: [
             { id: 7203, word: "şekil", imageUrl: "/images/7203.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -218,7 +218,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu dikdörtgen değil.' }
         },
         options: [
             { id: 7202, word: "şekil", imageUrl: "/images/7202.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -231,7 +231,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu dikdörtgen.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu dikdörtgen.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7201, word: "şekil", imageUrl: "/images/7201.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -245,7 +245,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7208, word: "şekil", imageUrl: "/images/7208.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -258,7 +258,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7211, word: "şekil", imageUrl: "/images/7211.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -271,7 +271,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu üçgen değil.' }
         },
         options: [
             { id: 7213, word: "şekil", imageUrl: "/images/7213.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -284,7 +284,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu üçgen.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu üçgen.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7208, word: "şekil", imageUrl: "/images/7208.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -297,7 +297,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu üçgen.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu üçgen.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7211, word: "şekil", imageUrl: "/images/7211.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -310,7 +310,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu üçgen değil.' }
         },
         options: [
             { id: 7213, word: "şekil", imageUrl: "/images/7213.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -323,7 +323,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu yıldız değil.' }
         },
         options: [
             { id: 7214, word: "şekil", imageUrl: "/images/7214.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -336,7 +336,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu yıldız.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu yıldız.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7208, word: "şekil", imageUrl: "/images/7208.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -349,7 +349,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu kalp değil.' }
         },
         options: [
             { id: 7210, word: "şekil", imageUrl: "/images/7210.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -362,7 +362,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu kalp.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu kalp.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7211, word: "şekil", imageUrl: "/images/7211.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -375,7 +375,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu üçgen.' }
+            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu üçgen.', wrongOlumsuz: 'Hayır, bu dikdörtgen değil.' }
         },
         options: [
             { id: 7209, word: "şekil", imageUrl: "/images/7209.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -388,7 +388,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu dikdörtgen.' }
+            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu dikdörtgen.', wrongOlumsuz: 'Hayır, bu üçgen değil.' }
         },
         options: [
             { id: 7213, word: "şekil", imageUrl: "/images/7213.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -401,7 +401,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi oval?', correct: 'Evet! Bu oval.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi oval?', correct: 'Evet! Bu oval.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu oval değil.' }
         },
         options: [
             { id: 7212, word: "şekil", imageUrl: "/images/7212.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -414,7 +414,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu oval.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu oval.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7211, word: "şekil", imageUrl: "/images/7211.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -427,7 +427,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu kalp.' }
+            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu kalp.', wrongOlumsuz: 'Hayır, bu yıldız değil.' }
         },
         options: [
             { id: 7214, word: "şekil", imageUrl: "/images/7214.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -440,7 +440,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu yıldız.' }
+            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu yıldız.', wrongOlumsuz: 'Hayır, bu kalp değil.' }
         },
         options: [
             { id: 7210, word: "şekil", imageUrl: "/images/7210.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -453,7 +453,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu dikdörtgen değil.' }
         },
         options: [
             { id: 7209, word: "şekil", imageUrl: "/images/7209.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -466,7 +466,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu dikdörtgen.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu dikdörtgen.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7208, word: "şekil", imageUrl: "/images/7208.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -480,7 +480,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7215, word: "şekil", imageUrl: "/images/7215.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -493,7 +493,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7218, word: "şekil", imageUrl: "/images/7218.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -506,7 +506,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu üçgen değil.' }
         },
         options: [
             { id: 7220, word: "şekil", imageUrl: "/images/7220.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -519,7 +519,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu üçgen.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu üçgen.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7215, word: "şekil", imageUrl: "/images/7215.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -532,7 +532,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu üçgen.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu üçgen.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7218, word: "şekil", imageUrl: "/images/7218.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -545,7 +545,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu üçgen değil.' }
         },
         options: [
             { id: 7220, word: "şekil", imageUrl: "/images/7220.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -558,7 +558,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu yıldız değil.' }
         },
         options: [
             { id: 7221, word: "şekil", imageUrl: "/images/7221.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -571,7 +571,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu yıldız.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu yıldız.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7215, word: "şekil", imageUrl: "/images/7215.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -584,7 +584,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu kalp değil.' }
         },
         options: [
             { id: 7217, word: "şekil", imageUrl: "/images/7217.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -597,7 +597,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu kalp.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu kalp.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7218, word: "şekil", imageUrl: "/images/7218.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -610,7 +610,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu üçgen.' }
+            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu üçgen.', wrongOlumsuz: 'Hayır, bu dikdörtgen değil.' }
         },
         options: [
             { id: 7216, word: "şekil", imageUrl: "/images/7216.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -623,7 +623,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu dikdörtgen.' }
+            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu dikdörtgen.', wrongOlumsuz: 'Hayır, bu üçgen değil.' }
         },
         options: [
             { id: 7220, word: "şekil", imageUrl: "/images/7220.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -636,7 +636,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi oval?', correct: 'Evet! Bu oval.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi oval?', correct: 'Evet! Bu oval.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu oval değil.' }
         },
         options: [
             { id: 7219, word: "şekil", imageUrl: "/images/7219.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -649,7 +649,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu oval.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu oval.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7218, word: "şekil", imageUrl: "/images/7218.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -662,7 +662,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu kalp.' }
+            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu kalp.', wrongOlumsuz: 'Hayır, bu yıldız değil.' }
         },
         options: [
             { id: 7221, word: "şekil", imageUrl: "/images/7221.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -675,7 +675,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu yıldız.' }
+            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu yıldız.', wrongOlumsuz: 'Hayır, bu kalp değil.' }
         },
         options: [
             { id: 7217, word: "şekil", imageUrl: "/images/7217.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -688,7 +688,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu dikdörtgen değil.' }
         },
         options: [
             { id: 7216, word: "şekil", imageUrl: "/images/7216.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -701,7 +701,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu dikdörtgen.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu dikdörtgen.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7215, word: "şekil", imageUrl: "/images/7215.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -715,7 +715,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7222, word: "şekil", imageUrl: "/images/7222.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -728,7 +728,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7225, word: "şekil", imageUrl: "/images/7225.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -741,7 +741,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu üçgen değil.' }
         },
         options: [
             { id: 7227, word: "şekil", imageUrl: "/images/7227.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -754,7 +754,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu üçgen.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu üçgen.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7222, word: "şekil", imageUrl: "/images/7222.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -767,7 +767,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu üçgen.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu üçgen.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7225, word: "şekil", imageUrl: "/images/7225.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -780,7 +780,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu üçgen değil.' }
         },
         options: [
             { id: 7227, word: "şekil", imageUrl: "/images/7227.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -793,7 +793,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu yıldız değil.' }
         },
         options: [
             { id: 7228, word: "şekil", imageUrl: "/images/7228.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -806,7 +806,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu yıldız.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu yıldız.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7222, word: "şekil", imageUrl: "/images/7222.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -819,7 +819,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu kalp değil.' }
         },
         options: [
             { id: 7224, word: "şekil", imageUrl: "/images/7224.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -832,7 +832,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu kalp.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu kalp.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7225, word: "şekil", imageUrl: "/images/7225.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -845,7 +845,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu üçgen.' }
+            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu üçgen.', wrongOlumsuz: 'Hayır, bu dikdörtgen değil.' }
         },
         options: [
             { id: 7223, word: "şekil", imageUrl: "/images/7223.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -858,7 +858,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu dikdörtgen.' }
+            tr: { question: 'Hangisi üçgen?', correct: 'Evet! Bu üçgen.', wrong: 'Hayır, bu dikdörtgen.', wrongOlumsuz: 'Hayır, bu üçgen değil.' }
         },
         options: [
             { id: 7227, word: "şekil", imageUrl: "/images/7227.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -871,7 +871,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi oval?', correct: 'Evet! Bu oval.', wrong: 'Hayır, bu kare.' }
+            tr: { question: 'Hangisi oval?', correct: 'Evet! Bu oval.', wrong: 'Hayır, bu kare.', wrongOlumsuz: 'Hayır, bu oval değil.' }
         },
         options: [
             { id: 7226, word: "şekil", imageUrl: "/images/7226.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -884,7 +884,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu oval.' }
+            tr: { question: 'Hangisi kare?', correct: 'Evet! Bu kare.', wrong: 'Hayır, bu oval.', wrongOlumsuz: 'Hayır, bu kare değil.' }
         },
         options: [
             { id: 7225, word: "şekil", imageUrl: "/images/7225.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -897,7 +897,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu kalp.' }
+            tr: { question: 'Hangisi yıldız?', correct: 'Evet! Bu yıldız.', wrong: 'Hayır, bu kalp.', wrongOlumsuz: 'Hayır, bu yıldız değil.' }
         },
         options: [
             { id: 7228, word: "şekil", imageUrl: "/images/7228.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -910,7 +910,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu yıldız.' }
+            tr: { question: 'Hangisi kalp?', correct: 'Evet! Bu kalp.', wrong: 'Hayır, bu yıldız.', wrongOlumsuz: 'Hayır, bu kalp değil.' }
         },
         options: [
             { id: 7224, word: "şekil", imageUrl: "/images/7224.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -923,7 +923,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu daire.' }
+            tr: { question: 'Hangisi dikdörtgen?', correct: 'Evet! Bu dikdörtgen.', wrong: 'Hayır, bu daire.', wrongOlumsuz: 'Hayır, bu dikdörtgen değil.' }
         },
         options: [
             { id: 7223, word: "şekil", imageUrl: "/images/7223.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },
@@ -936,7 +936,7 @@ export const shapesDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Shapes,
         speech: {
-            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu dikdörtgen.' }
+            tr: { question: 'Hangisi daire?', correct: 'Evet! Bu daire.', wrong: 'Hayır, bu dikdörtgen.', wrongOlumsuz: 'Hayır, bu daire değil.' }
         },
         options: [
             { id: 7222, word: "şekil", imageUrl: "/images/7222.webp", isCorrect: true, audioKey: "şekil", spokenText: "şekil" },

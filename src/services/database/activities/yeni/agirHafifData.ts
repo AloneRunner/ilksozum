@@ -10,7 +10,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Balkabağı ağırdır.', wrong: 'Hayır, mandalina hafiftir.' }
+            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Balkabağı ağırdır.', wrong: 'Hayır, mandalina hafiftir.', wrongOlumsuz: 'Hayır, mandalina ağır değil.' }
         },
         options: [
             { id: 6201, word: "balkabağı", imageUrl: "/images/6201.webp", isCorrect: true, audioKey: "balkabağı", spokenText: "balkabağı" },
@@ -23,7 +23,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Mandalina hafiftir.', wrong: 'Hayır, balkabağı ağırdır.' }
+            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Mandalina hafiftir.', wrong: 'Hayır, balkabağı ağırdır.', wrongOlumsuz: 'Hayır, balkabağı hafif değil.' }
         },
         options: [
             { id: 6202, word: "mandalina", imageUrl: "/images/6202.webp", isCorrect: true, audioKey: "mandalina", spokenText: "mandalina" },
@@ -37,7 +37,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Bowling topu ağırdır.', wrong: 'Hayır, plaj topu hafiftir.' }
+            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Bowling topu ağırdır.', wrong: 'Hayır, plaj topu hafiftir.', wrongOlumsuz: 'Hayır, plaj topu ağır değil.' }
         },
         options: [
             { id: 6203, word: "bowling topu", imageUrl: "/images/6203.webp", isCorrect: true, audioKey: "bowling topu", spokenText: "bowling topu" },
@@ -50,7 +50,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Plaj topu hafiftir.', wrong: 'Hayır, bowling topu ağırdır.' }
+            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Plaj topu hafiftir.', wrong: 'Hayır, bowling topu ağırdır.', wrongOlumsuz: 'Hayır, bowling topu hafif değil.' }
         },
         options: [
             { id: 6204, word: "plaj topu", imageUrl: "/images/6204.webp", isCorrect: true, audioKey: "plaj topu", spokenText: "plaj topu" },
@@ -64,7 +64,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Dambıl ağırdır.', wrong: 'Hayır, balon hafiftir.' }
+            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Dambıl ağırdır.', wrong: 'Hayır, balon hafiftir.', wrongOlumsuz: 'Hayır, balon ağır değil.' }
         },
         options: [
             { id: 6205, word: "dambıl", imageUrl: "/images/6205.webp", isCorrect: true, audioKey: "dambıl", spokenText: "dambıl" },
@@ -77,7 +77,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Balon hafiftir.', wrong: 'Hayır, dambıl ağırdır.' }
+            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Balon hafiftir.', wrong: 'Hayır, dambıl ağırdır.', wrongOlumsuz: 'Hayır, dambıl hafif değil.' }
         },
         options: [
             { id: 6206, word: "balon", imageUrl: "/images/6206.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -91,7 +91,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Fil ağırdır.', wrong: 'Hayır, kelebek hafiftir.' }
+            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Fil ağırdır.', wrong: 'Hayır, kelebek hafiftir.', wrongOlumsuz: 'Hayır, kelebek ağır değil.' }
         },
         options: [
             { id: 6207, word: "fil", imageUrl: "/images/6207.webp", isCorrect: true, audioKey: "fil", spokenText: "fil" },
@@ -104,7 +104,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Kelebek hafiftir.', wrong: 'Hayır, fil ağırdır.' }
+            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Kelebek hafiftir.', wrong: 'Hayır, fil ağırdır.', wrongOlumsuz: 'Hayır, fil hafif değil.' }
         },
         options: [
             { id: 6208, word: "kelebek", imageUrl: "/images/6208.webp", isCorrect: true, audioKey: "kelebek", spokenText: "kelebek" },
@@ -118,7 +118,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Karpuz ağırdır.', wrong: 'Hayır, çilek hafiftir.' }
+            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Karpuz ağırdır.', wrong: 'Hayır, çilek hafiftir.', wrongOlumsuz: 'Hayır, çilek ağır değil.' }
         },
         options: [
             { id: 6209, word: "karpuz", imageUrl: "/images/6209.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" },
@@ -131,7 +131,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Çilek hafiftir.', wrong: 'Hayır, karpuz ağırdır.' }
+            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Çilek hafiftir.', wrong: 'Hayır, karpuz ağırdır.', wrongOlumsuz: 'Hayır, karpuz hafif değil.' }
         },
         options: [
             { id: 6210, word: "çilek", imageUrl: "/images/6210.webp", isCorrect: true, audioKey: "çilek", spokenText: "çilek" },
@@ -145,7 +145,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Taş ağırdır.', wrong: 'Hayır, tüy hafiftir.' }
+            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Taş ağırdır.', wrong: 'Hayır, tüy hafiftir.', wrongOlumsuz: 'Hayır, tüy ağır değil.' }
         },
         options: [
             { id: 6211, word: "taş", imageUrl: "/images/6211.webp", isCorrect: true, audioKey: "taş", spokenText: "taş" },
@@ -158,7 +158,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Tüy hafiftir.', wrong: 'Hayır, taş ağırdır.' }
+            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Tüy hafiftir.', wrong: 'Hayır, taş ağırdır.', wrongOlumsuz: 'Hayır, taş hafif değil.' }
         },
         options: [
             { id: 6212, word: "tüy", imageUrl: "/images/6212.webp", isCorrect: true, audioKey: "tüy", spokenText: "tüy" },
@@ -172,7 +172,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Kitaplar ağırdır.', wrong: 'Hayır, kâğıt hafiftir.' }
+            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Kitaplar ağırdır.', wrong: 'Hayır, kâğıt hafiftir.', wrongOlumsuz: 'Hayır, kâğıt ağır değil.' }
         },
         options: [
             { id: 6213, word: "kitaplar", imageUrl: "/images/6213.webp", isCorrect: true, audioKey: "kitaplar", spokenText: "kitaplar" },
@@ -185,7 +185,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Kâğıt hafiftir.', wrong: 'Hayır, kitaplar ağırdır.' }
+            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Kâğıt hafiftir.', wrong: 'Hayır, kitaplar ağırdır.', wrongOlumsuz: 'Hayır, kitaplar hafif değil.' }
         },
         options: [
             { id: 6214, word: "kâğıt", imageUrl: "/images/6214.webp", isCorrect: true, audioKey: "kâğıt", spokenText: "kâğıt" },
@@ -199,7 +199,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Hangi kova ağır?', correct: 'Evet! Su dolu kova ağırdır.', wrong: 'Hayır, boş kova hafiftir.' }
+            tr: { question: 'Hangi kova ağır?', correct: 'Evet! Su dolu kova ağırdır.', wrong: 'Hayır, boş kova hafiftir.', wrongOlumsuz: 'Hayır, boş kova ağır değil.' }
         },
         options: [
             { id: 6215, word: "su dolu kova", imageUrl: "/images/6215.webp", isCorrect: true, audioKey: "su dolu kova", spokenText: "su dolu kova" },
@@ -212,7 +212,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Hangi kova hafif?', correct: 'Evet! Boş kova hafiftir.', wrong: 'Hayır, su dolu kova ağırdır.' }
+            tr: { question: 'Hangi kova hafif?', correct: 'Evet! Boş kova hafiftir.', wrong: 'Hayır, su dolu kova ağırdır.', wrongOlumsuz: 'Hayır, su dolu kova hafif değil.' }
         },
         options: [
             { id: 6216, word: "boş kova", imageUrl: "/images/6216.webp", isCorrect: true, audioKey: "boş kova", spokenText: "boş kova" },
@@ -226,7 +226,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Tuğla ağırdır.', wrong: 'Hayır, sünger hafiftir.' }
+            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Tuğla ağırdır.', wrong: 'Hayır, sünger hafiftir.', wrongOlumsuz: 'Hayır, sünger ağır değil.' }
         },
         options: [
             { id: 6217, word: "tuğla", imageUrl: "/images/6217.webp", isCorrect: true, audioKey: "tuğla", spokenText: "tuğla" },
@@ -239,7 +239,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Sünger hafiftir.', wrong: 'Hayır, tuğla ağırdır.' }
+            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Sünger hafiftir.', wrong: 'Hayır, tuğla ağırdır.', wrongOlumsuz: 'Hayır, tuğla hafif değil.' }
         },
         options: [
             { id: 6218, word: "sünger", imageUrl: "/images/6218.webp", isCorrect: true, audioKey: "sünger", spokenText: "sünger" },
@@ -253,7 +253,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Valiz ağırdır.', wrong: 'Hayır, çanta hafiftir.' }
+            tr: { question: 'Ağır olan hangisi?', correct: 'Evet! Valiz ağırdır.', wrong: 'Hayır, çanta hafiftir.', wrongOlumsuz: 'Hayır, çanta ağır değil.' }
         },
         options: [
             { id: 6219, word: "valiz", imageUrl: "/images/6219.webp", isCorrect: true, audioKey: "valiz", spokenText: "valiz" },
@@ -266,7 +266,7 @@ export const heavyLightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HeavyLight,
         speech: {
-            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Çanta hafiftir.', wrong: 'Hayır, valiz ağırdır.' }
+            tr: { question: 'Hafif olan hangisi?', correct: 'Evet! Çanta hafiftir.', wrong: 'Hayır, valiz ağırdır.', wrongOlumsuz: 'Hayır, valiz hafif değil.' }
         },
         options: [
             { id: 6220, word: "çanta", imageUrl: "/images/6220.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },

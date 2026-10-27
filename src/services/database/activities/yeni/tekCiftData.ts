@@ -10,7 +10,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde tek spor ayakkabı var?', correct: 'Evet! Burada tek spor ayakkabı var.', wrong: 'Hayır, burada bir çift spor ayakkabı var.' }
+            tr: { question: 'Hangi resimde tek spor ayakkabı var?', correct: 'Evet! Burada tek spor ayakkabı var.', wrong: 'Hayır, burada bir çift spor ayakkabı var.', wrongOlumsuz: 'Hayır, burada tek spor ayakkabı yok.' }
         },
         options: [
             { id: 6952, word: "spor ayakkabı", imageUrl: "/images/6952.webp", isCorrect: true, audioKey: "spor ayakkabı", spokenText: "spor ayakkabı" },
@@ -23,7 +23,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde bir çift spor ayakkabı var?', correct: 'Evet! Burada bir çift spor ayakkabı var.', wrong: 'Hayır, burada tek spor ayakkabı var.' }
+            tr: { question: 'Hangi resimde bir çift spor ayakkabı var?', correct: 'Evet! Burada bir çift spor ayakkabı var.', wrong: 'Hayır, burada tek spor ayakkabı var.', wrongOlumsuz: 'Hayır, burada bir çift spor ayakkabı yok.' }
         },
         options: [
             { id: 6951, word: "spor ayakkabı", imageUrl: "/images/6951.webp", isCorrect: true, audioKey: "spor ayakkabı", spokenText: "spor ayakkabı" },
@@ -37,7 +37,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde tek davul çubuğu var?', correct: 'Evet! Burada tek davul çubuğu var.', wrong: 'Hayır, burada bir çift davul çubuğu var.' }
+            tr: { question: 'Hangi resimde tek davul çubuğu var?', correct: 'Evet! Burada tek davul çubuğu var.', wrong: 'Hayır, burada bir çift davul çubuğu var.', wrongOlumsuz: 'Hayır, burada tek davul çubuğu yok.' }
         },
         options: [
             { id: 6954, word: "davul çubuğu", imageUrl: "/images/6954.webp", isCorrect: true, audioKey: "davul çubuğu", spokenText: "davul çubuğu" },
@@ -50,7 +50,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde bir çift davul çubuğu var?', correct: 'Evet! Burada bir çift davul çubuğu var.', wrong: 'Hayır, burada tek davul çubuğu var.' }
+            tr: { question: 'Hangi resimde bir çift davul çubuğu var?', correct: 'Evet! Burada bir çift davul çubuğu var.', wrong: 'Hayır, burada tek davul çubuğu var.', wrongOlumsuz: 'Hayır, burada bir çift davul çubuğu yok.' }
         },
         options: [
             { id: 6953, word: "davul çubuğu", imageUrl: "/images/6953.webp", isCorrect: true, audioKey: "davul çubuğu", spokenText: "davul çubuğu" },
@@ -64,7 +64,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde tek çizme var?', correct: 'Evet! Burada tek çizme var.', wrong: 'Hayır, burada bir çift çizme var.' }
+            tr: { question: 'Hangi resimde tek çizme var?', correct: 'Evet! Burada tek çizme var.', wrong: 'Hayır, burada bir çift çizme var.', wrongOlumsuz: 'Hayır, burada tek çizme yok.' }
         },
         options: [
             { id: 6956, word: "çizme", imageUrl: "/images/6956.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -77,7 +77,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde bir çift çizme var?', correct: 'Evet! Burada bir çift çizme var.', wrong: 'Hayır, burada tek çizme var.' }
+            tr: { question: 'Hangi resimde bir çift çizme var?', correct: 'Evet! Burada bir çift çizme var.', wrong: 'Hayır, burada tek çizme var.', wrongOlumsuz: 'Hayır, burada bir çift çizme yok.' }
         },
         options: [
             { id: 6955, word: "çizme", imageUrl: "/images/6955.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -91,7 +91,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde tek çorap var?', correct: 'Evet! Burada tek çorap var.', wrong: 'Hayır, burada bir çift çorap var.' }
+            tr: { question: 'Hangi resimde tek çorap var?', correct: 'Evet! Burada tek çorap var.', wrong: 'Hayır, burada bir çift çorap var.', wrongOlumsuz: 'Hayır, burada tek çorap yok.' }
         },
         options: [
             { id: 6958, word: "çorap", imageUrl: "/images/6958.webp", isCorrect: true, audioKey: "çorap", spokenText: "çorap" },
@@ -104,7 +104,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde bir çift çorap var?', correct: 'Evet! Burada bir çift çorap var.', wrong: 'Hayır, burada tek çorap var.' }
+            tr: { question: 'Hangi resimde bir çift çorap var?', correct: 'Evet! Burada bir çift çorap var.', wrong: 'Hayır, burada tek çorap var.', wrongOlumsuz: 'Hayır, burada bir çift çorap yok.' }
         },
         options: [
             { id: 6957, word: "çorap", imageUrl: "/images/6957.webp", isCorrect: true, audioKey: "çorap", spokenText: "çorap" },
@@ -118,7 +118,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde tek eldiven var?', correct: 'Evet! Burada tek eldiven var.', wrong: 'Hayır, burada bir çift eldiven var.' }
+            tr: { question: 'Hangi resimde tek eldiven var?', correct: 'Evet! Burada tek eldiven var.', wrong: 'Hayır, burada bir çift eldiven var.', wrongOlumsuz: 'Hayır, burada tek eldiven yok.' }
         },
         options: [
             { id: 6960, word: "eldiven", imageUrl: "/images/6960.webp", isCorrect: true, audioKey: "eldiven", spokenText: "eldiven" },
@@ -131,7 +131,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde bir çift eldiven var?', correct: 'Evet! Burada bir çift eldiven var.', wrong: 'Hayır, burada tek eldiven var.' }
+            tr: { question: 'Hangi resimde bir çift eldiven var?', correct: 'Evet! Burada bir çift eldiven var.', wrong: 'Hayır, burada tek eldiven var.', wrongOlumsuz: 'Hayır, burada bir çift eldiven yok.' }
         },
         options: [
             { id: 6959, word: "eldiven", imageUrl: "/images/6959.webp", isCorrect: true, audioKey: "eldiven", spokenText: "eldiven" },
@@ -145,7 +145,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde tek ayakkabı var?', correct: 'Evet! Burada tek ayakkabı var.', wrong: 'Hayır, burada bir çift ayakkabı var.' }
+            tr: { question: 'Hangi resimde tek ayakkabı var?', correct: 'Evet! Burada tek ayakkabı var.', wrong: 'Hayır, burada bir çift ayakkabı var.', wrongOlumsuz: 'Hayır, burada tek ayakkabı yok.' }
         },
         options: [
             { id: 6962, word: "ayakkabı", imageUrl: "/images/6962.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" },
@@ -158,7 +158,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde bir çift ayakkabı var?', correct: 'Evet! Burada bir çift ayakkabı var.', wrong: 'Hayır, burada tek ayakkabı var.' }
+            tr: { question: 'Hangi resimde bir çift ayakkabı var?', correct: 'Evet! Burada bir çift ayakkabı var.', wrong: 'Hayır, burada tek ayakkabı var.', wrongOlumsuz: 'Hayır, burada bir çift ayakkabı yok.' }
         },
         options: [
             { id: 6961, word: "ayakkabı", imageUrl: "/images/6961.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" },
@@ -172,7 +172,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde tek küpe var?', correct: 'Evet! Burada tek küpe var.', wrong: 'Hayır, burada bir çift küpe var.' }
+            tr: { question: 'Hangi resimde tek küpe var?', correct: 'Evet! Burada tek küpe var.', wrong: 'Hayır, burada bir çift küpe var.', wrongOlumsuz: 'Hayır, burada tek küpe yok.' }
         },
         options: [
             { id: 6964, word: "küpe", imageUrl: "/images/6964.webp", isCorrect: true, audioKey: "küpe", spokenText: "küpe" },
@@ -185,7 +185,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde bir çift küpe var?', correct: 'Evet! Burada bir çift küpe var.', wrong: 'Hayır, burada tek küpe var.' }
+            tr: { question: 'Hangi resimde bir çift küpe var?', correct: 'Evet! Burada bir çift küpe var.', wrong: 'Hayır, burada tek küpe var.', wrongOlumsuz: 'Hayır, burada bir çift küpe yok.' }
         },
         options: [
             { id: 6963, word: "küpe", imageUrl: "/images/6963.webp", isCorrect: true, audioKey: "küpe", spokenText: "küpe" },
@@ -199,7 +199,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde tek paten var?', correct: 'Evet! Burada tek paten var.', wrong: 'Hayır, burada bir çift paten var.' }
+            tr: { question: 'Hangi resimde tek paten var?', correct: 'Evet! Burada tek paten var.', wrong: 'Hayır, burada bir çift paten var.', wrongOlumsuz: 'Hayır, burada tek paten yok.' }
         },
         options: [
             { id: 6966, word: "paten", imageUrl: "/images/6966.webp", isCorrect: true, audioKey: "paten", spokenText: "paten" },
@@ -212,7 +212,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde bir çift paten var?', correct: 'Evet! Burada bir çift paten var.', wrong: 'Hayır, burada tek paten var.' }
+            tr: { question: 'Hangi resimde bir çift paten var?', correct: 'Evet! Burada bir çift paten var.', wrong: 'Hayır, burada tek paten var.', wrongOlumsuz: 'Hayır, burada bir çift paten yok.' }
         },
         options: [
             { id: 6965, word: "paten", imageUrl: "/images/6965.webp", isCorrect: true, audioKey: "paten", spokenText: "paten" },
@@ -226,7 +226,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde tek sandalet var?', correct: 'Evet! Burada tek sandalet var.', wrong: 'Hayır, burada bir çift sandalet var.' }
+            tr: { question: 'Hangi resimde tek sandalet var?', correct: 'Evet! Burada tek sandalet var.', wrong: 'Hayır, burada bir çift sandalet var.', wrongOlumsuz: 'Hayır, burada tek sandalet yok.' }
         },
         options: [
             { id: 6968, word: "sandalet", imageUrl: "/images/6968.webp", isCorrect: true, audioKey: "sandalet", spokenText: "sandalet" },
@@ -239,7 +239,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde bir çift sandalet var?', correct: 'Evet! Burada bir çift sandalet var.', wrong: 'Hayır, burada tek sandalet var.' }
+            tr: { question: 'Hangi resimde bir çift sandalet var?', correct: 'Evet! Burada bir çift sandalet var.', wrong: 'Hayır, burada tek sandalet var.', wrongOlumsuz: 'Hayır, burada bir çift sandalet yok.' }
         },
         options: [
             { id: 6967, word: "sandalet", imageUrl: "/images/6967.webp", isCorrect: true, audioKey: "sandalet", spokenText: "sandalet" },
@@ -253,7 +253,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde tek terlik var?', correct: 'Evet! Burada tek terlik var.', wrong: 'Hayır, burada bir çift terlik var.' }
+            tr: { question: 'Hangi resimde tek terlik var?', correct: 'Evet! Burada tek terlik var.', wrong: 'Hayır, burada bir çift terlik var.', wrongOlumsuz: 'Hayır, burada tek terlik yok.' }
         },
         options: [
             { id: 6970, word: "terlik", imageUrl: "/images/6970.webp", isCorrect: true, audioKey: "terlik", spokenText: "terlik" },
@@ -266,7 +266,7 @@ export const oddEvenDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OddEven,
         speech: {
-            tr: { question: 'Hangi resimde bir çift terlik var?', correct: 'Evet! Burada bir çift terlik var.', wrong: 'Hayır, burada tek terlik var.' }
+            tr: { question: 'Hangi resimde bir çift terlik var?', correct: 'Evet! Burada bir çift terlik var.', wrong: 'Hayır, burada tek terlik var.', wrongOlumsuz: 'Hayır, burada bir çift terlik yok.' }
         },
         options: [
             { id: 6969, word: "terlik", imageUrl: "/images/6969.webp", isCorrect: true, audioKey: "terlik", spokenText: "terlik" },

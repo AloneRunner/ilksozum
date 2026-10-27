@@ -10,7 +10,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi araba açık renk?', correct: 'Evet! Bu araba açık renk.', wrong: 'Hayır, bu araba koyu renk.' }
+            tr: { question: 'Hangi araba açık renk?', correct: 'Evet! Bu araba açık renk.', wrong: 'Hayır, bu araba koyu renk.', wrongOlumsuz: 'Hayır, bu araba açık renk değil.' }
         },
         options: [
             { id: 6601, word: "araba", imageUrl: "/images/6601.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -23,7 +23,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi araba koyu renk?', correct: 'Evet! Bu araba koyu renk.', wrong: 'Hayır, bu araba açık renk.' }
+            tr: { question: 'Hangi araba koyu renk?', correct: 'Evet! Bu araba koyu renk.', wrong: 'Hayır, bu araba açık renk.', wrongOlumsuz: 'Hayır, bu araba koyu renk değil.' }
         },
         options: [
             { id: 6602, word: "araba", imageUrl: "/images/6602.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -37,7 +37,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi balon açık renk?', correct: 'Evet! Bu balon açık renk.', wrong: 'Hayır, bu balon koyu renk.' }
+            tr: { question: 'Hangi balon açık renk?', correct: 'Evet! Bu balon açık renk.', wrong: 'Hayır, bu balon koyu renk.', wrongOlumsuz: 'Hayır, bu balon açık renk değil.' }
         },
         options: [
             { id: 6603, word: "balon", imageUrl: "/images/6603.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -50,7 +50,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi balon koyu renk?', correct: 'Evet! Bu balon koyu renk.', wrong: 'Hayır, bu balon açık renk.' }
+            tr: { question: 'Hangi balon koyu renk?', correct: 'Evet! Bu balon koyu renk.', wrong: 'Hayır, bu balon açık renk.', wrongOlumsuz: 'Hayır, bu balon koyu renk değil.' }
         },
         options: [
             { id: 6604, word: "balon", imageUrl: "/images/6604.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -64,7 +64,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi çanta açık renk?', correct: 'Evet! Bu çanta açık renk.', wrong: 'Hayır, bu çanta koyu renk.' }
+            tr: { question: 'Hangi çanta açık renk?', correct: 'Evet! Bu çanta açık renk.', wrong: 'Hayır, bu çanta koyu renk.', wrongOlumsuz: 'Hayır, bu çanta açık renk değil.' }
         },
         options: [
             { id: 6605, word: "çanta", imageUrl: "/images/6605.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -77,7 +77,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi çanta koyu renk?', correct: 'Evet! Bu çanta koyu renk.', wrong: 'Hayır, bu çanta açık renk.' }
+            tr: { question: 'Hangi çanta koyu renk?', correct: 'Evet! Bu çanta koyu renk.', wrong: 'Hayır, bu çanta açık renk.', wrongOlumsuz: 'Hayır, bu çanta koyu renk değil.' }
         },
         options: [
             { id: 6606, word: "çanta", imageUrl: "/images/6606.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -91,7 +91,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi çizme açık renk?', correct: 'Evet! Bu çizme açık renk.', wrong: 'Hayır, bu çizme koyu renk.' }
+            tr: { question: 'Hangi çizme açık renk?', correct: 'Evet! Bu çizme açık renk.', wrong: 'Hayır, bu çizme koyu renk.', wrongOlumsuz: 'Hayır, bu çizme açık renk değil.' }
         },
         options: [
             { id: 6607, word: "çizme", imageUrl: "/images/6607.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -104,7 +104,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi çizme koyu renk?', correct: 'Evet! Bu çizme koyu renk.', wrong: 'Hayır, bu çizme açık renk.' }
+            tr: { question: 'Hangi çizme koyu renk?', correct: 'Evet! Bu çizme koyu renk.', wrong: 'Hayır, bu çizme açık renk.', wrongOlumsuz: 'Hayır, bu çizme koyu renk değil.' }
         },
         options: [
             { id: 6608, word: "çizme", imageUrl: "/images/6608.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -118,7 +118,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi elbise açık renk?', correct: 'Evet! Bu elbise açık renk.', wrong: 'Hayır, bu elbise koyu renk.' }
+            tr: { question: 'Hangi elbise açık renk?', correct: 'Evet! Bu elbise açık renk.', wrong: 'Hayır, bu elbise koyu renk.', wrongOlumsuz: 'Hayır, bu elbise açık renk değil.' }
         },
         options: [
             { id: 6609, word: "elbise", imageUrl: "/images/6609.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -131,7 +131,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi elbise koyu renk?', correct: 'Evet! Bu elbise koyu renk.', wrong: 'Hayır, bu elbise açık renk.' }
+            tr: { question: 'Hangi elbise koyu renk?', correct: 'Evet! Bu elbise koyu renk.', wrong: 'Hayır, bu elbise açık renk.', wrongOlumsuz: 'Hayır, bu elbise koyu renk değil.' }
         },
         options: [
             { id: 6610, word: "elbise", imageUrl: "/images/6610.webp", isCorrect: true, audioKey: "elbise", spokenText: "elbise" },
@@ -145,7 +145,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi çöp kovası açık renk?', correct: 'Evet! Bu çöp kovası açık renk.', wrong: 'Hayır, bu çöp kovası koyu renk.' }
+            tr: { question: 'Hangi çöp kovası açık renk?', correct: 'Evet! Bu çöp kovası açık renk.', wrong: 'Hayır, bu çöp kovası koyu renk.', wrongOlumsuz: 'Hayır, bu çöp kovası açık renk değil.' }
         },
         options: [
             { id: 6611, word: "çöp kovası", imageUrl: "/images/6611.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -158,7 +158,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi çöp kovası koyu renk?', correct: 'Evet! Bu çöp kovası koyu renk.', wrong: 'Hayır, bu çöp kovası açık renk.' }
+            tr: { question: 'Hangi çöp kovası koyu renk?', correct: 'Evet! Bu çöp kovası koyu renk.', wrong: 'Hayır, bu çöp kovası açık renk.', wrongOlumsuz: 'Hayır, bu çöp kovası koyu renk değil.' }
         },
         options: [
             { id: 6612, word: "çöp kovası", imageUrl: "/images/6612.webp", isCorrect: true, audioKey: "çöp kovası", spokenText: "çöp kovası" },
@@ -172,7 +172,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi kupa açık renk?', correct: 'Evet! Bu kupa açık renk.', wrong: 'Hayır, bu kupa koyu renk.' }
+            tr: { question: 'Hangi kupa açık renk?', correct: 'Evet! Bu kupa açık renk.', wrong: 'Hayır, bu kupa koyu renk.', wrongOlumsuz: 'Hayır, bu kupa açık renk değil.' }
         },
         options: [
             { id: 6613, word: "kupa", imageUrl: "/images/6613.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -185,7 +185,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi kupa koyu renk?', correct: 'Evet! Bu kupa koyu renk.', wrong: 'Hayır, bu kupa açık renk.' }
+            tr: { question: 'Hangi kupa koyu renk?', correct: 'Evet! Bu kupa koyu renk.', wrong: 'Hayır, bu kupa açık renk.', wrongOlumsuz: 'Hayır, bu kupa koyu renk değil.' }
         },
         options: [
             { id: 6614, word: "kupa", imageUrl: "/images/6614.webp", isCorrect: true, audioKey: "kupa", spokenText: "kupa" },
@@ -199,7 +199,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi şemsiye açık renk?', correct: 'Evet! Bu şemsiye açık renk.', wrong: 'Hayır, bu şemsiye koyu renk.' }
+            tr: { question: 'Hangi şemsiye açık renk?', correct: 'Evet! Bu şemsiye açık renk.', wrong: 'Hayır, bu şemsiye koyu renk.', wrongOlumsuz: 'Hayır, bu şemsiye açık renk değil.' }
         },
         options: [
             { id: 6615, word: "şemsiye", imageUrl: "/images/6615.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -212,7 +212,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi şemsiye koyu renk?', correct: 'Evet! Bu şemsiye koyu renk.', wrong: 'Hayır, bu şemsiye açık renk.' }
+            tr: { question: 'Hangi şemsiye koyu renk?', correct: 'Evet! Bu şemsiye koyu renk.', wrong: 'Hayır, bu şemsiye açık renk.', wrongOlumsuz: 'Hayır, bu şemsiye koyu renk değil.' }
         },
         options: [
             { id: 6616, word: "şemsiye", imageUrl: "/images/6616.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -226,7 +226,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi şişe açık renk?', correct: 'Evet! Bu şişe açık renk.', wrong: 'Hayır, bu şişe koyu renk.' }
+            tr: { question: 'Hangi şişe açık renk?', correct: 'Evet! Bu şişe açık renk.', wrong: 'Hayır, bu şişe koyu renk.', wrongOlumsuz: 'Hayır, bu şişe açık renk değil.' }
         },
         options: [
             { id: 6617, word: "şişe", imageUrl: "/images/6617.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -239,7 +239,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi şişe koyu renk?', correct: 'Evet! Bu şişe koyu renk.', wrong: 'Hayır, bu şişe açık renk.' }
+            tr: { question: 'Hangi şişe koyu renk?', correct: 'Evet! Bu şişe koyu renk.', wrong: 'Hayır, bu şişe açık renk.', wrongOlumsuz: 'Hayır, bu şişe koyu renk değil.' }
         },
         options: [
             { id: 6618, word: "şişe", imageUrl: "/images/6618.webp", isCorrect: true, audioKey: "şişe", spokenText: "şişe" },
@@ -253,7 +253,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi tişört açık renk?', correct: 'Evet! Bu tişört açık renk.', wrong: 'Hayır, bu tişört koyu renk.' }
+            tr: { question: 'Hangi tişört açık renk?', correct: 'Evet! Bu tişört açık renk.', wrong: 'Hayır, bu tişört koyu renk.', wrongOlumsuz: 'Hayır, bu tişört açık renk değil.' }
         },
         options: [
             { id: 6619, word: "tişört", imageUrl: "/images/6619.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -266,7 +266,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi tişört koyu renk?', correct: 'Evet! Bu tişört koyu renk.', wrong: 'Hayır, bu tişört açık renk.' }
+            tr: { question: 'Hangi tişört koyu renk?', correct: 'Evet! Bu tişört koyu renk.', wrong: 'Hayır, bu tişört açık renk.', wrongOlumsuz: 'Hayır, bu tişört koyu renk değil.' }
         },
         options: [
             { id: 6620, word: "tişört", imageUrl: "/images/6620.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -280,7 +280,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi top açık renk?', correct: 'Evet! Bu top açık renk.', wrong: 'Hayır, bu top koyu renk.' }
+            tr: { question: 'Hangi top açık renk?', correct: 'Evet! Bu top açık renk.', wrong: 'Hayır, bu top koyu renk.', wrongOlumsuz: 'Hayır, bu top açık renk değil.' }
         },
         options: [
             { id: 6621, word: "top", imageUrl: "/images/6621.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -293,7 +293,7 @@ export const acikKoyuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AcikKoyu,
         speech: {
-            tr: { question: 'Hangi top koyu renk?', correct: 'Evet! Bu top koyu renk.', wrong: 'Hayır, bu top açık renk.' }
+            tr: { question: 'Hangi top koyu renk?', correct: 'Evet! Bu top koyu renk.', wrong: 'Hayır, bu top açık renk.', wrongOlumsuz: 'Hayır, bu top koyu renk değil.' }
         },
         options: [
             { id: 6622, word: "top", imageUrl: "/images/6622.webp", isCorrect: true, audioKey: "top", spokenText: "top" },

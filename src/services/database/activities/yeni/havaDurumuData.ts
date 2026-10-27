@@ -10,7 +10,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada yağmur yağıyor.' }
+            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada yağmur yağıyor.', wrongOlumsuz: 'Hayır, burada hava güneşli değil.' }
         },
         options: [
             { id: 6901, word: "çocuk", imageUrl: "/images/6901.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -23,7 +23,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada hava güneşli.' }
+            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada hava güneşli.', wrongOlumsuz: 'Hayır, burada yağmur yağmıyor.' }
         },
         options: [
             { id: 6904, word: "çocuk", imageUrl: "/images/6904.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -36,7 +36,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada kar yağıyor.' }
+            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada kar yağıyor.', wrongOlumsuz: 'Hayır, burada hava güneşli değil.' }
         },
         options: [
             { id: 6901, word: "çocuk", imageUrl: "/images/6901.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -49,7 +49,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada hava güneşli.' }
+            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada hava güneşli.', wrongOlumsuz: 'Hayır, burada kar yağmıyor.' }
         },
         options: [
             { id: 6902, word: "çocuk", imageUrl: "/images/6902.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -62,7 +62,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada rüzgâr esiyor.' }
+            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada rüzgâr esiyor.', wrongOlumsuz: 'Hayır, burada hava güneşli değil.' }
         },
         options: [
             { id: 6901, word: "çocuk", imageUrl: "/images/6901.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -75,7 +75,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde rüzgâr esiyor?', correct: 'Evet! Burada rüzgâr esiyor.', wrong: 'Hayır, burada hava güneşli.' }
+            tr: { question: 'Hangi resimde rüzgâr esiyor?', correct: 'Evet! Burada rüzgâr esiyor.', wrong: 'Hayır, burada hava güneşli.', wrongOlumsuz: 'Hayır, burada rüzgâr esmiyor.' }
         },
         options: [
             { id: 6903, word: "çocuk", imageUrl: "/images/6903.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -88,7 +88,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada kar yağıyor.' }
+            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada kar yağıyor.', wrongOlumsuz: 'Hayır, burada yağmur yağmıyor.' }
         },
         options: [
             { id: 6904, word: "çocuk", imageUrl: "/images/6904.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -101,7 +101,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada yağmur yağıyor.' }
+            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada yağmur yağıyor.', wrongOlumsuz: 'Hayır, burada kar yağmıyor.' }
         },
         options: [
             { id: 6902, word: "çocuk", imageUrl: "/images/6902.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -115,7 +115,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada yağmur yağıyor.' }
+            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada yağmur yağıyor.', wrongOlumsuz: 'Hayır, burada hava güneşli değil.' }
         },
         options: [
             { id: 6905, word: "ev", imageUrl: "/images/6905.webp", isCorrect: true, audioKey: "ev", spokenText: "ev" },
@@ -128,7 +128,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada hava güneşli.' }
+            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada hava güneşli.', wrongOlumsuz: 'Hayır, burada yağmur yağmıyor.' }
         },
         options: [
             { id: 6908, word: "ev", imageUrl: "/images/6908.webp", isCorrect: true, audioKey: "ev", spokenText: "ev" },
@@ -141,7 +141,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada kar yağıyor.' }
+            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada kar yağıyor.', wrongOlumsuz: 'Hayır, burada hava güneşli değil.' }
         },
         options: [
             { id: 6905, word: "ev", imageUrl: "/images/6905.webp", isCorrect: true, audioKey: "ev", spokenText: "ev" },
@@ -154,7 +154,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada hava güneşli.' }
+            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada hava güneşli.', wrongOlumsuz: 'Hayır, burada kar yağmıyor.' }
         },
         options: [
             { id: 6906, word: "ev", imageUrl: "/images/6906.webp", isCorrect: true, audioKey: "ev", spokenText: "ev" },
@@ -167,7 +167,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada rüzgâr esiyor.' }
+            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada rüzgâr esiyor.', wrongOlumsuz: 'Hayır, burada hava güneşli değil.' }
         },
         options: [
             { id: 6905, word: "ev", imageUrl: "/images/6905.webp", isCorrect: true, audioKey: "ev", spokenText: "ev" },
@@ -180,7 +180,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde rüzgâr esiyor?', correct: 'Evet! Burada rüzgâr esiyor.', wrong: 'Hayır, burada hava güneşli.' }
+            tr: { question: 'Hangi resimde rüzgâr esiyor?', correct: 'Evet! Burada rüzgâr esiyor.', wrong: 'Hayır, burada hava güneşli.', wrongOlumsuz: 'Hayır, burada rüzgâr esmiyor.' }
         },
         options: [
             { id: 6907, word: "ev", imageUrl: "/images/6907.webp", isCorrect: true, audioKey: "ev", spokenText: "ev" },
@@ -193,7 +193,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada kar yağıyor.' }
+            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada kar yağıyor.', wrongOlumsuz: 'Hayır, burada yağmur yağmıyor.' }
         },
         options: [
             { id: 6908, word: "ev", imageUrl: "/images/6908.webp", isCorrect: true, audioKey: "ev", spokenText: "ev" },
@@ -206,7 +206,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada yağmur yağıyor.' }
+            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada yağmur yağıyor.', wrongOlumsuz: 'Hayır, burada kar yağmıyor.' }
         },
         options: [
             { id: 6906, word: "ev", imageUrl: "/images/6906.webp", isCorrect: true, audioKey: "ev", spokenText: "ev" },
@@ -220,7 +220,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada yağmur yağıyor.' }
+            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada yağmur yağıyor.', wrongOlumsuz: 'Hayır, burada hava güneşli değil.' }
         },
         options: [
             { id: 6909, word: "oyun parkı", imageUrl: "/images/6909.webp", isCorrect: true, audioKey: "oyun parkı", spokenText: "oyun parkı" },
@@ -233,7 +233,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada hava güneşli.' }
+            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada hava güneşli.', wrongOlumsuz: 'Hayır, burada yağmur yağmıyor.' }
         },
         options: [
             { id: 6912, word: "oyun parkı", imageUrl: "/images/6912.webp", isCorrect: true, audioKey: "oyun parkı", spokenText: "oyun parkı" },
@@ -246,7 +246,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada kar yağıyor.' }
+            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada kar yağıyor.', wrongOlumsuz: 'Hayır, burada hava güneşli değil.' }
         },
         options: [
             { id: 6909, word: "oyun parkı", imageUrl: "/images/6909.webp", isCorrect: true, audioKey: "oyun parkı", spokenText: "oyun parkı" },
@@ -259,7 +259,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada hava güneşli.' }
+            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada hava güneşli.', wrongOlumsuz: 'Hayır, burada kar yağmıyor.' }
         },
         options: [
             { id: 6910, word: "oyun parkı", imageUrl: "/images/6910.webp", isCorrect: true, audioKey: "oyun parkı", spokenText: "oyun parkı" },
@@ -272,7 +272,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada rüzgâr esiyor.' }
+            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada rüzgâr esiyor.', wrongOlumsuz: 'Hayır, burada hava güneşli değil.' }
         },
         options: [
             { id: 6909, word: "oyun parkı", imageUrl: "/images/6909.webp", isCorrect: true, audioKey: "oyun parkı", spokenText: "oyun parkı" },
@@ -285,7 +285,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde rüzgâr esiyor?', correct: 'Evet! Burada rüzgâr esiyor.', wrong: 'Hayır, burada hava güneşli.' }
+            tr: { question: 'Hangi resimde rüzgâr esiyor?', correct: 'Evet! Burada rüzgâr esiyor.', wrong: 'Hayır, burada hava güneşli.', wrongOlumsuz: 'Hayır, burada rüzgâr esmiyor.' }
         },
         options: [
             { id: 6911, word: "oyun parkı", imageUrl: "/images/6911.webp", isCorrect: true, audioKey: "oyun parkı", spokenText: "oyun parkı" },
@@ -298,7 +298,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada kar yağıyor.' }
+            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada kar yağıyor.', wrongOlumsuz: 'Hayır, burada yağmur yağmıyor.' }
         },
         options: [
             { id: 6912, word: "oyun parkı", imageUrl: "/images/6912.webp", isCorrect: true, audioKey: "oyun parkı", spokenText: "oyun parkı" },
@@ -311,7 +311,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada yağmur yağıyor.' }
+            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada yağmur yağıyor.', wrongOlumsuz: 'Hayır, burada kar yağmıyor.' }
         },
         options: [
             { id: 6910, word: "oyun parkı", imageUrl: "/images/6910.webp", isCorrect: true, audioKey: "oyun parkı", spokenText: "oyun parkı" },
@@ -325,7 +325,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada yağmur yağıyor.' }
+            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada yağmur yağıyor.', wrongOlumsuz: 'Hayır, burada hava güneşli değil.' }
         },
         options: [
             { id: 6913, word: "park yolu", imageUrl: "/images/6913.webp", isCorrect: true, audioKey: "park yolu", spokenText: "park yolu" },
@@ -338,7 +338,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada hava güneşli.' }
+            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada hava güneşli.', wrongOlumsuz: 'Hayır, burada yağmur yağmıyor.' }
         },
         options: [
             { id: 6916, word: "park yolu", imageUrl: "/images/6916.webp", isCorrect: true, audioKey: "park yolu", spokenText: "park yolu" },
@@ -351,7 +351,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada kar yağıyor.' }
+            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada kar yağıyor.', wrongOlumsuz: 'Hayır, burada hava güneşli değil.' }
         },
         options: [
             { id: 6913, word: "park yolu", imageUrl: "/images/6913.webp", isCorrect: true, audioKey: "park yolu", spokenText: "park yolu" },
@@ -364,7 +364,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada hava güneşli.' }
+            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada hava güneşli.', wrongOlumsuz: 'Hayır, burada kar yağmıyor.' }
         },
         options: [
             { id: 6914, word: "park yolu", imageUrl: "/images/6914.webp", isCorrect: true, audioKey: "park yolu", spokenText: "park yolu" },
@@ -377,7 +377,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada rüzgâr esiyor.' }
+            tr: { question: 'Hangi resimde hava güneşli?', correct: 'Evet! Burada hava güneşli.', wrong: 'Hayır, burada rüzgâr esiyor.', wrongOlumsuz: 'Hayır, burada hava güneşli değil.' }
         },
         options: [
             { id: 6913, word: "park yolu", imageUrl: "/images/6913.webp", isCorrect: true, audioKey: "park yolu", spokenText: "park yolu" },
@@ -390,7 +390,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde rüzgâr esiyor?', correct: 'Evet! Burada rüzgâr esiyor.', wrong: 'Hayır, burada hava güneşli.' }
+            tr: { question: 'Hangi resimde rüzgâr esiyor?', correct: 'Evet! Burada rüzgâr esiyor.', wrong: 'Hayır, burada hava güneşli.', wrongOlumsuz: 'Hayır, burada rüzgâr esmiyor.' }
         },
         options: [
             { id: 6915, word: "park yolu", imageUrl: "/images/6915.webp", isCorrect: true, audioKey: "park yolu", spokenText: "park yolu" },
@@ -403,7 +403,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada kar yağıyor.' }
+            tr: { question: 'Hangi resimde yağmur yağıyor?', correct: 'Evet! Burada yağmur yağıyor.', wrong: 'Hayır, burada kar yağıyor.', wrongOlumsuz: 'Hayır, burada yağmur yağmıyor.' }
         },
         options: [
             { id: 6916, word: "park yolu", imageUrl: "/images/6916.webp", isCorrect: true, audioKey: "park yolu", spokenText: "park yolu" },
@@ -416,7 +416,7 @@ export const havaDurumuDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HavaDurumu,
         speech: {
-            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada yağmur yağıyor.' }
+            tr: { question: 'Hangi resimde kar yağıyor?', correct: 'Evet! Burada kar yağıyor.', wrong: 'Hayır, burada yağmur yağıyor.', wrongOlumsuz: 'Hayır, burada kar yağmıyor.' }
         },
         options: [
             { id: 6914, word: "park yolu", imageUrl: "/images/6914.webp", isCorrect: true, audioKey: "park yolu", spokenText: "park yolu" },

@@ -10,7 +10,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.' }
+            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.', wrongOlumsuz: 'Hayır, burada gündüz değil.' }
         },
         options: [
             { id: 5902, word: "ahır", imageUrl: "/images/5902.webp", isCorrect: true, audioKey: "ahır", spokenText: "ahır" },
@@ -23,7 +23,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.' }
+            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.', wrongOlumsuz: 'Hayır, burada gece değil.' }
         },
         options: [
             { id: 5901, word: "ahır", imageUrl: "/images/5901.webp", isCorrect: true, audioKey: "ahır", spokenText: "ahır" },
@@ -37,7 +37,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.' }
+            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.', wrongOlumsuz: 'Hayır, burada gündüz değil.' }
         },
         options: [
             { id: 5904, word: "bahçe", imageUrl: "/images/5904.webp", isCorrect: true, audioKey: "bahçe", spokenText: "bahçe" },
@@ -50,7 +50,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.' }
+            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.', wrongOlumsuz: 'Hayır, burada gece değil.' }
         },
         options: [
             { id: 5903, word: "bahçe", imageUrl: "/images/5903.webp", isCorrect: true, audioKey: "bahçe", spokenText: "bahçe" },
@@ -64,7 +64,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.' }
+            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.', wrongOlumsuz: 'Hayır, burada gündüz değil.' }
         },
         options: [
             { id: 5906, word: "çadır", imageUrl: "/images/5906.webp", isCorrect: true, audioKey: "çadır", spokenText: "çadır" },
@@ -77,7 +77,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.' }
+            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.', wrongOlumsuz: 'Hayır, burada gece değil.' }
         },
         options: [
             { id: 5905, word: "çadır", imageUrl: "/images/5905.webp", isCorrect: true, audioKey: "çadır", spokenText: "çadır" },
@@ -91,7 +91,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.' }
+            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.', wrongOlumsuz: 'Hayır, burada gündüz değil.' }
         },
         options: [
             { id: 5908, word: "ev", imageUrl: "/images/5908.webp", isCorrect: true, audioKey: "ev", spokenText: "ev" },
@@ -104,7 +104,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.' }
+            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.', wrongOlumsuz: 'Hayır, burada gece değil.' }
         },
         options: [
             { id: 5907, word: "ev", imageUrl: "/images/5907.webp", isCorrect: true, audioKey: "ev", spokenText: "ev" },
@@ -118,7 +118,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.' }
+            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.', wrongOlumsuz: 'Hayır, burada gündüz değil.' }
         },
         options: [
             { id: 5910, word: "kasaba", imageUrl: "/images/5910.webp", isCorrect: true, audioKey: "kasaba", spokenText: "kasaba" },
@@ -131,7 +131,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.' }
+            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.', wrongOlumsuz: 'Hayır, burada gece değil.' }
         },
         options: [
             { id: 5909, word: "kasaba", imageUrl: "/images/5909.webp", isCorrect: true, audioKey: "kasaba", spokenText: "kasaba" },
@@ -145,7 +145,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.' }
+            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.', wrongOlumsuz: 'Hayır, burada gündüz değil.' }
         },
         options: [
             { id: 5912, word: "park", imageUrl: "/images/5912.webp", isCorrect: true, audioKey: "park", spokenText: "park" },
@@ -158,7 +158,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.' }
+            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.', wrongOlumsuz: 'Hayır, burada gece değil.' }
         },
         options: [
             { id: 5911, word: "park", imageUrl: "/images/5911.webp", isCorrect: true, audioKey: "park", spokenText: "park" },
@@ -172,7 +172,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.' }
+            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.', wrongOlumsuz: 'Hayır, burada gündüz değil.' }
         },
         options: [
             { id: 5914, word: "pencere", imageUrl: "/images/5914.webp", isCorrect: true, audioKey: "pencere", spokenText: "pencere" },
@@ -185,7 +185,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.' }
+            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.', wrongOlumsuz: 'Hayır, burada gece değil.' }
         },
         options: [
             { id: 5913, word: "pencere", imageUrl: "/images/5913.webp", isCorrect: true, audioKey: "pencere", spokenText: "pencere" },
@@ -199,7 +199,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.' }
+            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.', wrongOlumsuz: 'Hayır, burada gündüz değil.' }
         },
         options: [
             { id: 5916, word: "plaj", imageUrl: "/images/5916.webp", isCorrect: true, audioKey: "plaj", spokenText: "plaj" },
@@ -212,7 +212,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.' }
+            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.', wrongOlumsuz: 'Hayır, burada gece değil.' }
         },
         options: [
             { id: 5915, word: "plaj", imageUrl: "/images/5915.webp", isCorrect: true, audioKey: "plaj", spokenText: "plaj" },
@@ -226,7 +226,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.' }
+            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.', wrongOlumsuz: 'Hayır, burada gündüz değil.' }
         },
         options: [
             { id: 5918, word: "sandal", imageUrl: "/images/5918.webp", isCorrect: true, audioKey: "sandal", spokenText: "sandal" },
@@ -239,7 +239,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.' }
+            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.', wrongOlumsuz: 'Hayır, burada gece değil.' }
         },
         options: [
             { id: 5917, word: "sandal", imageUrl: "/images/5917.webp", isCorrect: true, audioKey: "sandal", spokenText: "sandal" },
@@ -253,7 +253,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.' }
+            tr: { question: 'Hangi resimde gündüz?', correct: 'Evet! Burada gündüz.', wrong: 'Hayır, burada gece.', wrongOlumsuz: 'Hayır, burada gündüz değil.' }
         },
         options: [
             { id: 5920, word: "sokak", imageUrl: "/images/5920.webp", isCorrect: true, audioKey: "sokak", spokenText: "sokak" },
@@ -266,7 +266,7 @@ export const dayNightDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DayNight,
         speech: {
-            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.' }
+            tr: { question: 'Hangi resimde gece?', correct: 'Evet! Burada gece.', wrong: 'Hayır, burada gündüz.', wrongOlumsuz: 'Hayır, burada gece değil.' }
         },
         options: [
             { id: 5919, word: "sokak", imageUrl: "/images/5919.webp", isCorrect: true, audioKey: "sokak", spokenText: "sokak" },

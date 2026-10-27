@@ -10,7 +10,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Balon balığı dikenlidir.', wrong: 'Hayır, japon balığı pürüzsüzdür.' }
+            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Balon balığı dikenlidir.', wrong: 'Hayır, japon balığı pürüzsüzdür.', wrongOlumsuz: 'Hayır, japon balığı dikenli değil.' }
         },
         options: [
             { id: 3801, word: "balon balığı", imageUrl: "/images/3801.webp", isCorrect: true, audioKey: "balon balığı", spokenText: "balon balığı" },
@@ -23,7 +23,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Japon balığı pürüzsüzdür.', wrong: 'Hayır, balon balığı dikenlidir.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Japon balığı pürüzsüzdür.', wrong: 'Hayır, balon balığı dikenlidir.', wrongOlumsuz: 'Hayır, balon balığı pürüzsüz değil.' }
         },
         options: [
             { id: 3802, word: "japon balığı", imageUrl: "/images/3802.webp", isCorrect: true, audioKey: "japon balığı", spokenText: "japon balığı" },
@@ -37,7 +37,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Böğürtlen dalı dikenlidir.', wrong: 'Hayır, bambu pürüzsüzdür.' }
+            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Böğürtlen dalı dikenlidir.', wrong: 'Hayır, bambu pürüzsüzdür.', wrongOlumsuz: 'Hayır, bambu dikenli değil.' }
         },
         options: [
             { id: 3803, word: "böğürtlen dalı", imageUrl: "/images/3803.webp", isCorrect: true, audioKey: "böğürtlen dalı", spokenText: "böğürtlen dalı" },
@@ -50,7 +50,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Bambu pürüzsüzdür.', wrong: 'Hayır, böğürtlen dalı dikenlidir.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Bambu pürüzsüzdür.', wrong: 'Hayır, böğürtlen dalı dikenlidir.', wrongOlumsuz: 'Hayır, böğürtlen dalı pürüzsüz değil.' }
         },
         options: [
             { id: 3804, word: "bambu", imageUrl: "/images/3804.webp", isCorrect: true, audioKey: "bambu", spokenText: "bambu" },
@@ -64,7 +64,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Deniz kestanesi dikenlidir.', wrong: 'Hayır, deniz kabuğu pürüzsüzdür.' }
+            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Deniz kestanesi dikenlidir.', wrong: 'Hayır, deniz kabuğu pürüzsüzdür.', wrongOlumsuz: 'Hayır, deniz kabuğu dikenli değil.' }
         },
         options: [
             { id: 3805, word: "deniz kestanesi", imageUrl: "/images/3805.webp", isCorrect: true, audioKey: "deniz kestanesi", spokenText: "deniz kestanesi" },
@@ -77,7 +77,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Deniz kabuğu pürüzsüzdür.', wrong: 'Hayır, deniz kestanesi dikenlidir.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Deniz kabuğu pürüzsüzdür.', wrong: 'Hayır, deniz kestanesi dikenlidir.', wrongOlumsuz: 'Hayır, deniz kestanesi pürüzsüz değil.' }
         },
         options: [
             { id: 3806, word: "deniz kabuğu", imageUrl: "/images/3806.webp", isCorrect: true, audioKey: "deniz kabuğu", spokenText: "deniz kabuğu" },
@@ -91,7 +91,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Deve dikeni dikenlidir.', wrong: 'Hayır, nergis pürüzsüzdür.' }
+            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Deve dikeni dikenlidir.', wrong: 'Hayır, nergis pürüzsüzdür.', wrongOlumsuz: 'Hayır, nergis dikenli değil.' }
         },
         options: [
             { id: 3807, word: "deve dikeni", imageUrl: "/images/3807.webp", isCorrect: true, audioKey: "deve dikeni", spokenText: "deve dikeni" },
@@ -104,7 +104,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Nergis pürüzsüzdür.', wrong: 'Hayır, deve dikeni dikenlidir.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Nergis pürüzsüzdür.', wrong: 'Hayır, deve dikeni dikenlidir.', wrongOlumsuz: 'Hayır, deve dikeni pürüzsüz değil.' }
         },
         options: [
             { id: 3808, word: "nergis", imageUrl: "/images/3808.webp", isCorrect: true, audioKey: "nergis", spokenText: "nergis" },
@@ -118,7 +118,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Gül dikenlidir.', wrong: 'Hayır, lale pürüzsüzdür.' }
+            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Gül dikenlidir.', wrong: 'Hayır, lale pürüzsüzdür.', wrongOlumsuz: 'Hayır, lale dikenli değil.' }
         },
         options: [
             { id: 3809, word: "gül", imageUrl: "/images/3809.webp", isCorrect: true, audioKey: "gül", spokenText: "gül" },
@@ -131,7 +131,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Lale pürüzsüzdür.', wrong: 'Hayır, gül dikenlidir.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Lale pürüzsüzdür.', wrong: 'Hayır, gül dikenlidir.', wrongOlumsuz: 'Hayır, gül pürüzsüz değil.' }
         },
         options: [
             { id: 3003, word: "lale", imageUrl: "/images/3003.webp", isCorrect: true, audioKey: "lale", spokenText: "lale" },
@@ -145,7 +145,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Kaktüs dikenlidir.', wrong: 'Hayır, elma pürüzsüzdür.' }
+            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Kaktüs dikenlidir.', wrong: 'Hayır, elma pürüzsüzdür.', wrongOlumsuz: 'Hayır, elma dikenli değil.' }
         },
         options: [
             { id: 3810, word: "kaktüs", imageUrl: "/images/3810.webp", isCorrect: true, audioKey: "kaktüs", spokenText: "kaktüs" },
@@ -158,7 +158,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Elma pürüzsüzdür.', wrong: 'Hayır, kaktüs dikenlidir.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Elma pürüzsüzdür.', wrong: 'Hayır, kaktüs dikenlidir.', wrongOlumsuz: 'Hayır, kaktüs pürüzsüz değil.' }
         },
         options: [
             { id: 2807, word: "elma", imageUrl: "/images/2807.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -172,7 +172,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Hangi kestane dikenli?', correct: 'Evet! Bu kestane dikenli.', wrong: 'Hayır, bu kestane pürüzsüz.' }
+            tr: { question: 'Hangi kestane dikenli?', correct: 'Evet! Bu kestane dikenli.', wrong: 'Hayır, bu kestane pürüzsüz.', wrongOlumsuz: 'Hayır, bu kestane dikenli değil.' }
         },
         options: [
             { id: 3811, word: "kestane", imageUrl: "/images/3811.webp", isCorrect: true, audioKey: "kestane", spokenText: "kestane" },
@@ -185,7 +185,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Hangi kestane pürüzsüz?', correct: 'Evet! Bu kestane pürüzsüz.', wrong: 'Hayır, bu kestane dikenli.' }
+            tr: { question: 'Hangi kestane pürüzsüz?', correct: 'Evet! Bu kestane pürüzsüz.', wrong: 'Hayır, bu kestane dikenli.', wrongOlumsuz: 'Hayır, bu kestane pürüzsüz değil.' }
         },
         options: [
             { id: 3812, word: "kestane", imageUrl: "/images/3812.webp", isCorrect: true, audioKey: "kestane", spokenText: "kestane" },
@@ -199,7 +199,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Kirpi dikenlidir.', wrong: 'Hayır, yunus pürüzsüzdür.' }
+            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Kirpi dikenlidir.', wrong: 'Hayır, yunus pürüzsüzdür.', wrongOlumsuz: 'Hayır, yunus dikenli değil.' }
         },
         options: [
             { id: 3813, word: "kirpi", imageUrl: "/images/3813.webp", isCorrect: true, audioKey: "kirpi", spokenText: "kirpi" },
@@ -212,7 +212,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Yunus pürüzsüzdür.', wrong: 'Hayır, kirpi dikenlidir.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Yunus pürüzsüzdür.', wrong: 'Hayır, kirpi dikenlidir.', wrongOlumsuz: 'Hayır, kirpi pürüzsüz değil.' }
         },
         options: [
             { id: 3814, word: "yunus", imageUrl: "/images/3814.webp", isCorrect: true, audioKey: "yunus", spokenText: "yunus" },
@@ -226,7 +226,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Dikenli oyuncak dikenlidir.', wrong: 'Hayır, lastik ördek pürüzsüzdür.' }
+            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Dikenli oyuncak dikenlidir.', wrong: 'Hayır, lastik ördek pürüzsüzdür.', wrongOlumsuz: 'Hayır, lastik ördek dikenli değil.' }
         },
         options: [
             { id: 3815, word: "dikenli oyuncak", imageUrl: "/images/3815.webp", isCorrect: true, audioKey: "dikenli oyuncak", spokenText: "dikenli oyuncak" },
@@ -239,7 +239,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Lastik ördek pürüzsüzdür.', wrong: 'Hayır, dikenli oyuncak dikenlidir.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Lastik ördek pürüzsüzdür.', wrong: 'Hayır, dikenli oyuncak dikenlidir.', wrongOlumsuz: 'Hayır, dikenli oyuncak pürüzsüz değil.' }
         },
         options: [
             { id: 3816, word: "lastik ördek", imageUrl: "/images/3816.webp", isCorrect: true, audioKey: "lastik ördek", spokenText: "lastik ördek" },
@@ -253,7 +253,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Dikenli top dikenlidir.', wrong: 'Hayır, top pürüzsüzdür.' }
+            tr: { question: 'Dikenli olan hangisi?', correct: 'Evet! Dikenli top dikenlidir.', wrong: 'Hayır, top pürüzsüzdür.', wrongOlumsuz: 'Hayır, top dikenli değil.' }
         },
         options: [
             { id: 3817, word: "dikenli top", imageUrl: "/images/3817.webp", isCorrect: true, audioKey: "dikenli top", spokenText: "dikenli top" },
@@ -266,7 +266,7 @@ export const dikenliPuruzsuzDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.DikenliPuruzsuz,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Top pürüzsüzdür.', wrong: 'Hayır, dikenli top dikenlidir.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Top pürüzsüzdür.', wrong: 'Hayır, dikenli top dikenlidir.', wrongOlumsuz: 'Hayır, dikenli top pürüzsüz değil.' }
         },
         options: [
             { id: 2317, word: "top", imageUrl: "/images/2317.webp", isCorrect: true, audioKey: "top", spokenText: "top" },

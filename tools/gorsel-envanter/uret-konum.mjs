@@ -67,7 +67,7 @@ const round = (type, q, correct, wrong, s, a, b) => `    {
         questionAudioKey: "",
         activityType: ActivityType.${type},
         speech: {
-            tr: { question: '${q}', correct: '${correct}', wrong: '${wrong}' }
+            tr: { question: '${q}', correct: '${correct}', wrong: '${wrong[0]}'${wrong[1] && wrong[1] !== wrong[0] ? `, wrongOlumsuz: '${wrong[1]}'` : ''} }
         },
         options: [
 ${opt(s, a, true)},
@@ -77,7 +77,8 @@ ${opt(s, b, false)}
 
 // Çift: [etkinlik, A dosyası, B dosyası, soru(A), soru(B), cümle(A), cümle(B)]
 const PAIRS = [
-  // Cümleler (gramer, 2026-10-06): "Evet! Bu top kutunun içinde." / "Hayır, bu top kutunun dışında." (-dır yok)
+  // Cümleler (gramer, 2026-10-06): "Evet! Bu top kutunun içinde." (-dır yok)
+  // Yanlış cevap: varsayılan zıt konum "Hayır, bu top kutunun dışında."; ayarla olumsuz "Hayır, bu top kutunun içinde değil." (2026-10-27)
   ['InsideOutside', 'icinde', 'disinda',
     s => `Hangi ${s.ozne} ${s.kap} içinde?`, s => `Hangi ${s.ozne} ${s.kap} dışında?`,
     s => `${s.ozne} ${s.kap} içinde`, s => `${s.ozne} ${s.kap} dışında`],
@@ -105,9 +106,9 @@ for (const [type, a, b, qa, qb, ca, cb] of PAIRS) {
   for (const s of SETS) {
     if (!img(s, a) || !img(s, b)) continue; // bu sette o kavram yok
     rounds.push(`    // ${s.ozne}`);
-    rounds.push(round(type, qa(s), `Evet! Bu ${ca(s)}.`, `Hayır, bu ${cb(s)}.`, s, a, b) + ',');
+    rounds.push(round(type, qa(s), `Evet! Bu ${ca(s)}.`, [`Hayır, bu ${cb(s)}.`, `Hayır, bu ${ca(s)} değil.`], s, a, b) + ',');
     // Arasında: olumsuz soru ("arasında olmayan") özel eğitimde zor; sadece olumlu soru sorulur.
-    if (type !== 'Between') rounds.push(round(type, qb(s), `Evet! Bu ${cb(s)}.`, `Hayır, bu ${ca(s)}.`, s, b, a) + ',');
+    if (type !== 'Between') rounds.push(round(type, qb(s), `Evet! Bu ${cb(s)}.`, [`Hayır, bu ${ca(s)}.`, `Hayır, bu ${cb(s)} değil.`], s, b, a) + ',');
   }
   const name = type.charAt(0).toLowerCase() + type.slice(1) + 'DataYeni';
   exportsOut.push(`export const ${name}: ConceptRound[] = [\n${rounds.join('\n')}\n];`);

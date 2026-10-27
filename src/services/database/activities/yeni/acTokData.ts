@@ -10,7 +10,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi at aç?', correct: 'Evet! Bu at aç.', wrong: 'Hayır, bu at tok.' }
+            tr: { question: 'Hangi at aç?', correct: 'Evet! Bu at aç.', wrong: 'Hayır, bu at tok.', wrongOlumsuz: 'Hayır, bu at aç değil.' }
         },
         options: [
             { id: 4301, word: "at", imageUrl: "/images/4301.webp", isCorrect: true, audioKey: "at", spokenText: "at" },
@@ -23,7 +23,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi at tok?', correct: 'Evet! Bu at tok.', wrong: 'Hayır, bu at aç.' }
+            tr: { question: 'Hangi at tok?', correct: 'Evet! Bu at tok.', wrong: 'Hayır, bu at aç.', wrongOlumsuz: 'Hayır, bu at tok değil.' }
         },
         options: [
             { id: 4302, word: "at", imageUrl: "/images/4302.webp", isCorrect: true, audioKey: "at", spokenText: "at" },
@@ -37,7 +37,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi bebek aç?', correct: 'Evet! Bu bebek aç.', wrong: 'Hayır, bu bebek tok.' }
+            tr: { question: 'Hangi bebek aç?', correct: 'Evet! Bu bebek aç.', wrong: 'Hayır, bu bebek tok.', wrongOlumsuz: 'Hayır, bu bebek aç değil.' }
         },
         options: [
             { id: 4303, word: "bebek", imageUrl: "/images/4303.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
@@ -50,7 +50,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi bebek tok?', correct: 'Evet! Bu bebek tok.', wrong: 'Hayır, bu bebek aç.' }
+            tr: { question: 'Hangi bebek tok?', correct: 'Evet! Bu bebek tok.', wrong: 'Hayır, bu bebek aç.', wrongOlumsuz: 'Hayır, bu bebek tok değil.' }
         },
         options: [
             { id: 4304, word: "bebek", imageUrl: "/images/4304.webp", isCorrect: true, audioKey: "bebek", spokenText: "bebek" },
@@ -64,7 +64,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi civciv aç?', correct: 'Evet! Bu civciv aç.', wrong: 'Hayır, bu civciv tok.' }
+            tr: { question: 'Hangi civciv aç?', correct: 'Evet! Bu civciv aç.', wrong: 'Hayır, bu civciv tok.', wrongOlumsuz: 'Hayır, bu civciv aç değil.' }
         },
         options: [
             { id: 4305, word: "civciv", imageUrl: "/images/4305.webp", isCorrect: true, audioKey: "civciv", spokenText: "civciv" },
@@ -77,7 +77,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi civciv tok?', correct: 'Evet! Bu civciv tok.', wrong: 'Hayır, bu civciv aç.' }
+            tr: { question: 'Hangi civciv tok?', correct: 'Evet! Bu civciv tok.', wrong: 'Hayır, bu civciv aç.', wrongOlumsuz: 'Hayır, bu civciv tok değil.' }
         },
         options: [
             { id: 4306, word: "civciv", imageUrl: "/images/4306.webp", isCorrect: true, audioKey: "civciv", spokenText: "civciv" },
@@ -91,7 +91,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi çocuk aç?', correct: 'Evet! Bu çocuk aç.', wrong: 'Hayır, bu çocuk tok.' }
+            tr: { question: 'Hangi çocuk aç?', correct: 'Evet! Bu çocuk aç.', wrong: 'Hayır, bu çocuk tok.', wrongOlumsuz: 'Hayır, bu çocuk aç değil.' }
         },
         options: [
             { id: 4307, word: "çocuk", imageUrl: "/images/4307.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -104,7 +104,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi çocuk tok?', correct: 'Evet! Bu çocuk tok.', wrong: 'Hayır, bu çocuk aç.' }
+            tr: { question: 'Hangi çocuk tok?', correct: 'Evet! Bu çocuk tok.', wrong: 'Hayır, bu çocuk aç.', wrongOlumsuz: 'Hayır, bu çocuk tok değil.' }
         },
         options: [
             { id: 4308, word: "çocuk", imageUrl: "/images/4308.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -118,7 +118,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi inek aç?', correct: 'Evet! Bu inek aç.', wrong: 'Hayır, bu inek tok.' }
+            tr: { question: 'Hangi inek aç?', correct: 'Evet! Bu inek aç.', wrong: 'Hayır, bu inek tok.', wrongOlumsuz: 'Hayır, bu inek aç değil.' }
         },
         options: [
             { id: 4309, word: "inek", imageUrl: "/images/4309.webp", isCorrect: true, audioKey: "inek", spokenText: "inek" },
@@ -131,7 +131,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi inek tok?', correct: 'Evet! Bu inek tok.', wrong: 'Hayır, bu inek aç.' }
+            tr: { question: 'Hangi inek tok?', correct: 'Evet! Bu inek tok.', wrong: 'Hayır, bu inek aç.', wrongOlumsuz: 'Hayır, bu inek tok değil.' }
         },
         options: [
             { id: 4310, word: "inek", imageUrl: "/images/4310.webp", isCorrect: true, audioKey: "inek", spokenText: "inek" },
@@ -145,7 +145,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi kedi aç?', correct: 'Evet! Bu kedi aç.', wrong: 'Hayır, bu kedi tok.' }
+            tr: { question: 'Hangi kedi aç?', correct: 'Evet! Bu kedi aç.', wrong: 'Hayır, bu kedi tok.', wrongOlumsuz: 'Hayır, bu kedi aç değil.' }
         },
         options: [
             { id: 4311, word: "kedi", imageUrl: "/images/4311.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -158,7 +158,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi kedi tok?', correct: 'Evet! Bu kedi tok.', wrong: 'Hayır, bu kedi aç.' }
+            tr: { question: 'Hangi kedi tok?', correct: 'Evet! Bu kedi tok.', wrong: 'Hayır, bu kedi aç.', wrongOlumsuz: 'Hayır, bu kedi tok değil.' }
         },
         options: [
             { id: 4312, word: "kedi", imageUrl: "/images/4312.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -172,7 +172,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi köpek aç?', correct: 'Evet! Bu köpek aç.', wrong: 'Hayır, bu köpek tok.' }
+            tr: { question: 'Hangi köpek aç?', correct: 'Evet! Bu köpek aç.', wrong: 'Hayır, bu köpek tok.', wrongOlumsuz: 'Hayır, bu köpek aç değil.' }
         },
         options: [
             { id: 4313, word: "köpek", imageUrl: "/images/4313.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
@@ -185,7 +185,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi köpek tok?', correct: 'Evet! Bu köpek tok.', wrong: 'Hayır, bu köpek aç.' }
+            tr: { question: 'Hangi köpek tok?', correct: 'Evet! Bu köpek tok.', wrong: 'Hayır, bu köpek aç.', wrongOlumsuz: 'Hayır, bu köpek tok değil.' }
         },
         options: [
             { id: 4314, word: "köpek", imageUrl: "/images/4314.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
@@ -199,7 +199,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi kuş aç?', correct: 'Evet! Bu kuş aç.', wrong: 'Hayır, bu kuş tok.' }
+            tr: { question: 'Hangi kuş aç?', correct: 'Evet! Bu kuş aç.', wrong: 'Hayır, bu kuş tok.', wrongOlumsuz: 'Hayır, bu kuş aç değil.' }
         },
         options: [
             { id: 4315, word: "kuş", imageUrl: "/images/4315.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" },
@@ -212,7 +212,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi kuş tok?', correct: 'Evet! Bu kuş tok.', wrong: 'Hayır, bu kuş aç.' }
+            tr: { question: 'Hangi kuş tok?', correct: 'Evet! Bu kuş tok.', wrong: 'Hayır, bu kuş aç.', wrongOlumsuz: 'Hayır, bu kuş tok değil.' }
         },
         options: [
             { id: 4316, word: "kuş", imageUrl: "/images/4316.webp", isCorrect: true, audioKey: "kuş", spokenText: "kuş" },
@@ -226,7 +226,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi kuzu aç?', correct: 'Evet! Bu kuzu aç.', wrong: 'Hayır, bu kuzu tok.' }
+            tr: { question: 'Hangi kuzu aç?', correct: 'Evet! Bu kuzu aç.', wrong: 'Hayır, bu kuzu tok.', wrongOlumsuz: 'Hayır, bu kuzu aç değil.' }
         },
         options: [
             { id: 4317, word: "kuzu", imageUrl: "/images/4317.webp", isCorrect: true, audioKey: "kuzu", spokenText: "kuzu" },
@@ -239,7 +239,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi kuzu tok?', correct: 'Evet! Bu kuzu tok.', wrong: 'Hayır, bu kuzu aç.' }
+            tr: { question: 'Hangi kuzu tok?', correct: 'Evet! Bu kuzu tok.', wrong: 'Hayır, bu kuzu aç.', wrongOlumsuz: 'Hayır, bu kuzu tok değil.' }
         },
         options: [
             { id: 4318, word: "kuzu", imageUrl: "/images/4318.webp", isCorrect: true, audioKey: "kuzu", spokenText: "kuzu" },
@@ -253,7 +253,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi tavşan aç?', correct: 'Evet! Bu tavşan aç.', wrong: 'Hayır, bu tavşan tok.' }
+            tr: { question: 'Hangi tavşan aç?', correct: 'Evet! Bu tavşan aç.', wrong: 'Hayır, bu tavşan tok.', wrongOlumsuz: 'Hayır, bu tavşan aç değil.' }
         },
         options: [
             { id: 4319, word: "tavşan", imageUrl: "/images/4319.webp", isCorrect: true, audioKey: "tavşan", spokenText: "tavşan" },
@@ -266,7 +266,7 @@ export const hungryFullDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HungryFull,
         speech: {
-            tr: { question: 'Hangi tavşan tok?', correct: 'Evet! Bu tavşan tok.', wrong: 'Hayır, bu tavşan aç.' }
+            tr: { question: 'Hangi tavşan tok?', correct: 'Evet! Bu tavşan tok.', wrong: 'Hayır, bu tavşan aç.', wrongOlumsuz: 'Hayır, bu tavşan tok değil.' }
         },
         options: [
             { id: 4320, word: "tavşan", imageUrl: "/images/4320.webp", isCorrect: true, audioKey: "tavşan", spokenText: "tavşan" },

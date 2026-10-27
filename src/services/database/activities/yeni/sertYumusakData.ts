@@ -10,7 +10,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Oyun hamuru yumuşaktır.', wrong: 'Hayır, tahta blok serttir.' }
+            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Oyun hamuru yumuşaktır.', wrong: 'Hayır, tahta blok serttir.', wrongOlumsuz: 'Hayır, tahta blok yumuşak değil.' }
         },
         options: [
             { id: 3502, word: "oyun hamuru", imageUrl: "/images/3502.webp", isCorrect: true, audioKey: "oyun hamuru", spokenText: "oyun hamuru" },
@@ -23,7 +23,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Tahta blok serttir.', wrong: 'Hayır, oyun hamuru yumuşaktır.' }
+            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Tahta blok serttir.', wrong: 'Hayır, oyun hamuru yumuşaktır.', wrongOlumsuz: 'Hayır, oyun hamuru sert değil.' }
         },
         options: [
             { id: 3501, word: "tahta blok", imageUrl: "/images/3501.webp", isCorrect: true, audioKey: "tahta blok", spokenText: "tahta blok" },
@@ -37,7 +37,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Kedi yumuşaktır.', wrong: 'Hayır, kaplumbağa serttir.' }
+            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Kedi yumuşaktır.', wrong: 'Hayır, kaplumbağa serttir.', wrongOlumsuz: 'Hayır, kaplumbağa yumuşak değil.' }
         },
         options: [
             { id: 3504, word: "kedi", imageUrl: "/images/3504.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -50,7 +50,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Kaplumbağa serttir.', wrong: 'Hayır, kedi yumuşaktır.' }
+            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Kaplumbağa serttir.', wrong: 'Hayır, kedi yumuşaktır.', wrongOlumsuz: 'Hayır, kedi sert değil.' }
         },
         options: [
             { id: 3503, word: "kaplumbağa", imageUrl: "/images/3503.webp", isCorrect: true, audioKey: "kaplumbağa", spokenText: "kaplumbağa" },
@@ -64,7 +64,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Lokum yumuşaktır.', wrong: 'Hayır, akide şekeri serttir.' }
+            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Lokum yumuşaktır.', wrong: 'Hayır, akide şekeri serttir.', wrongOlumsuz: 'Hayır, akide şekeri yumuşak değil.' }
         },
         options: [
             { id: 3506, word: "lokum", imageUrl: "/images/3506.webp", isCorrect: true, audioKey: "lokum", spokenText: "lokum" },
@@ -77,7 +77,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Akide şekeri serttir.', wrong: 'Hayır, lokum yumuşaktır.' }
+            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Akide şekeri serttir.', wrong: 'Hayır, lokum yumuşaktır.', wrongOlumsuz: 'Hayır, lokum sert değil.' }
         },
         options: [
             { id: 3505, word: "akide şekeri", imageUrl: "/images/3505.webp", isCorrect: true, audioKey: "akide şekeri", spokenText: "akide şekeri" },
@@ -91,7 +91,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Muz yumuşaktır.', wrong: 'Hayır, ceviz serttir.' }
+            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Muz yumuşaktır.', wrong: 'Hayır, ceviz serttir.', wrongOlumsuz: 'Hayır, ceviz yumuşak değil.' }
         },
         options: [
             { id: 3508, word: "muz", imageUrl: "/images/3508.webp", isCorrect: true, audioKey: "muz", spokenText: "muz" },
@@ -104,7 +104,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Ceviz serttir.', wrong: 'Hayır, muz yumuşaktır.' }
+            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Ceviz serttir.', wrong: 'Hayır, muz yumuşaktır.', wrongOlumsuz: 'Hayır, muz sert değil.' }
         },
         options: [
             { id: 3507, word: "ceviz", imageUrl: "/images/3507.webp", isCorrect: true, audioKey: "ceviz", spokenText: "ceviz" },
@@ -118,7 +118,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Pamuk yumuşaktır.', wrong: 'Hayır, çakıl taşı serttir.' }
+            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Pamuk yumuşaktır.', wrong: 'Hayır, çakıl taşı serttir.', wrongOlumsuz: 'Hayır, çakıl taşı yumuşak değil.' }
         },
         options: [
             { id: 3510, word: "pamuk", imageUrl: "/images/3510.webp", isCorrect: true, audioKey: "pamuk", spokenText: "pamuk" },
@@ -131,7 +131,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Çakıl taşı serttir.', wrong: 'Hayır, pamuk yumuşaktır.' }
+            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Çakıl taşı serttir.', wrong: 'Hayır, pamuk yumuşaktır.', wrongOlumsuz: 'Hayır, pamuk sert değil.' }
         },
         options: [
             { id: 3509, word: "çakıl taşı", imageUrl: "/images/3509.webp", isCorrect: true, audioKey: "çakıl taşı", spokenText: "çakıl taşı" },
@@ -145,7 +145,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Puf yumuşaktır.', wrong: 'Hayır, sandalye serttir.' }
+            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Puf yumuşaktır.', wrong: 'Hayır, sandalye serttir.', wrongOlumsuz: 'Hayır, sandalye yumuşak değil.' }
         },
         options: [
             { id: 3511, word: "puf", imageUrl: "/images/3511.webp", isCorrect: true, audioKey: "puf", spokenText: "puf" },
@@ -158,7 +158,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Sandalye serttir.', wrong: 'Hayır, puf yumuşaktır.' }
+            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Sandalye serttir.', wrong: 'Hayır, puf yumuşaktır.', wrongOlumsuz: 'Hayır, puf sert değil.' }
         },
         options: [
             { id: 3116, word: "sandalye", imageUrl: "/images/3116.webp", isCorrect: true, audioKey: "sandalye", spokenText: "sandalye" },
@@ -172,7 +172,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Sünger yumuşaktır.', wrong: 'Hayır, taş serttir.' }
+            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Sünger yumuşaktır.', wrong: 'Hayır, taş serttir.', wrongOlumsuz: 'Hayır, taş yumuşak değil.' }
         },
         options: [
             { id: 3311, word: "sünger", imageUrl: "/images/3311.webp", isCorrect: true, audioKey: "sünger", spokenText: "sünger" },
@@ -185,7 +185,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Taş serttir.', wrong: 'Hayır, sünger yumuşaktır.' }
+            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Taş serttir.', wrong: 'Hayır, sünger yumuşaktır.', wrongOlumsuz: 'Hayır, sünger sert değil.' }
         },
         options: [
             { id: 3512, word: "taş", imageUrl: "/images/3512.webp", isCorrect: true, audioKey: "taş", spokenText: "taş" },
@@ -199,7 +199,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Yastık yumuşaktır.', wrong: 'Hayır, tuğla serttir.' }
+            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Yastık yumuşaktır.', wrong: 'Hayır, tuğla serttir.', wrongOlumsuz: 'Hayır, tuğla yumuşak değil.' }
         },
         options: [
             { id: 2320, word: "yastık", imageUrl: "/images/2320.webp", isCorrect: true, audioKey: "yastık", spokenText: "yastık" },
@@ -212,7 +212,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Tuğla serttir.', wrong: 'Hayır, yastık yumuşaktır.' }
+            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Tuğla serttir.', wrong: 'Hayır, yastık yumuşaktır.', wrongOlumsuz: 'Hayır, yastık sert değil.' }
         },
         options: [
             { id: 3513, word: "tuğla", imageUrl: "/images/3513.webp", isCorrect: true, audioKey: "tuğla", spokenText: "tuğla" },
@@ -226,7 +226,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Yün yumağı yumuşaktır.', wrong: 'Hayır, tahta top serttir.' }
+            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Yün yumağı yumuşaktır.', wrong: 'Hayır, tahta top serttir.', wrongOlumsuz: 'Hayır, tahta top yumuşak değil.' }
         },
         options: [
             { id: 3515, word: "yün yumağı", imageUrl: "/images/3515.webp", isCorrect: true, audioKey: "yün yumağı", spokenText: "yün yumağı" },
@@ -239,7 +239,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Tahta top serttir.', wrong: 'Hayır, yün yumağı yumuşaktır.' }
+            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Tahta top serttir.', wrong: 'Hayır, yün yumağı yumuşaktır.', wrongOlumsuz: 'Hayır, yün yumağı sert değil.' }
         },
         options: [
             { id: 3514, word: "tahta top", imageUrl: "/images/3514.webp", isCorrect: true, audioKey: "tahta top", spokenText: "tahta top" },
@@ -253,7 +253,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Ayı yumuşaktır.', wrong: 'Hayır, robot serttir.' }
+            tr: { question: 'Yumuşak olan hangisi?', correct: 'Evet! Ayı yumuşaktır.', wrong: 'Hayır, robot serttir.', wrongOlumsuz: 'Hayır, robot yumuşak değil.' }
         },
         options: [
             { id: 3206, word: "ayı", imageUrl: "/images/3206.webp", isCorrect: true, audioKey: "ayı", spokenText: "ayı" },
@@ -266,7 +266,7 @@ export const hardSoftDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HardSoft,
         speech: {
-            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Robot serttir.', wrong: 'Hayır, ayı yumuşaktır.' }
+            tr: { question: 'Sert olan hangisi?', correct: 'Evet! Robot serttir.', wrong: 'Hayır, ayı yumuşaktır.', wrongOlumsuz: 'Hayır, ayı sert değil.' }
         },
         options: [
             { id: 3112, word: "robot", imageUrl: "/images/3112.webp", isCorrect: true, audioKey: "robot", spokenText: "robot" },

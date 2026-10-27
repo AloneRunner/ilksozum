@@ -10,7 +10,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi ayakkabılık dağınık?', correct: 'Evet! Bu ayakkabılık dağınık.', wrong: 'Hayır, bu ayakkabılık toplu.' }
+            tr: { question: 'Hangi ayakkabılık dağınık?', correct: 'Evet! Bu ayakkabılık dağınık.', wrong: 'Hayır, bu ayakkabılık toplu.', wrongOlumsuz: 'Hayır, bu ayakkabılık dağınık değil.' }
         },
         options: [
             { id: 5101, word: "ayakkabılık", imageUrl: "/images/5101.webp", isCorrect: true, audioKey: "ayakkabılık", spokenText: "ayakkabılık" },
@@ -23,7 +23,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi ayakkabılık toplu?', correct: 'Evet! Bu ayakkabılık toplu.', wrong: 'Hayır, bu ayakkabılık dağınık.' }
+            tr: { question: 'Hangi ayakkabılık toplu?', correct: 'Evet! Bu ayakkabılık toplu.', wrong: 'Hayır, bu ayakkabılık dağınık.', wrongOlumsuz: 'Hayır, bu ayakkabılık toplu değil.' }
         },
         options: [
             { id: 5102, word: "ayakkabılık", imageUrl: "/images/5102.webp", isCorrect: true, audioKey: "ayakkabılık", spokenText: "ayakkabılık" },
@@ -37,7 +37,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi çanta dağınık?', correct: 'Evet! Bu çanta dağınık.', wrong: 'Hayır, bu çanta toplu.' }
+            tr: { question: 'Hangi çanta dağınık?', correct: 'Evet! Bu çanta dağınık.', wrong: 'Hayır, bu çanta toplu.', wrongOlumsuz: 'Hayır, bu çanta dağınık değil.' }
         },
         options: [
             { id: 5103, word: "çanta", imageUrl: "/images/5103.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -50,7 +50,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi çanta toplu?', correct: 'Evet! Bu çanta toplu.', wrong: 'Hayır, bu çanta dağınık.' }
+            tr: { question: 'Hangi çanta toplu?', correct: 'Evet! Bu çanta toplu.', wrong: 'Hayır, bu çanta dağınık.', wrongOlumsuz: 'Hayır, bu çanta toplu değil.' }
         },
         options: [
             { id: 5104, word: "çanta", imageUrl: "/images/5104.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -64,7 +64,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi çekmece dağınık?', correct: 'Evet! Bu çekmece dağınık.', wrong: 'Hayır, bu çekmece toplu.' }
+            tr: { question: 'Hangi çekmece dağınık?', correct: 'Evet! Bu çekmece dağınık.', wrong: 'Hayır, bu çekmece toplu.', wrongOlumsuz: 'Hayır, bu çekmece dağınık değil.' }
         },
         options: [
             { id: 5105, word: "çekmece", imageUrl: "/images/5105.webp", isCorrect: true, audioKey: "çekmece", spokenText: "çekmece" },
@@ -77,7 +77,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi çekmece toplu?', correct: 'Evet! Bu çekmece toplu.', wrong: 'Hayır, bu çekmece dağınık.' }
+            tr: { question: 'Hangi çekmece toplu?', correct: 'Evet! Bu çekmece toplu.', wrong: 'Hayır, bu çekmece dağınık.', wrongOlumsuz: 'Hayır, bu çekmece toplu değil.' }
         },
         options: [
             { id: 5106, word: "çekmece", imageUrl: "/images/5106.webp", isCorrect: true, audioKey: "çekmece", spokenText: "çekmece" },
@@ -91,7 +91,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi dolap dağınık?', correct: 'Evet! Bu dolap dağınık.', wrong: 'Hayır, bu dolap toplu.' }
+            tr: { question: 'Hangi dolap dağınık?', correct: 'Evet! Bu dolap dağınık.', wrong: 'Hayır, bu dolap toplu.', wrongOlumsuz: 'Hayır, bu dolap dağınık değil.' }
         },
         options: [
             { id: 5107, word: "dolap", imageUrl: "/images/5107.webp", isCorrect: true, audioKey: "dolap", spokenText: "dolap" },
@@ -104,7 +104,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi dolap toplu?', correct: 'Evet! Bu dolap toplu.', wrong: 'Hayır, bu dolap dağınık.' }
+            tr: { question: 'Hangi dolap toplu?', correct: 'Evet! Bu dolap toplu.', wrong: 'Hayır, bu dolap dağınık.', wrongOlumsuz: 'Hayır, bu dolap toplu değil.' }
         },
         options: [
             { id: 5108, word: "dolap", imageUrl: "/images/5108.webp", isCorrect: true, audioKey: "dolap", spokenText: "dolap" },
@@ -118,7 +118,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi kitaplık dağınık?', correct: 'Evet! Bu kitaplık dağınık.', wrong: 'Hayır, bu kitaplık toplu.' }
+            tr: { question: 'Hangi kitaplık dağınık?', correct: 'Evet! Bu kitaplık dağınık.', wrong: 'Hayır, bu kitaplık toplu.', wrongOlumsuz: 'Hayır, bu kitaplık dağınık değil.' }
         },
         options: [
             { id: 5109, word: "kitaplık", imageUrl: "/images/5109.webp", isCorrect: true, audioKey: "kitaplık", spokenText: "kitaplık" },
@@ -131,7 +131,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi kitaplık toplu?', correct: 'Evet! Bu kitaplık toplu.', wrong: 'Hayır, bu kitaplık dağınık.' }
+            tr: { question: 'Hangi kitaplık toplu?', correct: 'Evet! Bu kitaplık toplu.', wrong: 'Hayır, bu kitaplık dağınık.', wrongOlumsuz: 'Hayır, bu kitaplık toplu değil.' }
         },
         options: [
             { id: 5110, word: "kitaplık", imageUrl: "/images/5110.webp", isCorrect: true, audioKey: "kitaplık", spokenText: "kitaplık" },
@@ -145,7 +145,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi masa dağınık?', correct: 'Evet! Bu masa dağınık.', wrong: 'Hayır, bu masa toplu.' }
+            tr: { question: 'Hangi masa dağınık?', correct: 'Evet! Bu masa dağınık.', wrong: 'Hayır, bu masa toplu.', wrongOlumsuz: 'Hayır, bu masa dağınık değil.' }
         },
         options: [
             { id: 5111, word: "masa", imageUrl: "/images/5111.webp", isCorrect: true, audioKey: "masa", spokenText: "masa" },
@@ -158,7 +158,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi masa toplu?', correct: 'Evet! Bu masa toplu.', wrong: 'Hayır, bu masa dağınık.' }
+            tr: { question: 'Hangi masa toplu?', correct: 'Evet! Bu masa toplu.', wrong: 'Hayır, bu masa dağınık.', wrongOlumsuz: 'Hayır, bu masa toplu değil.' }
         },
         options: [
             { id: 5112, word: "masa", imageUrl: "/images/5112.webp", isCorrect: true, audioKey: "masa", spokenText: "masa" },
@@ -172,7 +172,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi oda dağınık?', correct: 'Evet! Bu oda dağınık.', wrong: 'Hayır, bu oda toplu.' }
+            tr: { question: 'Hangi oda dağınık?', correct: 'Evet! Bu oda dağınık.', wrong: 'Hayır, bu oda toplu.', wrongOlumsuz: 'Hayır, bu oda dağınık değil.' }
         },
         options: [
             { id: 5113, word: "oda", imageUrl: "/images/5113.webp", isCorrect: true, audioKey: "oda", spokenText: "oda" },
@@ -185,7 +185,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi oda toplu?', correct: 'Evet! Bu oda toplu.', wrong: 'Hayır, bu oda dağınık.' }
+            tr: { question: 'Hangi oda toplu?', correct: 'Evet! Bu oda toplu.', wrong: 'Hayır, bu oda dağınık.', wrongOlumsuz: 'Hayır, bu oda toplu değil.' }
         },
         options: [
             { id: 5114, word: "oda", imageUrl: "/images/5114.webp", isCorrect: true, audioKey: "oda", spokenText: "oda" },
@@ -199,7 +199,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi oyuncak rafı dağınık?', correct: 'Evet! Bu oyuncak rafı dağınık.', wrong: 'Hayır, bu oyuncak rafı toplu.' }
+            tr: { question: 'Hangi oyuncak rafı dağınık?', correct: 'Evet! Bu oyuncak rafı dağınık.', wrong: 'Hayır, bu oyuncak rafı toplu.', wrongOlumsuz: 'Hayır, bu oyuncak rafı dağınık değil.' }
         },
         options: [
             { id: 5115, word: "oyuncak rafı", imageUrl: "/images/5115.webp", isCorrect: true, audioKey: "oyuncak rafı", spokenText: "oyuncak rafı" },
@@ -212,7 +212,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi oyuncak rafı toplu?', correct: 'Evet! Bu oyuncak rafı toplu.', wrong: 'Hayır, bu oyuncak rafı dağınık.' }
+            tr: { question: 'Hangi oyuncak rafı toplu?', correct: 'Evet! Bu oyuncak rafı toplu.', wrong: 'Hayır, bu oyuncak rafı dağınık.', wrongOlumsuz: 'Hayır, bu oyuncak rafı toplu değil.' }
         },
         options: [
             { id: 5116, word: "oyuncak rafı", imageUrl: "/images/5116.webp", isCorrect: true, audioKey: "oyuncak rafı", spokenText: "oyuncak rafı" },
@@ -226,7 +226,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi mutfak tezgahı dağınık?', correct: 'Evet! Bu mutfak tezgahı dağınık.', wrong: 'Hayır, bu mutfak tezgahı toplu.' }
+            tr: { question: 'Hangi mutfak tezgahı dağınık?', correct: 'Evet! Bu mutfak tezgahı dağınık.', wrong: 'Hayır, bu mutfak tezgahı toplu.', wrongOlumsuz: 'Hayır, bu mutfak tezgahı dağınık değil.' }
         },
         options: [
             { id: 5117, word: "mutfak tezgahı", imageUrl: "/images/5117.webp", isCorrect: true, audioKey: "mutfak tezgahı", spokenText: "mutfak tezgahı" },
@@ -239,7 +239,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi mutfak tezgahı toplu?', correct: 'Evet! Bu mutfak tezgahı toplu.', wrong: 'Hayır, bu mutfak tezgahı dağınık.' }
+            tr: { question: 'Hangi mutfak tezgahı toplu?', correct: 'Evet! Bu mutfak tezgahı toplu.', wrong: 'Hayır, bu mutfak tezgahı dağınık.', wrongOlumsuz: 'Hayır, bu mutfak tezgahı toplu değil.' }
         },
         options: [
             { id: 5118, word: "mutfak tezgahı", imageUrl: "/images/5118.webp", isCorrect: true, audioKey: "mutfak tezgahı", spokenText: "mutfak tezgahı" },
@@ -253,7 +253,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi yatak dağınık?', correct: 'Evet! Bu yatak dağınık.', wrong: 'Hayır, bu yatak toplu.' }
+            tr: { question: 'Hangi yatak dağınık?', correct: 'Evet! Bu yatak dağınık.', wrong: 'Hayır, bu yatak toplu.', wrongOlumsuz: 'Hayır, bu yatak dağınık değil.' }
         },
         options: [
             { id: 5119, word: "yatak", imageUrl: "/images/5119.webp", isCorrect: true, audioKey: "yatak", spokenText: "yatak" },
@@ -266,7 +266,7 @@ export const messyCleanDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.MessyClean,
         speech: {
-            tr: { question: 'Hangi yatak toplu?', correct: 'Evet! Bu yatak toplu.', wrong: 'Hayır, bu yatak dağınık.' }
+            tr: { question: 'Hangi yatak toplu?', correct: 'Evet! Bu yatak toplu.', wrong: 'Hayır, bu yatak dağınık.', wrongOlumsuz: 'Hayır, bu yatak toplu değil.' }
         },
         options: [
             { id: 5120, word: "yatak", imageUrl: "/images/5120.webp", isCorrect: true, audioKey: "yatak", spokenText: "yatak" },

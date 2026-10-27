@@ -346,6 +346,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
   onToggleBasaraHighlight,
 }) => {
   const [kayitliSes, setKayitliSesAyar] = useLocalStorage<boolean>('kayitliSes_v1', true);
+  const [yanlisOlumsuz, setYanlisOlumsuz] = useLocalStorage<boolean>('yanlisOlumsuz_v1', false);
   // Somut destek ürünleri (Play'de varsa görünür, tekrar alınabilir)
   const [destekFiyat, setDestekFiyat] = useState<Record<string, string>>({});
   const [destekMesaj, setDestekMesaj] = useState<string | null>(null);
@@ -1102,6 +1103,13 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
             isThemed={isThemed} themeVariant={themeVariant}
           >
             <ToggleSwitch isEnabled={kayitliSes} onToggle={() => setKayitliSesAyar(v => !v)} themeVariant={themeVariant} />
+          </SettingsRow>
+          <SettingsRow
+            title="Yanlışta kavramı olumsuzla"
+            subtitle={'Kavram etkinliklerinde yanlış seçilince ne söylensin? Kapalı: "Hayır, bu atkı kısa." Açık: "Hayır, bu atkı uzun değil." Açık hali, kavram yeni öğretilirken özel eğitimde kullanılan biçimdir.'}
+            isThemed={isThemed} themeVariant={themeVariant}
+          >
+            <ToggleSwitch isEnabled={yanlisOlumsuz} onToggle={() => setYanlisOlumsuz(v => !v)} themeVariant={themeVariant} />
           </SettingsRow>
           <SettingsRow
             title={t('settingsEx.settingsBlock.realisticImages', 'Alternatif Görseller (Vücut Bölümleri)')}

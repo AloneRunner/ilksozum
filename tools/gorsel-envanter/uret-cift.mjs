@@ -96,7 +96,8 @@ const KAVRAMLAR = [
     etiket: 'quantity',
     a: { ek: 'cok', deger: 'çok', soru: 'Çok olan hangisi?', sifat: (w) => `çok ${w} var` },
     b: { ek: 'az', deger: 'az', soru: 'Az olan hangisi?', sifat: (w) => `az ${w} var` },
-    // Gramer (2026-10-06): "Evet! Burada çok elma var." / "Hayır, burada az elma var."
+    // Gramer (2026-10-06): "Evet! Burada çok elma var." / yanlışta soru kalıbı: "Hayır, burada elma az değil."
+    olumsuzKalip: (w, H) => `${w} ${H.deger} değil`,
     buYok: true,
     ozne: () => 'burada',
     kelime: { elma: 'elma', top: 'top', kalem: 'kalem', kurabiye: 'kurabiye', dugme: 'düğme', blok: 'blok',
@@ -301,7 +302,7 @@ const KAVRAMLAR = [
       kaktus_elma: { dikenli: 'kaktüs', puruzsuz: 'elma' }, kirpi_yunus: { dikenli: 'kirpi', puruzsuz: 'yunus' },
       gul_lale: { dikenli: 'gül', puruzsuz: 'lale' }, denizkestanesi_kabuk: { dikenli: 'deniz kestanesi', puruzsuz: 'deniz kabuğu' },
       masajtopu_top: { dikenli: 'dikenli top', puruzsuz: 'top' }, devedikeni_nergis: { dikenli: 'deve dikeni', puruzsuz: 'nergis' },
-      balonbaligi_japonbaligi: { dikenli: 'balon balığı', puruzsuz: 'Japon balığı' },
+      balonbaligi_japonbaligi: { dikenli: 'balon balığı', puruzsuz: 'japon balığı' },
     },
   },
   {
@@ -627,6 +628,7 @@ const KAVRAMLAR = [
   {
     klasor: 'yenir-yenmez', dosya: 'yenirYenmezData.ts', exportAdi: 'yenirYenmezDataYeni',
     activityType: 'YenirYenmez', idBaslangic: 6801, etiket: 'yenir',
+    zitSoyle: true, // fiil olduğu gibi kalır: "Hayır, çikolata yenir." ("yenmez değil" denmez)
     // Birbirine benzeyen ikililer (üzüm / bilye): çocuk ağza alınacak şeyi ayırt etmeyi öğrensin
     a: { ek: 'yenir', deger: 'yenir', soru: 'Hangisi yenir?', sifat: 'yenir' },
     b: { ek: 'yenmez', deger: 'yenmez', soru: 'Hangisi yenmez?', sifat: 'yenmez' },
@@ -788,6 +790,19 @@ const KAVRAMLAR = [
 const cap = w => w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1);
 // "kalındır" → "kalın", "mattır" → "mat", "yan yanadır" → "yan yana" (ek-fiil -dır/-dir/-dur/-dür/-tır...)
 const dirsiz = s => s.replace(/(?<=[a-zçğıöşü])[dt][ıiuü]r$/, '');
+// Yanlış cevabın ikinci biçimi (ayarlardan seçilir; özel eğitimci önerisi, 2026-10-27): zıt kavram yerine sorulan olumsuzlanır.
+// Varsayılan: "Hayır, bu atkı kısa." Seçenek: "Hayır, bu atkı uzun değil." / "burada çok araba yok" / "sağa bakmıyor" / "bu önce olmaz"
+const olumsuz = s => {
+  s = dirsiz(s);
+  if (/ var$/.test(s)) return s.replace(/ var$/, ' yok');
+  if (/ olur$/.test(s)) return s.replace(/ olur$/, ' olmaz');
+  const m = /^(.*[^aeıioöuü ])[ıiuü]yor$/.exec(s);
+  if (m) {
+    const v = [...m[1]].reverse().find(c => 'aeıioöuü'.includes(c));
+    return `${m[1]}m${{ a: 'ı', ı: 'ı', e: 'i', i: 'i', o: 'u', u: 'u', ö: 'ü', ü: 'ü' }[v]}yor`;
+  }
+  return `${s} değil`;
+};
 const list = JSON.parse(fs.readFileSync(LIST, 'utf8'));
 
 for (const k of KAVRAMLAR) {
@@ -841,7 +856,7 @@ for (const k of KAVRAMLAR) {
         questionAudioKey: "",
         activityType: ActivityType.${k.activityType},
         speech: {
-            tr: { question: '${q}', correct: '${correct}', wrong: '${wrong}' }
+            tr: { question: '${q}', correct: '${correct}', wrong: '${wrong[0]}'${wrong[1] && wrong[1] !== wrong[0] ? `, wrongOlumsuz: '${wrong[1]}'` : ''} }
         },
         options: [
 ${opt(fOk, w, true)},
@@ -867,8 +882,10 @@ ${opt(fNo, wNo, false)}
         const wa = word(n, ea), wb = word(n, eb);
         // soruOzel burada da geçerli (ör. su dolu kova / boş kova: "Hangi kova ağır?")
         const sA = k.soruOzel?.[n]?.[ea] || A.soru, sB = k.soruOzel?.[n]?.[eb] || B.soru;
-        rounds.push(round(sA, `Evet! ${cap(wa)} ${A.sifat}.`, `Hayır, ${wb} ${B.sifat}.`, fa, fb, wa, wb) + ',');
-        rounds.push(round(sB, `Evet! ${cap(wb)} ${B.sifat}.`, `Hayır, ${wa} ${A.sifat}.`, fb, fa, wb, wa) + ',');
+        // k.zitSoyle: fiil kavramlarında olduğu gibi kalır ("Hayır, çikolata yenir.")
+        const yA = k.zitSoyle ? B.sifat : olumsuz(A.sifat), yB = k.zitSoyle ? A.sifat : olumsuz(B.sifat);
+        rounds.push(round(sA, `Evet! ${cap(wa)} ${A.sifat}.`, [`Hayır, ${wb} ${B.sifat}.`, `Hayır, ${wb} ${yA}.`], fa, fb, wa, wb) + ',');
+        rounds.push(round(sB, `Evet! ${cap(wb)} ${B.sifat}.`, [`Hayır, ${wa} ${A.sifat}.`, `Hayır, ${wa} ${yB}.`], fb, fa, wb, wa) + ',');
         continue;
       }
       // Soru nesneye göre özelleştirilebilir (Kaan: "Kolu kısa olan hangisi?", "Saçı kısa olan hangisi?")
@@ -879,11 +896,12 @@ ${opt(fNo, wNo, false)}
       // "Evet! Bu kalem kalın." denir → aynı nesnede -dır eki atılır, özneye "bu" gelir.
       const sf = (H, w) => dirsiz(typeof H.sifat === 'function' ? H.sifat(w) : H.sifat);
       const qA = (k.soruOzel?.[n]?.[ea]) || kalip(w, A.deger), qB = (k.soruOzel?.[n]?.[eb]) || kalip(w, B.deger);
-      rounds.push(round(qA, `Evet! ${cap(bu + oz)} ${sf(A, w)}.`, `Hayır, ${bu}${oz} ${sf(B, w)}.`, fa, fb, w) + ',');
-      rounds.push(round(qB, `Evet! ${cap(bu + oz)} ${sf(B, w)}.`, `Hayır, ${bu}${oz} ${sf(A, w)}.`, fb, fa, w) + ',');
+      const yanlis = (X, Y) => k.zitSoyle ? sf(Y, w) : k.olumsuzKalip ? k.olumsuzKalip(w, X) : olumsuz(sf(X, w));
+      rounds.push(round(qA, `Evet! ${cap(bu + oz)} ${sf(A, w)}.`, [`Hayır, ${bu}${oz} ${sf(B, w)}.`, `Hayır, ${bu}${oz} ${yanlis(A, B)}.`], fa, fb, w) + ',');
+      rounds.push(round(qB, `Evet! ${cap(bu + oz)} ${sf(B, w)}.`, [`Hayır, ${bu}${oz} ${sf(A, w)}.`, `Hayır, ${bu}${oz} ${yanlis(B, A)}.`], fb, fa, w) + ',');
       // Eş anlamlı soru (ör. bütün = tam): aynı görseller, farklı kelime; turda biri seçilir
       for (const [X, Y, fx, fy] of [[A, B, fa, fb], [B, A, fb, fa]]) {
-        if (X.esSoru) rounds.push(round(X.esDeger ? kalip(w, X.esDeger) : X.esSoru, `Evet! ${cap(bu + oz)} ${dirsiz(X.esSifat)}.`, `Hayır, ${bu}${oz} ${sf(Y, w)}.`, fx, fy, w) + ',');
+        if (X.esSoru) rounds.push(round(X.esDeger ? kalip(w, X.esDeger) : X.esSoru, `Evet! ${cap(bu + oz)} ${dirsiz(X.esSifat)}.`, [`Hayır, ${bu}${oz} ${sf(Y, w)}.`, `Hayır, ${bu}${oz} ${k.zitSoyle ? sf(Y, w) : olumsuz(X.esSifat)}.`], fx, fy, w) + ',');
       }
     }
   }

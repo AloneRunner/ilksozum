@@ -10,7 +10,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Yarış arabası hızlıdır.', wrong: 'Hayır, traktör yavaştır.' }
+            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Yarış arabası hızlıdır.', wrong: 'Hayır, traktör yavaştır.', wrongOlumsuz: 'Hayır, traktör hızlı değil.' }
         },
         options: [
             { id: 6001, word: "yarış arabası", imageUrl: "/images/6001.webp", isCorrect: true, audioKey: "yarış arabası", spokenText: "yarış arabası" },
@@ -23,7 +23,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Traktör yavaştır.', wrong: 'Hayır, yarış arabası hızlıdır.' }
+            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Traktör yavaştır.', wrong: 'Hayır, yarış arabası hızlıdır.', wrongOlumsuz: 'Hayır, yarış arabası yavaş değil.' }
         },
         options: [
             { id: 6002, word: "traktör", imageUrl: "/images/6002.webp", isCorrect: true, audioKey: "traktör", spokenText: "traktör" },
@@ -37,7 +37,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! At hızlıdır.', wrong: 'Hayır, inek yavaştır.' }
+            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! At hızlıdır.', wrong: 'Hayır, inek yavaştır.', wrongOlumsuz: 'Hayır, inek hızlı değil.' }
         },
         options: [
             { id: 6003, word: "at", imageUrl: "/images/6003.webp", isCorrect: true, audioKey: "at", spokenText: "at" },
@@ -50,7 +50,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! İnek yavaştır.', wrong: 'Hayır, at hızlıdır.' }
+            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! İnek yavaştır.', wrong: 'Hayır, at hızlıdır.', wrongOlumsuz: 'Hayır, at yavaş değil.' }
         },
         options: [
             { id: 6004, word: "inek", imageUrl: "/images/6004.webp", isCorrect: true, audioKey: "inek", spokenText: "inek" },
@@ -64,7 +64,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Çita hızlıdır.', wrong: 'Hayır, salyangoz yavaştır.' }
+            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Çita hızlıdır.', wrong: 'Hayır, salyangoz yavaştır.', wrongOlumsuz: 'Hayır, salyangoz hızlı değil.' }
         },
         options: [
             { id: 6005, word: "çita", imageUrl: "/images/6005.webp", isCorrect: true, audioKey: "çita", spokenText: "çita" },
@@ -77,7 +77,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Salyangoz yavaştır.', wrong: 'Hayır, çita hızlıdır.' }
+            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Salyangoz yavaştır.', wrong: 'Hayır, çita hızlıdır.', wrongOlumsuz: 'Hayır, çita yavaş değil.' }
         },
         options: [
             { id: 6006, word: "salyangoz", imageUrl: "/images/6006.webp", isCorrect: true, audioKey: "salyangoz", spokenText: "salyangoz" },
@@ -91,7 +91,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Hangi çocuk hızlı koşuyor?', correct: 'Evet! Bu çocuk hızlı.', wrong: 'Hayır, bu çocuk yavaş.' }
+            tr: { question: 'Hangi çocuk hızlı koşuyor?', correct: 'Evet! Bu çocuk hızlı.', wrong: 'Hayır, bu çocuk yavaş.', wrongOlumsuz: 'Hayır, bu çocuk hızlı değil.' }
         },
         options: [
             { id: 6007, word: "çocuk", imageUrl: "/images/6007.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -104,7 +104,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Hangi çocuk yavaş yürüyor?', correct: 'Evet! Bu çocuk yavaş.', wrong: 'Hayır, bu çocuk hızlı.' }
+            tr: { question: 'Hangi çocuk yavaş yürüyor?', correct: 'Evet! Bu çocuk yavaş.', wrong: 'Hayır, bu çocuk hızlı.', wrongOlumsuz: 'Hayır, bu çocuk yavaş değil.' }
         },
         options: [
             { id: 6008, word: "çocuk", imageUrl: "/images/6008.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -118,7 +118,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Köpek hızlıdır.', wrong: 'Hayır, tembel hayvan yavaştır.' }
+            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Köpek hızlıdır.', wrong: 'Hayır, tembel hayvan yavaştır.', wrongOlumsuz: 'Hayır, tembel hayvan hızlı değil.' }
         },
         options: [
             { id: 6009, word: "köpek", imageUrl: "/images/6009.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
@@ -131,7 +131,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Tembel hayvan yavaştır.', wrong: 'Hayır, köpek hızlıdır.' }
+            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Tembel hayvan yavaştır.', wrong: 'Hayır, köpek hızlıdır.', wrongOlumsuz: 'Hayır, köpek yavaş değil.' }
         },
         options: [
             { id: 6010, word: "tembel hayvan", imageUrl: "/images/6010.webp", isCorrect: true, audioKey: "tembel hayvan", spokenText: "tembel hayvan" },
@@ -145,7 +145,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Şahin hızlıdır.', wrong: 'Hayır, tırtıl yavaştır.' }
+            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Şahin hızlıdır.', wrong: 'Hayır, tırtıl yavaştır.', wrongOlumsuz: 'Hayır, tırtıl hızlı değil.' }
         },
         options: [
             { id: 6011, word: "şahin", imageUrl: "/images/6011.webp", isCorrect: true, audioKey: "şahin", spokenText: "şahin" },
@@ -158,7 +158,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Tırtıl yavaştır.', wrong: 'Hayır, şahin hızlıdır.' }
+            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Tırtıl yavaştır.', wrong: 'Hayır, şahin hızlıdır.', wrongOlumsuz: 'Hayır, şahin yavaş değil.' }
         },
         options: [
             { id: 6012, word: "tırtıl", imageUrl: "/images/6012.webp", isCorrect: true, audioKey: "tırtıl", spokenText: "tırtıl" },
@@ -172,7 +172,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Tavşan hızlıdır.', wrong: 'Hayır, kaplumbağa yavaştır.' }
+            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Tavşan hızlıdır.', wrong: 'Hayır, kaplumbağa yavaştır.', wrongOlumsuz: 'Hayır, kaplumbağa hızlı değil.' }
         },
         options: [
             { id: 6013, word: "tavşan", imageUrl: "/images/6013.webp", isCorrect: true, audioKey: "tavşan", spokenText: "tavşan" },
@@ -185,7 +185,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Kaplumbağa yavaştır.', wrong: 'Hayır, tavşan hızlıdır.' }
+            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Kaplumbağa yavaştır.', wrong: 'Hayır, tavşan hızlıdır.', wrongOlumsuz: 'Hayır, tavşan yavaş değil.' }
         },
         options: [
             { id: 6014, word: "kaplumbağa", imageUrl: "/images/6014.webp", isCorrect: true, audioKey: "kaplumbağa", spokenText: "kaplumbağa" },
@@ -199,7 +199,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Sürat teknesi hızlıdır.', wrong: 'Hayır, sandal yavaştır.' }
+            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Sürat teknesi hızlıdır.', wrong: 'Hayır, sandal yavaştır.', wrongOlumsuz: 'Hayır, sandal hızlı değil.' }
         },
         options: [
             { id: 6015, word: "sürat teknesi", imageUrl: "/images/6015.webp", isCorrect: true, audioKey: "sürat teknesi", spokenText: "sürat teknesi" },
@@ -212,7 +212,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Sandal yavaştır.', wrong: 'Hayır, sürat teknesi hızlıdır.' }
+            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Sandal yavaştır.', wrong: 'Hayır, sürat teknesi hızlıdır.', wrongOlumsuz: 'Hayır, sürat teknesi yavaş değil.' }
         },
         options: [
             { id: 6016, word: "sandal", imageUrl: "/images/6016.webp", isCorrect: true, audioKey: "sandal", spokenText: "sandal" },
@@ -226,7 +226,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Tren hızlıdır.', wrong: 'Hayır, at arabası yavaştır.' }
+            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Tren hızlıdır.', wrong: 'Hayır, at arabası yavaştır.', wrongOlumsuz: 'Hayır, at arabası hızlı değil.' }
         },
         options: [
             { id: 6017, word: "tren", imageUrl: "/images/6017.webp", isCorrect: true, audioKey: "tren", spokenText: "tren" },
@@ -239,7 +239,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! At arabası yavaştır.', wrong: 'Hayır, tren hızlıdır.' }
+            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! At arabası yavaştır.', wrong: 'Hayır, tren hızlıdır.', wrongOlumsuz: 'Hayır, tren yavaş değil.' }
         },
         options: [
             { id: 6018, word: "at arabası", imageUrl: "/images/6018.webp", isCorrect: true, audioKey: "at arabası", spokenText: "at arabası" },
@@ -253,7 +253,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Uçak hızlıdır.', wrong: 'Hayır, balon yavaştır.' }
+            tr: { question: 'Hızlı olan hangisi?', correct: 'Evet! Uçak hızlıdır.', wrong: 'Hayır, balon yavaştır.', wrongOlumsuz: 'Hayır, balon hızlı değil.' }
         },
         options: [
             { id: 6019, word: "uçak", imageUrl: "/images/6019.webp", isCorrect: true, audioKey: "uçak", spokenText: "uçak" },
@@ -266,7 +266,7 @@ export const fastSlowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FastSlow,
         speech: {
-            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Balon yavaştır.', wrong: 'Hayır, uçak hızlıdır.' }
+            tr: { question: 'Yavaş olan hangisi?', correct: 'Evet! Balon yavaştır.', wrong: 'Hayır, uçak hızlıdır.', wrongOlumsuz: 'Hayır, uçak yavaş değil.' }
         },
         options: [
             { id: 6020, word: "balon", imageUrl: "/images/6020.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },

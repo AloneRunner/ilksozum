@@ -10,7 +10,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi çanta açık?', correct: 'Evet! Bu çanta açık.', wrong: 'Hayır, bu çanta kapalı.' }
+            tr: { question: 'Hangi çanta açık?', correct: 'Evet! Bu çanta açık.', wrong: 'Hayır, bu çanta kapalı.', wrongOlumsuz: 'Hayır, bu çanta açık değil.' }
         },
         options: [
             { id: 3001, word: "çanta", imageUrl: "/images/3001.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -23,7 +23,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi çanta kapalı?', correct: 'Evet! Bu çanta kapalı.', wrong: 'Hayır, bu çanta açık.' }
+            tr: { question: 'Hangi çanta kapalı?', correct: 'Evet! Bu çanta kapalı.', wrong: 'Hayır, bu çanta açık.', wrongOlumsuz: 'Hayır, bu çanta kapalı değil.' }
         },
         options: [
             { id: 3002, word: "çanta", imageUrl: "/images/3002.webp", isCorrect: true, audioKey: "çanta", spokenText: "çanta" },
@@ -37,7 +37,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi çiçek açık?', correct: 'Evet! Bu çiçek açık.', wrong: 'Hayır, bu çiçek kapalı.' }
+            tr: { question: 'Hangi çiçek açık?', correct: 'Evet! Bu çiçek açık.', wrong: 'Hayır, bu çiçek kapalı.', wrongOlumsuz: 'Hayır, bu çiçek açık değil.' }
         },
         options: [
             { id: 3003, word: "çiçek", imageUrl: "/images/3003.webp", isCorrect: true, audioKey: "çiçek", spokenText: "çiçek" },
@@ -50,7 +50,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi çiçek kapalı?', correct: 'Evet! Bu çiçek kapalı.', wrong: 'Hayır, bu çiçek açık.' }
+            tr: { question: 'Hangi çiçek kapalı?', correct: 'Evet! Bu çiçek kapalı.', wrong: 'Hayır, bu çiçek açık.', wrongOlumsuz: 'Hayır, bu çiçek kapalı değil.' }
         },
         options: [
             { id: 3004, word: "çiçek", imageUrl: "/images/3004.webp", isCorrect: true, audioKey: "çiçek", spokenText: "çiçek" },
@@ -64,7 +64,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi çocuğun gözleri açık?', correct: 'Evet! Bu gözler açık.', wrong: 'Hayır, bu gözler kapalı.' }
+            tr: { question: 'Hangi çocuğun gözleri açık?', correct: 'Evet! Bu gözler açık.', wrong: 'Hayır, bu gözler kapalı.', wrongOlumsuz: 'Hayır, bu gözler açık değil.' }
         },
         options: [
             { id: 3005, word: "göz", imageUrl: "/images/3005.webp", isCorrect: true, audioKey: "göz", spokenText: "göz" },
@@ -77,7 +77,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi çocuğun gözleri kapalı?', correct: 'Evet! Bu gözler kapalı.', wrong: 'Hayır, bu gözler açık.' }
+            tr: { question: 'Hangi çocuğun gözleri kapalı?', correct: 'Evet! Bu gözler kapalı.', wrong: 'Hayır, bu gözler açık.', wrongOlumsuz: 'Hayır, bu gözler kapalı değil.' }
         },
         options: [
             { id: 3006, word: "göz", imageUrl: "/images/3006.webp", isCorrect: true, audioKey: "göz", spokenText: "göz" },
@@ -91,7 +91,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi kapı açık?', correct: 'Evet! Bu kapı açık.', wrong: 'Hayır, bu kapı kapalı.' }
+            tr: { question: 'Hangi kapı açık?', correct: 'Evet! Bu kapı açık.', wrong: 'Hayır, bu kapı kapalı.', wrongOlumsuz: 'Hayır, bu kapı açık değil.' }
         },
         options: [
             { id: 3007, word: "kapı", imageUrl: "/images/3007.webp", isCorrect: true, audioKey: "kapı", spokenText: "kapı" },
@@ -104,7 +104,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi kapı kapalı?', correct: 'Evet! Bu kapı kapalı.', wrong: 'Hayır, bu kapı açık.' }
+            tr: { question: 'Hangi kapı kapalı?', correct: 'Evet! Bu kapı kapalı.', wrong: 'Hayır, bu kapı açık.', wrongOlumsuz: 'Hayır, bu kapı kapalı değil.' }
         },
         options: [
             { id: 3008, word: "kapı", imageUrl: "/images/3008.webp", isCorrect: true, audioKey: "kapı", spokenText: "kapı" },
@@ -118,7 +118,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi kavanoz açık?', correct: 'Evet! Bu kavanoz açık.', wrong: 'Hayır, bu kavanoz kapalı.' }
+            tr: { question: 'Hangi kavanoz açık?', correct: 'Evet! Bu kavanoz açık.', wrong: 'Hayır, bu kavanoz kapalı.', wrongOlumsuz: 'Hayır, bu kavanoz açık değil.' }
         },
         options: [
             { id: 3009, word: "kavanoz", imageUrl: "/images/3009.webp", isCorrect: true, audioKey: "kavanoz", spokenText: "kavanoz" },
@@ -131,7 +131,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi kavanoz kapalı?', correct: 'Evet! Bu kavanoz kapalı.', wrong: 'Hayır, bu kavanoz açık.' }
+            tr: { question: 'Hangi kavanoz kapalı?', correct: 'Evet! Bu kavanoz kapalı.', wrong: 'Hayır, bu kavanoz açık.', wrongOlumsuz: 'Hayır, bu kavanoz kapalı değil.' }
         },
         options: [
             { id: 3010, word: "kavanoz", imageUrl: "/images/3010.webp", isCorrect: true, audioKey: "kavanoz", spokenText: "kavanoz" },
@@ -145,7 +145,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi kitap açık?', correct: 'Evet! Bu kitap açık.', wrong: 'Hayır, bu kitap kapalı.' }
+            tr: { question: 'Hangi kitap açık?', correct: 'Evet! Bu kitap açık.', wrong: 'Hayır, bu kitap kapalı.', wrongOlumsuz: 'Hayır, bu kitap açık değil.' }
         },
         options: [
             { id: 3011, word: "kitap", imageUrl: "/images/3011.webp", isCorrect: true, audioKey: "kitap", spokenText: "kitap" },
@@ -158,7 +158,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi kitap kapalı?', correct: 'Evet! Bu kitap kapalı.', wrong: 'Hayır, bu kitap açık.' }
+            tr: { question: 'Hangi kitap kapalı?', correct: 'Evet! Bu kitap kapalı.', wrong: 'Hayır, bu kitap açık.', wrongOlumsuz: 'Hayır, bu kitap kapalı değil.' }
         },
         options: [
             { id: 3012, word: "kitap", imageUrl: "/images/3012.webp", isCorrect: true, audioKey: "kitap", spokenText: "kitap" },
@@ -172,7 +172,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi kutu açık?', correct: 'Evet! Bu kutu açık.', wrong: 'Hayır, bu kutu kapalı.' }
+            tr: { question: 'Hangi kutu açık?', correct: 'Evet! Bu kutu açık.', wrong: 'Hayır, bu kutu kapalı.', wrongOlumsuz: 'Hayır, bu kutu açık değil.' }
         },
         options: [
             { id: 3013, word: "kutu", imageUrl: "/images/3013.webp", isCorrect: true, audioKey: "kutu", spokenText: "kutu" },
@@ -185,7 +185,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi kutu kapalı?', correct: 'Evet! Bu kutu kapalı.', wrong: 'Hayır, bu kutu açık.' }
+            tr: { question: 'Hangi kutu kapalı?', correct: 'Evet! Bu kutu kapalı.', wrong: 'Hayır, bu kutu açık.', wrongOlumsuz: 'Hayır, bu kutu kapalı değil.' }
         },
         options: [
             { id: 3014, word: "kutu", imageUrl: "/images/3014.webp", isCorrect: true, audioKey: "kutu", spokenText: "kutu" },
@@ -199,7 +199,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi musluk açık?', correct: 'Evet! Bu musluk açık.', wrong: 'Hayır, bu musluk kapalı.' }
+            tr: { question: 'Hangi musluk açık?', correct: 'Evet! Bu musluk açık.', wrong: 'Hayır, bu musluk kapalı.', wrongOlumsuz: 'Hayır, bu musluk açık değil.' }
         },
         options: [
             { id: 3015, word: "musluk", imageUrl: "/images/3015.webp", isCorrect: true, audioKey: "musluk", spokenText: "musluk" },
@@ -212,7 +212,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi musluk kapalı?', correct: 'Evet! Bu musluk kapalı.', wrong: 'Hayır, bu musluk açık.' }
+            tr: { question: 'Hangi musluk kapalı?', correct: 'Evet! Bu musluk kapalı.', wrong: 'Hayır, bu musluk açık.', wrongOlumsuz: 'Hayır, bu musluk kapalı değil.' }
         },
         options: [
             { id: 3016, word: "musluk", imageUrl: "/images/3016.webp", isCorrect: true, audioKey: "musluk", spokenText: "musluk" },
@@ -226,7 +226,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi pencere açık?', correct: 'Evet! Bu pencere açık.', wrong: 'Hayır, bu pencere kapalı.' }
+            tr: { question: 'Hangi pencere açık?', correct: 'Evet! Bu pencere açık.', wrong: 'Hayır, bu pencere kapalı.', wrongOlumsuz: 'Hayır, bu pencere açık değil.' }
         },
         options: [
             { id: 3017, word: "pencere", imageUrl: "/images/3017.webp", isCorrect: true, audioKey: "pencere", spokenText: "pencere" },
@@ -239,7 +239,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi pencere kapalı?', correct: 'Evet! Bu pencere kapalı.', wrong: 'Hayır, bu pencere açık.' }
+            tr: { question: 'Hangi pencere kapalı?', correct: 'Evet! Bu pencere kapalı.', wrong: 'Hayır, bu pencere açık.', wrongOlumsuz: 'Hayır, bu pencere kapalı değil.' }
         },
         options: [
             { id: 3018, word: "pencere", imageUrl: "/images/3018.webp", isCorrect: true, audioKey: "pencere", spokenText: "pencere" },
@@ -253,7 +253,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi şemsiye açık?', correct: 'Evet! Bu şemsiye açık.', wrong: 'Hayır, bu şemsiye kapalı.' }
+            tr: { question: 'Hangi şemsiye açık?', correct: 'Evet! Bu şemsiye açık.', wrong: 'Hayır, bu şemsiye kapalı.', wrongOlumsuz: 'Hayır, bu şemsiye açık değil.' }
         },
         options: [
             { id: 3019, word: "şemsiye", imageUrl: "/images/3019.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -266,7 +266,7 @@ export const openClosedDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.OpenClosed,
         speech: {
-            tr: { question: 'Hangi şemsiye kapalı?', correct: 'Evet! Bu şemsiye kapalı.', wrong: 'Hayır, bu şemsiye açık.' }
+            tr: { question: 'Hangi şemsiye kapalı?', correct: 'Evet! Bu şemsiye kapalı.', wrong: 'Hayır, bu şemsiye açık.', wrongOlumsuz: 'Hayır, bu şemsiye kapalı değil.' }
         },
         options: [
             { id: 3020, word: "şemsiye", imageUrl: "/images/3020.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },

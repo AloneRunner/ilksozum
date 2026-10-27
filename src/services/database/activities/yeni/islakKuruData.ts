@@ -10,7 +10,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi çorap ıslak?', correct: 'Evet! Bu çorap ıslak.', wrong: 'Hayır, bu çorap kuru.' }
+            tr: { question: 'Hangi çorap ıslak?', correct: 'Evet! Bu çorap ıslak.', wrong: 'Hayır, bu çorap kuru.', wrongOlumsuz: 'Hayır, bu çorap ıslak değil.' }
         },
         options: [
             { id: 3301, word: "çorap", imageUrl: "/images/3301.webp", isCorrect: true, audioKey: "çorap", spokenText: "çorap" },
@@ -23,7 +23,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi çorap kuru?', correct: 'Evet! Bu çorap kuru.', wrong: 'Hayır, bu çorap ıslak.' }
+            tr: { question: 'Hangi çorap kuru?', correct: 'Evet! Bu çorap kuru.', wrong: 'Hayır, bu çorap ıslak.', wrongOlumsuz: 'Hayır, bu çorap kuru değil.' }
         },
         options: [
             { id: 3302, word: "çorap", imageUrl: "/images/3302.webp", isCorrect: true, audioKey: "çorap", spokenText: "çorap" },
@@ -37,7 +37,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi havlu ıslak?', correct: 'Evet! Bu havlu ıslak.', wrong: 'Hayır, bu havlu kuru.' }
+            tr: { question: 'Hangi havlu ıslak?', correct: 'Evet! Bu havlu ıslak.', wrong: 'Hayır, bu havlu kuru.', wrongOlumsuz: 'Hayır, bu havlu ıslak değil.' }
         },
         options: [
             { id: 3303, word: "havlu", imageUrl: "/images/3303.webp", isCorrect: true, audioKey: "havlu", spokenText: "havlu" },
@@ -50,7 +50,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi havlu kuru?', correct: 'Evet! Bu havlu kuru.', wrong: 'Hayır, bu havlu ıslak.' }
+            tr: { question: 'Hangi havlu kuru?', correct: 'Evet! Bu havlu kuru.', wrong: 'Hayır, bu havlu ıslak.', wrongOlumsuz: 'Hayır, bu havlu kuru değil.' }
         },
         options: [
             { id: 3304, word: "havlu", imageUrl: "/images/3304.webp", isCorrect: true, audioKey: "havlu", spokenText: "havlu" },
@@ -64,7 +64,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi kum ıslak?', correct: 'Evet! Bu kum ıslak.', wrong: 'Hayır, bu kum kuru.' }
+            tr: { question: 'Hangi kum ıslak?', correct: 'Evet! Bu kum ıslak.', wrong: 'Hayır, bu kum kuru.', wrongOlumsuz: 'Hayır, bu kum ıslak değil.' }
         },
         options: [
             { id: 3305, word: "kum", imageUrl: "/images/3305.webp", isCorrect: true, audioKey: "kum", spokenText: "kum" },
@@ -77,7 +77,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi kum kuru?', correct: 'Evet! Bu kum kuru.', wrong: 'Hayır, bu kum ıslak.' }
+            tr: { question: 'Hangi kum kuru?', correct: 'Evet! Bu kum kuru.', wrong: 'Hayır, bu kum ıslak.', wrongOlumsuz: 'Hayır, bu kum kuru değil.' }
         },
         options: [
             { id: 3306, word: "kum", imageUrl: "/images/3306.webp", isCorrect: true, audioKey: "kum", spokenText: "kum" },
@@ -91,7 +91,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi çocuğun saçı ıslak?', correct: 'Evet! Bu saçlar ıslak.', wrong: 'Hayır, bu saçlar kuru.' }
+            tr: { question: 'Hangi çocuğun saçı ıslak?', correct: 'Evet! Bu saçlar ıslak.', wrong: 'Hayır, bu saçlar kuru.', wrongOlumsuz: 'Hayır, bu saçlar ıslak değil.' }
         },
         options: [
             { id: 3307, word: "saç", imageUrl: "/images/3307.webp", isCorrect: true, audioKey: "saç", spokenText: "saç" },
@@ -104,7 +104,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi çocuğun saçı kuru?', correct: 'Evet! Bu saçlar kuru.', wrong: 'Hayır, bu saçlar ıslak.' }
+            tr: { question: 'Hangi çocuğun saçı kuru?', correct: 'Evet! Bu saçlar kuru.', wrong: 'Hayır, bu saçlar ıslak.', wrongOlumsuz: 'Hayır, bu saçlar kuru değil.' }
         },
         options: [
             { id: 3308, word: "saç", imageUrl: "/images/3308.webp", isCorrect: true, audioKey: "saç", spokenText: "saç" },
@@ -118,7 +118,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi şemsiye ıslak?', correct: 'Evet! Bu şemsiye ıslak.', wrong: 'Hayır, bu şemsiye kuru.' }
+            tr: { question: 'Hangi şemsiye ıslak?', correct: 'Evet! Bu şemsiye ıslak.', wrong: 'Hayır, bu şemsiye kuru.', wrongOlumsuz: 'Hayır, bu şemsiye ıslak değil.' }
         },
         options: [
             { id: 3309, word: "şemsiye", imageUrl: "/images/3309.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -131,7 +131,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi şemsiye kuru?', correct: 'Evet! Bu şemsiye kuru.', wrong: 'Hayır, bu şemsiye ıslak.' }
+            tr: { question: 'Hangi şemsiye kuru?', correct: 'Evet! Bu şemsiye kuru.', wrong: 'Hayır, bu şemsiye ıslak.', wrongOlumsuz: 'Hayır, bu şemsiye kuru değil.' }
         },
         options: [
             { id: 3019, word: "şemsiye", imageUrl: "/images/3019.webp", isCorrect: true, audioKey: "şemsiye", spokenText: "şemsiye" },
@@ -145,7 +145,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi sünger ıslak?', correct: 'Evet! Bu sünger ıslak.', wrong: 'Hayır, bu sünger kuru.' }
+            tr: { question: 'Hangi sünger ıslak?', correct: 'Evet! Bu sünger ıslak.', wrong: 'Hayır, bu sünger kuru.', wrongOlumsuz: 'Hayır, bu sünger ıslak değil.' }
         },
         options: [
             { id: 3310, word: "sünger", imageUrl: "/images/3310.webp", isCorrect: true, audioKey: "sünger", spokenText: "sünger" },
@@ -158,7 +158,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi sünger kuru?', correct: 'Evet! Bu sünger kuru.', wrong: 'Hayır, bu sünger ıslak.' }
+            tr: { question: 'Hangi sünger kuru?', correct: 'Evet! Bu sünger kuru.', wrong: 'Hayır, bu sünger ıslak.', wrongOlumsuz: 'Hayır, bu sünger kuru değil.' }
         },
         options: [
             { id: 3311, word: "sünger", imageUrl: "/images/3311.webp", isCorrect: true, audioKey: "sünger", spokenText: "sünger" },
@@ -172,7 +172,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi tişört ıslak?', correct: 'Evet! Bu tişört ıslak.', wrong: 'Hayır, bu tişört kuru.' }
+            tr: { question: 'Hangi tişört ıslak?', correct: 'Evet! Bu tişört ıslak.', wrong: 'Hayır, bu tişört kuru.', wrongOlumsuz: 'Hayır, bu tişört ıslak değil.' }
         },
         options: [
             { id: 3312, word: "tişört", imageUrl: "/images/3312.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -185,7 +185,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi tişört kuru?', correct: 'Evet! Bu tişört kuru.', wrong: 'Hayır, bu tişört ıslak.' }
+            tr: { question: 'Hangi tişört kuru?', correct: 'Evet! Bu tişört kuru.', wrong: 'Hayır, bu tişört ıslak.', wrongOlumsuz: 'Hayır, bu tişört kuru değil.' }
         },
         options: [
             { id: 3313, word: "tişört", imageUrl: "/images/3313.webp", isCorrect: true, audioKey: "tişört", spokenText: "tişört" },
@@ -199,7 +199,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi toprak ıslak?', correct: 'Evet! Bu toprak ıslak.', wrong: 'Hayır, bu toprak kuru.' }
+            tr: { question: 'Hangi toprak ıslak?', correct: 'Evet! Bu toprak ıslak.', wrong: 'Hayır, bu toprak kuru.', wrongOlumsuz: 'Hayır, bu toprak ıslak değil.' }
         },
         options: [
             { id: 3314, word: "toprak", imageUrl: "/images/3314.webp", isCorrect: true, audioKey: "toprak", spokenText: "toprak" },
@@ -212,7 +212,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi toprak kuru?', correct: 'Evet! Bu toprak kuru.', wrong: 'Hayır, bu toprak ıslak.' }
+            tr: { question: 'Hangi toprak kuru?', correct: 'Evet! Bu toprak kuru.', wrong: 'Hayır, bu toprak ıslak.', wrongOlumsuz: 'Hayır, bu toprak kuru değil.' }
         },
         options: [
             { id: 3315, word: "toprak", imageUrl: "/images/3315.webp", isCorrect: true, audioKey: "toprak", spokenText: "toprak" },
@@ -226,7 +226,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi yaprak ıslak?', correct: 'Evet! Bu yaprak ıslak.', wrong: 'Hayır, bu yaprak kuru.' }
+            tr: { question: 'Hangi yaprak ıslak?', correct: 'Evet! Bu yaprak ıslak.', wrong: 'Hayır, bu yaprak kuru.', wrongOlumsuz: 'Hayır, bu yaprak ıslak değil.' }
         },
         options: [
             { id: 3316, word: "yaprak", imageUrl: "/images/3316.webp", isCorrect: true, audioKey: "yaprak", spokenText: "yaprak" },
@@ -239,7 +239,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi yaprak kuru?', correct: 'Evet! Bu yaprak kuru.', wrong: 'Hayır, bu yaprak ıslak.' }
+            tr: { question: 'Hangi yaprak kuru?', correct: 'Evet! Bu yaprak kuru.', wrong: 'Hayır, bu yaprak ıslak.', wrongOlumsuz: 'Hayır, bu yaprak kuru değil.' }
         },
         options: [
             { id: 3317, word: "yaprak", imageUrl: "/images/3317.webp", isCorrect: true, audioKey: "yaprak", spokenText: "yaprak" },
@@ -253,7 +253,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi yer ıslak?', correct: 'Evet! Bu yer ıslak.', wrong: 'Hayır, bu yer kuru.' }
+            tr: { question: 'Hangi yer ıslak?', correct: 'Evet! Bu yer ıslak.', wrong: 'Hayır, bu yer kuru.', wrongOlumsuz: 'Hayır, bu yer ıslak değil.' }
         },
         options: [
             { id: 3318, word: "yer", imageUrl: "/images/3318.webp", isCorrect: true, audioKey: "yer", spokenText: "yer" },
@@ -266,7 +266,7 @@ export const wetDryDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.WetDry,
         speech: {
-            tr: { question: 'Hangi yer kuru?', correct: 'Evet! Bu yer kuru.', wrong: 'Hayır, bu yer ıslak.' }
+            tr: { question: 'Hangi yer kuru?', correct: 'Evet! Bu yer kuru.', wrong: 'Hayır, bu yer ıslak.', wrongOlumsuz: 'Hayır, bu yer kuru değil.' }
         },
         options: [
             { id: 3319, word: "yer", imageUrl: "/images/3319.webp", isCorrect: true, audioKey: "yer", spokenText: "yer" },

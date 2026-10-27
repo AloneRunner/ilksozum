@@ -10,7 +10,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Kedi canlıdır.', wrong: 'Hayır, robot cansızdır.' }
+            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Kedi canlıdır.', wrong: 'Hayır, robot cansızdır.', wrongOlumsuz: 'Hayır, robot canlı değil.' }
         },
         options: [
             { id: 3504, word: "kedi", imageUrl: "/images/3504.webp", isCorrect: true, audioKey: "kedi", spokenText: "kedi" },
@@ -23,7 +23,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Robot cansızdır.', wrong: 'Hayır, kedi canlıdır.' }
+            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Robot cansızdır.', wrong: 'Hayır, kedi canlıdır.', wrongOlumsuz: 'Hayır, kedi cansız değil.' }
         },
         options: [
             { id: 3112, word: "robot", imageUrl: "/images/3112.webp", isCorrect: true, audioKey: "robot", spokenText: "robot" },
@@ -37,7 +37,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Köpek canlıdır.', wrong: 'Hayır, top cansızdır.' }
+            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Köpek canlıdır.', wrong: 'Hayır, top cansızdır.', wrongOlumsuz: 'Hayır, top canlı değil.' }
         },
         options: [
             { id: 4415, word: "köpek", imageUrl: "/images/4415.webp", isCorrect: true, audioKey: "köpek", spokenText: "köpek" },
@@ -50,7 +50,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Top cansızdır.', wrong: 'Hayır, köpek canlıdır.' }
+            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Top cansızdır.', wrong: 'Hayır, köpek canlıdır.', wrongOlumsuz: 'Hayır, köpek cansız değil.' }
         },
         options: [
             { id: 2317, word: "top", imageUrl: "/images/2317.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -64,7 +64,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Kaplumbağa canlıdır.', wrong: 'Hayır, taş cansızdır.' }
+            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Kaplumbağa canlıdır.', wrong: 'Hayır, taş cansızdır.', wrongOlumsuz: 'Hayır, taş canlı değil.' }
         },
         options: [
             { id: 3503, word: "kaplumbağa", imageUrl: "/images/3503.webp", isCorrect: true, audioKey: "kaplumbağa", spokenText: "kaplumbağa" },
@@ -77,7 +77,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Taş cansızdır.', wrong: 'Hayır, kaplumbağa canlıdır.' }
+            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Taş cansızdır.', wrong: 'Hayır, kaplumbağa canlıdır.', wrongOlumsuz: 'Hayır, kaplumbağa cansız değil.' }
         },
         options: [
             { id: 3512, word: "taş", imageUrl: "/images/3512.webp", isCorrect: true, audioKey: "taş", spokenText: "taş" },
@@ -91,7 +91,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Kirpi canlıdır.', wrong: 'Hayır, dikenli top cansızdır.' }
+            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Kirpi canlıdır.', wrong: 'Hayır, dikenli top cansızdır.', wrongOlumsuz: 'Hayır, dikenli top canlı değil.' }
         },
         options: [
             { id: 3813, word: "kirpi", imageUrl: "/images/3813.webp", isCorrect: true, audioKey: "kirpi", spokenText: "kirpi" },
@@ -104,7 +104,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Dikenli top cansızdır.', wrong: 'Hayır, kirpi canlıdır.' }
+            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Dikenli top cansızdır.', wrong: 'Hayır, kirpi canlıdır.', wrongOlumsuz: 'Hayır, kirpi cansız değil.' }
         },
         options: [
             { id: 3817, word: "dikenli top", imageUrl: "/images/3817.webp", isCorrect: true, audioKey: "dikenli top", spokenText: "dikenli top" },
@@ -118,7 +118,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Tay canlıdır.', wrong: 'Hayır, sandalye cansızdır.' }
+            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Tay canlıdır.', wrong: 'Hayır, sandalye cansızdır.', wrongOlumsuz: 'Hayır, sandalye canlı değil.' }
         },
         options: [
             { id: 4405, word: "tay", imageUrl: "/images/4405.webp", isCorrect: true, audioKey: "tay", spokenText: "tay" },
@@ -131,7 +131,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Sandalye cansızdır.', wrong: 'Hayır, tay canlıdır.' }
+            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Sandalye cansızdır.', wrong: 'Hayır, tay canlıdır.', wrongOlumsuz: 'Hayır, tay cansız değil.' }
         },
         options: [
             { id: 3116, word: "sandalye", imageUrl: "/images/3116.webp", isCorrect: true, audioKey: "sandalye", spokenText: "sandalye" },
@@ -145,7 +145,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Civciv canlıdır.', wrong: 'Hayır, oyuncak ördek cansızdır.' }
+            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Civciv canlıdır.', wrong: 'Hayır, oyuncak ördek cansızdır.', wrongOlumsuz: 'Hayır, oyuncak ördek canlı değil.' }
         },
         options: [
             { id: 4306, word: "civciv", imageUrl: "/images/4306.webp", isCorrect: true, audioKey: "civciv", spokenText: "civciv" },
@@ -158,7 +158,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Oyuncak ördek cansızdır.', wrong: 'Hayır, civciv canlıdır.' }
+            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Oyuncak ördek cansızdır.', wrong: 'Hayır, civciv canlıdır.', wrongOlumsuz: 'Hayır, civciv cansız değil.' }
         },
         options: [
             { id: 3816, word: "oyuncak ördek", imageUrl: "/images/3816.webp", isCorrect: true, audioKey: "oyuncak ördek", spokenText: "oyuncak ördek" },
@@ -172,7 +172,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Lale canlıdır.', wrong: 'Hayır, kalem cansızdır.' }
+            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Lale canlıdır.', wrong: 'Hayır, kalem cansızdır.', wrongOlumsuz: 'Hayır, kalem canlı değil.' }
         },
         options: [
             { id: 3003, word: "lale", imageUrl: "/images/3003.webp", isCorrect: true, audioKey: "lale", spokenText: "lale" },
@@ -185,7 +185,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Kalem cansızdır.', wrong: 'Hayır, lale canlıdır.' }
+            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Kalem cansızdır.', wrong: 'Hayır, lale canlıdır.', wrongOlumsuz: 'Hayır, lale cansız değil.' }
         },
         options: [
             { id: 2001, word: "kalem", imageUrl: "/images/2001.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -199,7 +199,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Ağaç canlıdır.', wrong: 'Hayır, bank cansızdır.' }
+            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Ağaç canlıdır.', wrong: 'Hayır, bank cansızdır.', wrongOlumsuz: 'Hayır, bank canlı değil.' }
         },
         options: [
             { id: 2009, word: "ağaç", imageUrl: "/images/2009.webp", isCorrect: true, audioKey: "ağaç", spokenText: "ağaç" },
@@ -212,7 +212,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Bank cansızdır.', wrong: 'Hayır, ağaç canlıdır.' }
+            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Bank cansızdır.', wrong: 'Hayır, ağaç canlıdır.', wrongOlumsuz: 'Hayır, ağaç cansız değil.' }
         },
         options: [
             { id: 2404, word: "bank", imageUrl: "/images/2404.webp", isCorrect: true, audioKey: "bank", spokenText: "bank" },
@@ -226,7 +226,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Tavşan canlıdır.', wrong: 'Hayır, oyuncak ayı cansızdır.' }
+            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Tavşan canlıdır.', wrong: 'Hayır, oyuncak ayı cansızdır.', wrongOlumsuz: 'Hayır, oyuncak ayı canlı değil.' }
         },
         options: [
             { id: 4320, word: "tavşan", imageUrl: "/images/4320.webp", isCorrect: true, audioKey: "tavşan", spokenText: "tavşan" },
@@ -239,7 +239,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Oyuncak ayı cansızdır.', wrong: 'Hayır, tavşan canlıdır.' }
+            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Oyuncak ayı cansızdır.', wrong: 'Hayır, tavşan canlıdır.', wrongOlumsuz: 'Hayır, tavşan cansız değil.' }
         },
         options: [
             { id: 3206, word: "oyuncak ayı", imageUrl: "/images/3206.webp", isCorrect: true, audioKey: "oyuncak ayı", spokenText: "oyuncak ayı" },
@@ -253,7 +253,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Kuzu canlıdır.', wrong: 'Hayır, yastık cansızdır.' }
+            tr: { question: 'Canlı olan hangisi?', correct: 'Evet! Kuzu canlıdır.', wrong: 'Hayır, yastık cansızdır.', wrongOlumsuz: 'Hayır, yastık canlı değil.' }
         },
         options: [
             { id: 4318, word: "kuzu", imageUrl: "/images/4318.webp", isCorrect: true, audioKey: "kuzu", spokenText: "kuzu" },
@@ -266,7 +266,7 @@ export const aliveLifelessDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.AliveLifeless,
         speech: {
-            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Yastık cansızdır.', wrong: 'Hayır, kuzu canlıdır.' }
+            tr: { question: 'Cansız olan hangisi?', correct: 'Evet! Yastık cansızdır.', wrong: 'Hayır, kuzu canlıdır.', wrongOlumsuz: 'Hayır, kuzu cansız değil.' }
         },
         options: [
             { id: 2320, word: "yastık", imageUrl: "/images/2320.webp", isCorrect: true, audioKey: "yastık", spokenText: "yastık" },

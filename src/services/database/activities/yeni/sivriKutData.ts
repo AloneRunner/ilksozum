@@ -10,7 +10,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi çatı sivri?', correct: 'Evet! Bu çatı sivri.', wrong: 'Hayır, bu çatı küt.' }
+            tr: { question: 'Hangi çatı sivri?', correct: 'Evet! Bu çatı sivri.', wrong: 'Hayır, bu çatı küt.', wrongOlumsuz: 'Hayır, bu çatı sivri değil.' }
         },
         options: [
             { id: 5802, word: "çatı", imageUrl: "/images/5802.webp", isCorrect: true, audioKey: "çatı", spokenText: "çatı" },
@@ -23,7 +23,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi çatı küt?', correct: 'Evet! Bu çatı küt.', wrong: 'Hayır, bu çatı sivri.' }
+            tr: { question: 'Hangi çatı küt?', correct: 'Evet! Bu çatı küt.', wrong: 'Hayır, bu çatı sivri.', wrongOlumsuz: 'Hayır, bu çatı küt değil.' }
         },
         options: [
             { id: 5801, word: "çatı", imageUrl: "/images/5801.webp", isCorrect: true, audioKey: "çatı", spokenText: "çatı" },
@@ -37,7 +37,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi çivinin ucu sivri?', correct: 'Evet! Bu çivinin ucu sivri.', wrong: 'Hayır, bu çivinin ucu küt.' }
+            tr: { question: 'Hangi çivinin ucu sivri?', correct: 'Evet! Bu çivinin ucu sivri.', wrong: 'Hayır, bu çivinin ucu küt.', wrongOlumsuz: 'Hayır, bu çivinin ucu sivri değil.' }
         },
         options: [
             { id: 5804, word: "çivi", imageUrl: "/images/5804.webp", isCorrect: true, audioKey: "çivi", spokenText: "çivi" },
@@ -50,7 +50,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi çivinin ucu küt?', correct: 'Evet! Bu çivinin ucu küt.', wrong: 'Hayır, bu çivinin ucu sivri.' }
+            tr: { question: 'Hangi çivinin ucu küt?', correct: 'Evet! Bu çivinin ucu küt.', wrong: 'Hayır, bu çivinin ucu sivri.', wrongOlumsuz: 'Hayır, bu çivinin ucu küt değil.' }
         },
         options: [
             { id: 5803, word: "çivi", imageUrl: "/images/5803.webp", isCorrect: true, audioKey: "çivi", spokenText: "çivi" },
@@ -64,7 +64,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi çubuğun ucu sivri?', correct: 'Evet! Bu çubuğun ucu sivri.', wrong: 'Hayır, bu çubuğun ucu küt.' }
+            tr: { question: 'Hangi çubuğun ucu sivri?', correct: 'Evet! Bu çubuğun ucu sivri.', wrong: 'Hayır, bu çubuğun ucu küt.', wrongOlumsuz: 'Hayır, bu çubuğun ucu sivri değil.' }
         },
         options: [
             { id: 5806, word: "çubuk", imageUrl: "/images/5806.webp", isCorrect: true, audioKey: "çubuk", spokenText: "çubuk" },
@@ -77,7 +77,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi çubuğun ucu küt?', correct: 'Evet! Bu çubuğun ucu küt.', wrong: 'Hayır, bu çubuğun ucu sivri.' }
+            tr: { question: 'Hangi çubuğun ucu küt?', correct: 'Evet! Bu çubuğun ucu küt.', wrong: 'Hayır, bu çubuğun ucu sivri.', wrongOlumsuz: 'Hayır, bu çubuğun ucu küt değil.' }
         },
         options: [
             { id: 5805, word: "çubuk", imageUrl: "/images/5805.webp", isCorrect: true, audioKey: "çubuk", spokenText: "çubuk" },
@@ -91,7 +91,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi havucun ucu sivri?', correct: 'Evet! Bu havucun ucu sivri.', wrong: 'Hayır, bu havucun ucu küt.' }
+            tr: { question: 'Hangi havucun ucu sivri?', correct: 'Evet! Bu havucun ucu sivri.', wrong: 'Hayır, bu havucun ucu küt.', wrongOlumsuz: 'Hayır, bu havucun ucu sivri değil.' }
         },
         options: [
             { id: 5808, word: "havuç", imageUrl: "/images/5808.webp", isCorrect: true, audioKey: "havuç", spokenText: "havuç" },
@@ -104,7 +104,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi havucun ucu küt?', correct: 'Evet! Bu havucun ucu küt.', wrong: 'Hayır, bu havucun ucu sivri.' }
+            tr: { question: 'Hangi havucun ucu küt?', correct: 'Evet! Bu havucun ucu küt.', wrong: 'Hayır, bu havucun ucu sivri.', wrongOlumsuz: 'Hayır, bu havucun ucu küt değil.' }
         },
         options: [
             { id: 5807, word: "havuç", imageUrl: "/images/5807.webp", isCorrect: true, audioKey: "havuç", spokenText: "havuç" },
@@ -118,7 +118,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi kalemin ucu sivri?', correct: 'Evet! Bu kalemin ucu sivri.', wrong: 'Hayır, bu kalemin ucu küt.' }
+            tr: { question: 'Hangi kalemin ucu sivri?', correct: 'Evet! Bu kalemin ucu sivri.', wrong: 'Hayır, bu kalemin ucu küt.', wrongOlumsuz: 'Hayır, bu kalemin ucu sivri değil.' }
         },
         options: [
             { id: 5810, word: "kalem", imageUrl: "/images/5810.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -131,7 +131,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi kalemin ucu küt?', correct: 'Evet! Bu kalemin ucu küt.', wrong: 'Hayır, bu kalemin ucu sivri.' }
+            tr: { question: 'Hangi kalemin ucu küt?', correct: 'Evet! Bu kalemin ucu küt.', wrong: 'Hayır, bu kalemin ucu sivri.', wrongOlumsuz: 'Hayır, bu kalemin ucu küt değil.' }
         },
         options: [
             { id: 5809, word: "kalem", imageUrl: "/images/5809.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -145,7 +145,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi boya kaleminin ucu sivri?', correct: 'Evet! Bu boya kaleminin ucu sivri.', wrong: 'Hayır, bu boya kaleminin ucu küt.' }
+            tr: { question: 'Hangi boya kaleminin ucu sivri?', correct: 'Evet! Bu boya kaleminin ucu sivri.', wrong: 'Hayır, bu boya kaleminin ucu küt.', wrongOlumsuz: 'Hayır, bu boya kaleminin ucu sivri değil.' }
         },
         options: [
             { id: 5812, word: "boya kalemi", imageUrl: "/images/5812.webp", isCorrect: true, audioKey: "boya kalemi", spokenText: "boya kalemi" },
@@ -158,7 +158,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi boya kaleminin ucu küt?', correct: 'Evet! Bu boya kaleminin ucu küt.', wrong: 'Hayır, bu boya kaleminin ucu sivri.' }
+            tr: { question: 'Hangi boya kaleminin ucu küt?', correct: 'Evet! Bu boya kaleminin ucu küt.', wrong: 'Hayır, bu boya kaleminin ucu sivri.', wrongOlumsuz: 'Hayır, bu boya kaleminin ucu küt değil.' }
         },
         options: [
             { id: 5811, word: "boya kalemi", imageUrl: "/images/5811.webp", isCorrect: true, audioKey: "boya kalemi", spokenText: "boya kalemi" },
@@ -172,7 +172,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi taş sivri?', correct: 'Evet! Bu taş sivri.', wrong: 'Hayır, bu taş küt.' }
+            tr: { question: 'Hangi taş sivri?', correct: 'Evet! Bu taş sivri.', wrong: 'Hayır, bu taş küt.', wrongOlumsuz: 'Hayır, bu taş sivri değil.' }
         },
         options: [
             { id: 5814, word: "taş", imageUrl: "/images/5814.webp", isCorrect: true, audioKey: "taş", spokenText: "taş" },
@@ -185,7 +185,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi taş küt?', correct: 'Evet! Bu taş küt.', wrong: 'Hayır, bu taş sivri.' }
+            tr: { question: 'Hangi taş küt?', correct: 'Evet! Bu taş küt.', wrong: 'Hayır, bu taş sivri.', wrongOlumsuz: 'Hayır, bu taş küt değil.' }
         },
         options: [
             { id: 5813, word: "taş", imageUrl: "/images/5813.webp", isCorrect: true, audioKey: "taş", spokenText: "taş" },
@@ -199,7 +199,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi kazığın ucu sivri?', correct: 'Evet! Bu kazığın ucu sivri.', wrong: 'Hayır, bu kazığın ucu küt.' }
+            tr: { question: 'Hangi kazığın ucu sivri?', correct: 'Evet! Bu kazığın ucu sivri.', wrong: 'Hayır, bu kazığın ucu küt.', wrongOlumsuz: 'Hayır, bu kazığın ucu sivri değil.' }
         },
         options: [
             { id: 5816, word: "kazık", imageUrl: "/images/5816.webp", isCorrect: true, audioKey: "kazık", spokenText: "kazık" },
@@ -212,7 +212,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi kazığın ucu küt?', correct: 'Evet! Bu kazığın ucu küt.', wrong: 'Hayır, bu kazığın ucu sivri.' }
+            tr: { question: 'Hangi kazığın ucu küt?', correct: 'Evet! Bu kazığın ucu küt.', wrong: 'Hayır, bu kazığın ucu sivri.', wrongOlumsuz: 'Hayır, bu kazığın ucu küt değil.' }
         },
         options: [
             { id: 5815, word: "kazık", imageUrl: "/images/5815.webp", isCorrect: true, audioKey: "kazık", spokenText: "kazık" },
@@ -226,7 +226,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi makasın ucu sivri?', correct: 'Evet! Bu makasın ucu sivri.', wrong: 'Hayır, bu makasın ucu küt.' }
+            tr: { question: 'Hangi makasın ucu sivri?', correct: 'Evet! Bu makasın ucu sivri.', wrong: 'Hayır, bu makasın ucu küt.', wrongOlumsuz: 'Hayır, bu makasın ucu sivri değil.' }
         },
         options: [
             { id: 5818, word: "makas", imageUrl: "/images/5818.webp", isCorrect: true, audioKey: "makas", spokenText: "makas" },
@@ -239,7 +239,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi makasın ucu küt?', correct: 'Evet! Bu makasın ucu küt.', wrong: 'Hayır, bu makasın ucu sivri.' }
+            tr: { question: 'Hangi makasın ucu küt?', correct: 'Evet! Bu makasın ucu küt.', wrong: 'Hayır, bu makasın ucu sivri.', wrongOlumsuz: 'Hayır, bu makasın ucu küt değil.' }
         },
         options: [
             { id: 5817, word: "makas", imageUrl: "/images/5817.webp", isCorrect: true, audioKey: "makas", spokenText: "makas" },
@@ -253,7 +253,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi yaprağın ucu sivri?', correct: 'Evet! Bu yaprağın ucu sivri.', wrong: 'Hayır, bu yaprağın ucu küt.' }
+            tr: { question: 'Hangi yaprağın ucu sivri?', correct: 'Evet! Bu yaprağın ucu sivri.', wrong: 'Hayır, bu yaprağın ucu küt.', wrongOlumsuz: 'Hayır, bu yaprağın ucu sivri değil.' }
         },
         options: [
             { id: 5820, word: "yaprak", imageUrl: "/images/5820.webp", isCorrect: true, audioKey: "yaprak", spokenText: "yaprak" },
@@ -266,7 +266,7 @@ export const sivriKutDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.SivriKut,
         speech: {
-            tr: { question: 'Hangi yaprağın ucu küt?', correct: 'Evet! Bu yaprağın ucu küt.', wrong: 'Hayır, bu yaprağın ucu sivri.' }
+            tr: { question: 'Hangi yaprağın ucu küt?', correct: 'Evet! Bu yaprağın ucu küt.', wrong: 'Hayır, bu yaprağın ucu sivri.', wrongOlumsuz: 'Hayır, bu yaprağın ucu küt değil.' }
         },
         options: [
             { id: 5819, word: "yaprak", imageUrl: "/images/5819.webp", isCorrect: true, audioKey: "yaprak", spokenText: "yaprak" },

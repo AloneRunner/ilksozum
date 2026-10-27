@@ -10,7 +10,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi havuz kalabalık?', correct: 'Evet! Bu havuz kalabalık.', wrong: 'Hayır, bu havuz tenha.' }
+            tr: { question: 'Hangi havuz kalabalık?', correct: 'Evet! Bu havuz kalabalık.', wrong: 'Hayır, bu havuz tenha.', wrongOlumsuz: 'Hayır, bu havuz kalabalık değil.' }
         },
         options: [
             { id: 4601, word: "havuz", imageUrl: "/images/4601.webp", isCorrect: true, audioKey: "havuz", spokenText: "havuz" },
@@ -23,7 +23,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi havuz tenha?', correct: 'Evet! Bu havuz tenha.', wrong: 'Hayır, bu havuz kalabalık.' }
+            tr: { question: 'Hangi havuz tenha?', correct: 'Evet! Bu havuz tenha.', wrong: 'Hayır, bu havuz kalabalık.', wrongOlumsuz: 'Hayır, bu havuz tenha değil.' }
         },
         options: [
             { id: 4602, word: "havuz", imageUrl: "/images/4602.webp", isCorrect: true, audioKey: "havuz", spokenText: "havuz" },
@@ -37,7 +37,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi lunapark kalabalık?', correct: 'Evet! Bu lunapark kalabalık.', wrong: 'Hayır, bu lunapark tenha.' }
+            tr: { question: 'Hangi lunapark kalabalık?', correct: 'Evet! Bu lunapark kalabalık.', wrong: 'Hayır, bu lunapark tenha.', wrongOlumsuz: 'Hayır, bu lunapark kalabalık değil.' }
         },
         options: [
             { id: 4603, word: "lunapark", imageUrl: "/images/4603.webp", isCorrect: true, audioKey: "lunapark", spokenText: "lunapark" },
@@ -50,7 +50,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi lunapark tenha?', correct: 'Evet! Bu lunapark tenha.', wrong: 'Hayır, bu lunapark kalabalık.' }
+            tr: { question: 'Hangi lunapark tenha?', correct: 'Evet! Bu lunapark tenha.', wrong: 'Hayır, bu lunapark kalabalık.', wrongOlumsuz: 'Hayır, bu lunapark tenha değil.' }
         },
         options: [
             { id: 4604, word: "lunapark", imageUrl: "/images/4604.webp", isCorrect: true, audioKey: "lunapark", spokenText: "lunapark" },
@@ -64,7 +64,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi market kalabalık?', correct: 'Evet! Bu market kalabalık.', wrong: 'Hayır, bu market tenha.' }
+            tr: { question: 'Hangi market kalabalık?', correct: 'Evet! Bu market kalabalık.', wrong: 'Hayır, bu market tenha.', wrongOlumsuz: 'Hayır, bu market kalabalık değil.' }
         },
         options: [
             { id: 4605, word: "market", imageUrl: "/images/4605.webp", isCorrect: true, audioKey: "market", spokenText: "market" },
@@ -77,7 +77,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi market tenha?', correct: 'Evet! Bu market tenha.', wrong: 'Hayır, bu market kalabalık.' }
+            tr: { question: 'Hangi market tenha?', correct: 'Evet! Bu market tenha.', wrong: 'Hayır, bu market kalabalık.', wrongOlumsuz: 'Hayır, bu market tenha değil.' }
         },
         options: [
             { id: 4606, word: "market", imageUrl: "/images/4606.webp", isCorrect: true, audioKey: "market", spokenText: "market" },
@@ -91,7 +91,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi otobüs kalabalık?', correct: 'Evet! Bu otobüs kalabalık.', wrong: 'Hayır, bu otobüs tenha.' }
+            tr: { question: 'Hangi otobüs kalabalık?', correct: 'Evet! Bu otobüs kalabalık.', wrong: 'Hayır, bu otobüs tenha.', wrongOlumsuz: 'Hayır, bu otobüs kalabalık değil.' }
         },
         options: [
             { id: 4607, word: "otobüs", imageUrl: "/images/4607.webp", isCorrect: true, audioKey: "otobüs", spokenText: "otobüs" },
@@ -104,7 +104,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi otobüs tenha?', correct: 'Evet! Bu otobüs tenha.', wrong: 'Hayır, bu otobüs kalabalık.' }
+            tr: { question: 'Hangi otobüs tenha?', correct: 'Evet! Bu otobüs tenha.', wrong: 'Hayır, bu otobüs kalabalık.', wrongOlumsuz: 'Hayır, bu otobüs tenha değil.' }
         },
         options: [
             { id: 4608, word: "otobüs", imageUrl: "/images/4608.webp", isCorrect: true, audioKey: "otobüs", spokenText: "otobüs" },
@@ -118,7 +118,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi oyun parkı kalabalık?', correct: 'Evet! Bu oyun parkı kalabalık.', wrong: 'Hayır, bu oyun parkı tenha.' }
+            tr: { question: 'Hangi oyun parkı kalabalık?', correct: 'Evet! Bu oyun parkı kalabalık.', wrong: 'Hayır, bu oyun parkı tenha.', wrongOlumsuz: 'Hayır, bu oyun parkı kalabalık değil.' }
         },
         options: [
             { id: 4609, word: "oyun parkı", imageUrl: "/images/4609.webp", isCorrect: true, audioKey: "oyun parkı", spokenText: "oyun parkı" },
@@ -131,7 +131,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi oyun parkı tenha?', correct: 'Evet! Bu oyun parkı tenha.', wrong: 'Hayır, bu oyun parkı kalabalık.' }
+            tr: { question: 'Hangi oyun parkı tenha?', correct: 'Evet! Bu oyun parkı tenha.', wrong: 'Hayır, bu oyun parkı kalabalık.', wrongOlumsuz: 'Hayır, bu oyun parkı tenha değil.' }
         },
         options: [
             { id: 4610, word: "oyun parkı", imageUrl: "/images/4610.webp", isCorrect: true, audioKey: "oyun parkı", spokenText: "oyun parkı" },
@@ -145,7 +145,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi park kalabalık?', correct: 'Evet! Bu park kalabalık.', wrong: 'Hayır, bu park tenha.' }
+            tr: { question: 'Hangi park kalabalık?', correct: 'Evet! Bu park kalabalık.', wrong: 'Hayır, bu park tenha.', wrongOlumsuz: 'Hayır, bu park kalabalık değil.' }
         },
         options: [
             { id: 4611, word: "park", imageUrl: "/images/4611.webp", isCorrect: true, audioKey: "park", spokenText: "park" },
@@ -158,7 +158,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi park tenha?', correct: 'Evet! Bu park tenha.', wrong: 'Hayır, bu park kalabalık.' }
+            tr: { question: 'Hangi park tenha?', correct: 'Evet! Bu park tenha.', wrong: 'Hayır, bu park kalabalık.', wrongOlumsuz: 'Hayır, bu park tenha değil.' }
         },
         options: [
             { id: 4612, word: "park", imageUrl: "/images/4612.webp", isCorrect: true, audioKey: "park", spokenText: "park" },
@@ -172,7 +172,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi tren peronu kalabalık?', correct: 'Evet! Bu tren peronu kalabalık.', wrong: 'Hayır, bu tren peronu tenha.' }
+            tr: { question: 'Hangi tren peronu kalabalık?', correct: 'Evet! Bu tren peronu kalabalık.', wrong: 'Hayır, bu tren peronu tenha.', wrongOlumsuz: 'Hayır, bu tren peronu kalabalık değil.' }
         },
         options: [
             { id: 4613, word: "tren peronu", imageUrl: "/images/4613.webp", isCorrect: true, audioKey: "tren peronu", spokenText: "tren peronu" },
@@ -185,7 +185,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi tren peronu tenha?', correct: 'Evet! Bu tren peronu tenha.', wrong: 'Hayır, bu tren peronu kalabalık.' }
+            tr: { question: 'Hangi tren peronu tenha?', correct: 'Evet! Bu tren peronu tenha.', wrong: 'Hayır, bu tren peronu kalabalık.', wrongOlumsuz: 'Hayır, bu tren peronu tenha değil.' }
         },
         options: [
             { id: 4614, word: "tren peronu", imageUrl: "/images/4614.webp", isCorrect: true, audioKey: "tren peronu", spokenText: "tren peronu" },
@@ -199,7 +199,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi plaj kalabalık?', correct: 'Evet! Bu plaj kalabalık.', wrong: 'Hayır, bu plaj tenha.' }
+            tr: { question: 'Hangi plaj kalabalık?', correct: 'Evet! Bu plaj kalabalık.', wrong: 'Hayır, bu plaj tenha.', wrongOlumsuz: 'Hayır, bu plaj kalabalık değil.' }
         },
         options: [
             { id: 4615, word: "plaj", imageUrl: "/images/4615.webp", isCorrect: true, audioKey: "plaj", spokenText: "plaj" },
@@ -212,7 +212,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi plaj tenha?', correct: 'Evet! Bu plaj tenha.', wrong: 'Hayır, bu plaj kalabalık.' }
+            tr: { question: 'Hangi plaj tenha?', correct: 'Evet! Bu plaj tenha.', wrong: 'Hayır, bu plaj kalabalık.', wrongOlumsuz: 'Hayır, bu plaj tenha değil.' }
         },
         options: [
             { id: 4616, word: "plaj", imageUrl: "/images/4616.webp", isCorrect: true, audioKey: "plaj", spokenText: "plaj" },
@@ -226,7 +226,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi sinema salonu kalabalık?', correct: 'Evet! Bu sinema salonu kalabalık.', wrong: 'Hayır, bu sinema salonu tenha.' }
+            tr: { question: 'Hangi sinema salonu kalabalık?', correct: 'Evet! Bu sinema salonu kalabalık.', wrong: 'Hayır, bu sinema salonu tenha.', wrongOlumsuz: 'Hayır, bu sinema salonu kalabalık değil.' }
         },
         options: [
             { id: 4617, word: "sinema salonu", imageUrl: "/images/4617.webp", isCorrect: true, audioKey: "sinema salonu", spokenText: "sinema salonu" },
@@ -239,7 +239,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi sinema salonu tenha?', correct: 'Evet! Bu sinema salonu tenha.', wrong: 'Hayır, bu sinema salonu kalabalık.' }
+            tr: { question: 'Hangi sinema salonu tenha?', correct: 'Evet! Bu sinema salonu tenha.', wrong: 'Hayır, bu sinema salonu kalabalık.', wrongOlumsuz: 'Hayır, bu sinema salonu tenha değil.' }
         },
         options: [
             { id: 4618, word: "sinema salonu", imageUrl: "/images/4618.webp", isCorrect: true, audioKey: "sinema salonu", spokenText: "sinema salonu" },
@@ -253,7 +253,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi sokak kalabalık?', correct: 'Evet! Bu sokak kalabalık.', wrong: 'Hayır, bu sokak tenha.' }
+            tr: { question: 'Hangi sokak kalabalık?', correct: 'Evet! Bu sokak kalabalık.', wrong: 'Hayır, bu sokak tenha.', wrongOlumsuz: 'Hayır, bu sokak kalabalık değil.' }
         },
         options: [
             { id: 4619, word: "sokak", imageUrl: "/images/4619.webp", isCorrect: true, audioKey: "sokak", spokenText: "sokak" },
@@ -266,7 +266,7 @@ export const kalabalikTenhaDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.KalabalikTenha,
         speech: {
-            tr: { question: 'Hangi sokak tenha?', correct: 'Evet! Bu sokak tenha.', wrong: 'Hayır, bu sokak kalabalık.' }
+            tr: { question: 'Hangi sokak tenha?', correct: 'Evet! Bu sokak tenha.', wrong: 'Hayır, bu sokak kalabalık.', wrongOlumsuz: 'Hayır, bu sokak tenha değil.' }
         },
         options: [
             { id: 4620, word: "sokak", imageUrl: "/images/4620.webp", isCorrect: true, audioKey: "sokak", spokenText: "sokak" },

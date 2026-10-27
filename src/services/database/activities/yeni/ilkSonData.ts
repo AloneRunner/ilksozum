@@ -10,7 +10,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde yeşil araba ilk sırada?', correct: 'Evet! Burada yeşil araba ilk sırada.', wrong: 'Hayır, burada yeşil araba son sırada.' }
+            tr: { question: 'Hangi resimde yeşil araba ilk sırada?', correct: 'Evet! Burada yeşil araba ilk sırada.', wrong: 'Hayır, burada yeşil araba son sırada.', wrongOlumsuz: 'Hayır, burada yeşil araba ilk sırada değil.' }
         },
         options: [
             { id: 7001, word: "yeşil araba", imageUrl: "/images/7001.webp", isCorrect: true, audioKey: "yeşil araba", spokenText: "yeşil araba" },
@@ -23,7 +23,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde yeşil araba son sırada?', correct: 'Evet! Burada yeşil araba son sırada.', wrong: 'Hayır, burada yeşil araba ilk sırada.' }
+            tr: { question: 'Hangi resimde yeşil araba son sırada?', correct: 'Evet! Burada yeşil araba son sırada.', wrong: 'Hayır, burada yeşil araba ilk sırada.', wrongOlumsuz: 'Hayır, burada yeşil araba son sırada değil.' }
         },
         options: [
             { id: 7002, word: "yeşil araba", imageUrl: "/images/7002.webp", isCorrect: true, audioKey: "yeşil araba", spokenText: "yeşil araba" },
@@ -37,7 +37,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde kırmızı araba ilk sırada?', correct: 'Evet! Burada kırmızı araba ilk sırada.', wrong: 'Hayır, burada kırmızı araba son sırada.' }
+            tr: { question: 'Hangi resimde kırmızı araba ilk sırada?', correct: 'Evet! Burada kırmızı araba ilk sırada.', wrong: 'Hayır, burada kırmızı araba son sırada.', wrongOlumsuz: 'Hayır, burada kırmızı araba ilk sırada değil.' }
         },
         options: [
             { id: 7003, word: "kırmızı araba", imageUrl: "/images/7003.webp", isCorrect: true, audioKey: "kırmızı araba", spokenText: "kırmızı araba" },
@@ -50,7 +50,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde kırmızı araba son sırada?', correct: 'Evet! Burada kırmızı araba son sırada.', wrong: 'Hayır, burada kırmızı araba ilk sırada.' }
+            tr: { question: 'Hangi resimde kırmızı araba son sırada?', correct: 'Evet! Burada kırmızı araba son sırada.', wrong: 'Hayır, burada kırmızı araba ilk sırada.', wrongOlumsuz: 'Hayır, burada kırmızı araba son sırada değil.' }
         },
         options: [
             { id: 7004, word: "kırmızı araba", imageUrl: "/images/7004.webp", isCorrect: true, audioKey: "kırmızı araba", spokenText: "kırmızı araba" },
@@ -64,7 +64,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde mavi araba ilk sırada?', correct: 'Evet! Burada mavi araba ilk sırada.', wrong: 'Hayır, burada mavi araba son sırada.' }
+            tr: { question: 'Hangi resimde mavi araba ilk sırada?', correct: 'Evet! Burada mavi araba ilk sırada.', wrong: 'Hayır, burada mavi araba son sırada.', wrongOlumsuz: 'Hayır, burada mavi araba ilk sırada değil.' }
         },
         options: [
             { id: 7005, word: "mavi araba", imageUrl: "/images/7005.webp", isCorrect: true, audioKey: "mavi araba", spokenText: "mavi araba" },
@@ -77,7 +77,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde mavi araba son sırada?', correct: 'Evet! Burada mavi araba son sırada.', wrong: 'Hayır, burada mavi araba ilk sırada.' }
+            tr: { question: 'Hangi resimde mavi araba son sırada?', correct: 'Evet! Burada mavi araba son sırada.', wrong: 'Hayır, burada mavi araba ilk sırada.', wrongOlumsuz: 'Hayır, burada mavi araba son sırada değil.' }
         },
         options: [
             { id: 7006, word: "mavi araba", imageUrl: "/images/7006.webp", isCorrect: true, audioKey: "mavi araba", spokenText: "mavi araba" },
@@ -91,7 +91,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde sarı araba ilk sırada?', correct: 'Evet! Burada sarı araba ilk sırada.', wrong: 'Hayır, burada sarı araba son sırada.' }
+            tr: { question: 'Hangi resimde sarı araba ilk sırada?', correct: 'Evet! Burada sarı araba ilk sırada.', wrong: 'Hayır, burada sarı araba son sırada.', wrongOlumsuz: 'Hayır, burada sarı araba ilk sırada değil.' }
         },
         options: [
             { id: 7007, word: "sarı araba", imageUrl: "/images/7007.webp", isCorrect: true, audioKey: "sarı araba", spokenText: "sarı araba" },
@@ -104,7 +104,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde sarı araba son sırada?', correct: 'Evet! Burada sarı araba son sırada.', wrong: 'Hayır, burada sarı araba ilk sırada.' }
+            tr: { question: 'Hangi resimde sarı araba son sırada?', correct: 'Evet! Burada sarı araba son sırada.', wrong: 'Hayır, burada sarı araba ilk sırada.', wrongOlumsuz: 'Hayır, burada sarı araba son sırada değil.' }
         },
         options: [
             { id: 7008, word: "sarı araba", imageUrl: "/images/7008.webp", isCorrect: true, audioKey: "sarı araba", spokenText: "sarı araba" },
@@ -118,7 +118,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde gri ayı ilk sırada?', correct: 'Evet! Burada gri ayı ilk sırada.', wrong: 'Hayır, burada gri ayı son sırada.' }
+            tr: { question: 'Hangi resimde gri ayı ilk sırada?', correct: 'Evet! Burada gri ayı ilk sırada.', wrong: 'Hayır, burada gri ayı son sırada.', wrongOlumsuz: 'Hayır, burada gri ayı ilk sırada değil.' }
         },
         options: [
             { id: 7009, word: "gri ayı", imageUrl: "/images/7009.webp", isCorrect: true, audioKey: "gri ayı", spokenText: "gri ayı" },
@@ -131,7 +131,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde gri ayı son sırada?', correct: 'Evet! Burada gri ayı son sırada.', wrong: 'Hayır, burada gri ayı ilk sırada.' }
+            tr: { question: 'Hangi resimde gri ayı son sırada?', correct: 'Evet! Burada gri ayı son sırada.', wrong: 'Hayır, burada gri ayı ilk sırada.', wrongOlumsuz: 'Hayır, burada gri ayı son sırada değil.' }
         },
         options: [
             { id: 7010, word: "gri ayı", imageUrl: "/images/7010.webp", isCorrect: true, audioKey: "gri ayı", spokenText: "gri ayı" },
@@ -145,7 +145,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde kahverengi ayı ilk sırada?', correct: 'Evet! Burada kahverengi ayı ilk sırada.', wrong: 'Hayır, burada kahverengi ayı son sırada.' }
+            tr: { question: 'Hangi resimde kahverengi ayı ilk sırada?', correct: 'Evet! Burada kahverengi ayı ilk sırada.', wrong: 'Hayır, burada kahverengi ayı son sırada.', wrongOlumsuz: 'Hayır, burada kahverengi ayı ilk sırada değil.' }
         },
         options: [
             { id: 7011, word: "kahverengi ayı", imageUrl: "/images/7011.webp", isCorrect: true, audioKey: "kahverengi ayı", spokenText: "kahverengi ayı" },
@@ -158,7 +158,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde kahverengi ayı son sırada?', correct: 'Evet! Burada kahverengi ayı son sırada.', wrong: 'Hayır, burada kahverengi ayı ilk sırada.' }
+            tr: { question: 'Hangi resimde kahverengi ayı son sırada?', correct: 'Evet! Burada kahverengi ayı son sırada.', wrong: 'Hayır, burada kahverengi ayı ilk sırada.', wrongOlumsuz: 'Hayır, burada kahverengi ayı son sırada değil.' }
         },
         options: [
             { id: 7012, word: "kahverengi ayı", imageUrl: "/images/7012.webp", isCorrect: true, audioKey: "kahverengi ayı", spokenText: "kahverengi ayı" },
@@ -172,7 +172,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde mavi ördek ilk sırada?', correct: 'Evet! Burada mavi ördek ilk sırada.', wrong: 'Hayır, burada mavi ördek son sırada.' }
+            tr: { question: 'Hangi resimde mavi ördek ilk sırada?', correct: 'Evet! Burada mavi ördek ilk sırada.', wrong: 'Hayır, burada mavi ördek son sırada.', wrongOlumsuz: 'Hayır, burada mavi ördek ilk sırada değil.' }
         },
         options: [
             { id: 7013, word: "mavi ördek", imageUrl: "/images/7013.webp", isCorrect: true, audioKey: "mavi ördek", spokenText: "mavi ördek" },
@@ -185,7 +185,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde mavi ördek son sırada?', correct: 'Evet! Burada mavi ördek son sırada.', wrong: 'Hayır, burada mavi ördek ilk sırada.' }
+            tr: { question: 'Hangi resimde mavi ördek son sırada?', correct: 'Evet! Burada mavi ördek son sırada.', wrong: 'Hayır, burada mavi ördek ilk sırada.', wrongOlumsuz: 'Hayır, burada mavi ördek son sırada değil.' }
         },
         options: [
             { id: 7014, word: "mavi ördek", imageUrl: "/images/7014.webp", isCorrect: true, audioKey: "mavi ördek", spokenText: "mavi ördek" },
@@ -199,7 +199,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde pembe ördek ilk sırada?', correct: 'Evet! Burada pembe ördek ilk sırada.', wrong: 'Hayır, burada pembe ördek son sırada.' }
+            tr: { question: 'Hangi resimde pembe ördek ilk sırada?', correct: 'Evet! Burada pembe ördek ilk sırada.', wrong: 'Hayır, burada pembe ördek son sırada.', wrongOlumsuz: 'Hayır, burada pembe ördek ilk sırada değil.' }
         },
         options: [
             { id: 7015, word: "pembe ördek", imageUrl: "/images/7015.webp", isCorrect: true, audioKey: "pembe ördek", spokenText: "pembe ördek" },
@@ -212,7 +212,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde pembe ördek son sırada?', correct: 'Evet! Burada pembe ördek son sırada.', wrong: 'Hayır, burada pembe ördek ilk sırada.' }
+            tr: { question: 'Hangi resimde pembe ördek son sırada?', correct: 'Evet! Burada pembe ördek son sırada.', wrong: 'Hayır, burada pembe ördek ilk sırada.', wrongOlumsuz: 'Hayır, burada pembe ördek son sırada değil.' }
         },
         options: [
             { id: 7016, word: "pembe ördek", imageUrl: "/images/7016.webp", isCorrect: true, audioKey: "pembe ördek", spokenText: "pembe ördek" },
@@ -226,7 +226,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde sarı ördek ilk sırada?', correct: 'Evet! Burada sarı ördek ilk sırada.', wrong: 'Hayır, burada sarı ördek son sırada.' }
+            tr: { question: 'Hangi resimde sarı ördek ilk sırada?', correct: 'Evet! Burada sarı ördek ilk sırada.', wrong: 'Hayır, burada sarı ördek son sırada.', wrongOlumsuz: 'Hayır, burada sarı ördek ilk sırada değil.' }
         },
         options: [
             { id: 7017, word: "sarı ördek", imageUrl: "/images/7017.webp", isCorrect: true, audioKey: "sarı ördek", spokenText: "sarı ördek" },
@@ -239,7 +239,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde sarı ördek son sırada?', correct: 'Evet! Burada sarı ördek son sırada.', wrong: 'Hayır, burada sarı ördek ilk sırada.' }
+            tr: { question: 'Hangi resimde sarı ördek son sırada?', correct: 'Evet! Burada sarı ördek son sırada.', wrong: 'Hayır, burada sarı ördek ilk sırada.', wrongOlumsuz: 'Hayır, burada sarı ördek son sırada değil.' }
         },
         options: [
             { id: 7018, word: "sarı ördek", imageUrl: "/images/7018.webp", isCorrect: true, audioKey: "sarı ördek", spokenText: "sarı ördek" },
@@ -253,7 +253,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde turuncu ördek ilk sırada?', correct: 'Evet! Burada turuncu ördek ilk sırada.', wrong: 'Hayır, burada turuncu ördek son sırada.' }
+            tr: { question: 'Hangi resimde turuncu ördek ilk sırada?', correct: 'Evet! Burada turuncu ördek ilk sırada.', wrong: 'Hayır, burada turuncu ördek son sırada.', wrongOlumsuz: 'Hayır, burada turuncu ördek ilk sırada değil.' }
         },
         options: [
             { id: 7019, word: "turuncu ördek", imageUrl: "/images/7019.webp", isCorrect: true, audioKey: "turuncu ördek", spokenText: "turuncu ördek" },
@@ -266,7 +266,7 @@ export const ilkSonDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.IlkSon,
         speech: {
-            tr: { question: 'Hangi resimde turuncu ördek son sırada?', correct: 'Evet! Burada turuncu ördek son sırada.', wrong: 'Hayır, burada turuncu ördek ilk sırada.' }
+            tr: { question: 'Hangi resimde turuncu ördek son sırada?', correct: 'Evet! Burada turuncu ördek son sırada.', wrong: 'Hayır, burada turuncu ördek ilk sırada.', wrongOlumsuz: 'Hayır, burada turuncu ördek son sırada değil.' }
         },
         options: [
             { id: 7020, word: "turuncu ördek", imageUrl: "/images/7020.webp", isCorrect: true, audioKey: "turuncu ördek", spokenText: "turuncu ördek" },

@@ -10,7 +10,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi çilek taze?', correct: 'Evet! Bu çilek taze.', wrong: 'Hayır, bu çilek bayat.' }
+            tr: { question: 'Hangi çilek taze?', correct: 'Evet! Bu çilek taze.', wrong: 'Hayır, bu çilek bayat.', wrongOlumsuz: 'Hayır, bu çilek taze değil.' }
         },
         options: [
             { id: 5002, word: "çilek", imageUrl: "/images/5002.webp", isCorrect: true, audioKey: "çilek", spokenText: "çilek" },
@@ -23,7 +23,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi çilek bayat?', correct: 'Evet! Bu çilek bayat.', wrong: 'Hayır, bu çilek taze.' }
+            tr: { question: 'Hangi çilek bayat?', correct: 'Evet! Bu çilek bayat.', wrong: 'Hayır, bu çilek taze.', wrongOlumsuz: 'Hayır, bu çilek bayat değil.' }
         },
         options: [
             { id: 5001, word: "çilek", imageUrl: "/images/5001.webp", isCorrect: true, audioKey: "çilek", spokenText: "çilek" },
@@ -37,7 +37,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi domates taze?', correct: 'Evet! Bu domates taze.', wrong: 'Hayır, bu domates bayat.' }
+            tr: { question: 'Hangi domates taze?', correct: 'Evet! Bu domates taze.', wrong: 'Hayır, bu domates bayat.', wrongOlumsuz: 'Hayır, bu domates taze değil.' }
         },
         options: [
             { id: 5004, word: "domates", imageUrl: "/images/5004.webp", isCorrect: true, audioKey: "domates", spokenText: "domates" },
@@ -50,7 +50,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi domates bayat?', correct: 'Evet! Bu domates bayat.', wrong: 'Hayır, bu domates taze.' }
+            tr: { question: 'Hangi domates bayat?', correct: 'Evet! Bu domates bayat.', wrong: 'Hayır, bu domates taze.', wrongOlumsuz: 'Hayır, bu domates bayat değil.' }
         },
         options: [
             { id: 5003, word: "domates", imageUrl: "/images/5003.webp", isCorrect: true, audioKey: "domates", spokenText: "domates" },
@@ -64,7 +64,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi ekmek taze?', correct: 'Evet! Bu ekmek taze.', wrong: 'Hayır, bu ekmek bayat.' }
+            tr: { question: 'Hangi ekmek taze?', correct: 'Evet! Bu ekmek taze.', wrong: 'Hayır, bu ekmek bayat.', wrongOlumsuz: 'Hayır, bu ekmek taze değil.' }
         },
         options: [
             { id: 5006, word: "ekmek", imageUrl: "/images/5006.webp", isCorrect: true, audioKey: "ekmek", spokenText: "ekmek" },
@@ -77,7 +77,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi ekmek bayat?', correct: 'Evet! Bu ekmek bayat.', wrong: 'Hayır, bu ekmek taze.' }
+            tr: { question: 'Hangi ekmek bayat?', correct: 'Evet! Bu ekmek bayat.', wrong: 'Hayır, bu ekmek taze.', wrongOlumsuz: 'Hayır, bu ekmek bayat değil.' }
         },
         options: [
             { id: 5005, word: "ekmek", imageUrl: "/images/5005.webp", isCorrect: true, audioKey: "ekmek", spokenText: "ekmek" },
@@ -91,7 +91,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi elma taze?', correct: 'Evet! Bu elma taze.', wrong: 'Hayır, bu elma bayat.' }
+            tr: { question: 'Hangi elma taze?', correct: 'Evet! Bu elma taze.', wrong: 'Hayır, bu elma bayat.', wrongOlumsuz: 'Hayır, bu elma taze değil.' }
         },
         options: [
             { id: 5008, word: "elma", imageUrl: "/images/5008.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -104,7 +104,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi elma bayat?', correct: 'Evet! Bu elma bayat.', wrong: 'Hayır, bu elma taze.' }
+            tr: { question: 'Hangi elma bayat?', correct: 'Evet! Bu elma bayat.', wrong: 'Hayır, bu elma taze.', wrongOlumsuz: 'Hayır, bu elma bayat değil.' }
         },
         options: [
             { id: 5007, word: "elma", imageUrl: "/images/5007.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -118,7 +118,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi havuç taze?', correct: 'Evet! Bu havuç taze.', wrong: 'Hayır, bu havuç bayat.' }
+            tr: { question: 'Hangi havuç taze?', correct: 'Evet! Bu havuç taze.', wrong: 'Hayır, bu havuç bayat.', wrongOlumsuz: 'Hayır, bu havuç taze değil.' }
         },
         options: [
             { id: 5010, word: "havuç", imageUrl: "/images/5010.webp", isCorrect: true, audioKey: "havuç", spokenText: "havuç" },
@@ -131,7 +131,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi havuç bayat?', correct: 'Evet! Bu havuç bayat.', wrong: 'Hayır, bu havuç taze.' }
+            tr: { question: 'Hangi havuç bayat?', correct: 'Evet! Bu havuç bayat.', wrong: 'Hayır, bu havuç taze.', wrongOlumsuz: 'Hayır, bu havuç bayat değil.' }
         },
         options: [
             { id: 5009, word: "havuç", imageUrl: "/images/5009.webp", isCorrect: true, audioKey: "havuç", spokenText: "havuç" },
@@ -145,7 +145,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi marul taze?', correct: 'Evet! Bu marul taze.', wrong: 'Hayır, bu marul bayat.' }
+            tr: { question: 'Hangi marul taze?', correct: 'Evet! Bu marul taze.', wrong: 'Hayır, bu marul bayat.', wrongOlumsuz: 'Hayır, bu marul taze değil.' }
         },
         options: [
             { id: 5012, word: "marul", imageUrl: "/images/5012.webp", isCorrect: true, audioKey: "marul", spokenText: "marul" },
@@ -158,7 +158,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi marul bayat?', correct: 'Evet! Bu marul bayat.', wrong: 'Hayır, bu marul taze.' }
+            tr: { question: 'Hangi marul bayat?', correct: 'Evet! Bu marul bayat.', wrong: 'Hayır, bu marul taze.', wrongOlumsuz: 'Hayır, bu marul bayat değil.' }
         },
         options: [
             { id: 5011, word: "marul", imageUrl: "/images/5011.webp", isCorrect: true, audioKey: "marul", spokenText: "marul" },
@@ -172,7 +172,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi muz taze?', correct: 'Evet! Bu muz taze.', wrong: 'Hayır, bu muz bayat.' }
+            tr: { question: 'Hangi muz taze?', correct: 'Evet! Bu muz taze.', wrong: 'Hayır, bu muz bayat.', wrongOlumsuz: 'Hayır, bu muz taze değil.' }
         },
         options: [
             { id: 5014, word: "muz", imageUrl: "/images/5014.webp", isCorrect: true, audioKey: "muz", spokenText: "muz" },
@@ -185,7 +185,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi muz bayat?', correct: 'Evet! Bu muz bayat.', wrong: 'Hayır, bu muz taze.' }
+            tr: { question: 'Hangi muz bayat?', correct: 'Evet! Bu muz bayat.', wrong: 'Hayır, bu muz taze.', wrongOlumsuz: 'Hayır, bu muz bayat değil.' }
         },
         options: [
             { id: 5013, word: "muz", imageUrl: "/images/5013.webp", isCorrect: true, audioKey: "muz", spokenText: "muz" },
@@ -199,7 +199,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi portakal taze?', correct: 'Evet! Bu portakal taze.', wrong: 'Hayır, bu portakal bayat.' }
+            tr: { question: 'Hangi portakal taze?', correct: 'Evet! Bu portakal taze.', wrong: 'Hayır, bu portakal bayat.', wrongOlumsuz: 'Hayır, bu portakal taze değil.' }
         },
         options: [
             { id: 5016, word: "portakal", imageUrl: "/images/5016.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
@@ -212,7 +212,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi portakal bayat?', correct: 'Evet! Bu portakal bayat.', wrong: 'Hayır, bu portakal taze.' }
+            tr: { question: 'Hangi portakal bayat?', correct: 'Evet! Bu portakal bayat.', wrong: 'Hayır, bu portakal taze.', wrongOlumsuz: 'Hayır, bu portakal bayat değil.' }
         },
         options: [
             { id: 5015, word: "portakal", imageUrl: "/images/5015.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
@@ -226,7 +226,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi salatalık taze?', correct: 'Evet! Bu salatalık taze.', wrong: 'Hayır, bu salatalık bayat.' }
+            tr: { question: 'Hangi salatalık taze?', correct: 'Evet! Bu salatalık taze.', wrong: 'Hayır, bu salatalık bayat.', wrongOlumsuz: 'Hayır, bu salatalık taze değil.' }
         },
         options: [
             { id: 5018, word: "salatalık", imageUrl: "/images/5018.webp", isCorrect: true, audioKey: "salatalık", spokenText: "salatalık" },
@@ -239,7 +239,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi salatalık bayat?', correct: 'Evet! Bu salatalık bayat.', wrong: 'Hayır, bu salatalık taze.' }
+            tr: { question: 'Hangi salatalık bayat?', correct: 'Evet! Bu salatalık bayat.', wrong: 'Hayır, bu salatalık taze.', wrongOlumsuz: 'Hayır, bu salatalık bayat değil.' }
         },
         options: [
             { id: 5017, word: "salatalık", imageUrl: "/images/5017.webp", isCorrect: true, audioKey: "salatalık", spokenText: "salatalık" },
@@ -253,7 +253,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi simit taze?', correct: 'Evet! Bu simit taze.', wrong: 'Hayır, bu simit bayat.' }
+            tr: { question: 'Hangi simit taze?', correct: 'Evet! Bu simit taze.', wrong: 'Hayır, bu simit bayat.', wrongOlumsuz: 'Hayır, bu simit taze değil.' }
         },
         options: [
             { id: 5020, word: "simit", imageUrl: "/images/5020.webp", isCorrect: true, audioKey: "simit", spokenText: "simit" },
@@ -266,7 +266,7 @@ export const tazeBayatDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TazeBayat,
         speech: {
-            tr: { question: 'Hangi simit bayat?', correct: 'Evet! Bu simit bayat.', wrong: 'Hayır, bu simit taze.' }
+            tr: { question: 'Hangi simit bayat?', correct: 'Evet! Bu simit bayat.', wrong: 'Hayır, bu simit taze.', wrongOlumsuz: 'Hayır, bu simit bayat değil.' }
         },
         options: [
             { id: 5019, word: "simit", imageUrl: "/images/5019.webp", isCorrect: true, audioKey: "simit", spokenText: "simit" },

@@ -10,7 +10,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk mutlu?', correct: 'Evet! Bu çocuk mutlu.', wrong: 'Hayır, bu çocuk üzgün.' }
+            tr: { question: 'Hangi çocuk mutlu?', correct: 'Evet! Bu çocuk mutlu.', wrong: 'Hayır, bu çocuk üzgün.', wrongOlumsuz: 'Hayır, bu çocuk mutlu değil.' }
         },
         options: [
             { id: 6502, word: "çocuk", imageUrl: "/images/6502.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -23,7 +23,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk üzgün?', correct: 'Evet! Bu çocuk üzgün.', wrong: 'Hayır, bu çocuk mutlu.' }
+            tr: { question: 'Hangi çocuk üzgün?', correct: 'Evet! Bu çocuk üzgün.', wrong: 'Hayır, bu çocuk mutlu.', wrongOlumsuz: 'Hayır, bu çocuk üzgün değil.' }
         },
         options: [
             { id: 6503, word: "çocuk", imageUrl: "/images/6503.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -36,7 +36,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk mutlu?', correct: 'Evet! Bu çocuk mutlu.', wrong: 'Hayır, bu çocuk kızgın.' }
+            tr: { question: 'Hangi çocuk mutlu?', correct: 'Evet! Bu çocuk mutlu.', wrong: 'Hayır, bu çocuk kızgın.', wrongOlumsuz: 'Hayır, bu çocuk mutlu değil.' }
         },
         options: [
             { id: 6502, word: "çocuk", imageUrl: "/images/6502.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -49,7 +49,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk kızgın?', correct: 'Evet! Bu çocuk kızgın.', wrong: 'Hayır, bu çocuk mutlu.' }
+            tr: { question: 'Hangi çocuk kızgın?', correct: 'Evet! Bu çocuk kızgın.', wrong: 'Hayır, bu çocuk mutlu.', wrongOlumsuz: 'Hayır, bu çocuk kızgın değil.' }
         },
         options: [
             { id: 6501, word: "çocuk", imageUrl: "/images/6501.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -62,7 +62,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk üzgün?', correct: 'Evet! Bu çocuk üzgün.', wrong: 'Hayır, bu çocuk kızgın.' }
+            tr: { question: 'Hangi çocuk üzgün?', correct: 'Evet! Bu çocuk üzgün.', wrong: 'Hayır, bu çocuk kızgın.', wrongOlumsuz: 'Hayır, bu çocuk üzgün değil.' }
         },
         options: [
             { id: 6503, word: "çocuk", imageUrl: "/images/6503.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -75,7 +75,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk kızgın?', correct: 'Evet! Bu çocuk kızgın.', wrong: 'Hayır, bu çocuk üzgün.' }
+            tr: { question: 'Hangi çocuk kızgın?', correct: 'Evet! Bu çocuk kızgın.', wrong: 'Hayır, bu çocuk üzgün.', wrongOlumsuz: 'Hayır, bu çocuk kızgın değil.' }
         },
         options: [
             { id: 6501, word: "çocuk", imageUrl: "/images/6501.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -89,7 +89,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk mutlu?', correct: 'Evet! Bu çocuk mutlu.', wrong: 'Hayır, bu çocuk korkmuş.' }
+            tr: { question: 'Hangi çocuk mutlu?', correct: 'Evet! Bu çocuk mutlu.', wrong: 'Hayır, bu çocuk korkmuş.', wrongOlumsuz: 'Hayır, bu çocuk mutlu değil.' }
         },
         options: [
             { id: 6505, word: "çocuk", imageUrl: "/images/6505.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -102,7 +102,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk korkmuş?', correct: 'Evet! Bu çocuk korkmuş.', wrong: 'Hayır, bu çocuk mutlu.' }
+            tr: { question: 'Hangi çocuk korkmuş?', correct: 'Evet! Bu çocuk korkmuş.', wrong: 'Hayır, bu çocuk mutlu.', wrongOlumsuz: 'Hayır, bu çocuk korkmuş değil.' }
         },
         options: [
             { id: 6504, word: "çocuk", imageUrl: "/images/6504.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -115,7 +115,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk mutlu?', correct: 'Evet! Bu çocuk mutlu.', wrong: 'Hayır, bu çocuk şaşkın.' }
+            tr: { question: 'Hangi çocuk mutlu?', correct: 'Evet! Bu çocuk mutlu.', wrong: 'Hayır, bu çocuk şaşkın.', wrongOlumsuz: 'Hayır, bu çocuk mutlu değil.' }
         },
         options: [
             { id: 6505, word: "çocuk", imageUrl: "/images/6505.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -128,7 +128,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk şaşkın?', correct: 'Evet! Bu çocuk şaşkın.', wrong: 'Hayır, bu çocuk mutlu.' }
+            tr: { question: 'Hangi çocuk şaşkın?', correct: 'Evet! Bu çocuk şaşkın.', wrong: 'Hayır, bu çocuk mutlu.', wrongOlumsuz: 'Hayır, bu çocuk şaşkın değil.' }
         },
         options: [
             { id: 6506, word: "çocuk", imageUrl: "/images/6506.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -142,7 +142,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk üzgün?', correct: 'Evet! Bu çocuk üzgün.', wrong: 'Hayır, bu çocuk kızgın.' }
+            tr: { question: 'Hangi çocuk üzgün?', correct: 'Evet! Bu çocuk üzgün.', wrong: 'Hayır, bu çocuk kızgın.', wrongOlumsuz: 'Hayır, bu çocuk üzgün değil.' }
         },
         options: [
             { id: 6509, word: "çocuk", imageUrl: "/images/6509.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -155,7 +155,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk kızgın?', correct: 'Evet! Bu çocuk kızgın.', wrong: 'Hayır, bu çocuk üzgün.' }
+            tr: { question: 'Hangi çocuk kızgın?', correct: 'Evet! Bu çocuk kızgın.', wrong: 'Hayır, bu çocuk üzgün.', wrongOlumsuz: 'Hayır, bu çocuk kızgın değil.' }
         },
         options: [
             { id: 6507, word: "çocuk", imageUrl: "/images/6507.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -168,7 +168,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk üzgün?', correct: 'Evet! Bu çocuk üzgün.', wrong: 'Hayır, bu çocuk uykulu.' }
+            tr: { question: 'Hangi çocuk üzgün?', correct: 'Evet! Bu çocuk üzgün.', wrong: 'Hayır, bu çocuk uykulu.', wrongOlumsuz: 'Hayır, bu çocuk üzgün değil.' }
         },
         options: [
             { id: 6509, word: "çocuk", imageUrl: "/images/6509.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -181,7 +181,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk uykulu?', correct: 'Evet! Bu çocuk uykulu.', wrong: 'Hayır, bu çocuk üzgün.' }
+            tr: { question: 'Hangi çocuk uykulu?', correct: 'Evet! Bu çocuk uykulu.', wrong: 'Hayır, bu çocuk üzgün.', wrongOlumsuz: 'Hayır, bu çocuk uykulu değil.' }
         },
         options: [
             { id: 6508, word: "çocuk", imageUrl: "/images/6508.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -194,7 +194,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk kızgın?', correct: 'Evet! Bu çocuk kızgın.', wrong: 'Hayır, bu çocuk uykulu.' }
+            tr: { question: 'Hangi çocuk kızgın?', correct: 'Evet! Bu çocuk kızgın.', wrong: 'Hayır, bu çocuk uykulu.', wrongOlumsuz: 'Hayır, bu çocuk kızgın değil.' }
         },
         options: [
             { id: 6507, word: "çocuk", imageUrl: "/images/6507.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -207,7 +207,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk uykulu?', correct: 'Evet! Bu çocuk uykulu.', wrong: 'Hayır, bu çocuk kızgın.' }
+            tr: { question: 'Hangi çocuk uykulu?', correct: 'Evet! Bu çocuk uykulu.', wrong: 'Hayır, bu çocuk kızgın.', wrongOlumsuz: 'Hayır, bu çocuk uykulu değil.' }
         },
         options: [
             { id: 6508, word: "çocuk", imageUrl: "/images/6508.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -221,7 +221,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk mutlu?', correct: 'Evet! Bu çocuk mutlu.', wrong: 'Hayır, bu çocuk şaşkın.' }
+            tr: { question: 'Hangi çocuk mutlu?', correct: 'Evet! Bu çocuk mutlu.', wrong: 'Hayır, bu çocuk şaşkın.', wrongOlumsuz: 'Hayır, bu çocuk mutlu değil.' }
         },
         options: [
             { id: 6510, word: "çocuk", imageUrl: "/images/6510.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -234,7 +234,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk şaşkın?', correct: 'Evet! Bu çocuk şaşkın.', wrong: 'Hayır, bu çocuk mutlu.' }
+            tr: { question: 'Hangi çocuk şaşkın?', correct: 'Evet! Bu çocuk şaşkın.', wrong: 'Hayır, bu çocuk mutlu.', wrongOlumsuz: 'Hayır, bu çocuk şaşkın değil.' }
         },
         options: [
             { id: 6511, word: "çocuk", imageUrl: "/images/6511.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -247,7 +247,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk mutlu?', correct: 'Evet! Bu çocuk mutlu.', wrong: 'Hayır, bu çocuk uykulu.' }
+            tr: { question: 'Hangi çocuk mutlu?', correct: 'Evet! Bu çocuk mutlu.', wrong: 'Hayır, bu çocuk uykulu.', wrongOlumsuz: 'Hayır, bu çocuk mutlu değil.' }
         },
         options: [
             { id: 6510, word: "çocuk", imageUrl: "/images/6510.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -260,7 +260,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk uykulu?', correct: 'Evet! Bu çocuk uykulu.', wrong: 'Hayır, bu çocuk mutlu.' }
+            tr: { question: 'Hangi çocuk uykulu?', correct: 'Evet! Bu çocuk uykulu.', wrong: 'Hayır, bu çocuk mutlu.', wrongOlumsuz: 'Hayır, bu çocuk uykulu değil.' }
         },
         options: [
             { id: 6512, word: "çocuk", imageUrl: "/images/6512.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -273,7 +273,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk şaşkın?', correct: 'Evet! Bu çocuk şaşkın.', wrong: 'Hayır, bu çocuk uykulu.' }
+            tr: { question: 'Hangi çocuk şaşkın?', correct: 'Evet! Bu çocuk şaşkın.', wrong: 'Hayır, bu çocuk uykulu.', wrongOlumsuz: 'Hayır, bu çocuk şaşkın değil.' }
         },
         options: [
             { id: 6511, word: "çocuk", imageUrl: "/images/6511.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },
@@ -286,7 +286,7 @@ export const emotionsDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.Emotions,
         speech: {
-            tr: { question: 'Hangi çocuk uykulu?', correct: 'Evet! Bu çocuk uykulu.', wrong: 'Hayır, bu çocuk şaşkın.' }
+            tr: { question: 'Hangi çocuk uykulu?', correct: 'Evet! Bu çocuk uykulu.', wrong: 'Hayır, bu çocuk şaşkın.', wrongOlumsuz: 'Hayır, bu çocuk uykulu değil.' }
         },
         options: [
             { id: 6512, word: "çocuk", imageUrl: "/images/6512.webp", isCorrect: true, audioKey: "çocuk", spokenText: "çocuk" },

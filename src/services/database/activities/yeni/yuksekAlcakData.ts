@@ -10,7 +10,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi ayakkabının topuğu yüksek?', correct: 'Evet! Bu ayakkabının topuğu yüksek.', wrong: 'Hayır, bu ayakkabının topuğu alçak.' }
+            tr: { question: 'Hangi ayakkabının topuğu yüksek?', correct: 'Evet! Bu ayakkabının topuğu yüksek.', wrong: 'Hayır, bu ayakkabının topuğu alçak.', wrongOlumsuz: 'Hayır, bu ayakkabının topuğu yüksek değil.' }
         },
         options: [
             { id: 2502, word: "ayakkabı", imageUrl: "/images/2502.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" },
@@ -23,7 +23,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi ayakkabının topuğu alçak?', correct: 'Evet! Bu ayakkabının topuğu alçak.', wrong: 'Hayır, bu ayakkabının topuğu yüksek.' }
+            tr: { question: 'Hangi ayakkabının topuğu alçak?', correct: 'Evet! Bu ayakkabının topuğu alçak.', wrong: 'Hayır, bu ayakkabının topuğu yüksek.', wrongOlumsuz: 'Hayır, bu ayakkabının topuğu alçak değil.' }
         },
         options: [
             { id: 2501, word: "ayakkabı", imageUrl: "/images/2501.webp", isCorrect: true, audioKey: "ayakkabı", spokenText: "ayakkabı" },
@@ -37,7 +37,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi bina yüksek?', correct: 'Evet! Bu bina yüksek.', wrong: 'Hayır, bu bina alçak.' }
+            tr: { question: 'Hangi bina yüksek?', correct: 'Evet! Bu bina yüksek.', wrong: 'Hayır, bu bina alçak.', wrongOlumsuz: 'Hayır, bu bina yüksek değil.' }
         },
         options: [
             { id: 2504, word: "bina", imageUrl: "/images/2504.webp", isCorrect: true, audioKey: "bina", spokenText: "bina" },
@@ -50,7 +50,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi bina alçak?', correct: 'Evet! Bu bina alçak.', wrong: 'Hayır, bu bina yüksek.' }
+            tr: { question: 'Hangi bina alçak?', correct: 'Evet! Bu bina alçak.', wrong: 'Hayır, bu bina yüksek.', wrongOlumsuz: 'Hayır, bu bina alçak değil.' }
         },
         options: [
             { id: 2503, word: "bina", imageUrl: "/images/2503.webp", isCorrect: true, audioKey: "bina", spokenText: "bina" },
@@ -64,7 +64,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi blok kulesi yüksek?', correct: 'Evet! Bu blok kulesi yüksek.', wrong: 'Hayır, bu blok kulesi alçak.' }
+            tr: { question: 'Hangi blok kulesi yüksek?', correct: 'Evet! Bu blok kulesi yüksek.', wrong: 'Hayır, bu blok kulesi alçak.', wrongOlumsuz: 'Hayır, bu blok kulesi yüksek değil.' }
         },
         options: [
             { id: 2507, word: "blok kulesi", imageUrl: "/images/2507.webp", isCorrect: true, audioKey: "blok kulesi", spokenText: "blok kulesi" },
@@ -77,7 +77,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi blok kulesi alçak?', correct: 'Evet! Bu blok kulesi alçak.', wrong: 'Hayır, bu blok kulesi yüksek.' }
+            tr: { question: 'Hangi blok kulesi alçak?', correct: 'Evet! Bu blok kulesi alçak.', wrong: 'Hayır, bu blok kulesi yüksek.', wrongOlumsuz: 'Hayır, bu blok kulesi alçak değil.' }
         },
         options: [
             { id: 2505, word: "blok kulesi", imageUrl: "/images/2505.webp", isCorrect: true, audioKey: "blok kulesi", spokenText: "blok kulesi" },
@@ -91,7 +91,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi çadır yüksek?', correct: 'Evet! Bu çadır yüksek.', wrong: 'Hayır, bu çadır alçak.' }
+            tr: { question: 'Hangi çadır yüksek?', correct: 'Evet! Bu çadır yüksek.', wrong: 'Hayır, bu çadır alçak.', wrongOlumsuz: 'Hayır, bu çadır yüksek değil.' }
         },
         options: [
             { id: 2509, word: "çadır", imageUrl: "/images/2509.webp", isCorrect: true, audioKey: "çadır", spokenText: "çadır" },
@@ -104,7 +104,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi çadır alçak?', correct: 'Evet! Bu çadır alçak.', wrong: 'Hayır, bu çadır yüksek.' }
+            tr: { question: 'Hangi çadır alçak?', correct: 'Evet! Bu çadır alçak.', wrong: 'Hayır, bu çadır yüksek.', wrongOlumsuz: 'Hayır, bu çadır alçak değil.' }
         },
         options: [
             { id: 2508, word: "çadır", imageUrl: "/images/2508.webp", isCorrect: true, audioKey: "çadır", spokenText: "çadır" },
@@ -118,7 +118,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi çit yüksek?', correct: 'Evet! Bu çit yüksek.', wrong: 'Hayır, bu çit alçak.' }
+            tr: { question: 'Hangi çit yüksek?', correct: 'Evet! Bu çit yüksek.', wrong: 'Hayır, bu çit alçak.', wrongOlumsuz: 'Hayır, bu çit yüksek değil.' }
         },
         options: [
             { id: 2511, word: "çit", imageUrl: "/images/2511.webp", isCorrect: true, audioKey: "çit", spokenText: "çit" },
@@ -131,7 +131,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi çit alçak?', correct: 'Evet! Bu çit alçak.', wrong: 'Hayır, bu çit yüksek.' }
+            tr: { question: 'Hangi çit alçak?', correct: 'Evet! Bu çit alçak.', wrong: 'Hayır, bu çit yüksek.', wrongOlumsuz: 'Hayır, bu çit alçak değil.' }
         },
         options: [
             { id: 2510, word: "çit", imageUrl: "/images/2510.webp", isCorrect: true, audioKey: "çit", spokenText: "çit" },
@@ -145,7 +145,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi dağ yüksek?', correct: 'Evet! Bu dağ yüksek.', wrong: 'Hayır, bu dağ alçak.' }
+            tr: { question: 'Hangi dağ yüksek?', correct: 'Evet! Bu dağ yüksek.', wrong: 'Hayır, bu dağ alçak.', wrongOlumsuz: 'Hayır, bu dağ yüksek değil.' }
         },
         options: [
             { id: 2513, word: "dağ", imageUrl: "/images/2513.webp", isCorrect: true, audioKey: "dağ", spokenText: "dağ" },
@@ -158,7 +158,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi dağ alçak?', correct: 'Evet! Bu dağ alçak.', wrong: 'Hayır, bu dağ yüksek.' }
+            tr: { question: 'Hangi dağ alçak?', correct: 'Evet! Bu dağ alçak.', wrong: 'Hayır, bu dağ yüksek.', wrongOlumsuz: 'Hayır, bu dağ alçak değil.' }
         },
         options: [
             { id: 2512, word: "dağ", imageUrl: "/images/2512.webp", isCorrect: true, audioKey: "dağ", spokenText: "dağ" },
@@ -172,7 +172,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi duvar yüksek?', correct: 'Evet! Bu duvar yüksek.', wrong: 'Hayır, bu duvar alçak.' }
+            tr: { question: 'Hangi duvar yüksek?', correct: 'Evet! Bu duvar yüksek.', wrong: 'Hayır, bu duvar alçak.', wrongOlumsuz: 'Hayır, bu duvar yüksek değil.' }
         },
         options: [
             { id: 2515, word: "duvar", imageUrl: "/images/2515.webp", isCorrect: true, audioKey: "duvar", spokenText: "duvar" },
@@ -185,7 +185,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi duvar alçak?', correct: 'Evet! Bu duvar alçak.', wrong: 'Hayır, bu duvar yüksek.' }
+            tr: { question: 'Hangi duvar alçak?', correct: 'Evet! Bu duvar alçak.', wrong: 'Hayır, bu duvar yüksek.', wrongOlumsuz: 'Hayır, bu duvar alçak değil.' }
         },
         options: [
             { id: 2514, word: "duvar", imageUrl: "/images/2514.webp", isCorrect: true, audioKey: "duvar", spokenText: "duvar" },
@@ -199,7 +199,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi kitaplık yüksek?', correct: 'Evet! Bu kitaplık yüksek.', wrong: 'Hayır, bu kitaplık alçak.' }
+            tr: { question: 'Hangi kitaplık yüksek?', correct: 'Evet! Bu kitaplık yüksek.', wrong: 'Hayır, bu kitaplık alçak.', wrongOlumsuz: 'Hayır, bu kitaplık yüksek değil.' }
         },
         options: [
             { id: 2517, word: "kitaplık", imageUrl: "/images/2517.webp", isCorrect: true, audioKey: "kitaplık", spokenText: "kitaplık" },
@@ -212,7 +212,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi kitaplık alçak?', correct: 'Evet! Bu kitaplık alçak.', wrong: 'Hayır, bu kitaplık yüksek.' }
+            tr: { question: 'Hangi kitaplık alçak?', correct: 'Evet! Bu kitaplık alçak.', wrong: 'Hayır, bu kitaplık yüksek.', wrongOlumsuz: 'Hayır, bu kitaplık alçak değil.' }
         },
         options: [
             { id: 2516, word: "kitaplık", imageUrl: "/images/2516.webp", isCorrect: true, audioKey: "kitaplık", spokenText: "kitaplık" },
@@ -226,7 +226,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi masa yüksek?', correct: 'Evet! Bu masa yüksek.', wrong: 'Hayır, bu masa alçak.' }
+            tr: { question: 'Hangi masa yüksek?', correct: 'Evet! Bu masa yüksek.', wrong: 'Hayır, bu masa alçak.', wrongOlumsuz: 'Hayır, bu masa yüksek değil.' }
         },
         options: [
             { id: 2519, word: "masa", imageUrl: "/images/2519.webp", isCorrect: true, audioKey: "masa", spokenText: "masa" },
@@ -239,7 +239,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi masa alçak?', correct: 'Evet! Bu masa alçak.', wrong: 'Hayır, bu masa yüksek.' }
+            tr: { question: 'Hangi masa alçak?', correct: 'Evet! Bu masa alçak.', wrong: 'Hayır, bu masa yüksek.', wrongOlumsuz: 'Hayır, bu masa alçak değil.' }
         },
         options: [
             { id: 2518, word: "masa", imageUrl: "/images/2518.webp", isCorrect: true, audioKey: "masa", spokenText: "masa" },
@@ -253,7 +253,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi tabure yüksek?', correct: 'Evet! Bu tabure yüksek.', wrong: 'Hayır, bu tabure alçak.' }
+            tr: { question: 'Hangi tabure yüksek?', correct: 'Evet! Bu tabure yüksek.', wrong: 'Hayır, bu tabure alçak.', wrongOlumsuz: 'Hayır, bu tabure yüksek değil.' }
         },
         options: [
             { id: 2521, word: "tabure", imageUrl: "/images/2521.webp", isCorrect: true, audioKey: "tabure", spokenText: "tabure" },
@@ -266,7 +266,7 @@ export const highLowDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.HighLow,
         speech: {
-            tr: { question: 'Hangi tabure alçak?', correct: 'Evet! Bu tabure alçak.', wrong: 'Hayır, bu tabure yüksek.' }
+            tr: { question: 'Hangi tabure alçak?', correct: 'Evet! Bu tabure alçak.', wrong: 'Hayır, bu tabure yüksek.', wrongOlumsuz: 'Hayır, bu tabure alçak değil.' }
         },
         options: [
             { id: 2520, word: "tabure", imageUrl: "/images/2520.webp", isCorrect: true, audioKey: "tabure", spokenText: "tabure" },

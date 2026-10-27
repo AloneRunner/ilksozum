@@ -10,7 +10,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.' }
+            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.', wrongOlumsuz: 'Hayır, bu önce olmaz.' }
         },
         options: [
             { id: 6101, word: "balon", imageUrl: "/images/6101.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -23,7 +23,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.' }
+            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.', wrongOlumsuz: 'Hayır, bu sonra olmaz.' }
         },
         options: [
             { id: 6102, word: "balon", imageUrl: "/images/6102.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -37,7 +37,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.' }
+            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.', wrongOlumsuz: 'Hayır, bu önce olmaz.' }
         },
         options: [
             { id: 6103, word: "buz", imageUrl: "/images/6103.webp", isCorrect: true, audioKey: "buz", spokenText: "buz" },
@@ -50,7 +50,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.' }
+            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.', wrongOlumsuz: 'Hayır, bu sonra olmaz.' }
         },
         options: [
             { id: 6104, word: "buz", imageUrl: "/images/6104.webp", isCorrect: true, audioKey: "buz", spokenText: "buz" },
@@ -64,7 +64,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.' }
+            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.', wrongOlumsuz: 'Hayır, bu önce olmaz.' }
         },
         options: [
             { id: 6105, word: "çiçek", imageUrl: "/images/6105.webp", isCorrect: true, audioKey: "çiçek", spokenText: "çiçek" },
@@ -77,7 +77,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.' }
+            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.', wrongOlumsuz: 'Hayır, bu sonra olmaz.' }
         },
         options: [
             { id: 6106, word: "çiçek", imageUrl: "/images/6106.webp", isCorrect: true, audioKey: "çiçek", spokenText: "çiçek" },
@@ -91,7 +91,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.' }
+            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.', wrongOlumsuz: 'Hayır, bu önce olmaz.' }
         },
         options: [
             { id: 6107, word: "çizme", imageUrl: "/images/6107.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -104,7 +104,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.' }
+            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.', wrongOlumsuz: 'Hayır, bu sonra olmaz.' }
         },
         options: [
             { id: 6108, word: "çizme", imageUrl: "/images/6108.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -118,7 +118,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.' }
+            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.', wrongOlumsuz: 'Hayır, bu önce olmaz.' }
         },
         options: [
             { id: 6109, word: "çizme", imageUrl: "/images/6109.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -131,7 +131,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.' }
+            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.', wrongOlumsuz: 'Hayır, bu sonra olmaz.' }
         },
         options: [
             { id: 6110, word: "çizme", imageUrl: "/images/6110.webp", isCorrect: true, audioKey: "çizme", spokenText: "çizme" },
@@ -145,7 +145,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.' }
+            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.', wrongOlumsuz: 'Hayır, bu önce olmaz.' }
         },
         options: [
             { id: 6111, word: "ekmek", imageUrl: "/images/6111.webp", isCorrect: true, audioKey: "ekmek", spokenText: "ekmek" },
@@ -158,7 +158,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.' }
+            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.', wrongOlumsuz: 'Hayır, bu sonra olmaz.' }
         },
         options: [
             { id: 6112, word: "ekmek", imageUrl: "/images/6112.webp", isCorrect: true, audioKey: "ekmek", spokenText: "ekmek" },
@@ -172,7 +172,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.' }
+            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.', wrongOlumsuz: 'Hayır, bu önce olmaz.' }
         },
         options: [
             { id: 6113, word: "elma", imageUrl: "/images/6113.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -185,7 +185,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.' }
+            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.', wrongOlumsuz: 'Hayır, bu sonra olmaz.' }
         },
         options: [
             { id: 6114, word: "elma", imageUrl: "/images/6114.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -199,7 +199,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.' }
+            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.', wrongOlumsuz: 'Hayır, bu önce olmaz.' }
         },
         options: [
             { id: 6115, word: "kâğıt", imageUrl: "/images/6115.webp", isCorrect: true, audioKey: "kâğıt", spokenText: "kâğıt" },
@@ -212,7 +212,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.' }
+            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.', wrongOlumsuz: 'Hayır, bu sonra olmaz.' }
         },
         options: [
             { id: 6116, word: "kâğıt", imageUrl: "/images/6116.webp", isCorrect: true, audioKey: "kâğıt", spokenText: "kâğıt" },
@@ -226,7 +226,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.' }
+            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.', wrongOlumsuz: 'Hayır, bu önce olmaz.' }
         },
         options: [
             { id: 6117, word: "meyve suyu", imageUrl: "/images/6117.webp", isCorrect: true, audioKey: "meyve suyu", spokenText: "meyve suyu" },
@@ -239,7 +239,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.' }
+            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.', wrongOlumsuz: 'Hayır, bu sonra olmaz.' }
         },
         options: [
             { id: 6118, word: "meyve suyu", imageUrl: "/images/6118.webp", isCorrect: true, audioKey: "meyve suyu", spokenText: "meyve suyu" },
@@ -253,7 +253,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.' }
+            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.', wrongOlumsuz: 'Hayır, bu önce olmaz.' }
         },
         options: [
             { id: 6119, word: "mum", imageUrl: "/images/6119.webp", isCorrect: true, audioKey: "mum", spokenText: "mum" },
@@ -266,7 +266,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.' }
+            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.', wrongOlumsuz: 'Hayır, bu sonra olmaz.' }
         },
         options: [
             { id: 6120, word: "mum", imageUrl: "/images/6120.webp", isCorrect: true, audioKey: "mum", spokenText: "mum" },
@@ -280,7 +280,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.' }
+            tr: { question: 'Önce hangisi olur?', correct: 'Evet! Bu önce olur.', wrong: 'Hayır, bu sonra olur.', wrongOlumsuz: 'Hayır, bu önce olmaz.' }
         },
         options: [
             { id: 6121, word: "yumurta", imageUrl: "/images/6121.webp", isCorrect: true, audioKey: "yumurta", spokenText: "yumurta" },
@@ -293,7 +293,7 @@ export const beforeAfterDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.BeforeAfter,
         speech: {
-            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.' }
+            tr: { question: 'Sonra hangisi olur?', correct: 'Evet! Bu sonra olur.', wrong: 'Hayır, bu önce olur.', wrongOlumsuz: 'Hayır, bu sonra olmaz.' }
         },
         options: [
             { id: 6122, word: "yumurta", imageUrl: "/images/6122.webp", isCorrect: true, audioKey: "yumurta", spokenText: "yumurta" },

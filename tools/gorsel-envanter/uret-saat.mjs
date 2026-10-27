@@ -68,6 +68,7 @@ const opt = (t, ok) => {
   const w = `saat ${ad(t.h, t.m)}`;
   return `            { id: ${id}, word: "${w}", imageUrl: "/images/${id}.webp", isCorrect: ${ok}, audioKey: "${w}", spokenText: "${w}" }`;
 };
+// Yanlış cevap: varsayılan "Hayır, bu saat dokuzu gösteriyor."; ayarla olumsuz "Hayır, bu saat üçü göstermiyor." (2026-10-27)
 const round = (dogru, yanlis, seviye) => {
   const q = `Hangi saat ${adBelirtme(dogru.h, dogru.m)} gösteriyor?`;
   return `    { // ${seviye}
@@ -75,7 +76,7 @@ const round = (dogru, yanlis, seviye) => {
         question: "${q}",
         questionAudioKey: "",
         activityType: ActivityType.ClockLearning,
-        speech: { tr: { question: '${q}', correct: 'Evet! Saat ${ad(dogru.h, dogru.m)}.', wrong: 'Hayır, bu saat ${adBelirtme(yanlis.h, yanlis.m)} gösteriyor.' } },
+        speech: { tr: { question: '${q}', correct: 'Evet! Saat ${ad(dogru.h, dogru.m)}.', wrong: 'Hayır, bu saat ${adBelirtme(yanlis.h, yanlis.m)} gösteriyor.', wrongOlumsuz: 'Hayır, bu saat ${adBelirtme(dogru.h, dogru.m)} göstermiyor.' } },
         options: [
 ${opt(dogru, true)},
 ${opt(yanlis, false)}

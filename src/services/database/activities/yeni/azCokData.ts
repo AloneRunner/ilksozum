@@ -10,7 +10,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde araba çok?', correct: 'Evet! Burada çok araba var.', wrong: 'Hayır, burada az araba var.' }
+            tr: { question: 'Hangi resimde araba çok?', correct: 'Evet! Burada çok araba var.', wrong: 'Hayır, burada az araba var.', wrongOlumsuz: 'Hayır, burada araba çok değil.' }
         },
         options: [
             { id: 2702, word: "araba", imageUrl: "/images/2702.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -23,7 +23,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde araba az?', correct: 'Evet! Burada az araba var.', wrong: 'Hayır, burada çok araba var.' }
+            tr: { question: 'Hangi resimde araba az?', correct: 'Evet! Burada az araba var.', wrong: 'Hayır, burada çok araba var.', wrongOlumsuz: 'Hayır, burada araba az değil.' }
         },
         options: [
             { id: 2701, word: "araba", imageUrl: "/images/2701.webp", isCorrect: true, audioKey: "araba", spokenText: "araba" },
@@ -37,7 +37,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde balon çok?', correct: 'Evet! Burada çok balon var.', wrong: 'Hayır, burada az balon var.' }
+            tr: { question: 'Hangi resimde balon çok?', correct: 'Evet! Burada çok balon var.', wrong: 'Hayır, burada az balon var.', wrongOlumsuz: 'Hayır, burada balon çok değil.' }
         },
         options: [
             { id: 2704, word: "balon", imageUrl: "/images/2704.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -50,7 +50,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde balon az?', correct: 'Evet! Burada az balon var.', wrong: 'Hayır, burada çok balon var.' }
+            tr: { question: 'Hangi resimde balon az?', correct: 'Evet! Burada az balon var.', wrong: 'Hayır, burada çok balon var.', wrongOlumsuz: 'Hayır, burada balon az değil.' }
         },
         options: [
             { id: 2703, word: "balon", imageUrl: "/images/2703.webp", isCorrect: true, audioKey: "balon", spokenText: "balon" },
@@ -64,7 +64,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde blok çok?', correct: 'Evet! Burada çok blok var.', wrong: 'Hayır, burada az blok var.' }
+            tr: { question: 'Hangi resimde blok çok?', correct: 'Evet! Burada çok blok var.', wrong: 'Hayır, burada az blok var.', wrongOlumsuz: 'Hayır, burada blok çok değil.' }
         },
         options: [
             { id: 2706, word: "blok", imageUrl: "/images/2706.webp", isCorrect: true, audioKey: "blok", spokenText: "blok" },
@@ -77,7 +77,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde blok az?', correct: 'Evet! Burada az blok var.', wrong: 'Hayır, burada çok blok var.' }
+            tr: { question: 'Hangi resimde blok az?', correct: 'Evet! Burada az blok var.', wrong: 'Hayır, burada çok blok var.', wrongOlumsuz: 'Hayır, burada blok az değil.' }
         },
         options: [
             { id: 2705, word: "blok", imageUrl: "/images/2705.webp", isCorrect: true, audioKey: "blok", spokenText: "blok" },
@@ -91,7 +91,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde çilek çok?', correct: 'Evet! Burada çok çilek var.', wrong: 'Hayır, burada az çilek var.' }
+            tr: { question: 'Hangi resimde çilek çok?', correct: 'Evet! Burada çok çilek var.', wrong: 'Hayır, burada az çilek var.', wrongOlumsuz: 'Hayır, burada çilek çok değil.' }
         },
         options: [
             { id: 2708, word: "çilek", imageUrl: "/images/2708.webp", isCorrect: true, audioKey: "çilek", spokenText: "çilek" },
@@ -104,7 +104,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde çilek az?', correct: 'Evet! Burada az çilek var.', wrong: 'Hayır, burada çok çilek var.' }
+            tr: { question: 'Hangi resimde çilek az?', correct: 'Evet! Burada az çilek var.', wrong: 'Hayır, burada çok çilek var.', wrongOlumsuz: 'Hayır, burada çilek az değil.' }
         },
         options: [
             { id: 2707, word: "çilek", imageUrl: "/images/2707.webp", isCorrect: true, audioKey: "çilek", spokenText: "çilek" },
@@ -118,7 +118,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde düğme çok?', correct: 'Evet! Burada çok düğme var.', wrong: 'Hayır, burada az düğme var.' }
+            tr: { question: 'Hangi resimde düğme çok?', correct: 'Evet! Burada çok düğme var.', wrong: 'Hayır, burada az düğme var.', wrongOlumsuz: 'Hayır, burada düğme çok değil.' }
         },
         options: [
             { id: 2710, word: "düğme", imageUrl: "/images/2710.webp", isCorrect: true, audioKey: "düğme", spokenText: "düğme" },
@@ -131,7 +131,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde düğme az?', correct: 'Evet! Burada az düğme var.', wrong: 'Hayır, burada çok düğme var.' }
+            tr: { question: 'Hangi resimde düğme az?', correct: 'Evet! Burada az düğme var.', wrong: 'Hayır, burada çok düğme var.', wrongOlumsuz: 'Hayır, burada düğme az değil.' }
         },
         options: [
             { id: 2709, word: "düğme", imageUrl: "/images/2709.webp", isCorrect: true, audioKey: "düğme", spokenText: "düğme" },
@@ -145,7 +145,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde elma çok?', correct: 'Evet! Burada çok elma var.', wrong: 'Hayır, burada az elma var.' }
+            tr: { question: 'Hangi resimde elma çok?', correct: 'Evet! Burada çok elma var.', wrong: 'Hayır, burada az elma var.', wrongOlumsuz: 'Hayır, burada elma çok değil.' }
         },
         options: [
             { id: 2712, word: "elma", imageUrl: "/images/2712.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -158,7 +158,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde elma az?', correct: 'Evet! Burada az elma var.', wrong: 'Hayır, burada çok elma var.' }
+            tr: { question: 'Hangi resimde elma az?', correct: 'Evet! Burada az elma var.', wrong: 'Hayır, burada çok elma var.', wrongOlumsuz: 'Hayır, burada elma az değil.' }
         },
         options: [
             { id: 2711, word: "elma", imageUrl: "/images/2711.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -172,7 +172,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde kalem çok?', correct: 'Evet! Burada çok kalem var.', wrong: 'Hayır, burada az kalem var.' }
+            tr: { question: 'Hangi resimde kalem çok?', correct: 'Evet! Burada çok kalem var.', wrong: 'Hayır, burada az kalem var.', wrongOlumsuz: 'Hayır, burada kalem çok değil.' }
         },
         options: [
             { id: 2714, word: "kalem", imageUrl: "/images/2714.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -185,7 +185,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde kalem az?', correct: 'Evet! Burada az kalem var.', wrong: 'Hayır, burada çok kalem var.' }
+            tr: { question: 'Hangi resimde kalem az?', correct: 'Evet! Burada az kalem var.', wrong: 'Hayır, burada çok kalem var.', wrongOlumsuz: 'Hayır, burada kalem az değil.' }
         },
         options: [
             { id: 2713, word: "kalem", imageUrl: "/images/2713.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -199,7 +199,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde kurabiye çok?', correct: 'Evet! Burada çok kurabiye var.', wrong: 'Hayır, burada az kurabiye var.' }
+            tr: { question: 'Hangi resimde kurabiye çok?', correct: 'Evet! Burada çok kurabiye var.', wrong: 'Hayır, burada az kurabiye var.', wrongOlumsuz: 'Hayır, burada kurabiye çok değil.' }
         },
         options: [
             { id: 2716, word: "kurabiye", imageUrl: "/images/2716.webp", isCorrect: true, audioKey: "kurabiye", spokenText: "kurabiye" },
@@ -212,7 +212,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde kurabiye az?', correct: 'Evet! Burada az kurabiye var.', wrong: 'Hayır, burada çok kurabiye var.' }
+            tr: { question: 'Hangi resimde kurabiye az?', correct: 'Evet! Burada az kurabiye var.', wrong: 'Hayır, burada çok kurabiye var.', wrongOlumsuz: 'Hayır, burada kurabiye az değil.' }
         },
         options: [
             { id: 2715, word: "kurabiye", imageUrl: "/images/2715.webp", isCorrect: true, audioKey: "kurabiye", spokenText: "kurabiye" },
@@ -226,7 +226,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde top çok?', correct: 'Evet! Burada çok top var.', wrong: 'Hayır, burada az top var.' }
+            tr: { question: 'Hangi resimde top çok?', correct: 'Evet! Burada çok top var.', wrong: 'Hayır, burada az top var.', wrongOlumsuz: 'Hayır, burada top çok değil.' }
         },
         options: [
             { id: 2718, word: "top", imageUrl: "/images/2718.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -239,7 +239,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde top az?', correct: 'Evet! Burada az top var.', wrong: 'Hayır, burada çok top var.' }
+            tr: { question: 'Hangi resimde top az?', correct: 'Evet! Burada az top var.', wrong: 'Hayır, burada çok top var.', wrongOlumsuz: 'Hayır, burada top az değil.' }
         },
         options: [
             { id: 2717, word: "top", imageUrl: "/images/2717.webp", isCorrect: true, audioKey: "top", spokenText: "top" },
@@ -253,7 +253,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde yaprak çok?', correct: 'Evet! Burada çok yaprak var.', wrong: 'Hayır, burada az yaprak var.' }
+            tr: { question: 'Hangi resimde yaprak çok?', correct: 'Evet! Burada çok yaprak var.', wrong: 'Hayır, burada az yaprak var.', wrongOlumsuz: 'Hayır, burada yaprak çok değil.' }
         },
         options: [
             { id: 2720, word: "yaprak", imageUrl: "/images/2720.webp", isCorrect: true, audioKey: "yaprak", spokenText: "yaprak" },
@@ -266,7 +266,7 @@ export const fewMuchDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.FewMuch,
         speech: {
-            tr: { question: 'Hangi resimde yaprak az?', correct: 'Evet! Burada az yaprak var.', wrong: 'Hayır, burada çok yaprak var.' }
+            tr: { question: 'Hangi resimde yaprak az?', correct: 'Evet! Burada az yaprak var.', wrong: 'Hayır, burada çok yaprak var.', wrongOlumsuz: 'Hayır, burada yaprak az değil.' }
         },
         options: [
             { id: 2719, word: "yaprak", imageUrl: "/images/2719.webp", isCorrect: true, audioKey: "yaprak", spokenText: "yaprak" },

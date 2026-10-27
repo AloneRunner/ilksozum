@@ -35,6 +35,8 @@ import OceanJellyfishMascot, { JellyfishMood } from './ui/OceanJellyfishMascot.t
 const SPAM_GUARD_WINDOW_MS = 2400; // Rolling window to count rapid taps
 const SPAM_GUARD_LOCK_MS = 3600;   // Duration to block taps once guard triggers
 const SPAM_GUARD_CALM_MODE_MS = 45000; // After a warning, keep slower pacing for this long
+// Ayarlar > "Yanlışta kavramı olumsuzla" (SettingsScreen, useLocalStorage → JSON "true"/"false")
+const yanlisOlumsuzAcik = () => { try { return localStorage.getItem('yanlisOlumsuz_v1') === 'true'; } catch { return false; } };
 
 // Helper to get category from imageData by id
 const getCategoryById = (id: number): string | null => {
@@ -1770,7 +1772,9 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
         const getSpeechBlock = () => {
             const s = (roundData.speech as any) || null;
             if (!s) return null;
-            return s[currentLang] || s[currentLang?.split('-')[0]] || null;
+            const b = s[currentLang] || s[currentLang?.split('-')[0]] || null;
+            // Ayarlar > "Yanlışta kavramı olumsuzla": zıt kavram yerine "Hayır, bu atkı uzun değil."
+            return b?.wrongOlumsuz && yanlisOlumsuzAcik() ? { ...b, wrong: b.wrongOlumsuz } : b;
         };
         if (isSpamGuardEnabled) {
             if (isSpamLocked) return;

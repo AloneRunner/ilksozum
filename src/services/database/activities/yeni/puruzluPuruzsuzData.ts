@@ -10,7 +10,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Ananas pürüzlüdür.', wrong: 'Hayır, mango pürüzsüzdür.' }
+            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Ananas pürüzlüdür.', wrong: 'Hayır, mango pürüzsüzdür.', wrongOlumsuz: 'Hayır, mango pürüzlü değil.' }
         },
         options: [
             { id: 3701, word: "ananas", imageUrl: "/images/3701.webp", isCorrect: true, audioKey: "ananas", spokenText: "ananas" },
@@ -23,7 +23,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Mango pürüzsüzdür.', wrong: 'Hayır, ananas pürüzlüdür.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Mango pürüzsüzdür.', wrong: 'Hayır, ananas pürüzlüdür.', wrongOlumsuz: 'Hayır, ananas pürüzsüz değil.' }
         },
         options: [
             { id: 3702, word: "mango", imageUrl: "/images/3702.webp", isCorrect: true, audioKey: "mango", spokenText: "mango" },
@@ -37,7 +37,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Ağaç kabuğu pürüzlüdür.', wrong: 'Hayır, cam şişe pürüzsüzdür.' }
+            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Ağaç kabuğu pürüzlüdür.', wrong: 'Hayır, cam şişe pürüzsüzdür.', wrongOlumsuz: 'Hayır, cam şişe pürüzlü değil.' }
         },
         options: [
             { id: 3703, word: "ağaç kabuğu", imageUrl: "/images/3703.webp", isCorrect: true, audioKey: "ağaç kabuğu", spokenText: "ağaç kabuğu" },
@@ -50,7 +50,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Cam şişe pürüzsüzdür.', wrong: 'Hayır, ağaç kabuğu pürüzlüdür.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Cam şişe pürüzsüzdür.', wrong: 'Hayır, ağaç kabuğu pürüzlüdür.', wrongOlumsuz: 'Hayır, ağaç kabuğu pürüzsüz değil.' }
         },
         options: [
             { id: 3704, word: "cam şişe", imageUrl: "/images/3704.webp", isCorrect: true, audioKey: "cam şişe", spokenText: "cam şişe" },
@@ -64,7 +64,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Kavun pürüzlüdür.', wrong: 'Hayır, karpuz pürüzsüzdür.' }
+            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Kavun pürüzlüdür.', wrong: 'Hayır, karpuz pürüzsüzdür.', wrongOlumsuz: 'Hayır, karpuz pürüzlü değil.' }
         },
         options: [
             { id: 3705, word: "kavun", imageUrl: "/images/3705.webp", isCorrect: true, audioKey: "kavun", spokenText: "kavun" },
@@ -77,7 +77,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Karpuz pürüzsüzdür.', wrong: 'Hayır, kavun pürüzlüdür.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Karpuz pürüzsüzdür.', wrong: 'Hayır, kavun pürüzlüdür.', wrongOlumsuz: 'Hayır, kavun pürüzsüz değil.' }
         },
         options: [
             { id: 2810, word: "karpuz", imageUrl: "/images/2810.webp", isCorrect: true, audioKey: "karpuz", spokenText: "karpuz" },
@@ -91,7 +91,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Portakal pürüzlüdür.', wrong: 'Hayır, elma pürüzsüzdür.' }
+            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Portakal pürüzlüdür.', wrong: 'Hayır, elma pürüzsüzdür.', wrongOlumsuz: 'Hayır, elma pürüzlü değil.' }
         },
         options: [
             { id: 3706, word: "portakal", imageUrl: "/images/3706.webp", isCorrect: true, audioKey: "portakal", spokenText: "portakal" },
@@ -104,7 +104,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Elma pürüzsüzdür.', wrong: 'Hayır, portakal pürüzlüdür.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Elma pürüzsüzdür.', wrong: 'Hayır, portakal pürüzlüdür.', wrongOlumsuz: 'Hayır, portakal pürüzsüz değil.' }
         },
         options: [
             { id: 2807, word: "elma", imageUrl: "/images/2807.webp", isCorrect: true, audioKey: "elma", spokenText: "elma" },
@@ -118,7 +118,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Sünger taşı pürüzlüdür.', wrong: 'Hayır, sabun pürüzsüzdür.' }
+            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Sünger taşı pürüzlüdür.', wrong: 'Hayır, sabun pürüzsüzdür.', wrongOlumsuz: 'Hayır, sabun pürüzlü değil.' }
         },
         options: [
             { id: 3707, word: "sünger taşı", imageUrl: "/images/3707.webp", isCorrect: true, audioKey: "sünger taşı", spokenText: "sünger taşı" },
@@ -131,7 +131,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Sabun pürüzsüzdür.', wrong: 'Hayır, sünger taşı pürüzlüdür.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Sabun pürüzsüzdür.', wrong: 'Hayır, sünger taşı pürüzlüdür.', wrongOlumsuz: 'Hayır, sünger taşı pürüzsüz değil.' }
         },
         options: [
             { id: 3708, word: "sabun", imageUrl: "/images/3708.webp", isCorrect: true, audioKey: "sabun", spokenText: "sabun" },
@@ -145,7 +145,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Hangi tahta pürüzlü?', correct: 'Evet! Bu tahta pürüzlü.', wrong: 'Hayır, bu tahta pürüzsüz.' }
+            tr: { question: 'Hangi tahta pürüzlü?', correct: 'Evet! Bu tahta pürüzlü.', wrong: 'Hayır, bu tahta pürüzsüz.', wrongOlumsuz: 'Hayır, bu tahta pürüzlü değil.' }
         },
         options: [
             { id: 3709, word: "tahta", imageUrl: "/images/3709.webp", isCorrect: true, audioKey: "tahta", spokenText: "tahta" },
@@ -158,7 +158,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Hangi tahta pürüzsüz?', correct: 'Evet! Bu tahta pürüzsüz.', wrong: 'Hayır, bu tahta pürüzlü.' }
+            tr: { question: 'Hangi tahta pürüzsüz?', correct: 'Evet! Bu tahta pürüzsüz.', wrong: 'Hayır, bu tahta pürüzlü.', wrongOlumsuz: 'Hayır, bu tahta pürüzsüz değil.' }
         },
         options: [
             { id: 3710, word: "tahta", imageUrl: "/images/3710.webp", isCorrect: true, audioKey: "tahta", spokenText: "tahta" },
@@ -172,7 +172,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Tuğla pürüzlüdür.', wrong: 'Hayır, fayans pürüzsüzdür.' }
+            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Tuğla pürüzlüdür.', wrong: 'Hayır, fayans pürüzsüzdür.', wrongOlumsuz: 'Hayır, fayans pürüzlü değil.' }
         },
         options: [
             { id: 3513, word: "tuğla", imageUrl: "/images/3513.webp", isCorrect: true, audioKey: "tuğla", spokenText: "tuğla" },
@@ -185,7 +185,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Fayans pürüzsüzdür.', wrong: 'Hayır, tuğla pürüzlüdür.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Fayans pürüzsüzdür.', wrong: 'Hayır, tuğla pürüzlüdür.', wrongOlumsuz: 'Hayır, tuğla pürüzsüz değil.' }
         },
         options: [
             { id: 3711, word: "fayans", imageUrl: "/images/3711.webp", isCorrect: true, audioKey: "fayans", spokenText: "fayans" },
@@ -199,7 +199,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Pürüzlü taş pürüzlüdür.', wrong: 'Hayır, dere taşı pürüzsüzdür.' }
+            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Pürüzlü taş pürüzlüdür.', wrong: 'Hayır, dere taşı pürüzsüzdür.', wrongOlumsuz: 'Hayır, dere taşı pürüzlü değil.' }
         },
         options: [
             { id: 3712, word: "pürüzlü taş", imageUrl: "/images/3712.webp", isCorrect: true, audioKey: "pürüzlü taş", spokenText: "pürüzlü taş" },
@@ -212,7 +212,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Dere taşı pürüzsüzdür.', wrong: 'Hayır, pürüzlü taş pürüzlüdür.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Dere taşı pürüzsüzdür.', wrong: 'Hayır, pürüzlü taş pürüzlüdür.', wrongOlumsuz: 'Hayır, pürüzlü taş pürüzsüz değil.' }
         },
         options: [
             { id: 3512, word: "dere taşı", imageUrl: "/images/3512.webp", isCorrect: true, audioKey: "dere taşı", spokenText: "dere taşı" },
@@ -226,7 +226,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Zımpara kâğıdı pürüzlüdür.', wrong: 'Hayır, kâğıt pürüzsüzdür.' }
+            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Zımpara kâğıdı pürüzlüdür.', wrong: 'Hayır, kâğıt pürüzsüzdür.', wrongOlumsuz: 'Hayır, kâğıt pürüzlü değil.' }
         },
         options: [
             { id: 3713, word: "zımpara kâğıdı", imageUrl: "/images/3713.webp", isCorrect: true, audioKey: "zımpara kâğıdı", spokenText: "zımpara kâğıdı" },
@@ -239,7 +239,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Kâğıt pürüzsüzdür.', wrong: 'Hayır, zımpara kâğıdı pürüzlüdür.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Kâğıt pürüzsüzdür.', wrong: 'Hayır, zımpara kâğıdı pürüzlüdür.', wrongOlumsuz: 'Hayır, zımpara kâğıdı pürüzsüz değil.' }
         },
         options: [
             { id: 3714, word: "kâğıt", imageUrl: "/images/3714.webp", isCorrect: true, audioKey: "kâğıt", spokenText: "kâğıt" },
@@ -253,7 +253,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Ceviz pürüzlüdür.', wrong: 'Hayır, yumurta pürüzsüzdür.' }
+            tr: { question: 'Pürüzlü olan hangisi?', correct: 'Evet! Ceviz pürüzlüdür.', wrong: 'Hayır, yumurta pürüzsüzdür.', wrongOlumsuz: 'Hayır, yumurta pürüzlü değil.' }
         },
         options: [
             { id: 3507, word: "ceviz", imageUrl: "/images/3507.webp", isCorrect: true, audioKey: "ceviz", spokenText: "ceviz" },
@@ -266,7 +266,7 @@ export const roughSmoothDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.RoughSmooth,
         speech: {
-            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Yumurta pürüzsüzdür.', wrong: 'Hayır, ceviz pürüzlüdür.' }
+            tr: { question: 'Pürüzsüz olan hangisi?', correct: 'Evet! Yumurta pürüzsüzdür.', wrong: 'Hayır, ceviz pürüzlüdür.', wrongOlumsuz: 'Hayır, ceviz pürüzsüz değil.' }
         },
         options: [
             { id: 3120, word: "yumurta", imageUrl: "/images/3120.webp", isCorrect: true, audioKey: "yumurta", spokenText: "yumurta" },

@@ -10,7 +10,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Bıçak tehlikelidir.', wrong: 'Hayır, kaşık güvenlidir.' }
+            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Bıçak tehlikelidir.', wrong: 'Hayır, kaşık güvenlidir.', wrongOlumsuz: 'Hayır, kaşık tehlikeli değil.' }
         },
         options: [
             { id: 6852, word: "bıçak", imageUrl: "/images/6852.webp", isCorrect: true, audioKey: "bıçak", spokenText: "bıçak" },
@@ -23,7 +23,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Kaşık güvenlidir.', wrong: 'Hayır, bıçak tehlikelidir.' }
+            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Kaşık güvenlidir.', wrong: 'Hayır, bıçak tehlikelidir.', wrongOlumsuz: 'Hayır, bıçak güvenli değil.' }
         },
         options: [
             { id: 6851, word: "kaşık", imageUrl: "/images/6851.webp", isCorrect: true, audioKey: "kaşık", spokenText: "kaşık" },
@@ -37,7 +37,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! İğne tehlikelidir.', wrong: 'Hayır, pamuk güvenlidir.' }
+            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! İğne tehlikelidir.', wrong: 'Hayır, pamuk güvenlidir.', wrongOlumsuz: 'Hayır, pamuk tehlikeli değil.' }
         },
         options: [
             { id: 6854, word: "iğne", imageUrl: "/images/6854.webp", isCorrect: true, audioKey: "iğne", spokenText: "iğne" },
@@ -50,7 +50,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Pamuk güvenlidir.', wrong: 'Hayır, iğne tehlikelidir.' }
+            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Pamuk güvenlidir.', wrong: 'Hayır, iğne tehlikelidir.', wrongOlumsuz: 'Hayır, iğne güvenli değil.' }
         },
         options: [
             { id: 6853, word: "pamuk", imageUrl: "/images/6853.webp", isCorrect: true, audioKey: "pamuk", spokenText: "pamuk" },
@@ -64,7 +64,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! İlaç tehlikelidir.', wrong: 'Hayır, boya kutusu güvenlidir.' }
+            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! İlaç tehlikelidir.', wrong: 'Hayır, boya kutusu güvenlidir.', wrongOlumsuz: 'Hayır, boya kutusu tehlikeli değil.' }
         },
         options: [
             { id: 6856, word: "ilaç", imageUrl: "/images/6856.webp", isCorrect: true, audioKey: "ilaç", spokenText: "ilaç" },
@@ -77,7 +77,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Boya kutusu güvenlidir.', wrong: 'Hayır, ilaç tehlikelidir.' }
+            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Boya kutusu güvenlidir.', wrong: 'Hayır, ilaç tehlikelidir.', wrongOlumsuz: 'Hayır, ilaç güvenli değil.' }
         },
         options: [
             { id: 6855, word: "boya kutusu", imageUrl: "/images/6855.webp", isCorrect: true, audioKey: "boya kutusu", spokenText: "boya kutusu" },
@@ -91,7 +91,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Yanan kibrit tehlikelidir.', wrong: 'Hayır, pastel boya güvenlidir.' }
+            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Yanan kibrit tehlikelidir.', wrong: 'Hayır, pastel boya güvenlidir.', wrongOlumsuz: 'Hayır, pastel boya tehlikeli değil.' }
         },
         options: [
             { id: 6858, word: "yanan kibrit", imageUrl: "/images/6858.webp", isCorrect: true, audioKey: "yanan kibrit", spokenText: "yanan kibrit" },
@@ -104,7 +104,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Pastel boya güvenlidir.', wrong: 'Hayır, yanan kibrit tehlikelidir.' }
+            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Pastel boya güvenlidir.', wrong: 'Hayır, yanan kibrit tehlikelidir.', wrongOlumsuz: 'Hayır, yanan kibrit güvenli değil.' }
         },
         options: [
             { id: 6857, word: "pastel boya", imageUrl: "/images/6857.webp", isCorrect: true, audioKey: "pastel boya", spokenText: "pastel boya" },
@@ -118,7 +118,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Kırık bardak tehlikelidir.', wrong: 'Hayır, plastik bardak güvenlidir.' }
+            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Kırık bardak tehlikelidir.', wrong: 'Hayır, plastik bardak güvenlidir.', wrongOlumsuz: 'Hayır, plastik bardak tehlikeli değil.' }
         },
         options: [
             { id: 6860, word: "kırık bardak", imageUrl: "/images/6860.webp", isCorrect: true, audioKey: "kırık bardak", spokenText: "kırık bardak" },
@@ -131,7 +131,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Plastik bardak güvenlidir.', wrong: 'Hayır, kırık bardak tehlikelidir.' }
+            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Plastik bardak güvenlidir.', wrong: 'Hayır, kırık bardak tehlikelidir.', wrongOlumsuz: 'Hayır, kırık bardak güvenli değil.' }
         },
         options: [
             { id: 6859, word: "plastik bardak", imageUrl: "/images/6859.webp", isCorrect: true, audioKey: "plastik bardak", spokenText: "plastik bardak" },
@@ -145,7 +145,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Makas tehlikelidir.', wrong: 'Hayır, oyuncak ayı güvenlidir.' }
+            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Makas tehlikelidir.', wrong: 'Hayır, oyuncak ayı güvenlidir.', wrongOlumsuz: 'Hayır, oyuncak ayı tehlikeli değil.' }
         },
         options: [
             { id: 6862, word: "makas", imageUrl: "/images/6862.webp", isCorrect: true, audioKey: "makas", spokenText: "makas" },
@@ -158,7 +158,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Oyuncak ayı güvenlidir.', wrong: 'Hayır, makas tehlikelidir.' }
+            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Oyuncak ayı güvenlidir.', wrong: 'Hayır, makas tehlikelidir.', wrongOlumsuz: 'Hayır, makas güvenli değil.' }
         },
         options: [
             { id: 6861, word: "oyuncak ayı", imageUrl: "/images/6861.webp", isCorrect: true, audioKey: "oyuncak ayı", spokenText: "oyuncak ayı" },
@@ -172,7 +172,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Priz tehlikelidir.', wrong: 'Hayır, oyuncak blok güvenlidir.' }
+            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Priz tehlikelidir.', wrong: 'Hayır, oyuncak blok güvenlidir.', wrongOlumsuz: 'Hayır, oyuncak blok tehlikeli değil.' }
         },
         options: [
             { id: 6864, word: "priz", imageUrl: "/images/6864.webp", isCorrect: true, audioKey: "priz", spokenText: "priz" },
@@ -185,7 +185,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Oyuncak blok güvenlidir.', wrong: 'Hayır, priz tehlikelidir.' }
+            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Oyuncak blok güvenlidir.', wrong: 'Hayır, priz tehlikelidir.', wrongOlumsuz: 'Hayır, priz güvenli değil.' }
         },
         options: [
             { id: 6863, word: "oyuncak blok", imageUrl: "/images/6863.webp", isCorrect: true, audioKey: "oyuncak blok", spokenText: "oyuncak blok" },
@@ -199,7 +199,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Temizlik spreyi tehlikelidir.', wrong: 'Hayır, su şişesi güvenlidir.' }
+            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Temizlik spreyi tehlikelidir.', wrong: 'Hayır, su şişesi güvenlidir.', wrongOlumsuz: 'Hayır, su şişesi tehlikeli değil.' }
         },
         options: [
             { id: 6866, word: "temizlik spreyi", imageUrl: "/images/6866.webp", isCorrect: true, audioKey: "temizlik spreyi", spokenText: "temizlik spreyi" },
@@ -212,7 +212,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Su şişesi güvenlidir.', wrong: 'Hayır, temizlik spreyi tehlikelidir.' }
+            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Su şişesi güvenlidir.', wrong: 'Hayır, temizlik spreyi tehlikelidir.', wrongOlumsuz: 'Hayır, temizlik spreyi güvenli değil.' }
         },
         options: [
             { id: 6865, word: "su şişesi", imageUrl: "/images/6865.webp", isCorrect: true, audioKey: "su şişesi", spokenText: "su şişesi" },
@@ -226,7 +226,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Kaynayan tencere tehlikelidir.', wrong: 'Hayır, oyuncak tencere güvenlidir.' }
+            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Kaynayan tencere tehlikelidir.', wrong: 'Hayır, oyuncak tencere güvenlidir.', wrongOlumsuz: 'Hayır, oyuncak tencere tehlikeli değil.' }
         },
         options: [
             { id: 6868, word: "kaynayan tencere", imageUrl: "/images/6868.webp", isCorrect: true, audioKey: "kaynayan tencere", spokenText: "kaynayan tencere" },
@@ -239,7 +239,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Oyuncak tencere güvenlidir.', wrong: 'Hayır, kaynayan tencere tehlikelidir.' }
+            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Oyuncak tencere güvenlidir.', wrong: 'Hayır, kaynayan tencere tehlikelidir.', wrongOlumsuz: 'Hayır, kaynayan tencere güvenli değil.' }
         },
         options: [
             { id: 6867, word: "oyuncak tencere", imageUrl: "/images/6867.webp", isCorrect: true, audioKey: "oyuncak tencere", spokenText: "oyuncak tencere" },
@@ -253,7 +253,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Sıcak ütü tehlikelidir.', wrong: 'Hayır, yastık güvenlidir.' }
+            tr: { question: 'Hangisi tehlikeli?', correct: 'Evet! Sıcak ütü tehlikelidir.', wrong: 'Hayır, yastık güvenlidir.', wrongOlumsuz: 'Hayır, yastık tehlikeli değil.' }
         },
         options: [
             { id: 6870, word: "sıcak ütü", imageUrl: "/images/6870.webp", isCorrect: true, audioKey: "sıcak ütü", spokenText: "sıcak ütü" },
@@ -266,7 +266,7 @@ export const tehlikeliGuvenliDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.TehlikeliGuvenli,
         speech: {
-            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Yastık güvenlidir.', wrong: 'Hayır, sıcak ütü tehlikelidir.' }
+            tr: { question: 'Hangisi güvenli?', correct: 'Evet! Yastık güvenlidir.', wrong: 'Hayır, sıcak ütü tehlikelidir.', wrongOlumsuz: 'Hayır, sıcak ütü güvenli değil.' }
         },
         options: [
             { id: 6869, word: "yastık", imageUrl: "/images/6869.webp", isCorrect: true, audioKey: "yastık", spokenText: "yastık" },

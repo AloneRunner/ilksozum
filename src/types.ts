@@ -314,6 +314,7 @@ export interface ConceptRound {
       question?: string;   // Optional TTS text for the question
       correct?: string;    // TTS to speak when the user selects the correct option
       wrong?: string;      // TTS to speak when the user selects a wrong option
+      wrongOlumsuz?: string; // Ayarla seçilen biçim: sorulan kavram olumsuzlanır ("Hayır, bu atkı uzun değil.")
     }
   };
 }

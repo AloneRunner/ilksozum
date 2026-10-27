@@ -13,7 +13,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu kalem kalın.', wrong: 'Hayır, bu kalem ince.' }
+            tr: { correct: 'Evet! Bu kalem kalın.', wrong: 'Hayır, bu kalem ince.', wrongOlumsuz: 'Hayır, bu kalem kalın değil.' }
         },
         options: [
             { id: 2001, word: "kalem", imageUrl: "/images/2001.webp", isCorrect: true, audioKey: "kalem", spokenText: "kalem" },
@@ -26,7 +26,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu kalem ince.', wrong: 'Hayır, bu kalem kalın.' }
+            tr: { correct: 'Evet! Bu kalem ince.', wrong: 'Hayır, bu kalem kalın.', wrongOlumsuz: 'Hayır, bu kalem ince değil.' }
         },
         options: [
             { id: 2001, word: "kalem", imageUrl: "/images/2001.webp", isCorrect: false, audioKey: "kalem", spokenText: "kalem" },
@@ -40,7 +40,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu ip kalın.', wrong: 'Hayır, bu ip ince.' }
+            tr: { correct: 'Evet! Bu ip kalın.', wrong: 'Hayır, bu ip ince.', wrongOlumsuz: 'Hayır, bu ip kalın değil.' }
         },
         options: [
             { id: 2003, word: "ip", imageUrl: "/images/2003.webp", isCorrect: true, audioKey: "ip", spokenText: "ip" },
@@ -53,7 +53,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu ip ince.', wrong: 'Hayır, bu ip kalın.' }
+            tr: { correct: 'Evet! Bu ip ince.', wrong: 'Hayır, bu ip kalın.', wrongOlumsuz: 'Hayır, bu ip ince değil.' }
         },
         options: [
             { id: 2003, word: "ip", imageUrl: "/images/2003.webp", isCorrect: false, audioKey: "ip", spokenText: "ip" },
@@ -67,7 +67,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu mum kalın.', wrong: 'Hayır, bu mum ince.' }
+            tr: { correct: 'Evet! Bu mum kalın.', wrong: 'Hayır, bu mum ince.', wrongOlumsuz: 'Hayır, bu mum kalın değil.' }
         },
         options: [
             { id: 2005, word: "mum", imageUrl: "/images/2005.webp", isCorrect: true, audioKey: "mum", spokenText: "mum" },
@@ -80,7 +80,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu mum ince.', wrong: 'Hayır, bu mum kalın.' }
+            tr: { correct: 'Evet! Bu mum ince.', wrong: 'Hayır, bu mum kalın.', wrongOlumsuz: 'Hayır, bu mum ince değil.' }
         },
         options: [
             { id: 2005, word: "mum", imageUrl: "/images/2005.webp", isCorrect: false, audioKey: "mum", spokenText: "mum" },
@@ -94,7 +94,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu havuç kalın.', wrong: 'Hayır, bu havuç ince.' }
+            tr: { correct: 'Evet! Bu havuç kalın.', wrong: 'Hayır, bu havuç ince.', wrongOlumsuz: 'Hayır, bu havuç kalın değil.' }
         },
         options: [
             { id: 2007, word: "havuç", imageUrl: "/images/2007.webp", isCorrect: true, audioKey: "havuç", spokenText: "havuç" },
@@ -107,7 +107,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu havuç ince.', wrong: 'Hayır, bu havuç kalın.' }
+            tr: { correct: 'Evet! Bu havuç ince.', wrong: 'Hayır, bu havuç kalın.', wrongOlumsuz: 'Hayır, bu havuç ince değil.' }
         },
         options: [
             { id: 2007, word: "havuç", imageUrl: "/images/2007.webp", isCorrect: false, audioKey: "havuç", spokenText: "havuç" },
@@ -121,7 +121,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "", // özel soru: ekranda bu metin görünsün
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { question: 'Hangi ağacın gövdesi kalın?', correct: 'Evet! Bu ağacın gövdesi kalın.', wrong: 'Hayır, bu ağacın gövdesi ince.' }
+            tr: { question: 'Hangi ağacın gövdesi kalın?', correct: 'Evet! Bu ağacın gövdesi kalın.', wrong: 'Hayır, bu ağacın gövdesi ince.', wrongOlumsuz: 'Hayır, bu ağacın gövdesi kalın değil.' }
         },
         options: [
             { id: 2009, word: "ağaç", imageUrl: "/images/2009.webp", isCorrect: true, audioKey: "ağaç", spokenText: "ağaç" },
@@ -134,7 +134,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "", // özel soru: ekranda bu metin görünsün
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { question: 'Hangi ağacın gövdesi ince?', correct: 'Evet! Bu ağacın gövdesi ince.', wrong: 'Hayır, bu ağacın gövdesi kalın.' }
+            tr: { question: 'Hangi ağacın gövdesi ince?', correct: 'Evet! Bu ağacın gövdesi ince.', wrong: 'Hayır, bu ağacın gövdesi kalın.', wrongOlumsuz: 'Hayır, bu ağacın gövdesi ince değil.' }
         },
         options: [
             { id: 2009, word: "ağaç", imageUrl: "/images/2009.webp", isCorrect: false, audioKey: "ağaç", spokenText: "ağaç" },
@@ -148,7 +148,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu fırça kalın.', wrong: 'Hayır, bu fırça ince.' }
+            tr: { correct: 'Evet! Bu fırça kalın.', wrong: 'Hayır, bu fırça ince.', wrongOlumsuz: 'Hayır, bu fırça kalın değil.' }
         },
         options: [
             { id: 2011, word: "fırça", imageUrl: "/images/2011.webp", isCorrect: true, audioKey: "fırça", spokenText: "fırça" },
@@ -161,7 +161,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu fırça ince.', wrong: 'Hayır, bu fırça kalın.' }
+            tr: { correct: 'Evet! Bu fırça ince.', wrong: 'Hayır, bu fırça kalın.', wrongOlumsuz: 'Hayır, bu fırça ince değil.' }
         },
         options: [
             { id: 2011, word: "fırça", imageUrl: "/images/2011.webp", isCorrect: false, audioKey: "fırça", spokenText: "fırça" },
@@ -175,7 +175,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu çivi kalın.', wrong: 'Hayır, bu çivi ince.' }
+            tr: { correct: 'Evet! Bu çivi kalın.', wrong: 'Hayır, bu çivi ince.', wrongOlumsuz: 'Hayır, bu çivi kalın değil.' }
         },
         options: [
             { id: 2013, word: "çivi", imageUrl: "/images/2013.webp", isCorrect: true, audioKey: "çivi", spokenText: "çivi" },
@@ -188,7 +188,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu çivi ince.', wrong: 'Hayır, bu çivi kalın.' }
+            tr: { correct: 'Evet! Bu çivi ince.', wrong: 'Hayır, bu çivi kalın.', wrongOlumsuz: 'Hayır, bu çivi ince değil.' }
         },
         options: [
             { id: 2013, word: "çivi", imageUrl: "/images/2013.webp", isCorrect: false, audioKey: "çivi", spokenText: "çivi" },
@@ -202,7 +202,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu havlu kalın.', wrong: 'Hayır, bu havlu ince.' }
+            tr: { correct: 'Evet! Bu havlu kalın.', wrong: 'Hayır, bu havlu ince.', wrongOlumsuz: 'Hayır, bu havlu kalın değil.' }
         },
         options: [
             { id: 2015, word: "havlu", imageUrl: "/images/2015.webp", isCorrect: true, audioKey: "havlu", spokenText: "havlu" },
@@ -215,7 +215,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu havlu ince.', wrong: 'Hayır, bu havlu kalın.' }
+            tr: { correct: 'Evet! Bu havlu ince.', wrong: 'Hayır, bu havlu kalın.', wrongOlumsuz: 'Hayır, bu havlu ince değil.' }
         },
         options: [
             { id: 2015, word: "havlu", imageUrl: "/images/2015.webp", isCorrect: false, audioKey: "havlu", spokenText: "havlu" },
@@ -229,7 +229,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu kitap kalın.', wrong: 'Hayır, bu kitap ince.' }
+            tr: { correct: 'Evet! Bu kitap kalın.', wrong: 'Hayır, bu kitap ince.', wrongOlumsuz: 'Hayır, bu kitap kalın değil.' }
         },
         options: [
             { id: 2017, word: "kitap", imageUrl: "/images/2017.webp", isCorrect: true, audioKey: "kitap", spokenText: "kitap" },
@@ -242,7 +242,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu kitap ince.', wrong: 'Hayır, bu kitap kalın.' }
+            tr: { correct: 'Evet! Bu kitap ince.', wrong: 'Hayır, bu kitap kalın.', wrongOlumsuz: 'Hayır, bu kitap ince değil.' }
         },
         options: [
             { id: 2017, word: "kitap", imageUrl: "/images/2017.webp", isCorrect: false, audioKey: "kitap", spokenText: "kitap" },
@@ -256,7 +256,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu ekmek dilimi kalın.', wrong: 'Hayır, bu ekmek ince.' }
+            tr: { correct: 'Evet! Bu ekmek dilimi kalın.', wrong: 'Hayır, bu ekmek ince.', wrongOlumsuz: 'Hayır, bu ekmek dilimi kalın değil.' }
         },
         options: [
             { id: 2019, word: "ekmek", imageUrl: "/images/2019.webp", isCorrect: true, audioKey: "ekmek", spokenText: "ekmek" },
@@ -269,7 +269,7 @@ export const thinThickDataYeni: ConceptRound[] = [
         questionAudioKey: "",
         activityType: ActivityType.ThinThick,
         speech: {
-            tr: { correct: 'Evet! Bu ekmek dilimi ince.', wrong: 'Hayır, bu ekmek kalın.' }
+            tr: { correct: 'Evet! Bu ekmek dilimi ince.', wrong: 'Hayır, bu ekmek kalın.', wrongOlumsuz: 'Hayır, bu ekmek dilimi ince değil.' }
         },
         options: [
             { id: 2019, word: "ekmek", imageUrl: "/images/2019.webp", isCorrect: false, audioKey: "ekmek", spokenText: "ekmek" },
