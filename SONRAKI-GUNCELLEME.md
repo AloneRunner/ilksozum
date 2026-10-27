@@ -2,6 +2,27 @@
 
 Yazıldığı tarih: 7 Ekim 2026, Play'e 9.1.0 (92) yüklendikten sonra. Kaan'la birlikte bakılacak.
 
+## ⭐ ÇOK ÖNEMLİ — Yeni özel eğitim etkinlikleri (Kaan, 28 Ekim 2026)
+
+Kaan: "Bir sonraki pakette yapalım, çok önemli. Görsel de lazım olacak." Uygulamada olmayan, özel eğitimde
+(MEB otizm programı, ABA, BEP) temel sayılan etkinlikler. Listeyi Gökhan Hoca'ya da göstermek iyi olur.
+
+| Öncelik | Etkinlik | Ne yapılır | Görsel |
+|---|---|---|---|
+| 1 | Ne yapıyor? | Eylem tanıma: koşuyor, uyuyor, yiyor, içiyor… | Eylem fotoğrafları (İfade Tahtası eylemleri kısmen) |
+| 1 | Yönerge takibi | "Topa dokun" → "Önce elmaya, sonra topa dokun" | Mevcut nesneler yeter |
+| 1 | Sosyal öyküler | Berber, doktor, market, selamlaşma, sıra bekleme | Öykü başına 4–6 sahne |
+| 2 | Durumdan duygu | "Dondurması düştü. Nasıl hisseder?" | Sahne görselleri |
+| 2 | Öz bakım çizelgeleri | El yıkama, diş fırçalama, giyinme adımları | Adım görselleri |
+| 2 | Zamirler | Ben / sen / o | Kişi görselleri |
+| 2 | Kişisel bilgiler | Adın ne, kaç yaşındasın, annenin adı | Az |
+| 2 | İşlevsel okuma | Yazılı kelime → resim (çocuğun sevdiği yiyecek dahil) | Mevcut |
+| 2 | Sesin yeri | Kelimenin başında / sonunda / ortasında A sesi | Mevcut |
+| 3 | Para, takvim, toplama | TL tanıma; gün/ay/mevsim; nesneyle toplama-çıkarma | Para ve takvim görselleri |
+| 3 | Görsel/işitsel algı | Farkları bul, saklanan nesneyi bul, dinle-bul | Sahne görselleri |
+
+Önce bütün görsel ihtiyacının listesi çıkarılacak, görseller toplu üretilecek, sonra etkinlikler yazılacak.
+
 ## 1. 9.1.0 paketinde kalan ve sonradan düzeltilenler
 
 Bunlar 9.1.1'e girecek:
