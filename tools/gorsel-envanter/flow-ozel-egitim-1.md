@@ -33,12 +33,12 @@ Story 1 — Going to the barber. Child: a 5-year-old boy, short brown hair, red 
 4. The barber cuts the boy's hair with scissors; the boy sits still and looks calm.
 5. The boy looks in the mirror with his new short haircut and smiles.
 
-Story 2 — Going to the doctor. Child: a 5-year-old girl, long black hair in a ponytail, yellow sweater, blue trousers. Place: a bright, friendly children's clinic. In every picture the girl is fully clothed, her mother is always next to her, the camera is wide (whole room visible), and the doctor never examines or touches the girl.
-6. The girl sits next to her mother in a bright clinic waiting room, both looking at a picture book together.
-7. A smiling female doctor in a white coat stands at the door of her office and waves hello; the girl holds her mother's hand and waves back.
-8. In the doctor's office, the girl sits on a chair next to her mother and watches the doctor listen to a teddy bear with a stethoscope.
-9. The girl holds the stethoscope herself and listens to her teddy bear, smiling; the doctor and the mother watch and smile.
-10. The girl and her mother leave the office, the girl holds a colorful sticker and waves goodbye to the doctor.
+Story 2 — Going to the doctor, seen through the child's eyes (first-person view). NO child appears in these pictures (pictures with a child and a doctor are blocked by the content filter). Camera at a small child's eye height.
+6. A bright, friendly clinic waiting room with colorful chairs, a box of toys and picture books.
+7. A smiling female doctor in a white coat standing at the door of her office, waving hello, looking at the camera.
+8. The doctor's desk with a stethoscope, a teddy bear and a jar of colorful stickers.
+9. The smiling doctor listening to a teddy bear with a stethoscope.
+10. A small child's open hand holding a colorful star sticker.
 
 Story 3 — Waiting in line at the playground slide. Child: the same boy as Story 1 (red t-shirt, blue jeans). Place: a sunny playground with one slide.
 11. Two other children stand in a line at the bottom of the slide ladder; the boy walks toward the line.
@@ -47,7 +47,7 @@ Story 3 — Waiting in line at the playground slide. Child: the same boy as Stor
 14. The boy climbs the slide ladder.
 15. The boy slides down the slide, happy.
 
-Story 4 — At the supermarket. Child: the same girl as Story 2 (yellow sweater). Place: a calm supermarket, not crowded.
+Story 4 — At the supermarket. Child: a 5-year-old girl, long black hair in a ponytail, yellow sweater, blue trousers. Place: a calm supermarket, not crowded.
 16. The girl walks into the supermarket with her father, who pushes a shopping cart.
 17. The girl puts an apple into the shopping cart.
 18. The girl points at cookies on a shelf; her father shakes his head kindly (no).
