@@ -1,5 +1,7 @@
 # Flow turu: yeni özel eğitim etkinlikleri (Kaan, 2026-10-29)
 
+> **ESKİ — artık kullanma.** Kalanlar flow-ozel-egitim-2.md'de, hepsi çizgi film tarzında.
+
 Kaynak: SONRAKI-GUNCELLEME.md "⭐ ÇOK ÖNEMLİ" listesi. Görsel gerektirenler burada; görselsiz olanlar
 ("Ne yapıyor?" İfade Tahtası eylem kartlarıyla, yönerge takibi, işlevsel okuma, sesin yeri, dinle-bul, toplama) koddan yapılacak.
 
