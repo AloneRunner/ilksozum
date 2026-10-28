@@ -125,6 +125,39 @@ PART F: HIDDEN OBJECTS (a busy but clear scene; ONE small orange cat is partly h
 72. A bookshelf room; the cat sits between books on a shelf.
 73. A park bench scene; the cat hides under the bench.
 
+## Bölüm A2: Doktor ve market, çizgi film tarzı (AYRI Flow sayfası)
+
+Durum (2026-10-29): A bölümünde berber, kaydırak ve selam 5/5 tamam. Doktordan 3 resim çıktı (bekleme odası, masa, çıkartma).
+İçinde doktor olan kareler ve marketin tamamı filtreye takıldı. Kaan'ın fikri: içinde çocuk olan kareler çizgi film tarzında geçebilir.
+Bir öykünün bütün kareleri aynı tarzda olmalı. Doktor ve market baştan çizgi film yapılır; elde kalan 3 fotoğraf kullanılmaz.
+El yıkama da hazır (5/6; durulama karesi yok). B bölümünde 26–31 atlanabilir.
+
+### Ajana yapıştırılacak metin (Bölüm A2)
+
+I am making social story picture cards for young children in special education (ages 3-8, autism). Two short stories, 5 pictures each.
+
+RULES:
+1. Soft, friendly cartoon style, like a modern children's animated film or picture book. Bright warm colors, simple backgrounds. NOT photorealistic. No text, no letters, no logos, no numbers.
+2. Calm, happy scenes. Nothing scary, no tears, no needles, no injuries, no medical procedures.
+3. Create every image as a SEPARATE NEW image. Never edit a previous one.
+4. The SAME characters in every picture of a story: same face, same hair, same clothes, same place.
+5. Square images (1:1).
+6. Stop after every 5 images and wait for my approval.
+
+Story 1 — Visiting the doctor for a check-up. Characters: a cartoon girl about 5 years old with two short black pigtails, a yellow dress; her mother in a blue dress; a smiling female doctor with glasses in a white coat. Place: a bright, friendly clinic.
+1. The girl and her mother sit in a colorful waiting room; the girl looks at a picture book.
+2. The doctor opens her office door and waves hello; the girl waves back.
+3. The girl sits on her mother's lap next to the doctor's desk; there is a teddy bear on the desk.
+4. The doctor gently listens to the teddy bear's tummy with a stethoscope while the girl watches and smiles.
+5. The doctor gives the girl a colorful star sticker; the girl smiles and says goodbye.
+
+Story 2 — At the supermarket. Characters: a cartoon boy about 5 years old with short brown hair, a green sweater, blue trousers; his father with a short beard and a grey jacket. Place: a calm, clean supermarket, not crowded.
+6. The boy and his father walk into the supermarket; the father pushes a shopping cart.
+7. The boy puts a red apple into the shopping cart.
+8. The boy points at a box of cookies on a shelf; his father gently shakes his head (no) and smiles.
+9. The boy and his father wait in line at the checkout.
+10. The boy helps carry a small shopping bag out of the store, smiling.
+
 ## Bölüm G: Farkları bul (AYRI Flow sayfası, illüstrasyon stili)
 
 Kaan (2026-10-29): "Kaliteli olsun, iki resim arasında 7 fark; önceden vardı ama çok kötüydü."
