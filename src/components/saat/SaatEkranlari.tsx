@@ -18,7 +18,7 @@ const konus = (m: string) => Promise.race([speak(m), bekle(4500)]);
 const ovgu = async (m: string, setKutla: (b: boolean) => void) => { setKutla(true); await bekle(700); await konus(m); await bekle(300); setKutla(false); };
 
 // ---------------------------------------------------------------- Saat kaç? (iki saatten doğrusunu seç)
-export type SoruTuru = 'tam' | 'bucuk' | 'ceyrekGecer' | 'ceyrekVar' | 'karisik' | 'dijital';
+export type SoruTuru = 'tam' | 'bucuk' | 'ceyrekGecer' | 'ceyrekVar' | 'karisik' | 'dijital' | 'dijitalSec';
 interface Tur { hedef: Saat; secenekler: Saat[] }
 
 const turUret = (tur: SoruTuru): Tur => {
@@ -31,7 +31,7 @@ const turUret = (tur: SoruTuru): Tur => {
     // Çeyrek geçiyor / var: en öğretici karşılaştırma aynı saatin öbür çeyreği (yelkovan 3'te mi 9'da mı)
     case 'ceyrekGecer': hedef = { h, m: 15 }; cel = [{ h, m: 45 }, { h, m: 30 }, { h: baskaSaat(h), m: 15 }][zar(3)]; break;
     case 'ceyrekVar': hedef = { h, m: 45 }; cel = [{ h, m: 15 }, { h, m: 30 }, { h: baskaSaat(h), m: 45 }][zar(3)]; break;
-    default: { // karışık ve dijital: dört türden biri, çeldirici başka türden
+    default: { // karışık ve dijital (iki yönde): dört türden biri, çeldirici başka türden
       const dk = [0, 30, 15, 45];
       const m = dk[zar(4)];
       hedef = { h, m };
@@ -43,8 +43,18 @@ const turUret = (tur: SoruTuru): Tur => {
 
 const SORU_SAYISI = 8;
 const BASLIK: Record<SoruTuru, string> = {
-  tam: 'Tam Saatler', bucuk: 'Buçuklar', ceyrekGecer: 'Çeyrek Geçiyor', ceyrekVar: 'Çeyrek Var', karisik: 'Karışık Saatler', dijital: 'Dijital Saat',
+  tam: 'Tam Saatler', bucuk: 'Buçuklar', ceyrekGecer: 'Çeyrek Geçiyor', ceyrekVar: 'Çeyrek Var', karisik: 'Karışık Saatler', dijital: 'Dijital Saat', dijitalSec: 'Saat Kaç? (Dijital)',
 };
+
+// Önce öğret (Gökhan Hoca'nın çalışma kâğıtları, 2026-10-28): "Yelkovan 3'ün üzerindeyse çeyrek geçiyor deriz."
+// Sorudan önce bir kez: örnek saat, parlayan ibre, kısa anlatım.
+const OGRET: Partial<Record<SoruTuru, { saat: Saat; cumle: string }>> = {
+  tam: { saat: { h: 3, m: 0 }, cumle: "Yelkovan 12'nin üstündeyse saat tamdır. Akrep hangi sayıdaysa saat odur. Saat üç." },
+  bucuk: { saat: { h: 3, m: 30 }, cumle: "Yelkovan 6'nın üstündeyse saat buçuktur. Saat üç buçuk." },
+  ceyrekGecer: { saat: { h: 3, m: 15 }, cumle: "Yelkovan 3'ün üstündeyse çeyrek geçiyor deriz. Saat üçü çeyrek geçiyor." },
+  ceyrekVar: { saat: { h: 3, m: 45 }, cumle: "Yelkovan 9'un üstündeyse çeyrek var deriz. Saat dörde çeyrek var." },
+};
+const DIJITAL_SORU = 'Saat kaç? Doğru yazıyı bul.';
 
 const turlarUret = (tur: SoruTuru) => {
   const turlar: Tur[] = [];
@@ -67,13 +77,16 @@ export const SaatSoru: React.FC<{ tur: SoruTuru; onBack: () => void }> = ({ tur,
   const ilkDeneme = useRef(true);
   const dogruSayisi = useRef(0);
   const t = turlar[i];
+  const ogret = OGRET[tur];
+  const [ogretiliyor, setOgretiliyor] = useState(!!ogret);
+  const soruCumlesi = tur === 'dijitalSec' ? DIJITAL_SORU : soru(t.hedef);
 
   useEffect(() => { etkinlikSay(`Saat: ${BASLIK[tur]}`, 'acildi'); }, [tur]);
   useEffect(() => {
     setGizli(null); ilkDeneme.current = true; kilit.current = false;
-    const z = setTimeout(() => speak(soru(t.hedef)), 400);
+    const z = setTimeout(() => speak(ogretiliyor && ogret ? ogret.cumle : soruCumlesi), 400);
     return () => clearTimeout(z);
-  }, [t]);
+  }, [t, ogretiliyor]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const sec = async (k: number) => {
     if (kilit.current || gizli === k) return;
@@ -101,8 +114,22 @@ export const SaatSoru: React.FC<{ tur: SoruTuru; onBack: () => void }> = ({ tur,
 
   return (
     <OyunCercevesi baslik={BASLIK[tur]} emoji="🕒" onBack={onBack} adim={i + (bitti ? 1 : 0)} toplamAdim={turlar.length}
-      yonerge={soru(t.hedef)}>
+      yonerge={ogretiliyor && ogret ? ogret.cumle : soruCumlesi}>
+      {ogretiliyor && ogret ? (
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-3">
+          <button onClick={() => speak(ogret.cumle)} className="w-full max-w-[20rem] aspect-square rounded-[2rem] bg-white shadow-xl p-2 active:scale-95" aria-label={ogret.cumle}>
+            <SaatYuzu saat={ogret.saat} vurgu="yelkovan" className="w-full h-full pointer-events-none" />
+          </button>
+          <span className="px-5 py-1 rounded-2xl bg-slate-800 text-emerald-300 font-mono text-4xl font-black tracking-widest shadow">{dijital(ogret.saat)}</span>
+          <button onClick={() => setOgretiliyor(false)} className="px-8 py-3 rounded-2xl bg-emerald-500 text-white text-2xl font-black shadow-lg active:scale-95">Başla ▶</button>
+        </div>
+      ) : (
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-3">
+        {tur === 'dijitalSec' && (
+          <button onClick={() => speak(DIJITAL_SORU)} className="w-full max-w-[16rem] aspect-square rounded-[2rem] bg-white shadow-xl p-2 active:scale-95" aria-label={DIJITAL_SORU}>
+            <SaatYuzu saat={t.hedef} className="w-full h-full pointer-events-none" />
+          </button>
+        )}
         {tur === 'dijital' && (
           <button onClick={() => speak(soru(t.hedef))} className="px-6 py-2 rounded-2xl bg-slate-800 text-emerald-300 font-mono text-6xl font-black tracking-widest shadow-lg active:scale-95">
             {dijital(t.hedef)}
@@ -111,15 +138,18 @@ export const SaatSoru: React.FC<{ tur: SoruTuru; onBack: () => void }> = ({ tur,
         <div className="flex w-full justify-center gap-3 sm:gap-8">
           {t.secenekler.map((s, k) => (
             <button key={`${i}-${k}`} onClick={() => sec(k)} disabled={gizli === k}
-              className={`flex-1 max-w-[18rem] aspect-square rounded-[2rem] bg-white shadow-xl p-2 transition-all duration-500 active:scale-95
+              className={`flex-1 max-w-[18rem] ${tur === 'dijitalSec' ? 'aspect-[2/1]' : 'aspect-square'} rounded-[2rem] bg-white shadow-xl p-2 transition-all duration-500 active:scale-95
                 ${gizli === k ? 'opacity-0 scale-75 pointer-events-none' : ''} ${sallanan === k ? 'ok-sallan ring-4 ring-rose-300' : ''}
                 ${kutla && ayni(s, t.hedef) ? 'ring-8 ring-emerald-300' : ''}`}
               aria-label={`Saat ${soyle(s)}`}>
-              <SaatYuzu saat={s} className="w-full h-full" />
+              {tur === 'dijitalSec'
+                ? <span className="flex h-full items-center justify-center rounded-[1.5rem] bg-slate-800 text-emerald-300 font-mono text-5xl sm:text-6xl font-black tracking-widest">{dijital(s)}</span>
+                : <SaatYuzu saat={s} className="w-full h-full" />}
             </button>
           ))}
         </div>
       </div>
+      )}
       <Kutlama acik={kutla} alt />
       {bitti && <OyunSonu onTekrar={tekrar} onBack={onBack} />}
     </OyunCercevesi>

@@ -21,6 +21,7 @@ const BOLUMLER: { ad: string; kartlar: Kart[] }[] = [
     { id: 'ceyrekVar', baslik: 'Çeyrek Var', alt: 'Dörde çeyrek var', saat: { h: 3, m: 45 } },
     { id: 'karisik', baslik: 'Karışık', alt: 'Tam, buçuk, çeyrek', saat: { h: 8, m: 30 } },
     { id: 'dijital', baslik: 'Dijital Saat', alt: '03:15 hangisi?', saat: { h: 3, m: 15 } },
+    { id: 'dijitalSec', baslik: 'Saat Kaç? (Dijital)', alt: 'Saate bak, yazıyı bul', saat: { h: 2, m: 15 } },
   ] },
   { ad: 'Saati kur', kartlar: [
     { id: 'kurTam', baslik: 'Tam Saati Kur', alt: 'Akrebi çevir', saat: { h: 7, m: 0 } },
