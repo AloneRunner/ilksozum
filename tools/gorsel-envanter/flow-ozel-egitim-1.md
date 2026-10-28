@@ -125,7 +125,42 @@ PART F: HIDDEN OBJECTS (a busy but clear scene; ONE small orange cat is partly h
 72. A bookshelf room; the cat sits between books on a shelf.
 73. A park bench scene; the cat hides under the bench.
 
+## Bölüm G: Farkları bul (AYRI Flow sayfası, illüstrasyon stili)
+
+Kaan (2026-10-29): "Kaliteli olsun, iki resim arasında 7 fark; önceden vardı ama çok kötüydü."
+Yöntem: Flow her sahneyi TEK resim olarak üretir. İkinci resmi Claude aynı resimden türetir (renk değiştir,
+aynala, sil, çoğalt). İki resim arasında yalnız seçilen farklar olur, başka hiçbir piksel değişmez.
+Aynı resimden 3, 5 ve 7 farklı versiyon çıkar (kolaydan zora).
+
+### Ajana yapıştırılacak metin (Bölüm G)
+
+I am making "spot the difference" pictures for young children in special education (ages 4-8). I only need ONE picture per scene; I will make the second picture myself.
+
+RULES:
+1. Bright, flat-color children's book illustration with clean thick outlines. Simple shapes, cheerful colors. NOT photorealistic. No text, no letters, no numbers, no logos.
+2. Each scene has 12-15 clearly separate, medium-size objects spread over the whole picture, with some empty space around each object (objects must not overlap much).
+3. Large plain areas (sky, wall, grass, floor, water) in single flat colors, without texture or gradients.
+4. Square image (1:1), the whole scene in view, nothing cut off at the edges.
+5. Create every image as a SEPARATE NEW image. Never edit a previous one.
+6. Stop after every 4 images and wait for my approval.
+
+SCENES:
+1. A sunny park: a tree with red apples, a bench, a yellow slide, a red ball, a dog, a kite in the sky, two clouds, a sun, flowers, a bird on a branch, a trash bin.
+2. A kitchen: a table with a teapot, two cups, a bowl of fruit, a clock on the wall, a window with curtains, a cat on a chair, a fridge with magnets, a plant pot, a hanging lamp.
+3. A beach: an umbrella, a sandcastle, a bucket and spade, a beach ball, a boat on the sea, a crab, a starfish, a seagull, the sun, a towel, a palm tree.
+4. A farm: a red barn, a cow, a pig, a hen with chicks, a tractor, a fence, a haystack, a scarecrow, a duck pond, a sun, two clouds.
+5. A child's bedroom: a bed with a blanket, a teddy bear, a lamp, a bookshelf with books, a toy train, a rug, a window with a moon and stars, a ball, a toy box, a picture frame (no people in the frame).
+6. A classroom: desks, a chalkboard with only drawings (no letters), a globe, a clock, a plant, a backpack, crayons, a paper airplane, a window, a fish bowl.
+7. Under the sea: three different fish, an octopus, a turtle, seaweed, a treasure chest, a shell, a starfish, bubbles, a crab, a coral.
+8. A birthday party table: a cake with candles, balloons, party hats, presents, cups, plates with cookies, a banner without letters, a cat under the table.
+9. A fruit market stall: boxes of apples, oranges, bananas, grapes, a watermelon, a scale, a striped awning, a basket, a parrot on a perch.
+10. Outer space for kids: a rocket, a smiling planet with a ring, the moon, stars, a satellite, an astronaut waving, a comet, an alien friend, a small UFO.
+11. A bathroom: a bathtub with bubbles, a rubber duck, a towel on a hook, a toothbrush in a cup, a mirror, a soap, a sink, a plant, slippers, a laundry basket.
+12. A snowy winter day: a snowman with a hat and scarf, a sled, pine trees, a house with smoke from the chimney, a bird, snowballs, a fence, a mitten on the fence.
+
 ## Notlar (Claude için)
+- Bölüm G: `fark/<sahne>.png` → Claude her resme bakıp 7 fark tanımlar (`tools/fark/farklar.json`: tür renk|ayna|sil|kopya + kutu),
+  ImageMagick ile B resmini ve 3/5/7 farklı sürümleri üretir; oyun farkların kutularını dokunma alanı olarak kullanır.
 - Parça A: her öykü `sosyal-oyku/<oyku>-<1..5>.jpg` (berber, doktor, kaydirak, market, selam). Tuvalet Zamanı öykü ekranına benzer bir "Sosyal Öyküler" ekranı.
 - Parça B: `oz-bakim/<el|dis|giyinme>-<n>.jpg` → adım sıralama ve görsel çizelge (Kart Atölyesi'ne de).
 - Parça C: `durum-duygu/<n>.jpg` → "Nasıl hisseder?" şıkları mevcut duygu yüzleri (duygularData görselleri).
