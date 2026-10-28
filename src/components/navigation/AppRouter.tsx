@@ -47,6 +47,7 @@ const NesneYerlestir = lazy(() => import('../kutu/NesneYerlestir.tsx'));
 const KelimeKitabi = lazy(() => import('../sozluk/KelimeKitabi.tsx'));
 const SaatMerkezi = lazy(() => import('../saat/SaatMerkezi.tsx'));
 const KelimeOgren = lazy(() => import('../sozluk/KelimeOgren.tsx'));
+const FarkBul = lazy(() => import('../fark/FarkBul.tsx'));
 const SekilOgren = lazy(() => import('../kutu/SekilOgren.tsx'));
 const TabagaKoy = lazy(() => import('../kutu/TabagaKoy.tsx'));
 const LineTracingScreen = lazy(() => import('../LineTracingScreen.tsx'));
@@ -125,6 +126,7 @@ const MINI_GAME_SCREENS: Record<string, ScreenState> = {
     puzzle: ScreenState.PuzzleGame,
     busJam: ScreenState.BusJamGame,
     roomCleaning: ScreenState.RoomCleaningGame,
+    farkBul: ScreenState.FarkBulGame,
 };
 const ColorRecognitionScreen = lazy(() => import('../ColorRecognitionScreen.tsx'));
 const WhatsMissingScreen = lazy(() => import('../WhatsMissingScreen.tsx'));
@@ -635,6 +637,7 @@ export const AppRouter = () => {
         // Ses Taklit: kartlar + şarkılar tek ekranda (videolar kaldırıldı, yedek/seskart)
         case ScreenState.SoundImitationMenu: return <SesTaklitEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.KelimeKitabi: return <KelimeKitabi onBack={() => setScreenState(kitapDonus)} />;
+        case ScreenState.FarkBulGame: return <FarkBul onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.ClockLearningGame: return <SaatMerkezi onBack={() => geriDon(ScreenState.ConceptActivitiesMenu)} />;
         case ScreenState.AgzimiIzle: return <div className="flex h-full w-full flex-col">{kitapSeridi(ScreenState.AgzimiIzle, 'Daha çok kelime')}<div className="relative min-h-0 flex-1"><AgzimiIzleEkrani onBack={() => geriDon(ScreenState.MainMenu)} /></div></div>;
         case ScreenState.TuvaletEgitimi: return <TuvaletEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;

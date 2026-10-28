@@ -73,6 +73,7 @@ export const BECERILER: Beceri[] = [
       e(ActivityType.SequencingStories, '🎞️', 'Olay Sıralama', 'Hikâyeyi doğru sıraya diz'),
       e(ActivityType.PatternCompletion, '🔷', 'Örüntü Tamamlama', 'Sıradakini bul'),
       e(ActivityType.Sudoku, '🧩', 'Görsel Sudoku', 'Eksik parçayı tamamla'),
+      o('farkBul', '🧐', 'Farkları Bul', 'İki resim arasındaki farkları bul'),
       o('shadowMatch', '🔦', 'Gölge Eşleştirme', 'Gölge kime ait?'),
       o('whereBelongs', '🏠', 'Nereye Ait?', 'Eşyayı doğru odaya koy'),
       e(ActivityType.DragAndDropPositioning, '📍', 'Nesneyi Yerleştir', 'Nesneyi söylenen yere koy'),

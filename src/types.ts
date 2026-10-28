@@ -68,6 +68,7 @@ export enum ScreenState {
   TuvaletEgitimi,     // Tuvalet Zamanı: adımlar, öykü, ödül, hatırlatıcı, kayıt (sona eklendi)
   KelimeKitabi,       // Kelime Kitabı: sorusuz, kategori kategori dokun-dinle (sona eklendi)
   KelimeOgren,        // Kategori sayfası: Tanı, Tek Tek Öğren, Karışık Tekrar, Hızlı Sorular (sona eklendi)
+  FarkBulGame,        // Farkları Bul: kodla çizilmiş sahneler, 3/5/7 fark (sona eklendi)
 }
 
 export enum Tab {
