@@ -1,0 +1,135 @@
+# Flow turu: yeni özel eğitim etkinlikleri (Kaan, 2026-10-29)
+
+Kaynak: SONRAKI-GUNCELLEME.md "⭐ ÇOK ÖNEMLİ" listesi. Görsel gerektirenler burada; görselsiz olanlar
+("Ne yapıyor?" İfade Tahtası eylem kartlarıyla, yönerge takibi, işlevsel okuma, sesin yeri, dinle-bul, toplama) koddan yapılacak.
+
+Toplam ~73 görsel, 6 bölüm. Her bölüm ayrı Flow sayfasında yapılabilir. Claude ayırır:
+`sosyal-oyku/`, `oz-bakim/`, `durum-duygu/`, `zamir/`, `mevsim/`, `saklanan/`.
+
+Flow'a VERİLMEYENLER (neden):
+- **Para (TL):** Yapay zekâ gerçek madeni para ve banknot desenlerini doğru çizemez; çocuk yanlış parayı öğrenir.
+  En iyisi Kaan gerçek 1, 5, 10 TL madeni parayla 5, 10, 20, 50, 100 TL banknotun fotoğrafını beyaz kâğıt üstünde telefonla çeker (ön yüz).
+- **Farkları bul:** İki resmin yalnız 1–3 ayrıntıda farklı olması gerekir; Flow ikinci resmi baştan çizer, her yer değişir.
+  Claude bunu kodla çizilmiş sahnelerle yapacak.
+
+## Ajana yapıştırılacak metin
+
+I am making picture cards for young children in special education (ages 3-8: autism, language delay). Topics: SOCIAL STORIES, SELF-CARE STEPS, FEELINGS IN SITUATIONS, PRONOUNS, SEASONS and HIDDEN OBJECTS.
+
+RULES:
+1. Photorealistic photos, bright, warm, simple. NOT cartoon. No text, no logos, no letters, no brand names, no numbers on screens.
+2. Calm, uncluttered scenes: few objects, nothing scary, no tears, no injuries.
+3. Create every image as a SEPARATE NEW image. Never overwrite or edit a previous one.
+4. In one story or one step series, the SAME child must appear in every picture: same face, same hair, same clothes, same place, same light. Only the action changes.
+5. Square images (1:1).
+6. Stop after every 5 images and wait for my approval.
+
+PART A: SOCIAL STORIES (each story 5 pictures, in order)
+
+Story 1 — Going to the barber. Child: a 5-year-old boy, short brown hair, red t-shirt, blue jeans. Place: a bright, simple barber shop.
+1. The boy and his father walk into the barber shop and the boy waves hello to the barber.
+2. The boy sits and waits on a chair, holding a small toy car.
+3. The boy sits in the barber chair with a cape around his neck; the barber holds a comb.
+4. The barber cuts the boy's hair with scissors; the boy sits still and looks calm.
+5. The boy looks in the mirror with his new short haircut and smiles.
+
+Story 2 — Going to the doctor. Child: a 5-year-old girl, long black hair in a ponytail, yellow sweater. Place: a bright, friendly doctor's room.
+6. The girl and her mother sit in a waiting room.
+7. A smiling female doctor in a white coat says hello to the girl.
+8. The doctor listens to the girl's chest with a stethoscope; the girl sits on the bed calmly.
+9. The doctor looks into the girl's mouth; the girl says "aaa" with her mouth open.
+10. The girl leaves holding her mother's hand, smiling and waving goodbye.
+
+Story 3 — Waiting in line at the playground slide. Child: the same boy as Story 1 (red t-shirt, blue jeans). Place: a sunny playground with one slide.
+11. Two other children stand in a line at the bottom of the slide ladder; the boy walks toward the line.
+12. The boy stands at the end of the line and waits patiently.
+13. The child in front of him climbs the ladder; the boy is now first in line.
+14. The boy climbs the slide ladder.
+15. The boy slides down the slide, happy.
+
+Story 4 — At the supermarket. Child: the same girl as Story 2 (yellow sweater). Place: a calm supermarket, not crowded.
+16. The girl walks into the supermarket with her father, who pushes a shopping cart.
+17. The girl puts an apple into the shopping cart.
+18. The girl points at cookies on a shelf; her father shakes his head kindly (no).
+19. The girl and her father wait in line at the checkout.
+20. The girl helps carry a small shopping bag out of the store.
+
+Story 5 — Saying hello and sharing. Child: the same boy as Story 1. Place: a bright kindergarten classroom.
+21. The boy enters the classroom in the morning and waves hello to his teacher.
+22. The boy sees another boy playing with blocks on a carpet.
+23. The boy asks to join: he stands next to the other boy and points to the blocks.
+24. The two boys build a tower together.
+25. The two boys smile and give each other a high five.
+
+PART B: SELF-CARE STEPS (close-up, only the child's hands and arms unless said otherwise; same sink, same towel, same light)
+
+Hand washing (a child's hands, white sink, blue towel):
+26. Turning on the water tap.
+27. Wetting the hands under the running water.
+28. Pressing liquid soap onto the hands from a soap pump.
+29. Rubbing the soapy hands together (foam visible).
+30. Rinsing the hands under the water.
+31. Drying the hands with a blue towel.
+
+Tooth brushing (a 5-year-old boy in a bathroom mirror, green pajamas):
+32. The boy holds a toothbrush and a toothpaste tube.
+33. The boy squeezes a small pea-sized amount of toothpaste onto the brush (close-up).
+34. The boy brushes his front teeth.
+35. The boy brushes his back teeth (mouth open, side view).
+36. The boy rinses his mouth with water from a cup.
+37. The boy smiles in the mirror with clean teeth.
+
+Getting dressed (a 5-year-old girl in her bedroom, plain wall, items on the bed):
+38. The girl sits on the bed in her pajamas; her clothes (pink t-shirt, blue trousers, socks, shoes) are laid out next to her.
+39. The girl puts on a pink t-shirt.
+40. The girl puts on blue trousers.
+41. The girl puts on socks, sitting on the bed.
+42. The girl puts on her shoes, sitting on the bed.
+43. The girl stands fully dressed and smiling.
+
+PART C: FEELINGS IN SITUATIONS (the child seen from behind or from the side so the FACE IS NOT VISIBLE; the situation must make the feeling clear)
+44. A child looks down at an ice cream cone that has fallen on the ground.
+45. A child opens a big wrapped present.
+46. A child stands in front of a small dog that is barking.
+47. A child's block tower has just fallen down onto the floor.
+48. A child sees a birthday cake with lit candles on the table in front of him.
+49. Another child takes a toy car out of a child's hands.
+50. A child stands at the door of a dark room.
+51. A child opens a box and a toy jumps out (jack-in-the-box).
+
+PART D: PRONOUNS (same boy, red t-shirt, plain light background; a woman in a green blouse stands next to him when needed)
+52. The boy points to his own chest with his finger (me).
+53. The boy points straight at the camera with his finger (you).
+54. The boy points to the woman standing next to him (her).
+55. The boy holds his own ball against his chest (mine).
+56. The boy holds out a ball toward the camera, giving it (yours).
+57. The woman holds a ball and the boy points to it (hers).
+
+PART E: SEASONS
+58. The same apple tree in a park in spring: white and pink blossoms, green grass.
+59. The same apple tree in summer: full green leaves, red apples, bright sun.
+60. The same apple tree in autumn: yellow and orange leaves, leaves on the ground.
+61. The same apple tree in winter: no leaves, snow on the branches and on the ground.
+62. A child dressed for winter: coat, hat, scarf, gloves, standing in snow.
+63. A child dressed for summer: t-shirt, shorts, sun hat, standing on a beach.
+64. A child in spring holding a small umbrella in light rain, rain boots.
+65. A child in autumn jumping into a pile of dry leaves, light jacket.
+
+PART F: HIDDEN OBJECTS (a busy but clear scene; ONE small orange cat is partly hidden; the cat is about 8% of the picture and must be findable)
+66. A living room; the cat hides under the table.
+67. A garden; the cat hides behind a flower pot.
+68. A kitchen; the cat sits on top of the refrigerator.
+69. A bedroom; the cat peeks out from under the bed blanket.
+70. A playground; the cat hides behind the slide.
+71. A bathroom; the cat sits inside the empty bathtub.
+72. A bookshelf room; the cat sits between books on a shelf.
+73. A park bench scene; the cat hides under the bench.
+
+## Notlar (Claude için)
+- Parça A: her öykü `sosyal-oyku/<oyku>-<1..5>.jpg` (berber, doktor, kaydirak, market, selam). Tuvalet Zamanı öykü ekranına benzer bir "Sosyal Öyküler" ekranı.
+- Parça B: `oz-bakim/<el|dis|giyinme>-<n>.jpg` → adım sıralama ve görsel çizelge (Kart Atölyesi'ne de).
+- Parça C: `durum-duygu/<n>.jpg` → "Nasıl hisseder?" şıkları mevcut duygu yüzleri (duygularData görselleri).
+- Parça D: `zamir/<ben|sen|o|benim|senin|onun>.jpg`.
+- Parça E: `mevsim/<ilkbahar|yaz|sonbahar|kis>-<agac|cocuk>.jpg` → takvim etkinliği.
+- Parça F: `saklanan/<n>.jpg` + kedinin yeri (Claude işaretler) → "Kediyi bul, dokun".
+- Giyinme dizisi pijamalı başlangıçla açılır (iç çamaşırı sahnesi bilerek yok).
