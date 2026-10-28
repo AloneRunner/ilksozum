@@ -10,6 +10,7 @@ const SURUM = '2026-11';
 const ANAHTAR = 'yenilikGoruldu_v1';
 
 const YENILIKLER: { emoji: string; baslik: string; metin: string }[] = [
+  { emoji: '📚', baslik: 'Kelimeleri tek tek öğren', metin: 'Kategoriye girince önce çalışma sayfası açılır. "Tek Tek Öğren"de hep aynı kelime sorulur (ör. "Elma hangisi?"), %80 doğru olunca sıradakine geçilir; öğrenilenlerle 20 soruluk karışık tekrar yapılır.' },
   { emoji: '🕒', baslik: 'Saat Merkezi', metin: 'Akrep ve yelkovanı tanı, saatle oyna, tam saat, buçuk, çeyrek geçiyor, çeyrek var, dijital saat ve parmakla saati kur: 10 bölüm. Kavramlar › Zaman ya da Sayılar menüsünde.' },
   { emoji: '👩‍🏫', baslik: 'Özel eğitimcilerin önerisi', metin: 'Ayarlar › "Yanlışta kavramı olumsuzla": yanlış seçince "Hayır, bu atkı kısa." yerine "Hayır, bu atkı uzun değil." denir.' },
   { emoji: '🎞️', baslik: 'Olay Sıralama yenilendi', metin: 'Yanlış kart sallanır, sıra bozulmaz. Önce iki kartlık kolay sıralar gelir.' },

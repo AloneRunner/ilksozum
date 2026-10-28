@@ -67,6 +67,7 @@ export enum ScreenState {
   AgzimiIzle,         // Ağzımı İzle: konuşan yüz, ses/hece/kelime (sona eklendi; değerler kaymasın)
   TuvaletEgitimi,     // Tuvalet Zamanı: adımlar, öykü, ödül, hatırlatıcı, kayıt (sona eklendi)
   KelimeKitabi,       // Kelime Kitabı: sorusuz, kategori kategori dokun-dinle (sona eklendi)
+  KelimeOgren,        // Kategori sayfası: Tanı, Tek Tek Öğren, Karışık Tekrar, Hızlı Sorular (sona eklendi)
 }
 
 export enum Tab {

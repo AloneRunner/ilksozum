@@ -46,6 +46,7 @@ const LearningCard = lazy(() => import('../LearningCard.tsx'));
 const NesneYerlestir = lazy(() => import('../kutu/NesneYerlestir.tsx'));
 const KelimeKitabi = lazy(() => import('../sozluk/KelimeKitabi.tsx'));
 const SaatMerkezi = lazy(() => import('../saat/SaatMerkezi.tsx'));
+const KelimeOgren = lazy(() => import('../sozluk/KelimeOgren.tsx'));
 const SekilOgren = lazy(() => import('../kutu/SekilOgren.tsx'));
 const TabagaKoy = lazy(() => import('../kutu/TabagaKoy.tsx'));
 const LineTracingScreen = lazy(() => import('../LineTracingScreen.tsx'));
@@ -153,6 +154,8 @@ export const AppRouter = () => {
     };
     // Kelime Kitabı: nereden açıldıysa oraya dön
     const [kitapDonus, setKitapDonus] = useState<ScreenState>(ScreenState.ObjectCategoriesMenu);
+    // Kelime Öğren: seçilen nesne kategorisi (Gökhan Hoca: kategoriye girince önce soru değil, çalışma sayfası)
+    const [ogrenKat, setOgrenKat] = useState<{ id: string; ad: string } | null>(null);
     const kitapSeridi = (donus: ScreenState, alt: string) => (
         <button onClick={() => { setKitapDonus(donus); setScreenState(ScreenState.KelimeKitabi); }}
             className="flex shrink-0 items-center justify-center gap-2 bg-amber-100 px-3 py-2 text-sm font-black text-amber-900 shadow-sm active:bg-amber-200">
@@ -194,6 +197,27 @@ export const AppRouter = () => {
         } else {
             ctx.toast.showToast(t('app.noContentForActivity', 'No content found for this activity.'));
             setScreenState(hataEkrani);
+        }
+    };
+
+    // Kategorinin 8 soruluk testi (Kelime Öğren sayfasında "Hızlı Sorular"); geri dönüş kategori sayfasına
+    const kategoriSorulari = async (catId: string) => {
+        ctx.profile.updateActivityAttempt(catId);
+        const catInfo = resolveObjectCategory(catId);
+        if (catInfo) ctx.activity.setSelectedObjectCategory(catInfo);
+        setPreviousScreen(ScreenState.KelimeOgren);
+        setScreenState(ScreenState.Loading);
+        ctx.activity.setActivityType(ActivityType.ObjectRecognition);
+        const { createObjectChoiceRounds } = await import('../../services/contentService.ts');
+        const data = await createObjectChoiceRounds(catId);
+        if (data.length > 0) {
+            ctx.activity.setActivityData(data);
+            ctx.activity.setCurrentIndex(0);
+            ctx.activity.setScore(0);
+            setScreenState(ScreenState.Playing);
+        } else {
+            ctx.toast.showToast(t('objects.noTestForCategory', 'Could not create a test for this category.'));
+            setScreenState(ScreenState.KelimeOgren);
         }
     };
 
@@ -520,7 +544,7 @@ export const AppRouter = () => {
                             ? onBackToConcept
                             : category === ActivityCategory.Reasoning
                                 ? onBackToReasoning
-                                : () => setScreenState(ctx.previousScreen === ScreenState.ObjectCategoriesIntlMenu ? ScreenState.ObjectCategoriesIntlMenu : ScreenState.ObjectCategoriesMenu);
+                                : () => setScreenState(ctx.previousScreen === ScreenState.ObjectCategoriesIntlMenu || ctx.previousScreen === ScreenState.KelimeOgren ? ctx.previousScreen : ScreenState.ObjectCategoriesMenu);
                     return <>
                         {renderProgramModeOverlay()}
                         <ConceptChoiceScreen roundData={currentData} themeColor={themeColor} {...commonProps} onBack={onBackDefault} onBanImage={(id) => ctx.settings.handleBanImage(id, ctx.activity.setActivityData)} isBanButtonEnabled={ctx.settings.isBanButtonEnabled} isWordLabelVisible={ctx.settings.isWordLabelVisible} onToggleWordLabel={ctx.settings.handleToggleWordLabel} isFastTransitionEnabled={ctx.settings.isFastTransitionEnabled} isSpamGuardEnabled={ctx.settings.isSpamGuardEnabled} spamGuardRoundThreshold={ctx.settings.spamGuardRoundThreshold} activeProfileName={ctx.profile.activeProfile?.name} />
@@ -673,24 +697,11 @@ export const AppRouter = () => {
             />;
         }
 
-        case ScreenState.ObjectCategoriesMenu: return <div className="flex h-full w-full flex-col">{kitapSeridi(ScreenState.ObjectCategoriesMenu, 'Sorusuz: dokun ve dinle')}<div className="relative min-h-0 flex-1 overflow-y-auto"><ObjectCategoriesMenuScreen onSelectCategory={async (catId) => {
-            ctx.profile.updateActivityAttempt(catId);
-            const catInfo = resolveObjectCategory(catId);
-            if (catInfo) ctx.activity.setSelectedObjectCategory(catInfo);
-            setPreviousScreen(ScreenState.ObjectCategoriesMenu);
-            setScreenState(ScreenState.Loading);
-            ctx.activity.setActivityType(ActivityType.ObjectRecognition);
-            const { createObjectChoiceRounds } = await import('../../services/contentService.ts');
-            const data = await createObjectChoiceRounds(catId);
-            if (data.length > 0) {
-                ctx.activity.setActivityData(data);
-                ctx.activity.setCurrentIndex(0);
-                ctx.activity.setScore(0);
-                setScreenState(ScreenState.Playing);
-            } else {
-                ctx.toast.showToast(t('objects.noTestForCategory', 'Could not create a test for this category.'));
-                setScreenState(ScreenState.ObjectCategoriesMenu);
-            }
+        case ScreenState.KelimeOgren: return ogrenKat ? <KelimeOgren katId={ogrenKat.id} katAd={ogrenKat.ad} onBack={() => setScreenState(ScreenState.ObjectCategoriesMenu)} onSorular={() => { void kategoriSorulari(ogrenKat.id); }} /> : null;
+
+        case ScreenState.ObjectCategoriesMenu: return <div className="flex h-full w-full flex-col">{kitapSeridi(ScreenState.ObjectCategoriesMenu, 'Sorusuz: dokun ve dinle')}<div className="relative min-h-0 flex-1 overflow-y-auto"><ObjectCategoriesMenuScreen onSelectCategory={(catId) => {
+            setOgrenKat({ id: String(catId), ad: String(resolveObjectCategory(String(catId))?.title || catId) });
+            setScreenState(ScreenState.KelimeOgren);
         }} onBack={handleGoToMenu} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} enabledActivities={ctx.profile.enabledActivitiesSet} onAddCategoryToPrintPool={(catId, color) => {
             if (!ctx.settings.isPremium) { ctx.toast.showPremiumToast(); return; }
             const resolved = resolveObjectCategory(String(catId));
@@ -873,8 +884,8 @@ export const AppRouter = () => {
                 return;
             }
             const { backScreen } = getActivityUiConfigLocal(ctx.activity.activityType);
-            const resolvedBack = ctx.activity.activityType === ActivityType.ObjectRecognition && ctx.previousScreen === ScreenState.ObjectCategoriesIntlMenu
-                ? ScreenState.ObjectCategoriesIntlMenu
+            const resolvedBack = ctx.activity.activityType === ActivityType.ObjectRecognition && (ctx.previousScreen === ScreenState.ObjectCategoriesIntlMenu || ctx.previousScreen === ScreenState.KelimeOgren)
+                ? ctx.previousScreen
                 : backScreen;
             if (MENU_EKRANLARI.includes(resolvedBack)) geriDon(resolvedBack);
             else setScreenState(resolvedBack);

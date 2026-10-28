@@ -137,6 +137,9 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
           <>
             {/* Duyurular 9.2 (Kaan, 2026-10-21: "duyuruları komple değiştirebiliriz"); en üstte Kasım yenilikleri (YenilikPenceresi ile aynı) */}
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
+              <b>YENİ — Kelimeleri tek tek öğren:</b> Kategoriye girince önce çalışma sayfası açılır. <b>Tek Tek Öğren</b>'de hep aynı kelime sorulur, %80 doğru olunca sıradakine geçilir; öğrenilenlerle <b>Karışık Tekrar</b> yapılır. Eski sorular <b>Hızlı Sorular</b>'da.
+            </p>
+            <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
               <b>YENİ — Saat Merkezi:</b> Akrep ve yelkovanı tanı, saatle oyna, tam saat, buçuk, çeyrek geçiyor, çeyrek var, dijital saat ve parmakla saati kur. <b>Kavramlar › Zaman</b> ya da <b>Sayılar</b> menüsünde.
             </p>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
