@@ -33,12 +33,12 @@ Story 1 — Going to the barber. Child: a 5-year-old boy, short brown hair, red 
 4. The barber cuts the boy's hair with scissors; the boy sits still and looks calm.
 5. The boy looks in the mirror with his new short haircut and smiles.
 
-Story 2 — Going to the doctor. Child: a 5-year-old girl, long black hair in a ponytail, yellow sweater. Place: a bright, friendly doctor's room.
-6. The girl and her mother sit in a waiting room.
-7. A smiling female doctor in a white coat says hello to the girl.
-8. The doctor listens to the girl's chest with a stethoscope; the girl sits on the bed calmly.
-9. The doctor looks into the girl's mouth; the girl says "aaa" with her mouth open.
-10. The girl leaves holding her mother's hand, smiling and waving goodbye.
+Story 2 — Going to the doctor. Child: a 5-year-old girl, long black hair in a ponytail, yellow sweater, blue trousers. Place: a bright, friendly children's clinic. In every picture the girl is fully clothed, her mother is always next to her, the camera is wide (whole room visible), and the doctor never examines or touches the girl.
+6. The girl sits next to her mother in a bright clinic waiting room, both looking at a picture book together.
+7. A smiling female doctor in a white coat stands at the door of her office and waves hello; the girl holds her mother's hand and waves back.
+8. In the doctor's office, the girl sits on a chair next to her mother and watches the doctor listen to a teddy bear with a stethoscope.
+9. The girl holds the stethoscope herself and listens to her teddy bear, smiling; the doctor and the mother watch and smile.
+10. The girl and her mother leave the office, the girl holds a colorful sticker and waves goodbye to the doctor.
 
 Story 3 — Waiting in line at the playground slide. Child: the same boy as Story 1 (red t-shirt, blue jeans). Place: a sunny playground with one slide.
 11. Two other children stand in a line at the bottom of the slide ladder; the boy walks toward the line.
@@ -71,21 +71,21 @@ Hand washing (a child's hands, white sink, blue towel):
 30. Rinsing the hands under the water.
 31. Drying the hands with a blue towel.
 
-Tooth brushing (a 5-year-old boy in a bathroom mirror, green pajamas):
+Tooth brushing (a 5-year-old boy at a bathroom sink with a mirror, blue t-shirt, his mother standing behind him):
 32. The boy holds a toothbrush and a toothpaste tube.
 33. The boy squeezes a small pea-sized amount of toothpaste onto the brush (close-up).
 34. The boy brushes his front teeth.
-35. The boy brushes his back teeth (mouth open, side view).
+35. The boy brushes his teeth, seen from the side.
 36. The boy rinses his mouth with water from a cup.
 37. The boy smiles in the mirror with clean teeth.
 
-Getting dressed (a 5-year-old girl in her bedroom, plain wall, items on the bed):
-38. The girl sits on the bed in her pajamas; her clothes (pink t-shirt, blue trousers, socks, shoes) are laid out next to her.
-39. The girl puts on a pink t-shirt.
-40. The girl puts on blue trousers.
-41. The girl puts on socks, sitting on the bed.
-42. The girl puts on her shoes, sitting on the bed.
-43. The girl stands fully dressed and smiling.
+Getting dressed to go outside (a 5-year-old girl at the front door of a house, ALWAYS fully dressed in a pink sweater and blue trousers; she only adds outdoor clothes):
+38. The girl stands at the front door; her coat, hat, shoes and backpack are on a bench next to her.
+39. The girl sits on the bench and puts on her shoes.
+40. The girl puts on her red coat.
+41. The girl zips up her coat.
+42. The girl puts on a knitted hat.
+43. The girl puts on her backpack and smiles, ready to go out.
 
 PART C: FEELINGS IN SITUATIONS (the child seen from behind or from the side so the FACE IS NOT VISIBLE; the situation must make the feeling clear)
 44. A child looks down at an ice cream cone that has fallen on the ground.
