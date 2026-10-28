@@ -4,7 +4,8 @@
 import { ActivityType } from '../types.ts';
 
 export type BeceriId = 'harfler' | 'sayilar' | 'dusunme' | 'el' | 'konusma' | 'oyunOdasi';
-export type BeceriEkran = 'basara' | 'basara2' | 'sesTaklit' | 'besNBirK' | 'agiz' | 'tuvalet' | 'saat';
+export type BeceriEkran = 'basara' | 'basara2' | 'sesTaklit' | 'besNBirK' | 'agiz' | 'tuvalet' | 'saat'
+  | 'sosyalOyku' | 'ozBakim' | 'nasilHisseder' | 'benSenO' | 'mevsimler' | 'kediyiBul'; // özel eğitim (ozel/OzelEkran.tsx)
 
 interface OgeTemel { emoji: string; baslik: string; alt: string; sadeceTr?: boolean }
 export type BeceriOge =
@@ -74,6 +75,7 @@ export const BECERILER: Beceri[] = [
       e(ActivityType.PatternCompletion, '🔷', 'Örüntü Tamamlama', 'Sıradakini bul'),
       e(ActivityType.Sudoku, '🧩', 'Görsel Sudoku', 'Eksik parçayı tamamla'),
       o('farkBul', '🧐', 'Farkları Bul', 'İki resim arasındaki farkları bul'),
+      { tur: 'ekran', ekran: 'kediyiBul', emoji: '🐱', baslik: 'Kediyi Bul', alt: 'Saklanan kedi nerede?' },
       o('shadowMatch', '🔦', 'Gölge Eşleştirme', 'Gölge kime ait?'),
       o('whereBelongs', '🏠', 'Nereye Ait?', 'Eşyayı doğru odaya koy'),
       e(ActivityType.DragAndDropPositioning, '📍', 'Nesneyi Yerleştir', 'Nesneyi söylenen yere koy'),
@@ -103,6 +105,11 @@ export const BECERILER: Beceri[] = [
       { tur: 'ekran', ekran: 'agiz', emoji: '👄', baslik: 'Ağzımı İzle', alt: 'Sesleri ve kelimeleri ağız hareketiyle öğren' },
       { tur: 'ekran', ekran: 'sesTaklit', emoji: '🔊', baslik: 'Ses Taklit Kartları', alt: 'Hayvan ve eşya seslerini taklit et' },
       { tur: 'ekran', ekran: 'besNBirK', emoji: '❓', baslik: '5N1K', alt: 'Kim, ne, nerede, ne zaman, neden, nasıl' },
+      { tur: 'ekran', ekran: 'sosyalOyku', emoji: '📖', baslik: 'Sosyal Öyküler', alt: 'Berber, doktor, market, sıra bekleme, arkadaşlık' },
+      { tur: 'ekran', ekran: 'nasilHisseder', emoji: '😊', baslik: 'Nasıl Hisseder?', alt: 'Durumdan duyguyu bul' },
+      { tur: 'ekran', ekran: 'benSenO', emoji: '👉', baslik: 'Ben, Sen, O', alt: 'Ben, sen, o; benim, senin, onun' },
+      { tur: 'ekran', ekran: 'mevsimler', emoji: '🍂', baslik: 'Mevsimler', alt: 'İlkbahar, yaz, sonbahar, kış' },
+      { tur: 'ekran', ekran: 'ozBakim', emoji: '🧼', baslik: 'Kendine Bakım', alt: 'El yıkama, diş fırçalama, giyinme' },
       { tur: 'ekran', ekran: 'tuvalet', emoji: '🚽', baslik: 'Tuvalet Zamanı', alt: 'Adım adım tuvalet, öykü, ödül, kayıt' },
       o('dailyRoutine', '📋', 'Sıralı Ol!', 'Günlük işleri sıraya koy'),
       o('roomCleaning', '🧹', 'Oda Temizliği', 'Eşyaları yerine kaldır'),

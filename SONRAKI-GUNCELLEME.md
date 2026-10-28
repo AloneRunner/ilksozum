@@ -21,7 +21,11 @@ Kaan: "Bir sonraki pakette yapalım, çok önemli. Görsel de lazım olacak." Uy
 | 3 | Para, takvim, toplama | TL tanıma; gün/ay/mevsim; nesneyle toplama-çıkarma | Para ve takvim görselleri |
 | 3 | Görsel/işitsel algı | Farkları bul, saklanan nesneyi bul, dinle-bul | Sahne görselleri |
 
-Önce bütün görsel ihtiyacının listesi çıkarılacak, görseller toplu üretilecek, sonra etkinlikler yazılacak.
+**Durum (29 Ekim 2026 gecesi):** Görseller Flow'da üretildi (çizgi film; fotoğrafta çocuklu kareler filtreye takıldı), 6 etkinlik yazıldı:
+Sosyal Öyküler (5 öykü), Kendine Bakım (el yıkama, diş, giyinme: Adım Adım + Sırala), Nasıl Hisseder? (8 durum),
+Ben-Sen-O (6 kart), Mevsimler (Tanı + Soru) Konuşma ve Anlama menüsünde; Kediyi Bul (8 sahne) Düşünme menüsünde.
+Kod: `src/components/ozel/`. Sesler: `tools/ses/paketler/ozel-egitim.json` (133 cümle, ~2.900 karakter), **henüz üretilmedi** (Kaan onayı).
+Kalanlar: Ne yapıyor?, yönerge takibi, kişisel bilgiler, işlevsel okuma, sesin yeri, para (Kaan fotoğraflayacak), takvim, toplama, dinle-bul.
 
 ## 1. 9.1.0 paketinde kalan ve sonradan düzeltilenler
 

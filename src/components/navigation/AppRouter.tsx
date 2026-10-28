@@ -9,6 +9,7 @@ import { OBJECT_CATEGORIES, OBJECTS_INTL_ORDER, LETTER_SOUND_ACTIVITIES, CONCEPT
 import { t, getCurrentLanguage } from '../../i18n/index.ts';
 import { getBasaraLessons } from '../../data/basaraLessons.ts';
 import { beceriBul, type BeceriId, type BeceriOge } from '../../data/beceriMenu.ts';
+import type { OzelEkranId } from '../ozel/OzelEkran.tsx';
 
 // Lazy load all screens
 const ProfileSelectionScreen = lazy(() => import('../ProfileSelectionScreen.tsx'));
@@ -48,6 +49,7 @@ const KelimeKitabi = lazy(() => import('../sozluk/KelimeKitabi.tsx'));
 const SaatMerkezi = lazy(() => import('../saat/SaatMerkezi.tsx'));
 const KelimeOgren = lazy(() => import('../sozluk/KelimeOgren.tsx'));
 const FarkBul = lazy(() => import('../fark/FarkBul.tsx'));
+const OzelEkran = lazy(() => import('../ozel/OzelEkran.tsx'));
 const SekilOgren = lazy(() => import('../kutu/SekilOgren.tsx'));
 const TabagaKoy = lazy(() => import('../kutu/TabagaKoy.tsx'));
 const LineTracingScreen = lazy(() => import('../LineTracingScreen.tsx'));
@@ -158,6 +160,7 @@ export const AppRouter = () => {
     const [kitapDonus, setKitapDonus] = useState<ScreenState>(ScreenState.ObjectCategoriesMenu);
     // Kelime Öğren: seçilen nesne kategorisi (Gökhan Hoca: kategoriye girince önce soru değil, çalışma sayfası)
     const [ogrenKat, setOgrenKat] = useState<{ id: string; ad: string } | null>(null);
+    const [ozelEkran, setOzelEkran] = useState<OzelEkranId>('sosyalOyku');
     const kitapSeridi = (donus: ScreenState, alt: string) => (
         <button onClick={() => { setKitapDonus(donus); setScreenState(ScreenState.KelimeKitabi); }}
             className="flex shrink-0 items-center justify-center gap-2 bg-amber-100 px-3 py-2 text-sm font-black text-amber-900 shadow-sm active:bg-amber-200">
@@ -249,6 +252,7 @@ export const AppRouter = () => {
             case 'tuvalet': setScreenState(ScreenState.TuvaletEgitimi); return;
             case 'saat': setScreenState(ScreenState.ClockLearningGame); return;
             case 'besNBirK': ctx.activity.setActivityType(ActivityType.FiveWOneH); setScreenState(ScreenState.FiveWOneHMenu); return;
+            default: setOzelEkran(oge.ekran); setScreenState(ScreenState.OzelEtkinlik); return;
         }
     };
 
@@ -638,6 +642,7 @@ export const AppRouter = () => {
         case ScreenState.SoundImitationMenu: return <SesTaklitEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.KelimeKitabi: return <KelimeKitabi onBack={() => setScreenState(kitapDonus)} />;
         case ScreenState.FarkBulGame: return <FarkBul onBack={() => geriDon(ScreenState.MainMenu)} />;
+        case ScreenState.OzelEtkinlik: return <OzelEkran key={ozelEkran} ekran={ozelEkran} onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.ClockLearningGame: return <SaatMerkezi onBack={() => geriDon(ScreenState.ConceptActivitiesMenu)} />;
         case ScreenState.AgzimiIzle: return <div className="flex h-full w-full flex-col">{kitapSeridi(ScreenState.AgzimiIzle, 'Daha çok kelime')}<div className="relative min-h-0 flex-1"><AgzimiIzleEkrani onBack={() => geriDon(ScreenState.MainMenu)} /></div></div>;
         case ScreenState.TuvaletEgitimi: return <TuvaletEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
