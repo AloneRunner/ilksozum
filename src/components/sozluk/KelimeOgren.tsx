@@ -4,6 +4,7 @@ import { speak } from '../../services/speechService.ts';
 import { etkinlikSay, basariSay } from '../../services/sayac.ts';
 import { trHangisi, trEvetBu, trHayirBuDegil } from '../../utils/trDil.ts';
 import { kategoriOgeleri } from './KelimeKitabi.tsx';
+import { karisabilir, genelKelime } from '../../data/karisabilir.ts';
 
 // Kelime Öğren (Gökhan Hoca, 2026-10-28): "Direkt soru ile başlamasın: önce bütün meyvelerle çalışma sayfası, sonra soru.
 // Hep elma sorulsun, diğer 3 meyve değişsin, yerleri karışsın; %80 doğru olunca diğer meyveye geçsin.
@@ -23,15 +24,23 @@ const buyuk = (s: string) => s.charAt(0).toLocaleUpperCase('tr-TR') + s.slice(1)
 const bekle = (ms: number) => new Promise<void>(r => setTimeout(r, ms));
 const konus = (m: string) => Promise.race([speak(m), bekle(4500)]);
 // "elma" / "yeşil elma" gibi birbirini içeren kelimeler aynı soruda çeldirici olmasın
-const cakisir = (a: string, b: string) => a === b || a.includes(b) || b.includes(a);
+// Benzer görselli gruplar (lego / yapı blokları / oyuncaklar…) da birlikte çıkmaz: data/karisabilir.ts
+const cakisir = (a: string, b: string) => a === b || a.includes(b) || b.includes(a) || karisabilir(a, b);
 
 const profil = () => { try { return JSON.parse(localStorage.getItem('activeProfileId_v1') || 'null') || 'misafir'; } catch { return 'misafir'; } };
 const anahtar = (kat: string) => `kelimeOgren_${profil()}_${kat}`;
 const oku = (kat: string): Kayit => { try { return { ogrenilen: [], sonuclar: [], ...JSON.parse(localStorage.getItem(anahtar(kat)) || '{}') }; } catch { return { ogrenilen: [], sonuclar: [] }; } };
 const yaz = (kat: string, k: Kayit) => { try { localStorage.setItem(anahtar(kat), JSON.stringify(k)); } catch { /* yok say */ } };
 
-const secenekler = (hedef: Oge, havuz: Oge[]): Oge[] =>
-  karistir([hedef, ...karistir(havuz.filter(o => !cakisir(o.kelime, hedef.kelime))).slice(0, 3)]);
+const secenekler = (hedef: Oge, havuz: Oge[]): Oge[] => {
+  const cel: Oge[] = [];
+  for (const o of karistir(havuz)) {
+    if (cel.length >= 3) break;
+    if (cakisir(o.kelime, hedef.kelime) || cel.some(c => cakisir(c.kelime, o.kelime))) continue;
+    cel.push(o);
+  }
+  return karistir([hedef, ...cel]);
+};
 
 // ---------------------------------------------------------------- tek soru (hedef + 3 çeldirici, hatasız öğrenme)
 const Soru: React.FC<{ hedef: Oge; ogeler: Oge[]; onCevap: (ilkDeneme: boolean) => void }> = ({ hedef, ogeler, onCevap }) => {
@@ -80,7 +89,9 @@ const Soru: React.FC<{ hedef: Oge; ogeler: Oge[]; onCevap: (ilkDeneme: boolean) 
 type Ekran = 'merkez' | 'tani' | 'ogren' | 'karisik';
 
 const KelimeOgren: React.FC<{ katId: string; katAd: string; onBack: () => void; onSorular: () => void }> = ({ katId, katAd, onBack, onSorular }) => {
-  const ogeler = useMemo(() => kategoriOgeleri(katId), [katId]);
+  const hepsi = useMemo(() => kategoriOgeleri(katId), [katId]);
+  // "Oyuncaklar hangisi?" gibi genel kelimeler soru ve şık olmaz; Tanı sayfasında görünür
+  const ogeler = useMemo(() => hepsi.filter(o => !genelKelime(o.kelime)), [hepsi]);
   const [kayit, setKayit] = useState<Kayit>(() => oku(katId));
   const [ekran, setEkran] = useState<Ekran>('merkez');
   const kaydet = (k: Kayit) => { setKayit(k); yaz(katId, k); };
@@ -89,7 +100,7 @@ const KelimeOgren: React.FC<{ katId: string; katAd: string; onBack: () => void; 
   const siradaki = ogeler.find(o => !kayit.ogrenilen.includes(o.kelime)) || null;
   const sifirla = () => { if (window.confirm(`${katAd}: öğrenilen kelimeler sıfırlansın mı?`)) kaydet({ ogrenilen: [], sonuclar: [] }); };
 
-  if (ekran === 'tani') return <Tani katAd={katAd} ogeler={ogeler} onBack={() => setEkran('merkez')} onBasla={() => setEkran('ogren')} />;
+  if (ekran === 'tani') return <Tani katAd={katAd} ogeler={hepsi} onBack={() => setEkran('merkez')} onBasla={() => setEkran('ogren')} />;
   if (ekran === 'ogren' && siradaki) return <TekTekOgren katAd={katAd} ogeler={ogeler} kayit={kayit} kaydet={kaydet} onBack={() => setEkran('merkez')} />;
   if (ekran === 'karisik' && ogrenilenler.length >= 2) return <KarisikTekrar katAd={katAd} ogeler={ogeler} havuz={ogrenilenler} onBack={() => setEkran('merkez')} />;
 

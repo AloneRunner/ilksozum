@@ -16,6 +16,7 @@ import objectCollectorData from './database/activities/games/objectCollectorData
 import { CONCEPT_ACTIVITIES, LETTER_SOUND_ACTIVITIES, REASONING_ACTIVITIES, LETTER_GROUPS, OBJECT_RECOGNITION_ACTIVITIES, ALL_SUB_ACHIEVEMENTS } from '../constants.ts';
 import { getActivityMetadata } from '../constants/activityMetadata';
 import { shuffleArray, getValueFromLocalStorage } from '../utils.ts';
+import { karisabilir, genelKelime } from '../data/karisabilir.ts';
 import { getCurrentLanguage, t } from '../i18n/index.ts';
 
 
@@ -752,20 +753,7 @@ export const fetchSyllableWordsForGroup = async (groupNumber: number, count?: nu
 // --- OBJECT RECOGNITION ---
 // Kategorinin tamamını kapsayan genel kelimeler soru olarak sorulmaz ve şık olarak çıkmaz:
 // "bitki hangisi?" sorusunda dört şıkkın dördü de bitkidir; gül, lale ve papatya da çiçektir.
-const GENEL_KELIMELER = new Set(['bitki', 'çiçek']);
-
-// Görselleri birbirine çok benzeyen, aynı soruda yan yana çıkmaması gereken kelimeler.
-const KARISABILIR_CIFTLER: [string, string][] = [
-    ['süt', 'ayran'],
-];
-
-const karisabilir = (a: string, b: string): boolean => {
-    const x = a.toLocaleLowerCase('tr-TR');
-    const y = b.toLocaleLowerCase('tr-TR');
-    return KARISABILIR_CIFTLER.some(([p, q]) => (x === p && y === q) || (x === q && y === p));
-};
-
-const genelKelime = (kelime: string): boolean => GENEL_KELIMELER.has(kelime.toLocaleLowerCase('tr-TR'));
+// Karışabilir kelime grupları ve genel kelimeler: src/data/karisabilir.ts (Kelime Öğren ile ortak)
 
 export const createObjectChoiceRounds = async (categoryId: string, count?: number): Promise<ConceptRound[]> => {
     // If language is not Turkish, use curated static sets similar to concept rounds
