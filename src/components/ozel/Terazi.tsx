@@ -15,7 +15,9 @@ export const Terazi: React.FC<{ sol?: string; sag?: string; egim: -1 | 0 | 1; cl
     <g style={{ ...gecis, transform: `translateY(${kayma}px)` }}>
       <line x1={x} y1="40" x2={x - 22} y2="78" stroke="#64748b" strokeWidth="1.5" />
       <line x1={x} y1="40" x2={x + 22} y2="78" stroke="#64748b" strokeWidth="1.5" />
-      {resim && <image href={resim} x={x - 34} y="12" width="68" height="70" preserveAspectRatio="xMidYMax meet" style={{ mixBlendMode: 'multiply' }} />}
+      {/* Fotoğraflar beyaz kartta: kırık beyaz zeminler kefede dağınık kare gibi görünmesin */}
+      {resim && <rect x={x - 32} y="14" width="64" height="64" rx="10" fill="#fff" stroke="#e2e8f0" strokeWidth="1.5" />}
+      {resim && <image href={resim} x={x - 29} y="17" width="58" height="58" preserveAspectRatio="xMidYMid meet" />}
       <path d={`M${x - 28} 78 Q${x} 92 ${x + 28} 78 Z`} fill="#f59e0b" stroke="#b45309" strokeWidth="1.5" />
     </g>
   );

@@ -444,7 +444,9 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
           {/* Duyurular ve ses yardımı: küçük düğmeler, içerik pencerede */}
           <BilgiDugmeleri theme={theme} />
           {/* Teşekkür (Kaan, 2026-10-29; soyadını hoca doğruladı: Laçin) */}
-          {lang === 'tr' && <p className={`text-center text-[11px] font-semibold ${subtitleColorClass} opacity-80`}>Özel eğitim öğretmeni Gökhan Laçin'in katkılarıyla hazırlanmıştır. 🙏</p>}
+          {lang === 'tr' && <p className="mx-auto w-fit rounded-full bg-white/80 px-3 py-1 text-center text-[11px] font-semibold text-slate-600 shadow-sm">Özel eğitim öğretmeni Gökhan Laçin'in katkılarıyla hazırlanmıştır. 🙏</p>}
+          {/* Alttaki gezinme çubuğu ve tema dalgaları son satırı örtmesin */}
+          <div className="h-16 shrink-0" aria-hidden="true" />
         <YenilikPenceresi onDestek={onSelectSettings ? destegeGit : undefined} />
         </div>
       </div>

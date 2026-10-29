@@ -24,7 +24,7 @@ const TeraziIpucu: React.FC<{ sol: Nesne; sag: Nesne; solAgir: boolean; kullan: 
   if (!acik) return (
     <button onClick={() => { setAcik(true); kullan(); }} className="rounded-full bg-white px-5 py-2 text-lg font-black text-slate-700 shadow active:scale-95">⚖️ Teraziye koy</button>
   );
-  return <Terazi sol={sol.url} sag={sag.url} egim={solAgir ? -1 : 1} className="w-[min(80vw,46vh)] h-auto" />;
+  return <Terazi sol={sol.url} sag={sag.url} egim={solAgir ? -1 : 1} className="w-[min(86vw,46vh)] h-auto" />;
 };
 
 const tur = (agir: boolean): Tur => {
@@ -58,10 +58,11 @@ const Tani: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   return (
     <OyunCercevesi baslik="Ağır / Hafif" emoji="⚖️" onBack={onBack} yonerge="Teraziyi izle. Ağır olan aşağı iner.">
       <div className="absolute inset-0 flex flex-col items-center gap-3 px-3 pb-3 overflow-y-auto">
-        <div className="flex w-full max-w-3xl items-center justify-center gap-3">
-          <img src={c.agir.url} alt="" className={`w-[18vh] max-w-[22vw] aspect-square object-contain rounded-2xl bg-white shadow transition-opacity ${kondu ? 'opacity-30' : ''}`} />
-          <Terazi sol={kondu ? c.agir.url : undefined} sag={kondu ? c.hafif.url : undefined} egim={kondu ? -1 : 0} className="w-[min(60vw,52vh)] h-auto" />
-          <img src={c.hafif.url} alt="" className={`w-[18vh] max-w-[22vw] aspect-square object-contain rounded-2xl bg-white shadow transition-opacity ${kondu ? 'opacity-30' : ''}`} />
+        {/* Nesneler önce terazinin iki yanında durur, kefelere konunca yanlardan kalkar; terazi ekranın büyük kısmını alır */}
+        <div className="flex w-full max-w-3xl items-center justify-center gap-2">
+          <img src={c.agir.url} alt="" className={`w-[15vh] max-w-[18vw] aspect-square object-contain rounded-2xl bg-white shadow transition-all duration-500 ${kondu ? 'opacity-0 scale-50' : ''}`} />
+          <Terazi sol={kondu ? c.agir.url : undefined} sag={kondu ? c.hafif.url : undefined} egim={kondu ? -1 : 0} className="w-[min(64vw,60vh)] h-auto" />
+          <img src={c.hafif.url} alt="" className={`w-[15vh] max-w-[18vw] aspect-square object-contain rounded-2xl bg-white shadow transition-all duration-500 ${kondu ? 'opacity-0 scale-50' : ''}`} />
         </div>
         <div className="flex gap-6 text-2xl font-black">
           <span className="text-slate-800">{c.agir.ad}: ağır</span><span className="text-slate-500">{c.hafif.ad}: hafif</span>
