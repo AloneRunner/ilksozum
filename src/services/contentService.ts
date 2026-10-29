@@ -4,6 +4,7 @@ import { trHangisi, trEvetBu, trHayirBuDegil } from '../utils/trDil.ts';
 import { storyData } from './staticData.ts';
 import { imageData } from './database/imageData.ts';
 import { YENI_SORULAR_AKTIF, thinThickDataYeni, insideOutsideDataYeni, onUnderDataYeni, inFrontOfBehindDataYeni, betweenDataYeni, belowAboveDataYeni, wideNarrowDataYeni, bigSmallDataYeni, longShortDataYeni, highLowDataYeni, fullEmptyDataYeni, fewMuchDataYeni, halfQuarterWholeDataYeni, derinSigDataYeni, openClosedDataYeni, brokenIntactDataYeni, cleanDirtyDataYeni, wetDryDataYeni, oldNewDataYeni, hardSoftDataYeni, hotColdDataYeni, roughSmoothDataYeni, dikenliPuruzsuzDataYeni, parlakMatDataYeni, seffafOpakDataYeni, bitterSweetDataYeni, noisyQuietDataYeni, hungryFullDataYeni, youngOldDataYeni, tembelCaliskanDataYeni, kalabalikTenhaDataYeni, kirisikDuzgunDataYeni, dugumCozukDataYeni, straightCurvedDataYeni, tazeBayatDataYeni, messyCleanDataYeni, hangisiFarkliKolayYeni, hangisiFarkliZorYeni, leftRightDataYeni, aliveLifelessDataYeni, saatDataYeni, nearFarDataYeni, besideOppositeDataYeni, tersDuzDataYeni, sivriKutDataYeni, dayNightDataYeni, fastSlowDataYeni, beforeAfterDataYeni, heavyLightDataYeni, emotionsDataYeni, sensesDataYeni, ownershipDataYeni, acikKoyuDataYeni, countMatchDataYeni, yenirYenmezDataYeni, tehlikeliGuvenliDataYeni, havaDurumuDataYeni, oddEvenDataYeni, ilkSonDataYeni, colorRecognitionDataYeni, colorsDataYeni, shapesDataYeni } from './database/activities/yeni/index.ts';
+import { TERS_DUZ_CIKAN } from '../data/tersDuz.ts';
 import { 
     sensesData,
     bigSmallData, longShortData, thinThickData, wideNarrowData, oldNewData, youngOldData, hardSoftData, cleanDirtyData, wetDryData, openClosedData, straightCurvedData, aliveLifelessData, bitterSweetData, heavyLightData, hotColdData, roughSmoothData, brokenIntactData, messyCleanData, tazeBayatData, kirisikDuzgunData, sivriKutData, parlakMatData, tembelCaliskanData, seffafOpakData, dikenliPuruzsuzData, dugumCozukData, hungryFullData, derinSigData, kalabalikTenhaData, tersDuzData,
@@ -1487,7 +1488,8 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.HungryFull]: YENI_SORULAR_AKTIF ? hungryFullDataYeni : hungryFullData,
     [ActivityType.DerinSig]: YENI_SORULAR_AKTIF ? derinSigDataYeni : derinSigData,
     [ActivityType.KalabalikTenha]: YENI_SORULAR_AKTIF ? kalabalikTenhaDataYeni : kalabalikTenhaData,
-    [ActivityType.TersDuz]: YENI_SORULAR_AKTIF ? tersDuzDataYeni : tersDuzData,
+    // Gökhan Hoca (2026-10-29): içi dışında / arkası önde (tişört, şapka, kazak, pantolon) Ters/Düz'den çıktı
+    [ActivityType.TersDuz]: YENI_SORULAR_AKTIF ? tersDuzDataYeni.filter((r) => !r.options.some((o) => TERS_DUZ_CIKAN.has(Number(o.id)))) : tersDuzData,
     [ActivityType.FewMuch]: YENI_SORULAR_AKTIF ? fewMuchDataYeni : fewMuchData,
     [ActivityType.HalfQuarterWhole]: YENI_SORULAR_AKTIF ? halfQuarterWholeDataYeni : halfQuarterWholeData,
     [ActivityType.FullEmpty]: YENI_SORULAR_AKTIF ? fullEmptyDataYeni : fullEmptyData,

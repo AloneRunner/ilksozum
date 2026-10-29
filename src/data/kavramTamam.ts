@@ -13,5 +13,6 @@ export const kavramTamamla = (id: string) => {
 export const CALISMA_ID: Partial<Record<ActivityType, string>> = {
   [ActivityType.Colors]: 'renkOgren', [ActivityType.ColorRecognition]: 'rengiNe', [ActivityType.Shapes]: 'sekilCalis',
   [ActivityType.AcikKoyu]: 'acikKoyuCalis', [ActivityType.ParlakMat]: 'parlakMatCalis', [ActivityType.SeffafOpak]: 'seffafOpakCalis',
-  [ActivityType.BigSmall]: 'buyukKucukCalis', [ActivityType.LongShort]: 'uzunKisaCalis', [ActivityType.ThinThick]: 'kalinInceCalis', [ActivityType.WideNarrow]: 'genisDarCalis', [ActivityType.DerinSig]: 'derinSigCalis', [ActivityType.HeavyLight]: 'agirHafifCalis', [ActivityType.OnUnder]: 'ustAltCalis', [ActivityType.BelowAbove]: 'yukariAsagiCalis',
+  [ActivityType.BigSmall]: 'buyukKucukCalis', [ActivityType.LongShort]: 'uzunKisaCalis', [ActivityType.ThinThick]: 'kalinInceCalis', [ActivityType.WideNarrow]: 'genisDarCalis', [ActivityType.DerinSig]: 'derinSigCalis', [ActivityType.HeavyLight]: 'agirHafifCalis', [ActivityType.OnUnder]: 'ustAltCalis', [ActivityType.BelowAbove]: 'yukariAsagiCalis', [ActivityType.InFrontOfBehind]: 'onArkaCalis',
+  [ActivityType.HighLow]: 'yuksekAlcakCalis', [ActivityType.TersDuz]: 'tersDuzCalis', [ActivityType.IlkSon]: 'ilkSonCalis',
 };

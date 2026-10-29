@@ -48,6 +48,16 @@ for (const s of UA.UST_ALT_SETLER) for (const u of [true, false]) metinler.push(
 // Yukarıda / Aşağıda
 const YA = await import(new URL('../../src/data/yukariAsagi.ts', import.meta.url).href);
 for (const s of YA.YUKARI_SETLER) for (const u of [true, false]) metinler.push(YA.yukariSoru(s, u), YA.yukariDogru(s, u));
+// Önünde / Arkasında
+const OA = await import(new URL('../../src/data/onArka.ts', import.meta.url).href);
+for (const s of OA.ON_ARKA_SETLER) for (const u of [true, false]) metinler.push(OA.onArkaSoru(s, u), OA.onArkaDogru(s, u));
+// Yüksek / Alçak, Ters / Düz, İlk / Son
+const YK = await import(new URL('../../src/data/yuksekAlcak.ts', import.meta.url).href);
+for (const [, ad] of YK.YK_NESNELER) for (const u of [true, false]) metinler.push(YK.ykSoru(ad, u), YK.ykDogru(ad, u));
+const TD = await import(new URL('../../src/data/tersDuz.ts', import.meta.url).href);
+for (const s of TD.TERS_DUZ_SETLER) for (const u of [true, false]) metinler.push(TD.tdSoru(s, u), TD.tdDogru(s, u));
+const IS = await import(new URL('../../src/data/ilkSon.ts', import.meta.url).href);
+for (const u of [true, false]) metinler.push(IS.isSoru(u), IS.isDogru(u));
 // Paralarımız
 metinler.push(V.DAHA_COK_SORU);
 for (const p of V.PARALAR) metinler.push(`${p.ad}.`, V.paraSoru(p), V.evetAd(p.ad));

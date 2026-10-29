@@ -438,17 +438,17 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
     {
       name: isTr ? "Boyut" : t("concepts.dimensional", "Size"),
       icon: emojiIkon("📏"),
-      activities: sec([ActivityType.BigSmall, ActivityType.LongShort, ActivityType.ThinThick, ActivityType.WideNarrow, ActivityType.DerinSig, ActivityType.HeavyLight]),
+      activities: sec([ActivityType.BigSmall, ActivityType.LongShort, ActivityType.ThinThick, ActivityType.WideNarrow, ActivityType.DerinSig, ActivityType.HighLow, ActivityType.HeavyLight]),
     },
     {
       name: isTr ? "Konum" : t("concepts.position", "Spatial"),
       icon: emojiIkon("📍"),
-      activities: sec([ActivityType.OnUnder, ActivityType.BelowAbove, ActivityType.InFrontOfBehind, ActivityType.InsideOutside, ActivityType.KutuOyunu, ActivityType.BesideOpposite, ActivityType.Between, ActivityType.LeftRight, ActivityType.NearFar, ActivityType.HighLow, ActivityType.TersDuz, ActivityType.IlkSon]),
+      activities: sec([ActivityType.OnUnder, ActivityType.BelowAbove, ActivityType.InFrontOfBehind, ActivityType.InsideOutside, ActivityType.KutuOyunu, ActivityType.BesideOpposite, ActivityType.Between, ActivityType.LeftRight, ActivityType.NearFar, ActivityType.TersDuz]),
     },
     {
       name: isTr ? "Miktar" : t("concepts.quantity", "Quantity"),
       icon: emojiIkon("🔢"),
-      activities: sec([ActivityType.CountMatch, ActivityType.FewMuch, ActivityType.KalabalikTenha, ActivityType.FullEmpty, ActivityType.HalfQuarterWhole, ActivityType.OddEven]),
+      activities: sec([ActivityType.CountMatch, ActivityType.FewMuch, ActivityType.KalabalikTenha, ActivityType.FullEmpty, ActivityType.HalfQuarterWhole, ActivityType.OddEven, ActivityType.IlkSon]),
     },
     {
       name: isTr ? "Duyular" : t("concepts.sensory", "Senses"),

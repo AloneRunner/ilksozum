@@ -11,7 +11,11 @@ CIKTI = KOK / 'public/images/ozel/kesik'
 CIKTI.mkdir(parents=True, exist_ok=True)
 
 NESNELER = {'top': 3915, 'elma': 2307, 'ayi': 5703, 'araba': 9047, 'kedi': 3504, 'bebek': 8109,
-            'portakal': 2822, 'canta': 3410, 'kitap': 2017, 'balon': 7109}
+            'portakal': 2822, 'canta': 3410, 'kitap': 2017, 'balon': 7109,
+            # Önünde/Arkasında referans nesneleri (derin kaplar ve karton kutu, beyaz zeminli)
+            'kova': 2909, 'kutu': 2911, 'kase': 2907, 'sepet': 2915,
+            # Ters/Düz (mavi plastik bardak) ve İlk/Son (kaplumbağa çizimi)
+            'bardak': 6859, 'kaplumbaga': 42}
 
 for ad, kid in NESNELER.items():
     im = Image.open(KOK / f'public/images/{kid}.webp').convert('RGB')

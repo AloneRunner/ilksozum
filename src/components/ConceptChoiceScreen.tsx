@@ -14,7 +14,10 @@ const AGIR_IDLER = new Set([6201, 6203, 6205, 6207, 6209, 6211, 6213, 6215, 6217
 // Konum kavramlarında etiket kavramı yazsın (Gökhan Hoca): sorudaki kelime doğru şıkkın, karşıtı yanlış şıkkın etiketi
 const KONUM_ZIT: Partial<Record<ActivityType, [string, string]>> = {
   [ActivityType.OnUnder]: ['üstünde', 'altında'], [ActivityType.BelowAbove]: ['yukarıda', 'aşağıda'], [ActivityType.InFrontOfBehind]: ['önünde', 'arkasında'],
+  [ActivityType.HighLow]: ['yüksek', 'alçak'], [ActivityType.TersDuz]: ['ters', 'düz'], [ActivityType.IlkSon]: ['ilk', 'son'],
 };
+// Bu kavramlarda etiket cevaptan sonra çıkar (Gökhan Hoca)
+const ETIKET_CEVAPTAN_SONRA = new Set([ActivityType.InFrontOfBehind, ActivityType.HighLow, ActivityType.TersDuz, ActivityType.IlkSon]);
 const konumEtiket = (r: ConceptRound, dogru: boolean): string | undefined => {
   const z = KONUM_ZIT[r.activityType]; if (!z) return undefined;
   const soru = (r.speech as any)?.tr?.question || r.question || '';
@@ -22,6 +25,9 @@ const konumEtiket = (r: ConceptRound, dogru: boolean): string | undefined => {
   return dogru ? k : z.find((w) => w !== k);
 };
 import { ParlakMatCiz } from './ozel/ParlakMatCalis.tsx';
+import { KuleIpucu } from './ozel/YuksekAlcakCalis.tsx';
+import { DonmeIpucu } from './ozel/TersDuzCalis.tsx';
+import { BayrakIpucu } from './ozel/IlkSonCalis.tsx';
 // Şekiller etiketi: veride hepsi "şekil" yazıyor; görsel kimliğinden şeklin adı (7201 + sıra + 7 × renk; Gökhan Hoca 2026-10-29)
 const SEKIL_SIRASI = ['daire', 'dikdörtgen', 'kalp', 'kare', 'oval', 'üçgen', 'yıldız'];
 const sekilAdi = (id: number) => (id >= 7201 && id <= 7228 ? SEKIL_SIRASI[(id - 7201) % 7] : undefined);
@@ -42,7 +48,6 @@ import MinusCircleIcon from './icons/MinusCircleIcon.tsx';
 import PersonIcon from './icons/PersonIcon.tsx';
 import AppleIcon from './icons/AppleIcon.tsx';
 import SnowflakeIcon from './icons/SnowflakeIcon.tsx';
-import HouseIconSimple from './icons/HouseIconSimple.tsx';
 import LightBulbIcon from './icons/LightBulbIcon.tsx';
 import useWindowSize from '../hooks/useWindowSize.ts';
 import { t, getCurrentLanguage, lookupLocale } from '../i18n/index.ts';
@@ -749,7 +754,6 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType; secenekle
     const [isFresh, setIsFresh] = useState(true);
     const [isKnotted, setIsKnotted] = useState(false);
     const [isFull, setIsFull] = useState(false);
-    const [isRightSideUp, setIsRightSideUp] = useState(true);
     const [itemCount, setItemCount] = useState(1);
     const [fillLevel, setFillLevel] = useState(0);
     const [isAfter, setIsAfter] = useState(false);
@@ -770,7 +774,6 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType; secenekle
     const [isBetween, setIsBetween] = useState(false);
     const [leftRightPos, setLeftRightPos] = useState<'left' | 'right'>('left');
     const [isNear, setIsNear] = useState(true);
-    const [highLowPos, setHighLowPos] = useState<'high' | 'low'>('low');
 
     const MAX_PEOPLE = 12;
     const MAX_ITEMS = 12;
@@ -796,13 +799,13 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType; secenekle
         setIsCurved(false); setWeight(0.2); setDepth(20); setPeople([]);
         setIsNew(true); setIsYoung(true); setIsClean(true); setIsWet(false);
         setIsOpen(false); setIsIntact(true); setIsTidy(true); setIsFresh(true);
-        setIsKnotted(false); setIsFull(false); setIsRightSideUp(true);
+        setIsKnotted(false); setIsFull(false);
         setItemCount(1); setFillLevel(0); setIsAfter(false); setIsDay(true);
         setIsHot(true); setIsShiny(true); setIsTransparent(false);
         setIsAlive(true); setIsWorking(false); setTaste('sweet'); setFraction('whole');
         setOddEvenCount(1); setPosition('on'); setPositionAbove('above'); setArrangement('beside');
         setIsInFront(true); setIsInside(false); setIsBetween(false); setLeftRightPos('left');
-        setIsNear(true); setHighLowPos('low');
+        setIsNear(true);
     }, [activityType]);
 
     const helper = (() => {
@@ -1184,22 +1187,12 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType; secenekle
                     </div>
                 );
             }
-            case ActivityType.TersDuz: {
-                const uprightLabel = formatConcept('düz');
-                const upsideDownLabel = formatConcept('ters');
-                return (
-                    <div className="w-full text-center">
-                        <div className="h-32 flex items-center justify-center">
-                            <div className="w-24 h-24 transition-transform duration-500" style={{ transform: isRightSideUp ? 'rotate(0deg)' : 'rotate(180deg)' }}><HouseIconSimple className="w-full h-full" /></div>
-                        </div>
-                        <div className="flex justify-center gap-4 sm-landscape:gap-2 mt-4 sm-landscape:mt-0">
-                            <button onClick={() => { setIsRightSideUp(prev => !prev); speakConcept(isRightSideUp ? 'ters' : 'düz'); }} className={`${baseButtonClasses} bg-purple-500 text-sm px-4 sm-landscape:w-32`}>
-                                {isRightSideUp ? uprightLabel : upsideDownLabel}
-                            </button>
-                        </div>
-                    </div>
-                );
-            }
+            case ActivityType.TersDuz:
+                // Gökhan Hoca (2026-10-29): nesne yavaşça döner
+                return <DonmeIpucu soyle={speakConcept} tersYazi={formatConcept('ters')} duzYazi={formatConcept('düz')} dugme={baseButtonClasses} />;
+            case ActivityType.IlkSon:
+                // Gökhan Hoca (2026-10-29): nesneler bayrağa yürür, ilk varan (ya da en arkadaki) parlar
+                return <BayrakIpucu soyle={speakConcept} ilkYazi={formatConcept('ilk')} sonYazi={formatConcept('son')} dugme={baseButtonClasses} />;
             case ActivityType.FewMuch:
                 const addApple = () => { if (itemCount < MAX_ITEMS) { const wasFew = itemCount <= MUCH_THRESHOLD; const newCount = itemCount + 1; setItemCount(newCount); if (newCount > MUCH_THRESHOLD && wasFew) speakConcept('çok'); } };
                 const removeApple = () => { if (itemCount > 0) { const wasMany = itemCount > MUCH_THRESHOLD; const newCount = itemCount - 1; setItemCount(newCount); if (newCount <= MUCH_THRESHOLD && wasMany) speakConcept('az'); } };
@@ -1390,7 +1383,8 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType; secenekle
             case ActivityType.NearFar:
                 return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center relative w-64 mx-auto"> <div className="w-20 h-20 bg-amber-700 rounded-lg absolute left-0" /> <div className="w-12 h-12 bg-red-500 rounded-full absolute transition-all duration-300" style={{ transform: `scale(${isNear ? 1 : 0.6})`, left: isNear ? '8rem' : '12rem' }} /> </div> <div className="flex justify-center gap-4 mt-2"> <button onClick={() => { setIsNear(false); speakConcept('uzak'); }} className={`${baseButtonClasses} bg-orange-500 text-sm px-2`}>Uzaklaştır</button> <button onClick={() => { setIsNear(true); speakConcept('yakın'); }} className={`${baseButtonClasses} bg-sky-500 text-sm px-2`}>Yakınlaştır</button> </div> </div>);
             case ActivityType.HighLow:
-                return (<div className="w-full text-center"> <div className="h-40 flex items-center justify-center relative w-full"> <div className="w-16 h-16 bg-blue-500 rounded-full absolute transition-all duration-300" style={{ bottom: highLowPos === 'high' ? '8rem' : '1rem' }} /> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setHighLowPos('low'); speakConcept('alçak'); }} className={`${baseButtonClasses} bg-red-500 text-sm px-4`}>Alçalt</button> <button onClick={() => { setHighLowPos('high'); speakConcept('yüksek'); }} className={`${baseButtonClasses} bg-green-500 text-sm px-4`}>Yükselt</button> </div> </div>);
+                // Gökhan Hoca (2026-10-29): kule blok blok yükselir / alçalır
+                return <KuleIpucu soyle={speakConcept} yuksekYazi={formatConcept('yüksek')} alcakYazi={formatConcept('alçak')} dugme={baseButtonClasses} />;
             case ActivityType.BeforeAfter:
                 return (<div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-32 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="relative w-28 h-28"> {isAfter ? <AppleCoreIcon className="w-full h-full text-red-600 animate-pop-in" /> : <AppleIcon className="w-full h-full text-red-600 animate-pop-in" />} </div> </div> <div className="flex justify-center gap-4 sm-landscape:gap-2 mt-4 sm-landscape:mt-0"> <button onClick={() => { setIsAfter(prev => !prev); speak(isAfter ? 'önce' : 'sonra'); }} className={`${baseButtonClasses} bg-sky-500 text-sm px-4 sm-landscape:w-32`}>{isAfter ? 'Önce' : 'Sonra'}</button> </div> </div>);
             case ActivityType.DayNight: {
@@ -2445,7 +2439,8 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
         return roundData.options.filter(o => !disabledOptionIds.has(o.id));
     }, [roundData, disabledOptionIds]);
 
-    const gridColsClass = displayOptions.length === 2 ? 'grid-cols-2' :
+    // Gökhan Hoca (2026-10-29): dikey ekranda görseller büyük olsun; 2 şık dikeyde alt alta, ekran yüksekliğine göre
+    const gridColsClass = displayOptions.length === 2 ? 'grid-cols-2 portrait:grid-cols-1 portrait:max-w-[min(100%,31vh)] portrait:mx-auto' :
         displayOptions.length === 3 ? 'grid-cols-3 sm-landscape:grid-cols-3' :
             displayOptions.length === 4 ? 'grid-cols-2 sm-landscape:grid-cols-4' :
                 'grid-cols-2 sm-landscape:grid-cols-4';
@@ -2501,8 +2496,8 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         imageUrl={option.imageUrl}
                         word={displayWord}
                         // Kaan (2026-10-21): etiket kapalıysa doğru cevaptan sonra da yazı çıkmasın.
-                        // Önünde/Arkasında (Gökhan Hoca): etiket cevaptan sonra çıksın
-                        isRevealed={roundData.activityType === ActivityType.InFrontOfBehind ? isCorrect : isWordLabelVisible}
+                        // Önünde/Arkasında, Yüksek/Alçak, Ters/Düz, İlk/Son (Gökhan Hoca): etiket cevaptan sonra çıksın
+                        isRevealed={ETIKET_CEVAPTAN_SONRA.has(roundData.activityType) ? isCorrect : isWordLabelVisible}
                         isSelected={selectedId === option.id && !isWrong}
                         isCorrect={isCorrect && selectedId === option.id}
                         onClick={() => handleCardClick(option.id, option.isCorrect, spokenWord)}
@@ -2554,7 +2549,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
         ActivityType.BitterSweet, ActivityType.HalfQuarterWhole, ActivityType.OddEven,
         ActivityType.OnUnder, ActivityType.BelowAbove, ActivityType.BesideOpposite,
         ActivityType.InFrontOfBehind, ActivityType.InsideOutside, ActivityType.Between,
-        ActivityType.LeftRight, ActivityType.NearFar, ActivityType.HighLow
+        ActivityType.LeftRight, ActivityType.NearFar, ActivityType.HighLow, ActivityType.IlkSon
     ];
 
     if (isConceptLandscape) {
@@ -2610,7 +2605,8 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 )}
 
                 {/* Options */}
-                <div className={`flex-grow flex flex-row items-stretch justify-center w-full pb-[4.75rem] min-h-0`}>
+                {/* Gökhan Hoca (2026-10-29): etiket kapalıyken de kart çerçevesi, arka planı ve kartlar arası boşluk görünsün */}
+                <div className={`flex-grow flex flex-row items-stretch justify-center gap-4 px-4 w-full pb-[4.75rem] min-h-0`}>
                     {roundData.options.map((option, index) => {
                         const isOptionCorrect = isCorrect && selectedId === option.id;
                         const isOptionWrong = isWrong === option.id;
@@ -2637,9 +2633,9 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                             <div
                                 key={`${option.id}-${index}`}
                                 onClick={() => handleCardClick(option.id, option.isCorrect, hintSpokenWord)}
-                                className={`w-1/2 h-full flex items-center justify-center p-4 cursor-pointer transition-all duration-300 relative overflow-hidden ${hintClass} ${isOptionWrong ? 'animate-shake' : ''}`}
+                                className={`flex-1 min-w-0 h-full flex items-center justify-center p-4 cursor-pointer transition-all duration-300 relative overflow-hidden rounded-3xl shadow-lg border-4 ${isCosmic ? 'border-sky-400/30' : 'border-white'} ${hintClass} ${isOptionWrong ? 'animate-shake' : ''}`}
                                 style={{
-                                    backgroundColor: isOptionCorrect ? '#22c55e' : isOptionWrong ? '#ef4444' : (isCosmic ? '#0b1220' : '#f1f5f9'),
+                                    backgroundColor: isOptionCorrect ? '#22c55e' : isOptionWrong ? '#ef4444' : (isCosmic ? '#0b1220' : '#ffffff'),
                                     ...hintStyle
                                 }}
                             >
@@ -2660,7 +2656,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                                     </div>
                                 )}
 
-                                {isWordLabelVisible && (
+                                {(ETIKET_CEVAPTAN_SONRA.has(roundData.activityType) ? isCorrect : isWordLabelVisible) && (
                                     <p className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/30 text-white text-xl font-bold px-4 py-2 rounded-full">{hintDisplayWord}</p>
                                 )}
 
