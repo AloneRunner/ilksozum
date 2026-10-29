@@ -27,6 +27,9 @@ metinler.push(V.TOPLAMA_SORU);
 for (let n = 2; n <= 10; n++) metinler.push(V.toplamaDogru(n));
 V.GUNLER.forEach((g, i) => metinler.push(`${g}.`, V.gunSoru(i), V.evetAd(g), V.bugunCumle(i)));
 V.AYLAR.forEach((a, i) => metinler.push(`${a}.`, V.aySoru(i), V.evetAd(a), V.buAyCumle(i)));
+// Renk Öğren: Tanı'da "Kırmızı araba." (soru, evet ve hayır cümleleri Renkler'den kayıtlı)
+const RG = await import(new URL('../../src/data/renkGorselleri.ts', import.meta.url).href);
+for (const n of RG.NESNELER) for (const r of RG.RENKLER) metinler.push(RG.renkliAdCumle(n, r), RG.renkSoru(n, r), RG.renkDogru(n, r));
 // Paralarımız
 metinler.push(V.DAHA_COK_SORU);
 for (const p of V.PARALAR) metinler.push(`${p.ad}.`, V.paraSoru(p), V.evetAd(p.ad));

@@ -39,7 +39,8 @@ export const SecimOyunu: React.FC<{
   secenekSayilari: number[]; // seviyeye göre şık sayısı, ör. [2, 3, 4]
   turlariKur: (secenekSayisi: number) => Tur[];
   ust?: React.ReactNode;
-}> = ({ oyunId, sayacAdi, baslik, emoji, onBack, secenekSayilari, turlariKur, ust }) => {
+  onBitti?: (ilkDenemeDogru: number, toplam: number) => void; // aşamalı çalışmalar (Renk Öğren) geçme kararı için
+}> = ({ oyunId, sayacAdi, baslik, emoji, onBack, secenekSayilari, turlariKur, ust, onBitti }) => {
   const { seviye, basari, zorlandi } = useSeviye(oyunId, secenekSayilari.length - 1);
   const [oyun, setOyun] = useState(0);
   const turlar = useMemo(() => turlariKur(secenekSayilari[seviye]), [oyun]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -76,6 +77,7 @@ export const SecimOyunu: React.FC<{
     setKutla(false);
     if (i + 1 < turlar.length) { setI(i + 1); return; }
     etkinlikSay(sayacAdi, 'bitti'); basariSay(sayacAdi, dogrular.current, turlar.length);
+    onBitti?.(dogrular.current, turlar.length);
     setBitti(true);
   };
   const tekrar = () => { setBitti(false); setI(0); dogrular.current = 0; setOyun(o => o + 1); };

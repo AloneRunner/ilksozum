@@ -6,6 +6,7 @@ import Card from './ui/Card.tsx';
 import SmartImage from './ui/SmartImage.tsx';
 import { organCizimi } from '../services/nesneGorsel.ts';
 import KonusanAgiz from './agiz/KonusanAgiz.tsx';
+import { renkliAd } from '../data/renkGorselleri.ts';
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { speak, playEffect } from '../services/speechService.ts';
 import BanIcon from './icons/BanIcon.tsx';
@@ -2452,7 +2453,9 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 // Fallback order: i18n objects.<audioKey> -> translateLabel(option.word) -> raw option.word
                 const i18nObjKey = `objects.${option.audioKey}`;
                 const i18nLabel = lookupLocale(i18nObjKey, currentLang as any);
-                const displayWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
+                // Renkler: şıklar aynı nesne, etikette rengi de yazsın ("kupa" değil "yeşil kupa"; Gökhan Hoca 2026-10-29)
+                const renkliEtiket = roundData.activityType === ActivityType.Colors && currentLang === 'tr' ? renkliAd(Number(option.id)) : undefined;
+                const displayWord = renkliEtiket || i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                 const spokenWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                 return (
                     <Card
@@ -2536,8 +2539,10 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 <h1 className={`text-xl sm:text-2xl font-bold text-center ${tas ? `${tas.soruKutu} font-black` : `${isCosmic ? 'bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-indigo-200 to-fuchsia-300 text-glow-planet' : effectiveTheme.text} drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]`} flex items-center justify-center gap-3 relative mt-12 self-center z-20 shrink-0 px-2 max-w-[92%]`}>
                     {settings.theme === 'kedi' ? '🐱 ' : settings.theme === 'zurafa' ? '🦒🌸 ' : ''}{localizedQuestion}
                     {/* Gökçe soruyu söyler; yüzüne dokununca tekrar */}
-                    <button onClick={handleSpeak} className="shrink-0 active:scale-95 transition" aria-label={t('choice.readQuestion')}>
+                    <button onClick={handleSpeak} className="relative shrink-0 active:scale-95 transition" aria-label={t('choice.readQuestion')}>
                         <KonusanAgiz className="w-11 h-11 drop-shadow" />
+                        {/* Tekrar dinle işareti (Gökhan Hoca: "tekrar dinle kısmı yok" — yüze dokunmak bilinmiyordu) */}
+                        <span aria-hidden className="absolute -bottom-1 -right-2 rounded-full bg-white px-0.5 text-sm leading-tight shadow">🔊</span>
                     </button>
                 </h1>
 
@@ -2584,7 +2589,8 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         // Prefer canonical object label from i18n using the image's audioKey.
                         const i18nObjKey = `objects.${option.audioKey}`;
                         const i18nLabel = lookupLocale(i18nObjKey, currentLang as any);
-                        const hintDisplayWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
+                        const renkliEtiket = roundData.activityType === ActivityType.Colors && currentLang === 'tr' ? renkliAd(Number(option.id)) : undefined;
+                        const hintDisplayWord = renkliEtiket || i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                         const hintSpokenWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
 
                         return (
@@ -2680,8 +2686,9 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         <h1 className={`text-xl sm:text-2xl font-bold text-center ${tas ? `${tas.soruKutu} font-black` : `${isCosmic ? 'bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-indigo-200 to-fuchsia-300 text-glow-planet' : effectiveTheme.text} drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]`} mb-4 flex items-center gap-3 landscape:text-lg sm-landscape:text-base`}>
                             {settings.theme === 'kedi' ? '🐱 ' : settings.theme === 'zurafa' ? '🦒🌸 ' : ''}{localizedQuestion}
                             {/* Gökçe soruyu söyler; yüzüne dokununca tekrar */}
-                            <button onClick={handleSpeak} className="shrink-0 active:scale-95 transition" aria-label={t('choice.readQuestion')}>
+                            <button onClick={handleSpeak} className="relative shrink-0 active:scale-95 transition" aria-label={t('choice.readQuestion')}>
                                 <KonusanAgiz className="w-14 h-14 sm-landscape:w-11 sm-landscape:h-11 drop-shadow" />
+                                <span aria-hidden className="absolute -bottom-1 -right-2 rounded-full bg-white px-0.5 text-sm leading-tight shadow">🔊</span>
                             </button>
                         </h1>
                         {renderQuestionItem()}

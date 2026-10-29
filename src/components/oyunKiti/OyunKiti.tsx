@@ -66,7 +66,7 @@ export const OyunCercevesi: React.FC<{
     {yonerge && (
       <button onClick={() => speak(yonerge)} className="mx-3 mb-1 flex items-center gap-2 text-left shrink-0 z-10 w-full max-w-3xl self-center px-3" aria-label="Yönergeyi tekrar dinle">
         <KonusanAgiz className="w-14 h-14 shrink-0 drop-shadow" />
-        <span className="relative bg-white rounded-2xl px-3 py-2 shadow text-base font-bold text-slate-700 leading-snug">{yonerge}</span>
+        <span className="relative bg-white rounded-2xl px-3 py-2 shadow text-base font-bold text-slate-700 leading-snug">{yonerge} <span aria-hidden className="ml-1 opacity-70">🔊</span></span>
       </button>
     )}
     {/* geniş ekranda (web, tablet yatay) oyun ortada ve makul genişlikte kalsın */}
