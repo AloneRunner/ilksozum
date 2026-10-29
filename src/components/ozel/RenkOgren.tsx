@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { OyunCercevesi } from '../oyunKiti/OyunKiti.tsx';
 import { speak } from '../../services/speechService.ts';
 import { RENKLER, RENK_GRUPLARI, RENK_KODU, NESNELER, renkliUrl, renkliAdCumle, renkSoru, renkDogru, type Renk } from '../../data/renkGorselleri.ts';
-import { SecimOyunu, karistir, zar, konus, ikinciBasarisizlik, GERI_MESAJ, type Tur } from './ozelOrtak.tsx';
+import { SecimOyunu, karistir, zar, konus, ikinciBasarisizlik, GERI_MESAJ, KARISIK_GECME, kavramTamamla, kavramTamamMi, TamamRozeti, type Tur } from './ozelOrtak.tsx';
 
 // Renk Öğren (Gökhan Hoca, 2026-10-29): Kelime Öğren'deki gibi önce tanıma, sonra çalışılan renk hep aynı kalır,
 // öteki renkler değişir: 2 renk (10 soru) → 3 renk (10) → 4 renk (10). Aşama, 10 sorunun en az 8'i ilk denemede
@@ -36,6 +36,7 @@ const RenkOgren: React.FC<{ onBack: () => void; onSorular: () => void }> = ({ on
   const [renk, setRenk] = useState<Renk>(() => RENKLER.find((r) => (oku()[r] || 0) < 3) || RENKLER[0]);
   const [ekran, setEkran] = useState<Ekran>({ ad: 'merkez' });
   const [sonuc, setSonuc] = useState<string | null>(null);
+  const [tamam, setTamam] = useState(() => kavramTamamMi('renkOgren'));
   const gecilen = kayit[renk] || 0;
   const ogrenilen = RENKLER.filter((r) => (kayit[r] || 0) >= 3);
   const merkez = () => setEkran({ ad: 'merkez' });
@@ -86,6 +87,13 @@ const RenkOgren: React.FC<{ onBack: () => void; onSorular: () => void }> = ({ on
   if (ekran.ad === 'karisik') return (
     <SecimOyunu key="karisik" oyunId="renkOgrenKarisik" sayacAdi="Renk Öğren (Karışık)" baslik="Renkler · Karışık" emoji="🎨" onBack={merkez}
       secenekSayilari={[3, 4]}
+      onBitti={(dogru, toplam) => {
+        const gecti = dogru >= Math.ceil(toplam * KARISIK_GECME);
+        // Kavram tamamı: 10 rengin hepsi öğrenilmiş ve karışık %80
+        if (gecti && ogrenilen.length === RENKLER.length) { kavramTamamla('renkOgren'); setTamam(true); setSonuc(`🏅 Karışık: ${dogru}/${toplam}. Renkler tamamlandı!`); }
+        else setSonuc(gecti ? `✅ Karışık: ${dogru}/${toplam}. Bütün renkler öğrenilince Renkler tamamlanır (${ogrenilen.length}/${RENKLER.length}).`
+          : `Karışık: ${dogru}/${toplam}. ${Math.ceil(toplam * KARISIK_GECME)} gerekiyor; bir daha deneyelim.`);
+      }}
       turlariKur={(n) => {
         const sira: Renk[] = [];
         while (sira.length < KARISIK) { const r = ogrenilen[zar(ogrenilen.length)]; if (r !== sira[sira.length - 1]) sira.push(r); }
@@ -97,6 +105,7 @@ const RenkOgren: React.FC<{ onBack: () => void; onSorular: () => void }> = ({ on
   return (
     <OyunCercevesi baslik="Renkler" emoji="🎨" onBack={onBack}>
       <div className="absolute inset-0 overflow-y-auto px-3 pb-6 space-y-3 pt-2 max-w-xl mx-auto">
+        {tamam && <TamamRozeti ad="Renkler" />}
         <div className="rounded-3xl bg-white p-3 shadow-md">
           <div className="mb-2 text-sm font-bold text-slate-500">Hangi rengi çalışalım?</div>
           {RENK_GRUPLARI.map((grup, gi) => (

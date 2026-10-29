@@ -131,6 +131,17 @@ export const SecimOyunu: React.FC<{
   );
 };
 
+// Kavram tamamlandı rozeti (Gökhan Hoca, 2026-10-29: "karışık bölüm tamamlanınca kavram tamamlandı sayılsın, rozet verilsin").
+// Karışıkta ilk denemede %80 doğru → tamamlandı. Profil başına; Kavramlar menüsündeki kartta da 🏅 görünür.
+export const KARISIK_GECME = 0.8;
+export { kavramTamamMi, kavramTamamla } from '../../data/kavramTamam.ts';
+export const TamamRozeti: React.FC<{ ad: string }> = ({ ad }) => (
+  <div className="flex items-center gap-3 rounded-3xl bg-gradient-to-r from-amber-300 to-yellow-200 px-4 py-3 shadow-md">
+    <span className="text-5xl">🏅</span>
+    <span><span className="block text-xl font-black text-amber-900">{ad} tamamlandı!</span><span className="text-sm font-bold text-amber-800">Tekrar için istediğiniz bölümü yeniden açabilirsiniz.</span></span>
+  </div>
+);
+
 // Aşamalı çalışmalarda geri dönüş (Gökhan Hoca, 2026-10-29): aynı aşamada üst üste 2 kez ölçüt sağlanamazsa bir önceki
 // aşamaya, ilk aşamadaysa tanıtmaya dönülür. Geçince sayaç sıfırlanır. true = geri dönülmeli.
 export const ikinciBasarisizlik = (anahtar: string, gecti: boolean): boolean => {

@@ -3,7 +3,7 @@ import { OyunCercevesi } from '../oyunKiti/OyunKiti.tsx';
 import { colorRecognitionDataYeni } from '../../services/database/activities/yeni/renkTanimaData.ts';
 import type { ColorRecognitionRound } from '../../services/database/activities/reasoning/colorRecognitionData.ts';
 import { renkSiklari, sikTonu, renkEtiketi } from '../../data/rengiNe.ts';
-import { SecimOyunu, karistir, ikinciBasarisizlik, GERI_MESAJ, type Tur } from './ozelOrtak.tsx';
+import { SecimOyunu, karistir, ikinciBasarisizlik, GERI_MESAJ, KARISIK_GECME, kavramTamamla, kavramTamamMi, TamamRozeti, type Tur } from './ozelOrtak.tsx';
 import { speak } from '../../services/speechService.ts';
 
 // Rengi Ne? çalışması (Gökhan Hoca, 2026-10-29): 2 şık (10 soru) → 3 şık (10) → 4 şık (10) → karışık (25, art arda aynı renk yok).
@@ -62,6 +62,7 @@ const RengiNeOgren: React.FC<{ onBack: () => void; onSorular: () => void }> = ({
   const [gecilen, setGecilen] = useState(oku);
   const [ekran, setEkran] = useState<Ekran>({ ad: 'merkez' });
   const [sonuc, setSonuc] = useState<string | null>(null);
+  const [tamam, setTamam] = useState(() => kavramTamamMi('rengiNe'));
   const merkez = () => setEkran({ ad: 'merkez' });
 
   if (ekran.ad === 'tani') return <Tani onBack={merkez} />;
@@ -88,6 +89,10 @@ const RengiNeOgren: React.FC<{ onBack: () => void; onSorular: () => void }> = ({
   if (ekran.ad === 'karisik') return (
     <SecimOyunu key="karisik" oyunId="rengiNeKarisik" sayacAdi="Rengi Ne? (Karışık)" baslik="Rengi Ne? · Karışık" emoji="🍌" onBack={merkez}
       secenekSayilari={[4]}
+      onBitti={(dogru, toplam) => {
+        if (dogru >= Math.ceil(toplam * KARISIK_GECME)) { kavramTamamla('rengiNe'); setTamam(true); setSonuc(`🏅 Karışık: ${dogru}/${toplam}. Rengi Ne? tamamlandı!`); }
+        else setSonuc(`Karışık: ${dogru}/${toplam}. Tamamlamak için ${Math.ceil(toplam * KARISIK_GECME)} gerekiyor; bir daha deneyelim.`);
+      }}
       turlariKur={(n) => {
         // Art arda aynı renk sorulmaz; havuz bitince yeniden karışır
         const sira: ColorRecognitionRound[] = [];
@@ -105,6 +110,7 @@ const RengiNeOgren: React.FC<{ onBack: () => void; onSorular: () => void }> = ({
   return (
     <OyunCercevesi baslik="Rengi Ne?" emoji="🍌" onBack={onBack}>
       <div className="absolute inset-0 overflow-y-auto px-3 pb-6 space-y-3 pt-2 max-w-xl mx-auto">
+        {tamam && <TamamRozeti ad="Rengi Ne?" />}
         <p className="px-2 text-sm text-slate-600">Muz sarı, havuç turuncu… Fotoğraftaki nesnenin rengini bul. Önce 2 renk arasından, sonra 3 ve 4.</p>
         {sonuc && <div className="rounded-2xl bg-amber-50 border-2 border-amber-200 px-4 py-2 text-center font-bold text-amber-900">{sonuc}</div>}
         <button className={kart} onClick={() => setEkran({ ad: 'tani' })}>

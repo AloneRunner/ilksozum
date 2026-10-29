@@ -12,6 +12,7 @@ import OppositesIcon from "./icons/OppositesIcon.tsx";
 import SensesIcon from "./icons/SensesIcon.tsx";
 import { getCurrentLanguage, t } from "../i18n/index.ts";
 import { KAVRAM_KAPAK } from "../data/kavramKapak.ts";
+import { kavramTamamMi, CALISMA_ID } from "../data/kavramTamam.ts";
 import { useAppContext } from "../contexts/AppContext.ts";
 import { tasarimAl } from "./ui/tasarim.ts";
 import CosmicBackdrop from './ui/CosmicBackdrop.tsx';
@@ -705,6 +706,9 @@ const ConceptActivitiesMenuScreen: React.FC<ConceptActivitiesMenuScreenProps> = 
                     : 'rounded-3xl bg-white border border-slate-200 shadow-[0_6px_16px_rgba(15,23,42,0.08)] hover:shadow-[0_10px_24px_rgba(15,23,42,0.14)]'
                     } ${isDisabled ? 'opacity-40 cursor-not-allowed' : tas ? '' : 'hover:-translate-y-0.5 active:scale-95'}`}
                 >
+                  {CALISMA_ID[activity.type] && kavramTamamMi(CALISMA_ID[activity.type]!) && (
+                    <span className="absolute right-1.5 top-1.5 z-10 rounded-full bg-amber-300 px-1.5 text-xl shadow" title="Tamamlandı">🏅</span>
+                  )}
                   <div className="grid grid-cols-2 gap-px bg-slate-100 aspect-[2/1]">
                     {kapak ? kapak.map((u) => (
                       <img key={u} src={u} alt="" loading="lazy" draggable={false} className="w-full h-full object-cover bg-white" />

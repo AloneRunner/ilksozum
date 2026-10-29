@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { OyunCercevesi } from '../oyunKiti/OyunKiti.tsx';
 import { speak } from '../../services/speechService.ts';
-import { SecimOyunu, karistir, zar, konus, ikinciBasarisizlik, GERI_MESAJ, type Tur } from './ozelOrtak.tsx';
+import { SecimOyunu, karistir, zar, konus, ikinciBasarisizlik, GERI_MESAJ, KARISIK_GECME, kavramTamamla, kavramTamamMi, TamamRozeti, type Tur } from './ozelOrtak.tsx';
 
 // Şekil Öğren (Gökhan Hoca, 2026-10-29): gruplarla — önce daire, kare, üçgen; sonra dikdörtgen, oval, yıldız.
 // Tanı: her şekil 4 örnekle (farklı renk, boyut, yön). Aşamalar 2 → 3 → 4 şık, 10'ar soru, 8/10 ile geçilir; sonra karışık 35 soru.
@@ -78,6 +78,7 @@ const SekilCalis: React.FC<{ onBack: () => void; onSorular: () => void }> = ({ o
   const [grup, setGrup] = useState(() => ((oku()[0] || 0) >= 3 ? 1 : 0));
   const [ekran, setEkran] = useState<Ekran>({ ad: 'merkez' });
   const [sonuc, setSonuc] = useState<string | null>(null);
+  const [tamam, setTamam] = useState(() => kavramTamamMi('sekilCalis'));
   const g = GRUPLAR[grup];
   const gg = gecilen[grup] || 0;
   const ikisiTamam = (gecilen[0] || 0) >= 3 && (gecilen[1] || 0) >= 3;
@@ -126,6 +127,10 @@ const SekilCalis: React.FC<{ onBack: () => void; onSorular: () => void }> = ({ o
   if (ekran.ad === 'karisik') return (
     <SecimOyunu key="karisik" oyunId="sekilCalisKarisik" sayacAdi="Şekil Öğren (Karışık)" baslik="Şekiller · Karışık" emoji="🔷" onBack={merkez}
       secenekSayilari={[4]}
+      onBitti={(dogru, toplam) => {
+        if (dogru >= Math.ceil(toplam * KARISIK_GECME)) { kavramTamamla('sekilCalis'); setTamam(true); setSonuc(`🏅 Karışık: ${dogru}/${toplam}. Şekiller tamamlandı!`); }
+        else setSonuc(`Karışık: ${dogru}/${toplam}. Tamamlamak için ${Math.ceil(toplam * KARISIK_GECME)} gerekiyor; bir daha deneyelim.`);
+      }}
       turlariKur={() => {
         const sira: Sekil[] = [];
         while (sira.length < KARISIK) { const s = HEPSI[zar(HEPSI.length)]; if (s !== sira[sira.length - 1]) sira.push(s); }
@@ -137,6 +142,7 @@ const SekilCalis: React.FC<{ onBack: () => void; onSorular: () => void }> = ({ o
   return (
     <OyunCercevesi baslik="Şekiller" emoji="🔷" onBack={onBack}>
       <div className="absolute inset-0 overflow-y-auto px-3 pb-6 space-y-3 pt-2 max-w-xl mx-auto">
+        {tamam && <TamamRozeti ad="Şekiller" />}
         <div className="grid grid-cols-2 gap-2">
           {GRUPLAR.map((x, i) => (
             <button key={x.ad} onClick={() => { setGrup(i); setSonuc(null); }}
