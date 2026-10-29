@@ -30,14 +30,12 @@ export interface WorksheetDef {
   component?: 'whose-is-this' | 'color-recognition' | 'whats-missing';
 }
 
-// Turkish question generator for object recognition activities
+// Nesne tanıma sorusu: uygulamadaki kalıpla "Armut hangisi?" (eskiden "Hangisi armutdır?": ek uyumu yanlıştı)
 const tq = (r: any): string => {
   const correct = r.options?.find((o: any) => o.isCorrect);
   if (!correct) return r.question;
   const word: string = correct.word ?? '';
-  const lastVowel = word.match(/[aeıioöuü]/gi)?.pop()?.toLowerCase() ?? 'a';
-  const suffix = ['e', 'i', 'ö', 'ü'].includes(lastVowel) ? 'dir' : 'dır';
-  return `Hangisi ${word}${suffix}?`;
+  return `${word.charAt(0).toLocaleUpperCase('tr-TR')}${word.slice(1)} hangisi?`;
 };
 
 export const WORKSHEET_REGISTRY: WorksheetDef[] = [
