@@ -1267,6 +1267,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
             {t('settingsEx.privacy.read', 'Oku')}
                       </button>
                     </SettingsRow>
+                  <p className="px-1 text-sm text-slate-500">Özel eğitim öğretmeni Gökhan Laçin'in katkılarıyla hazırlanmıştır. 🙏</p>
                 </div>
             </div>
         </div>

@@ -8,6 +8,9 @@ import { organCizimi } from '../services/nesneGorsel.ts';
 import KonusanAgiz from './agiz/KonusanAgiz.tsx';
 import { renkliAd } from '../data/renkGorselleri.ts';
 import { BUYUK_IDLER, KUCUK_IDLER } from '../data/buyukKucuk.ts';
+import Terazi from './ozel/Terazi.tsx';
+// Ağır/Hafif: ağır görsellerin kimlikleri (veride tek sayılar 6201-6219); etiket sabit "ağır / hafif" (Gökhan Hoca)
+const AGIR_IDLER = new Set([6201, 6203, 6205, 6207, 6209, 6211, 6213, 6215, 6217, 6219]);
 import { ParlakMatCiz } from './ozel/ParlakMatCalis.tsx';
 // Şekiller etiketi: veride hepsi "şekil" yazıyor; görsel kimliğinden şeklin adı (7201 + sıra + 7 × renk; Gökhan Hoca 2026-10-29)
 const SEKIL_SIRASI = ['daire', 'dikdörtgen', 'kalp', 'kare', 'oval', 'üçgen', 'yıldız'];
@@ -710,7 +713,7 @@ const SunIcon: React.FC<{ className?: string }> = ({ className }) => <svg xmlns=
 
 
 // --- Interactive Helper Component ---
-const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ activityType }) => {
+const InteractiveConceptHelper: React.FC<{ activityType: ActivityType; secenekler?: ConceptRound['options'] }> = ({ activityType, secenekler }) => {
     const uniqueId = useId();
     // States for various helpers
     const [scale, setScale] = useState(1);
@@ -874,7 +877,13 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                 const translateY = (weight - 0.2) * 20;
                 const lightText = getLocalizedConcept('hafif');
                 const heavyText = getLocalizedConcept('ağır');
-                return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className="relative w-24 h-24"> <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-4 bg-lime-800/30 rounded-full" style={{ transform: `translateX(-50%) scale(${1 + weight / 2}, ${0.5 + weight / 4})`, opacity: weight * 0.8 }} /> <div className="absolute inset-0 bg-amber-600 border-4 border-amber-800 rounded-lg transition-transform duration-300" style={{ transform: `translateY(${translateY}px)` }}></div> </div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setWeight(w => Math.max(0.2, w - 0.2)); speak(lightText); }} className={`${baseButtonClasses} bg-red-500`} disabled={weight <= 0.2}><MinusCircleIcon className="w-10 h-10" /></button> <button onClick={() => { setWeight(w => Math.min(1.0, w + 0.2)); speak(heavyText); }} className={`${baseButtonClasses} bg-green-500`} disabled={weight >= 1.0}><PlusCircleIcon className="w-10 h-10" /></button> </div> </div>);
+                // Gökhan Hoca (2026-10-29): terazi — sorudaki iki nesne kefelere konur, ağır olan aşağı iner
+                const [o1, o2] = secenekler || [];
+                if (o1 && o2 && AGIR_IDLER.has(Number(o1.id)) !== AGIR_IDLER.has(Number(o2.id))) {
+                    return (<div className="w-full text-center"> <Terazi sol={o1.imageUrl} sag={o2.imageUrl} egim={AGIR_IDLER.has(Number(o1.id)) ? -1 : 1} className="mx-auto w-full max-w-xs h-auto" /> <p className="text-sm font-bold text-slate-600">Ağır olan aşağı iner.</p> </div>);
+                }
+                void translateY; void lightText; void heavyText;
+                return null;
             }
             case ActivityType.DerinSig: {
                 const deepLabel = formatConcept('derin');
@@ -2467,7 +2476,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 const i18nObjKey = `objects.${option.audioKey}`;
                 const i18nLabel = lookupLocale(i18nObjKey, currentLang as any);
                 // Renkler: şıklar aynı nesne, etikette rengi de yazsın ("kupa" değil "yeşil kupa"; Gökhan Hoca 2026-10-29)
-                const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : roundData.activityType === ActivityType.BigSmall ? (BUYUK_IDLER.has(Number(option.id)) ? 'büyük' : KUCUK_IDLER.has(Number(option.id)) ? 'küçük' : undefined) : roundData.activityType === ActivityType.LongShort && Number(option.id) >= 2401 && Number(option.id) <= 2420 ? `${Number(option.id) % 2 === 0 ? 'uzun' : 'kısa'} ${option.word}` : roundData.activityType === ActivityType.ThinThick && Number(option.id) >= 2001 && Number(option.id) <= 2020 ? `${Number(option.id) % 2 === 1 ? 'kalın' : 'ince'} ${option.word}` : roundData.activityType === ActivityType.WideNarrow && (GENIS_IDLER.has(Number(option.id)) || DAR_IDLER.has(Number(option.id))) ? `${GENIS_IDLER.has(Number(option.id)) ? 'geniş' : 'dar'} ${option.word}` : roundData.activityType === ActivityType.DerinSig && Number(option.id) >= 2901 && Number(option.id) <= 2920 ? (Number(option.id) % 2 === 1 ? `derin ${option.word}` : option.word === 'tabak' ? 'düz tabak' : `sığ ${option.word}`) : undefined;
+                const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : roundData.activityType === ActivityType.BigSmall ? (BUYUK_IDLER.has(Number(option.id)) ? 'büyük' : KUCUK_IDLER.has(Number(option.id)) ? 'küçük' : undefined) : roundData.activityType === ActivityType.LongShort && Number(option.id) >= 2401 && Number(option.id) <= 2420 ? `${Number(option.id) % 2 === 0 ? 'uzun' : 'kısa'} ${option.word}` : roundData.activityType === ActivityType.ThinThick && Number(option.id) >= 2001 && Number(option.id) <= 2020 ? `${Number(option.id) % 2 === 1 ? 'kalın' : 'ince'} ${option.word}` : roundData.activityType === ActivityType.WideNarrow && (GENIS_IDLER.has(Number(option.id)) || DAR_IDLER.has(Number(option.id))) ? `${GENIS_IDLER.has(Number(option.id)) ? 'geniş' : 'dar'} ${option.word}` : roundData.activityType === ActivityType.DerinSig && Number(option.id) >= 2901 && Number(option.id) <= 2920 ? (Number(option.id) % 2 === 1 ? `derin ${option.word}` : option.word === 'tabak' ? 'düz tabak' : `sığ ${option.word}`) : roundData.activityType === ActivityType.HeavyLight && Number(option.id) >= 6201 && Number(option.id) <= 6220 ? (AGIR_IDLER.has(Number(option.id)) ? 'ağır' : 'hafif') : undefined;
                 const displayWord = renkliEtiket || i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                 const spokenWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                 return (
@@ -2602,7 +2611,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         // Prefer canonical object label from i18n using the image's audioKey.
                         const i18nObjKey = `objects.${option.audioKey}`;
                         const i18nLabel = lookupLocale(i18nObjKey, currentLang as any);
-                        const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : roundData.activityType === ActivityType.BigSmall ? (BUYUK_IDLER.has(Number(option.id)) ? 'büyük' : KUCUK_IDLER.has(Number(option.id)) ? 'küçük' : undefined) : roundData.activityType === ActivityType.LongShort && Number(option.id) >= 2401 && Number(option.id) <= 2420 ? `${Number(option.id) % 2 === 0 ? 'uzun' : 'kısa'} ${option.word}` : roundData.activityType === ActivityType.ThinThick && Number(option.id) >= 2001 && Number(option.id) <= 2020 ? `${Number(option.id) % 2 === 1 ? 'kalın' : 'ince'} ${option.word}` : roundData.activityType === ActivityType.WideNarrow && (GENIS_IDLER.has(Number(option.id)) || DAR_IDLER.has(Number(option.id))) ? `${GENIS_IDLER.has(Number(option.id)) ? 'geniş' : 'dar'} ${option.word}` : roundData.activityType === ActivityType.DerinSig && Number(option.id) >= 2901 && Number(option.id) <= 2920 ? (Number(option.id) % 2 === 1 ? `derin ${option.word}` : option.word === 'tabak' ? 'düz tabak' : `sığ ${option.word}`) : undefined;
+                        const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : roundData.activityType === ActivityType.BigSmall ? (BUYUK_IDLER.has(Number(option.id)) ? 'büyük' : KUCUK_IDLER.has(Number(option.id)) ? 'küçük' : undefined) : roundData.activityType === ActivityType.LongShort && Number(option.id) >= 2401 && Number(option.id) <= 2420 ? `${Number(option.id) % 2 === 0 ? 'uzun' : 'kısa'} ${option.word}` : roundData.activityType === ActivityType.ThinThick && Number(option.id) >= 2001 && Number(option.id) <= 2020 ? `${Number(option.id) % 2 === 1 ? 'kalın' : 'ince'} ${option.word}` : roundData.activityType === ActivityType.WideNarrow && (GENIS_IDLER.has(Number(option.id)) || DAR_IDLER.has(Number(option.id))) ? `${GENIS_IDLER.has(Number(option.id)) ? 'geniş' : 'dar'} ${option.word}` : roundData.activityType === ActivityType.DerinSig && Number(option.id) >= 2901 && Number(option.id) <= 2920 ? (Number(option.id) % 2 === 1 ? `derin ${option.word}` : option.word === 'tabak' ? 'düz tabak' : `sığ ${option.word}`) : roundData.activityType === ActivityType.HeavyLight && Number(option.id) >= 6201 && Number(option.id) <= 6220 ? (AGIR_IDLER.has(Number(option.id)) ? 'ağır' : 'hafif') : undefined;
                         const hintDisplayWord = renkliEtiket || i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                         const hintSpokenWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
 
@@ -2711,7 +2720,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     <div className="hidden landscape:block landscape:w-5/12 landscape:flex-grow landscape:self-center">
                         {isHelperVisible && supportedHelpers.includes(roundData.activityType) && (
                             <div className="mt-4 animate-fade-in">
-                                <InteractiveConceptHelper activityType={roundData.activityType} />
+                                <InteractiveConceptHelper activityType={roundData.activityType} secenekler={roundData.options} />
                             </div>
                         )}
                     </div>
@@ -2721,7 +2730,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                     <div className="w-full flex items-center justify-center landscape:hidden">
                         {isHelperVisible && supportedHelpers.includes(roundData.activityType) && (
                             <div className="w-full max-w-sm mb-2 animate-fade-in">
-                                <InteractiveConceptHelper activityType={roundData.activityType} />
+                                <InteractiveConceptHelper activityType={roundData.activityType} secenekler={roundData.options} />
                             </div>
                         )}
                     </div>

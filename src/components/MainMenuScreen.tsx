@@ -443,6 +443,8 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
 
           {/* Duyurular ve ses yardımı: küçük düğmeler, içerik pencerede */}
           <BilgiDugmeleri theme={theme} />
+          {/* Teşekkür (Kaan, 2026-10-29; soyadını hoca doğruladı: Laçin) */}
+          {lang === 'tr' && <p className={`text-center text-[11px] font-semibold ${subtitleColorClass} opacity-80`}>Özel eğitim öğretmeni Gökhan Laçin'in katkılarıyla hazırlanmıştır. 🙏</p>}
         <YenilikPenceresi onDestek={onSelectSettings ? destegeGit : undefined} />
         </div>
       </div>

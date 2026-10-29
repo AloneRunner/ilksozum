@@ -33,7 +33,8 @@ export interface Secenek { id: string; url?: string; emoji?: string; yazi?: stri
 // ustYazi: resmin yerine büyük yazı (İşlevsel Okuma: kelimeyi oku, resmini bul); sahne: serbest içerik (Toplama: iki grup nesne)
 // genis: şıklar yatay (banknot gibi 2:1), daha geniş yer kaplasın
 // altAlta: şıklar tek sütun (Uzun/Kısa: yatay eşyalar alt alta, sol uçlar hizalı)
-export interface Tur { soru: string; gorsel?: string; ustYazi?: string; sahne?: React.ReactNode; genis?: boolean; altAlta?: boolean; secenekler: Secenek[]; dogruId: string; dogruSoz: string }
+// sahne işlev olabilir: ipucuKullan çağrılırsa o soru ilk denemede doğru sayılmaz (hoca: ipucuyla bulunan yanlış sayılır; Ağır/Hafif terazisi)
+export interface Tur { soru: string; gorsel?: string; ustYazi?: string; sahne?: React.ReactNode | ((ipucuKullan: () => void) => React.ReactNode); genis?: boolean; altAlta?: boolean; secenekler: Secenek[]; dogruId: string; dogruSoz: string }
 
 export const SecimOyunu: React.FC<{
   oyunId: string; sayacAdi: string; baslik: string; emoji: string; onBack: () => void;
@@ -107,7 +108,7 @@ export const SecimOyunu: React.FC<{
         {ust}
         <div className={`flex-1 w-full max-w-4xl flex ${tur.gorsel ? 'flex-col landscape:flex-row' : 'flex-col'} items-center justify-center gap-4`}>
           {tur.gorsel && <img key={tur.gorsel} src={tur.gorsel} alt="" draggable={false} className="shrink-0 w-[min(100%,46vh)] sm-landscape:w-[min(46vw,60vh)] aspect-square object-cover rounded-3xl shadow-xl bg-white" />}
-          {tur.sahne && <div key={i} className="shrink-0 w-full flex justify-center">{tur.sahne}</div>}
+          {tur.sahne && <div key={i} className="shrink-0 w-full flex justify-center">{typeof tur.sahne === 'function' ? tur.sahne(() => { ilkDeneme.current = false; }) : tur.sahne}</div>}
           {tur.ustYazi && <div key={tur.ustYazi} className={`shrink-0 max-w-full rounded-3xl bg-white px-8 py-4 shadow-xl font-black text-slate-800 tracking-wide ${tur.ustYazi.length > 9 ? 'text-4xl sm-landscape:text-3xl lg:text-5xl' : 'text-6xl sm-landscape:text-5xl lg:text-7xl'}`}>{tur.ustYazi}</div>}
           {/* Resimli şıklar yatay telefonda ekrana sığsın: her şık en çok ~50vh */}
           <div className={`grid gap-3 w-full ${tur.altAlta ? 'grid-cols-1' : tur.secenekler.length <= 2 ? 'grid-cols-2' : tur.secenekler.length === 3 ? 'grid-cols-3' : 'grid-cols-2 landscape:grid-cols-4'} ${tur.gorsel ? 'max-w-md' : 'max-w-3xl'}`}
