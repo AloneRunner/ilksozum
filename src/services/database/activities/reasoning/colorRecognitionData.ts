@@ -8,6 +8,7 @@ export interface ColorRecognitionRound {
   word: string;         // nesnenin adı (TR)
   correctColor: string; // renk key'i
   speech?: { tr: { question: string; correct: string; wrong: string } };
+  haricRenkler?: string[]; // şık olarak gösterilmez (penguen ve panda siyah-beyaz: "beyaz" de doğru sayılabilir)
 }
 
 // Renk seçenekleri — sabit liste, her turda 4 tanesi gösterilir (doğru + 3 rastgele)
