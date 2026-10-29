@@ -15,6 +15,7 @@ interface Props {
   onIbreDokun?: (i: Ibre) => void;  // sürükleme yokken ibreye dokunma (akrep/yelkovan tanıma)
   vurgu?: Ibre | null;
   hayalet?: Saat | null;            // ipucu: hedef saatin soluk ibreleri
+  ibresiz?: boolean;                // çalışma kâğıdı: ibreleri çocuk çizer
   className?: string;
 }
 
@@ -34,7 +35,7 @@ const CENTIKLER = Array.from({ length: 60 }, (_, i) => {
   return { x1: C + r1 * Math.cos(a), y1: C + r1 * Math.sin(a), x2: C + r2 * Math.cos(a), y2: C + r2 * Math.sin(a), buyuk };
 });
 
-const SaatYuzu: React.FC<Props> = ({ saat, surukle = 'yok', adim = 5, onDegis, onBirak, onIbreDokun, vurgu, hayalet, className }) => {
+const SaatYuzu: React.FC<Props> = ({ saat, surukle = 'yok', adim = 5, onDegis, onBirak, onIbreDokun, vurgu, hayalet, ibresiz, className }) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const tutulan = useRef<Ibre | null>(null);
   const anlik = useRef<Saat>(saat);
@@ -110,8 +111,8 @@ const SaatYuzu: React.FC<Props> = ({ saat, surukle = 'yok', adim = 5, onDegis, o
       ))}
       {hayalet && ibre(akrepAci(hayalet), AKREP_BOY, '#dc2626', 18, 'akrep', true)}
       {hayalet && ibre(yelkovanAci(hayalet), YELKOVAN_BOY, '#2563eb', 10, 'yelkovan', true)}
-      {ibre(akrepAci(saat), AKREP_BOY, '#dc2626', 18, 'akrep')}
-      {ibre(yelkovanAci(saat), YELKOVAN_BOY, '#2563eb', 10, 'yelkovan')}
+      {!ibresiz && ibre(akrepAci(saat), AKREP_BOY, '#dc2626', 18, 'akrep')}
+      {!ibresiz && ibre(yelkovanAci(saat), YELKOVAN_BOY, '#2563eb', 10, 'yelkovan')}
       <circle cx={C} cy={C} r={14} fill="#1f2937" />
     </svg>
   );

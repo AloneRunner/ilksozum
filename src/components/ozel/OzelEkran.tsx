@@ -8,8 +8,10 @@ import { SecimOyunu, Sekmeler, karistir, sikKur, konus, type Tur } from './ozelO
 const SosyalOyku = lazy(() => import('./SosyalOyku.tsx'));
 const OzBakim = lazy(() => import('./OzBakim.tsx'));
 const KediyiBul = lazy(() => import('./KediyiBul.tsx'));
+const SesinYeri = lazy(() => import('./SesinYeri.tsx'));
+const IslevselOkuma = lazy(() => import('./IslevselOkuma.tsx'));
 
-export type OzelEkranId = 'sosyalOyku' | 'ozBakim' | 'nasilHisseder' | 'benSenO' | 'mevsimler' | 'kediyiBul';
+export type OzelEkranId = 'sosyalOyku' | 'ozBakim' | 'nasilHisseder' | 'benSenO' | 'mevsimler' | 'kediyiBul' | 'sesinYeri' | 'islevselOkuma';
 
 // --- Nasıl hisseder? Durum resmi + duygu yüzleri (2 → 3 → 4 şık) ---
 const NasilHisseder: React.FC<{ onBack: () => void }> = ({ onBack }) => (
@@ -94,6 +96,8 @@ const OzelEkran: React.FC<{ ekran: OzelEkranId; onBack: () => void }> = ({ ekran
     {ekran === 'nasilHisseder' && <NasilHisseder onBack={onBack} />}
     {ekran === 'benSenO' && <BenSenO onBack={onBack} />}
     {ekran === 'mevsimler' && <Mevsimler onBack={onBack} />}
+    {ekran === 'sesinYeri' && <SesinYeri onBack={onBack} />}
+    {ekran === 'islevselOkuma' && <IslevselOkuma onBack={onBack} />}
   </Suspense>
 );
 

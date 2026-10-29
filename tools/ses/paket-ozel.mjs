@@ -15,6 +15,10 @@ for (const d of V.DURUMLAR) { metinler.push(`${d.durum} Nasıl hisseder?`, d.dog
 for (const g of V.ZAMIR_GRUPLARI) for (const z of g) { metinler.push(z.soz, `Evet! ${z.soz}`, V.zamirSoru(z)); }
 for (const m of V.MEVSIMLER) { metinler.push(m.ad, `Hangisi ${m.ad.toLocaleLowerCase('tr-TR')}?`, m.agacSoz, m.cocukSoz, `Evet! ${m.agacSoz}`, `Evet! ${m.cocukSoz}`); }
 for (const k of V.KEDILER) metinler.push(`Buldun! ${k.yer}`);
+// Sesin Yeri ve İşlevsel Okuma (sözcüklerin kendisi ve "Evet, bu elma." zaten kayıtlı)
+metinler.push('Bir ses seç.', V.OKUMA_SORU, V.YAZI_SORU);
+for (const h of V.SES_HARFLERI) metinler.push(V.sesinYeriSoru(h));
+for (const y of Object.keys(V.YERLER)) metinler.push(V.sesinYeriDogru(y));
 
 // Uygulamanın arama kuralı (speechService.kayitBul / cumleler)
 const liste = fs.readFileSync('src/data/sesListesi.ts', 'utf8');

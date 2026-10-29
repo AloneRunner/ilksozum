@@ -131,3 +131,14 @@ export const KEDILER: { url: string; x: number; y: number; r: number; yer: strin
   { url: g('saklanan/7'), x: 0.49, y: 0.52, r: 0.08, yer: 'Kedi kitapların arasında.' },
   { url: g('saklanan/8'), x: 0.43, y: 0.75, r: 0.07, yer: 'Kedi bankın altında.' },
 ];
+
+// --- Sesin yeri (Gökhan Hoca: "Hangisinde A sesi var", sonra sesin yeri başta/ortada/sonda; kısa sözcükten uzuna) ---
+export type Yer = 'bas' | 'orta' | 'son';
+export const YERLER: Record<Yer, string> = { bas: 'Başta', orta: 'Ortada', son: 'Sonda' };
+export const SES_HARFLERI = 'ANETİLOKURIMÜSÖYDZÇBGCŞPHVFJ'.split(''); // ANETİL grup sırası (constants LETTER_GROUPS); Ğ yok: kendi sesi yok, başta hiç geçmez
+export const sesinYeriSoru = (harf: string) => `${harf} sesi nerede?`;
+export const sesinYeriDogru = (y: Yer) => `Evet, ${YERLER[y].toLocaleLowerCase('tr-TR')}.`;
+
+// --- İşlevsel okuma (Gökhan Hoca: resim–sözcük eşleme, çocuğun sevdiği yiyecek ve içeceklerle) ---
+export const OKUMA_SORU = 'Ne yazıyor? Resmini bul.';
+export const YAZI_SORU = 'Bu ne? Yazısını bul.';

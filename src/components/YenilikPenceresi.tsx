@@ -16,7 +16,8 @@ const YENILIKLER: { emoji: string; baslik: string; metin: string }[] = [
   { emoji: '🕒', baslik: 'Saat Merkezi', metin: 'Akrep ve yelkovanı tanı, saatle oyna, tam saat, buçuk, çeyrek geçiyor, çeyrek var, dijital saat ve parmakla saati kur: 10 bölüm. Kavramlar › Zaman ya da Sayılar menüsünde.' },
   { emoji: '👩‍🏫', baslik: 'Özel eğitimcilerin önerisi', metin: 'Ayarlar › "Yanlışta kavramı olumsuzla": yanlış seçince "Hayır, bu atkı kısa." yerine "Hayır, bu atkı uzun değil." denir.' },
   { emoji: '🎞️', baslik: 'Olay Sıralama yenilendi', metin: 'Yanlış kart sallanır, sıra bozulmaz. Önce iki kartlık kolay sıralar gelir.' },
-  { emoji: '🔤', baslik: 'Harf ve ses etkinlikleri', metin: '"A sesi var mı?" soruları önce kısa (1–2 heceli) kelimelerle başlar, sonra uzar.' },
+  { emoji: '🔤', baslik: 'Harf ve ses etkinlikleri', metin: '"A sesi var mı?" soruları önce kısa (1–2 heceli) kelimelerle başlar, sonra uzar. Yeni: Sesin Yeri (ses başta mı, ortada mı, sonda mı?) ve İşlevsel Okuma (çocuğun sevdiği yiyeceklerin yazısını okuyup resmini bulma): Harfler ve Okuma menüsünde.' },
+  { emoji: '🖨️', baslik: 'Saat çalışma kâğıtları', metin: 'Çıktı Merkezi › Saat Kâğıtları: saat kaç, ibreleri çiz, eşleştir; tam, buçuk, çeyrek, 5 dakika. Cevap anahtarıyla.' },
   { emoji: '🔊', baslik: '1.400\'den fazla yeni ses', metin: 'Yeni cümleler de gerçek bir insan sesiyle.' },
 ];
 

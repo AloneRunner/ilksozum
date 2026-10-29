@@ -5,7 +5,7 @@ import { ActivityType } from '../types.ts';
 
 export type BeceriId = 'harfler' | 'sayilar' | 'dusunme' | 'el' | 'konusma' | 'oyunOdasi';
 export type BeceriEkran = 'basara' | 'basara2' | 'sesTaklit' | 'besNBirK' | 'agiz' | 'tuvalet' | 'saat'
-  | 'sosyalOyku' | 'ozBakim' | 'nasilHisseder' | 'benSenO' | 'mevsimler' | 'kediyiBul'; // özel eğitim (ozel/OzelEkran.tsx)
+  | 'sosyalOyku' | 'ozBakim' | 'nasilHisseder' | 'benSenO' | 'mevsimler' | 'kediyiBul' | 'sesinYeri' | 'islevselOkuma'; // özel eğitim (ozel/OzelEkran.tsx)
 
 interface OgeTemel { emoji: string; baslik: string; alt: string; sadeceTr?: boolean }
 export type BeceriOge =
@@ -38,6 +38,8 @@ export const BECERILER: Beceri[] = [
       { tur: 'harf', tip: ActivityType.FindTheLetter, emoji: '🔍', baslik: 'Harf Bulma', alt: 'Kelimedeki harfi bul' },
       { tur: 'harf', tip: ActivityType.SoundPresence, emoji: '👂', baslik: 'Seste Harf Var mı?', alt: 'Resmin adında o ses var mı?' },
       { tur: 'harf', tip: ActivityType.FindTheSoundInImage, emoji: '🖼️', baslik: 'Görselde Sesi Bul', alt: 'O sesi içeren resmi seç' },
+      { tur: 'ekran', ekran: 'sesinYeri', emoji: '📍', baslik: 'Sesin Yeri', alt: 'Ses başta mı, ortada mı, sonda mı?', sadeceTr: true },
+      { tur: 'ekran', ekran: 'islevselOkuma', emoji: '🍎', baslik: 'İşlevsel Okuma', alt: 'Sevdiği yiyeceklerin yazısını oku, resmini bul', sadeceTr: true },
       { tur: 'harf', tip: ActivityType.Syllabification, emoji: '👏', baslik: 'Heceleme', alt: 'Kelimeyi hecelerine ayır', sadeceTr: true },
       { tur: 'harf', tip: ActivityType.EmbeddedStory, emoji: '📚', baslik: 'Hikâye Zamanı', alt: 'Harfle ilgili kısa hikâyeler', sadeceTr: true },
       e(ActivityType.LetterTracing, '✍️', 'Harf Çizgisi', 'Harfin üzerinden parmağınla git'),

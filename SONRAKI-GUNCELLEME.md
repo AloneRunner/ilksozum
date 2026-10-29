@@ -25,7 +25,8 @@ Kaan: "Bir sonraki pakette yapalım, çok önemli. Görsel de lazım olacak." Uy
 Sosyal Öyküler (5 öykü), Kendine Bakım (el yıkama, diş, giyinme: Adım Adım + Sırala), Nasıl Hisseder? (8 durum),
 Ben-Sen-O (6 kart), Mevsimler (Tanı + Soru) Konuşma ve Anlama menüsünde; Kediyi Bul (8 sahne) Düşünme menüsünde.
 Kod: `src/components/ozel/`. Sesler: `tools/ses/paketler/ozel-egitim.json` (133 cümle, ~2.900 karakter), **henüz üretilmedi** (Kaan onayı).
-Kalanlar: Ne yapıyor?, yönerge takibi, kişisel bilgiler, işlevsel okuma, sesin yeri, para (Kaan fotoğraflayacak), takvim, toplama, dinle-bul.
+**Güncelleme (29 Ekim akşam):** 133 ses üretildi (d74766fd). Gökhan Hoca'nın kalan iki isteği yapıldı: Sesin Yeri (harf seç → "Elma. E sesi nerede?" başta/ortada/sonda) ve İşlevsel Okuma (aile sevdiği yiyecek/içecekleri seçer; Tanı / Oku: yazı → resim / Yazıyı bul: resim → yazı), Harfler ve Okuma menüsünde. Çıktı Merkezi'ne Saat Kâğıtları (saat kaç, ibreleri çiz, eşleştir). Yeni 36 ses `ozel-egitim.json`'da (~480 kredi), Kaan onayı bekliyor.
+Kalanlar: Ne yapıyor?, yönerge takibi, kişisel bilgiler, para (Kaan fotoğraflayacak), takvim, toplama, dinle-bul.
 
 ## 1. 9.1.0 paketinde kalan ve sonradan düzeltilenler
 
