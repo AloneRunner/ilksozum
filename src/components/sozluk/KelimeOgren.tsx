@@ -13,7 +13,10 @@ import { ilkKelimelerOnde } from '../../data/ilkKelimeler.ts';
 // Kategoriye dokununca bu sayfa açılır; eski 8 soruluk test "Hızlı Sorular" olarak durur. Program Modu etkilenmez.
 
 interface Oge { kelime: string; url: string }
-interface Kayit { ogrenilen: string[]; sonuclar: boolean[] } // sonuclar: sıradaki kelimenin ilk deneme sonuçları
+// sonuclar: sıradaki kelimenin ilk deneme sonuçları; secili: ailenin seçtiği başlangıç kelimesi (Gökhan Hoca: "isteyen istediği meyveden başlasın")
+interface Kayit { ogrenilen: string[]; sonuclar: boolean[]; secili?: string }
+const siradakiBul = (ogeler: Oge[], k: Kayit): Oge | null =>
+  ogeler.find(o => o.kelime === k.secili && !k.ogrenilen.includes(o.kelime)) || ogeler.find(o => !k.ogrenilen.includes(o.kelime)) || null;
 
 const OGREN_TUR = 10;        // bir oturumda deneme
 const KARISIK_TUR = 20;
@@ -98,10 +101,14 @@ const KelimeOgren: React.FC<{ katId: string; katAd: string; onBack: () => void; 
   const kaydet = (k: Kayit) => { setKayit(k); yaz(katId, k); };
 
   const ogrenilenler = ogeler.filter(o => kayit.ogrenilen.includes(o.kelime));
-  const siradaki = ogeler.find(o => !kayit.ogrenilen.includes(o.kelime)) || null;
+  const siradaki = siradakiBul(ogeler, kayit);
   const sifirla = () => { if (window.confirm(`${katAd}: öğrenilen kelimeler sıfırlansın mı?`)) kaydet({ ogrenilen: [], sonuclar: [] }); };
+  // Başka kelime seçilince o kelimenin deneme penceresi baştan başlar
+  const baslangicSec = (kelime: string) => { if (kelime !== siradaki?.kelime) kaydet({ ...kayit, secili: kelime, sonuclar: [] }); };
+  const ogrenilmemis = ogeler.filter(o => !kayit.ogrenilen.includes(o.kelime));
 
-  if (ekran === 'tani') return <Tani katAd={katAd} ogeler={hepsi} onBack={() => setEkran('merkez')} onBasla={() => setEkran('ogren')} />;
+  if (ekran === 'tani') return <Tani katAd={katAd} ogeler={hepsi} onBack={() => setEkran('merkez')}
+    onBasla={(k) => { if (k && ogrenilmemis.some(o => o.kelime === k)) baslangicSec(k); setEkran('ogren'); }} />;
   if (ekran === 'ogren' && siradaki) return <TekTekOgren katAd={katAd} ogeler={ogeler} kayit={kayit} kaydet={kaydet} onBack={() => setEkran('merkez')} />;
   if (ekran === 'karisik' && ogrenilenler.length >= 2) return <KarisikTekrar katAd={katAd} ogeler={ogeler} havuz={ogrenilenler} onBack={() => setEkran('merkez')} />;
 
@@ -120,6 +127,20 @@ const KelimeOgren: React.FC<{ katId: string; katAd: string; onBack: () => void; 
             <span className="text-sm text-slate-500">{siradaki ? `Sıradaki: ${buyuk(siradaki.kelime)}` : 'Hepsi öğrenildi!'} · {ogrenilenler.length} / {ogeler.length} öğrenildi</span>
           </span>
         </button>
+        {ogrenilmemis.length > 1 && (
+          <div className="rounded-3xl bg-white/70 p-3">
+            <div className="text-sm font-bold text-slate-600 mb-2">Hangi kelimeyle başlayalım? (dokunun)</div>
+            <div className="flex gap-2 overflow-x-auto pb-1">
+              {ogrenilmemis.map(o => (
+                <button key={o.kelime} onClick={() => baslangicSec(o.kelime)} title={o.kelime}
+                  className={`shrink-0 w-16 rounded-xl bg-white p-1 shadow-sm active:scale-95 ${o.kelime === siradaki?.kelime ? 'ring-4 ring-emerald-400' : ''}`}>
+                  <img src={o.url} alt={o.kelime} className="w-full aspect-square object-contain" draggable={false} />
+                  <span className="block truncate text-[11px] font-bold text-slate-600">{o.kelime}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
         <button className={kart} onClick={() => setEkran('karisik')} disabled={ogrenilenler.length < 2}>
           <span className="text-4xl">🔀</span>
           <span><span className="block text-xl font-black text-slate-800">Karışık Tekrar</span>
@@ -144,7 +165,7 @@ const KelimeOgren: React.FC<{ katId: string; katAd: string; onBack: () => void; 
 };
 
 // Çalışma sayfası: bütün kelimeler; dokununca adı söylenir
-const Tani: React.FC<{ katAd: string; ogeler: Oge[]; onBack: () => void; onBasla: () => void }> = ({ katAd, ogeler, onBack, onBasla }) => {
+const Tani: React.FC<{ katAd: string; ogeler: Oge[]; onBack: () => void; onBasla: (secili: string | null) => void }> = ({ katAd, ogeler, onBack, onBasla }) => {
   const [secili, setSecili] = useState<string | null>(null);
   useEffect(() => { etkinlikSay(`Kelime Tanı: ${katAd}`, 'acildi'); }, [katAd]);
   return (
@@ -161,7 +182,9 @@ const Tani: React.FC<{ katAd: string; ogeler: Oge[]; onBack: () => void; onBasla
         </div>
       </div>
       <div className="absolute bottom-3 inset-x-0 flex justify-center">
-        <button onClick={onBasla} className="px-8 py-3 rounded-2xl bg-emerald-500 text-white text-2xl font-black shadow-lg active:scale-95">Öğrenmeye başla ▶</button>
+        <button onClick={() => onBasla(secili)} className="px-8 py-3 rounded-2xl bg-emerald-500 text-white text-2xl font-black shadow-lg active:scale-95">
+          {secili ? `${buyuk(secili)} ile başla ▶` : 'Öğrenmeye başla ▶'}
+        </button>
       </div>
     </OyunCercevesi>
   );
@@ -169,7 +192,7 @@ const Tani: React.FC<{ katAd: string; ogeler: Oge[]; onBack: () => void; onBasla
 
 // Tek hedef: hep aynı kelime sorulur, çeldiriciler ve yerler değişir; son 5'te 4 doğru → öğrenildi, sıradakine geçilir
 const TekTekOgren: React.FC<{ katAd: string; ogeler: Oge[]; kayit: Kayit; kaydet: (k: Kayit) => void; onBack: () => void }> = ({ katAd, ogeler, kayit, kaydet, onBack }) => {
-  const hedef = ogeler.find(o => !kayit.ogrenilen.includes(o.kelime)) || null;
+  const hedef = siradakiBul(ogeler, kayit);
   const [tanit, setTanit] = useState(true);   // yeni hedef önce tek başına gösterilir
   const [n, setN] = useState(0);              // bu oturumdaki deneme
   const [sec, setSec] = useState<Oge[]>([]);
