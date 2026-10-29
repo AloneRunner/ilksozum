@@ -1,8 +1,10 @@
-import React, { lazy, Suspense, useState } from 'react';
+import React, { lazy, Suspense, useMemo, useState } from 'react';
 import { OyunCercevesi } from '../oyunKiti/OyunKiti.tsx';
 import { speak } from '../../services/speechService.ts';
-import { DUYGULAR, DURUMLAR, ZAMIR_GRUPLARI, zamirSoru, MEVSIMLER, type Duygu } from './ozelVeri.ts';
+import { DUYGULAR, DURUMLAR, ZAMIR_GRUPLARI, zamirSoru, MEVSIMLER, EYLEMLER, DINLE_SESLER, dinleSoru, type Duygu } from './ozelVeri.ts';
 import { SecimOyunu, Sekmeler, karistir, sikKur, konus, type Tur } from './ozelOrtak.tsx';
+import { soundImitationImages } from '../../services/database/soundImitationImages.ts';
+import { nesneUrl } from '../../services/nesneGorsel.ts';
 
 // Özel eğitim etkinlikleri (Kaan, 2026-10-29). Menüden "ekran" adıyla açılır (beceriMenu.ts → AppRouter).
 const SosyalOyku = lazy(() => import('./SosyalOyku.tsx'));
@@ -10,8 +12,57 @@ const OzBakim = lazy(() => import('./OzBakim.tsx'));
 const KediyiBul = lazy(() => import('./KediyiBul.tsx'));
 const SesinYeri = lazy(() => import('./SesinYeri.tsx'));
 const IslevselOkuma = lazy(() => import('./IslevselOkuma.tsx'));
+const YonergeTakibi = lazy(() => import('./YonergeTakibi.tsx'));
+const Toplama = lazy(() => import('./Toplama.tsx'));
+const GunlerAylar = lazy(() => import('./GunlerAylar.tsx'));
 
-export type OzelEkranId = 'sosyalOyku' | 'ozBakim' | 'nasilHisseder' | 'benSenO' | 'mevsimler' | 'kediyiBul' | 'sesinYeri' | 'islevselOkuma';
+export type OzelEkranId = 'sosyalOyku' | 'ozBakim' | 'nasilHisseder' | 'benSenO' | 'mevsimler' | 'kediyiBul' | 'sesinYeri' | 'islevselOkuma'
+  | 'neYapiyor' | 'yonerge' | 'dinleBul' | 'toplama' | 'gunlerAylar';
+
+// --- Ne yapıyor? Eylem fotoğrafları: Tanı (dokun, dinle) + Soru ("Kim uyuyor?") ---
+const NeYapiyor: React.FC<{ onBack: () => void }> = ({ onBack }) => {
+  const [sekme, setSekme] = useState<'tani' | 'soru'>('tani');
+  const ust = <Sekmeler secili={sekme} sekmeler={[['tani', '👀 Tanı'], ['soru', '❓ Soru']]} onSec={setSekme} />;
+  if (sekme === 'soru') return (
+    <SecimOyunu oyunId="neYapiyor" sayacAdi="Ne Yapıyor?" baslik="Ne Yapıyor?" emoji="🏃" onBack={onBack} ust={ust}
+      secenekSayilari={[2, 3, 4]}
+      turlariKur={(n) => karistir(EYLEMLER).slice(0, 10).map((e): Tur => ({
+        soru: e.soru, dogruId: e.id, dogruSoz: e.dogru,
+        secenekler: sikKur(e, EYLEMLER, n).map(x => ({ id: x.id, url: x.url })),
+      }))} />
+  );
+  return (
+    <OyunCercevesi baslik="Ne Yapıyor?" emoji="🏃" onBack={onBack} yonerge="Resme dokun, dinle.">
+      <div className="absolute inset-0 flex flex-col gap-3 px-3 pb-3 overflow-y-auto">
+        {ust}
+        <div className="grid grid-cols-2 sm:grid-cols-3 landscape:grid-cols-4 gap-3 w-full max-w-4xl mx-auto">
+          {EYLEMLER.map(e => (
+            <button key={e.id} onClick={() => speak(e.soz)} className="rounded-3xl bg-white shadow-lg overflow-hidden active:scale-95">
+              <img src={e.url} alt="" draggable={false} className="w-full aspect-square object-cover" />
+              <span className="block py-1.5 px-1 text-lg font-black text-slate-800 leading-tight">{e.soz.replace(/\.$/, '')}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </OyunCercevesi>
+  );
+};
+
+// --- Dinle, bul: Gökçe sesi taklit eder ("Hav hav. Bu ses kimin?"), çocuk resmi bulur ---
+const DinleBul: React.FC<{ onBack: () => void }> = ({ onBack }) => {
+  const sesler = useMemo(() => DINLE_SESLER.map(s => {
+    const g = soundImitationImages.find(i => i.word === s.kelime);
+    return g ? { ...s, url: nesneUrl(g.imageUrl) } : null;
+  }).filter((s): s is NonNullable<typeof s> => !!s), []);
+  return (
+    <SecimOyunu oyunId="dinleBul" sayacAdi="Dinle, Bul" baslik="Dinle, Bul" emoji="👂" onBack={onBack}
+      secenekSayilari={[2, 3, 4]}
+      turlariKur={(n) => karistir(sesler).slice(0, 10).map((s): Tur => ({
+        soru: dinleSoru(s), dogruId: s.kelime, dogruSoz: `Evet, bu ${s.kelime}.`,
+        secenekler: sikKur(s, sesler, n, (a, b) => a.kelime === b.kelime || a.ses === b.ses).map(x => ({ id: x.kelime, url: x.url })),
+      }))} />
+  );
+};
 
 // --- Nasıl hisseder? Durum resmi + duygu yüzleri (2 → 3 → 4 şık) ---
 const NasilHisseder: React.FC<{ onBack: () => void }> = ({ onBack }) => (
@@ -98,6 +149,11 @@ const OzelEkran: React.FC<{ ekran: OzelEkranId; onBack: () => void }> = ({ ekran
     {ekran === 'mevsimler' && <Mevsimler onBack={onBack} />}
     {ekran === 'sesinYeri' && <SesinYeri onBack={onBack} />}
     {ekran === 'islevselOkuma' && <IslevselOkuma onBack={onBack} />}
+    {ekran === 'neYapiyor' && <NeYapiyor onBack={onBack} />}
+    {ekran === 'yonerge' && <YonergeTakibi onBack={onBack} />}
+    {ekran === 'dinleBul' && <DinleBul onBack={onBack} />}
+    {ekran === 'toplama' && <Toplama onBack={onBack} />}
+    {ekran === 'gunlerAylar' && <GunlerAylar onBack={onBack} />}
   </Suspense>
 );
 

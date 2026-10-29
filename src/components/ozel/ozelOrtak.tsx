@@ -30,8 +30,8 @@ export const SecimKarti: React.FC<{ url?: string; emoji: string; ad: string; onC
 // --- Hatasız seçim oyunu: soru (+ isteğe bağlı büyük resim) ve şıklar ---
 // Yanlış şık sallanıp söner; 2 yanlıştan sonra doğru şık parlar. İlk denemede doğruysa başarı sayılır.
 export interface Secenek { id: string; url?: string; emoji?: string; yazi?: string; icerik?: React.ReactNode }
-// ustYazi: resmin yerine büyük yazı (İşlevsel Okuma: kelimeyi oku, resmini bul)
-export interface Tur { soru: string; gorsel?: string; ustYazi?: string; secenekler: Secenek[]; dogruId: string; dogruSoz: string }
+// ustYazi: resmin yerine büyük yazı (İşlevsel Okuma: kelimeyi oku, resmini bul); sahne: serbest içerik (Toplama: iki grup nesne)
+export interface Tur { soru: string; gorsel?: string; ustYazi?: string; sahne?: React.ReactNode; secenekler: Secenek[]; dogruId: string; dogruSoz: string }
 
 export const SecimOyunu: React.FC<{
   oyunId: string; sayacAdi: string; baslik: string; emoji: string; onBack: () => void;
@@ -87,10 +87,11 @@ export const SecimOyunu: React.FC<{
         {ust}
         <div className={`flex-1 w-full max-w-4xl flex ${tur.gorsel ? 'flex-col landscape:flex-row' : 'flex-col'} items-center justify-center gap-4`}>
           {tur.gorsel && <img key={tur.gorsel} src={tur.gorsel} alt="" draggable={false} className="shrink-0 w-[min(100%,46vh)] sm-landscape:w-[min(46vw,60vh)] aspect-square object-cover rounded-3xl shadow-xl bg-white" />}
-          {tur.ustYazi && <div key={tur.ustYazi} className="shrink-0 rounded-3xl bg-white px-8 py-4 shadow-xl text-6xl sm-landscape:text-5xl lg:text-7xl font-black text-slate-800 tracking-wide">{tur.ustYazi}</div>}
+          {tur.sahne && <div key={i} className="shrink-0 w-full flex justify-center">{tur.sahne}</div>}
+          {tur.ustYazi && <div key={tur.ustYazi} className={`shrink-0 max-w-full rounded-3xl bg-white px-8 py-4 shadow-xl font-black text-slate-800 tracking-wide ${tur.ustYazi.length > 9 ? 'text-4xl sm-landscape:text-3xl lg:text-5xl' : 'text-6xl sm-landscape:text-5xl lg:text-7xl'}`}>{tur.ustYazi}</div>}
           {/* Resimli şıklar yatay telefonda ekrana sığsın: her şık en çok ~50vh */}
           <div className={`grid gap-3 w-full ${tur.secenekler.length <= 2 ? 'grid-cols-2' : tur.secenekler.length === 3 ? 'grid-cols-3' : 'grid-cols-2 landscape:grid-cols-4'} ${tur.gorsel ? 'max-w-md' : 'max-w-3xl'}`}
-            style={tur.gorsel ? undefined : { maxWidth: `min(48rem, ${tur.secenekler.length * (tur.ustYazi ? 34 : 50)}vh, 100%)` }}>
+            style={tur.gorsel ? undefined : { maxWidth: `min(48rem, ${tur.secenekler.length * (tur.ustYazi || tur.sahne ? 34 : 50)}vh, 100%)` }}>
             {tur.secenekler.map(s => {
               const soldu = sonen.includes(s.id), parla = ipucu && s.id === tur.dogruId;
               return (

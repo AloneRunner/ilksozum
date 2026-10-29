@@ -5,7 +5,8 @@ import { ActivityType } from '../types.ts';
 
 export type BeceriId = 'harfler' | 'sayilar' | 'dusunme' | 'el' | 'konusma' | 'oyunOdasi';
 export type BeceriEkran = 'basara' | 'basara2' | 'sesTaklit' | 'besNBirK' | 'agiz' | 'tuvalet' | 'saat'
-  | 'sosyalOyku' | 'ozBakim' | 'nasilHisseder' | 'benSenO' | 'mevsimler' | 'kediyiBul' | 'sesinYeri' | 'islevselOkuma'; // özel eğitim (ozel/OzelEkran.tsx)
+  | 'sosyalOyku' | 'ozBakim' | 'nasilHisseder' | 'benSenO' | 'mevsimler' | 'kediyiBul' | 'sesinYeri' | 'islevselOkuma' // özel eğitim (ozel/OzelEkran.tsx)
+  | 'neYapiyor' | 'yonerge' | 'dinleBul' | 'toplama' | 'gunlerAylar';
 
 interface OgeTemel { emoji: string; baslik: string; alt: string; sadeceTr?: boolean }
 export type BeceriOge =
@@ -59,7 +60,9 @@ export const BECERILER: Beceri[] = [
       e(ActivityType.DragAndDropCounting, '🧺', 'Nesneleri Taşı', 'İstenen sayıda nesneyi taşı'),
       o('numberSequence', '🪜', 'Sayı Sırala', '1, 2, 3... sırala'),
       e(ActivityType.OddEven, '🧦', 'Tek / Çift', 'Tek mi, bir çift mi?'),
+      { tur: 'ekran', ekran: 'toplama', emoji: '➕', baslik: 'Toplama', alt: 'İki grubu birleştir, hepsini say' },
       { tur: 'ekran', ekran: 'saat', emoji: '🕒', baslik: 'Saat', alt: 'Akrep, yelkovan; tam, buçuk, çeyrek; saati kur' },
+      { tur: 'ekran', ekran: 'gunlerAylar', emoji: '📅', baslik: 'Günler ve Aylar', alt: 'Haftanın günleri, yılın ayları, bugün' },
     ],
   },
   {
@@ -107,6 +110,9 @@ export const BECERILER: Beceri[] = [
       { tur: 'ekran', ekran: 'agiz', emoji: '👄', baslik: 'Ağzımı İzle', alt: 'Sesleri ve kelimeleri ağız hareketiyle öğren' },
       { tur: 'ekran', ekran: 'sesTaklit', emoji: '🔊', baslik: 'Ses Taklit Kartları', alt: 'Hayvan ve eşya seslerini taklit et' },
       { tur: 'ekran', ekran: 'besNBirK', emoji: '❓', baslik: '5N1K', alt: 'Kim, ne, nerede, ne zaman, neden, nasıl' },
+      { tur: 'ekran', ekran: 'yonerge', emoji: '👆', baslik: 'Yönerge Takibi', alt: '"Topa dokun", "Önce elmaya, sonra topa"' },
+      { tur: 'ekran', ekran: 'neYapiyor', emoji: '🏃', baslik: 'Ne Yapıyor?', alt: 'Uyuyor, yüzüyor, kitap okuyor…' },
+      { tur: 'ekran', ekran: 'dinleBul', emoji: '👂', baslik: 'Dinle, Bul', alt: 'Sesi dinle, kimin sesi olduğunu bul' },
       { tur: 'ekran', ekran: 'sosyalOyku', emoji: '📖', baslik: 'Sosyal Öyküler', alt: 'Berber, doktor, market, sıra bekleme, arkadaşlık' },
       { tur: 'ekran', ekran: 'nasilHisseder', emoji: '😊', baslik: 'Nasıl Hisseder?', alt: 'Durumdan duyguyu bul' },
       { tur: 'ekran', ekran: 'benSenO', emoji: '👉', baslik: 'Ben, Sen, O', alt: 'Ben, sen, o; benim, senin, onun' },

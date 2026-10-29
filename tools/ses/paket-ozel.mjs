@@ -19,6 +19,14 @@ for (const k of V.KEDILER) metinler.push(`Buldun! ${k.yer}`);
 metinler.push('Bir ses seç.', V.OKUMA_SORU, V.YAZI_SORU);
 for (const h of V.SES_HARFLERI) metinler.push(V.sesinYeriSoru(h));
 for (const y of Object.keys(V.YERLER)) metinler.push(V.sesinYeriDogru(y));
+// Ne yapıyor?, Yönerge takibi, Dinle-bul, Toplama, Günler ve aylar
+for (const e of V.EYLEMLER) metinler.push(e.soz, e.soru, e.dogru);
+for (const [k, y] of V.YONERGE_NESNELER) metinler.push(V.dokunCumle(y), V.onceCumle(y), V.sonraCumle(y), `Evet, bu ${k}.`);
+for (const s of V.DINLE_SESLER) metinler.push(V.dinleSoru(s), `Evet, bu ${s.kelime}.`);
+metinler.push(V.TOPLAMA_SORU);
+for (let n = 2; n <= 10; n++) metinler.push(V.toplamaDogru(n));
+V.GUNLER.forEach((g, i) => metinler.push(`${g}.`, V.gunSoru(i), V.evetAd(g), V.bugunCumle(i)));
+V.AYLAR.forEach((a, i) => metinler.push(`${a}.`, V.aySoru(i), V.evetAd(a), V.buAyCumle(i)));
 
 // Uygulamanın arama kuralı (speechService.kayitBul / cumleler)
 const liste = fs.readFileSync('src/data/sesListesi.ts', 'utf8');

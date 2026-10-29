@@ -142,3 +142,57 @@ export const sesinYeriDogru = (y: Yer) => `Evet, ${YERLER[y].toLocaleLowerCase('
 // --- İşlevsel okuma (Gökhan Hoca: resim–sözcük eşleme, çocuğun sevdiği yiyecek ve içeceklerle) ---
 export const OKUMA_SORU = 'Ne yazıyor? Resmini bul.';
 export const YAZI_SORU = 'Bu ne? Yazısını bul.';
+// --- Ne yapıyor? (eylem tanıma). Yalnız eylemi açıkça gösteren İfade Tahtası fotoğrafları;
+// boş oda, berber, kaydırak (kimse yok), dans (zıplamayla aynı fotoğraf), boyama (resim yapmaya çok benzer) çıkarıldı ---
+export interface Eylem { id: string; url: string; soz: string; soru: string; dogru: string }
+const ey = (no: number, soz: string, cogul = false): Eylem => {
+  const fiil = soz.charAt(0).toLocaleLowerCase('tr-TR') + soz.slice(1);
+  return { id: String(no), url: `/images/${no}.webp`, soz: `${soz}.`, soru: cogul ? `Kimler ${fiil.replace(/lar$/, '')}?` : `Kim ${fiil}?`, dogru: `Evet, ${fiil}.` };
+};
+export const EYLEMLER: Eylem[] = [
+  ey(6338, 'Yemek yiyor'), ey(9108, 'Su içiyor'), ey(6342, 'Uyuyor'), ey(9100, 'Giyiniyor'), ey(8875, 'Banyo yapıyor'),
+  ey(6334, 'Dişlerini fırçalıyor'), ey(9118, 'Ellerini yıkıyor'), ey(9104, 'Yürüyor'), ey(9084, 'Zıplıyor'), ey(9105, 'Tırmanıyor'),
+  ey(9115, 'Yüzüyor'), ey(9123, 'Bisiklet sürüyor'), ey(9124, 'Top oynuyor'), ey(9085, 'Salıncakta sallanıyor'), ey(9121, 'Konuşuyorlar', true),
+  ey(9101, 'El sallıyor'), ey(9119, 'El sıkışıyorlar', true), ey(9102, 'Paylaşıyor'), ey(9114, 'Resim yapıyor'), ey(8876, 'Şarkı söylüyor'),
+  ey(9116, 'Müzik dinliyor'), ey(6341, 'Kitap okuyor'),
+];
+
+// --- Yönerge takibi: nesne ve yönelme hali (elle: ünsüz yumuşaması ve kaynaştırma harfi şaşmasın) ---
+export const YONERGE_NESNELER: [string, string][] = [
+  ['top', 'topa'], ['elma', 'elmaya'], ['araba', 'arabaya'], ['kalem', 'kaleme'], ['kitap', 'kitaba'], ['bardak', 'bardağa'],
+  ['ayakkabı', 'ayakkabıya'], ['şapka', 'şapkaya'], ['kaşık', 'kaşığa'], ['köpek', 'köpeğe'], ['kedi', 'kediye'], ['muz', 'muza'],
+  ['anahtar', 'anahtara'], ['balon', 'balona'], ['çiçek', 'çiçeğe'], ['bebek', 'bebeğe'], ['çanta', 'çantaya'], ['havuç', 'havuca'],
+  ['çilek', 'çileğe'], ['portakal', 'portakala'], ['tren', 'trene'], ['uçak', 'uçağa'], ['balık', 'balığa'], ['kuş', 'kuşa'],
+  ['masa', 'masaya'], ['sandalye', 'sandalyeye'], ['tabak', 'tabağa'], ['makas', 'makasa'], ['telefon', 'telefona'], ['şemsiye', 'şemsiyeye'],
+  ['inek', 'ineğe'], ['at', 'ata'], ['gözlük', 'gözlüğe'], ['saat', 'saate'], ['yatak', 'yatağa'], ['tavuk', 'tavuğa'],
+];
+const ilkBuyuk = (s: string) => s.charAt(0).toLocaleUpperCase('tr-TR') + s.slice(1);
+export const dokunCumle = (yonelme: string) => `${ilkBuyuk(yonelme)} dokun.`;
+export const onceCumle = (yonelme: string) => `Önce ${yonelme} dokun.`;
+export const sonraCumle = (yonelme: string) => `Sonra ${yonelme} dokun.`;
+
+// --- Dinle, bul: Ses Taklit'in kayıtlı sesleri (soundImitationImages) → resmi bul. Benzer sesler aynı soruda çıkmaz ---
+export interface DinleSes { kelime: string; ses: string; hayvan: boolean }
+const ds = (hayvan: boolean, l: string) => l.split(',').map((x) => { const [kelime, ses] = x.split('='); return { kelime: kelime.trim(), ses: ses.trim(), hayvan }; });
+export const DINLE_SESLER: DinleSes[] = [
+  ...ds(true, 'köpek=hav hav, kedi=miyav, koyun=meee, tavuk=gıt gıt, civciv=cik cik, inek=möö, at=dıgıdık, kurbağa=vrak, arı=vızzz, baykuş=hu hu, horoz=ü-ü-rü-üü, ördek=vak vak, eşek=a-i a-i, kurt=auuu, maymun=u-u-a-a, yılan=ssss, hindi=glu glu, domuz=oink, fare=viyk'),
+  ...ds(false, 'araba=düt düt, tren=çuf çuf, uçak=vuuu, polis=nino nino, itfaiye=dida dida, helikopter=pat pat, robot=bip bop, bisiklet=çın çın, davul=güm güm, marakas=şıkır şıkır, keman=gıy gıy, çekiç=tak tak, makas=kırt kırt, telefon=alo, saat=zırrr / tik tak'),
+].filter((s) => !s.ses.includes('/'));
+export const dinleSoru = (s: DinleSes) => `${ilkBuyuk(s.ses)}. ${s.hayvan ? 'Bu ses kimin?' : 'Bu ses neyin?'}`;
+
+// --- Nesneyle toplama ---
+export const SAYI_ADLARI = ['sıfır', 'bir', 'iki', 'üç', 'dört', 'beş', 'altı', 'yedi', 'sekiz', 'dokuz', 'on'];
+export const TOPLAMA_SORU = 'Hepsi kaç tane?';
+export const toplamaDogru = (n: number) => `Evet, hepsi ${SAYI_ADLARI[n]} tane.`;
+
+// --- Günler ve aylar ---
+export const GUNLER = ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi', 'Pazar'];
+const GUN_DEN = ['Pazartesiden', 'Salıdan', 'Çarşambadan', 'Perşembeden', 'Cumadan', 'Cumartesiden', 'Pazardan'];
+export const AYLAR = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+const AY_DEN = ['Ocaktan', 'Şubattan', 'Marttan', 'Nisandan', 'Mayıstan', 'Hazirandan', 'Temmuzdan', 'Ağustostan', 'Eylülden', 'Ekimden', 'Kasımdan', 'Aralıktan'];
+const kucukHarf = (s: string) => s.toLocaleLowerCase('tr-TR');
+export const gunSoru = (i: number) => `${GUN_DEN[i]} sonra hangi gün gelir?`;
+export const aySoru = (i: number) => `${AY_DEN[i]} sonra hangi ay gelir?`;
+export const evetAd = (ad: string) => `Evet, ${kucukHarf(ad)}.`;
+export const bugunCumle = (i: number) => `Bugün ${kucukHarf(GUNLER[i])}.`;
+export const buAyCumle = (i: number) => `Bu ay ${kucukHarf(AYLAR[i])}.`;
