@@ -1267,7 +1267,9 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
             {t('settingsEx.privacy.read', 'Oku')}
                       </button>
                     </SettingsRow>
-                  <p className="px-1 text-sm text-slate-500">Tuğ Ortaokulu özel eğitim öğretmeni Gökhan Laçin'in katkılarıyla hazırlanmıştır. 🙏</p>
+                  {/* Tema süsleri (kelebek, dalga) üstüne binmesin: önde ve zeminli */}
+                  <p className="relative z-10 rounded-2xl bg-white/90 px-3 py-2 text-sm font-semibold text-slate-600 shadow-sm">Tuğ Ortaokulu özel eğitim öğretmeni Gökhan Laçin'in katkılarıyla hazırlanmıştır. 🙏</p>
+                  <div className="h-16" aria-hidden="true" />
                 </div>
             </div>
         </div>

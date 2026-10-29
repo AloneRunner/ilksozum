@@ -210,6 +210,16 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
 
 // Duyurular ve ses yardımı ana ekranı kalabalıklaştırıyordu (Kaan, 2026-10-06): en altta iki küçük düğme,
 // içerik pencerede açılır. Cihazda Türkçe ses yoksa ses düğmesi sarı uyarıya dönüşür.
+// Teşekkür (Kaan, 2026-10-29; soyadını hoca doğruladı: Laçin). Bütün temalarda; altındaki boşluk gezinme çubuğu
+// ve tema süsleri (dalga, çayır) son satırı örtmesin diye.
+export const TESEKKUR_YAZISI = "Tuğ Ortaokulu özel eğitim öğretmeni Gökhan Laçin'in katkılarıyla hazırlanmıştır. 🙏";
+const TesekkurNotu: React.FC = () => getCurrentLanguage() !== 'tr' ? null : (
+  <>
+    <p className="relative z-10 mx-auto w-fit max-w-full rounded-full bg-white/90 px-3 py-1 text-center text-[11px] font-semibold text-slate-600 shadow-sm">{TESEKKUR_YAZISI}</p>
+    <div className="h-16 shrink-0" aria-hidden="true" />
+  </>
+);
+
 const BilgiDugmeleri: React.FC<{ theme?: string }> = () => {
   const [acik, setAcik] = React.useState<null | 'duyuru' | 'ses'>(null);
   const [sesYok, setSesYok] = React.useState(false);
@@ -331,6 +341,7 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
         baslik={t("menu.appTitle", "İlk Sözüm: Otizm & Okul Öncesi")}
       >
         <BilgiDugmeleri theme={theme} />
+        <TesekkurNotu />
         <YenilikPenceresi onDestek={onSelectSettings ? destegeGit : undefined} />
       </TemaliAnaMenu>
     );
@@ -443,10 +454,7 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
 
           {/* Duyurular ve ses yardımı: küçük düğmeler, içerik pencerede */}
           <BilgiDugmeleri theme={theme} />
-          {/* Teşekkür (Kaan, 2026-10-29; soyadını hoca doğruladı: Laçin) */}
-          {lang === 'tr' && <p className="mx-auto w-fit rounded-full bg-white/80 px-3 py-1 text-center text-[11px] font-semibold text-slate-600 shadow-sm">Tuğ Ortaokulu özel eğitim öğretmeni Gökhan Laçin'in katkılarıyla hazırlanmıştır. 🙏</p>}
-          {/* Alttaki gezinme çubuğu ve tema dalgaları son satırı örtmesin */}
-          <div className="h-16 shrink-0" aria-hidden="true" />
+          <TesekkurNotu />
         <YenilikPenceresi onDestek={onSelectSettings ? destegeGit : undefined} />
         </div>
       </div>
