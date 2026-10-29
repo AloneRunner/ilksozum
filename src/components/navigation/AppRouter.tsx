@@ -52,6 +52,7 @@ const FarkBul = lazy(() => import('../fark/FarkBul.tsx'));
 const OzelEkran = lazy(() => import('../ozel/OzelEkran.tsx'));
 const RenkOgren = lazy(() => import('../ozel/RenkOgren.tsx'));
 const RengiNeOgren = lazy(() => import('../ozel/RengiNeOgren.tsx'));
+const SekilCalis = lazy(() => import('../ozel/SekilCalis.tsx'));
 const SekilOgren = lazy(() => import('../kutu/SekilOgren.tsx'));
 const TabagaKoy = lazy(() => import('../kutu/TabagaKoy.tsx'));
 const LineTracingScreen = lazy(() => import('../LineTracingScreen.tsx'));
@@ -162,7 +163,7 @@ export const AppRouter = () => {
     const [kitapDonus, setKitapDonus] = useState<ScreenState>(ScreenState.ObjectCategoriesMenu);
     // Kelime Öğren: seçilen nesne kategorisi (Gökhan Hoca: kategoriye girince önce soru değil, çalışma sayfası)
     const [ogrenKat, setOgrenKat] = useState<{ id: string; ad: string } | null>(null);
-    const [ozelEkran, setOzelEkran] = useState<OzelEkranId | 'renkOgren' | 'rengiNe'>('sosyalOyku'); // renkOgren / rengiNe: Kavramlar › Renk ve Şekil (Gökhan Hoca)
+    const [ozelEkran, setOzelEkran] = useState<OzelEkranId | 'renkOgren' | 'rengiNe' | 'sekilCalis'>('sosyalOyku'); // renkOgren / rengiNe / sekilCalis: Kavramlar › Renk ve Şekil (Gökhan Hoca)
     const kitapSeridi = (donus: ScreenState, alt: string) => (
         <button onClick={() => { setKitapDonus(donus); setScreenState(ScreenState.KelimeKitabi); }}
             className="flex shrink-0 items-center justify-center gap-2 bg-amber-100 px-3 py-2 text-sm font-black text-amber-900 shadow-sm active:bg-amber-200">
@@ -646,6 +647,8 @@ export const AppRouter = () => {
         case ScreenState.FarkBulGame: return <FarkBul onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.OzelEtkinlik: return ozelEkran === 'renkOgren'
             ? <RenkOgren onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.Colors, ScreenState.ConceptActivitiesMenu); }} />
+            : ozelEkran === 'sekilCalis'
+            ? <SekilCalis onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.Shapes, ScreenState.ConceptActivitiesMenu); }} />
             : ozelEkran === 'rengiNe'
             ? <RengiNeOgren onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.ColorRecognition, ScreenState.ConceptActivitiesMenu); }} />
             : <OzelEkran key={ozelEkran} ekran={ozelEkran} onBack={() => geriDon(ScreenState.MainMenu)} />;
@@ -829,6 +832,7 @@ export const AppRouter = () => {
             // Renkler: önce Renk Öğren sayfası (tanı, 2-3-4 renk, karışık); eski sorular orada "Hızlı Sorular"
             if (act === ActivityType.Colors) { setOzelEkran('renkOgren'); setScreenState(ScreenState.OzelEtkinlik); return; }
             if (act === ActivityType.ColorRecognition) { setOzelEkran('rengiNe'); setScreenState(ScreenState.OzelEtkinlik); return; }
+            if (act === ActivityType.Shapes) { setOzelEkran('sekilCalis'); setScreenState(ScreenState.OzelEtkinlik); return; }
             await etkinlikBaslat(act, ScreenState.ConceptActivitiesMenu);
         }} onBack={handleGoToMenu} activeCategory={ctx.navigation.activeConceptTab} onSelectCategory={ctx.navigation.setActiveConceptTab} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} enabledActivities={ctx.profile.enabledActivitiesSet} />;
 

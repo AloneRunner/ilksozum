@@ -7,6 +7,9 @@ import SmartImage from './ui/SmartImage.tsx';
 import { organCizimi } from '../services/nesneGorsel.ts';
 import KonusanAgiz from './agiz/KonusanAgiz.tsx';
 import { renkliAd } from '../data/renkGorselleri.ts';
+// Şekiller etiketi: veride hepsi "şekil" yazıyor; görsel kimliğinden şeklin adı (7201 + sıra + 7 × renk; Gökhan Hoca 2026-10-29)
+const SEKIL_SIRASI = ['daire', 'dikdörtgen', 'kalp', 'kare', 'oval', 'üçgen', 'yıldız'];
+const sekilAdi = (id: number) => (id >= 7201 && id <= 7228 ? SEKIL_SIRASI[(id - 7201) % 7] : undefined);
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { speak, playEffect } from '../services/speechService.ts';
 import BanIcon from './icons/BanIcon.tsx';
@@ -2454,7 +2457,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 const i18nObjKey = `objects.${option.audioKey}`;
                 const i18nLabel = lookupLocale(i18nObjKey, currentLang as any);
                 // Renkler: şıklar aynı nesne, etikette rengi de yazsın ("kupa" değil "yeşil kupa"; Gökhan Hoca 2026-10-29)
-                const renkliEtiket = roundData.activityType === ActivityType.Colors && currentLang === 'tr' ? renkliAd(Number(option.id)) : undefined;
+                const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : undefined;
                 const displayWord = renkliEtiket || i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                 const spokenWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                 return (
@@ -2589,7 +2592,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         // Prefer canonical object label from i18n using the image's audioKey.
                         const i18nObjKey = `objects.${option.audioKey}`;
                         const i18nLabel = lookupLocale(i18nObjKey, currentLang as any);
-                        const renkliEtiket = roundData.activityType === ActivityType.Colors && currentLang === 'tr' ? renkliAd(Number(option.id)) : undefined;
+                        const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : undefined;
                         const hintDisplayWord = renkliEtiket || i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                         const hintSpokenWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
 
