@@ -45,6 +45,9 @@ for (const n of ['tabak', 'tencere', 'leğen', 'fırın kabı', 'kase', 'kova', 
 // Üstünde / Altında
 const UA = await import(new URL('../../src/data/ustAlt.ts', import.meta.url).href);
 for (const s of UA.UST_ALT_SETLER) for (const u of [true, false]) metinler.push(UA.ustAltSoru(s, u), UA.ustAltDogru(s, u));
+// Yukarıda / Aşağıda
+const YA = await import(new URL('../../src/data/yukariAsagi.ts', import.meta.url).href);
+for (const s of YA.YUKARI_SETLER) for (const u of [true, false]) metinler.push(YA.yukariSoru(s, u), YA.yukariDogru(s, u));
 // Paralarımız
 metinler.push(V.DAHA_COK_SORU);
 for (const p of V.PARALAR) metinler.push(`${p.ad}.`, V.paraSoru(p), V.evetAd(p.ad));

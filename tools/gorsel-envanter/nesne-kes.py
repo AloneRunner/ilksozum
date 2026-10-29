@@ -11,7 +11,7 @@ CIKTI = KOK / 'public/images/ozel/kesik'
 CIKTI.mkdir(parents=True, exist_ok=True)
 
 NESNELER = {'top': 3915, 'elma': 2307, 'ayi': 5703, 'araba': 9047, 'kedi': 3504, 'bebek': 8109,
-            'portakal': 2822, 'canta': 3410, 'kitap': 2017}
+            'portakal': 2822, 'canta': 3410, 'kitap': 2017, 'balon': 7109}
 
 for ad, kid in NESNELER.items():
     im = Image.open(KOK / f'public/images/{kid}.webp').convert('RGB')
