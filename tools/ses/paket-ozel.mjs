@@ -39,6 +39,9 @@ for (const [k] of BK.BK_NESNELER) for (const b of [true, false]) metinler.push(B
 // Geniş / Dar: Tanı animasyonu ve sorular
 metinler.push('Top geniş kapıdan geçti. Dar kapıdan geçemedi.');
 for (const n of ['kapı', 'pencere', 'kaydırak', 'merdiven', 'tünel', 'yol', 'köprü']) for (const k of ['geniş', 'dar']) metinler.push(`Hangi ${n} ${k}?`, `Evet! Bu ${n} ${k}.`);
+// Derin / Sığ
+metinler.push('Top derin kapta kayboldu. Sığ kapta görünüyor.');
+for (const n of ['tabak', 'tencere', 'leğen', 'fırın kabı', 'kase', 'kova', 'kutu']) for (const k of ['derin', 'sığ']) metinler.push(`Hangi ${n} ${k}?`, `Evet! Bu ${n} ${k}.`);
 // Paralarımız
 metinler.push(V.DAHA_COK_SORU);
 for (const p of V.PARALAR) metinler.push(`${p.ad}.`, V.paraSoru(p), V.evetAd(p.ad));

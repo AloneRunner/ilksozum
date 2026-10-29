@@ -60,6 +60,7 @@ const BuyukKucukCalis = lazy(() => import('../ozel/BuyukKucukCalis.tsx'));
 const UzunKisaCalis = lazy(() => import('../ozel/UzunKisaCalis.tsx'));
 const KalinInceCalis = lazy(() => import('../ozel/KalinInceCalis.tsx'));
 const GenisDarCalis = lazy(() => import('../ozel/GenisDarCalis.tsx'));
+const DerinSigCalis = lazy(() => import('../ozel/DerinSigCalis.tsx'));
 const SekilOgren = lazy(() => import('../kutu/SekilOgren.tsx'));
 const TabagaKoy = lazy(() => import('../kutu/TabagaKoy.tsx'));
 const LineTracingScreen = lazy(() => import('../LineTracingScreen.tsx'));
@@ -170,7 +171,7 @@ export const AppRouter = () => {
     const [kitapDonus, setKitapDonus] = useState<ScreenState>(ScreenState.ObjectCategoriesMenu);
     // Kelime Öğren: seçilen nesne kategorisi (Gökhan Hoca: kategoriye girince önce soru değil, çalışma sayfası)
     const [ogrenKat, setOgrenKat] = useState<{ id: string; ad: string } | null>(null);
-    const [ozelEkran, setOzelEkran] = useState<OzelEkranId | 'renkOgren' | 'rengiNe' | 'sekilCalis' | 'acikKoyu' | 'parlakMat' | 'seffafOpak' | 'buyukKucuk' | 'uzunKisa' | 'kalinInce' | 'genisDar'>('sosyalOyku'); // renkOgren / rengiNe / sekilCalis: Kavramlar › Renk ve Şekil (Gökhan Hoca)
+    const [ozelEkran, setOzelEkran] = useState<OzelEkranId | 'renkOgren' | 'rengiNe' | 'sekilCalis' | 'acikKoyu' | 'parlakMat' | 'seffafOpak' | 'buyukKucuk' | 'uzunKisa' | 'kalinInce' | 'genisDar' | 'derinSig'>('sosyalOyku'); // renkOgren / rengiNe / sekilCalis: Kavramlar › Renk ve Şekil (Gökhan Hoca)
     const kitapSeridi = (donus: ScreenState, alt: string) => (
         <button onClick={() => { setKitapDonus(donus); setScreenState(ScreenState.KelimeKitabi); }}
             className="flex shrink-0 items-center justify-center gap-2 bg-amber-100 px-3 py-2 text-sm font-black text-amber-900 shadow-sm active:bg-amber-200">
@@ -656,6 +657,8 @@ export const AppRouter = () => {
             ? <RenkOgren onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.Colors, ScreenState.ConceptActivitiesMenu); }} />
             : ozelEkran === 'acikKoyu'
             ? <AcikKoyuCalis onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.AcikKoyu, ScreenState.ConceptActivitiesMenu); }} />
+            : ozelEkran === 'derinSig'
+            ? <DerinSigCalis onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.DerinSig, ScreenState.ConceptActivitiesMenu); }} />
             : ozelEkran === 'genisDar'
             ? <GenisDarCalis onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.WideNarrow, ScreenState.ConceptActivitiesMenu); }} />
             : ozelEkran === 'kalinInce'
@@ -861,6 +864,7 @@ export const AppRouter = () => {
             if (act === ActivityType.LongShort) { setOzelEkran('uzunKisa'); setScreenState(ScreenState.OzelEtkinlik); return; }
             if (act === ActivityType.ThinThick) { setOzelEkran('kalinInce'); setScreenState(ScreenState.OzelEtkinlik); return; }
             if (act === ActivityType.WideNarrow) { setOzelEkran('genisDar'); setScreenState(ScreenState.OzelEtkinlik); return; }
+            if (act === ActivityType.DerinSig) { setOzelEkran('derinSig'); setScreenState(ScreenState.OzelEtkinlik); return; }
             await etkinlikBaslat(act, ScreenState.ConceptActivitiesMenu);
         }} onBack={handleGoToMenu} activeCategory={ctx.navigation.activeConceptTab} onSelectCategory={ctx.navigation.setActiveConceptTab} activityStats={ctx.profile.activityStats} theme={ctx.settings.theme} enabledActivities={ctx.profile.enabledActivitiesSet} />;
 
