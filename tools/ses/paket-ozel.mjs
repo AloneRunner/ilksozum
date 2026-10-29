@@ -36,6 +36,9 @@ for (const [, kelime, renk] of RT.matchAll(/\['\/images\/\d+\.webp', '([^']+)', 
 // Büyük / Küçük çalışması
 const BK = await import(new URL('../../src/data/buyukKucuk.ts', import.meta.url).href);
 for (const [k] of BK.BK_NESNELER) for (const b of [true, false]) metinler.push(BK.bkSoru(k, b), BK.bkDogru(k, b));
+// Geniş / Dar: Tanı animasyonu ve sorular
+metinler.push('Top geniş kapıdan geçti. Dar kapıdan geçemedi.');
+for (const n of ['kapı', 'pencere', 'kaydırak', 'merdiven', 'tünel', 'yol', 'köprü']) for (const k of ['geniş', 'dar']) metinler.push(`Hangi ${n} ${k}?`, `Evet! Bu ${n} ${k}.`);
 // Paralarımız
 metinler.push(V.DAHA_COK_SORU);
 for (const p of V.PARALAR) metinler.push(`${p.ad}.`, V.paraSoru(p), V.evetAd(p.ad));
