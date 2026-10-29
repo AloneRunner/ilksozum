@@ -193,7 +193,7 @@ export const ufo = (x: number, y: number, isik = '#facc15', kubbe = '#a5f3fc') =
   + [-30, 0, 30].map(d => `<circle cx="${x + d}" cy="${y + 2}" r="5" fill="${isik}" ${c(2)}/>`).join('');
 
 export const uzayli = (x: number, y: number, renk = '#4ade80', anten = 2) =>
-  Array.from({ length: anten }, (_, i) => { const s = anten === 1 ? 0 : (i ? 1 : -1); return `<path d="M${x + s * 10} ${y - 30} L${x + s * 18} ${y - 52}" ${c(3)}/><circle cx="${x + s * 18}" cy="${y - 56}" r="5" fill="#f472b6" ${c(2)}/>`; }).join('')
+  Array.from({ length: anten }, (_, i) => { const s = anten === 1 ? 0 : (i ? 1 : -1); return `<path d="M${x + s * 10} ${y - 30} L${x + s * 18} ${y - 52}" stroke="#e5e7eb" stroke-width="5" stroke-linecap="round"/><circle cx="${x + s * 18}" cy="${y - 56}" r="7" fill="#f472b6" ${c(2)}/>`; }).join('')
   + `<ellipse cx="${x}" cy="${y}" rx="26" ry="32" fill="${renk}" ${K}/><circle cx="${x}" cy="${y - 8}" r="11" fill="#fff" ${c(3)}/><circle cx="${x}" cy="${y - 8}" r="5" fill="${CIZGI}"/><path d="M${x - 8} ${y + 12} Q${x} ${y + 18} ${x + 8} ${y + 12}" fill="none" ${c(3)}/>`;
 
 export const kuyrukluYildiz = (x: number, y: number, renk = '#fde047') =>

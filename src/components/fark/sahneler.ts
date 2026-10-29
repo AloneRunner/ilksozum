@@ -210,7 +210,7 @@ const uzay: Sahne = {
     + gezegen(440, 140, 46, f.has('gezegen') ? '#4ade80' : '#f472b6', !f.has('halka'))
     + (f.has('kuyruklu') ? '' : kuyrukluYildiz(220, 225))
     + roket(300, 330, '#e5e7eb', f.has('pencere') ? '#f472b6' : '#38bdf8', !f.has('alev'))
-    + ufo(480, 380, '#facc15')
+    + ufo(480, 380, '#facc15', f.has('ufo') ? '#f472b6' : '#a5f3fc')
     + uzayli(130, 530, f.has('uzayli') ? '#60a5fa' : '#4ade80', f.has('anten') ? 1 : 2)
   ),
 };

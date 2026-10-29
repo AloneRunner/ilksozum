@@ -13,6 +13,9 @@ const IPUCU_SN = 25;
 const zar = (n: number) => Math.floor(Math.random() * n);
 const karistir = <T,>(a: T[]) => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = zar(i + 1); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 const bekle = (ms: number) => new Promise<void>(r => setTimeout(r, ms));
+// Daireleri üst üste binen iki fark (ör. uzaylının anteni ve rengi) birlikte seçilmez: aynı yerde iki fark kafa karıştırır (Kaan).
+const farkSec = (adaylar: Fark[], n: number) => karistir(adaylar).reduce<Fark[]>((s, f) =>
+  s.length < n && s.every(o => Math.hypot(o.x - f.x, o.y - f.y) >= o.r + f.r) ? [...s, f] : s, []);
 
 const FarkBul: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   const { seviye, basari, zorlandi } = useSeviye('farkBul', FARK_SAYISI.length - 1);
@@ -20,7 +23,7 @@ const FarkBul: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   const [tur, setTur] = useState(0);
   const [sahneSira] = useState(() => karistir(SAHNELER.map((_, i) => i)));
   const sahne = SAHNELER[sahneSira[tur % sahneSira.length]];
-  const farklar = useMemo<Fark[]>(() => karistir(sahne.farklar).slice(0, n), [sahne, n, tur]); // eslint-disable-line react-hooks/exhaustive-deps
+  const farklar = useMemo<Fark[]>(() => farkSec(sahne.farklar, n), [sahne, n, tur]); // eslint-disable-line react-hooks/exhaustive-deps
   const acik = useMemo(() => new Set(farklar.map(f => f.id)), [farklar]);
   const a = useMemo(() => sahne.ciz(new Set()), [sahne]);
   const b = useMemo(() => sahne.ciz(acik), [sahne, acik]);
