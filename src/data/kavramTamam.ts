@@ -13,4 +13,5 @@ export const kavramTamamla = (id: string) => {
 export const CALISMA_ID: Partial<Record<ActivityType, string>> = {
   [ActivityType.Colors]: 'renkOgren', [ActivityType.ColorRecognition]: 'rengiNe', [ActivityType.Shapes]: 'sekilCalis',
   [ActivityType.AcikKoyu]: 'acikKoyuCalis', [ActivityType.ParlakMat]: 'parlakMatCalis', [ActivityType.SeffafOpak]: 'seffafOpakCalis',
+  [ActivityType.BigSmall]: 'buyukKucukCalis',
 };

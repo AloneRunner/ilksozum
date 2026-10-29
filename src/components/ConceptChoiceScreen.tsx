@@ -7,6 +7,7 @@ import SmartImage from './ui/SmartImage.tsx';
 import { organCizimi } from '../services/nesneGorsel.ts';
 import KonusanAgiz from './agiz/KonusanAgiz.tsx';
 import { renkliAd } from '../data/renkGorselleri.ts';
+import { BUYUK_IDLER, KUCUK_IDLER } from '../data/buyukKucuk.ts';
 import { ParlakMatCiz } from './ozel/ParlakMatCalis.tsx';
 // Şekiller etiketi: veride hepsi "şekil" yazıyor; görsel kimliğinden şeklin adı (7201 + sıra + 7 × renk; Gökhan Hoca 2026-10-29)
 const SEKIL_SIRASI = ['daire', 'dikdörtgen', 'kalp', 'kare', 'oval', 'üçgen', 'yıldız'];
@@ -2462,7 +2463,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 const i18nObjKey = `objects.${option.audioKey}`;
                 const i18nLabel = lookupLocale(i18nObjKey, currentLang as any);
                 // Renkler: şıklar aynı nesne, etikette rengi de yazsın ("kupa" değil "yeşil kupa"; Gökhan Hoca 2026-10-29)
-                const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : undefined;
+                const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : roundData.activityType === ActivityType.BigSmall ? (BUYUK_IDLER.has(Number(option.id)) ? 'büyük' : KUCUK_IDLER.has(Number(option.id)) ? 'küçük' : undefined) : undefined;
                 const displayWord = renkliEtiket || i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                 const spokenWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                 return (
@@ -2597,7 +2598,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         // Prefer canonical object label from i18n using the image's audioKey.
                         const i18nObjKey = `objects.${option.audioKey}`;
                         const i18nLabel = lookupLocale(i18nObjKey, currentLang as any);
-                        const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : undefined;
+                        const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : roundData.activityType === ActivityType.BigSmall ? (BUYUK_IDLER.has(Number(option.id)) ? 'büyük' : KUCUK_IDLER.has(Number(option.id)) ? 'küçük' : undefined) : undefined;
                         const hintDisplayWord = renkliEtiket || i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                         const hintSpokenWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
 
