@@ -1474,7 +1474,8 @@ const staticActivityDataMap: { [key in ActivityType]?: any[] } = {
     [ActivityType.KirisikDuzgun]: YENI_SORULAR_AKTIF ? kirisikDuzgunDataYeni : kirisikDuzgunData,
     [ActivityType.SivriKut]: YENI_SORULAR_AKTIF ? sivriKutDataYeni : sivriKutData,
     [ActivityType.ParlakMat]: YENI_SORULAR_AKTIF ? parlakMatDataYeni : parlakMatData,
-    [ActivityType.AcikKoyu]: acikKoyuDataYeni, // yeni kavram: eski verisi yok
+    // yeni kavram: eski verisi yok. Kırmızı tonlu çiftler (pembe/bordo araba, balon, şemsiye, şişe, top) çıkarıldı (Gökhan Hoca, 2026-10-29)
+    [ActivityType.AcikKoyu]: acikKoyuDataYeni.filter((r) => !r.options.some((o) => [6601, 6602, 6603, 6604, 6615, 6616, 6617, 6618, 6621, 6622].includes(Number(o.id)))),
     [ActivityType.YenirYenmez]: yenirYenmezDataYeni,
     [ActivityType.TehlikeliGuvenli]: tehlikeliGuvenliDataYeni,
     [ActivityType.HavaDurumu]: havaDurumuDataYeni,

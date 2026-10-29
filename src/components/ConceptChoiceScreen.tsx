@@ -7,9 +7,13 @@ import SmartImage from './ui/SmartImage.tsx';
 import { organCizimi } from '../services/nesneGorsel.ts';
 import KonusanAgiz from './agiz/KonusanAgiz.tsx';
 import { renkliAd } from '../data/renkGorselleri.ts';
+import { ParlakMatCiz } from './ozel/ParlakMatCalis.tsx';
 // Şekiller etiketi: veride hepsi "şekil" yazıyor; görsel kimliğinden şeklin adı (7201 + sıra + 7 × renk; Gökhan Hoca 2026-10-29)
 const SEKIL_SIRASI = ['daire', 'dikdörtgen', 'kalp', 'kare', 'oval', 'üçgen', 'yıldız'];
 const sekilAdi = (id: number) => (id >= 7201 && id <= 7228 ? SEKIL_SIRASI[(id - 7201) % 7] : undefined);
+// Parlak/Mat etiketi nesnenin adı değil yüzeyi yazsın (Gökhan Hoca); veride parlak görsellerin kimlikleri
+const PARLAK_IDLER = new Set([3902, 3904, 3905, 3907, 3909, 3911, 3912, 3914, 3916, 3918]);
+const SEFFAF_IDLER = new Set([4001, 4003, 4004, 4006, 4007, 4009, 4010, 4012, 4014, 4016]);
 import ArrowLeftIcon from './icons/ArrowLeftIcon.tsx';
 import { speak, playEffect } from '../services/speechService.ts';
 import BanIcon from './icons/BanIcon.tsx';
@@ -1375,7 +1379,8 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType }> = ({ ac
                 return (<div className="w-full text-center flex flex-col sm-landscape:flex-row sm-landscape:items-center sm-landscape:justify-center sm-landscape:gap-8"> <div className="h-40 sm-landscape:h-48 flex items-center justify-center p-4 bg-slate-200/50 rounded-2xl"> <div className="relative w-32 h-32"> <div className={`w-full h-full transition-opacity duration-300 ${isHot ? 'opacity-100' : 'opacity-0'}`}> <SunIcon className="w-full h-full text-red-500" /> </div> <div className={`absolute inset-0 w-full h-full transition-opacity duration-300 ${!isHot ? 'opacity-100' : 'opacity-0'}`}> <SnowflakeIcon className="w-full h-full text-blue-400" /> </div> </div> </div> <div className="flex flex-col sm-landscape:flex-row justify-center gap-4 sm-landscape:gap-2 mt-4 sm-landscape:mt-0"> <button onClick={() => { setIsHot(false); speak(coldText); }} className={`${baseButtonClasses} bg-blue-500 sm-landscape:w-32`}><MinusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> <button onClick={() => { setIsHot(true); speak(hotText); }} className={`${baseButtonClasses} bg-red-500 sm-landscape:w-32`}><PlusCircleIcon className="w-10 h-10 sm-landscape:w-8 sm-landscape:h-8" /></button> </div> </div>);
             }
             case ActivityType.ParlakMat:
-                return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center"> <div className={`relative w-24 h-24 bg-lime-500 rounded-full overflow-hidden`}> <div className={`absolute -top-4 -left-4 w-16 h-16 bg-white/50 rounded-full transition-opacity duration-300 ${isShiny ? 'opacity-100' : 'opacity-0'}`} style={{ filter: 'blur(10px)', transform: 'rotate(-45deg)' }} /> </div> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsShiny(false); speakConcept('mat'); }} className={`${baseButtonClasses} bg-red-500 text-sm px-4`}>Mat</button> <button onClick={() => { setIsShiny(true); speakConcept('parlak'); }} className={`${baseButtonClasses} bg-green-500 text-sm px-4`}>Parlak</button> </div> </div>);
+                // Gökhan Hoca (2026-10-29): düğmeler aynı renkte (renk ipucu olmasın), toptaki fark belirgin (parlama noktası, yansıma)
+                return (<div className="w-full text-center"> <div className="h-36 flex items-center justify-center"> <ParlakMatCiz ad="top" renk="#2563eb" parlak={isShiny} className="w-36 h-36" /> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsShiny(false); speakConcept('mat'); }} className={`${baseButtonClasses} bg-sky-500 text-sm px-4 ${!isShiny ? 'ring-4 ring-sky-200' : ''}`}>Mat</button> <button onClick={() => { setIsShiny(true); speakConcept('parlak'); }} className={`${baseButtonClasses} bg-sky-500 text-sm px-4 ${isShiny ? 'ring-4 ring-sky-200' : ''}`}>Parlak</button> </div> </div>);
             case ActivityType.SeffafOpak:
                 return (<div className="w-full text-center"> <div className="h-32 flex items-center justify-center bg-repeat rounded-lg" style={{ backgroundImage: 'linear-gradient(45deg, #cbd5e1 25%, #e2e8f0 25%, #e2e8f0 50%, #cbd5e1 50%, #cbd5e1 75%, #e2e8f0 75%, #e2e8f0 100%)', backgroundSize: '28px 28px' }}> <div className={`w-24 h-24 bg-lime-500 transition-opacity duration-300 rounded-full ${isTransparent ? 'opacity-30' : 'opacity-100'}`} /> </div> <div className="flex justify-center gap-8 mt-2"> <button onClick={() => { setIsTransparent(true); speakConcept('şeffaf'); }} className={`${baseButtonClasses} bg-sky-400 text-sm px-4`}>Şeffaf</button> <button onClick={() => { setIsTransparent(false); speakConcept('opak'); }} className={`${baseButtonClasses} bg-slate-500 text-sm px-4`}>Opak</button> </div> </div>);
             case ActivityType.Senses:
@@ -2457,7 +2462,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 const i18nObjKey = `objects.${option.audioKey}`;
                 const i18nLabel = lookupLocale(i18nObjKey, currentLang as any);
                 // Renkler: şıklar aynı nesne, etikette rengi de yazsın ("kupa" değil "yeşil kupa"; Gökhan Hoca 2026-10-29)
-                const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : undefined;
+                const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : undefined;
                 const displayWord = renkliEtiket || i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                 const spokenWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                 return (
@@ -2592,7 +2597,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         // Prefer canonical object label from i18n using the image's audioKey.
                         const i18nObjKey = `objects.${option.audioKey}`;
                         const i18nLabel = lookupLocale(i18nObjKey, currentLang as any);
-                        const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : undefined;
+                        const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : undefined;
                         const hintDisplayWord = renkliEtiket || i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                         const hintSpokenWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
 
