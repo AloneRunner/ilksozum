@@ -42,6 +42,9 @@ for (const n of ['kapı', 'pencere', 'kaydırak', 'merdiven', 'tünel', 'yol', '
 // Derin / Sığ
 metinler.push('Top derin kapta kayboldu. Sığ kapta görünüyor.');
 for (const n of ['tabak', 'tencere', 'leğen', 'fırın kabı', 'kase', 'kova', 'kutu']) for (const k of ['derin', 'sığ']) metinler.push(`Hangi ${n} ${k}?`, `Evet! Bu ${n} ${k}.`);
+// Üstünde / Altında
+const UA = await import(new URL('../../src/data/ustAlt.ts', import.meta.url).href);
+for (const s of UA.UST_ALT_SETLER) for (const u of [true, false]) metinler.push(UA.ustAltSoru(s, u), UA.ustAltDogru(s, u));
 // Paralarımız
 metinler.push(V.DAHA_COK_SORU);
 for (const p of V.PARALAR) metinler.push(`${p.ad}.`, V.paraSoru(p), V.evetAd(p.ad));

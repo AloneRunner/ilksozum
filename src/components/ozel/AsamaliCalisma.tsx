@@ -14,7 +14,8 @@ const AsamaliCalisma: React.FC<{
   tani?: (onBitti: () => void) => React.ReactNode; taniAlt?: string;
   asamalar: Asama[]; karisik: { alt: string; secenek: number; turlar: () => Tur[] };
   onBack: () => void; onSorular: () => void;
-}> = ({ id, baslik, emoji, aciklama, tani, taniAlt, asamalar, karisik, onBack, onSorular }) => {
+  ekKart?: { emoji: string; baslik: string; alt: string; onClick: () => void }; // ör. sürükle-bırak etkinliği bölümün içinde (hoca)
+}> = ({ id, baslik, emoji, aciklama, tani, taniAlt, asamalar, karisik, onBack, onSorular, ekKart }) => {
   const anahtar = `${id}_${profil()}`;
   const [gecilen, setGecilen] = useState<number>(() => { try { return Number(localStorage.getItem(anahtar)) || 0; } catch { return 0; } });
   const [ekran, setEkran] = useState<'merkez' | 'tani' | 'karisik' | number>('merkez');
@@ -80,6 +81,12 @@ const AsamaliCalisma: React.FC<{
           <span><span className="block text-xl font-black text-slate-800">Karışık</span>
             <span className="text-sm text-slate-500">{hepsi ? karisik.alt : 'Bütün aşamalar geçilince açılır'}</span></span>
         </button>
+        {ekKart && (
+          <button className={kart} onClick={ekKart.onClick}>
+            <span className="text-4xl">{ekKart.emoji}</span>
+            <span><span className="block text-xl font-black text-slate-800">{ekKart.baslik}</span><span className="text-sm text-slate-500">{ekKart.alt}</span></span>
+          </button>
+        )}
         <button className={kart} onClick={onSorular}>
           <span className="text-4xl">❓</span>
           <span><span className="block text-xl font-black text-slate-800">Hızlı Sorular</span><span className="text-sm text-slate-500">Eski 8 soru</span></span>

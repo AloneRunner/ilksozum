@@ -11,6 +11,16 @@ import { BUYUK_IDLER, KUCUK_IDLER } from '../data/buyukKucuk.ts';
 import Terazi from './ozel/Terazi.tsx';
 // Ağır/Hafif: ağır görsellerin kimlikleri (veride tek sayılar 6201-6219); etiket sabit "ağır / hafif" (Gökhan Hoca)
 const AGIR_IDLER = new Set([6201, 6203, 6205, 6207, 6209, 6211, 6213, 6215, 6217, 6219]);
+// Konum kavramlarında etiket kavramı yazsın (Gökhan Hoca): sorudaki kelime doğru şıkkın, karşıtı yanlış şıkkın etiketi
+const KONUM_ZIT: Partial<Record<ActivityType, [string, string]>> = {
+  [ActivityType.OnUnder]: ['üstünde', 'altında'], [ActivityType.BelowAbove]: ['yukarıda', 'aşağıda'], [ActivityType.InFrontOfBehind]: ['önünde', 'arkasında'],
+};
+const konumEtiket = (r: ConceptRound, dogru: boolean): string | undefined => {
+  const z = KONUM_ZIT[r.activityType]; if (!z) return undefined;
+  const soru = (r.speech as any)?.tr?.question || r.question || '';
+  const k = z.find((w) => soru.includes(w)); if (!k) return undefined;
+  return dogru ? k : z.find((w) => w !== k);
+};
 import { ParlakMatCiz } from './ozel/ParlakMatCalis.tsx';
 // Şekiller etiketi: veride hepsi "şekil" yazıyor; görsel kimliğinden şeklin adı (7201 + sıra + 7 × renk; Gökhan Hoca 2026-10-29)
 const SEKIL_SIRASI = ['daire', 'dikdörtgen', 'kalp', 'kare', 'oval', 'üçgen', 'yıldız'];
@@ -1255,13 +1265,14 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType; secenekle
                 const onLabel = formatConcept('üstünde');
                 return (
                     <div className="w-full text-center">
-                        <div className="h-32 flex flex-col items-center justify-center relative">
-                            <div className="w-16 h-16 bg-red-500 rounded-full transition-all duration-300 absolute" style={{ bottom: position === 'on' ? '6rem' : '0rem' }} />
-                            <div className="w-32 h-12 bg-amber-600 rounded-md absolute bottom-8" />
+                        {/* Gökhan Hoca (2026-10-29): "altında"da daire dikdörtgenin altında, aralıklı ve tamamen görünür; düğmeler nötr */}
+                        <div className="h-44 flex flex-col items-center justify-center relative">
+                            <div className="w-12 h-12 bg-red-500 rounded-full transition-all duration-300 absolute" style={{ bottom: position === 'on' ? '7rem' : '0.5rem' }} />
+                            <div className="w-32 h-10 bg-amber-600 rounded-md absolute" style={{ bottom: '4.5rem' }} />
                         </div>
                         <div className="flex justify-center gap-8 mt-2">
-                            <button onClick={() => { setPosition('under'); speakConcept('altında'); }} className={`${baseButtonClasses} bg-blue-500 text-sm px-4`}>{underLabel}</button>
-                            <button onClick={() => { setPosition('on'); speakConcept('üstünde'); }} className={`${baseButtonClasses} bg-green-500 text-sm px-4`}>{onLabel}</button>
+                            <button onClick={() => { setPosition('on'); speakConcept('üstünde'); }} className={`${baseButtonClasses} bg-slate-500 text-sm px-4 ${position === 'on' ? 'ring-4 ring-slate-300' : ''}`}>{onLabel}</button>
+                            <button onClick={() => { setPosition('under'); speakConcept('altında'); }} className={`${baseButtonClasses} bg-slate-500 text-sm px-4 ${position === 'under' ? 'ring-4 ring-slate-300' : ''}`}>{underLabel}</button>
                         </div>
                     </div>
                 );
@@ -1271,13 +1282,17 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType; secenekle
                 const aboveLabel = formatConcept('yukarıda');
                 return (
                     <div className="w-full text-center">
-                        <div className="h-32 flex items-center justify-center relative">
-                            <div className="absolute w-20 h-12 bg-sky-300 rounded-full" />
-                            <div className="w-12 h-12 bg-yellow-400 rounded-full transition-transform duration-300 absolute" style={{ transform: `translateY(${positionAbove === 'above' ? '-3rem' : '3rem'})` }} />
+                        {/* Gökhan Hoca (2026-10-29): dikey merdiven; daire tepeye ve dibe gider; düğmeler nötr */}
+                        <div className="h-44 flex items-center justify-center relative">
+                            <svg viewBox="0 0 40 160" className="h-full w-auto" aria-hidden>
+                                <rect x="6" y="4" width="4" height="152" rx="2" fill="#94a3b8" /><rect x="30" y="4" width="4" height="152" rx="2" fill="#94a3b8" />
+                                {Array.from({ length: 8 }, (_, i) => <rect key={i} x="8" y={14 + i * 19} width="24" height="3" rx="1.5" fill="#94a3b8" />)}
+                            </svg>
+                            <div className="w-10 h-10 bg-red-500 rounded-full transition-all duration-500 absolute left-1/2 -translate-x-1/2" style={{ top: positionAbove === 'above' ? '0.25rem' : 'auto', bottom: positionAbove === 'above' ? 'auto' : '0.25rem' }} />
                         </div>
                         <div className="flex justify-center gap-8 mt-2">
-                            <button onClick={() => { setPositionAbove('below'); speakConcept('aşağıda'); }} className={`${baseButtonClasses} bg-red-500 text-sm px-4`}>{belowLabel}</button>
-                            <button onClick={() => { setPositionAbove('above'); speakConcept('yukarıda'); }} className={`${baseButtonClasses} bg-green-500 text-sm px-4`}>{aboveLabel}</button>
+                            <button onClick={() => { setPositionAbove('above'); speakConcept('yukarıda'); }} className={`${baseButtonClasses} bg-slate-500 text-sm px-4 ${positionAbove === 'above' ? 'ring-4 ring-slate-300' : ''}`}>{aboveLabel}</button>
+                            <button onClick={() => { setPositionAbove('below'); speakConcept('aşağıda'); }} className={`${baseButtonClasses} bg-slate-500 text-sm px-4 ${positionAbove === 'below' ? 'ring-4 ring-slate-300' : ''}`}>{belowLabel}</button>
                         </div>
                     </div>
                 );
@@ -1309,14 +1324,15 @@ const InteractiveConceptHelper: React.FC<{ activityType: ActivityType; secenekle
                 const behindLabel = formatConcept('arkasında');
                 const frontLabel = formatConcept('önünde');
                 return (
-                    <div className="w-full text-center" style={{ perspective: '300px' }}>
-                        <div className="h-32 flex items-center justify-center relative">
-                            <div className="absolute w-24 h-24 bg-red-500 rounded-full transition-all duration-300" style={{ zIndex: isInFront ? 20 : 10, transform: `scale(${isInFront ? 1 : 0.85})`, filter: `blur(${isInFront ? 0 : '1px'})`, opacity: isInFront ? 1 : 0.9 }} />
-                            <div className="absolute w-32 h-20 bg-amber-600 rounded-md" style={{ zIndex: 15 }} />
+                    <div className="w-full text-center">
+                        {/* Gökhan Hoca (2026-10-29): bir hayvan kutunun önüne ve arkasına geçer; arkadayken yalnız başının üstü görünür */}
+                        <div className="h-40 flex items-end justify-center relative">
+                            <img src="/images/ozel/kesik/kedi.webp" alt="" draggable={false} className="absolute w-20 transition-all duration-500" style={{ zIndex: isInFront ? 20 : 10, bottom: isInFront ? '0.25rem' : '2.75rem' }} />
+                            <div className="absolute bottom-2 w-40 h-24 rounded-md bg-amber-600 border-4 border-amber-700" style={{ zIndex: 15 }} />
                         </div>
                         <div className="flex justify-center gap-8 mt-2">
-                            <button onClick={() => { setIsInFront(false); speakConcept('arkasında'); }} className={`${baseButtonClasses} bg-red-500 text-sm px-4`}>{behindLabel}</button>
-                            <button onClick={() => { setIsInFront(true); speakConcept('önünde'); }} className={`${baseButtonClasses} bg-green-500 text-sm px-4`}>{frontLabel}</button>
+                            <button onClick={() => { setIsInFront(true); speakConcept('önünde'); }} className={`${baseButtonClasses} bg-slate-500 text-sm px-4 ${isInFront ? 'ring-4 ring-slate-300' : ''}`}>{frontLabel}</button>
+                            <button onClick={() => { setIsInFront(false); speakConcept('arkasında'); }} className={`${baseButtonClasses} bg-slate-500 text-sm px-4 ${!isInFront ? 'ring-4 ring-slate-300' : ''}`}>{behindLabel}</button>
                         </div>
                     </div>
                 );
@@ -2476,7 +2492,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                 const i18nObjKey = `objects.${option.audioKey}`;
                 const i18nLabel = lookupLocale(i18nObjKey, currentLang as any);
                 // Renkler: şıklar aynı nesne, etikette rengi de yazsın ("kupa" değil "yeşil kupa"; Gökhan Hoca 2026-10-29)
-                const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : roundData.activityType === ActivityType.BigSmall ? (BUYUK_IDLER.has(Number(option.id)) ? 'büyük' : KUCUK_IDLER.has(Number(option.id)) ? 'küçük' : undefined) : roundData.activityType === ActivityType.LongShort && Number(option.id) >= 2401 && Number(option.id) <= 2420 ? `${Number(option.id) % 2 === 0 ? 'uzun' : 'kısa'} ${option.word}` : roundData.activityType === ActivityType.ThinThick && Number(option.id) >= 2001 && Number(option.id) <= 2020 ? `${Number(option.id) % 2 === 1 ? 'kalın' : 'ince'} ${option.word}` : roundData.activityType === ActivityType.WideNarrow && (GENIS_IDLER.has(Number(option.id)) || DAR_IDLER.has(Number(option.id))) ? `${GENIS_IDLER.has(Number(option.id)) ? 'geniş' : 'dar'} ${option.word}` : roundData.activityType === ActivityType.DerinSig && Number(option.id) >= 2901 && Number(option.id) <= 2920 ? (Number(option.id) % 2 === 1 ? `derin ${option.word}` : option.word === 'tabak' ? 'düz tabak' : `sığ ${option.word}`) : roundData.activityType === ActivityType.HeavyLight && Number(option.id) >= 6201 && Number(option.id) <= 6220 ? (AGIR_IDLER.has(Number(option.id)) ? 'ağır' : 'hafif') : undefined;
+                const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : roundData.activityType === ActivityType.BigSmall ? (BUYUK_IDLER.has(Number(option.id)) ? 'büyük' : KUCUK_IDLER.has(Number(option.id)) ? 'küçük' : undefined) : roundData.activityType === ActivityType.LongShort && Number(option.id) >= 2401 && Number(option.id) <= 2420 ? `${Number(option.id) % 2 === 0 ? 'uzun' : 'kısa'} ${option.word}` : roundData.activityType === ActivityType.ThinThick && Number(option.id) >= 2001 && Number(option.id) <= 2020 ? `${Number(option.id) % 2 === 1 ? 'kalın' : 'ince'} ${option.word}` : roundData.activityType === ActivityType.WideNarrow && (GENIS_IDLER.has(Number(option.id)) || DAR_IDLER.has(Number(option.id))) ? `${GENIS_IDLER.has(Number(option.id)) ? 'geniş' : 'dar'} ${option.word}` : roundData.activityType === ActivityType.DerinSig && Number(option.id) >= 2901 && Number(option.id) <= 2920 ? (Number(option.id) % 2 === 1 ? `derin ${option.word}` : option.word === 'tabak' ? 'düz tabak' : `sığ ${option.word}`) : roundData.activityType === ActivityType.HeavyLight && Number(option.id) >= 6201 && Number(option.id) <= 6220 ? (AGIR_IDLER.has(Number(option.id)) ? 'ağır' : 'hafif') : konumEtiket(roundData, !!option.isCorrect);
                 const displayWord = renkliEtiket || i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                 const spokenWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                 return (
@@ -2484,7 +2500,9 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         key={`${option.id}-${index}`}
                         imageUrl={option.imageUrl}
                         word={displayWord}
-                        isRevealed={isWordLabelVisible} // Kaan (2026-10-21): etiket kapalıysa doğru cevaptan sonra da yazı çıkmasın
+                        // Kaan (2026-10-21): etiket kapalıysa doğru cevaptan sonra da yazı çıkmasın.
+                        // Önünde/Arkasında (Gökhan Hoca): etiket cevaptan sonra çıksın
+                        isRevealed={roundData.activityType === ActivityType.InFrontOfBehind ? isCorrect : isWordLabelVisible}
                         isSelected={selectedId === option.id && !isWrong}
                         isCorrect={isCorrect && selectedId === option.id}
                         onClick={() => handleCardClick(option.id, option.isCorrect, spokenWord)}
@@ -2611,7 +2629,7 @@ const ConceptChoiceScreen: React.FC<ConceptChoiceScreenProps> = ({
                         // Prefer canonical object label from i18n using the image's audioKey.
                         const i18nObjKey = `objects.${option.audioKey}`;
                         const i18nLabel = lookupLocale(i18nObjKey, currentLang as any);
-                        const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : roundData.activityType === ActivityType.BigSmall ? (BUYUK_IDLER.has(Number(option.id)) ? 'büyük' : KUCUK_IDLER.has(Number(option.id)) ? 'küçük' : undefined) : roundData.activityType === ActivityType.LongShort && Number(option.id) >= 2401 && Number(option.id) <= 2420 ? `${Number(option.id) % 2 === 0 ? 'uzun' : 'kısa'} ${option.word}` : roundData.activityType === ActivityType.ThinThick && Number(option.id) >= 2001 && Number(option.id) <= 2020 ? `${Number(option.id) % 2 === 1 ? 'kalın' : 'ince'} ${option.word}` : roundData.activityType === ActivityType.WideNarrow && (GENIS_IDLER.has(Number(option.id)) || DAR_IDLER.has(Number(option.id))) ? `${GENIS_IDLER.has(Number(option.id)) ? 'geniş' : 'dar'} ${option.word}` : roundData.activityType === ActivityType.DerinSig && Number(option.id) >= 2901 && Number(option.id) <= 2920 ? (Number(option.id) % 2 === 1 ? `derin ${option.word}` : option.word === 'tabak' ? 'düz tabak' : `sığ ${option.word}`) : roundData.activityType === ActivityType.HeavyLight && Number(option.id) >= 6201 && Number(option.id) <= 6220 ? (AGIR_IDLER.has(Number(option.id)) ? 'ağır' : 'hafif') : undefined;
+                        const renkliEtiket = currentLang !== 'tr' ? undefined : roundData.activityType === ActivityType.Colors ? renkliAd(Number(option.id)) : roundData.activityType === ActivityType.Shapes ? sekilAdi(Number(option.id)) : roundData.activityType === ActivityType.ParlakMat ? (PARLAK_IDLER.has(Number(option.id)) ? 'parlak' : 'mat') : roundData.activityType === ActivityType.SeffafOpak ? (SEFFAF_IDLER.has(Number(option.id)) ? 'şeffaf' : 'opak') : roundData.activityType === ActivityType.BigSmall ? (BUYUK_IDLER.has(Number(option.id)) ? 'büyük' : KUCUK_IDLER.has(Number(option.id)) ? 'küçük' : undefined) : roundData.activityType === ActivityType.LongShort && Number(option.id) >= 2401 && Number(option.id) <= 2420 ? `${Number(option.id) % 2 === 0 ? 'uzun' : 'kısa'} ${option.word}` : roundData.activityType === ActivityType.ThinThick && Number(option.id) >= 2001 && Number(option.id) <= 2020 ? `${Number(option.id) % 2 === 1 ? 'kalın' : 'ince'} ${option.word}` : roundData.activityType === ActivityType.WideNarrow && (GENIS_IDLER.has(Number(option.id)) || DAR_IDLER.has(Number(option.id))) ? `${GENIS_IDLER.has(Number(option.id)) ? 'geniş' : 'dar'} ${option.word}` : roundData.activityType === ActivityType.DerinSig && Number(option.id) >= 2901 && Number(option.id) <= 2920 ? (Number(option.id) % 2 === 1 ? `derin ${option.word}` : option.word === 'tabak' ? 'düz tabak' : `sığ ${option.word}`) : roundData.activityType === ActivityType.HeavyLight && Number(option.id) >= 6201 && Number(option.id) <= 6220 ? (AGIR_IDLER.has(Number(option.id)) ? 'ağır' : 'hafif') : konumEtiket(roundData, !!option.isCorrect);
                         const hintDisplayWord = renkliEtiket || i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
                         const hintSpokenWord = i18nLabel || (currentLang === 'tr' ? option.word : translateLabel(option.word, currentLang));
 
