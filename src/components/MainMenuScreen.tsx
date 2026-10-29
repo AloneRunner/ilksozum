@@ -137,7 +137,7 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
           <>
             {/* Duyurular 9.2 (Kaan, 2026-10-21: "duyuruları komple değiştirebiliriz"); en üstte Kasım yenilikleri (YenilikPenceresi ile aynı) */}
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
-              <b>YENİ — Kelimeleri tek tek öğren:</b> Kategoriye girince önce çalışma sayfası açılır. <b>Tek Tek Öğren</b>'de hep aynı kelime sorulur, %80 doğru olunca sıradakine geçilir; öğrenilenlerle <b>Karışık Tekrar</b> yapılır. Eski sorular <b>Hızlı Sorular</b>'da.
+              <b>YENİ — Kelimeleri tek tek öğren:</b> Kategoriye girince önce çalışma sayfası açılır. <b>Tek Tek Öğren</b>'de hep aynı kelime sorulur: önce 2, sonra 3, sonra 4 şık; her biri 10 soru, 8 doğru olunca sıradaki. Bütün kelimelerle <b>2'li, 3'lü, 4'lü Tekrar</b>; karışık 20 soru <b>Hızlı Sorular</b>'da.
             </p>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
               <b>YENİ — Saat Merkezi:</b> Akrep ve yelkovanı tanı, saatle oyna, tam saat, buçuk, çeyrek geçiyor, çeyrek var, dijital saat ve parmakla saati kur. <b>Kavramlar › Zaman</b> ya da <b>Sayılar</b> menüsünde.
@@ -210,12 +210,13 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
 
 // Duyurular ve ses yardımı ana ekranı kalabalıklaştırıyordu (Kaan, 2026-10-06): en altta iki küçük düğme,
 // içerik pencerede açılır. Cihazda Türkçe ses yoksa ses düğmesi sarı uyarıya dönüşür.
-// Teşekkür (Kaan, 2026-10-29; soyadını hoca doğruladı: Laçin). Bütün temalarda; altındaki boşluk gezinme çubuğu
-// ve tema süsleri (dalga, çayır) son satırı örtmesin diye.
+// Teşekkür (Kaan, 2026-10-29; soyadını hoca doğruladı: Laçin) ve geliştiren. Bütün temalarda; altındaki boşluk gezinme
+// çubuğu ve tema süsleri (dalga, çayır) son satırı örtmesin diye.
 export const TESEKKUR_YAZISI = "Tuğ Ortaokulu özel eğitim öğretmeni Gökhan Laçin'in katkılarıyla hazırlanmıştır. 🙏";
+export const GELISTIREN_YAZISI = 'Geliştiren: Kaan Özarık, Dikili Anadolu İmam Hatip Lisesi Fen Bilimleri öğretmeni';
 const TesekkurNotu: React.FC = () => getCurrentLanguage() !== 'tr' ? null : (
   <>
-    <p className="relative z-10 mx-auto w-fit max-w-full rounded-full bg-white/90 px-3 py-1 text-center text-[11px] font-semibold text-slate-600 shadow-sm">{TESEKKUR_YAZISI}</p>
+    <p className="relative z-10 mx-auto w-fit max-w-full rounded-full bg-white/90 px-3 py-1 text-center text-[11px] font-semibold text-slate-600 shadow-sm">{TESEKKUR_YAZISI}<span className="block text-[10px] font-medium text-slate-500">{GELISTIREN_YAZISI}</span></p>
     <div className="h-16 shrink-0" aria-hidden="true" />
   </>
 );

@@ -44,5 +44,9 @@ BACK TO FRONT (the same brown teddy bear sitting, front view, facing the camera)
 
 Start with IMAGE 1.
 
-## Sonuç
-(Görseller geldikten sonra doldurulacak)
+## Sonuç (2026-10-29)
+22 görsel geldi (gorsel-ham/ici-disinda/). Alınan 7 çift → public/images/ozel/ici-disinda/<ad>-duz|ters.webp (512 px):
+kazak, çorap, şort, eşofman, elbise (içi dışında); ayı-şapka, ayı-tişört (arkası önde; tişörtte iki ayı biraz farklı).
+Olmayanlar: mor kapüşonlu (içi dışında hali düzle aynı), ayının kapüşonlusu (ikisinde de kapüşon arkada),
+önlük (ikisinde de önde; ayının başında şapka kalmış). Yeniden denenecekse: önlük ve kapüşonluda ayı şapkasız,
+"EDIT" yerine önce ters hali, sonra düz hali istenebilir.

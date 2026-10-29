@@ -79,7 +79,7 @@ const TersDuzCalis: React.FC<{ onBack: () => void; onSorular: () => void }> = ({
       { ad: 'Düz · 2 şık', alt: '10 soru', secenek: 2, turlar: () => on(() => tur(false)) },
     ]}
     karisik={{ alt: '30 soru, ters ve düz karışık', secenek: 2, turlar: () => Array.from({ length: 30 }, () => tur(zar(2) === 0)) }}
-    ileri={[{ ad: 'İçi dışında, arkası önde', alt: '10 soru: tişört, pantolon, kazak, şapka', secenek: 2, turlar: () => on(iciDisi) }]} />
+    ileri={[{ ad: 'İçi dışında, arkası önde', alt: '10 soru: tişört, pantolon, kazak, çorap, şort, eşofman, elbise; ayının şapkası ve tişörtü', secenek: 2, turlar: () => on(iciDisi) }]} />
 );
 
 export default TersDuzCalis;

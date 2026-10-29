@@ -15,12 +15,19 @@ export const tdSoru = (s: TersDuzSet, ters: boolean) => `Hangi ${s.ad} ${ters ? 
 export const tdDogru = (s: TersDuzSet, ters: boolean) => `Evet! Bu ${s.ad} ${ters ? 'ters' : 'düz'}.`;
 
 // İleri aşama (Gökhan Hoca: "içi dışında / arkası önde için ayrı, ileri bir etkinlik"): soru yalnız yanlış giyilmişi sorar.
-// Şimdilik eldeki 4 çift; yeni çiftler Flow'dan gelince eklenecek (tools/gorsel-envanter/flow-ici-disinda.md).
+// Eski veriden tişört ve pantolon; kazak, çorap, şort, eşofman, elbise ve ayının şapka/tişörtü Flow'dan (2026-10-29,
+// tools/gorsel-envanter/flow-ici-disinda.md). Eski kazak ve şapka çiftleri farklı çocuklarla olduğu için çıktı.
 export interface IciDisiSet { duz: string; ters: string; soru: string; dogru: string }
 const id = (duz: number, ters: number, soru: string, dogru: string): IciDisiSet => ({ duz: `/images/${duz}.webp`, ters: `/images/${ters}.webp`, soru, dogru });
+const yeni = (dosya: string, soru: string, dogru: string): IciDisiSet => ({ duz: `/images/ozel/ici-disinda/${dosya}-duz.webp`, ters: `/images/ozel/ici-disinda/${dosya}-ters.webp`, soru, dogru });
 export const ICI_DISI_SETLER: IciDisiSet[] = [
   id(5729, 5730, 'Hangi tişörtün içi dışında?', 'Evet! Bu tişörtün içi dışında.'),
   id(5713, 5714, 'Hangi pantolonun içi dışında?', 'Evet! Bu pantolonun içi dışında.'),
-  id(5709, 5710, 'Hangi çocuk kazağını içi dışında giymiş?', 'Evet! Bu çocuk kazağını içi dışında giymiş.'),
-  id(5719, 5720, 'Hangi çocuk şapkasını arkası önde takmış?', 'Evet! Bu çocuk şapkasını arkası önde takmış.'),
+  yeni('kazak', 'Hangi kazağın içi dışında?', 'Evet! Bu kazağın içi dışında.'),
+  yeni('corap', 'Hangi çorapların içi dışında?', 'Evet! Bu çorapların içi dışında.'),
+  yeni('sort', 'Hangi şortun içi dışında?', 'Evet! Bu şortun içi dışında.'),
+  yeni('esofman', 'Hangi eşofmanın içi dışında?', 'Evet! Bu eşofmanın içi dışında.'),
+  yeni('elbise', 'Hangi elbisenin içi dışında?', 'Evet! Bu elbisenin içi dışında.'),
+  yeni('ayi-sapka', 'Hangi ayı şapkasını arkası önde takmış?', 'Evet! Bu ayı şapkasını arkası önde takmış.'),
+  yeni('ayi-tisort', 'Hangi ayı tişörtünü arkası önde giymiş?', 'Evet! Bu ayı tişörtünü arkası önde giymiş.'),
 ];

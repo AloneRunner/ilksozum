@@ -223,7 +223,7 @@ export const AppRouter = () => {
         }
     };
 
-    // Kategorinin 8 soruluk testi (Kelime Öğren sayfasında "Hızlı Sorular"); geri dönüş kategori sayfasına
+    // Kategorinin karışık 20 soruluk testi (Kelime Öğren sayfasında "Hızlı Sorular"); geri dönüş kategori sayfasına
     const kategoriSorulari = async (catId: string) => {
         ctx.profile.updateActivityAttempt(catId);
         const catInfo = resolveObjectCategory(catId);
@@ -232,7 +232,7 @@ export const AppRouter = () => {
         setScreenState(ScreenState.Loading);
         ctx.activity.setActivityType(ActivityType.ObjectRecognition);
         const { createObjectChoiceRounds } = await import('../../services/contentService.ts');
-        const data = await createObjectChoiceRounds(catId);
+        const data = await createObjectChoiceRounds(catId, 20); // Gökhan Hoca: karışık 20 soru
         if (data.length > 0) {
             ctx.activity.setActivityData(data);
             ctx.activity.setCurrentIndex(0);
@@ -845,7 +845,7 @@ export const AppRouter = () => {
                     setScreenState(ScreenState.Loading);
                     ctx.activity.setActivityType(ActivityType.ObjectRecognition);
                     const { createObjectChoiceRounds } = await import('../../services/contentService.ts');
-                    const data = await createObjectChoiceRounds(catId);
+                    const data = await createObjectChoiceRounds(catId, 20); // Gökhan Hoca: karışık 20 soru
                     if (data.length > 0) {
                         ctx.activity.setActivityData(data);
                         ctx.activity.setCurrentIndex(0);
