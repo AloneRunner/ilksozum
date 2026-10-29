@@ -77,7 +77,7 @@ const YenilikPenceresi: React.FC<{ onDestek?: () => void }> = ({ onDestek }) => 
                 </div>
               </div>
             ))}
-            <p className="text-xs text-center text-slate-500">Yenilikler özel eğitim öğretmeni Gökhan Laçin'in katkılarıyla hazırlandı. Teşekkürler! 🙏</p>
+            <p className="text-xs text-center text-slate-500">Yenilikler Tuğ Ortaokulu özel eğitim öğretmeni Gökhan Laçin'in katkılarıyla hazırlandı. Teşekkürler! 🙏</p>
             <div className="flex gap-2 pt-1">
               <button onClick={kapat} className="flex-1 rounded-2xl bg-slate-100 py-3 font-bold text-slate-600 active:scale-95">Kapat</button>
               {destekVar && <button onClick={() => setSayfa(1)} className="flex-[2] rounded-2xl bg-emerald-500 py-3 text-lg font-black text-white shadow active:scale-95">Devam ▶</button>}
