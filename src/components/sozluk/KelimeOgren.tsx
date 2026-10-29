@@ -5,6 +5,7 @@ import { etkinlikSay, basariSay } from '../../services/sayac.ts';
 import { trHangisi, trEvetBu, trHayirBuDegil } from '../../utils/trDil.ts';
 import { kategoriOgeleri } from './KelimeKitabi.tsx';
 import { karisabilir, genelKelime } from '../../data/karisabilir.ts';
+import { ilkKelimelerOnde } from '../../data/ilkKelimeler.ts';
 
 // Kelime Öğren (Gökhan Hoca, 2026-10-28): "Direkt soru ile başlamasın: önce bütün meyvelerle çalışma sayfası, sonra soru.
 // Hep elma sorulsun, diğer 3 meyve değişsin, yerleri karışsın; %80 doğru olunca diğer meyveye geçsin.
@@ -89,7 +90,7 @@ const Soru: React.FC<{ hedef: Oge; ogeler: Oge[]; onCevap: (ilkDeneme: boolean) 
 type Ekran = 'merkez' | 'tani' | 'ogren' | 'karisik';
 
 const KelimeOgren: React.FC<{ katId: string; katAd: string; onBack: () => void; onSorular: () => void }> = ({ katId, katAd, onBack, onSorular }) => {
-  const hepsi = useMemo(() => kategoriOgeleri(katId), [katId]);
+  const hepsi = useMemo(() => ilkKelimelerOnde(kategoriOgeleri(katId)), [katId]);
   // "Oyuncaklar hangisi?" gibi genel kelimeler soru ve şık olmaz; Tanı sayfasında görünür
   const ogeler = useMemo(() => hepsi.filter(o => !genelKelime(o.kelime)), [hepsi]);
   const [kayit, setKayit] = useState<Kayit>(() => oku(katId));
