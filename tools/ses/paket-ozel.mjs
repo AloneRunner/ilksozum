@@ -27,6 +27,10 @@ metinler.push(V.TOPLAMA_SORU);
 for (let n = 2; n <= 10; n++) metinler.push(V.toplamaDogru(n));
 V.GUNLER.forEach((g, i) => metinler.push(`${g}.`, V.gunSoru(i), V.evetAd(g), V.bugunCumle(i)));
 V.AYLAR.forEach((a, i) => metinler.push(`${a}.`, V.aySoru(i), V.evetAd(a), V.buAyCumle(i)));
+// Paralarımız
+metinler.push(V.DAHA_COK_SORU);
+for (const p of V.PARALAR) metinler.push(`${p.ad}.`, V.paraSoru(p), V.evetAd(p.ad));
+for (const p of V.PARALAR.filter((x) => x.kagit).slice(1)) metinler.push(V.dahaCokDogru(p)); // "daha çok" yalnız banknotlarda; 5 lira hiç kazanmaz
 
 // Uygulamanın arama kuralı (speechService.kayitBul / cumleler)
 const liste = fs.readFileSync('src/data/sesListesi.ts', 'utf8');

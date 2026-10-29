@@ -15,9 +15,10 @@ const IslevselOkuma = lazy(() => import('./IslevselOkuma.tsx'));
 const YonergeTakibi = lazy(() => import('./YonergeTakibi.tsx'));
 const Toplama = lazy(() => import('./Toplama.tsx'));
 const GunlerAylar = lazy(() => import('./GunlerAylar.tsx'));
+const Paralar = lazy(() => import('./Paralar.tsx'));
 
 export type OzelEkranId = 'sosyalOyku' | 'ozBakim' | 'nasilHisseder' | 'benSenO' | 'mevsimler' | 'kediyiBul' | 'sesinYeri' | 'islevselOkuma'
-  | 'neYapiyor' | 'yonerge' | 'dinleBul' | 'toplama' | 'gunlerAylar';
+  | 'neYapiyor' | 'yonerge' | 'dinleBul' | 'toplama' | 'gunlerAylar' | 'paralar';
 
 // --- Ne yapıyor? Eylem fotoğrafları: Tanı (dokun, dinle) + Soru ("Kim uyuyor?") ---
 const NeYapiyor: React.FC<{ onBack: () => void }> = ({ onBack }) => {
@@ -154,6 +155,7 @@ const OzelEkran: React.FC<{ ekran: OzelEkranId; onBack: () => void }> = ({ ekran
     {ekran === 'dinleBul' && <DinleBul onBack={onBack} />}
     {ekran === 'toplama' && <Toplama onBack={onBack} />}
     {ekran === 'gunlerAylar' && <GunlerAylar onBack={onBack} />}
+    {ekran === 'paralar' && <Paralar onBack={onBack} />}
   </Suspense>
 );
 

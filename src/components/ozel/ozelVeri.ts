@@ -196,3 +196,15 @@ export const aySoru = (i: number) => `${AY_DEN[i]} sonra hangi ay gelir?`;
 export const evetAd = (ad: string) => `Evet, ${kucukHarf(ad)}.`;
 export const bugunCumle = (i: number) => `Bugün ${kucukHarf(GUNLER[i])}.`;
 export const buAyCumle = (i: number) => `Bu ay ${kucukHarf(AYLAR[i])}.`;
+// --- Paralarımız: banknot ön yüzleri TCMB "Paralarımızı tanıyalım" afişinden (üstüne "ÖRNEKTİR" eklendi), madeni paralar aynı afişten ---
+export interface Para { id: string; ad: string; url: string; kagit: boolean; kurus: number }
+const pr = (id: string, ad: string, kurus: number, kagit: boolean): Para => ({ id, ad, url: g(`para/${id}`), kagit, kurus });
+export const PARALAR: Para[] = [
+  pr('5-tl', 'Beş lira', 500, true), pr('10-tl', 'On lira', 1000, true), pr('20-tl', 'Yirmi lira', 2000, true),
+  pr('50-tl', 'Elli lira', 5000, true), pr('100-tl', 'Yüz lira', 10000, true), pr('200-tl', 'İki yüz lira', 20000, true),
+  pr('kurus-5', 'Beş kuruş', 5, false), pr('kurus-10', 'On kuruş', 10, false), pr('kurus-25', 'Yirmi beş kuruş', 25, false),
+  pr('kurus-50', 'Elli kuruş', 50, false), pr('lira-1', 'Bir lira', 100, false),
+];
+export const paraSoru = (p: Para) => `Hangisi ${kucukHarf(p.ad)}?`;
+export const DAHA_COK_SORU = 'Hangisi daha çok?';
+export const dahaCokDogru = (p: Para) => `Evet, ${kucukHarf(p.ad)} daha çok.`;

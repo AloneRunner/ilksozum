@@ -6,7 +6,7 @@ import { ActivityType } from '../types.ts';
 export type BeceriId = 'harfler' | 'sayilar' | 'dusunme' | 'el' | 'konusma' | 'oyunOdasi';
 export type BeceriEkran = 'basara' | 'basara2' | 'sesTaklit' | 'besNBirK' | 'agiz' | 'tuvalet' | 'saat'
   | 'sosyalOyku' | 'ozBakim' | 'nasilHisseder' | 'benSenO' | 'mevsimler' | 'kediyiBul' | 'sesinYeri' | 'islevselOkuma' // özel eğitim (ozel/OzelEkran.tsx)
-  | 'neYapiyor' | 'yonerge' | 'dinleBul' | 'toplama' | 'gunlerAylar';
+  | 'neYapiyor' | 'yonerge' | 'dinleBul' | 'toplama' | 'gunlerAylar' | 'paralar';
 
 interface OgeTemel { emoji: string; baslik: string; alt: string; sadeceTr?: boolean }
 export type BeceriOge =
@@ -61,6 +61,7 @@ export const BECERILER: Beceri[] = [
       o('numberSequence', '🪜', 'Sayı Sırala', '1, 2, 3... sırala'),
       e(ActivityType.OddEven, '🧦', 'Tek / Çift', 'Tek mi, bir çift mi?'),
       { tur: 'ekran', ekran: 'toplama', emoji: '➕', baslik: 'Toplama', alt: 'İki grubu birleştir, hepsini say' },
+      { tur: 'ekran', ekran: 'paralar', emoji: '💰', baslik: 'Paralarımız', alt: 'Kâğıt ve madeni paraları tanı' },
       { tur: 'ekran', ekran: 'saat', emoji: '🕒', baslik: 'Saat', alt: 'Akrep, yelkovan; tam, buçuk, çeyrek; saati kur' },
       { tur: 'ekran', ekran: 'gunlerAylar', emoji: '📅', baslik: 'Günler ve Aylar', alt: 'Haftanın günleri, yılın ayları, bugün' },
     ],
