@@ -30,6 +30,9 @@ V.AYLAR.forEach((a, i) => metinler.push(`${a}.`, V.aySoru(i), V.evetAd(a), V.buA
 // Renk Öğren: Tanı'da "Kırmızı araba." (soru, evet ve hayır cümleleri Renkler'den kayıtlı)
 const RG = await import(new URL('../../src/data/renkGorselleri.ts', import.meta.url).href);
 for (const n of RG.NESNELER) for (const r of RG.RENKLER) metinler.push(RG.renkliAdCumle(n, r), RG.renkSoru(n, r), RG.renkDogru(n, r));
+// Rengi Ne? Tanı: "Muz sarı." (veri dosyası enum içe aktardığı için düz metin olarak okunur)
+const RT = fs.readFileSync(new URL('../../src/services/database/activities/yeni/renkTanimaData.ts', import.meta.url), 'utf8');
+for (const [, kelime, renk] of RT.matchAll(/\['\/images\/\d+\.webp', '([^']+)', '([^']+)'/g)) metinler.push(`${kelime.charAt(0).toLocaleUpperCase('tr-TR')}${kelime.slice(1)} ${renk}.`);
 // Paralarımız
 metinler.push(V.DAHA_COK_SORU);
 for (const p of V.PARALAR) metinler.push(`${p.ad}.`, V.paraSoru(p), V.evetAd(p.ad));

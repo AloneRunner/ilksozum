@@ -3,7 +3,8 @@ import { OyunCercevesi } from '../oyunKiti/OyunKiti.tsx';
 import { colorRecognitionDataYeni } from '../../services/database/activities/yeni/renkTanimaData.ts';
 import type { ColorRecognitionRound } from '../../services/database/activities/reasoning/colorRecognitionData.ts';
 import { renkSiklari, sikTonu, renkEtiketi } from '../../data/rengiNe.ts';
-import { SecimOyunu, karistir, type Tur } from './ozelOrtak.tsx';
+import { SecimOyunu, karistir, ikinciBasarisizlik, GERI_MESAJ, type Tur } from './ozelOrtak.tsx';
+import { speak } from '../../services/speechService.ts';
 
 // Rengi Ne? çalışması (Gökhan Hoca, 2026-10-29): 2 şık (10 soru) → 3 şık (10) → 4 şık (10) → karışık (25, art arda aynı renk yok).
 // Her aşamanın 10 sorusu 30 fotoğraftan her seferinde yeniden seçilir (ezber olmasın); 8/10 ilk denemede doğru olmadan sonrakine geçilmez.
@@ -26,7 +27,36 @@ const tur = (r: ColorRecognitionRound, n: number): Tur => ({
   secenekler: renkSiklari(r, n).map((renk) => ({ id: renk, icerik: <Dugme renk={renk} tur={r} /> })),
 });
 
-type Ekran = { ad: 'merkez' } | { ad: 'asama'; i: number } | { ad: 'karisik' };
+type Ekran = { ad: 'merkez' } | { ad: 'tani' } | { ad: 'asama'; i: number } | { ad: 'karisik' };
+const buyuk = (s: string) => s.charAt(0).toLocaleUpperCase('tr-TR') + s.slice(1);
+export const tanimCumle = (r: ColorRecognitionRound) => `${buyuk(r.word)} ${r.correctColor}.`;
+
+// Tanı: renk renk fotoğraflar; dokununca "Muz sarı." (1. aşamada iki kez takılınca buraya dönülür)
+const Tani: React.FC<{ onBack: () => void }> = ({ onBack }) => {
+  const renkler = [...new Set(HAVUZ.map((r) => r.correctColor))];
+  return (
+    <OyunCercevesi baslik="Rengi Ne?" emoji="🍌" onBack={onBack} yonerge="Resme dokun, dinle.">
+      <div className="absolute inset-0 flex flex-col gap-3 px-3 pb-3 overflow-y-auto">
+        {renkler.map((renk) => (
+          <div key={renk} className="w-full max-w-4xl mx-auto rounded-3xl bg-white p-2 shadow-lg">
+            <div className="flex items-center gap-2 px-1 pb-1">
+              <span className="h-6 w-6 rounded-full border border-slate-300" style={{ background: sikTonu(renk) }} />
+              <span className="text-xl font-black text-slate-800">{renkEtiketi(renk)}</span>
+            </div>
+            <div className="grid grid-cols-3 sm:grid-cols-4 landscape:grid-cols-6 gap-2">
+              {HAVUZ.filter((r) => r.correctColor === renk).map((r) => (
+                <button key={r.id} onClick={() => speak(tanimCumle(r))} className="rounded-2xl active:scale-95">
+                  <img src={r.imageUrl} alt="" draggable={false} className="w-full aspect-square object-contain rounded-2xl bg-white" />
+                  <span className="block text-sm font-bold text-slate-700">{r.word}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </OyunCercevesi>
+  );
+};
 
 const RengiNeOgren: React.FC<{ onBack: () => void; onSorular: () => void }> = ({ onBack, onSorular }) => {
   const [gecilen, setGecilen] = useState(oku);
@@ -34,6 +64,7 @@ const RengiNeOgren: React.FC<{ onBack: () => void; onSorular: () => void }> = ({
   const [sonuc, setSonuc] = useState<string | null>(null);
   const merkez = () => setEkran({ ad: 'merkez' });
 
+  if (ekran.ad === 'tani') return <Tani onBack={merkez} />;
   if (ekran.ad === 'asama') {
     const sik = ASAMALAR[ekran.i];
     return (
@@ -41,6 +72,11 @@ const RengiNeOgren: React.FC<{ onBack: () => void; onSorular: () => void }> = ({
         secenekSayilari={[sik]} turlariKur={() => karistir(HAVUZ).slice(0, SORU).map((r) => tur(r, sik))}
         onBitti={(dogru) => {
           const gecti = dogru >= GECME;
+          if (ikinciBasarisizlik(`${ANAHTAR()}_hata_${ekran.i}`, gecti) && gecilen === ekran.i) {
+            if (ekran.i > 0) { setGecilen(ekran.i - 1); try { localStorage.setItem(ANAHTAR(), String(ekran.i - 1)); } catch { /* yok say */ } }
+            setSonuc(GERI_MESAJ(ekran.i === 0)); setEkran(ekran.i === 0 ? { ad: 'tani' } : { ad: 'merkez' });
+            return;
+          }
           if (gecti && gecilen <= ekran.i) { setGecilen(ekran.i + 1); try { localStorage.setItem(ANAHTAR(), String(ekran.i + 1)); } catch { /* yok say */ } }
           setSonuc(gecti
             ? (ekran.i === 2 ? `🎉 4 renk de geçildi (${dogru}/${SORU}). Karışık açıldı.` : `✅ ${sik} renk geçildi (${dogru}/${SORU}). Sıradaki: ${sik + 1} renk.`)
@@ -71,6 +107,10 @@ const RengiNeOgren: React.FC<{ onBack: () => void; onSorular: () => void }> = ({
       <div className="absolute inset-0 overflow-y-auto px-3 pb-6 space-y-3 pt-2 max-w-xl mx-auto">
         <p className="px-2 text-sm text-slate-600">Muz sarı, havuç turuncu… Fotoğraftaki nesnenin rengini bul. Önce 2 renk arasından, sonra 3 ve 4.</p>
         {sonuc && <div className="rounded-2xl bg-amber-50 border-2 border-amber-200 px-4 py-2 text-center font-bold text-amber-900">{sonuc}</div>}
+        <button className={kart} onClick={() => setEkran({ ad: 'tani' })}>
+          <span className="text-4xl">📖</span>
+          <span><span className="block text-xl font-black text-slate-800">Tanı</span><span className="text-sm text-slate-500">Renk renk fotoğraflar, dokun ve dinle</span></span>
+        </button>
         {ASAMALAR.map((sik, i) => {
           const durum = gecilen > i ? '✅ Geçildi' : gecilen === i ? 'Sıradaki' : '🔒 Önce bir önceki';
           return (

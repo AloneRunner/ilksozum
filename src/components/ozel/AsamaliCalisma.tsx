@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { OyunCercevesi } from '../oyunKiti/OyunKiti.tsx';
-import { SecimOyunu, type Tur } from './ozelOrtak.tsx';
+import { SecimOyunu, ikinciBasarisizlik, GERI_MESAJ, type Tur } from './ozelOrtak.tsx';
 
 // Aşamalı kavram çalışması (Gökhan Hoca'nın kalıbı, 2026-10-29): Tanı → sırayla aşamalar (10'ar soru, 8/10 ilk denemede
 // doğru olmadan sonraki açılmaz) → karışık. İlerleme profil başına cihazda. Açık/Koyu ve Parlak/Mat bunu kullanır.
@@ -29,6 +29,11 @@ const AsamaliCalisma: React.FC<{
         secenekSayilari={[a.secenek]} turlariKur={a.turlar}
         onBitti={(dogru, toplam) => {
           const gecti = dogru >= GECME;
+          if (ikinciBasarisizlik(`${anahtar}_hata${ekran}`, gecti) && gecilen === ekran) {
+            if (ekran > 0) { setGecilen(ekran - 1); try { localStorage.setItem(anahtar, String(ekran - 1)); } catch { /* yok say */ } }
+            setSonuc(GERI_MESAJ(ekran === 0)); setEkran(ekran === 0 && tani ? 'tani' : 'merkez');
+            return;
+          }
           if (gecti && gecilen <= ekran) { setGecilen(ekran + 1); try { localStorage.setItem(anahtar, String(ekran + 1)); } catch { /* yok say */ } }
           const sonraki = asamalar[ekran + 1];
           setSonuc(gecti

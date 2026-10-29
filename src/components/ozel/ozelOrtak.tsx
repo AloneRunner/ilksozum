@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { OyunCercevesi, Kutlama, OyunSonu, useSeviye } from '../oyunKiti/OyunKiti.tsx';
 import { speak, playEffect } from '../../services/speechService.ts';
 import { etkinlikSay, basariSay } from '../../services/sayac.ts';
@@ -43,7 +43,10 @@ export const SecimOyunu: React.FC<{
 }> = ({ oyunId, sayacAdi, baslik, emoji, onBack, secenekSayilari, turlariKur, ust, onBitti }) => {
   const { seviye, basari, zorlandi } = useSeviye(oyunId, secenekSayilari.length - 1);
   const [oyun, setOyun] = useState(0);
-  const turlar = useMemo(() => turlariKur(secenekSayilari[seviye]), [oyun]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Gökhan Hoca (2026-10-29): yalnız ilk dokunuş sayılır, ipucuyla bulunan yanlış sayılır; yanlış yapılan soru 2-3 soru
+  // sonra şıkları karışık olarak bir kez daha gelir (ipucusuz yapma fırsatı), bu tekrar puana sayılmaz.
+  const [turlar, setTurlar] = useState<(Tur & { tekrar?: boolean })[]>(() => turlariKur(secenekSayilari[seviye]));
+  const asilSayi = useRef(turlar.length);
   const [i, setI] = useState(0);
   const [sonen, setSonen] = useState<string[]>([]);
   const [sallanan, setSallanan] = useState<string | null>(null);
@@ -71,16 +74,29 @@ export const SecimOyunu: React.FC<{
       return;
     }
     setKilit(true);
-    if (ilkDeneme.current) { dogrular.current++; basari(); } else zorlandi();
+    let sira = turlar;
+    if (!tur.tekrar) {
+      if (ilkDeneme.current) { dogrular.current++; basari(); }
+      else {
+        zorlandi();
+        const yer = Math.min(i + 3 + zar(2), turlar.length); // 2 ya da 3 soru sonra
+        sira = [...turlar.slice(0, yer), { ...tur, tekrar: true, secenekler: karistir(tur.secenekler) }, ...turlar.slice(yer)];
+        setTurlar(sira);
+      }
+    }
     setKutla(true); await bekle(700); // Kutlama tonu çalar
     await konus(tur.dogruSoz);
     setKutla(false);
-    if (i + 1 < turlar.length) { setI(i + 1); return; }
-    etkinlikSay(sayacAdi, 'bitti'); basariSay(sayacAdi, dogrular.current, turlar.length);
-    onBitti?.(dogrular.current, turlar.length);
+    if (i + 1 < sira.length) { setI(i + 1); return; }
+    etkinlikSay(sayacAdi, 'bitti'); basariSay(sayacAdi, dogrular.current, asilSayi.current);
+    onBitti?.(dogrular.current, asilSayi.current);
     setBitti(true);
   };
-  const tekrar = () => { setBitti(false); setI(0); dogrular.current = 0; setOyun(o => o + 1); };
+  const tekrar = () => {
+    const yeni = turlariKur(secenekSayilari[seviye]);
+    asilSayi.current = yeni.length;
+    setTurlar(yeni); setBitti(false); setI(0); dogrular.current = 0; setOyun(o => o + 1);
+  };
 
   if (!tur) return null;
   const ipucu = sonen.length >= 2;
@@ -114,6 +130,21 @@ export const SecimOyunu: React.FC<{
     </OyunCercevesi>
   );
 };
+
+// Aşamalı çalışmalarda geri dönüş (Gökhan Hoca, 2026-10-29): aynı aşamada üst üste 2 kez ölçüt sağlanamazsa bir önceki
+// aşamaya, ilk aşamadaysa tanıtmaya dönülür. Geçince sayaç sıfırlanır. true = geri dönülmeli.
+export const ikinciBasarisizlik = (anahtar: string, gecti: boolean): boolean => {
+  try {
+    if (gecti) { localStorage.removeItem(anahtar); return false; }
+    const n = (Number(localStorage.getItem(anahtar)) || 0) + 1;
+    if (n >= 2) { localStorage.removeItem(anahtar); return true; }
+    localStorage.setItem(anahtar, String(n));
+  } catch { /* yok say */ }
+  return false;
+};
+export const GERI_MESAJ = (ilk: boolean) => ilk
+  ? 'İki kez üst üste olmadı. Önce tanıyalım, sonra yeniden deneriz.'
+  : 'İki kez üst üste olmadı. Bir önceki aşamaya dönüyoruz.';
 
 // Bir dizinin içinden, doğru dışında rastgele n-1 öğe + doğru, karışık
 export const sikKur = <T,>(dogru: T, havuz: T[], n: number, ayni: (a: T, b: T) => boolean = (a, b) => a === b) =>

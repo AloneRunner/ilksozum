@@ -1,6 +1,6 @@
 // OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-kapak.mjs. Kavram kartı kapakları (ilk sorunun iki görseli).
 export const KAVRAM_KAPAK: Record<string, [string, string]> = {
-  AcikKoyu: ['/images/6601.webp', '/images/6602.webp'],
+  AcikKoyu: ['/images/ozel/acik-koyu/tisort-mavi-0.webp', '/images/ozel/acik-koyu/tisort-mavi-3.webp'], // kırmızı tonlar çıktı (Gökhan Hoca)
   AliveLifeless: ['/images/3504.webp', '/images/3112.webp'],
   BeforeAfter: ['/images/6101.webp', '/images/6102.webp'],
   BelowAbove: ['/images/2031.webp', '/images/2025.webp'],

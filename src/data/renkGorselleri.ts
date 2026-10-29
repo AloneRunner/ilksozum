@@ -1,14 +1,24 @@
 // Renkler etkinliğinin fotoğrafları: 11 nesne × 7 renk (tools/gorsel-envanter/uret-cift.mjs, id 7101-7177).
 // Renk Öğren (Gökhan Hoca, 2026-10-29) ve Renkler etiketi ("yeşil elbise") buradan okur.
-export const RENKLER = ['kırmızı', 'mavi', 'sarı', 'yeşil', 'turuncu', 'mor', 'pembe'] as const;
+// Öğretim sırası ve grupları (Gökhan Hoca, 2026-10-29): kırmızı-mavi-sarı / yeşil-siyah-beyaz / turuncu-mor-pembe-kahverengi
+export const RENK_GRUPLARI = [['kırmızı', 'mavi', 'sarı'], ['yeşil', 'siyah', 'beyaz'], ['turuncu', 'mor', 'pembe', 'kahverengi']] as const;
+export const RENKLER = RENK_GRUPLARI.flat();
 export type Renk = typeof RENKLER[number];
 export const RENK_KODU: Record<Renk, string> = {
   'kırmızı': '#ef4444', mavi: '#3b82f6', 'sarı': '#facc15', 'yeşil': '#22c55e', turuncu: '#f97316', mor: '#a855f7', pembe: '#ec4899',
+  siyah: '#1f2937', beyaz: '#f8fafc', kahverengi: '#7a4a28',
+};
+type FotoRenk = 'kırmızı' | 'mavi' | 'sarı' | 'yeşil' | 'turuncu' | 'mor' | 'pembe';
+const FOTO_RENKLER: FotoRenk[] = ['kırmızı', 'mavi', 'sarı', 'yeşil', 'turuncu', 'mor', 'pembe'];
+// Siyah, beyaz, kahverengi: mavi/turuncu fotoğraftan boyandı (tools/gorsel-envanter/ton-uret.py → public/images/ozel/renk/)
+const DOSYA: Record<string, string> = {
+  araba: 'araba', balon: 'balon', 'çanta': 'canta', 'çizme': 'cizme', elbise: 'elbise', 'çöp kovası': 'cop-kovasi',
+  kupa: 'kupa', 'şemsiye': 'semsiye', 'şişe': 'sise', 'tişört': 'tisort', top: 'top',
 };
 
-const s = (kirmizi: number, mavi: number, sari: number, yesil: number, turuncu: number, mor: number, pembe: number): Record<Renk, number> =>
+const s = (kirmizi: number, mavi: number, sari: number, yesil: number, turuncu: number, mor: number, pembe: number): Record<FotoRenk, number> =>
   ({ 'kırmızı': kirmizi, mavi, 'sarı': sari, 'yeşil': yesil, turuncu, mor, pembe });
-export const RENKLI_NESNELER: Record<string, Record<Renk, number>> = {
+export const RENKLI_NESNELER: Record<string, Record<FotoRenk, number>> = {
   araba: s(7101, 7102, 7105, 7107, 7106, 7103, 7104),
   balon: s(7108, 7109, 7112, 7114, 7113, 7110, 7111),
   'çanta': s(7115, 7116, 7119, 7121, 7120, 7117, 7118),
@@ -22,10 +32,13 @@ export const RENKLI_NESNELER: Record<string, Record<Renk, number>> = {
   top: s(7171, 7172, 7175, 7177, 7176, 7173, 7174),
 };
 export const NESNELER = Object.keys(RENKLI_NESNELER);
-export const renkliUrl = (nesne: string, renk: Renk) => `/images/${RENKLI_NESNELER[nesne][renk]}.webp`;
+export const renkliUrl = (nesne: string, renk: Renk) => {
+  const id = (RENKLI_NESNELER[nesne] as Partial<Record<Renk, number>>)[renk];
+  return id ? `/images/${id}.webp` : `/images/ozel/renk/${DOSYA[nesne]}-${renk}.webp`;
+};
 
 const AD = new Map<number, string>();
-for (const [n, r] of Object.entries(RENKLI_NESNELER)) for (const renk of RENKLER) AD.set(r[renk], `${renk} ${n}`);
+for (const [n, r] of Object.entries(RENKLI_NESNELER)) for (const renk of FOTO_RENKLER) AD.set(r[renk], `${renk} ${n}`);
 /** Görsel kimliğinden "yeşil elbise" (Renkler etiketi); renkli fotoğraf değilse undefined */
 export const renkliAd = (id: number): string | undefined => AD.get(id);
 

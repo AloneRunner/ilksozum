@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { OyunCercevesi } from '../oyunKiti/OyunKiti.tsx';
 import { speak } from '../../services/speechService.ts';
-import { SecimOyunu, karistir, zar, konus, type Tur } from './ozelOrtak.tsx';
+import { SecimOyunu, karistir, zar, konus, ikinciBasarisizlik, GERI_MESAJ, type Tur } from './ozelOrtak.tsx';
 
 // Şekil Öğren (Gökhan Hoca, 2026-10-29): gruplarla — önce daire, kare, üçgen; sonra dikdörtgen, oval, yıldız.
 // Tanı: her şekil 4 örnekle (farklı renk, boyut, yön). Aşamalar 2 → 3 → 4 şık, 10'ar soru, 8/10 ile geçilir; sonra karışık 35 soru.
 // Benzer şekiller (daire/oval, kare/dikdörtgen) grup aşamalarında aynı soruda yan yana gelmez; karışıkta gelir.
 // Şıklarda bütün şekiller aynı boyutta ve aynı renkte (yalnız biçim ayırt edilsin). Şekiller kodla çizilir (renk/boyut/yön serbest).
 // Eski "Şekiller" soruları (tanıtım turuyla) "Hızlı Sorular" olarak durur; Program Modu onları kullanır.
-type Sekil = 'daire' | 'kare' | 'üçgen' | 'dikdörtgen' | 'oval' | 'yıldız';
+type Sekil = 'daire' | 'kare' | 'üçgen' | 'dikdörtgen' | 'oval' | 'yıldız' | 'kalp';
 const GRUPLAR: { ad: string; sekiller: Sekil[]; dorduncu: Sekil }[] = [
   { ad: 'Daire, kare, üçgen', sekiller: ['daire', 'kare', 'üçgen'], dorduncu: 'yıldız' },      // 4 şıkta 4. şekil: benzeri olmayan
-  { ad: 'Dikdörtgen, oval, yıldız', sekiller: ['dikdörtgen', 'oval', 'yıldız'], dorduncu: 'üçgen' },
+  { ad: 'Dikdörtgen, oval, yıldız, kalp', sekiller: ['dikdörtgen', 'oval', 'yıldız', 'kalp'], dorduncu: 'üçgen' }, // kalp: hoca "eklensin"
 ];
-const HEPSI: Sekil[] = ['daire', 'kare', 'üçgen', 'dikdörtgen', 'oval', 'yıldız'];
+const HEPSI: Sekil[] = ['daire', 'kare', 'üçgen', 'dikdörtgen', 'oval', 'yıldız', 'kalp'];
 const SORU = 10, KARISIK = 35, GECME = 8;
 const RENKLER = ['#ef4444', '#3b82f6', '#eab308', '#16a34a', '#a855f7', '#f97316'];
 const buyuk = (s: string) => s.charAt(0).toLocaleUpperCase('tr-TR') + s.slice(1);
@@ -32,6 +32,7 @@ export const SekilCiz: React.FC<{ ad: Sekil; renk: string; olcek?: number; aci?:
       {ad === 'dikdörtgen' && <rect x={4} y={26} width={92} height={48} />}
       {ad === 'oval' && <ellipse cx={50} cy={50} rx={46} ry={28} />}
       {ad === 'yıldız' && <polygon points={yildiz(46, 19)} />}
+      {ad === 'kalp' && <path d="M50 88 C20 66 6 48 10 30 C14 14 34 10 50 28 C66 10 86 14 90 30 C94 48 80 66 50 88 Z" />}
     </g>
   </svg>
 );
@@ -43,6 +44,7 @@ const ORNEKLER: Record<Sekil, { olcek: number; aci: number }[]> = {
   'dikdörtgen': [{ olcek: 1, aci: 0 }, { olcek: 0.7, aci: 90 }, { olcek: 0.8, aci: 20 }, { olcek: 0.5, aci: 0 }],
   'oval': [{ olcek: 1, aci: 0 }, { olcek: 0.7, aci: 90 }, { olcek: 0.8, aci: -30 }, { olcek: 0.5, aci: 0 }],
   'yıldız': [{ olcek: 1, aci: 0 }, { olcek: 0.6, aci: 20 }, { olcek: 0.8, aci: -15 }, { olcek: 0.45, aci: 36 }],
+  'kalp': [{ olcek: 1, aci: 0 }, { olcek: 0.6, aci: 15 }, { olcek: 0.8, aci: -20 }, { olcek: 0.45, aci: 0 }],
 };
 
 const BENZER: [Sekil, Sekil][] = [['daire', 'oval'], ['kare', 'dikdörtgen']];
@@ -108,6 +110,11 @@ const SekilCalis: React.FC<{ onBack: () => void; onSorular: () => void }> = ({ o
         secenekSayilari={[sik]} turlariKur={() => grupTurlari(g, sik)}
         onBitti={(dogru) => {
           const gecti = dogru >= GECME;
+          if (ikinciBasarisizlik(`${ANAHTAR()}_hata_${grup}_${ekran.i}`, gecti) && gg === ekran.i) {
+            if (ekran.i > 0) { const y = [...gecilen]; y[grup] = ekran.i - 1; setGecilen(y); try { localStorage.setItem(ANAHTAR(), JSON.stringify(y)); } catch { /* yok say */ } }
+            setSonuc(GERI_MESAJ(ekran.i === 0)); setEkran(ekran.i === 0 ? { ad: 'tani' } : { ad: 'merkez' });
+            return;
+          }
           if (gecti && gg <= ekran.i) { const y = [...gecilen]; y[grup] = ekran.i + 1; setGecilen(y); try { localStorage.setItem(ANAHTAR(), JSON.stringify(y)); } catch { /* yok say */ } }
           setSonuc(gecti
             ? (ekran.i === 2 ? `🎉 ${g.ad}: öğrenildi (${dogru}/${SORU})!` : `✅ ${sik} şık geçildi (${dogru}/${SORU}). Sıradaki: ${sik + 1} şık.`)
@@ -134,7 +141,7 @@ const SekilCalis: React.FC<{ onBack: () => void; onSorular: () => void }> = ({ o
           {GRUPLAR.map((x, i) => (
             <button key={x.ad} onClick={() => { setGrup(i); setSonuc(null); }}
               className={`rounded-3xl bg-white p-2 shadow-md active:scale-95 ${i === grup ? 'ring-4 ring-sky-500' : ''}`}>
-              <div className="flex justify-center gap-1">{x.sekiller.map((s, k) => <SekilCiz key={s} ad={s} renk={RENKLER[k + i * 3]} className="h-10 w-10" />)}</div>
+              <div className="flex justify-center gap-1">{x.sekiller.map((s, k) => <SekilCiz key={s} ad={s} renk={RENKLER[(k + i * 3) % RENKLER.length]} className="h-10 w-10" />)}</div>
               <div className="mt-1 text-sm font-black text-slate-700">{i + 1}. grup {(gecilen[i] || 0) >= 3 ? '✅' : ''}</div>
               <div className="text-xs text-slate-500">{x.ad}</div>
             </button>
@@ -157,7 +164,7 @@ const SekilCalis: React.FC<{ onBack: () => void; onSorular: () => void }> = ({ o
         <button className={kart} disabled={!ikisiTamam} onClick={() => { setSonuc(null); setEkran({ ad: 'karisik' }); }}>
           <span className="text-4xl">🔀</span>
           <span><span className="block text-xl font-black text-slate-800">Karışık</span>
-            <span className="text-sm text-slate-500">{ikisiTamam ? `6 şekilden ${KARISIK} soru, art arda aynı şekil yok` : 'İki grup da öğrenilince açılır'}</span></span>
+            <span className="text-sm text-slate-500">{ikisiTamam ? `7 şekilden ${KARISIK} soru, art arda aynı şekil yok` : 'İki grup da öğrenilince açılır'}</span></span>
         </button>
         <button className={kart} onClick={onSorular}>
           <span className="text-4xl">❓</span>

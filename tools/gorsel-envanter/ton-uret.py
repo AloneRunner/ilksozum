@@ -45,6 +45,39 @@ def lab2srgb(lab):
 def hex2lab(h):
     return srgb2lab(np.array([[int(h[i:i + 2], 16) for i in (1, 3, 5)]], dtype=float))[0]
 
+def boya(kaynak_id, hedefler, k=0.7):
+    """Kaynak fotoğrafın renkli gövdesini verilen hedef tonlara boyar; [(hedef_hex, k)] → görüntüler"""
+    im = Image.open(KOK / f'public/images/{kaynak_id}.webp').convert('RGB')
+    im.thumbnail((420, 420), Image.LANCZOS)
+    rgb = np.asarray(im, dtype=float)
+    lab = srgb2lab(rgb)
+    kroma = np.hypot(lab[..., 1], lab[..., 2])
+    govde = kroma > 18
+    aci = np.degrees(np.arctan2(lab[..., 2], lab[..., 1]))
+    orta = np.degrees(np.arctan2(np.median(lab[..., 2][govde]), np.median(lab[..., 1][govde])))
+    fark = np.abs((aci - orta + 180) % 360 - 180)
+    maske = np.clip((kroma - 12) / 14, 0, 1) * np.clip((50 - fark) / 20, 0, 1)
+    lort = np.median(lab[..., 0][maske > 0.5])
+    for h, kk in hedefler:
+        hedef = hex2lab(h)
+        yeni = lab.copy()
+        yeni[..., 0] = np.clip(hedef[0] + (lab[..., 0] - lort) * kk, 2, 99)
+        yeni[..., 1] = hedef[1]
+        yeni[..., 2] = hedef[2]
+        m = maske[..., None]
+        yield Image.fromarray((lab2srgb(yeni) * m + rgb * (1 - m)).astype(np.uint8))
+
+# Renk Öğren'e siyah, beyaz, kahverengi (Gökhan Hoca, 2026-10-29: 2. grup yeşil-siyah-beyaz, 3. grup … kahverengi).
+# Mavi fotoğraftan boyanır; beyazda gölge biraz artırılır ki beyaz zeminden ayrılsın. Çıktı: public/images/ozel/renk/<nesne>-<renk>.webp
+RENK_CIKTI = KOK / 'public/images/ozel/renk'
+RENK_CIKTI.mkdir(parents=True, exist_ok=True)
+for ad, (dosya, mavi, yesil, turuncu) in NESNELER.items():
+    siyah, beyaz = boya(mavi, [('#202020', 0.55), ('#ececec', 0.9)])
+    siyah.save(RENK_CIKTI / f'{dosya}-siyah.webp', quality=82)
+    beyaz.save(RENK_CIKTI / f'{dosya}-beyaz.webp', quality=82)
+    kahve, = boya(turuncu, [('#7a4a28', 0.7)])
+    kahve.save(RENK_CIKTI / f'{dosya}-kahverengi.webp', quality=82)
+
 for ad, (dosya, *kaynaklar) in NESNELER.items():
     for aile, (sutun, tonlar) in AILELER.items():
         im = Image.open(KOK / f'public/images/{kaynaklar[sutun - 1]}.webp').convert('RGB')
