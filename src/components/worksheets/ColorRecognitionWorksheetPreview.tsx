@@ -13,10 +13,10 @@ function shuffle<T>(arr: T[]): T[] {
   return [...arr].sort(() => 0.5 - Math.random());
 }
 
-// Her tur için 4 renk seçeneği üret: doğru + 3 rastgele
-function buildOptions(correctKey: string): { key: string; label: string; hex: string }[] {
-  const correct = COLOR_OPTIONS.find(c => c.key === correctKey)!;
-  const others = shuffle(COLOR_OPTIONS.filter(c => c.key !== correctKey)).slice(0, 3);
+// Her tur için 4 renk seçeneği üret: doğru + 3 rastgele (penguen/pandada "beyaz" gibi dışarıda tutulan renkler hariç)
+function buildOptions(r: ColorRecognitionRound): { key: string; label: string; hex: string }[] {
+  const correct = COLOR_OPTIONS.find(c => c.key === r.correctColor)!;
+  const others = shuffle(COLOR_OPTIONS.filter(c => c.key !== r.correctColor && !(r.haricRenkler || []).includes(c.key))).slice(0, 3);
   return shuffle([correct, ...others]);
 }
 
@@ -28,13 +28,13 @@ const ColorRecognitionWorksheetPreview: React.FC<Props> = ({ rounds, onBack }) =
     shuffle(rounds).slice(0, Math.min(9, rounds.length))
   );
   const [optionsPerRound, setOptionsPerRound] = useState<ReturnType<typeof buildOptions>[]>(() =>
-    picked.map(r => buildOptions(r.correctColor))
+    picked.map(r => buildOptions(r))
   );
 
   const regenerate = useCallback((count: number) => {
     const next = shuffle(rounds).slice(0, count);
     setPicked(next);
-    setOptionsPerRound(next.map(r => buildOptions(r.correctColor)));
+    setOptionsPerRound(next.map(r => buildOptions(r)));
   }, [rounds]);
 
   const maxCount = Math.min(12, rounds.length);
@@ -110,7 +110,7 @@ const ColorRecognitionWorksheetPreview: React.FC<Props> = ({ rounds, onBack }) =
           {/* Questions grid */}
           <div className={`grid gap-3 ${cols === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
             {picked.map((round, index) => {
-              const opts = optionsPerRound[index] ?? buildOptions(round.correctColor);
+              const opts = optionsPerRound[index] ?? buildOptions(round);
               const imgH = cols === 2 ? 100 : 72;
 
               return (
