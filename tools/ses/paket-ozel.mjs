@@ -57,7 +57,8 @@ for (const [, ad] of YK.YK_NESNELER) for (const u of [true, false]) metinler.pus
 const TD = await import(new URL('../../src/data/tersDuz.ts', import.meta.url).href);
 for (const s of TD.TERS_DUZ_SETLER) for (const u of [true, false]) metinler.push(TD.tdSoru(s, u), TD.tdDogru(s, u));
 const IS = await import(new URL('../../src/data/ilkSon.ts', import.meta.url).href);
-for (const u of [true, false]) metinler.push(IS.isSoru(u), IS.isDogru(u));
+for (const k of ['ilk', 'son', 'ortada']) metinler.push(IS.isSoru(k), IS.isDogru(k));
+for (const s of TD.ICI_DISI_SETLER) metinler.push(s.soru, s.dogru);
 // Paralarımız
 metinler.push(V.DAHA_COK_SORU);
 for (const p of V.PARALAR) metinler.push(`${p.ad}.`, V.paraSoru(p), V.evetAd(p.ad));

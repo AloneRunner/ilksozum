@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { OyunCercevesi } from '../oyunKiti/OyunKiti.tsx';
 import { speak } from '../../services/speechService.ts';
 import AsamaliCalisma from './AsamaliCalisma.tsx';
-import { TERS_DUZ_SETLER, tdSoru, tdDogru, type TersDuzSet } from '../../data/tersDuz.ts';
+import { TERS_DUZ_SETLER, ICI_DISI_SETLER, tdSoru, tdDogru, type TersDuzSet } from '../../data/tersDuz.ts';
 import { karistir, zar, type Tur } from './ozelOrtak.tsx';
 
 // Ters / Düz (Gökhan Hoca, 2026-10-29): yalnız baş aşağı duran nesneler (ayı, fincan, kova, saksı, sandalye, şemsiye, şişe,
@@ -40,6 +40,13 @@ const tur = (ters: boolean): Tur => {
   };
 };
 const on = (f: () => Tur) => Array.from({ length: 10 }, f);
+const iciDisi = (): Tur => {
+  const s = ICI_DISI_SETLER[zar(ICI_DISI_SETLER.length)];
+  return {
+    soru: s.soru, dogruId: 't', dogruSoz: s.dogru,
+    secenekler: karistir(['t', 'd']).map((id) => ({ id, url: id === 't' ? s.ters : s.duz })),
+  };
+};
 
 const Tani: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   const ornek = [TERS_DUZ_SETLER[0], TERS_DUZ_SETLER[4], TERS_DUZ_SETLER[8], TERS_DUZ_SETLER[10]];
@@ -65,13 +72,14 @@ const Tani: React.FC<{ onBack: () => void }> = ({ onBack }) => {
 
 const TersDuzCalis: React.FC<{ onBack: () => void; onSorular: () => void }> = ({ onBack, onSorular }) => (
   <AsamaliCalisma id="tersDuzCalis" baslik="Ters / Düz" emoji="🙃" onBack={onBack} onSorular={onSorular}
-    aciklama="Aynı nesne bir resimde düz, ötekinde baş aşağı. Önce “ters”, sonra “düz”; en son karışık."
+    aciklama="Aynı nesne bir resimde düz, ötekinde baş aşağı. Önce “ters”, sonra “düz”; en son karışık. Karışık tamamlanınca ileri aşama: içi dışında, arkası önde."
     tani={(bitti) => <Tani onBack={bitti} />} taniAlt="Ters ve düz, dokun ve dinle"
     asamalar={[
       { ad: 'Ters · 2 şık', alt: '10 soru', secenek: 2, turlar: () => on(() => tur(true)) },
       { ad: 'Düz · 2 şık', alt: '10 soru', secenek: 2, turlar: () => on(() => tur(false)) },
     ]}
-    karisik={{ alt: '30 soru, ters ve düz karışık', secenek: 2, turlar: () => Array.from({ length: 30 }, () => tur(zar(2) === 0)) }} />
+    karisik={{ alt: '30 soru, ters ve düz karışık', secenek: 2, turlar: () => Array.from({ length: 30 }, () => tur(zar(2) === 0)) }}
+    ileri={[{ ad: 'İçi dışında, arkası önde', alt: '10 soru: tişört, pantolon, kazak, şapka', secenek: 2, turlar: () => on(iciDisi) }]} />
 );
 
 export default TersDuzCalis;

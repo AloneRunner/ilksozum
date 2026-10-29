@@ -13,3 +13,14 @@ export const TERS_DUZ_SETLER: TersDuzSet[] = [
 export const TERS_DUZ_CIKAN = new Set([5709, 5710, 5713, 5714, 5719, 5720, 5729, 5730]);
 export const tdSoru = (s: TersDuzSet, ters: boolean) => `Hangi ${s.ad} ${ters ? 'ters' : 'düz'}?`;
 export const tdDogru = (s: TersDuzSet, ters: boolean) => `Evet! Bu ${s.ad} ${ters ? 'ters' : 'düz'}.`;
+
+// İleri aşama (Gökhan Hoca: "içi dışında / arkası önde için ayrı, ileri bir etkinlik"): soru yalnız yanlış giyilmişi sorar.
+// Şimdilik eldeki 4 çift; yeni çiftler Flow'dan gelince eklenecek (tools/gorsel-envanter/flow-ici-disinda.md).
+export interface IciDisiSet { duz: string; ters: string; soru: string; dogru: string }
+const id = (duz: number, ters: number, soru: string, dogru: string): IciDisiSet => ({ duz: `/images/${duz}.webp`, ters: `/images/${ters}.webp`, soru, dogru });
+export const ICI_DISI_SETLER: IciDisiSet[] = [
+  id(5729, 5730, 'Hangi tişörtün içi dışında?', 'Evet! Bu tişörtün içi dışında.'),
+  id(5713, 5714, 'Hangi pantolonun içi dışında?', 'Evet! Bu pantolonun içi dışında.'),
+  id(5709, 5710, 'Hangi çocuk kazağını içi dışında giymiş?', 'Evet! Bu çocuk kazağını içi dışında giymiş.'),
+  id(5719, 5720, 'Hangi çocuk şapkasını arkası önde takmış?', 'Evet! Bu çocuk şapkasını arkası önde takmış.'),
+];

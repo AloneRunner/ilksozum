@@ -15,10 +15,12 @@ NESNELER = {'top': 3915, 'elma': 2307, 'ayi': 5703, 'araba': 9047, 'kedi': 3504,
             # Önünde/Arkasında referans nesneleri (derin kaplar ve karton kutu, beyaz zeminli)
             'kova': 2909, 'kutu': 2911, 'kase': 2907, 'sepet': 2915,
             # Ters/Düz (mavi plastik bardak) ve İlk/Son (kaplumbağa çizimi)
-            'bardak': 6859, 'kaplumbaga': 42}
+            'bardak': 6859, 'kaplumbaga': 42,
+            # İlk/Son: eski sıra görsellerinin kaynağı (sola bakan lastik ördek, araba, ayı; Hoca: "aynı nesneler korunsun")
+            'sira-ordek': 'gorsel-ham/ilk-son-ham/ordek.jpg', 'sira-araba': 'gorsel-ham/ilk-son-ham/araba.jpg', 'sira-ayi': 'gorsel-ham/ilk-son-ham/ayi.jpg'}
 
 for ad, kid in NESNELER.items():
-    im = Image.open(KOK / f'public/images/{kid}.webp').convert('RGB')
+    im = Image.open(KOK / (kid if isinstance(kid, str) else f'public/images/{kid}.webp')).convert('RGB')
     a = np.asarray(im).astype(int)
     zemin = np.median(np.concatenate([a[0], a[-1], a[:, 0], a[:, -1]]), axis=0)
     fark = np.abs(a - zemin).max(axis=2)

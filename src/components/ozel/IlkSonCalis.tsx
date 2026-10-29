@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { OyunCercevesi } from '../oyunKiti/OyunKiti.tsx';
 import { speak } from '../../services/speechService.ts';
 import AsamaliCalisma from './AsamaliCalisma.tsx';
-import { ILK_SON_NESNELER, isSoru, isDogru, type IlkSonNesne } from '../../data/ilkSon.ts';
+import { ILK_SON_NESNELER, isSoru, isDogru, type IlkSonNesne, type Sira } from '../../data/ilkSon.ts';
 import { zar, type Tur } from './ozelOrtak.tsx';
 
 // İlk / Son (Gökhan Hoca, 2026-10-29): tek kart; bayrak solda, aynı nesneler aynı zeminde bayrağa doğru dizili, çocuk
@@ -15,30 +15,20 @@ export const Bayrak: React.FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
-const Ordek: React.FC<{ className?: string }> = ({ className }) => (
-  <svg viewBox="0 0 100 80" className={className} aria-hidden="true">
-    <path d="M86 46 L98 30 L94 54 Z" fill="#eab308" />
-    <ellipse cx="56" cy="56" rx="38" ry="21" fill="#facc15" />
-    <circle cx="32" cy="28" r="18" fill="#facc15" />
-    <path d="M16 27 L1 32 L16 37 Z" fill="#f97316" />
-    <circle cx="27" cy="23" r="3.2" fill="#0f172a" />
-    <path d="M48 52 Q64 38 80 52 Q64 64 48 52" fill="#eab308" />
-  </svg>
+export const IlkSonNesneCiz: React.FC<{ n: IlkSonNesne; className?: string }> = ({ n, className }) => (
+  <img src={`/images/ozel/kesik/${n}.webp`} alt="" draggable={false} className={`object-contain object-bottom ${className || ''}`} />
 );
 
-export const IlkSonNesneCiz: React.FC<{ n: IlkSonNesne; className?: string }> = ({ n, className }) => n === 'ordek'
-  ? <Ordek className={className} />
-  : <img src={`/images/ozel/kesik/${n}.webp`} alt="" draggable={false} className={`object-contain object-bottom ${className || ''}`} />;
-
-const tur = (ilk: boolean, sayi: number): Tur => {
+const tur = (k: Sira, sayi: number): Tur => {
   const n = ILK_SON_NESNELER[zar(ILK_SON_NESNELER.length)];
   const ids = Array.from({ length: sayi }, (_, i) => `n${i}`);
+  const dogru = k === 'ilk' ? 0 : k === 'son' ? sayi - 1 : (sayi - 1) / 2;
   return {
-    soru: isSoru(ilk), dogruId: ilk ? ids[0] : ids[sayi - 1], dogruSoz: isDogru(ilk), tekKart: true,
+    soru: isSoru(k), dogruId: ids[dogru], dogruSoz: isDogru(k), tekKart: true,
     solda: <Bayrak className="shrink-0 h-[min(30vh,11rem)] w-auto" />,
-    secenekler: ids.map((id, i) => ({
-      id, sonraYazi: i === 0 ? 'ilk' : 'son',
-      icerik: <IlkSonNesneCiz n={n} className={`w-full ${sayi > 3 ? 'h-[min(17vh,6rem)]' : 'h-[min(22vh,8.5rem)]'}`} />,
+    secenekler: ids.map((id) => ({
+      id, sonraYazi: k,
+      icerik: <IlkSonNesneCiz n={n} className={`w-full ${sayi > 3 ? 'h-[min(17vh,8rem)]' : 'h-[min(24vh,12rem)]'}`} />,
     })),
   };
 };
@@ -65,7 +55,7 @@ export const BayrakIpucu: React.FC<{ soyle: (k: string) => void; ilkYazi?: strin
         <div className="flex items-end gap-2" style={{ transform: `translateX(${yurudu ? 0 : 5}rem)`, transition: yurudu ? 'transform 1.6s ease-out' : 'none' }}>
           {[0, 1, 2].map((i) => (
             <div key={i} className={`rounded-xl transition-shadow ${parla === i ? 'ring-4 ring-amber-300 bg-amber-100 animate-pulse' : ''}`}>
-              <IlkSonNesneCiz n="araba" className="w-16 h-12" />
+              <IlkSonNesneCiz n="sira-araba" className="w-16 h-12" />
             </div>
           ))}
         </div>
@@ -85,7 +75,7 @@ const Tani: React.FC<{ onBack: () => void }> = ({ onBack }) => (
         <div key={n} className="w-full max-w-3xl flex items-end gap-1 rounded-3xl bg-white shadow-lg px-3 pt-7 border-b-[10px] border-slate-300">
           <Bayrak className="shrink-0 h-28 w-auto" />
           {[0, 1, 2].map((i) => (
-            <button key={i} disabled={i === 1} onClick={() => speak(isDogru(i === 0).replace(/^Evet! /, ''))} className="relative flex-1 min-w-0 flex flex-col items-center active:scale-95">
+            <button key={i} disabled={i === 1} onClick={() => speak(isDogru(i === 0 ? 'ilk' : 'son').replace(/^Evet! /, ''))} className="relative flex-1 min-w-0 flex flex-col items-center active:scale-95">
               {i !== 1 && <span className="absolute -top-6 text-lg font-black text-slate-800">{i === 0 ? 'ilk' : 'son'}</span>}
               <IlkSonNesneCiz n={n} className="w-full h-24" />
             </button>
@@ -98,15 +88,19 @@ const Tani: React.FC<{ onBack: () => void }> = ({ onBack }) => (
 
 const IlkSonCalis: React.FC<{ onBack: () => void; onSorular: () => void }> = ({ onBack, onSorular }) => (
   <AsamaliCalisma id="ilkSonCalis" baslik="İlk / Son" emoji="🏁" onBack={onBack} onSorular={onSorular}
-    aciklama="Aynı nesneler bayrağa doğru dizili; bayrağa en yakın olan ilk, en arkadaki son. Önce 3 nesne, sonra 4–5. Önce “ilk”, sonra “son”; en son karışık. İki resimli sorular Hızlı Sorular'da."
+    aciklama="Aynı nesneler bayrağa doğru dizili; bayrağa en yakın olan ilk, en arkadaki son. Önce 3 nesne, sonra 4–5. Önce “ilk”, sonra “son”; en son karışık. Karışık tamamlanınca ileri aşama: “ortada”. İki resimli sorular Hızlı Sorular'da."
     tani={(bitti) => <Tani onBack={bitti} />} taniAlt="İlk ve son, dokun ve dinle"
     asamalar={[
-      { ad: 'İlk · 3 nesne', alt: '10 soru', secenek: 3, turlar: () => on(() => tur(true, 3)) },
-      { ad: 'Son · 3 nesne', alt: '10 soru', secenek: 3, turlar: () => on(() => tur(false, 3)) },
-      { ad: 'İlk · 4–5 nesne', alt: '10 soru', secenek: 4, turlar: () => on(() => tur(true, dortBes())) },
-      { ad: 'Son · 4–5 nesne', alt: '10 soru', secenek: 4, turlar: () => on(() => tur(false, dortBes())) },
+      { ad: 'İlk · 3 nesne', alt: '10 soru', secenek: 3, turlar: () => on(() => tur('ilk', 3)) },
+      { ad: 'Son · 3 nesne', alt: '10 soru', secenek: 3, turlar: () => on(() => tur('son', 3)) },
+      { ad: 'İlk · 4–5 nesne', alt: '10 soru', secenek: 4, turlar: () => on(() => tur('ilk', dortBes())) },
+      { ad: 'Son · 4–5 nesne', alt: '10 soru', secenek: 4, turlar: () => on(() => tur('son', dortBes())) },
     ]}
-    karisik={{ alt: '20 soru, ilk ve son karışık, 3–5 nesne', secenek: 4, turlar: () => Array.from({ length: 20 }, () => tur(zar(2) === 0, 3 + zar(3))) }} />
+    karisik={{ alt: '20 soru, ilk ve son karışık, 3–5 nesne', secenek: 4, turlar: () => Array.from({ length: 20 }, () => tur(zar(2) === 0 ? 'ilk' : 'son', 3 + zar(3))) }}
+    ileri={[
+      { ad: 'Ortada', alt: '10 soru, 3 ya da 5 nesne', secenek: 3, turlar: () => on(() => tur('ortada', zar(2) ? 5 : 3)) },
+      { ad: 'İlk, son, ortada', alt: '20 soru, karışık', secenek: 3, turlar: () => Array.from({ length: 20 }, () => tur((['ilk', 'son', 'ortada'] as const)[zar(3)], zar(2) ? 5 : 3)) },
+    ]} />
 );
 
 export default IlkSonCalis;

@@ -15,10 +15,11 @@ const AsamaliCalisma: React.FC<{
   asamalar: Asama[]; karisik: { alt: string; secenek: number; turlar: () => Tur[] };
   onBack: () => void; onSorular: () => void;
   ekKart?: { emoji: string; baslik: string; alt: string; onClick: () => void }; // ör. sürükle-bırak etkinliği bölümün içinde (hoca)
-}> = ({ id, baslik, emoji, aciklama, tani, taniAlt, asamalar, karisik, onBack, onSorular, ekKart }) => {
+  ileri?: Asama[]; // karışık tamamlanınca açılan ileri aşamalar (Gökhan Hoca: İlk/Son'da "ortada", Ters/Düz'de "içi dışında / arkası önde")
+}> = ({ id, baslik, emoji, aciklama, tani, taniAlt, asamalar, karisik, onBack, onSorular, ekKart, ileri }) => {
   const anahtar = `${id}_${profil()}`;
   const [gecilen, setGecilen] = useState<number>(() => { try { return Number(localStorage.getItem(anahtar)) || 0; } catch { return 0; } });
-  const [ekran, setEkran] = useState<'merkez' | 'tani' | 'karisik' | number>('merkez');
+  const [ekran, setEkran] = useState<'merkez' | 'tani' | 'karisik' | number | `ileri${number}`>('merkez');
   const [sonuc, setSonuc] = useState<string | null>(null);
   const [tamam, setTamam] = useState(() => kavramTamamMi(id));
   const merkez = () => setEkran('merkez');
@@ -42,6 +43,14 @@ const AsamaliCalisma: React.FC<{
             ? `✅ ${a.ad} geçildi (${dogru}/${toplam}). ${sonraki ? `Sıradaki: ${sonraki.ad}.` : 'Karışık açıldı.'}`
             : `${a.ad}: ${dogru}/${toplam}. Geçmek için ${GECME} gerekiyor; bir daha çalışalım.`);
         }} />
+    );
+  }
+  if (typeof ekran === 'string' && ekran.startsWith('ileri') && ileri) {
+    const n = Number(ekran.slice(5)), a = ileri[n];
+    return (
+      <SecimOyunu key={ekran} oyunId={`${id}Ileri${n}`} sayacAdi={`${baslik} (${a.ad})`} baslik={`${baslik} · ${a.ad}`} emoji={emoji} onBack={merkez}
+        secenekSayilari={[a.secenek]} turlariKur={a.turlar}
+        onBitti={(dogru, toplam) => setSonuc(dogru >= GECME ? `✅ ${a.ad}: ${dogru}/${toplam}. Aferin!` : `${a.ad}: ${dogru}/${toplam}. Bir daha çalışalım.`)} />
     );
   }
   if (ekran === 'karisik') return (
@@ -81,6 +90,13 @@ const AsamaliCalisma: React.FC<{
           <span><span className="block text-xl font-black text-slate-800">Karışık</span>
             <span className="text-sm text-slate-500">{hepsi ? karisik.alt : 'Bütün aşamalar geçilince açılır'}</span></span>
         </button>
+        {ileri?.map((a, i) => (
+          <button key={`ileri${i}`} className={kart} disabled={!tamam} onClick={() => { setSonuc(null); setEkran(`ileri${i}`); }}>
+            <span className="text-4xl">🚀</span>
+            <span><span className="block text-xl font-black text-slate-800">İleri · {a.ad}</span>
+              <span className="text-sm text-slate-500">{tamam ? a.alt : '🔒 Karışık tamamlanınca açılır'}</span></span>
+          </button>
+        ))}
         {ekKart && (
           <button className={kart} onClick={ekKart.onClick}>
             <span className="text-4xl">{ekKart.emoji}</span>
