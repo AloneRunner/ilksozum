@@ -35,8 +35,9 @@ export interface Secenek { id: string; url?: string; emoji?: string; yazi?: stri
 // altAlta: şıklar tek sütun (Uzun/Kısa: yatay eşyalar alt alta, sol uçlar hizalı)
 // tekKart: şıklar tek beyaz kartın içinde bir sırada, solda `solda` (İlk/Son: bayrağa doğru dizilmiş nesneler);
 // sonraYazi: doğru cevaptan sonra şıkkın üstünde çıkan etiket (Gökhan Hoca: "ilk / son")
+// sonraSes: doğru sözünden sonra çalar (Gürültülü/Sessiz'in gerçek sesi; konuşmayla üst üste binmez)
 // sahne işlev olabilir: ipucuKullan çağrılırsa o soru ilk denemede doğru sayılmaz (hoca: ipucuyla bulunan yanlış sayılır; Ağır/Hafif terazisi)
-export interface Tur { soru: string; gorsel?: string; ustYazi?: string; sahne?: React.ReactNode | ((ipucuKullan: () => void) => React.ReactNode); genis?: boolean; altAlta?: boolean; tekKart?: boolean; solda?: React.ReactNode; secenekler: Secenek[]; dogruId: string; dogruSoz: string }
+export interface Tur { soru: string; gorsel?: string; ustYazi?: string; sahne?: React.ReactNode | ((ipucuKullan: () => void) => React.ReactNode); genis?: boolean; altAlta?: boolean; tekKart?: boolean; solda?: React.ReactNode; secenekler: Secenek[]; dogruId: string; dogruSoz: string; sonraSes?: () => Promise<void> }
 
 export const SecimOyunu: React.FC<{
   oyunId: string; sayacAdi: string; baslik: string; emoji: string; onBack: () => void;
@@ -90,6 +91,7 @@ export const SecimOyunu: React.FC<{
     }
     setKutla(true); await bekle(700); // Kutlama tonu çalar
     await konus(tur.dogruSoz);
+    await tur.sonraSes?.();
     setKutla(false);
     if (i + 1 < sira.length) { setI(i + 1); return; }
     etkinlikSay(sayacAdi, 'bitti'); basariSay(sayacAdi, dogrular.current, asilSayi.current);
@@ -135,6 +137,7 @@ export const SecimOyunu: React.FC<{
               return (
                 <button key={s.id} onClick={() => void sec(s)} disabled={soldu}
                   className={`relative flex flex-col items-center justify-center rounded-3xl bg-white shadow-lg overflow-hidden transition-all active:scale-95 ${soldu ? 'opacity-25' : ''} ${parla ? 'ring-8 ring-amber-300 animate-pulse' : ''} ${sallanan === s.id ? 'ok-sallan ring-4 ring-rose-300' : ''}`}>
+                  {kilit && s.id === tur.dogruId && s.sonraYazi && <span className="absolute top-2 z-10 rounded-full bg-emerald-500 px-3 py-0.5 text-xl font-black text-white shadow">{s.sonraYazi}</span>}
                   {s.icerik ?? (s.url ? <img src={s.url} alt={s.yazi || ''} draggable={false} className="w-full aspect-square object-cover" />
                     : <span className="text-6xl sm-landscape:text-5xl lg:text-7xl py-3 leading-none">{s.emoji}</span>)}
                   {s.yazi && <span className="w-full py-1.5 text-center text-xl font-black text-slate-800">{s.yazi}</span>}

@@ -744,7 +744,7 @@ const KAVRAMLAR = [
     klasor: 'kirisik-duzgun', dosya: 'kirisikDuzgunData.ts', exportAdi: 'kirisikDuzgunDataYeni',
     activityType: 'KirisikDuzgun', idBaslangic: 4701, etiket: 'condition', sahneNesneler: ['masaortusu', 'ortu', 'perde'],
     a: { ek: 'kirisik', deger: 'kırışık', soru: 'Kırışık olan hangisi?', sifat: 'kırışıktır' },
-    b: { ek: 'duzgun', deger: 'düzgün', soru: 'Düzgün olan hangisi?', sifat: 'düzgündür' },
+    b: { ek: 'duzgun', deger: 'düz', soru: 'Düz olan hangisi?', sifat: 'düzdür' },
     kelime: { elbise: 'elbise', masaortusu: 'masa örtüsü', tisort: 'tişört', gomlek: 'gömlek', kagit: 'kâğıt', etek: 'etek', ortu: 'yatak örtüsü',
       pecete: 'peçete', perde: 'perde', pantolon: 'pantolon' },
   },

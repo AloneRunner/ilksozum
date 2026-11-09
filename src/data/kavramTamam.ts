@@ -15,4 +15,5 @@ export const CALISMA_ID: Partial<Record<ActivityType, string>> = {
   [ActivityType.AcikKoyu]: 'acikKoyuCalis', [ActivityType.ParlakMat]: 'parlakMatCalis', [ActivityType.SeffafOpak]: 'seffafOpakCalis',
   [ActivityType.BigSmall]: 'buyukKucukCalis', [ActivityType.LongShort]: 'uzunKisaCalis', [ActivityType.ThinThick]: 'kalinInceCalis', [ActivityType.WideNarrow]: 'genisDarCalis', [ActivityType.DerinSig]: 'derinSigCalis', [ActivityType.HeavyLight]: 'agirHafifCalis', [ActivityType.OnUnder]: 'ustAltCalis', [ActivityType.BelowAbove]: 'yukariAsagiCalis', [ActivityType.InFrontOfBehind]: 'onArkaCalis',
   [ActivityType.HighLow]: 'yuksekAlcakCalis', [ActivityType.TersDuz]: 'tersDuzCalis', [ActivityType.IlkSon]: 'ilkSonCalis',
+  [ActivityType.WetDry]: 'islakKuruCalis', [ActivityType.HotCold]: 'sicakSogukCalis', [ActivityType.BitterSweet]: 'aciTatliCalis', [ActivityType.NoisyQuiet]: 'gurultuluSessizCalis', [ActivityType.KirisikDuzgun]: 'kirisikDuzCalis',
 };

@@ -191,7 +191,7 @@ const buildEskiTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[
         },
         {
           type: ActivityType.KirisikDuzgun,
-          title: isTr ? "Kırışık / Düzgün" : t("concepts.activities.kirisikDuzgun", "Wrinkled / Smooth"),
+          title: isTr ? "Kırışık / Düz" : t("concepts.activities.kirisikDuzgun", "Wrinkled / Smooth"),
           subtitle: isTr ? "Yüzey durumlarını tanı" : t("concepts.subtitles.surfaceConditions", "Know surface conditions"),
         },
       ],

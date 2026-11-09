@@ -59,6 +59,16 @@ for (const s of TD.TERS_DUZ_SETLER) for (const u of [true, false]) metinler.push
 const IS = await import(new URL('../../src/data/ilkSon.ts', import.meta.url).href);
 for (const k of ['ilk', 'son', 'ortada']) metinler.push(IS.isSoru(k), IS.isDogru(k));
 for (const s of TD.ICI_DISI_SETLER) metinler.push(s.soru, s.dogru);
+// Gökhan Hoca 2026-11-09: Islak/Kuru, Sıcak/Soğuk, Kırışık/Düz, Gürültülü/Sessiz, Acı/Tatlı (bekleyen çiftlerin sesi de)
+const CK = await import(new URL('../../src/data/ciftKavramlar.ts', import.meta.url).href);
+for (const l of [CK.ISLAK_KURU, CK.SICAK_SOGUK, CK.HAVA_SICAK_SOGUK, CK.KIRISIK_DUZ, CK.GURULTULU_SESSIZ])
+  for (const s of l) for (const y of [s.a, s.b]) metinler.push(y.soru, y.dogru, CK.taniSoz(y.dogru));
+metinler.push(CK.DOKUNMA_SORU, CK.DOKUNMA_KURAL, CK.SES_CIKARIYOR, CK.SES_CIKARMIYOR);
+for (const s of CK.DOKUNMA_SICAK) metinler.push(CK.dokunmaDogru(s.ad));
+for (const t of Object.keys(CK.TATLAR)) { metinler.push(CK.tatSoru(t)); for (const o of CK.TATLAR[t]) metinler.push(CK.tatDogru(o.ad, t), CK.taniSoz(CK.tatDogru(o.ad, t))); }
+// Kırışık/Düz'ün Hızlı Sorular cümleleri ("düzgün" yerine "düz")
+const KD = fs.readFileSync(new URL('../../src/services/database/activities/yeni/kirisikDuzgunData.ts', import.meta.url), 'utf8');
+for (const [, s] of KD.matchAll(/(?:question|correct|wrong|wrongOlumsuz): '([^']+)'/g)) metinler.push(s);
 // Paralarımız
 metinler.push(V.DAHA_COK_SORU);
 for (const p of V.PARALAR) metinler.push(`${p.ad}.`, V.paraSoru(p), V.evetAd(p.ad));

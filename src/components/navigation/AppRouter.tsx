@@ -67,7 +67,10 @@ const YukariAsagiCalis = lazy(() => import('../ozel/YukariAsagiCalis.tsx'));
 const OnArkaCalis = lazy(() => import('../ozel/OnArkaCalis.tsx'));
 const YuksekAlcakCalis = lazy(() => import('../ozel/YuksekAlcakCalis.tsx'));
 const TersDuzCalis = lazy(() => import('../ozel/TersDuzCalis.tsx'));
+const CiftCalis = lazy(() => import('../ozel/CiftCalis.tsx'));
 const IlkSonCalis = lazy(() => import('../ozel/IlkSonCalis.tsx'));
+type CiftKonu = 'islakKuru' | 'sicakSoguk' | 'aciTatli' | 'gurultuluSessiz' | 'kirisikDuz';
+const CIFT_ETKINLIK: Record<CiftKonu, ActivityType> = { islakKuru: ActivityType.WetDry, sicakSoguk: ActivityType.HotCold, aciTatli: ActivityType.BitterSweet, gurultuluSessiz: ActivityType.NoisyQuiet, kirisikDuz: ActivityType.KirisikDuzgun };
 const SekilOgren = lazy(() => import('../kutu/SekilOgren.tsx'));
 const TabagaKoy = lazy(() => import('../kutu/TabagaKoy.tsx'));
 const LineTracingScreen = lazy(() => import('../LineTracingScreen.tsx'));
@@ -178,7 +181,7 @@ export const AppRouter = () => {
     const [kitapDonus, setKitapDonus] = useState<ScreenState>(ScreenState.ObjectCategoriesMenu);
     // Kelime Öğren: seçilen nesne kategorisi (Gökhan Hoca: kategoriye girince önce soru değil, çalışma sayfası)
     const [ogrenKat, setOgrenKat] = useState<{ id: string; ad: string } | null>(null);
-    const [ozelEkran, setOzelEkran] = useState<OzelEkranId | 'renkOgren' | 'rengiNe' | 'sekilCalis' | 'acikKoyu' | 'parlakMat' | 'seffafOpak' | 'buyukKucuk' | 'uzunKisa' | 'kalinInce' | 'genisDar' | 'derinSig' | 'agirHafif' | 'ustAlt' | 'yukariAsagi' | 'onArka' | 'yuksekAlcak' | 'tersDuz' | 'ilkSon'>('sosyalOyku'); // renkOgren / rengiNe / sekilCalis: Kavramlar › Renk ve Şekil (Gökhan Hoca)
+    const [ozelEkran, setOzelEkran] = useState<OzelEkranId | CiftKonu | 'renkOgren' | 'rengiNe' | 'sekilCalis' | 'acikKoyu' | 'parlakMat' | 'seffafOpak' | 'buyukKucuk' | 'uzunKisa' | 'kalinInce' | 'genisDar' | 'derinSig' | 'agirHafif' | 'ustAlt' | 'yukariAsagi' | 'onArka' | 'yuksekAlcak' | 'tersDuz' | 'ilkSon'>('sosyalOyku'); // renkOgren / rengiNe / sekilCalis: Kavramlar › Renk ve Şekil (Gökhan Hoca)
     const kitapSeridi = (donus: ScreenState, alt: string) => (
         <button onClick={() => { setKitapDonus(donus); setScreenState(ScreenState.KelimeKitabi); }}
             className="flex shrink-0 items-center justify-center gap-2 bg-amber-100 px-3 py-2 text-sm font-black text-amber-900 shadow-sm active:bg-amber-200">
@@ -660,7 +663,9 @@ export const AppRouter = () => {
         case ScreenState.SoundImitationMenu: return <SesTaklitEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.KelimeKitabi: return <KelimeKitabi onBack={() => setScreenState(kitapDonus)} />;
         case ScreenState.FarkBulGame: return <FarkBul onBack={() => geriDon(ScreenState.MainMenu)} />;
-        case ScreenState.OzelEtkinlik: return ozelEkran === 'renkOgren'
+        case ScreenState.OzelEtkinlik: return CIFT_ETKINLIK[ozelEkran as CiftKonu] !== undefined
+            ? <CiftCalis konu={ozelEkran as CiftKonu} onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(CIFT_ETKINLIK[ozelEkran as CiftKonu], ScreenState.ConceptActivitiesMenu); }} />
+            : ozelEkran === 'renkOgren'
             ? <RenkOgren onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.Colors, ScreenState.ConceptActivitiesMenu); }} />
             : ozelEkran === 'acikKoyu'
             ? <AcikKoyuCalis onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.AcikKoyu, ScreenState.ConceptActivitiesMenu); }} />
@@ -697,7 +702,7 @@ export const AppRouter = () => {
             ? <SekilCalis onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.Shapes, ScreenState.ConceptActivitiesMenu); }} />
             : ozelEkran === 'rengiNe'
             ? <RengiNeOgren onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.ColorRecognition, ScreenState.ConceptActivitiesMenu); }} />
-            : <OzelEkran key={ozelEkran} ekran={ozelEkran} onBack={() => geriDon(ScreenState.MainMenu)} />;
+            : <OzelEkran key={ozelEkran} ekran={ozelEkran as OzelEkranId} onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.ClockLearningGame: return <SaatMerkezi onBack={() => geriDon(ScreenState.ConceptActivitiesMenu)} />;
         case ScreenState.AgzimiIzle: return <div className="flex h-full w-full flex-col">{kitapSeridi(ScreenState.AgzimiIzle, 'Daha çok kelime')}<div className="relative min-h-0 flex-1"><AgzimiIzleEkrani onBack={() => geriDon(ScreenState.MainMenu)} /></div></div>;
         case ScreenState.TuvaletEgitimi: return <TuvaletEkrani onBack={() => geriDon(ScreenState.MainMenu)} />;
@@ -891,6 +896,8 @@ export const AppRouter = () => {
             if (act === ActivityType.OnUnder) { setOzelEkran('ustAlt'); setScreenState(ScreenState.OzelEtkinlik); return; }
             if (act === ActivityType.BelowAbove) { setOzelEkran('yukariAsagi'); setScreenState(ScreenState.OzelEtkinlik); return; }
             if (act === ActivityType.InFrontOfBehind) { setOzelEkran('onArka'); setScreenState(ScreenState.OzelEtkinlik); return; }
+            const ciftKonu = (Object.keys(CIFT_ETKINLIK) as CiftKonu[]).find((k) => CIFT_ETKINLIK[k] === act);
+            if (ciftKonu) { setOzelEkran(ciftKonu); setScreenState(ScreenState.OzelEtkinlik); return; }
             if (act === ActivityType.HighLow) { setOzelEkran('yuksekAlcak'); setScreenState(ScreenState.OzelEtkinlik); return; }
             if (act === ActivityType.TersDuz) { setOzelEkran('tersDuz'); setScreenState(ScreenState.OzelEtkinlik); return; }
             if (act === ActivityType.IlkSon) { setOzelEkran('ilkSon'); setScreenState(ScreenState.OzelEtkinlik); return; }

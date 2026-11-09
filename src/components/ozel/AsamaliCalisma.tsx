@@ -15,8 +15,9 @@ const AsamaliCalisma: React.FC<{
   asamalar: Asama[]; karisik: { alt: string; secenek: number; turlar: () => Tur[] };
   onBack: () => void; onSorular: () => void;
   ekKart?: { emoji: string; baslik: string; alt: string; onClick: () => void }; // ör. sürükle-bırak etkinliği bölümün içinde (hoca)
+  ust?: React.ReactNode; // merkezde ve oyunlarda üstte duran ayar (Gürültülü/Sessiz: gerçek ses seviyesi)
   ileri?: Asama[]; // karışık tamamlanınca açılan ileri aşamalar (Gökhan Hoca: İlk/Son'da "ortada", Ters/Düz'de "içi dışında / arkası önde")
-}> = ({ id, baslik, emoji, aciklama, tani, taniAlt, asamalar, karisik, onBack, onSorular, ekKart, ileri }) => {
+}> = ({ id, baslik, emoji, aciklama, tani, taniAlt, asamalar, karisik, onBack, onSorular, ekKart, ileri, ust }) => {
   const anahtar = `${id}_${profil()}`;
   const [gecilen, setGecilen] = useState<number>(() => { try { return Number(localStorage.getItem(anahtar)) || 0; } catch { return 0; } });
   const [ekran, setEkran] = useState<'merkez' | 'tani' | 'karisik' | number | `ileri${number}`>('merkez');
@@ -29,7 +30,7 @@ const AsamaliCalisma: React.FC<{
     const a = asamalar[ekran];
     return (
       <SecimOyunu key={`a${ekran}`} oyunId={`${id}${ekran}`} sayacAdi={`${baslik} (${a.ad})`} baslik={`${baslik} · ${a.ad}`} emoji={emoji} onBack={merkez}
-        secenekSayilari={[a.secenek]} turlariKur={a.turlar}
+        secenekSayilari={[a.secenek]} turlariKur={a.turlar} ust={ust}
         onBitti={(dogru, toplam) => {
           const gecti = dogru >= GECME;
           if (ikinciBasarisizlik(`${anahtar}_hata${ekran}`, gecti) && gecilen === ekran) {
@@ -49,13 +50,13 @@ const AsamaliCalisma: React.FC<{
     const n = Number(ekran.slice(5)), a = ileri[n];
     return (
       <SecimOyunu key={ekran} oyunId={`${id}Ileri${n}`} sayacAdi={`${baslik} (${a.ad})`} baslik={`${baslik} · ${a.ad}`} emoji={emoji} onBack={merkez}
-        secenekSayilari={[a.secenek]} turlariKur={a.turlar}
+        secenekSayilari={[a.secenek]} turlariKur={a.turlar} ust={ust}
         onBitti={(dogru, toplam) => setSonuc(dogru >= GECME ? `✅ ${a.ad}: ${dogru}/${toplam}. Aferin!` : `${a.ad}: ${dogru}/${toplam}. Bir daha çalışalım.`)} />
     );
   }
   if (ekran === 'karisik') return (
     <SecimOyunu key="karisik" oyunId={`${id}Karisik`} sayacAdi={`${baslik} (Karışık)`} baslik={`${baslik} · Karışık`} emoji={emoji} onBack={merkez}
-      secenekSayilari={[karisik.secenek]} turlariKur={karisik.turlar}
+      secenekSayilari={[karisik.secenek]} turlariKur={karisik.turlar} ust={ust}
       onBitti={(dogru, toplam) => {
         if (dogru >= Math.ceil(toplam * KARISIK_GECME)) { kavramTamamla(id); setTamam(true); setSonuc(`🏅 Karışık: ${dogru}/${toplam}. ${baslik} tamamlandı!`); }
         else setSonuc(`Karışık: ${dogru}/${toplam}. Tamamlamak için ${Math.ceil(toplam * KARISIK_GECME)} gerekiyor; bir daha deneyelim.`);
@@ -69,6 +70,7 @@ const AsamaliCalisma: React.FC<{
       <div className="absolute inset-0 overflow-y-auto px-3 pb-6 space-y-3 pt-2 max-w-xl mx-auto">
         {tamam && <TamamRozeti ad={baslik} />}
         <p className="px-2 text-sm text-slate-600">{aciklama}</p>
+        {ust}
         {sonuc && <div className="rounded-2xl bg-amber-50 border-2 border-amber-200 px-4 py-2 text-center font-bold text-amber-900">{sonuc}</div>}
         {tani && (
           <button className={kart} onClick={() => setEkran('tani')}>
