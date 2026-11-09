@@ -11,9 +11,9 @@ I am making picture cards for young children in special education (ages 3-6: aut
 
 RULES:
 1. Photorealistic, bright, soft even light, plain solid pure white background unless the item says otherwise, no text, no logos, no letters. Square image, item centered and large, fully inside the frame.
-2. Create every image as a SEPARATE NEW image. Never overwrite a previous one.
-3. For images marked "EDIT", make the image by editing the previous one: same item, same colour, same size, same position, same camera. Change ONLY what is described. The difference must be VERY clear, even for a small child.
-4. Stop after every 4 images and wait for my approval.
+2. VERY IMPORTANT: both images of a pair must exist at the end, as two separate images in the project. NEVER replace, modify in place or delete the first image. If I only see one image of a pair, the job has failed.
+3. "EDIT of N" does NOT mean changing image N. It means: use image N as a REFERENCE (ingredient) and generate a NEW, separate image from it, leaving image N untouched: same item, same colour, same size, same position, same camera. Change ONLY what is described. The difference must be VERY clear, even for a small child.
+4. After each pair, check that both images are still there. Stop after every 4 images and wait for my approval.
 
 WET / DRY:
 1. A blue child's sock lying flat, dry, sharp focus, clear knitted texture.
@@ -87,5 +87,33 @@ NOISY / QUIET (animal, plain pale blue background, whole animal visible):
 
 Start with IMAGE 1.
 
-## Sonuç
-(Görseller geldikten sonra doldurulacak)
+## Sonuç (2026-11-10)
+53 dosya geldi (gorsel-ham/kasim/), `kasim-yerlestir.py` ile yerleşti: 22 tam çift + peçetenin kırışık hali.
+Flow'da EDIT önceki resmin üstüne yazıyordu; kural 2-3 ona göre düzeltildi.
+Eksik çıkanlar aşağıdaki ikinci turda.
+
+## İkinci tur: yapıştırılacak metin (16 görsel, 8 çift)
+
+Same rules: photorealistic, bright soft light, no text or logos, square image, item centered and large. Every pair must end as TWO separate images. "EDIT of N" means: use image N as a reference and generate a NEW separate image, leaving image N untouched: same item, same colour, same size, same position, same camera.
+
+WRINKLED / SMOOTH (plain pure white background):
+1. A red cloth napkin laid flat, a square, perfectly smooth, ironed.
+2. EDIT of 1: the SAME napkin, same square shape, full of sharp messy wrinkles.
+3. Long dark blue child's trousers laid flat, perfectly smooth, ironed.
+4. EDIT of 3: the SAME trousers, same length, full of sharp messy wrinkles.
+5. A yellow child's t-shirt laid flat, perfectly smooth, ironed.
+6. EDIT of 5: the SAME t-shirt, same yellow, full of sharp messy wrinkles.
+7. A grey child's blazer laid flat, perfectly smooth, ironed.
+8. EDIT of 7: the SAME blazer full of sharp messy wrinkles.
+9. A folded blue towel, perfectly smooth and neat.
+10. EDIT of 9: the SAME towel, same fold, full of sharp messy wrinkles.
+
+NOISY / QUIET (plain pale blue background, whole animal visible):
+11. A rooster standing on the ground, side view, beak wide open, crowing.
+12. EDIT of 11: the SAME rooster, beak closed, calm. Nothing else changes.
+13. A cat sitting, front view, mouth wide open, meowing.
+14. EDIT of 13: the SAME cat, mouth closed, calm. Nothing else changes.
+15. A cow standing, side view, head up, mouth open, mooing.
+16. EDIT of 15: the SAME cow, mouth closed, head level, calm. Nothing else changes.
+
+Start with IMAGE 1.

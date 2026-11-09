@@ -15,7 +15,7 @@ const yan = (url: string, ad: string, k: string): Yan => ({ url, soru: `Hangi ${
 
 // --- Islak / Kuru
 const ik = (ad: string, a: number, b: number): CiftSet => ({ ad, a: yan(im(a), ad, 'ıslak'), b: yan(im(b), ad, 'kuru') });
-const ikYeni = (ad: string, d: string): CiftSet => ({ ad, a: yan(yeni(`islak-${d}-a`), ad, 'ıslak'), b: yan(yeni(`islak-${d}-b`), ad, 'kuru'), bekliyor: true });
+const ikYeni = (ad: string, d: string): CiftSet => ({ ad, a: yan(yeni(`islak-${d}-a`), ad, 'ıslak'), b: yan(yeni(`islak-${d}-b`), ad, 'kuru') });
 export const ISLAK_KURU: CiftSet[] = [
   ik('çorap', 3301, 3302), ik('havlu', 3303, 3304), ik('kum', 3305, 3306), ik('şemsiye', 3309, 3019), ik('sünger', 3310, 3311),
   ik('tişört', 3312, 3313), ik('toprak', 3314, 3315), ik('yaprak', 3316, 3317), ik('yer', 3318, 3319),
@@ -29,7 +29,7 @@ const nesne = (sicak: string, a: number, soguk: string, b: number): CiftSet => (
   a: { url: im(a), soru: 'Sıcak olan hangisi?', dogru: `Evet! ${buyuk(sicak)} sıcaktır.` },
   b: { url: im(b), soru: 'Soğuk olan hangisi?', dogru: `Evet! ${buyuk(soguk)} soğuktur.` },
 });
-const ssYeni = (ad: string, d: string): CiftSet => ({ ad, a: yan(yeni(`sicak-${d}-a`), ad, 'sıcak'), b: yan(yeni(`sicak-${d}-b`), ad, 'soğuk'), bekliyor: true });
+const ssYeni = (ad: string, d: string): CiftSet => ({ ad, a: yan(yeni(`sicak-${d}-a`), ad, 'sıcak'), b: yan(yeni(`sicak-${d}-b`), ad, 'soğuk') });
 export const SICAK_SOGUK: CiftSet[] = [
   { ad: 'kupa', a: { url: im(3613), soru: 'Hangi kupa sıcak?', dogru: 'Evet! Bu kupadaki içecek sıcak.' }, b: { url: im(3614), soru: 'Hangi kupa soğuk?', dogru: 'Evet! Bu kupadaki içecek soğuk.' } },
   { ad: 'süt', a: yan(im(3617), 'süt', 'sıcak'), b: yan(im(3618), 'süt', 'soğuk') },
@@ -37,8 +37,8 @@ export const SICAK_SOGUK: CiftSet[] = [
   nesne('ateş', 3601, 'kardan adam', 3602), nesne('çaydanlık', 3603, 'buzlu su', 3604), nesne('sıcak çikolata', 3605, 'limonata', 3606),
   nesne('çorba', 3607, 'dondurma', 3608), nesne('soba', 3615, 'buzlu pencere', 3616), nesne('ütü', 3619, 'buz', 3620),
 ];
-const hava = (a: string, b: string, bekliyor?: boolean): CiftSet => ({
-  ad: 'hava', bekliyor,
+const hava = (a: string, b: string): CiftSet => ({
+  ad: 'hava',
   a: { url: a, soru: 'Hangi resimde hava sıcak?', dogru: 'Evet! Bu hava sıcak.' }, b: { url: b, soru: 'Hangi resimde hava soğuk?', dogru: 'Evet! Bu hava soğuk.' },
 });
 export const HAVA_SICAK_SOGUK: CiftSet[] = [
@@ -46,7 +46,7 @@ export const HAVA_SICAK_SOGUK: CiftSet[] = [
   // Mevsimler etkinliğinin yaz ve kış resimleri
   hava('/images/ozel/mevsim/yaz-agac.webp', '/images/ozel/mevsim/kis-agac.webp'),
   hava('/images/ozel/mevsim/yaz-cocuk.webp', '/images/ozel/mevsim/kis-cocuk.webp'),
-  ...['ev', 'park', 'sokak'].map((d) => hava(yeni(`hava-${d}-a`), yeni(`hava-${d}-b`), true)),
+  ...['ev', 'park', 'sokak'].map((d) => hava(yeni(`hava-${d}-a`), yeni(`hava-${d}-b`))),
 ];
 // Güvenlik aşaması: sıcak nesne ile güvenli oyuncak; "Hangisine dokunmayız?"
 export const DOKUNMA_SORU = 'Hangisine dokunmayız?';
@@ -96,9 +96,9 @@ export const SES_DOSYALARI: [string, string][] = [
 
 // --- Kırışık / Düz (hoca: "düzgün" yerine "düz")
 const kd = (ad: string, a: number, b: number): CiftSet => ({ ad, a: yan(im(a), ad, 'kırışık'), b: yan(im(b), ad, 'düz') });
-const kdYeni = (ad: string, d: string): CiftSet => ({ ad, a: yan(yeni(`kirisik-${d}-a`), ad, 'kırışık'), b: yan(yeni(`kirisik-${d}-b`), ad, 'düz'), bekliyor: true });
+const kdYeni = (ad: string, d: string, bekliyor?: boolean): CiftSet => ({ ad, a: yan(yeni(`kirisik-${d}-a`), ad, 'kırışık'), b: yan(yeni(`kirisik-${d}-b`), ad, 'düz'), bekliyor });
 export const KIRISIK_DUZ: CiftSet[] = [
   kd('gömlek', 4706, 4705), kd('elbise', 4702, 4701), kd('etek', 4704, 4703), kd('kâğıt', 4708, 4707), kd('masa örtüsü', 4710, 4709),
   kd('yatak örtüsü', 4712, 4711), kd('pantolon', 4714, 4713), kd('peçete', 4716, 4715), kd('perde', 4718, 4717), kd('tişört', 4720, 4719),
-  kdYeni('ceket', 'ceket'), kdYeni('havlu', 'havlu'), kdYeni('yastık', 'yastik'),
+  kdYeni('yastık', 'yastik'), kdYeni('ceket', 'ceket', true), kdYeni('havlu', 'havlu', true),
 ];
