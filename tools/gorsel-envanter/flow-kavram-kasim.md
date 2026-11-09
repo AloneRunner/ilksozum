@@ -1,7 +1,8 @@
 # Flow turu: Kasım kavramları (Gökhan Hoca, 2026-11-09)
 
-Islak/Kuru, Sıcak/Soğuk, Kırışık/Düz, Gürültülü/Sessiz için. Toplam 62 görsel (31 çift); parça parça yapılabilir, sıra önem sırasıdır.
+Islak/Kuru, Sıcak/Soğuk, Kırışık/Düz, Gürültülü/Sessiz için. Toplam 60 görsel (30 çift); parça parça yapılabilir, sıra önem sırasıdır.
 İndirilenler `gorsel-ham/kasim/` klasörüne, adlarını Claude koyar. Mevcut görselin üstüne yazılanlarda kod değişmez, yenilerde `bekliyor: true` kalkar (src/data/ciftKavramlar.ts). Hepsinin sesi hazır.
+Hava aşamasında Mevsimler'in yaz/kış resimleri de kullanılıyor (ağaç, çocuk); onlar istenmedi.
 Saç çifti Flow'a verilmedi: EDIT insanı korumuyor, Claude kodla aynı çocuğu çizecek.
 
 ## Ajana yapıştırılacak metin
@@ -51,40 +52,38 @@ WEATHER (full scenes, no people, no white background):
 30. EDIT of 29: the SAME house and garden in deep winter: thick snow everywhere, snow falling, grey sky.
 31. A park with a bench and a swing on a very hot sunny summer day.
 32. EDIT of 31: the SAME park covered in thick snow, snow falling.
-33. One big tree in a field on a hot sunny summer day, full green leaves.
-34. EDIT of 33: the SAME tree and field in winter: bare branches covered with snow.
-35. A quiet street with houses on a hot sunny summer day.
-36. EDIT of 35: the SAME street covered with thick snow, snow falling.
+33. A quiet street with houses on a hot sunny summer day.
+34. EDIT of 33: the SAME street covered with thick snow, snow falling.
 
 WRINKLED / SMOOTH (same item, same colour, same model):
-37. A green curtain hanging straight from a rail, perfectly smooth and flat.
-38. EDIT of 37: the SAME curtain still hanging from the rail, full of sharp messy wrinkles.
-39. A pink child's skirt laid flat, perfectly smooth, ironed.
-40. EDIT of 39: the SAME pink skirt laid flat, full of sharp messy wrinkles. Same colour, same length.
-41. A red cloth napkin folded in a square, perfectly smooth.
-42. EDIT of 41: the SAME napkin, same square shape, full of sharp wrinkles.
-43. Long dark blue child's trousers laid flat, perfectly smooth, ironed.
-44. EDIT of 43: the SAME trousers, same length, full of sharp wrinkles.
-45. A yellow child's t-shirt laid flat, perfectly smooth, ironed.
-46. EDIT of 45: the SAME t-shirt, same yellow, full of sharp wrinkles.
-47. A grey child's blazer laid flat, perfectly smooth, ironed.
-48. EDIT of 47: the SAME blazer full of sharp wrinkles.
-49. A folded blue towel, perfectly smooth and neat.
-50. EDIT of 49: the SAME towel, same fold, full of sharp wrinkles.
-51. A light green pillow, perfectly smooth, plump.
-52. EDIT of 51: the SAME pillow full of sharp wrinkles.
+35. A green curtain hanging straight from a rail, perfectly smooth and flat.
+36. EDIT of 35: the SAME curtain still hanging from the rail, full of sharp messy wrinkles.
+37. A pink child's skirt laid flat, perfectly smooth, ironed.
+38. EDIT of 37: the SAME pink skirt laid flat, full of sharp messy wrinkles. Same colour, same length.
+39. A red cloth napkin folded in a square, perfectly smooth.
+40. EDIT of 39: the SAME napkin, same square shape, full of sharp wrinkles.
+41. Long dark blue child's trousers laid flat, perfectly smooth, ironed.
+42. EDIT of 41: the SAME trousers, same length, full of sharp wrinkles.
+43. A yellow child's t-shirt laid flat, perfectly smooth, ironed.
+44. EDIT of 43: the SAME t-shirt, same yellow, full of sharp wrinkles.
+45. A grey child's blazer laid flat, perfectly smooth, ironed.
+46. EDIT of 45: the SAME blazer full of sharp wrinkles.
+47. A folded blue towel, perfectly smooth and neat.
+48. EDIT of 47: the SAME towel, same fold, full of sharp wrinkles.
+49. A light green pillow, perfectly smooth, plump.
+50. EDIT of 49: the SAME pillow full of sharp wrinkles.
 
 NOISY / QUIET (animal, plain pale blue background, whole animal visible):
-53. A lion standing, side view, mouth wide open, roaring.
-54. EDIT of 53: the SAME lion in the SAME position with its mouth closed, calm. Nothing else changes.
-55. A rooster standing on the ground, side view, beak wide open, crowing.
-56. EDIT of 55: the SAME rooster, beak closed, calm. Nothing else changes.
-57. A cat sitting, front view, mouth wide open, meowing.
-58. EDIT of 57: the SAME cat, mouth closed, calm. Nothing else changes.
-59. A dog standing, side view, mouth wide open, barking.
-60. EDIT of 59: the SAME dog, mouth closed, calm. Nothing else changes.
-61. A cow standing, side view, head up, mouth open, mooing.
-62. EDIT of 61: the SAME cow, mouth closed, head level, calm. Nothing else changes.
+51. A lion standing, side view, mouth wide open, roaring.
+52. EDIT of 51: the SAME lion in the SAME position with its mouth closed, calm. Nothing else changes.
+53. A rooster standing on the ground, side view, beak wide open, crowing.
+54. EDIT of 53: the SAME rooster, beak closed, calm. Nothing else changes.
+55. A cat sitting, front view, mouth wide open, meowing.
+56. EDIT of 55: the SAME cat, mouth closed, calm. Nothing else changes.
+57. A dog standing, side view, mouth wide open, barking.
+58. EDIT of 57: the SAME dog, mouth closed, calm. Nothing else changes.
+59. A cow standing, side view, head up, mouth open, mooing.
+60. EDIT of 59: the SAME cow, mouth closed, head level, calm. Nothing else changes.
 
 Start with IMAGE 1.
 

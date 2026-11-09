@@ -43,7 +43,10 @@ const hava = (a: string, b: string, bekliyor?: boolean): CiftSet => ({
 });
 export const HAVA_SICAK_SOGUK: CiftSet[] = [
   hava(im(3611), im(3612)),
-  ...['ev', 'park', 'agac', 'sokak'].map((d) => hava(yeni(`hava-${d}-a`), yeni(`hava-${d}-b`), true)),
+  // Mevsimler etkinliğinin yaz ve kış resimleri
+  hava('/images/ozel/mevsim/yaz-agac.webp', '/images/ozel/mevsim/kis-agac.webp'),
+  hava('/images/ozel/mevsim/yaz-cocuk.webp', '/images/ozel/mevsim/kis-cocuk.webp'),
+  ...['ev', 'park', 'sokak'].map((d) => hava(yeni(`hava-${d}-a`), yeni(`hava-${d}-b`), true)),
 ];
 // Güvenlik aşaması: sıcak nesne ile güvenli oyuncak; "Hangisine dokunmayız?"
 export const DOKUNMA_SORU = 'Hangisine dokunmayız?';
