@@ -48,6 +48,7 @@
     },
     {
       "id": 2006,
+      "sahne": true,
       "kaynak": "kalin-ince/mum-ince.jpg",
       "word": "mum",
       "category": "none",
@@ -2887,6 +2888,7 @@
     },
     {
       "id": 3015,
+      "sahne": true,
       "kaynak": "acik-kapali/musluk-acik.jpg",
       "word": "musluk",
       "category": "none",
@@ -2896,6 +2898,7 @@
     },
     {
       "id": 3016,
+      "sahne": true,
       "kaynak": "acik-kapali/musluk-kapali.jpg",
       "word": "musluk",
       "category": "none",
@@ -3184,6 +3187,7 @@
     },
     {
       "id": 3208,
+      "sahne": true,
       "kaynak": "temiz-kirli/bardak-temiz.jpg",
       "word": "bardak",
       "category": "none",
@@ -4531,6 +4535,7 @@
     },
     {
       "id": 4012,
+      "sahne": true,
       "kaynak": "seffaf-opak/sise-seffaf.jpg",
       "word": "şişe",
       "category": "none",
@@ -9804,6 +9809,7 @@
     },
     {
       "id": 6865,
+      "sahne": true,
       "kaynak": "tehlikeli-guvenli/sprey_subisesi-guvenli.jpg",
       "word": "su şişesi",
       "category": "none",
@@ -11711,6 +11717,7 @@
     },
     {
       "id": 8162,
+      "sahne": true,
       "kaynak": "nesne/162-helikopter.jpg",
       "word": "helikopter",
       "category": "none",
@@ -12279,6 +12286,7 @@
     },
     {
       "id": 8282,
+      "sahne": true,
       "kaynak": "nesne/282-gece-lambasi.jpg",
       "word": "gece lambası",
       "category": "none",
@@ -12725,6 +12733,7 @@
     },
     {
       "id": 8375,
+      "sahne": true,
       "kaynak": "nesne/375-yelkenli.jpg",
       "word": "yelkenli",
       "category": "none",
@@ -12940,6 +12949,7 @@
     },
     {
       "id": 8425,
+      "sahne": true,
       "kaynak": "nesne/425-dis-macunu.jpg",
       "word": "diş macunu",
       "category": "none",
