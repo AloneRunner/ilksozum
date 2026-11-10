@@ -39,6 +39,7 @@ ESLEME = {
     'hava-sokak-a': 'Quiet_street_on_sunny_day_ec65e48a', 'hava-sokak-b': 'Snow_falling_on_quiet_street_b5093a04',
     'kirisik-yastik-a': 'Green_pillow_with_sharp_wrinkles_945f962b', 'kirisik-yastik-b': 'Light_green_pillow_16788cc1',
     'kirisik-ceket-a': '../kasim2/Wrinkled_grey_child_blazer_bdfc578f', 'kirisik-ceket-b': "../kasim2/Grey_child's_blazer_laid_flat_17e5e8e0",
+    'kirisik-havlu-a': '../kasim3/Folded_blue_towel_with_wrinkles_363ba10a', 'kirisik-havlu-b': '../kasim3/Folded_blue_towel_1660e591',
 }
 (KOK / 'public/images/ozel/cift').mkdir(parents=True, exist_ok=True)
 for hedef, kaynak in ESLEME.items():

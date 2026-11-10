@@ -94,7 +94,7 @@ Eksik çıkanlar aşağıdaki ikinci turda.
 
 ## İkinci tur: yapıştırılacak metin (16 görsel, 8 çift)
 
-Sonuç (2026-11-10): gorsel-ham/kasim2/; 7 çift yerleşti. Peçetede birinci turun daha kırışık resmi kaldı. Mavi havlu olmadı (tüylü kumaşta kırışık görünmüyor), `bekliyor` kaldı.
+Sonuç (2026-11-10): gorsel-ham/kasim2/; 7 çift yerleşti. Peçetede birinci turun daha kırışık resmi kaldı. Mavi havlunun ikinci tur hali olmadı; birinci turun indirilmemiş çifti gorsel-ham/kasim3/ klasöründen alındı.
 
 Same rules: photorealistic, bright soft light, no text or logos, square image, item centered and large. Every pair must end as TWO separate images. "EDIT of N" means: use image N as a reference and generate a NEW separate image, leaving image N untouched: same item, same colour, same size, same position, same camera.
 
