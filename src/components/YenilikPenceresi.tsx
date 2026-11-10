@@ -6,21 +6,16 @@ import { etkinlikSay } from '../services/sayac.ts';
 // Açılışta "Bu sürümde yeni" penceresi (Kaan, 2026-10-28): her yeni sürümde bir kez kendiliğinden açılır.
 // 2. sayfa bağış ricası; bağış Google Play ile alındığı için yalnız Android'de.
 // Yeni sürümde: SURUM'ü değiştir, YENILIKLER'i yeniden yaz.
-const SURUM = '2026-11';
+const SURUM = '2026-11-b';
 const ANAHTAR = 'yenilikGoruldu_v1';
 
 const YENILIKLER: { emoji: string; baslik: string; metin: string }[] = [
-  { emoji: '🧩', baslik: 'Yeni özel eğitim etkinlikleri', metin: 'Sosyal öyküler (berber, doktor, market, sıra bekleme, arkadaşlık), Kendine Bakım (el yıkama, diş fırçalama, giyinme), Nasıl Hisseder?, Ben-Sen-O, Mevsimler, Yönerge Takibi ("Önce elmaya, sonra topa dokun"), Ne Yapıyor?, Dinle-Bul: Konuşma ve Anlama menüsünde. Toplama, Paralarımız, Günler ve Aylar: Sayılar menüsünde. Saklanan kediyi bulma oyunu: Düşünme ve Hafıza menüsünde.' },
-  { emoji: '📚', baslik: 'Kelimeleri tek tek öğren', metin: 'Kategoriye girince önce çalışma sayfası açılır. "Tek Tek Öğren"de hep aynı kelime sorulur (ör. "Elma hangisi?"): önce 2, sonra 3, sonra 4 şık arasından; her biri 10 soru, 8 doğru olunca sıradaki aşama, 4 şık geçilince sıradaki kelime. Bütün kelimelerle 2’li, 3’lü, 4’lü tekrar; Hızlı Sorular karışık 20 soru. Bütün kategorilerde (sebze, içecek, oyuncak, hayvan…); en sık kullanılan kelimeler önce gelir.' },
-  { emoji: '🧐', baslik: 'Yeni oyun: Farkları Bul', metin: 'İki resim arasındaki farkları bul. 7 sahne; önce 3 fark, başardıkça 5 ve 7. Düşünme ve Hafıza menüsünde.' },
-  { emoji: '🕒', baslik: 'Saat Merkezi', metin: 'Akrep ve yelkovanı tanı, saatle oyna, tam saat, buçuk, çeyrek geçiyor, çeyrek var, dijital saat ve parmakla saati kur: 10 bölüm. Kavramlar › Zaman ya da Sayılar menüsünde.' },
-  { emoji: '🎨', baslik: 'Renkleri tek tek öğren', metin: 'Kavramlar › Renkler: çalışılacak rengi seçin; önce tanıyın, sonra 2, 3 ve 4 renk arasından bulun (her biri 10 soru), en sonda karışık. Etiketlerde artık rengi de yazıyor ("yeşil elbise"). "Rengi Ne?" de aynı adımlarla; fotoğraflar büyüdü, renk düğmeleri fotoğraftaki tonla aynı. Şekiller de gruplarla: önce daire, kare, üçgen; sonra dikdörtgen, oval, yıldız. Açık/Koyu, Parlak/Mat, Şeffaf/Opak, Büyük/Küçük, Uzun/Kısa, Kalın/İnce, Geniş/Dar, Derin/Sığ, Yüksek/Alçak ve Ağır/Hafif (terazili) de aşamalı: aynı eşyada yalnız o özellik değişir. Karışık bölüm başarılınca 🏅 rozet.' },
-  { emoji: '📍', baslik: 'Konum kavramları yenilendi', metin: 'Üstünde/Altında (aynı mobilya, nesne ya üstünde ya ayaklarının arasında; "Kendin yerleştir" kartı), Yukarıda/Aşağıda (kitaplık, ağaç, merdiven, gökyüzü), Önünde/Arkasında (kutu, sepet, kova), Ters/Düz (ileri aşama: içi dışında, arkası önde) ve İlk/Son (bayrağa doğru dizilmiş nesneler, "Hangisi ilk?"; ileri aşama: ortada). Önce kavramın bir yanı, sonra öteki, en son karışık; 10 sorudan 8 doğru olunca sıradaki aşama açılır. Yüksek/Alçak Boyut, İlk/Son Miktar sekmesine taşındı.' },
-  { emoji: '👩‍🏫', baslik: 'Özel eğitimcilerin önerisi', metin: 'Ayarlar › "Yanlışta kavramı olumsuzla": yanlış seçince "Hayır, bu atkı kısa." yerine "Hayır, bu atkı uzun değil." denir.' },
-  { emoji: '🎞️', baslik: 'Olay Sıralama yenilendi', metin: 'Yanlış kart sallanır, sıra bozulmaz. Önce iki kartlık kolay sıralar gelir.' },
-  { emoji: '🔤', baslik: 'Harf ve ses etkinlikleri', metin: '"A sesi var mı?" soruları önce kısa (1–2 heceli) kelimelerle başlar, sonra uzar. Yeni: Sesin Yeri (ses başta mı, ortada mı, sonda mı?) ve İşlevsel Okuma (çocuğun sevdiği yiyeceklerin yazısını okuyup resmini bulma): Harfler ve Okuma menüsünde.' },
-  { emoji: '🖨️', baslik: 'Saat çalışma kâğıtları', metin: 'Çıktı Merkezi › Saat Kâğıtları: saat kaç, ibreleri çiz, eşleştir; tam, buçuk, çeyrek, 5 dakika. Cevap anahtarıyla.' },
-  { emoji: '🔊', baslik: '1.400\'den fazla yeni ses', metin: 'Yeni cümleler de gerçek bir insan sesiyle.' },
+  { emoji: '🧮', baslik: 'Miktar kavramları yenilendi', metin: 'Kaç Tane Var?, Az/Çok, Tek/Çift, Dolu/Boş, Kalabalık/Tenha ve Bütün/Yarım aşamalı. Bütün/Yarım’da el pizzayı ikiye ve dörde böler, geriye yalnız yarım ya da çeyrek kalır; çeyrek ileri aşamada. Kavramlar › Miktar.' },
+  { emoji: '👁️', baslik: 'Duyularımız', metin: 'Göz, kulak, el, burun, dil: önce tek tek, sonra karışık. Kulak sorularında gerçek sesler. Kavramlar › Duyular.' },
+  { emoji: '🌡️', baslik: 'Duyular kavramları', metin: 'Islak/Kuru, Sıcak/Soğuk (hava aşamasıyla), Acı/Tatlı, Gürültülü/Sessiz, Kırışık/Düz, Pürüzlü/Pürüzsüz ve Sivri/Küt aşamalı: aynı nesnede yalnız o özellik değişir.' },
+  { emoji: '📍', baslik: 'Konumda yeni çalışmalar', metin: 'İç/Dış, Arasında, Sağ/Sol, Yan Yana ve Yakın/Uzak aşamalı. Önce kavramın bir yanı, sonra öteki, en son karışık; 10 sorudan 8 doğru olunca sıradaki aşama açılır. Kavramlar › Konum.' },
+  { emoji: '🔊', baslik: 'Daha çok insan sesi', metin: '5N1K cevapları ve yeni kavramların cümleleri gerçek bir insan sesiyle.' },
+  { emoji: '⚙️', baslik: 'Rastgele Oyna seçmeli', metin: 'Ana menüdeki Rastgele Oyna düğmesini Ayarlar’dan kapatabilirsiniz.' },
 ];
 
 // Daha önce kullanılmış cihaz mı? (yeni kuruluma "yenilikler" gösterilmez)

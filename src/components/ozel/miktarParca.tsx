@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { OyunCercevesi } from '../oyunKiti/OyunKiti.tsx';
 import { OBJECT_CATEGORIES } from '../../constants.ts';
 import { kategoriOgeleri } from '../sozluk/KelimeKitabi.tsx';
@@ -34,11 +34,29 @@ const PARCA = [
 ];
 const EL_CSS = '@keyframes kesDikey{from{top:-6%;opacity:1}to{top:88%;opacity:1}}@keyframes kesYatay{from{left:-6%;opacity:1}to{left:88%;opacity:1}}';
 
-/** Kuşbakışı bütün resmi el ikiye, sonra dörde böler; parçalar aynı resmin kırpılmışı olduğu için oran tam 1/2 ve 1/4. */
+/** Kesildikten sonra ekranda kalan parçalar: yarımda sol yarı, çeyrekte sol üst. */
+const kalir = (k: Kisim, i: number) => k === 'bütün' || i === 0 || (k === 'yarım' && i === 2);
+
+/** Kuşbakışı bütün resmi el ikiye, sonra dörde böler; fazla parçalar yavaşça silinir, söz en sonda gelir. Parçalar aynı resmin kırpılmışı olduğu için oran tam 1/2 ve 1/4. */
 export const Kesme: React.FC<{ p: Parcali }> = ({ p }) => {
   const [hal, setHal] = useState<Kisim>('bütün');
+  const [ayrik, setAyrik] = useState<Kisim>('bütün');
+  const [silik, setSilik] = useState(false);
+  const [yazi, setYazi] = useState<string>('bütün');
   const [sayac, setSayac] = useState(0);
-  const sec = (k: Kisim) => { setHal(k); setSayac((s) => s + 1); void speak(`Bu ${p.ad} ${k}.`); };
+  const zaman = useRef<number[]>([]);
+  const temizle = () => { zaman.current.forEach((t) => clearTimeout(t)); zaman.current = []; };
+  useEffect(() => temizle, []);
+  const sonra = (ms: number, f: () => void) => { zaman.current.push(window.setTimeout(f, ms)); };
+  const sec = (k: Kisim) => {
+    temizle(); setHal(k); setAyrik('bütün'); setSilik(false); setSayac((s) => s + 1);
+    const bitir = () => { setSilik(true); setYazi(k); void speak(`Bu ${p.ad} ${k}.`); };
+    if (k === 'bütün') { bitir(); return; }
+    setYazi('');
+    sonra(700, () => setAyrik('yarım'));
+    if (k === 'çeyrek') sonra(1400, () => setAyrik('çeyrek'));
+    sonra(k === 'çeyrek' ? 2000 : 1300, bitir);
+  };
   const dugme = (k: Kisim, yazi: string) => (
     <button onClick={() => sec(k)} className={`flex-1 rounded-2xl px-2 py-3 text-lg font-black active:scale-95 ${hal === k ? 'bg-sky-600 text-white' : 'bg-sky-100 text-sky-800'}`}>{yazi}</button>
   );
@@ -47,13 +65,13 @@ export const Kesme: React.FC<{ p: Parcali }> = ({ p }) => {
       <style>{EL_CSS}</style>
       <div className="relative aspect-square w-full overflow-hidden">
         {PARCA.map((c, i) => (
-          <img key={i} src={p.bütün} alt="" draggable={false} className="absolute inset-0 h-full w-full object-contain transition-transform duration-700"
-            style={{ clipPath: c.kirp, transform: `translate(${hal === 'bütün' ? 0 : c.x * 7}%, ${hal === 'çeyrek' ? c.y * 7 : 0}%)` }} />
+          <img key={i} src={p.bütün} alt="" draggable={false} className="absolute inset-0 h-full w-full object-contain"
+            style={{ clipPath: c.kirp, transform: `translate(${ayrik === 'bütün' ? 0 : c.x * 7}%, ${ayrik === 'çeyrek' ? c.y * 7 : 0}%)`, opacity: silik && !kalir(hal, i) ? 0 : 1, transition: `transform .5s, opacity ${silik ? '1.2s' : '.3s'}` }} />
         ))}
         {hal !== 'bütün' && <span key={`d${sayac}`} className="absolute left-1/2 -ml-5 text-4xl opacity-0" style={{ animation: 'kesDikey .7s ease-in' }}>✋</span>}
         {hal === 'çeyrek' && <span key={`y${sayac}`} className="absolute top-1/2 -mt-5 text-4xl opacity-0" style={{ animation: 'kesYatay .7s ease-in .7s' }}>✋</span>}
       </div>
-      <div className="mt-2 text-center text-2xl font-black text-slate-800">{hal}</div>
+      <div className="mt-2 text-center text-2xl font-black text-slate-800">{yazi || ' '}</div>
       <div className="mt-2 flex gap-2">{dugme('bütün', 'Bütün')}{dugme('yarım', 'İkiye böl')}{dugme('çeyrek', 'Dörde böl')}</div>
     </div>
   );

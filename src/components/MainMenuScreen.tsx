@@ -137,6 +137,9 @@ const SystemAnnouncementsCard: React.FC<{ theme: string }> = ({ theme }) => {
           <>
             {/* Duyurular 9.2 (Kaan, 2026-10-21: "duyuruları komple değiştirebiliriz"); en üstte Kasım yenilikleri (YenilikPenceresi ile aynı) */}
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
+              <b>YENİ — Kasım kavramları:</b> <b>Miktar</b> (Kaç Tane, Az/Çok, Tek/Çift, Dolu/Boş, Kalabalık/Tenha, Bütün/Yarım), <b>Konum</b> (İç/Dış, Arasında, Sağ/Sol, Yan Yana, Yakın/Uzak) ve <b>Duyular</b> (Duyularımız, Islak/Kuru, Sıcak/Soğuk, Acı/Tatlı, Gürültülü/Sessiz, Kırışık/Düz, Pürüzlü/Pürüzsüz, Sivri/Küt) aşamalı çalışmalarla yenilendi.
+            </p>
+            <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
               <b>YENİ — Kelimeleri tek tek öğren:</b> Kategoriye girince önce çalışma sayfası açılır. <b>Tek Tek Öğren</b>'de hep aynı kelime sorulur: önce 2, sonra 3, sonra 4 şık; her biri 10 soru, 8 doğru olunca sıradaki. Bütün kelimelerle <b>2'li, 3'lü, 4'lü Tekrar</b>; karışık 20 soru <b>Hızlı Sorular</b>'da.
             </p>
             <p className={`text-xs sm:text-sm leading-relaxed ${subTextClass}`}>
