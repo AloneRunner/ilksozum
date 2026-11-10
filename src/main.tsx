@@ -9,6 +9,8 @@ import { eskiGorselYedeginiKur } from './services/nesneGorsel.ts';
 import { acilisSay } from './services/sayac.ts';
 
 eskiGorselYedeginiKur();
+// Yeni kurulumda "Yanlışta kavramı olumsuzla" açık başlar (Gökhan Hoca); gizlilik onayı olan mevcut kullanıcının ayarı değişmez.
+try { if (localStorage.getItem('yanlisOlumsuz_v1') === null && localStorage.getItem('privacy_consent_v1') === null) localStorage.setItem('yanlisOlumsuz_v1', 'true'); } catch { /* yok say */ }
 // Kimliksiz kullanım sayacı: günde bir açılış (arka plandan dönünce yeni günse yine sayılır)
 acilisSay();
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') acilisSay(); });

@@ -63,6 +63,16 @@ for (const s of TD.ICI_DISI_SETLER) metinler.push(s.soru, s.dogru);
 const CK = await import(new URL('../../src/data/ciftKavramlar.ts', import.meta.url).href);
 for (const l of [CK.ISLAK_KURU, CK.SICAK_SOGUK, CK.HAVA_SICAK_SOGUK, CK.KIRISIK_DUZ, CK.GURULTULU_SESSIZ])
   for (const s of l) for (const y of [s.a, s.b]) metinler.push(y.soru, y.dogru, CK.taniSoz(y.dogru));
+metinler.push(CK.SES_SORU);
+for (const o of CK.ORGANLAR) { metinler.push(o.goster, o.bu, o.eylem, o.cumle, CK.taniSoz(o.bu), CK.taniSoz(o.cumle)); if (o.nesneSoru) metinler.push(o.nesneSoru); }
+for (const s of CK.ARASINDA) metinler.push(s.soru, s.dogru, CK.taniSoz(s.dogru));
+for (const n of CK.YAKIN_NESNE) for (const y of CK.YAKIN_YER) for (const k of [true, false]) metinler.push(CK.yakinSoru(n.ad, y, k), CK.yakinDogru(n.ad, y, k), CK.taniSoz(CK.yakinDogru(n.ad, y, k)));
+metinler.push(CK.SIVRI_UYARI, CK.DIKENLI_UYARI, 'Elimize takılır.', 'Düzdür.');
+for (const l of [CK.PURUZLU, CK.SIVRI_KUT, CK.DIKENLI, CK.TEK_CIFT, CK.DOLU_BOS, CK.KALABALIK_TENHA, CK.IC_DIS, CK.YAN_YANA, CK.SAG_SOL, CK.BIZE_YAKIN]) for (const s of l) for (const y of [s.a, s.b]) metinler.push(y.soru, y.dogru, CK.taniSoz(y.dogru));
+for (const p of CK.PARCALI) for (const k of ['bütün', 'yarım', 'çeyrek']) metinler.push(CK.parcaSoru(p.ad, k), CK.parcaDogru(p.ad, k), CK.taniSoz(CK.parcaDogru(p.ad, k)));
+for (const a of CK.AZ_COK_NESNE) for (const k of ['az', 'çok']) metinler.push(CK.azCokSoru(a, k), CK.azCokDogru(a, k), CK.taniSoz(CK.azCokDogru(a, k)));
+metinler.push(CK.KAC_SORU);
+for (const a of CK.KAC_NESNE) for (const n of [1, 2, 3, 4, 5]) metinler.push(CK.kacDogru(n, a), CK.taniSoz(CK.kacDogru(n, a)));
 metinler.push(CK.DOKUNMA_SORU, CK.DOKUNMA_KURAL, CK.SES_CIKARIYOR, CK.SES_CIKARMIYOR);
 for (const s of CK.DOKUNMA_SICAK) metinler.push(CK.dokunmaDogru(s.ad));
 for (const t of Object.keys(CK.TATLAR)) { metinler.push(CK.tatSoru(t)); for (const o of CK.TATLAR[t]) metinler.push(CK.tatDogru(o.ad, t), CK.taniSoz(CK.tatDogru(o.ad, t))); }

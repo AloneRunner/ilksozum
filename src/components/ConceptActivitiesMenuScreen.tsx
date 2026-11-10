@@ -443,7 +443,7 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
     {
       name: isTr ? "Konum" : t("concepts.position", "Spatial"),
       icon: emojiIkon("📍"),
-      activities: sec([ActivityType.OnUnder, ActivityType.BelowAbove, ActivityType.InFrontOfBehind, ActivityType.InsideOutside, ActivityType.KutuOyunu, ActivityType.BesideOpposite, ActivityType.Between, ActivityType.LeftRight, ActivityType.NearFar, ActivityType.TersDuz]),
+      activities: sec([ActivityType.OnUnder, ActivityType.BelowAbove, ActivityType.InFrontOfBehind, ActivityType.InsideOutside, ActivityType.Between, ActivityType.LeftRight, ActivityType.NearFar, ActivityType.TersDuz, ActivityType.BesideOpposite]),
     },
     {
       name: isTr ? "Miktar" : t("concepts.quantity", "Quantity"),
@@ -453,7 +453,7 @@ const buildTabs = (lang: ReturnType<typeof getCurrentLanguage>): ConceptTab[] =>
     {
       name: isTr ? "Duyular" : t("concepts.sensory", "Senses"),
       icon: emojiIkon("✋"),
-      activities: sec([ActivityType.Senses, ActivityType.HardSoft, ActivityType.RoughSmooth, ActivityType.DikenliPuruzsuz, ActivityType.SivriKut, ActivityType.WetDry, ActivityType.HotCold, ActivityType.BitterSweet, ActivityType.NoisyQuiet, ActivityType.KirisikDuzgun]),
+      activities: sec([ActivityType.Senses, ActivityType.HardSoft, ActivityType.WetDry, ActivityType.HotCold, ActivityType.RoughSmooth, ActivityType.SivriKut, ActivityType.BitterSweet, ActivityType.NoisyQuiet, ActivityType.KirisikDuzgun]),
     },
     {
       name: isTr ? "Zaman" : t("concepts.time", "Time"),

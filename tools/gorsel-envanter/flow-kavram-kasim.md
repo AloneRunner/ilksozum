@@ -119,3 +119,85 @@ NOISY / QUIET (plain pale blue background, whole animal visible):
 16. EDIT of 15: the SAME cow, mouth closed, head level, calm. Nothing else changes.
 
 Start with IMAGE 1.
+
+## Üçüncü tur: Gürültülü/Sessiz, kalan 5 çift (5 görsel, yan yana)
+
+EDIT insanı korumadığı için her çift tek karede, iki yarım olarak isteniyor; Claude ortadan keser. Sol gürültülü (4203, 4205, 4207, 4217, 4219), sağ sessiz (4204, 4206, 4208, 4218, 4220).
+
+Sonuç (2026-11-10): gorsel-ham/kasim4/, 5 görselin beşi de ilk denemede oldu, `kasim-ikili.py` ile kesildi. Kişi iki yarımda da aynı kaldı: insanlı çiftlerde bu yöntem kullanılsın.
+
+Picture cards for young children in special education. Each image is ONE landscape 16:9 picture made of TWO panels side by side, separated by a thin white vertical gap in the exact middle. Both panels show the SAME subject: same face, same hair, same clothes, same size, same position, same camera. The ONLY difference is the one described.
+
+Rules: photorealistic, bright soft even light, plain solid pale blue background in both panels, nothing else in the scene, no toys or furniture unless named, no text, no logos. Subject centered in its panel, large, fully inside the panel, with some space above and below. Generate exactly 5 images, one for each line below. Do not edit or replace earlier images.
+
+1. A baby lying on a plain pale blue blanket, seen from above. Left panel: the baby crying loudly, mouth wide open, eyes shut, tears. Right panel: the SAME baby sleeping peacefully, mouth closed.
+2. A small child sitting on the floor with a red toy drum in front. Left panel: hitting the drum with two sticks raised, mouth wide open, shouting happily. Right panel: the SAME child and drum, sticks resting still on the drum, mouth closed, calm.
+3. A different small child sitting on the floor holding a metal cooking pot and a wooden spoon. Left panel: banging the pot with the spoon, mouth wide open, shouting happily. Right panel: the SAME child, pot on the lap, spoon still, mouth closed, calm.
+4. A grey donkey standing, side view, whole animal visible. Left panel: head raised, mouth wide open, braying. Right panel: the SAME donkey, head level, mouth closed, calm.
+5. A very simple classroom with a plain pale blue wall, one small table and four children, nothing else. Left panel: the four children standing, arms up, jumping, mouths wide open, shouting. Right panel: the SAME four children sitting at the table, mouths closed, quietly drawing.
+
+Start with image 1.
+
+## Dördüncü tur: Konum, Miktar, Duyular (20 görsel, yan yana)
+
+Sonuç (2026-11-10): gorsel-ham/kasim5/, 20 görselin hepsi kullanıldı (`kasim-ikili.py`).
+
+Sıra önem sırasıdır, 12'de durulabilir. Sol = ilk kavram, sağ = ikinci kavram. Claude ortadan keser ve yerleştirir.
+Hedef: 1-2 İç/Dış (kuş, bebek); 3-6 Yan Yana (çocuklar, arabalar, kuşlar 5616/5615, atlar 5604/5603); 7-8 Dolu/Boş (2602/2601, 2612/2611); 9-12 Kalabalık/Tenha (4601/2, 4615/16, 4611/12, 4619/20); 13-20 Duyular.
+
+Picture cards for young children in special education. Each image is ONE landscape 16:9 picture made of TWO panels side by side, separated by a thin white vertical gap in the exact middle. Both panels show the SAME subject and the SAME place: same faces, same hair, same clothes, same colours, same size, same camera, same light. The ONLY difference is the one described.
+
+Rules: photorealistic, bright soft even light, plain solid pale blue background unless the line says otherwise, nothing else in the scene, no text, no logos. Subject large and fully inside the panel, with some space above and below. Generate exactly 20 images, one for each line. Do not edit or replace earlier images.
+
+1. A white bird cage and a small yellow bird. Left: the bird inside the cage. Right: the SAME cage, door open, the bird on the floor right next to the cage.
+2. A wooden baby cradle and a doll. Left: the doll lying down inside the cradle. Right: the SAME cradle, the doll lying on the floor right next to it.
+3. Two children, a boy and a girl, full body, sitting on the floor. Left: sitting side by side, both facing the camera. Right: the SAME two children sitting facing each other, seen from the side.
+4. Two identical red toy cars on a plain light floor, seen from directly above. Left: side by side, both pointing up. Right: the SAME cars, nose to nose, facing each other.
+5. Two identical small blue birds on one bare branch. Left: side by side, both looking at the camera. Right: the SAME birds on the SAME branch, facing each other.
+6. Two identical brown horses on plain green grass with a plain sky. Left: side by side, both facing the camera. Right: the SAME horses facing each other, seen from the side.
+7. A rectangular glass aquarium on a plain surface, white background. Left: full of water with small orange fish and green plants. Right: the SAME aquarium, completely empty and dry.
+8. A yellow plastic bucket seen from slightly above so the inside is visible, white background. Left: full to the top with colourful balls. Right: the SAME bucket, completely empty, the yellow inside clearly visible.
+9. A swimming pool, realistic scene (no blue background). Left: crowded with 12 to 15 children in the water. Right: the SAME pool with only 1 child.
+10. A sandy beach, realistic scene (no blue background). Left: crowded with 12 to 15 people. Right: the SAME beach with only 2 people.
+11. A green park with a path and trees, realistic scene (no blue background). Left: crowded with 12 to 15 people. Right: the SAME park with only 1 person.
+12. A quiet town street, realistic scene (no blue background). Left: crowded with 12 to 15 people walking. Right: the SAME street with only 1 person.
+13. A single green rose stem, no flower, no leaves, white background. Left: with many big clearly visible thorns. Right: the SAME stem, with no thorns at all.
+14. A round green cactus in a plain pot, white background. Left: covered with long sharp spines. Right: the SAME cactus and pot, smooth, no spines at all.
+15. Extreme close-up of the tip of a yellow pencil, the tip fills the panel, white background. Left: very sharp pointed tip. Right: the SAME pencil, flat blunt tip.
+16. Extreme close-up of the end of a wooden stick, white background. Left: sharpened to a point. Right: the SAME stick, cut flat and blunt.
+17. Extreme close-up of the end of an orange carrot, same thickness and length in both, white background. Left: a sharp pointed end. Right: the SAME carrot, a rounded blunt end.
+18. A flat grey stone, matte, not shiny, white background. Left: a very rough bumpy surface. Right: the SAME stone, same shape and colour, smooth matte surface.
+19. A piece of light wood, matte, not shiny, white background. Left: rough with splinters. Right: the SAME piece of wood, same shape and colour, sanded smooth, matte.
+20. A beige square of fabric-free cardboard-like material, matte, white background. Left: rough coarse sandpaper-like surface. Right: the SAME square, same colour, smooth matte surface.
+
+Start with image 1.
+
+## Beşinci tur: Pürüzlü, Sivri, Dikenli örnekleri (12 görsel, yan yana)
+
+Sonuç (2026-11-10): gorsel-ham/kasim6/, 10 çift yerleşti. Külah (iki yarım aynı) ve böğürtlen dalı (sağda da diken var) olmadı, kullanılmadı.
+
+Sol = pürüzlü / sivri / dikenli, sağ = pürüzsüz / küt / dikensiz.
+
+Picture cards for young children in special education. Each image is ONE landscape 16:9 picture made of TWO panels side by side, separated by a thin white vertical gap in the exact middle. Both panels show the SAME object: same shape, same size, same colour, same position, same camera, same light. The ONLY difference is the one described.
+
+Rules: photorealistic, bright soft even light, plain solid pure white background, nothing else in the scene, no text, no logos. Object large and fully inside the panel, unless the line says close-up. Nothing shiny or glossy: every surface is matte. Generate exactly 12 images, one for each line. Do not edit or replace earlier images.
+
+ROUGH / SMOOTH
+1. A red brick. Left: very rough, bumpy, crumbly surface. Right: the SAME brick, smooth matte surface.
+2. A wooden spoon. Left: rough with splinters. Right: the SAME spoon, sanded smooth, matte.
+3. A terracotta flowerpot. Left: very rough, gritty surface. Right: the SAME pot, smooth matte surface.
+4. A plain white bar of soap. Left: rough, cracked, bumpy surface. Right: the SAME bar, smooth matte surface.
+
+SHARP / BLUNT (close-up, the tip fills the panel; only the tip changes, same length and thickness)
+5. Extreme close-up of the end of a steel nail, matte grey. Left: very sharp point. Right: the SAME nail, flat blunt end.
+6. Extreme close-up of the tip of a blue wax crayon. Left: sharp pointed tip. Right: the SAME crayon, rounded blunt tip.
+7. Close-up of the end of a thick wooden garden stake. Left: sharpened to a point. Right: the SAME stake, cut flat.
+8. An empty ice cream cone, whole, pointing down. Left: very sharp pointed bottom. Right: the SAME cone, rounded blunt bottom.
+
+THORNY / NOT THORNY (only the thorns change, nothing else)
+9. A green rubber ball. Left: covered with long pointed spikes. Right: the SAME green ball, completely smooth, no spikes.
+10. A single bare brown bramble branch, no leaves, no berries. Left: with many big clear thorns. Right: the SAME branch with no thorns at all.
+11. A tall column cactus in a plain grey pot. Left: covered with long sharp spines. Right: the SAME cactus and pot, no spines at all.
+12. A small round yellow pufferfish on a plain pale blue background. Left: covered with long sharp spines. Right: the SAME fish, same size, smooth skin, no spines.
+
+Start with image 1.

@@ -257,6 +257,7 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
   onSelectSettings,
   theme,
 }) => {
+  const rastgeleGoster = (() => { try { return localStorage.getItem('rastgeleGoster_v1') !== 'false'; } catch { return true; } })();
   const { settings: ayarlar } = useAppContext();
   // Ebeveyn Köşesi "💛 Destek Ol" (Kaan, 2026-10-08: "seslendirme ve Apple için lazım"): bağış Google Play ile, yalnız Android
   const destekGoster = Capacitor.getPlatform() === 'android' && !!onSelectSettings;
@@ -331,7 +332,7 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
         kartlar={menuItems}
         onKart={(id) => kartSec(id as KartId)}
         onProgram={() => onSelectCategory('programMode')}
-        onRastgele={onStartRandomMode}
+        onRastgele={rastgeleGoster ? onStartRandomMode : undefined}
         ebeveyn={[
           { id: 'tips', emoji: '💡', label: 'İpuçları', onClick: onSelectParentTips },
           ...(onSelectWorksheets ? [{ id: 'sheets', emoji: '🖨️', label: 'Çalışma Kâğıtları', onClick: onSelectWorksheets }] : []),
@@ -389,7 +390,7 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
         )}
         <div className={`relative space-y-4 ${gridPadding}`}>
           {/* Üstte iki büyük düğme: Program Modu ve Rastgele */}
-          <div className="grid grid-cols-2 gap-3">
+          <div className={`grid gap-3 ${rastgeleGoster ? 'grid-cols-2' : 'grid-cols-1'}`}>
             <button
               onClick={() => onSelectCategory('programMode')}
               className="relative flex flex-col items-center justify-center gap-1 rounded-3xl bg-gradient-to-br from-emerald-400 to-teal-500 p-4 text-white shadow-[0_10px_24px_rgba(16,185,129,0.35)] hover:-translate-y-0.5 active:scale-95 transition"
@@ -398,14 +399,14 @@ const MainMenuScreen: React.FC<MainMenuScreenProps> = ({
               <span className="text-base font-black leading-tight drop-shadow-sm">{t('programMode.menuTitleShort', 'Program Modu')}</span>
               <span className="text-[11px] font-semibold text-white/90">📚 7 beceri · günlük plan</span>
             </button>
-            <button
+            {rastgeleGoster && <button
               onClick={onStartRandomMode}
               className="relative flex flex-col items-center justify-center gap-1 rounded-3xl bg-gradient-to-br from-amber-400 to-rose-500 p-4 text-white shadow-[0_10px_24px_rgba(244,63,94,0.3)] hover:-translate-y-0.5 active:scale-95 transition"
             >
               <span className="text-4xl drop-shadow" aria-hidden="true">🎲</span>
               <span className="text-base font-black leading-tight drop-shadow-sm">{t('menu.random.titleShort', 'Rastgele Oyna')}</span>
               <span className="text-[11px] font-semibold text-white/90">{t('menu.random.subtitleShort', 'Karışık etkinlikler')}</span>
-            </button>
+            </button>}
           </div>
 
           {/* Öğrenme alanları: 8 kart */}

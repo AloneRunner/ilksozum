@@ -59,8 +59,9 @@ const Tani: React.FC<{ onBack: () => void }> = ({ onBack }) => (
   </OyunCercevesi>
 );
 
-const OnArkaCalis: React.FC<{ onBack: () => void; onSorular: () => void }> = ({ onBack, onSorular }) => (
+const OnArkaCalis: React.FC<{ onBack: () => void; onSorular: () => void; onKutu: () => void }> = ({ onBack, onSorular, onKutu }) => (
   <AsamaliCalisma id="onArkaCalis" baslik="Önünde / Arkasında" emoji="📦" onBack={onBack} onSorular={onSorular}
+    ekKart={{ emoji: '🖐️', baslik: 'Kutu Oyunu', alt: 'Nesneyi kendin yerleştir', onClick: onKutu }}
     aciklama="Kutu, sepet, kova hep aynı yerde; nesne tam ortada. Önündeyken kutunun bir kısmını kapatır, arkasındayken yalnız üstü görünür. Önce “önünde”, sonra “arkasında”; en son karışık."
     tani={(bitti) => <Tani onBack={bitti} />} taniAlt="Önünde ve arkasında, dokun ve dinle"
     asamalar={[

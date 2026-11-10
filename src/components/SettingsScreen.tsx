@@ -347,6 +347,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
 }) => {
   const [kayitliSes, setKayitliSesAyar] = useLocalStorage<boolean>('kayitliSes_v1', true);
   const [yanlisOlumsuz, setYanlisOlumsuz] = useLocalStorage<boolean>('yanlisOlumsuz_v1', false);
+  const [rastgeleGoster, setRastgeleGoster] = useLocalStorage<boolean>('rastgeleGoster_v1', true);
   // Somut destek ürünleri (Play'de varsa görünür, tekrar alınabilir)
   const [destekFiyat, setDestekFiyat] = useState<Record<string, string>>({});
   const [destekMesaj, setDestekMesaj] = useState<string | null>(null);
@@ -1103,6 +1104,13 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({
             isThemed={isThemed} themeVariant={themeVariant}
           >
             <ToggleSwitch isEnabled={kayitliSes} onToggle={() => setKayitliSesAyar(v => !v)} themeVariant={themeVariant} />
+          </SettingsRow>
+          <SettingsRow
+            title="Ana menüde Rastgele Oyna"
+            subtitle="Kapalıysa ana menüde yalnız Program Modu düğmesi görünür."
+            isThemed={isThemed} themeVariant={themeVariant}
+          >
+            <ToggleSwitch isEnabled={rastgeleGoster} onToggle={() => setRastgeleGoster(v => !v)} themeVariant={themeVariant} />
           </SettingsRow>
           <SettingsRow
             title="Yanlışta kavramı olumsuzla"

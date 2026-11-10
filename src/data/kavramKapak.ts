@@ -1,6 +1,9 @@
 // OTOMATİK ÜRETİLDİ: tools/gorsel-envanter/uret-kapak.mjs. Kavram kartı kapakları (ilk sorunun iki görseli).
 export const KAVRAM_KAPAK: Record<string, [string, string]> = {
   AcikKoyu: ['/images/ozel/acik-koyu/tisort-mavi-0.webp', '/images/ozel/acik-koyu/tisort-mavi-3.webp'], // kırmızı tonlar çıktı (Gökhan Hoca)
+  RoughSmooth: ['/images/ozel/cift/puruzlu-tas-a.webp', '/images/ozel/cift/puruzlu-tas-b.webp'],
+  SivriKut: ['/images/ozel/cift/sivri-kalem-a.webp', '/images/ozel/cift/sivri-kalem-b.webp'],
+  Senses: ['/images/564.png', '/images/490.png'], // göz ve kulak (Gökhan Hoca: kart konuyu anlatsın)
   AliveLifeless: ['/images/3504.webp', '/images/3112.webp'],
   BeforeAfter: ['/images/6101.webp', '/images/6102.webp'],
   BelowAbove: ['/images/2031.webp', '/images/2025.webp'],
@@ -51,10 +54,8 @@ export const KAVRAM_KAPAK: Record<string, [string, string]> = {
   RelativeNearFar: ['/images/5502.webp', '/images/5501.webp'],
   RelativeThinThick: ['/images/2001.webp', '/images/2002.webp'],
   RelativeWideNarrow: ['/images/2202.webp', '/images/2201.webp'],
-  RoughSmooth: ['/images/3701.webp', '/images/3702.webp'],
   SeffafOpak: ['/images/4001.webp', '/images/2305.webp'],
   Shapes: ['/images/7201.webp', '/images/7204.webp'],
-  SivriKut: ['/images/5802.webp', '/images/5801.webp'],
   StraightCurved: ['/images/4901.webp', '/images/4902.webp'],
   TazeBayat: ['/images/5002.webp', '/images/5001.webp'],
   TehlikeliGuvenli: ['/images/6852.webp', '/images/6851.webp'],

@@ -1,7 +1,7 @@
 // Gökhan Hoca'nın 2026-11-09 turu: Islak/Kuru, Sıcak/Soğuk, Acı/Tatlı, Gürültülü/Sessiz, Kırışık/Düz.
 // Her çiftte aynı nesne, yalnız kavram değişir. a: ilk öğretilen yan, b: öteki yan.
 // bekliyor: görseli Flow'dan henüz gelmedi; sesi hazır, oyunda çıkmaz (tools/gorsel-envanter/flow-kavram-kasim.md).
-export interface Yan { url: string; soru: string; dogru: string }
+export interface Yan { url: string; soru: string; dogru: string; uyari?: string } // uyari: Tanı'da dokununca cümleden sonra (güvenlik)
 export interface CiftSet { ad: string; a: Yan; b: Yan; ses?: string; bekliyor?: boolean }
 
 const im = (id: number) => `/images/${id}.webp`;
@@ -92,6 +92,118 @@ export const SES_DOSYALARI: [string, string][] = [
   ['tencere', 'a metal pot being banged with a spoon, a few hits, clean, no background'],
   ['sinif', 'a noisy classroom with many children shouting and playing'],
   ['sessiz', 'very soft quiet breathing of someone sleeping, almost silent, calm'],
+];
+
+// --- Miktar (Gökhan Hoca, 2026-11-09 22:00 notları)
+// Tek / Çift: küpe yerine günlük nesneler; önce çift, sonra tek
+const tc = (ad: string, a: number, b: number): CiftSet => ({
+  ad,
+  a: { url: im(a), soru: `Hangi resimde bir çift ${ad} var?`, dogru: `Evet! Burada bir çift ${ad} var.` },
+  b: { url: im(b), soru: `Hangi resimde tek ${ad} var?`, dogru: `Evet! Burada tek ${ad} var.` },
+});
+export const TEK_CIFT: CiftSet[] = [
+  tc('çorap', 6957, 6958), tc('eldiven', 6959, 6960), tc('ayakkabı', 6961, 6962), tc('spor ayakkabı', 6951, 6952),
+  tc('çizme', 6955, 6956), tc('sandalet', 6967, 6968), tc('terlik', 6969, 6970), tc('paten', 6965, 6966),
+];
+
+// Bütün / Yarım / Çeyrek. kusbakisi: yukarıdan çekilmiş, parçalar daire maskesiyle kesildi (oran tam).
+// tamOran: çeyreği gerçekten 1/4 görünenler; Çeyrek aşaması yalnız bunlarla (hoca: "parçalar gerçekten 1/2 ve 1/4 oranında olsun").
+export type Kisim = 'bütün' | 'yarım' | 'çeyrek';
+export interface Parcali { ad: string; bütün: string; yarım: string; çeyrek: string; kusbakisi?: boolean; tamOran?: boolean }
+const pr = (ad: string, b: number, y: number, c: number, e: Partial<Parcali> = {}): Parcali => ({ ad, bütün: im(b), yarım: im(y), çeyrek: im(c), ...e });
+export const PARCALI: Parcali[] = [
+  pr('pizza', 2819, 2821, 2820, { kusbakisi: true, tamOran: true }), pr('pasta', 2816, 2818, 2817, { kusbakisi: true, tamOran: true }),
+  pr('karpuz', 2810, 2812, 2811, { tamOran: true }), pr('ekmek', 2804, 2806, 2805, { tamOran: true }),
+  pr('domates', 2801, 2803, 2802), pr('elma', 2807, 2809, 2808), pr('limon', 2813, 2815, 2814), pr('portakal', 2822, 2824, 2823),
+];
+export const parcaSoru = (ad: string, k: Kisim) => `Hangi ${ad} ${k}?`;
+export const parcaDogru = (ad: string, k: Kisim) => `Evet! Bu ${ad} ${k}.`;
+
+// Az / Çok: az 1-4, çok 8-15; soru kalıbı "Hangisinde çok elma var?"
+export const AZ_COK_NESNE = ['elma', 'çilek', 'muz', 'portakal', 'armut', 'top', 'araba', 'balon', 'kalem', 'ördek'];
+export const azCokSoru = (ad: string, k: 'az' | 'çok') => `Hangisinde ${k} ${ad} var?`;
+export const azCokDogru = (ad: string, k: 'az' | 'çok') => `Evet! Burada ${k} ${ad} var.`;
+
+// Kaç Tane Var?: el kadar nesneyi bul
+export const KAC_NESNE = ['elma', 'top', 'araba', 'balon', 'kupa'];
+export const KAC_SORU = 'Hangisinde bu kadar var?';
+export const SAYI_YAZI = ['', 'bir', 'iki', 'üç', 'dört', 'beş'];
+export const kacDogru = (n: number, ad: string) => `Evet! Burada ${SAYI_YAZI[n]} ${ad} var.`;
+
+// --- Duyularımız (Gökhan Hoca, 2026-11-09): organ tanıma; her nesne tek duyuya bağlı. Sıra: göz, kulak, el, burun, dil.
+export interface Organ { ad: string; baslik: string; url: string; goster: string; bu: string; eylem: string; cumle: string; nesneSoru: string; nesneler: string[]; sesler?: string[] }
+const org = (ad: string, id: number, eylem: string, cumle: string, nesneSoru: string, nesneler: number[], sesler?: string[]): Organ => ({
+  ad, baslik: buyuk(ad), url: im(id), goster: `${buyuk(ad)} hangisi?`, bu: `Evet! Bu ${ad}.`, eylem, cumle: `Evet! ${cumle}`, nesneSoru, nesneler: nesneler.map(im), sesler,
+});
+export const ORGANLAR: Organ[] = [
+  org('göz', 6301, 'Hangisiyle görürüz?', 'Gözümüzle görürüz.', 'Bunu hangisiyle görürüz?', [8159, 8069, 8619, 8236]), // gökkuşağı, yıldız, ay, bulut
+  org('kulak', 6302, 'Hangisiyle duyarız?', 'Kulağımızla duyarız.', '', [], ['davul', 'kedi', 'kopek', 'horoz', 'inek', 'aslan', 'esek']),
+  org('el', 6305, 'Hangisiyle dokunuruz?', 'Elimizle dokunuruz.', 'Bunu hangisiyle hissederiz?', [3510, 6212, 3311, 2320]), // pamuk, tüy, sünger, yastık
+  org('burun', 6303, 'Hangisiyle koku alırız?', 'Burnumuzla koku alırız.', 'Bunu hangisiyle koklarız?', [3809, 8076, 8057]), // gül, papatya, lale
+  org('dil', 6304, 'Hangisiyle tat alırız?', 'Dilimizle tat alırız.', 'Bunu hangisiyle tadarız?', [2813, 3608, 4103, 8240]), // limon, dondurma, bal, lolipop
+];
+export const SES_SORU = 'Bu sesi hangisiyle duyarız?';
+
+// --- Pürüzlü / Pürüzsüz ve Sivri / Küt (+Dikenli): Gökhan Hoca 2026-11-09; aynı nesne, yalnız doku ya da uç değişir
+const pz = (ad: string, d: string): CiftSet => ({
+  ad, a: { url: yeni(`puruzlu-${d}-a`), soru: `Hangi ${ad} pürüzlü?`, dogru: `Evet! Bu ${ad} pürüzlü. Elimize takılır.` },
+  b: { url: yeni(`puruzlu-${d}-b`), soru: `Hangi ${ad} pürüzsüz?`, dogru: `Evet! Bu ${ad} pürüzsüz. Düzdür.` },
+});
+export const PURUZLU: CiftSet[] = [pz('taş', 'tas'), pz('tahta', 'tahta'), pz('karton', 'karton'), pz('tuğla', 'tugla'), pz('kaşık', 'kasik'), pz('saksı', 'saksi'), pz('sabun', 'sabun')];
+export const SIVRI_UYARI = 'Sivri şeyler batar, dikkat ederiz.';
+const uc = (ad: string, u: [string, string]): CiftSet => ({
+  ad, a: { url: u[0], soru: `Hangi ${ad} ucu sivri?`, dogru: `Evet! Bu ${ad} ucu sivri.`, uyari: SIVRI_UYARI }, b: { url: u[1], soru: `Hangi ${ad} ucu küt?`, dogru: `Evet! Bu ${ad} ucu küt.` },
+});
+const ucYeni = (d: string): [string, string] => [yeni(`sivri-${d}-a`), yeni(`sivri-${d}-b`)];
+export const SIVRI_KUT: CiftSet[] = [uc('kalemin', ucYeni('kalem')), uc('çubuğun', ucYeni('cubuk')), uc('havucun', ucYeni('havuc')), uc('makasın', [im(5818), im(5817)]), uc('çivinin', ucYeni('civi')), uc('boya kaleminin', ucYeni('boya')), uc('kazığın', ucYeni('kazik'))];
+export const DIKENLI_UYARI = 'Dikenli şeylere dikkat ederiz.';
+const dk = (ad: string, a: string, b: string): CiftSet => ({
+  ad, a: { url: a, soru: `Hangi ${ad} dikenli?`, dogru: `Evet! Bu ${ad} dikenli. ${DIKENLI_UYARI}` }, b: { url: b, soru: `Hangi ${ad} dikensiz?`, dogru: `Evet! Bu ${ad} dikensiz.` },
+});
+export const DIKENLI: CiftSet[] = [dk('gül dalı', yeni('dikenli-gul-a'), yeni('dikenli-gul-b')), dk('kaktüs', yeni('dikenli-kaktus-a'), yeni('dikenli-kaktus-b')), dk('kestane', im(3811), im(3812)), dk('top', yeni('dikenli-top-a'), yeni('dikenli-top-b')), dk('kaktüs', yeni('dikenli-kaktus2-a'), yeni('dikenli-kaktus2-b')), dk('balık', yeni('dikenli-balik-a'), yeni('dikenli-balik-b'))];
+
+// --- Konum (Gökhan Hoca, 2026-10-29 18:45-18:49 notları) ve Dolu/Boş, Kalabalık/Tenha
+const ozYan = (url: string, soru: string, dogru: string): Yan => ({ url, soru, dogru });
+const ikiKalip = (ad: string, a: number, b: number, kA: string, kB: string): CiftSet => ({ ad, a: yan(im(a), ad, kA), b: yan(im(b), ad, kB) });
+export const DOLU_BOS: CiftSet[] = [
+  ikiKalip('akvaryum', 2602, 2601, 'dolu', 'boş'), ikiKalip('kova', 2612, 2611, 'dolu', 'boş'),
+  ikiKalip('bardak', 2604, 2603, 'dolu', 'boş'), ikiKalip('kalemlik', 2606, 2605, 'dolu', 'boş'), ikiKalip('kavanoz', 2608, 2607, 'dolu', 'boş'), ikiKalip('yumurta kolisi', 2610, 2609, 'dolu', 'boş'),
+  ikiKalip('kumbara', 2614, 2613, 'dolu', 'boş'), ikiKalip('oyuncak kutusu', 2616, 2615, 'dolu', 'boş'), ikiKalip('sepet', 2618, 2617, 'dolu', 'boş'), ikiKalip('tabak', 2620, 2619, 'dolu', 'boş'),
+];
+export const KALABALIK_TENHA: CiftSet[] = [
+  ikiKalip('havuz', 4601, 4602, 'kalabalık', 'tenha'), ikiKalip('market', 4605, 4606, 'kalabalık', 'tenha'), ikiKalip('otobüs', 4607, 4608, 'kalabalık', 'tenha'), ikiKalip('park', 4611, 4612, 'kalabalık', 'tenha'),
+  ikiKalip('plaj', 4615, 4616, 'kalabalık', 'tenha'), ikiKalip('sinema salonu', 4617, 4618, 'kalabalık', 'tenha'), ikiKalip('sokak', 4619, 4620, 'kalabalık', 'tenha'),
+];
+const icd = (ad: string, yer: string, a: number, b: number): CiftSet => ({
+  ad, a: ozYan(im(a), `Hangi ${ad} ${yer} içinde?`, `Evet! Bu ${ad} ${yer} içinde.`), b: ozYan(im(b), `Hangi ${ad} ${yer} dışında?`, `Evet! Bu ${ad} ${yer} dışında.`),
+});
+export const IC_DIS: CiftSet[] = [
+  icd('kuş', 'kafesin', 2099, 2098), icd('bebek', 'beşiğin', 2111, 2110),
+  icd('top', 'kutunun', 2027, 2026), icd('ayı', 'sepetin', 2039, 2038), icd('araba', 'kovanın', 2051, 2050), icd('elma', 'kasenin', 2063, 2062), icd('kalem', 'kalemliğin', 2075, 2074), icd('kedi', 'yatağın', 2087, 2086),
+];
+const yy = (ad: string, a: number, b: number): CiftSet => ({
+  ad, a: ozYan(im(a), `Hangi resimde ${ad} yan yana?`, `Evet! Burada ${ad} yan yana.`), b: ozYan(im(b), `Hangi resimde ${ad} karşı karşıya?`, `Evet! Burada ${ad} karşı karşıya.`),
+});
+export const YAN_YANA: CiftSet[] = [yy('kediler', 5612, 5611), yy('ayılar', 5606, 5605), yy('ördekler', 5618, 5617), yy('kuşlar', 5616, 5615), yy('atlar', 5604, 5603), yy('çocuklar', 5608, 5607), yy('arabalar', 5602, 5601)]; // yalnız önü belli olanlar
+const ss = (ad: string, sag: number, sol: number): CiftSet => ({
+  ad, a: ozYan(im(sol), `Hangi ${ad} sola bakıyor?`, `Evet! Bu ${ad} sola bakıyor.`), b: ozYan(im(sag), `Hangi ${ad} sağa bakıyor?`, `Evet! Bu ${ad} sağa bakıyor.`),
+});
+export const SAG_SOL: CiftSet[] = [ss('at', 5201, 5202), ss('balık', 5205, 5206), ss('horoz', 5211, 5212), ss('inek', 5213, 5214), ss('kaplumbağa', 5215, 5216), ss('kirpi', 5217, 5218)]; // yalnız yüzü olanlar
+export interface AraSet { ad: string; soru: string; dogru: string; orta: string; yan: string }
+const ara = (ad: string, iki: string, cogul: string, o: number, y: number): AraSet => ({ ad, soru: `Hangi ${ad} iki ${iki} arasında?`, dogru: `Evet! Bu ${ad} ${cogul} arasında.`, orta: im(o), yan: im(y) });
+export const ARASINDA: AraSet[] = [
+  ara('top', 'kutunun', 'kutuların', 2023, 2022), ara('ayı', 'sepetin', 'sepetlerin', 2035, 2034), ara('araba', 'kovanın', 'kovaların', 2047, 2046), ara('elma', 'kasenin', 'kaselerin', 2059, 2058),
+  ara('kalem', 'kalemliğin', 'kalemliklerin', 2071, 2070), ara('kedi', 'yatağın', 'yatakların', 2083, 2082), ara('kuş', 'kafesin', 'kafeslerin', 2095, 2094),
+];
+// Yakın / Uzak: referansa göre, yandan; nesne iki resimde aynı boyutta. Perspektifli fotoğraflar ileri aşamada ("bize yakın").
+export interface YakinYer { ad: string; dosya: string; e: string; c: string }
+export const YAKIN_YER: YakinYer[] = [{ ad: 'kutu', dosya: 'kutu', e: 'kutuya', c: 'kutudan' }, { ad: 'sepet', dosya: 'sepet', e: 'sepete', c: 'sepetten' }, { ad: 'kova', dosya: 'kova', e: 'kovaya', c: 'kovadan' }];
+export const YAKIN_NESNE = [{ ad: 'top', dosya: 'top' }, { ad: 'araba', dosya: 'araba' }, { ad: 'ayı', dosya: 'ayi' }, { ad: 'kedi', dosya: 'kedi' }];
+export const yakinSoru = (ad: string, y: YakinYer, yakin: boolean) => (yakin ? `Hangi ${ad} ${y.e} yakın?` : `Hangi ${ad} ${y.c} uzak?`);
+export const yakinDogru = (ad: string, y: YakinYer, yakin: boolean) => (yakin ? `Evet! Bu ${ad} ${y.e} yakın.` : `Evet! Bu ${ad} ${y.c} uzak.`);
+export const BIZE_YAKIN: CiftSet[] = [
+  ikiKalip('ağaç', 5502, 5501, 'yakın', 'uzak'), ikiKalip('araba', 5504, 5503, 'yakın', 'uzak'), ikiKalip('balon', 5506, 5505, 'yakın', 'uzak'), ikiKalip('bisiklet', 5508, 5507, 'yakın', 'uzak'), ikiKalip('ev', 5512, 5511, 'yakın', 'uzak'),
+  ikiKalip('inek', 5514, 5513, 'yakın', 'uzak'), ikiKalip('köpek', 5516, 5515, 'yakın', 'uzak'), ikiKalip('tekne', 5518, 5517, 'yakın', 'uzak'), ikiKalip('top', 5520, 5519, 'yakın', 'uzak'),
 ];
 
 // --- Kırışık / Düz (hoca: "düzgün" yerine "düz")

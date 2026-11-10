@@ -69,8 +69,8 @@ const YuksekAlcakCalis = lazy(() => import('../ozel/YuksekAlcakCalis.tsx'));
 const TersDuzCalis = lazy(() => import('../ozel/TersDuzCalis.tsx'));
 const CiftCalis = lazy(() => import('../ozel/CiftCalis.tsx'));
 const IlkSonCalis = lazy(() => import('../ozel/IlkSonCalis.tsx'));
-type CiftKonu = 'islakKuru' | 'sicakSoguk' | 'aciTatli' | 'gurultuluSessiz' | 'kirisikDuz';
-const CIFT_ETKINLIK: Record<CiftKonu, ActivityType> = { islakKuru: ActivityType.WetDry, sicakSoguk: ActivityType.HotCold, aciTatli: ActivityType.BitterSweet, gurultuluSessiz: ActivityType.NoisyQuiet, kirisikDuz: ActivityType.KirisikDuzgun };
+type CiftKonu = 'islakKuru' | 'sicakSoguk' | 'aciTatli' | 'gurultuluSessiz' | 'kirisikDuz' | 'tekCift' | 'butunYarim' | 'azCok' | 'kacTane' | 'doluBos' | 'kalabalikTenha' | 'icDis' | 'yanYana' | 'sagSol' | 'arasinda' | 'yakinUzak' | 'duyular' | 'puruzlu' | 'sivriKut';
+const CIFT_ETKINLIK: Record<CiftKonu, ActivityType> = { islakKuru: ActivityType.WetDry, sicakSoguk: ActivityType.HotCold, aciTatli: ActivityType.BitterSweet, gurultuluSessiz: ActivityType.NoisyQuiet, kirisikDuz: ActivityType.KirisikDuzgun, tekCift: ActivityType.OddEven, butunYarim: ActivityType.HalfQuarterWhole, azCok: ActivityType.FewMuch, kacTane: ActivityType.CountMatch, doluBos: ActivityType.FullEmpty, kalabalikTenha: ActivityType.KalabalikTenha, icDis: ActivityType.InsideOutside, yanYana: ActivityType.BesideOpposite, sagSol: ActivityType.LeftRight, arasinda: ActivityType.Between, yakinUzak: ActivityType.NearFar, duyular: ActivityType.Senses, puruzlu: ActivityType.RoughSmooth, sivriKut: ActivityType.SivriKut };
 const SekilOgren = lazy(() => import('../kutu/SekilOgren.tsx'));
 const TabagaKoy = lazy(() => import('../kutu/TabagaKoy.tsx'));
 const LineTracingScreen = lazy(() => import('../LineTracingScreen.tsx'));
@@ -664,7 +664,7 @@ export const AppRouter = () => {
         case ScreenState.KelimeKitabi: return <KelimeKitabi onBack={() => setScreenState(kitapDonus)} />;
         case ScreenState.FarkBulGame: return <FarkBul onBack={() => geriDon(ScreenState.MainMenu)} />;
         case ScreenState.OzelEtkinlik: return CIFT_ETKINLIK[ozelEkran as CiftKonu] !== undefined
-            ? <CiftCalis konu={ozelEkran as CiftKonu} onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(CIFT_ETKINLIK[ozelEkran as CiftKonu], ScreenState.ConceptActivitiesMenu); }} />
+            ? <CiftCalis onKutu={() => { void etkinlikBaslat(ActivityType.KutuOyunu, ScreenState.ConceptActivitiesMenu); }} konu={ozelEkran as CiftKonu} onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(CIFT_ETKINLIK[ozelEkran as CiftKonu], ScreenState.ConceptActivitiesMenu); }} />
             : ozelEkran === 'renkOgren'
             ? <RenkOgren onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.Colors, ScreenState.ConceptActivitiesMenu); }} />
             : ozelEkran === 'acikKoyu'
@@ -676,7 +676,7 @@ export const AppRouter = () => {
             : ozelEkran === 'ilkSon'
             ? <IlkSonCalis onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.IlkSon, ScreenState.ConceptActivitiesMenu); }} />
             : ozelEkran === 'onArka'
-            ? <OnArkaCalis onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.InFrontOfBehind, ScreenState.ConceptActivitiesMenu); }} />
+            ? <OnArkaCalis onKutu={() => { void etkinlikBaslat(ActivityType.KutuOyunu, ScreenState.ConceptActivitiesMenu); }} onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.InFrontOfBehind, ScreenState.ConceptActivitiesMenu); }} />
             : ozelEkran === 'yukariAsagi'
             ? <YukariAsagiCalis onBack={() => setScreenState(ScreenState.ConceptActivitiesMenu)} onSorular={() => { void etkinlikBaslat(ActivityType.BelowAbove, ScreenState.ConceptActivitiesMenu); }} />
             : ozelEkran === 'ustAlt'

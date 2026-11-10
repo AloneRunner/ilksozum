@@ -8,7 +8,7 @@ interface Props {
   kartlar: Kart[];
   onKart: (id: string) => void;
   onProgram: () => void;
-  onRastgele: () => void;
+  onRastgele?: () => void;
   ebeveyn: Array<{ id: string; emoji: string; label: string; onClick: () => void }>;
   selam: string;
   baslik: string;
@@ -22,10 +22,10 @@ const TemaliAnaMenu: React.FC<Props> = ({ tas, kartlar, onKart, onProgram, onRas
       <h1 className={tas.baslikAna}>{baslik}</h1>
     </div>
 
-    <div className="w-full grid grid-cols-2 gap-4 mb-5">
+    <div className={`w-full grid gap-4 mb-5 ${onRastgele ? 'grid-cols-2' : 'grid-cols-1'}`}>
       {[
         { on: onProgram, cls: tas.programDugme, emoji: '🎓', ad: 'Program Modu', alt: '7 beceri · günlük plan' },
-        { on: onRastgele, cls: tas.rastgeleDugme, emoji: '🎲', ad: 'Rastgele Oyna', alt: 'Karışık etkinlikler' },
+        ...(onRastgele ? [{ on: onRastgele, cls: tas.rastgeleDugme, emoji: '🎲', ad: 'Rastgele Oyna', alt: 'Karışık etkinlikler' }] : []),
       ].map((d) => (
         <button key={d.ad} onClick={d.on} className={`flex flex-col items-center justify-center gap-1 p-4 transition active:scale-95 ${d.cls}`}>
           <span className="text-4xl" aria-hidden="true">{d.emoji}</span>
