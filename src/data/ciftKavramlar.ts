@@ -100,5 +100,5 @@ const kdYeni = (ad: string, d: string, bekliyor?: boolean): CiftSet => ({ ad, a:
 export const KIRISIK_DUZ: CiftSet[] = [
   kd('gömlek', 4706, 4705), kd('elbise', 4702, 4701), kd('etek', 4704, 4703), kd('kâğıt', 4708, 4707), kd('masa örtüsü', 4710, 4709),
   kd('yatak örtüsü', 4712, 4711), kd('pantolon', 4714, 4713), kd('peçete', 4716, 4715), kd('perde', 4718, 4717), kd('tişört', 4720, 4719),
-  kdYeni('yastık', 'yastik'), kdYeni('ceket', 'ceket', true), kdYeni('havlu', 'havlu', true),
+  kdYeni('yastık', 'yastik'), kdYeni('ceket', 'ceket'), kdYeni('havlu', 'havlu', true), // havlu: tüylü kumaşta kırışık görünmedi, oyunda çıkmaz
 ];
